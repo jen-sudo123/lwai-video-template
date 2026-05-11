@@ -4,7 +4,7 @@
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  "postCreateCommand": "npm install && npx playwright install chromium --with-deps",
+  "postCreateCommand": "npm install && npx playwright install chromium --with-deps && npm install -g @anthropic-ai/claude-code",
   "forwardPorts": [3000],
   "portsAttributes": {
     "3000": { "label": "Remotion Studio" }
