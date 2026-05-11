@@ -1,0 +1,25 @@
+{
+  "name": "lwai-video-template",
+  "version": "1.0.0",
+  "description": "Lead with AI branded video template — Remotion-powered, driven by a scenes JSON.",
+  "scripts": {
+    "start": "remotion studio",
+    "build": "remotion render",
+    "upgrade": "remotion upgrade"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@remotion/cli": "^4.0.0",
+    "@remotion/google-fonts": "^4.0.0",
+    "@remotion/zod-types": "4.0.457",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "remotion": "^4.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/web": "^0.0.155",
+    "typescript": "^5.0.0"
+  }
+}

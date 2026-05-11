@@ -1,0 +1,57 @@
+/Users/yen-pc/.local/pipx/venvs/openai-whisper/lib/python3.14/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+Detecting language using up to the first 30 seconds. Use `--language` to specify the language
+Detected language: English
+[00:01.040 --> 00:06.460]  If you ever spent 5 minutes writing a prompt that explains exactly how you want something
+[00:06.460 --> 00:11.860]  formatted only to get back something at almost, but doesn't quite match, this technique solves
+[00:11.860 --> 00:12.140]  that.
+[00:12.840 --> 00:15.820]  AI is exceptionally good at pattern recognition.
+[00:16.100 --> 00:20.040]  When you show it what good looks like, it infers the rules that you otherwise would
+[00:20.040 --> 00:21.360]  spend time articulating.
+[00:22.040 --> 00:25.820]  Because examples are often much clearer than detailed instructions.
+[00:27.880 --> 00:33.040]  Fuchsia prompting is the technique of giving AI examples before asking it to produce a
+[00:33.040 --> 00:33.600]  new output.
+[00:34.240 --> 00:39.100]  It's what the final O for outcome in code is stands for and at this level it's one
+[00:39.100 --> 00:43.040]  of the highest leveraged things that you can do to raise the quality of everything you
+[00:43.040 --> 00:43.880]  produce with AI.
+[00:45.540 --> 00:48.580]  So what does Fuchsia prompting look like in practice?
+[00:49.320 --> 00:51.580]  Well the practical idea is simple.
+[00:51.580 --> 00:55.140]  AI can learn from examples inside the prompt.
+[00:56.260 --> 00:58.880]  So here we have two people talking to each other.
+[00:59.580 --> 01:05.540]  Now humans would immediately identify that one is extremely excited and the other is
+[01:05.540 --> 01:07.640]  let's say a little bit more subdued.
+[01:08.700 --> 01:14.380]  So then you say okay based on this example now write up a new one and the situation this
+[01:14.380 --> 01:16.600]  time is the monthly town hall that's coming up.
+[01:17.320 --> 01:19.960]  And so as you can see AI copied it perfectly.
+[01:20.960 --> 01:25.680]  So instead of spending five minutes explaining every stylistic rule you give the AI a good
+[01:25.680 --> 01:28.660]  example and let it infer the pattern.
+[01:30.360 --> 01:34.880]  So more practically let's say you regularly write structured recommendations for your
+[01:34.880 --> 01:37.440]  leadership team and you've developed a format that works.
+[01:37.620 --> 01:42.760]  Maybe it's one sentence situation, a single clear recommendation and then two or three
+[01:42.760 --> 01:44.320]  sentences of the rationale.
+[01:44.320 --> 01:49.760]  And you want AI to produce outputs in that exact format without you having to describe
+[01:49.760 --> 01:50.420]  it each time.
+[01:51.080 --> 01:54.940]  So again instead of explaining the structure you just paste in a couple of examples that
+[01:54.940 --> 01:55.700]  demonstrate it.
+[01:56.180 --> 02:00.880]  The model will now read the pattern across all three and apply it to your new situation.
+[02:01.540 --> 02:06.580]  And what comes back matches your format from the first line because you showed it three
+[02:06.580 --> 02:08.780]  times and let the pattern speak for itself.
+[02:09.900 --> 02:14.120]  Now one thing worth noting here is that the example quality is everything.
+[02:14.820 --> 02:19.200]  If the output misses the fix is almost always in the examples.
+[02:20.020 --> 02:24.960]  So a few things to check and consider before you include an example are does it solve the
+[02:24.960 --> 02:30.060]  right kind of problem or just a somewhat similar one because AI will take things away from it?
+[02:30.480 --> 02:35.020]  Does it reflect the quality standards that you actually want and not just something you
+[02:35.140 --> 02:35.660]  have on hand?
+[02:36.220 --> 02:40.980]  And does it demonstrate the format clearly or could it introduce some ambiguity about
+[02:40.980 --> 02:41.700]  the structure?
+[02:42.640 --> 02:48.780]  And also one strong example always beats three mediocre ones because AI is very literal.
+[02:49.640 --> 02:54.700]  That said, I recommend you reach for a few shot prompting whenever you already have an
+[02:54.700 --> 02:56.860]  example of the output that you want.
+[02:56.960 --> 03:02.040]  So this could be a strong email that you've written before or a memo format that your
+[03:02.040 --> 03:07.760]  leadership team responds to well or a recommendation structure that has worked in past reviews.
+[03:08.480 --> 03:12.060]  A tone and a style that reflects how you actually communicate.
+[03:12.700 --> 03:15.140]  In that case, don't spend time describing it.
+[03:15.200 --> 03:20.500]  Just paste it into your prompt at one or two more examples if you have them and then just
+[03:20.500 --> 03:22.480]  let the pattern do the work.
+[03:23.240 --> 03:29.120]  That way, the output that you otherwise would have spent 20 minutes editing into shape arrives
+[03:29.120 --> 03:31.240]  ready to use from the first response.
