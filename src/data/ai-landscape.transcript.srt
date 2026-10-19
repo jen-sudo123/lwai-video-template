@@ -1,0 +1,144 @@
+1
+00:00:00,000 --> 00:00:06,400
+Most leaders that I speak to feel the same tension. The AI space feels chaotic. Every week there is a
+
+2
+00:00:06,400 --> 00:00:11,600
+new model, a new startup, or a new headline claiming some kind of a breakthrough, and it's
+
+3
+00:00:11,600 --> 00:00:17,200
+very difficult to tell what actually matters for your work and what is just noise. So let's talk
+
+4
+00:00:17,200 --> 00:00:22,800
+about what you actually should know about the AI landscape. So first of all, you hear many names
+
+5
+00:00:22,800 --> 00:00:28,560
+in the market, but for practical day-to-day knowledge work, four ecosystems really dominate.
+
+6
+00:00:28,560 --> 00:00:34,880
+You have Chet-GPT from OpenAI, Gemini from Google, Co-Pilot from Microsoft, and then Claude from
+
+7
+00:00:34,880 --> 00:00:40,560
+Anthropic. Some others that you may see include DeepSeek, which shocked the market with a high
+
+8
+00:00:40,560 --> 00:00:47,200
+performing low-cost model released last year, Grok from X with access to real-time social data,
+
+9
+00:00:47,200 --> 00:00:54,640
+or Meta's Open Llama models. Innovation is really happening everywhere, but if your goal is
+
+10
+00:00:54,640 --> 00:00:59,120
+implementing within teams and organizations, you should really just focus first on the platforms
+
+11
+00:00:59,120 --> 00:01:04,400
+that integrate with major productivity suites, offer enterprise governance, and consistently
+
+12
+00:01:04,400 --> 00:01:10,480
+ship new capabilities, which again today primarily means Chet-GPT, Gemini, Co-Pilot, and Claude.
+
+13
+00:01:11,200 --> 00:01:16,080
+But let's zoom out as well. If we look at the last three years, the evolution is very clear.
+
+14
+00:01:16,720 --> 00:01:22,560
+In 2022-23, when AI was just launched, it functioned primarily as a chat-based assistant.
+
+15
+00:01:22,560 --> 00:01:27,120
+So you would type a prompt, it would generate a response, and it really felt like a capable
+
+16
+00:01:27,120 --> 00:01:33,600
+but very junior co-worker waiting for your instructions. In 2024, the interaction expanded
+
+17
+00:01:33,600 --> 00:01:39,680
+beyond text, so multimodal capabilities meant that AI could analyze documents, interpret images,
+
+18
+00:01:39,680 --> 00:01:43,520
+process voice, and in some cases even understand what's happening on your screen.
+
+19
+00:01:44,160 --> 00:01:51,920
+In 2025, the shift became structural. AI started moving beyond individual prompts and into recurring
+
+20
+00:01:51,920 --> 00:01:58,640
+workflows. Instead of asking AI to help with one task at a time, people could increasingly give it
+
+21
+00:01:58,640 --> 00:02:05,360
+persistent instructions, connect it to relevant context and tools, and build repeatable ways of
+
+22
+00:02:05,360 --> 00:02:10,880
+working around it. AI was becoming less something you occasionally consulted and more something
+
+23
+00:02:10,880 --> 00:02:19,040
+built into how you work. And in 2026, we've moved another step forward. AI can increasingly carry
+
+24
+00:02:19,040 --> 00:02:26,640
+work forward for you. This is where agentic AI becomes important. Agentic systems can take a goal,
+
+25
+00:02:26,640 --> 00:02:32,320
+work through multiple steps, use tools and connected information, take actions, observe
+
+26
+00:02:32,320 --> 00:02:37,920
+what happened, and decide what to do next without requiring you to direct every individual step.
+
+27
+00:02:38,720 --> 00:02:44,720
+That does not mean fully autonomous digital employees have arrived. The most useful systems
+
+28
+00:02:44,800 --> 00:02:49,920
+today still work with bounded autonomy. Humans decide what AI can access,
+
+29
+00:02:49,920 --> 00:02:55,280
+what it is allowed to do, where approval is required, and where judgment and accountability
+
+30
+00:02:55,280 --> 00:03:01,680
+must stay with us. So the progression is becoming clear. AI started by answering us,
+
+31
+00:03:01,680 --> 00:03:07,360
+then became capable of working with more kinds of information, then became built into our recurring
+
+32
+00:03:07,360 --> 00:03:12,400
+workflows, and now it can increasingly carry parts of those workflows forward for us.
+
+33
+00:03:13,280 --> 00:03:17,600
+And that changes the question we should be asking. It is no longer only,
+
+34
+00:03:17,600 --> 00:03:23,040
+what can I ask AI to help me with? Increasingly, it is, given what AI can now do,
+
+35
+00:03:23,040 --> 00:03:27,760
+how should this work happen in the first place? And what should the human and AI each be responsible
+
+36
+00:03:27,760 --> 00:03:31,120
+for?
+

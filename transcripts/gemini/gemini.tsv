@@ -1,0 +1,98 @@
+start	end	text
+0	1820	Gemini is Google's AI Assistant.
+2360	4120	You can chat with it, upload files,
+4340	5980	and use voice and camera to get help
+5980	8400	with writing, analyzing, researching, and creating.
+8980	10980	And the big advantage is that if your work
+10980	12080	already lives in Google,
+12600	14540	Gemini is designed to meet you there.
+15040	16920	It operates in two main ways.
+17120	19380	First, there's Gemini as a chat assistant.
+19960	22100	You can ask questions, brainstorm ideas,
+22360	24380	summarize information, generate images,
+24620	26320	analyze files, and do research
+26320	28220	similar to tools like ChatGPT.
+28220	31700	And second, there's Gemini Inside Google Workspace.
+32260	34600	If your organization runs on Google Workspace,
+34800	36760	Gemini appears where work already happens
+37300	41520	across apps like Gmail, Docs, Sheets, Slides, Drive, and Meet.
+42300	43700	In terms of key features,
+44180	46540	Gemini often matches ChatGPT in range,
+46960	49760	but with native integration across Google's ecosystem.
+50460	53320	Depending on your plan, you may have access to search,
+53680	56720	which includes web search with source-specific filters,
+56720	59780	plus Q&A grounded in your workspace data.
+60460	61920	There's also deep research,
+62120	64480	which creates comprehensive, cited reports
+64480	67500	using web sources, workspace context, or both.
+68480	71220	Gemini Live supports real-time voice conversations
+71220	73840	with optional camera or screen sharing,
+73980	76480	so Gemini can respond to what you're showing or saying.
+77080	78080	For image creation,
+78700	81680	Nano Banana 2 is a high-quality image generator
+81680	84560	and photo editor with strong text rendering
+84560	86300	and up to 4K output.
+86860	90200	Gemini Omni is a new model for generating and editing video
+90200	93660	from blended text, audio, image, and video inputs.
+94220	96180	Notebook LM turns internal sources
+96180	97740	into a structured knowledge base
+97740	100320	and can generate outputs like presentation feedback,
+100800	102540	slide decks, and mind maps.
+103120	106100	And now you can access Notebook LM directly in Gemini
+106100	107280	with the Notebook feature.
+107880	110240	We also have Gems, which are specialized assistants
+110240	112640	you can build to standardize repeat workflows
+112640	114780	and reduce repetitive prompting.
+115780	118740	Workspace Studio supports Agentec Automation,
+119220	121440	helping orchestrate multi-step processes
+121440	122880	across workspace apps.
+123840	125600	Canvas gives you a dedicated space
+125600	128300	to create and iterate on documents and code
+128300	132280	with export paths to docs or even live web apps.
+132940	136740	Scheduled actions can automate recurring or future AI prompts,
+136960	140840	such as daily reports, research tasks, or email summaries.
+141840	143640	Coming soon is Gemini Spark,
+144020	147560	a 24-7 personal AI agent designed to work in the background
+147560	150180	across workspace, connectors, and the open web.
+150720	152980	You'll be able to delegate multi-step tasks,
+153280	155560	set recurring work, and teach it new skills.
+156180	158780	And for developers, code assist anti-gravity
+158780	161600	and Firebase support workflows from vibe coding
+161600	163420	through deploying full-stack apps.
+164640	167200	A practical advantage, especially on higher tiers,
+167480	169560	is that Gemini supports a context window
+169560	171100	of up to 1 million tokens.
+172240	174200	That's useful for reasoning over
+174200	175760	or creating long documents.
+176780	178100	Now, in terms of models,
+178440	181980	the Gemini 3 family includes Gemini 3.5 Flash,
+182640	185000	Google's strongest Agentec model to date.
+185820	188940	Gemini 3.5 Pro is currently in testing
+188940	191040	and expected in June, 2026.
+191720	193960	In the Gemini apps, these typically appear
+193960	196140	as fast, thinking, and pro.
+197020	198300	On privacy and data use,
+198640	201740	consumer Gemini users can manage Gemini apps activity
+202340	205180	and choose whether interactions help improve Google AI,
+205740	207460	although Google notes some processing
+207460	209180	may still occur for safety.
+210120	212760	For Google workspace customers with Gemini protections,
+213280	215080	submissions aren't used to train models,
+215540	216560	aren't reviewed by humans,
+217080	219520	and remain within workspace enterprise security
+219520	220740	and admin controls.
+221860	224500	Finally, pricing varies by plan.
+225380	228260	Free Gemini offers general AI and web help,
+228640	231340	including access to Gemini 3.5 Flash
+231340	234100	with limits on advanced models and features.
+234800	240240	For individuals, Google AI Plus is $7.99 per month.
+240680	244040	Pro is $19.99 per month,
+244520	248380	and Ultra starts from $99.99 per month.
+249080	252960	For organizations, workspace plans include Gemini capabilities,
+253560	256840	starting with business starter at $7 per user per month,
+257400	258760	business standard at $14,
+259400	263000	and business plus at $22 build annually.
+264200	267220	One important detail, workspace Gemini access
+267220	269320	depends on admin settings and licensing,
+269900	271400	so the full in-app experience
+271400	273260	depends on what your admin has enabled.

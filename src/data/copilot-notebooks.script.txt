@@ -1,0 +1,47 @@
+<speak>
+<break time="500ms"/>Did you know there's a version of Copilot that already knows your files, your context, and your preferred format, before you even type your prompt?
+
+<break time="500ms"/>That is Copilot Notebooks.
+
+<break time="500ms"/>Instead of starting a fresh conversation every time, you create a focused workspace, add the sources Copilot should work from, and set instructions for how you want it to respond. Then every conversation in that notebook starts with that context already in place.
+
+<break time="500ms"/>You can find Copilot Notebooks in the left-side menu of the Microsoft Copilot app. If you don't see Notebooks there, check the app launcher at the top of the navigation pane. Then select New notebook, and give it a name.
+
+<break time="500ms"/>One thing to know. Creating the notebook here is just the starting point. The Copilot app is a quick way to create the notebook, add references, set instructions, and start working. If you want the fuller notebook experience, you can continue in OneNote.
+
+<break time="500ms"/>For now, let me show you a simple example. I'm going to create a notebook called Larry, which I'll use as a persistent assistant for preparing my weekly leadership updates.
+
+<break time="500ms"/>Step one. Add the reference material.
+
+<break time="300ms"/>The first thing I'm going to do is add the information Larry should work from. Here, under Add content to References, I'll add a leadership update template, a strategy document, and a KPI sheet.
+
+<break time="500ms"/>Depending on your Copilot license, references can include Word documents, PowerPoint files, Excel files, PDFs, OneNote pages, Copilot Pages, web URLs, folders, SharePoint content, emails, and even Teams meetings.
+
+<break time="500ms"/>Copilot Notebooks works from the references you add. You are defining the body of information you want Copilot to work with. That makes Notebooks useful when you want Copilot to stay grounded in a specific project, a set of documents, or a recurring workflow.
+
+<break time="500ms"/>Step two. Set the instructions.
+
+<break time="300ms"/>Next, I'm going to define how I want Copilot to work. At the top-right corner, I select the three dots for More options, and then open Instructions. This is where you define the rules Copilot should follow whenever it works inside this notebook.
+
+<break time="500ms"/>For Larry, I'm going to add my leadership update instructions, using the CODO prompting framework. That means: what role to take, what it should focus on, how the output should be structured, what tone to use, and what it should leave out. Then I click Save.
+
+<break time="500ms"/>Now Larry has two important layers of context. The references define what Copilot should work from. And the instructions define how Copilot should approach the work.
+
+<break time="500ms"/>Step three. Use it repeatedly.
+
+<break time="300ms"/>Now I can use this notebook every week to manage my leadership update. I only need to provide the information that changes. So I'll say: here are my inputs for the upcoming leadership meeting, please prepare this week's update. Then I hit Send.
+
+<break time="500ms"/>Copilot already has the supporting context inside the notebook. The template tells it what the update should look like. The strategy document provides the broader context. And the KPI sheet provides the numbers it may need. So my prompt can be much shorter, because the stable context is already there.
+
+<break time="500ms"/>And here's the result.
+
+<break time="500ms"/>Of course, this is still an AI-generated output. So I still want to check that the structure follows my template, and that important numbers or claims are supported by the reference material.
+
+<break time="500ms"/>Now, if you want to go further, you can open the notebook in OneNote, where you get a fuller workspace and additional ways to work with your content, such as Audio Overviews, Mind Maps, and study guides.
+
+<break time="500ms"/>So think of the Copilot app as the place to quickly create and start a notebook, and OneNote as the place to go further.
+
+<break time="500ms"/>Finally, a quick note on plans and access. Copilot Notebooks is available across several Microsoft offerings, but exactly what you can do depends on your account, your license, and your organization's configuration. For work and school accounts, you'll also need the appropriate SharePoint or OneDrive service plan.
+
+<break time="500ms"/>If you don't see exactly the same options I'm showing here, check your license and your organization's settings.
+</speak>

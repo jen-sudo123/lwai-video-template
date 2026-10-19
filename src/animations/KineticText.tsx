@@ -10,6 +10,9 @@ type KineticTextProps = {
   style?: React.CSSProperties;
   // Offset the animation start (default 0 = animate from scene start)
   startFrame?: number;
+  // Substring of `text` to render in lime (or highlightColor).
+  highlight?: string;
+  highlightColor?: string;
 };
 
 // Word-by-word reveal. Each word fades + lifts into place, staggered.
@@ -20,11 +23,19 @@ export const KineticText: React.FC<KineticTextProps> = ({
   wordFadeFrames = 8,
   style = {},
   startFrame = 0,
+  highlight,
+  highlightColor = '#66C61C',
 }) => {
   const rawFrame = useCurrentFrame();
   const frame = rawFrame - startFrame;
   const { fps } = useVideoConfig();
   const words = text.split(' ');
+
+  const highlightStart = highlight ? text.indexOf(highlight) : -1;
+  const highlightEnd = highlightStart >= 0 ? highlightStart + highlight!.length : -1;
+
+  // Track each word's offset within the full text (words joined by single spaces).
+  let cursor = 0;
 
   return (
     <span style={style}>
@@ -44,6 +55,22 @@ export const KineticText: React.FC<KineticTextProps> = ({
           to: 0,
         });
 
+        const wordOffset = cursor;
+        cursor += word.length + 1; // +1 for the space
+
+        let wordContent: React.ReactNode = word;
+        if (highlightStart >= 0 && wordOffset < highlightEnd && wordOffset + word.length > highlightStart) {
+          const localStart = Math.max(0, highlightStart - wordOffset);
+          const localEnd = Math.min(word.length, highlightEnd - wordOffset);
+          wordContent = (
+            <>
+              {word.slice(0, localStart)}
+              <span style={{ color: highlightColor }}>{word.slice(localStart, localEnd)}</span>
+              {word.slice(localEnd)}
+            </>
+          );
+        }
+
         return (
           <span
             key={i}
@@ -54,7 +81,7 @@ export const KineticText: React.FC<KineticTextProps> = ({
               marginRight: '0.25em',
             }}
           >
-            {word}
+            {wordContent}
           </span>
         );
       })}

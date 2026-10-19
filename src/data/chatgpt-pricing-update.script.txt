@@ -1,0 +1,11 @@
+<break time="500ms"/>And finally, in terms of plans and pricing, ChatGPT now offers a pretty wide range of options.
+
+<break time="500ms"/>There's Free for everyday use, with limited access to GPT-5.5 Instant, plus web search, file uploads, data analysis, image generation, and GPTs. The exact model limit can vary, and once you reach it, ChatGPT switches you to GPT-5.5 Instant mini.
+
+<break time="500ms"/>Then there's Go, which costs $8 per month in the US. It gives you more messages, uploads, image generation, data analysis, memory, and a larger context window than Free. But for most professionals, Plus is probably the better fit.
+
+<break time="500ms"/>At $20 per month, Plus gives you higher model limits, more advanced reasoning, faster responses, voice, image generation, file analysis, Deep Research, agent mode, custom GPT creation, and expanded access to Codex.
+
+<break time="500ms"/>If you regularly run into those limits, then there's Pro. The $100 plan gives you five times the usage of Plus, while the $200 plan gives you twenty times the usage. Both include access to ChatGPT's most advanced models and tools.
+
+<break time="500ms"/>And then Business and Enterprise add shared workspaces, admin controls, stronger security and governance, Company Knowledge, shared Projects, agents, apps, and organizational permissions. Business costs $25 per user per month, or $20 per user per month with annual billing, and requires at least two users. Enterprise uses custom pricing.

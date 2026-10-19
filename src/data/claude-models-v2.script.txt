@@ -1,0 +1,97 @@
+<break time="500ms"/>You're paying for AI capability.
+
+<break time="500ms"/>But the real skill is knowing when to use which level of capability.
+
+<break time="500ms"/>Claude is not just one model.
+
+<break time="500ms"/>It gives you a set of models, and each one has a different job.
+
+<break time="500ms"/>Let's look at the model line-up.
+
+<break time="500ms"/>Start with Sonnet.
+
+<break time="500ms"/>Claude Sonnet 5 is now the default model for Free and Pro users.
+
+<break time="500ms"/>It is also the model most people should use most of the time.
+
+<break time="500ms"/>Anthropic describes it as the most agentic Sonnet model yet.
+
+<break time="500ms"/>That means it is better at planning, using tools, following through on multi-step tasks, and handling everyday knowledge work.
+
+<break time="500ms"/>Think drafting, summarizing, research synthesis, artifact review, coding, and workflow automation.
+
+<break time="500ms"/>For most leadership tasks, Sonnet is the right starting point.
+
+<break time="500ms"/>It gives you a strong balance of speed, quality, and cost.
+
+<break time="500ms"/>Then there is Haiku, the lightweight model.
+
+<break time="500ms"/>Use Haiku when speed matters more than depth.
+
+<break time="500ms"/>It is useful for quick summaries, simple rewrites, classification, routing, or high-volume tasks where you do not need deep reasoning.
+
+<break time="500ms"/>Then there is Opus.
+
+<break time="500ms"/>Opus 4.8 is the deeper reasoning model.
+
+<break time="500ms"/>Use it when the work is harder, messier, or higher-stakes.
+
+<break time="500ms"/>For example, a strategic decision, a complex financial analysis, a sensitive executive message, or a task where the first answer needs to be more complete and considered.
+
+<break time="500ms"/>You do not need Opus for everything.
+
+<break time="500ms"/>Think of it as the specialist you bring in when Sonnet's first pass is not enough.
+
+<break time="500ms"/>Finally, there is Fable.
+
+<break time="500ms"/>Fable 5 is Anthropic's most powerful model.
+
+<break time="500ms"/>It was recently released more broadly after being paused for safety updates.
+
+<break time="500ms"/>It is built for hard thinking tasks and for AI systems that can plan and carry out many steps over time.
+
+<break time="500ms"/>For example, it can research a topic, create a plan, write documents, improve them based on feedback, and manage tasks across tools with little human help.
+
+<break time="500ms"/>However, as the most capable model, Fable 5 will draw down your usage much faster than Opus 4.8.
+
+<break time="500ms"/>So it is best suited for teams building serious AI systems, rather than most daily individual tasks.
+
+<break time="500ms"/>Now, where do you find and switch these models?
+
+<break time="500ms"/>To switch models, start a new chat and click the model name in the right corner of the prompt box.
+
+<break time="500ms"/>That opens the model picker, where you'll see your available options.
+
+<break time="500ms"/>You'll also notice the Effort options from the model selection dropdown.
+
+<break time="500ms"/>This lets you decide how much effort Claude should put into a response.
+
+<break time="500ms"/>Keep in mind: the higher the effort, the slower the response and the faster the credits run out.
+
+<break time="500ms"/>So how should you choose?
+
+<break time="500ms"/>Use Haiku when the task is simple and speed matters.
+
+<break time="500ms"/>Use Sonnet for most daily work: drafting, planning, summarizing, analysis, coding, and working with documents.
+
+<break time="500ms"/>Use Opus when the task needs deeper judgment or a stronger first pass.
+
+<break time="500ms"/>Use Fable when you are building with the API, working with very long context, or designing a long-running agentic workflow.
+
+<break time="500ms"/>Now, a quick note on availability and pricing.
+
+<break time="500ms"/>Claude Sonnet 5 is available across all plans and is the default for Free and Pro.
+
+<break time="500ms"/>Claude Opus 4.8 is available on Pro, Max, Team, and Enterprise.
+
+<break time="500ms"/>On Pro, usage is capped because Opus costs more compute.
+
+<break time="500ms"/>If you hit that limit, move to Max for higher usage.
+
+<break time="500ms"/>Claude Fable 5 is not on the free tier.
+
+<break time="500ms"/>It is available on paid plans and strictly limited to up to 50% of your weekly usage limits.
+
+<break time="500ms"/>So keep in mind, the model you pick shapes the result before you write a single word.
+
+<break time="500ms"/>Start making that distinction today, and you'll get more out of Claude.

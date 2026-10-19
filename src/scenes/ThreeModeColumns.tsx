@@ -13,7 +13,7 @@ type Props = {
   label: string;
   title: string;
   columns: [ModeColumn, ModeColumn, ModeColumn];
-  highlights?: Array<{ from: number; value: 0 | 1 | 2 | null }>;
+  highlights?: Array<{ from: number; value: 0 | 1 | 2 | Array<0 | 1 | 2> | null }>;
 };
 
 const DIM = 0.16;
@@ -23,8 +23,12 @@ const CARD_H = 560;
 const GAP = 40;
 const BODY_FADE = 16;
 
-function targetOpacity(index: 0 | 1 | 2, active: 0 | 1 | 2 | null) {
-  return active === null || active === index ? 1 : DIM;
+type HighlightValue = 0 | 1 | 2 | Array<0 | 1 | 2> | null;
+
+function targetOpacity(index: 0 | 1 | 2, active: HighlightValue) {
+  if (active === null) return 1;
+  if (Array.isArray(active)) return active.includes(index) ? 1 : DIM;
+  return active === index ? 1 : DIM;
 }
 
 export const ThreeModeColumns: React.FC<Props> = ({
@@ -89,7 +93,16 @@ export const ThreeModeColumns: React.FC<Props> = ({
       >
         {columns.map((column, index) => {
           const typedIndex = index as 0 | 1 | 2;
-          const start = highlights.find((h) => h.value === typedIndex)?.from ?? index * 150;
+          const nullEntry = highlights.find((h) => h.value === null);
+          const matchEntry = highlights.find((h) => {
+            if (Array.isArray(h.value)) return h.value.includes(typedIndex);
+            return h.value === typedIndex;
+          });
+          const start = nullEntry
+            ? nullEntry.from - 30
+            : matchEntry
+              ? matchEntry.from
+              : index * 150;
           const enterProgress = spring({
             frame: frame - start,
             fps,
@@ -115,8 +128,8 @@ export const ThreeModeColumns: React.FC<Props> = ({
                 height: CARD_H,
                 borderRadius: 28,
                 backgroundColor: colors.white,
-                border: `2px solid ${typedIndex === 2 ? colors.lime500 : colors.neutral200}`,
-                boxShadow: typedIndex === 2 ? '0 18px 50px rgba(102,198,28,0.14)' : '0 10px 32px rgba(0,0,0,0.06)',
+                border: `2px solid ${colors.neutral200}`,
+                boxShadow: '0 10px 32px rgba(0,0,0,0.06)',
                 padding: 36,
                 opacity: showOpacity * emphasisOpacity,
                 transform: `translateY(${translateY}px) scale(${scale})`,

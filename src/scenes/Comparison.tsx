@@ -16,10 +16,15 @@ type ComparisonProps = {
   animation?: 'kinetic' | 'fade' | 'auto';
   highlights?: Array<{ from: number; value: 'left' | 'right' | null }>;
   objectFit?: 'cover' | 'contain';
+  // Per-image object-position (e.g. 'bottom', 'top', 'center').
+  leftObjectPosition?: string;
+  rightObjectPosition?: string;
   // Hide the text labels beneath each image.
   showLabels?: boolean;
   // Override image height in px (default 480).
   imageHeight?: number;
+  // Override the top position of the images in px (default 280 when title present, centered otherwise).
+  imagesTop?: number;
 };
 
 // "How AI can help"-style comparison. Title up top, two images with labels below.
@@ -33,8 +38,11 @@ export const Comparison: React.FC<ComparisonProps> = ({
   animation = 'auto',
   highlights = [],
   objectFit = 'cover',
+  leftObjectPosition,
+  rightObjectPosition,
   showLabels = true,
   imageHeight = 480,
+  imagesTop: imagesTopProp,
 }) => {
   const frame = useCurrentFrame();
 
@@ -66,10 +74,10 @@ export const Comparison: React.FC<ComparisonProps> = ({
   const gap = 80;
   const totalWidth = colWidth * 2 + gap;
   const startX = (layout.width - totalWidth) / 2;
-  // Vertically centre images when there is no title and no labels.
-  const imagesTop = !hasTitle && !showLabels
-    ? Math.round((layout.height - colHeight) / 2)
-    : 280;
+  // Position images: explicit override > no-title (near top) > with-title default.
+  const imagesTop = imagesTopProp ?? (!hasTitle
+    ? (showLabels ? 60 : Math.round((layout.height - colHeight) / 2))
+    : 280);
 
   return (
     <AbsoluteFill style={{ backgroundColor: colors.white }}>
@@ -101,8 +109,8 @@ export const Comparison: React.FC<ComparisonProps> = ({
         }}
       >
         {[
-          { image: leftImage, label: leftLabel, side: 'left' as const },
-          { image: rightImage, label: rightLabel, side: 'right' as const },
+          { image: leftImage, label: leftLabel, side: 'left' as const, objectPosition: leftObjectPosition },
+          { image: rightImage, label: rightLabel, side: 'right' as const, objectPosition: rightObjectPosition },
         ].map((col, i) => (
           <div key={i} style={{ width: colWidth, opacity: colOpacity(col.side) }}>
             <div
@@ -116,7 +124,7 @@ export const Comparison: React.FC<ComparisonProps> = ({
             >
               <Img
                 src={staticFile(col.image)}
-                style={{ width: '100%', height: '100%', objectFit }}
+                style={{ width: '100%', height: '100%', objectFit, objectPosition: col.objectPosition ?? 'center' }}
               />
             </div>
             {showLabels && (

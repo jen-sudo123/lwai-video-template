@@ -3,11 +3,20 @@ import { AbsoluteFill } from 'remotion';
 import { colors, typography, layout } from '../tokens';
 import { LogoFooter } from '../Logo';
 import { AnimatedText } from '../animations/AnimatedText';
+import { FadeText } from '../animations/FadeText';
 
 type CenteredQuoteProps = {
   text: string;
   attribution?: string;
   animation?: 'kinetic' | 'fade' | 'auto';
+  highlight?: string;
+  // Frame at which the highlighted span bounces/pops and switches to lime —
+  // use to land the highlight on the moment the word is spoken. Omit to have
+  // it lime from the moment the line itself appears.
+  highlightFrame?: number;
+  // Per-\n-separated-line delay (in frames) so multi-line quotes can land on separate VO beats
+  // instead of appearing all at once. Omit for the default single-block reveal.
+  lineTimings?: number[];
 };
 
 // The hero statement. Big centered serif text. Use for stats, key claims,
@@ -16,7 +25,11 @@ export const CenteredQuote: React.FC<CenteredQuoteProps> = ({
   text,
   attribution,
   animation = 'auto',
+  highlight,
+  highlightFrame,
+  lineTimings,
 }) => {
+  const lines = text.split('\n');
   return (
     <AbsoluteFill style={{ backgroundColor: colors.white }}>
       <div
@@ -37,7 +50,19 @@ export const CenteredQuote: React.FC<CenteredQuoteProps> = ({
             margin: '0 auto',
           }}
         >
-          <AnimatedText text={text} animation={animation} />
+          {lineTimings ? (
+            lines.map((line, i) => (
+              <FadeText
+                key={i}
+                text={line}
+                delayFrames={lineTimings[i] ?? 0}
+                highlight={highlight}
+                highlightFrame={highlightFrame}
+              />
+            ))
+          ) : (
+            <AnimatedText text={text} animation={animation} highlight={highlight} />
+          )}
         </div>
 
         {attribution && (

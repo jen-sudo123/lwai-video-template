@@ -1,0 +1,81 @@
+start	end	text
+1280	6720	JGBT is no longer just the AI chatbot that everyone has heard of, it's really becoming
+6720	12860	an operating system for how leaders write, research, analyze, automate and get all of
+12860	14120	their work done.
+14580	20380	And with close to a billion weekly users, OpenAI's flagship assistant now combines powerful
+20380	23900	models with an incredible amount of features.
+24100	25740	So let's take a look at those features.
+25740	29500	First of all, there's Surge, which pulls live web answers.
+30060	35520	And there's also Deep Research, which synthesizes many sources into a structured sighted report.
+36120	41560	There's file uploads, vision and data analysis, so you can drop in PDFs, spreadsheets, images
+41560	44560	or charts and then JGBT will analyze them for you.
+45080	50780	Voice lets you talk naturally to JGBT and paid plans even at real-time video and screen
+50780	52140	sharing on mobile.
+52860	55740	The newly launched Images 2.0 is amazing.
+56000	61820	It generates visuals like mock-ups, diagrams and posters with better text layout and instruction
+61820	62320	following.
+62880	68080	Canvas is a dedicated workspace for writing and coding rather than managing long projects
+68080	69020	in a chat thread.
+70220	75440	Projects organize your chats, your files and instructions around ongoing work, while custom
+75440	79060	JGBTs let you build reusable task-specific assistants.
+79780	85160	Apps connect external tools like drives like GitHub, HubSpot and Asana so that JGBT can
+85160	91180	answer from your private work context and skills package repeatable workflows with instructions,
+91620	95760	example and codes for more consistent task execution.
+96900	101880	Tasks handle scheduled lightweight automation work like reminders, recurring briefings and
+101880	102780	future follow-ups.
+103060	108640	And JGBT agent can autonomously browse the web for you, navigate pages, fill forms and
+108640	109700	edit spreadsheets.
+110320	116120	Memory, custom instructions and tone let JGBT learn your preferences and adapt its behavior
+116120	117000	over time.
+117540	121680	And then there's Codex, which is OpenAI's coding agent for writing, reviewing, debugging
+121680	122860	and shipping code.
+124720	125540	Now those are the features.
+125760	128380	What about the models that power this platform?
+128760	133840	Well, the models are best understood in three layers, Instant, Thinking and Pro.
+134900	138820	GPT 5.5 Instant is the fast everyday model.
+139280	143960	It is designed for normal questions, writing, summarizing, brainstorming, image analysis
+143960	145180	and quick work.
+145760	153720	First previewed on June 26, 2026, GPT 5.6 is OpenAI's newest model family and is now
+153720	156760	gradually rolling out to eligible chat GPT plans.
+157160	162620	It includes Sol, the flagship model for complex reasoning and professional work, Terra, which
+162620	169420	balances capability, speed and cost, and Luna, the fastest and most cost efficient option.
+170360	175900	In standard chat GPT conversations, the main model available from this family is GPT 5.6
+175900	176180	Sol.
+176480	183620	GPT 5.6 Sol is designed for demanding tasks such as coding, research, science, data analysis,
+184000	186400	computer use, cybersecurity and design.
+186840	192180	GPT 5.6 Sol Pro is the highest capability option for the hardest questions and longer
+192180	192840	running workflows.
+193240	197680	Use it when you need deeper reasoning, stronger structure and greater confidence in the final
+197680	198200	result.
+198520	198520	
+199860	204600	Now, in terms of privacy and data use for personal plans, training and data sharing settings
+204600	210100	can be adjusted in settings, but for business, enterprise and education plans, OpenAI says
+210100	213900	that organizational data is not used for training by default.
+214460	219600	Then on May 1, GPT also rolled out advanced account security, which then adds stronger
+219600	224580	sign in protection like pass keys or security keys and stricter recovery checks.
+225100	230040	Of course, regardless of any plan, avoid sharing sensitive information that you wouldn't share
+230040	233820	with a third party vendor and verify any outputs that matter.
+234560	240240	And finally, in terms of plans and pricing, chat GPT now offers a pretty wide range of
+240240	240600	options.
+241020	247320	There's free for everyday use, with limited access to GPT 5.5 Instant, plus web search,
+247320	251960	file uploads, data analysis, image generation and GPTs.
+252460	258520	The exact model limit can vary and once you reach it, chat GPT switches you to GPT 5.5
+258520	259100	Instant Mini.
+259580	263120	Then there's Go, which costs $8 per month in the US.
+263660	269760	It gives you more messages, uploads, image generation, data analysis, memory and a larger
+269760	271340	context window than free.
+271900	275080	But for most professionals, Plus is probably the better fit.
+275800	281840	At $20 per month, Plus gives you higher model limits, more advanced reasoning, faster responses,
+282420	289120	voice, image generation, file analysis, deep research, agent mode, custom GPT creation
+289120	291420	and expanded access to Codex.
+292020	295340	If you regularly run into those limits, then there's Pro.
+295960	302280	The $100 plan gives you five times the usage of Plus, while the $200 plan gives you 20
+302280	303200	times the usage.
+303800	309480	Both include access to chat GPT's most advanced models and tools, and then business and enterprise
+309480	314900	ad shared workspaces, admin controls, stronger security and governance, company knowledge,
+315280	318820	shared projects, agents, apps and organizational permissions.
+319640	324480	Business costs $25 per user per month, or $20 per user per month with annual billing,
+324780	326760	and requires at least two users.
+327420	329320	Enterprise uses custom pricing.
+330280	335260	But in short, chat GPT now really covers more of the senior work that you would do than
+335260	337020	any single tool before it.

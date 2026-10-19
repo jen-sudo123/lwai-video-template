@@ -1,0 +1,33 @@
+start	end	text
+1740	13900	We have spent a lot of time talking about how helpful AI can be, and rightly so, AI can help you work faster, improve output quality and take on work that used to take much longer.
+14760	19240	But becoming fluent with AI also means understanding where it can go wrong.
+20120	28340	AI can give you incorrect information, it can reflect bias, it can expose sensitive data or create new security and governance risks.
+29240	32320	One of the best known risks is hallucination.
+33160	39160	This is when AI generates information that sounds plausible but is inaccurate or entirely invented.
+39980	47560	It might give you a wrong number, invent a source, misattribute a quote or confidently describe something that never happened.
+48520	51580	And the danger is that wrong answers don't always look wrong.
+52260	57280	AI can present an incorrect answer with the same confidence and polish as a correct one.
+57280	65060	Modern AI systems can search the web, work with documents, use tools and reason through complex questions.
+65780	69280	But that still doesn't mean that every answer is automatically trustworthy.
+70300	73660	A polished answer is still something you need to judge.
+74600	76580	AI can also reflect bias.
+76580	86860	Models learn from huge amounts of human-created information containing cultural assumptions, dominant viewpoints, gaps and uneven representation.
+87860	96860	The answer that you get may be influenced by the language that you use, the context that's available, how the model was trained and how you frame your question.
+97860	104740	So don't only ask, did AI give me an answer, but also ask, what perspective might be missing?
+106120	110780	Another major risk is the information that you put into AI systems.
+111620	122700	Before sharing any sensitive information, you want to know whether the tool was approved, what information you are allowed to provide and what your organization's policies require.
+123620	126560	And there is another consideration that is easy to overlook.
+127500	132000	What you enter into AI may become part of your organization's record.
+132000	144120	Depending on the tool and the settings, prompts and responses may be retained and could potentially be reviewed later in an internal investigation, regulatory inquiry or a legal dispute.
+145500	151980	So ask, would I be comfortable with this becoming part of the organizational record before using AI?
+152860	159020	Now as AI starts interacting with websites, files, software and other systems, the risks increase.
+160020	165160	AI may encounter malicious or misleading instructions in the information that it processes.
+166120	170400	This matters even more when AI can take actions, not just generate text.
+171400	178520	It's why organizations increasingly control what AI can access, what it can do and where human approval is required.
+179420	182040	And one principle matters above all.
+182740	186440	Using AI does not transfer responsibility to the AI.
+186440	194860	If you use AI to create work, make recommendations or influence decisions, you still remain accountable for the results.
+195920	200300	The bottom line is that AI fluency is not just about how to get more out of AI.
+200980	207020	It's also knowing that AI can be extremely capable while still being wrong, biased or risky.
+207840	213240	And regardless of how capable the technology becomes, human judgment remains essential.
+213920	221160	Later we'll look more closely at how AI fails and how to check important AI generated work before you rely on it.

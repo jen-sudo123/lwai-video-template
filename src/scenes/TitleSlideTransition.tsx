@@ -13,6 +13,12 @@ type TitleSlideTransitionProps = {
   bodyTimings?: number[];
   bodyRows?: BodyRow[];
   bodyRowTimings?: number[];
+  // When true, renders bodyRows as a row of bordered cards (label on top,
+  // prompt below) instead of stacked label | prompt rows.
+  bodyRowsAsCards?: boolean;
+  // When true, the title stays centered on screen (fade + scale in) instead
+  // of dragging from the right-column position to the top-left corner.
+  centered?: boolean;
 };
 
 // Animates a title from the right-column center position (SplitContrast)
@@ -25,6 +31,8 @@ export const TitleSlideTransition: React.FC<TitleSlideTransitionProps> = ({
   bodyTimings,
   bodyRows,
   bodyRowTimings,
+  bodyRowsAsCards = false,
+  centered = false,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -42,19 +50,34 @@ export const TitleSlideTransition: React.FC<TitleSlideTransitionProps> = ({
   const endX = layout.safeMargin;
   const endY = layout.safeMargin;
 
-  const x = interpolate(progress, [0, 1], [startX, endX]);
-  const y = interpolate(progress, [0, 1], [startY, endY]);
+  const x = centered ? layout.width / 2 : interpolate(progress, [0, 1], [startX, endX]);
+  const y = centered ? layout.height / 2 : interpolate(progress, [0, 1], [startY, endY]);
 
   const labelColor = interpolate(progress, [0, 0.6], [1, 0], { extrapolateRight: 'clamp' });
+  const centeredScale = interpolate(progress, [0, 1], [0.92, 1]);
+  const centeredOpacity = interpolate(progress, [0, 1], [0, 1]);
 
   return (
     <AbsoluteFill style={{ backgroundColor: colors.white }}>
-      <div style={{ position: 'absolute', left: x, top: y }}>
+      <div
+        style={{
+          position: 'absolute',
+          left: x,
+          top: y,
+          ...(centered
+            ? {
+                transform: `translate(-50%, -50%) scale(${centeredScale})`,
+                opacity: centeredOpacity,
+                textAlign: 'center' as const,
+              }
+            : {}),
+        }}
+      >
         {label && (
           <div
             style={{
               ...typography.label,
-              color: `rgb(${Math.round(interpolate(labelColor, [0, 1], [136, 102]))}, ${Math.round(interpolate(labelColor, [0, 1], [136, 198]))}, ${Math.round(interpolate(labelColor, [0, 1], [136, 28]))})`,
+              color: centered ? colors.lime500 : `rgb(${Math.round(interpolate(labelColor, [0, 1], [136, 102]))}, ${Math.round(interpolate(labelColor, [0, 1], [136, 198]))}, ${Math.round(interpolate(labelColor, [0, 1], [136, 28]))})`,
               marginBottom: 20,
             }}
           >
@@ -75,8 +98,67 @@ export const TitleSlideTransition: React.FC<TitleSlideTransitionProps> = ({
         </div>
       </div>
 
+      {/* Row of bordered cards: label on top, prompt below */}
+      {bodyRows && bodyRows.length > 0 && bodyRowsAsCards && (
+        <div
+          style={{
+            position: 'absolute',
+            left: layout.safeMargin,
+            right: layout.safeMargin,
+            top: 420,
+            display: 'flex',
+            flexDirection: 'row',
+            gap: 32,
+          }}
+        >
+          {bodyRows.map((row, i) => {
+            const delay = bodyRowTimings?.[i] ?? i * 60;
+            const enter = spring({
+              frame: frame - delay,
+              fps,
+              config: { damping: 14, stiffness: 100, mass: 0.7 },
+            });
+            const opacity = interpolate(enter, [0, 1], [0, 1]);
+            const ty = interpolate(enter, [0, 1], [32, 0]);
+
+            return (
+              <div
+                key={i}
+                style={{
+                  flex: 1,
+                  minWidth: 0,
+                  borderRadius: 24,
+                  border: `2px solid ${colors.neutral200}`,
+                  boxShadow: '0 10px 32px rgba(0,0,0,0.06)',
+                  backgroundColor: colors.white,
+                  padding: '36px 32px',
+                  opacity,
+                  transform: `translateY(${ty}px)`,
+                }}
+              >
+                <div style={{ ...typography.label, fontSize: 22, color: colors.lime500, marginBottom: 16 }}>
+                  {row.label}
+                </div>
+                <div
+                  style={{
+                    fontFamily: fonts.serif,
+                    fontSize: 40,
+                    fontWeight: 400,
+                    letterSpacing: '-0.02em',
+                    color: colors.black,
+                    lineHeight: 1.25,
+                  }}
+                >
+                  {row.prompt}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
       {/* Two-column rows: label | prompt */}
-      {bodyRows && bodyRows.length > 0 && (
+      {bodyRows && bodyRows.length > 0 && !bodyRowsAsCards && (
         <div
           style={{
             position: 'absolute',

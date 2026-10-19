@@ -3,6 +3,7 @@ import { AbsoluteFill, useCurrentFrame, interpolate } from 'remotion';
 import { colors, typography, layout, fonts } from '../tokens';
 import { LogoFooter } from '../Logo';
 import { FadeText } from '../animations/FadeText';
+import { ShatterText } from '../animations/ShatterText';
 
 const DIM = 0.18;
 const CROSSFADE_FRAMES = 12;
@@ -31,7 +32,15 @@ type SplitContrastProps = {
   leftBodyHighlightIndices?: number[];
   // When true, both sides render as cards (border + padding + shadow) and the "vs." divider is hidden.
   asCards?: boolean;
+  // When true, the right title shatters into individual characters that fly
+  // apart with rotation, like breaking glass.
+  rightTitleBreak?: boolean;
+  rightTitleBreakFrame?: number;
+  // When set, the right column renders dimmed from frame 0 and transitions
+  // to fully lit starting at this frame (independent of leftTitleBreak timing).
+  rightLightUpFrame?: number;
 };
+
 
 // Two-column contrast: muted left side vs. lime-accented right side.
 // Both column headers appear immediately (left first, right 15f later).
@@ -59,8 +68,20 @@ export const SplitContrast: React.FC<SplitContrastProps> = React.memo(
     equal = false,
     leftBodyHighlightIndices = [],
     asCards = false,
+    rightTitleBreak = false,
+    rightTitleBreakFrame = 40,
+    rightLightUpFrame,
   }) => {
     const frame = useCurrentFrame();
+
+    // Right column sits dimmed until rightLightUpFrame, then brightens to full opacity.
+    const rightDimMultiplier =
+      rightLightUpFrame === undefined
+        ? 1
+        : interpolate(frame, [rightLightUpFrame, rightLightUpFrame + 20], [DIM, 1], {
+            extrapolateLeft: 'clamp',
+            extrapolateRight: 'clamp',
+          });
 
     // Compute per-side opacity from the highlights schedule (same pattern as MethodsSlide).
     const sorted = [...highlights].sort((a, b) => a.from - b.from);
@@ -233,25 +254,36 @@ export const SplitContrast: React.FC<SplitContrastProps> = React.memo(
                   width: colWidth,
                   top: '50%',
                   transform: `translateY(-50%) translateX(${col.tx}px)`,
-                  opacity: col.op,
+                  opacity: i === 1 ? col.op * rightDimMultiplier : col.op,
                 }}
               >
                 <div style={{ ...typography.label, color: colors.neutral600, marginBottom: 20 }}>
                   {col.label}
                 </div>
-                <div
-                  style={{
-                    fontFamily: fonts.serif,
-                    fontSize: col.titleSize,
-                    fontWeight: 400,
-                    letterSpacing: '-0.04em',
-                    lineHeight: 1.15,
-                    color: colors.black,
-                    marginBottom: 36,
-                  }}
-                >
-                  {col.title}
-                </div>
+                {i === 1 && rightTitleBreak && col.title ? (
+                  <div style={{ marginBottom: 36 }}>
+                    <ShatterText
+                      text={col.title}
+                      fontSize={col.titleSize}
+                      frame={frame}
+                      breakFrame={rightTitleBreakFrame}
+                    />
+                  </div>
+                ) : (
+                  <div
+                    style={{
+                      fontFamily: fonts.serif,
+                      fontSize: col.titleSize,
+                      fontWeight: 400,
+                      letterSpacing: '-0.04em',
+                      lineHeight: 1.15,
+                      color: colors.black,
+                      marginBottom: 36,
+                    }}
+                  >
+                    {col.title}
+                  </div>
+                )}
                 <div style={{ ...typography.body, color: colors.neutral600, lineHeight: 1.6 }}>
                   {col.body && <FadeText text={col.body} delayFrames={col.delay} />}
                 </div>

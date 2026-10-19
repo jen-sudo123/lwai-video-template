@@ -1,0 +1,108 @@
+start	end	text
+0	1160	Microsoft 365.
+2120	4580	Copilot agents are reusable mini assistants
+4580	7300	you can configure for a specific workflow.
+7540	9620	Instead of re-explaining the same task
+9620	11140	every time you open a new chat,
+11540	13380	you can give the agent a clear role,
+13720	15980	standing instructions, approved knowledge sources,
+16300	17420	and optional capabilities.
+18020	19840	Think of it as turning a super prompt
+19840	21160	into a reusable assistant.
+21740	25320	You can create agents from the Microsoft 365 Copilot app,
+25640	27100	OneDrive or SharePoint,
+27360	28920	depending on your license, permissions,
+28920	30520	and organization settings.
+31000	33320	For this demo, I'll use the most common path,
+33800	36240	the Microsoft 365 Copilot app.
+36660	38660	To begin, I go to the left side panel
+38660	39640	and click New Agent.
+39960	41860	Here, I can either describe the agent
+41860	43560	I want to create in the prompt box,
+43880	45600	or skip directly to configuration.
+46440	47980	Since I already know what I want to build,
+48220	49160	I'll skip to configuration.
+49840	51800	In this example, I'll build an assistant
+51800	54160	that helps me write weekly leadership updates.
+54720	55620	I'll name it Larry.
+56140	57740	Then I add a short description.
+58420	60440	Helps me write weekly leadership updates.
+61260	62800	Next, I configure the agent.
+63420	65620	This brings me to the most important part,
+66320	67300	the instructions field.
+67960	70460	This is where I paste my tested prompt template,
+70800	72200	personalized to my workflow.
+72940	75000	For this example, the instructions include
+75000	76580	four consistent elements,
+76960	79300	aligned with CEO do super prompting,
+79840	80860	the role of the assistant,
+81340	82520	the objective of the workflow,
+82860	83960	the do's and don'ts,
+83960	86980	and the output format I want every time.
+87700	89480	The fifth element is the variable part.
+90060	92280	That is what I provide each time I use the assistant,
+92460	93560	such as this week's notes,
+93900	96460	priorities, metrics, or meeting context.
+97200	100400	The goal is not to write a long prompt every time.
+101000	102140	The goal is to write it once,
+102680	105060	test it, improve it, and make it reusable.
+106020	108140	Then I can choose the knowledge sources.
+108700	111040	Agent Builder can use sources like SharePoint,
+111420	114640	OneDrive, websites, teams, and approved connectors,
+114640	116760	depending on your organization's settings.
+117420	118680	The practical rule is simple.
+119040	120860	Only add sources that improve the workflow.
+121360	123260	Too much context can create noise,
+123720	125740	contradictions, or outdated references.
+126280	127940	For this leadership update assistant,
+128140	129660	I'll keep it prompt based first.
+130080	132340	After that, I review the agent's capabilities.
+133000	133920	Depending on your setup,
+134240	136820	you may be able to enable features like document creation,
+137140	138920	charts, code, or images.
+139460	142100	For this assistant, I'll enable document creation
+142100	144520	so the final output can be turned
+144520	146580	into a Word document more easily.
+147160	148700	I can also add starter prompts.
+149340	150900	This is optional, but useful
+150900	152920	if you want to share the agent to others.
+153520	154940	For Larry, I might add,
+155420	158020	draft this week's leadership update for my notes.
+158720	160100	Turn these project updates
+160100	162220	into an executive-ready summary.
+162920	165840	Rewrite this update to make it clearer and more concise.
+166760	168560	These prompts help people understand
+168560	170020	what the agent is for
+170020	171880	without needing a separate explanation.
+172400	173680	And before I finalize it,
+173880	175820	I choose Preview to test the agent.
+176200	178360	I paste the variable part of my workflow.
+178880	181380	Here are my inputs for the upcoming leadership meeting.
+181700	182720	Please process them.
+183180	184480	Then I add my notes.
+184880	187440	The agent generates a draft leadership update,
+187720	189040	and now I review it.
+189400	189980	Is it clear?
+190380	191580	Is it executive-ready?
+192080	193980	Does it follow the structure I asked for?
+194380	196880	Does it avoid details that are too tactical?
+196880	200500	If not, I can refine the instructions and test again.
+201100	202820	Since I'm satisfied with the results,
+203200	204300	I click on Create.
+204840	207220	By default, the agent starts as private,
+207540	209840	but sharing options may include your organization
+209840	212800	or specific users, depending on admin policy.
+213380	215620	Once created, the agent usually appears
+215620	219180	in the left-side panel in Microsoft 365 Copilot.
+219580	221980	In some Microsoft 365 experiences,
+222540	223860	I can also call an agent
+223860	225520	by ad mentioning it in a new chat.
+226120	228620	That lets me bring the agent into the flow of work
+228620	230220	instead of switching contexts.
+230960	232640	And finally, notes on availability.
+233560	237360	What you see may depend on your Microsoft 365 license,
+237820	240380	admin settings, and work or school environment.
+241040	242980	And for more advanced agents with automation
+242980	245280	and integrations, use Copilot Studio,
+245740	247300	which is only available for business
+247300	250800	or enterprise-level Microsoft 365 subscriptions.

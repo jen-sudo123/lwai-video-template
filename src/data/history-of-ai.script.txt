@@ -1,0 +1,81 @@
+Welcome to your journey toward understanding and using AI in your work and life.
+
+Before we dive in, I want to ground us in something important. AI may sound technical, or even intimidating, but it is actually one of the most human technologies ever created.
+
+That may sound counterintuitive. After all, AI is software, code, and data.
+
+But its design and purpose are deeply human: to understand, to interact, and to respond in ways that feel useful to us.
+
+We are miles away from those clunky old chatbots. Today's AI can hear, see, speak, and understand across many types of information.
+
+Take a look at this quick video to see what I mean.
+
+AI is not just a backend tool anymore. It is something we can talk to, learn from, and even laugh with.
+
+Like a friend.
+
+To understand how we got here, let's take a quick look back.
+
+The idea of AI has been around for more than 100 years, but it really started taking shape in the 1950s.
+
+That is when Alan Turing, known for the Turing Test, wrote a now-famous paper asking a deceptively simple question: Can machines think?
+
+That question became the foundation of what we now call Artificial Intelligence, or AI.
+
+AI refers to technology designed to perform tasks that usually require human intelligence, such as recognizing patterns, making decisions, learning from experience, and understanding language.
+
+In the decades after Turing's paper, AI went through several boom and bust cycles.
+
+One major breakthrough came in the 2000s and 2010s with the rise of Predictive AI.
+
+Predictive AI uses historical data to identify patterns and predict future outcomes.
+
+A great example is Amazon. By the time you click "Buy," they may have already predicted demand and optimized the warehouse to ship it fast.
+
+Predictive AI is extremely powerful, but it was usually designed for specific tasks.
+
+It could forecast demand or recommend products, but it could not easily hold a conversation, answer open-ended questions, or create new content.
+
+And for most people, using it meant working through specialized software, not simply telling the system what you wanted in plain language.
+
+Then, in the early 2020s, a new breakthrough emerged: Generative AI.
+
+Generative AI does not just recognize patterns. It creates new content, including text, images, code, and more, based on the data it has been trained on.
+
+Instead of being limited to a narrow prediction task, Generative AI can understand natural language instructions.
+
+It can help people brainstorm ideas, write reports, analyze information, generate visuals, and solve problems through conversation.
+
+The breakthrough moment came when Generative AI became accessible through chat.
+
+And that brings us to the ChatGPT moment.
+
+ChatGPT, launched by OpenAI in November 2022, was not the first Generative AI model.
+
+But it was the first to achieve widespread public adoption and show millions of people what this technology could do.
+
+It reached one million users in five days, and one hundred million in two months.
+
+It moved faster than TikTok, faster than Instagram, and faster than any consumer platform on record at the time.
+
+By May 2026, roughly three years after launch, ChatGPT crossed one billion monthly active users.
+
+Within 18 months of ChatGPT's launch, major technology companies had released competing models.
+
+Google launched Gemini. Anthropic launched Claude. Meta released Llama. Microsoft embedded AI directly into the tools many teams already use every day.
+
+Today, AI is being used across fields ranging from economics and finance to healthcare, education, public policy, research, and software development.
+
+It helps executives analyze information, automate routine tasks, and support better decision-making.
+
+For leaders and workers, the question stopped being, "Is this real?"
+
+It became, "Which one do I use, and how?"
+
+That is exactly what this course is designed to answer.
+
+In the next section, we will reflect on these concepts and definitions.
+
+Not because you need to become an AI researcher, but because these ideas will help you understand everything that follows.
+
+And who knows, they may even help you score a few points during your next lunch meeting or social event.

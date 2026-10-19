@@ -1,0 +1,87 @@
+Now, in our quest to personalize AI,
+we start with custom instructions.
+This is because you can shape them directly and they
+make every following conversation immediately more valuable.
+Custom instructions are useful because they let you
+establish recurring contexts and expectations
+once rather than rebuilding them inside every single prompt.
+Without them, even experienced AI users
+can spend part of each conversation
+re-explaining things like who the audience is,
+how much detail is useful, how decisions should be presented,
+or how critically AI should engage with their thinking.
+Custom instructions move that recurring information
+out of the individual prompts and into a persistent setting
+that the AI reads before every conversation.
+And that means that your prompts can focus more
+on what is unique about each task
+while AI starts with a stronger understanding
+of how to work with you.
+There are three things worth telling AI
+and we call them the three Cs framework,
+context, communication, and collaboration.
+So context is all about what AI should know about you.
+So you provide the recurring context
+that helps AI give you more relevant responses.
+That could include your role, responsibilities,
+expertise, and the people that you typically communicate with.
+Then there's communication.
+So you can define how you prefer information to be presented.
+So think about things like tone, length, structure,
+the level of detail, and how much reasoning you want to see.
+Now be careful about asking for two things at once here.
+If you request concise and comprehensive
+in the same profile, you'll get neither.
+Especially the newer reasoning models
+are sticklers for this level of detail.
+And then there's collaboration.
+This is all about how you want AI
+to approach the work itself.
+Should it challenge you?
+Should it bring up risks?
+Should it name trade-offs between options?
+Should it ask you questions or tell you
+when there isn't enough information to answer well?
+Now once you've written all three,
+you wanna save them together as a single document
+somewhere that you can easily open and update.
+An MD file especially will serve you well
+when you're working with multiple platforms and agents.
+This will then be the reference
+that you'll return to every time
+you wanna personalize a new AI tool or agent
+so you're not rebuilding it from scratch every time.
+Don't forget that everything you write
+into these custom instructions
+runs before every prompt moving forward.
+So you wanna avoid providing information
+that's either only applicable sometimes
+or otherwise would confuse the AI
+in context of your prompts.
+Now of course we also wanna keep
+these custom instructions relevant.
+These custom instructions should evolve as you do.
+Your context, communication,
+and collaboration preferences today
+are likely to change within let's say the next six months.
+So as your roles or responsibilities change,
+you wanna update your context.
+If you repeatedly find yourself asking
+for a different tone, format, or a level of detail,
+you wanna adjust your communication preferences.
+And if AI is getting too argumentative
+or conversely too pleasing,
+you wanna refine your collaboration instructions.
+A useful signal here is repetition.
+If you keep giving AI the same instruction
+across conversations,
+you wanna ask yourself whether you want AI
+to know or follow this most of the time.
+If it's a yes, then consider adding it
+to your custom instructions.
+Of course, if it's specific to just one task,
+then you wanna keep it in the prompt.
+Now the more refined and the more up to date
+these custom instructions are,
+the more that AI truly moves from a general purpose tool
+to one based on you and the work that you need to get done.

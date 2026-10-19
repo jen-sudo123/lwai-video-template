@@ -1,0 +1,35 @@
+<speak>
+<break time="500ms"/>Copilot in PowerPoint is Microsoft's built-in AI assistant for creating and improving presentations. Because it lives directly inside PowerPoint, it can turn a rough idea, a prompt, or an existing document into a structured first draft, helping you move past the blank slide much faster.
+
+<break time="500ms"/>Under the hood, Copilot can connect to Microsoft Graph. This allows it to use files and organizational information that you already have permission to access, including documents stored in OneDrive or SharePoint.
+
+<break time="500ms"/>Think of Copilot as a drafting partner. It can help with the initial structure, content, and layout, so you can focus on strengthening the narrative and making sure the presentation supports your objective.
+
+<break time="500ms"/>Now, let's look at how this works in PowerPoint for the web.
+
+<break time="500ms"/>Copilot is integrated directly into the PowerPoint workspace. In this version, I can find the Copilot button in the bottom-right corner of the canvas. I click the icon, and the Copilot panel opens.
+
+<break time="500ms"/>Here, I have two main ways to work with Copilot. The first is Chat, which works as a question-and-answer assistant. I can use it to brainstorm, ask questions, summarize the presentation, or get suggestions. The second is Allow editing, which gives Copilot permission to make changes directly to the slides on the canvas. For this example, I select Allow editing.
+
+<break time="500ms"/>In the prompt box, I give Copilot a clear instruction: "Create a presentation for my leadership team about how we should prepare the company for a world where AI significantly disrupts our industry. Use the outline in my reference file."
+
+<break time="500ms"/>I can do this by selecting Add work content or Upload files. If the reference document is already stored in SharePoint or OneDrive, I may also be able to type a forward slash in the prompt box and select it directly.
+
+<break time="500ms"/>Another useful feature is that if your organization has set up a brand kit or branded PowerPoint template in Microsoft 365, Copilot can use it when creating the deck. This helps keep the logo, fonts, colors, and overall visual identity consistent, so you do not have to format every slide manually. Once everything is ready, I hit Send.
+
+<break time="500ms"/>Now, before creating the complete deck, Copilot may ask a few follow-up questions, such as how many slides I want, who the audience is, what tone the presentation should use, or whether it should include information from external sources. These questions help Copilot better understand the outcome I am looking for.
+
+<break time="500ms"/>Once I have answered the questions, Copilot begins generating the presentation directly on the canvas.
+
+<break time="500ms"/>And here is the result. Pretty neat, right? But this is still a first draft. Before using the presentation, I need to check that the information is correct, that the narrative is logical, and that the slides reflect the message I want to communicate.
+
+<break time="500ms"/>If I am not happy with something, I can continue working with Copilot. For example, I can select the opening slide and ask: "Make this opening more compelling for a leadership audience." Copilot can then revise the slide directly.
+
+<break time="500ms"/>I can also ask Copilot to improve the visuals, shorten the text, reorganize the content, or reformat individual slides.
+
+<break time="500ms"/>Another feature recently added to Copilot is Skills. By clicking the Plus icon in the prompt box, I can select All Skills. These Skills are built-in actions that Copilot can use to help improve the presentation more efficiently, such as Prepare for Questions, Review This Presentation, or Visualize This Slide. They give me quick ways to evaluate and refine the deck, so I do not have to write every prompt from scratch.
+
+<break time="500ms"/>And now, in terms of availability, Copilot's interface and capabilities can vary depending on whether you're using PowerPoint on the web or desktop, your Microsoft 365 plan, your organization's settings, and which features have reached your account. Copilot in PowerPoint is directly integrated into Microsoft 365 Personal and Family plans, while power users can opt for the Microsoft 365 Premium plan for higher usage limits.
+
+<break time="500ms"/>For business and enterprise users, Copilot is available through Microsoft 365 Business Standard, Business Premium, and Enterprise tiers, as an add-on costing between $18 and $30 per user per month.
+</speak>

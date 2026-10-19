@@ -6,3 +6,9 @@ out/
 *.wav
 *.mp3
 scene-stills/
+
+# Media lives in Google Drive (scripts/assets-pull.sh / assets-push.sh)
+public/
+public-full/
+.DS_Store
+.claude/settings.local.json

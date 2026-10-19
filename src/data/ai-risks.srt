@@ -1,0 +1,128 @@
+1
+00:00:01,740 --> 00:00:13,900
+We have spent a lot of time talking about how helpful AI can be, and rightly so, AI can help you work faster, improve output quality and take on work that used to take much longer.
+
+2
+00:00:14,760 --> 00:00:19,240
+But becoming fluent with AI also means understanding where it can go wrong.
+
+3
+00:00:20,120 --> 00:00:28,340
+AI can give you incorrect information, it can reflect bias, it can expose sensitive data or create new security and governance risks.
+
+4
+00:00:29,240 --> 00:00:32,320
+One of the best known risks is hallucination.
+
+5
+00:00:33,160 --> 00:00:39,160
+This is when AI generates information that sounds plausible but is inaccurate or entirely invented.
+
+6
+00:00:39,980 --> 00:00:47,560
+It might give you a wrong number, invent a source, misattribute a quote or confidently describe something that never happened.
+
+7
+00:00:48,520 --> 00:00:51,580
+And the danger is that wrong answers don't always look wrong.
+
+8
+00:00:52,260 --> 00:00:57,280
+AI can present an incorrect answer with the same confidence and polish as a correct one.
+
+9
+00:00:57,280 --> 00:01:05,060
+Modern AI systems can search the web, work with documents, use tools and reason through complex questions.
+
+10
+00:01:05,780 --> 00:01:09,280
+But that still doesn't mean that every answer is automatically trustworthy.
+
+11
+00:01:10,300 --> 00:01:13,660
+A polished answer is still something you need to judge.
+
+12
+00:01:14,600 --> 00:01:16,580
+AI can also reflect bias.
+
+13
+00:01:16,580 --> 00:01:26,860
+Models learn from huge amounts of human-created information containing cultural assumptions, dominant viewpoints, gaps and uneven representation.
+
+14
+00:01:27,860 --> 00:01:36,860
+The answer that you get may be influenced by the language that you use, the context that's available, how the model was trained and how you frame your question.
+
+15
+00:01:37,860 --> 00:01:44,740
+So don't only ask, did AI give me an answer, but also ask, what perspective might be missing?
+
+16
+00:01:46,120 --> 00:01:50,780
+Another major risk is the information that you put into AI systems.
+
+17
+00:01:51,620 --> 00:02:02,700
+Before sharing any sensitive information, you want to know whether the tool was approved, what information you are allowed to provide and what your organization's policies require.
+
+18
+00:02:03,620 --> 00:02:06,560
+And there is another consideration that is easy to overlook.
+
+19
+00:02:07,500 --> 00:02:12,000
+What you enter into AI may become part of your organization's record.
+
+20
+00:02:12,000 --> 00:02:24,120
+Depending on the tool and the settings, prompts and responses may be retained and could potentially be reviewed later in an internal investigation, regulatory inquiry or a legal dispute.
+
+21
+00:02:25,500 --> 00:02:31,980
+So ask, would I be comfortable with this becoming part of the organizational record before using AI?
+
+22
+00:02:32,860 --> 00:02:39,020
+Now as AI starts interacting with websites, files, software and other systems, the risks increase.
+
+23
+00:02:40,020 --> 00:02:45,160
+AI may encounter malicious or misleading instructions in the information that it processes.
+
+24
+00:02:46,120 --> 00:02:50,400
+This matters even more when AI can take actions, not just generate text.
+
+25
+00:02:51,400 --> 00:02:58,520
+It's why organizations increasingly control what AI can access, what it can do and where human approval is required.
+
+26
+00:02:59,420 --> 00:03:02,040
+And one principle matters above all.
+
+27
+00:03:02,740 --> 00:03:06,440
+Using AI does not transfer responsibility to the AI.
+
+28
+00:03:06,440 --> 00:03:14,860
+If you use AI to create work, make recommendations or influence decisions, you still remain accountable for the results.
+
+29
+00:03:15,920 --> 00:03:20,300
+The bottom line is that AI fluency is not just about how to get more out of AI.
+
+30
+00:03:20,980 --> 00:03:27,020
+It's also knowing that AI can be extremely capable while still being wrong, biased or risky.
+
+31
+00:03:27,840 --> 00:03:33,240
+And regardless of how capable the technology becomes, human judgment remains essential.
+
+32
+00:03:33,920 --> 00:03:41,160
+Later we'll look more closely at how AI fails and how to check important AI generated work before you rely on it.
+

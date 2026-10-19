@@ -248,5 +248,79 @@ export const templateGallery: VideoData = {
       ],
       durationInFrames: 120,
     },
+
+    // ── New layouts added from GeminiInDocs ──
+
+    // video-clip: basic overlay (bottom-left card, no zoom)
+    {
+      layout: 'video-clip',
+      videoSrc: 'video/gemini-in-docs.mp4',
+      videoStartTime: 14.88,
+      label: 'VIDEO CLIP',
+      title: 'Screen recording with text overlay',
+      body: [
+        'Label + title + body over a live video background',
+        'Body lines fade in on custom frame timings',
+      ],
+      bodyTimings: [40, 90],
+      durationInFrames: 180,
+    },
+
+    // video-clip: top overlay
+    {
+      layout: 'video-clip',
+      videoSrc: 'video/gemini-in-docs.mp4',
+      videoStartTime: 58.34,
+      label: 'TOP OVERLAY',
+      title: 'Text card pinned to the top',
+      body: ['Use overlayPosition: "top" to keep the bottom of the frame clear'],
+      bodyTimings: [40],
+      overlayPosition: 'top',
+      durationInFrames: 150,
+    },
+
+    // video-clip: top-right overlay
+    {
+      layout: 'video-clip',
+      videoSrc: 'video/gemini-in-docs.mp4',
+      videoStartTime: 183.78,
+      label: 'TOP-RIGHT OVERLAY',
+      title: 'Card in the top-right corner',
+      body: ['Use overlayPosition: "top-right" when content is left-heavy'],
+      bodyTimings: [40],
+      overlayPosition: 'top-right',
+      durationInFrames: 150,
+    },
+
+    // video-clip: keyframe zoom — full → bottom → out → right
+    {
+      layout: 'video-clip',
+      videoSrc: 'video/gemini-in-docs.mp4',
+      videoStartTime: 14.88,
+      label: 'KEYFRAME ZOOM',
+      title: 'Animate the camera with clipZoomKeyframes',
+      body: [
+        'Zoom in to any region at any frame',
+        'Pan between regions smoothly',
+        'Zoom back out on cue',
+      ],
+      bodyTimings: [40, 90, 140],
+      overlayPosition: 'top',
+      clipZoomKeyframes: [
+        { startFrame: 0,   scale: 1.0, originX: 50, originY: 50 },
+        { startFrame: 40,  scale: 1.6, originX: 50, originY: 85 }, // bottom
+        { startFrame: 100, scale: 1.0, originX: 50, originY: 50 }, // zoom out
+        { startFrame: 140, scale: 1.6, originX: 90, originY: 20 }, // top-right
+      ],
+      durationInFrames: 240,
+    },
+
+    // ── New layouts added from the free Line Chart template ──
+
+    {
+      layout: 'line-chart',
+      title: 'Revenue Growth',
+      durationInFrames: 150,
+    },
   ],
 };

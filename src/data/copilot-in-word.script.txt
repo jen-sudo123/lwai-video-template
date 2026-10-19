@@ -1,0 +1,37 @@
+<speak>
+<break time="500ms"/>Microsoft three sixty five Copilot in Word is not a separate writing app. You experience it directly inside Word.
+
+<break time="500ms"/>Most of the time, you'll use it in two ways. First, to draft or add content into the document. And second, to chat with the document, so you can summarize, question, refine, or improve what is already on the page.
+
+<break time="500ms"/>It is not always perfectly intuitive, because the interface can vary depending on your license, your organization's settings, and which features have reached your account. But when it works, it can work very well.
+
+<break time="500ms"/>The basic workflow is simple. I give Copilot an instruction. I can optionally attach context, such as files, emails, meetings. Copilot can now reference up to 20 items and then retrieves that content based on my existing Microsoft three sixty five permissions, then generates text directly into Word.
+
+<break time="500ms"/>So how do I start? There are two common ways.
+
+<break time="500ms"/>The first way is to open Word, either in the desktop app or in the browser. From there, I can use the prompt box at the top of the document, or click the Copilot icon in the document or side panel.
+
+<break time="500ms"/>The second way is to start from the Microsoft three sixty five Copilot app. I can go to Create from the app launcher, create a Word document from there, and then continue working in Word.
+
+<break time="500ms"/>For this demo, I'll start inside a blank Word document. I'll use the Copilot prompt box at the top of the page.
+
+<break time="500ms"/>Before writing the prompt, I want to ground Copilot in my working material. So I click the plus icon here, or I can type slash, to choose the documents I want Copilot to reference. In this case, I'm adding a World Economic Forum report I recently came across.
+
+<break time="500ms"/>Now I paste my prompt: Create a one-page brief for my leadership team that highlights the intelligence from this report and explains how it applies to us as an AI transformation partner delivering organization-wide AI enablement. The purpose is to decide how we should position ourselves given the report's insights. Stick to the facts, and make it sound like me. Use the attached reference as the source of structure and terminology.
+
+<break time="500ms"/>Then I click Generate. Copilot opens in the right pane and starts working through the request. When it finishes, the brief is dropped directly into my Word document. I review the output, and if it is useful, I click Done.
+
+<break time="500ms"/>Now I do a verification pass inside the same Copilot panel. I ask: Highlight any assumptions you made because the source did not contain enough information. This is a simple trick, but it is useful. It gives me an audit-trail mindset without leaving Word.
+
+<break time="500ms"/>Next, I refine the writing. I select one section and choose Edit with Copilot. Here, I can describe the edit I want, or choose from pre-made options like Auto Rewrite, Structure and Refine, or Make It Shorter.
+
+<break time="500ms"/>For example, I type: Strengthen the opening and make it more decisive. Copilot edits the selected section directly in the document. I can keep the change, or undo it and return to the original version.
+
+<break time="500ms"/>One useful update is that the Copilot panel in Word now feels closer to the broader Microsoft three sixty five Copilot app. I can choose different models for more complex analytical tasks by clicking the three dots at the top of the panel.
+
+<break time="500ms"/>I can also call agents, such as Researcher, Analyst, Designer, or an agent I have created for a specific workflow. One note is that when I use agents inside Word, they are in chat mode only and may not edit directly within the document.
+
+<break time="500ms"/>And that is Copilot in Word.
+
+<break time="500ms"/>If you do not see the same options, it is usually because of your Microsoft three sixty five subscription, your Copilot license, your organization's admin settings, or the feature rollout. The full Copilot experience grounded in your work data generally requires a Microsoft three sixty five Copilot license. Free Copilot Chat and Microsoft three sixty five Copilot inside Word are not the same experience, especially when it comes to in-app drafting and editing grounded in your Microsoft three sixty five data.
+</speak>

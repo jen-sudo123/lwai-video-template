@@ -1,0 +1,268 @@
+1
+00:00:00,000 --> 00:00:01,960
+Sometimes the fastest way to use AI
+
+2
+00:00:01,960 --> 00:00:04,860
+is not to explain the situation, but to show it.
+
+3
+00:00:05,460 --> 00:00:07,120
+Video and screen sharing are useful
+
+4
+00:00:07,120 --> 00:00:09,540
+when the work is easier to demonstrate than describe.
+
+5
+00:00:09,960 --> 00:00:11,220
+Instead of writing a long prompt,
+
+6
+00:00:11,540 --> 00:00:15,260
+you can point ChatGPT at a slide, dashboard, landing page,
+
+7
+00:00:15,460 --> 00:00:18,780
+or workflow and ask it to help you observe, diagnose,
+
+8
+00:00:19,360 --> 00:00:21,080
+and decide what to do next.
+
+9
+00:00:21,740 --> 00:00:22,620
+Here's how it works.
+
+10
+00:00:23,020 --> 00:00:24,980
+To use live video or screen sharing,
+
+11
+00:00:25,180 --> 00:00:27,240
+open the ChatGPT mobile app.
+
+12
+00:00:27,240 --> 00:00:30,200
+You need to be signed in and on a paid plan.
+
+13
+00:00:30,700 --> 00:00:34,140
+Then tap the voice icon in the bottom right corner
+
+14
+00:00:34,140 --> 00:00:34,660
+of the screen.
+
+15
+00:00:35,100 --> 00:00:38,560
+Once the voice conversation starts, tap the plus icon.
+
+16
+00:00:39,060 --> 00:00:41,040
+From there, you can choose live video,
+
+17
+00:00:41,360 --> 00:00:42,600
+which turns on your camera,
+
+18
+00:00:42,900 --> 00:00:45,800
+and let's ChatGPT see what you are looking at.
+
+19
+00:00:46,240 --> 00:00:47,700
+Or you can choose share screen,
+
+20
+00:00:47,980 --> 00:00:51,300
+which lets ChatGPT view what is on your mobile screen
+
+21
+00:00:51,300 --> 00:00:52,020
+while you talk.
+
+22
+00:00:52,660 --> 00:00:54,640
+In this demo, I'll use screen sharing
+
+23
+00:00:54,640 --> 00:00:58,660
+to ask ChatGPT to review our lead with AI landing page.
+
+24
+00:00:59,160 --> 00:01:01,340
+First, I start a voice conversation
+
+25
+00:01:01,340 --> 00:01:03,160
+in the ChatGPT mobile app.
+
+26
+00:01:03,580 --> 00:01:05,320
+Then I tap the plus icon,
+
+27
+00:01:05,740 --> 00:01:08,420
+select share screen, and choose start broadcast.
+
+28
+00:01:09,220 --> 00:01:10,320
+Remember from this point,
+
+29
+00:01:10,620 --> 00:01:13,300
+ChatGPT can see what is showing on my mobile screen.
+
+30
+00:01:13,900 --> 00:01:15,920
+Now I move to the landing page on my phone.
+
+31
+00:01:16,680 --> 00:01:20,160
+Before I ask ChatGPT to review or suggest anything,
+
+32
+00:01:20,560 --> 00:01:22,060
+I start with a simple question.
+
+33
+00:01:22,600 --> 00:01:24,040
+Describe what you see on the screen.
+
+34
+00:01:24,580 --> 00:01:26,620
+This helps me check whether ChatGPT
+
+35
+00:01:26,620 --> 00:01:28,060
+is looking at the right information
+
+36
+00:01:28,060 --> 00:01:30,020
+and catch any misunderstandings early.
+
+37
+00:01:30,860 --> 00:01:32,260
+Once ChatGPT responds,
+
+38
+00:01:32,840 --> 00:01:35,060
+and I'm confident it understands the context,
+
+39
+00:01:35,420 --> 00:01:37,740
+I ask, can you review this landing page
+
+40
+00:01:37,740 --> 00:01:39,880
+and tell me if the value proposition is clear?
+
+41
+00:01:40,940 --> 00:01:43,200
+ChatGPT looks at the page and gives feedback
+
+42
+00:01:43,200 --> 00:01:45,120
+on the messaging, structure, and clarity.
+
+43
+00:01:45,680 --> 00:01:48,360
+From there, I can refine the conversation naturally.
+
+44
+00:01:48,880 --> 00:01:49,360
+For example,
+
+45
+00:01:49,820 --> 00:01:52,220
+turn this into a practical improvement plan,
+
+46
+00:01:52,560 --> 00:01:55,500
+including messaging, layout, and calls to action.
+
+47
+00:01:56,020 --> 00:01:58,280
+If I want to give ChatGPT more context
+
+48
+00:01:58,280 --> 00:01:59,380
+that isn't on the screen,
+
+49
+00:01:59,700 --> 00:02:02,520
+I can stop the screen share and switch to live video.
+
+50
+00:02:03,020 --> 00:02:05,000
+The conversation is documented in the chat,
+
+51
+00:02:05,280 --> 00:02:08,300
+so afterward, I can reread ChatGPT's observations,
+
+52
+00:02:08,880 --> 00:02:10,100
+feedback, and suggestions,
+
+53
+00:02:10,540 --> 00:02:13,280
+and turn the live discussion into notes, next steps,
+
+54
+00:02:13,520 --> 00:02:15,340
+or a follow-up action plan.
+
+55
+00:02:15,980 --> 00:02:17,080
+A few practical notes.
+
+56
+00:02:17,800 --> 00:02:20,100
+ChatGPT live video and screen sharing
+
+57
+00:02:20,100 --> 00:02:23,380
+are currently available only in the ChatGPT mobile app
+
+58
+00:02:23,380 --> 00:02:25,040
+and require a paid plan.
+
+59
+00:02:25,640 --> 00:02:26,900
+Be careful with what you share,
+
+60
+00:02:27,160 --> 00:02:30,000
+avoid confidential, personal, or sensitive information,
+
+61
+00:02:30,540 --> 00:02:32,060
+and always verify the output
+
+62
+00:02:32,060 --> 00:02:33,940
+before using it for any decisions.
+
+63
+00:02:34,620 --> 00:02:35,500
+The shift is simple.
+
+64
+00:02:36,020 --> 00:02:39,040
+Stop translating every visual situation into text.
+
+65
+00:02:39,520 --> 00:02:41,500
+Show ChatGPT the context directly,
+
+66
+00:02:41,860 --> 00:02:44,200
+then use your judgment to decide what to trust,
+
+67
+00:02:44,420 --> 00:02:46,100
+what to refine, and what to act on.
+

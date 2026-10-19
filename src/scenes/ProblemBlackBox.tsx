@@ -8,6 +8,16 @@ type Props = {
   text?: string;
   highlight?: string;
   lineTimings?: number[];
+  // Texts that fly toward the model box. Defaults to three '?' marks.
+  flyingTexts?: string[];
+  // Background color for the answer box (defaults to lime500).
+  answerColor?: string;
+  // Label below the icon inside the answer box (defaults to 'ANSWER').
+  answerLabel?: string;
+  // Icon inside the answer box (defaults to '✓'). Pass '' to hide.
+  answerIcon?: string;
+  // Width override for the answer box (defaults to 160).
+  answerWidth?: number;
 };
 
 // SVG diagram coordinate space
@@ -21,22 +31,16 @@ const BOX_Y = (D_H - BOX_H) / 2; // 40
 const BOX_CY = BOX_Y + BOX_H / 2; // 150
 const BOX_RIGHT = BOX_X + BOX_W; // 1260
 
-const ANS_W = 160;
 const ANS_H = 120;
-const ANS_X = BOX_RIGHT + 140;
-const ANS_Y = BOX_CY - ANS_H / 2;
 
 // Three question marks, vertically distributed inside the box's y range
-const Q_YS = [BOX_Y + 30, BOX_CY - 20, BOX_Y + BOX_H - 70];
+const Q_YS_DEFAULT = [BOX_Y + 30, BOX_CY - 20, BOX_Y + BOX_H - 70];
 const Q_START_X = 120;
 const Q_END_X = BOX_X - 20;
 
 // Animation timing (frames within the scene)
 const BOX_APPEAR = 130;
-const Q_APPEARS = [BOX_APPEAR + 8, BOX_APPEAR + 24, BOX_APPEAR + 40];
-const Q_EXITS   = [BOX_APPEAR + 60, BOX_APPEAR + 76, BOX_APPEAR + 92];
 const ARROW_R_START = BOX_APPEAR + 105;
-const ARROW_R_LEN = ANS_X - BOX_RIGHT;
 const ANSWER_APPEAR = ARROW_R_START + 22;
 
 export const ProblemBlackBox: React.FC<Props> = ({
@@ -44,9 +48,30 @@ export const ProblemBlackBox: React.FC<Props> = ({
   text  = 'Polished, confident answers\nstop us asking how.',
   highlight = 'stop us asking how',
   lineTimings = [0, 90],
+  flyingTexts = ['?', '?', '?'],
+  answerColor = colors.lime500,
+  answerLabel = 'ANSWER',
+  answerIcon = '✓',
+  answerWidth = 160,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
+
+  const ANS_W = answerWidth;
+  const ANS_X = BOX_RIGHT + 140;
+  const ANS_Y = BOX_CY - ANS_H / 2;
+  const ARROW_R_LEN_DYN = ANS_X - BOX_RIGHT;
+
+  // Distribute flying items evenly within the box's vertical range
+  const Q_YS = flyingTexts.length === 3
+    ? Q_YS_DEFAULT
+    : flyingTexts.map((_, i, arr) => {
+        if (arr.length === 1) return BOX_CY - 36;
+        const step = (BOX_H - 100) / (arr.length - 1);
+        return BOX_Y + 30 + i * step;
+      });
+  const Q_APPEARS_DYN = flyingTexts.map((_, i) => BOX_APPEAR + 8 + i * 16);
+  const Q_EXITS_DYN = flyingTexts.map((_, i) => BOX_APPEAR + 60 + i * 16);
 
   // ── Text ──────────────────────────────────────────────────────────────────
   const labelOpacity = interpolate(frame, [0, 15], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
@@ -101,9 +126,9 @@ export const ProblemBlackBox: React.FC<Props> = ({
       >
         <svg width="100%" viewBox={`0 0 ${D_W} ${D_H}`} overflow="visible">
 
-          {/* Dashed connector lines (Q marks → box left edge) */}
+          {/* Dashed connector lines (flying items → box left edge) */}
           {Q_YS.map((qy, i) => {
-            const lineOpacity = interpolate(frame - Q_APPEARS[i], [0, 15], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+            const lineOpacity = interpolate(frame - Q_APPEARS_DYN[i], [0, 15], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
             return (
               <line
                 key={i}
@@ -119,17 +144,18 @@ export const ProblemBlackBox: React.FC<Props> = ({
             );
           })}
 
-          {/* Question marks floating toward box */}
+          {/* Flying items toward box (question marks or custom text) */}
           {Q_YS.map((qy, i) => {
-            const localFrame = frame - Q_APPEARS[i];
-            const totalDur = Q_EXITS[i] - Q_APPEARS[i];
+            const item = flyingTexts[i];
+            const isShort = item.length <= 2;
+            const localFrame = frame - Q_APPEARS_DYN[i];
             const qOpacity = interpolate(
               frame,
-              [Q_APPEARS[i], Q_APPEARS[i] + 10, Q_EXITS[i], Q_EXITS[i] + 14],
+              [Q_APPEARS_DYN[i], Q_APPEARS_DYN[i] + 10, Q_EXITS_DYN[i], Q_EXITS_DYN[i] + 14],
               [0, 1, 1, 0],
               { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' },
             );
-            const qX = interpolate(frame, [Q_APPEARS[i], Q_EXITS[i] + 14], [Q_START_X, Q_END_X], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+            const qX = interpolate(frame, [Q_APPEARS_DYN[i], Q_EXITS_DYN[i] + 14], [Q_START_X, Q_END_X], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
             // Subtle vertical bob
             const bob = Math.sin((localFrame / 18) * Math.PI) * 4;
             return (
@@ -139,12 +165,12 @@ export const ProblemBlackBox: React.FC<Props> = ({
                 y={qy + 68 + bob}
                 textAnchor="middle"
                 fontFamily={fonts.serif}
-                fontSize="72"
-                fontWeight="700"
-                fill="rgba(0,0,0,0.55)"
+                fontSize={isShort ? 72 : 30}
+                fontWeight={isShort ? 700 : 400}
+                fill="rgba(0,0,0,0.65)"
                 opacity={qOpacity}
               >
-                ?
+                {item}
               </text>
             );
           })}
@@ -204,20 +230,20 @@ export const ProblemBlackBox: React.FC<Props> = ({
             y1={BOX_CY}
             x2={ANS_X}
             y2={BOX_CY}
-            stroke={colors.lime500}
+            stroke={answerColor}
             strokeWidth="3"
             strokeLinecap="round"
-            strokeDasharray={ARROW_R_LEN}
-            strokeDashoffset={ARROW_R_LEN * (1 - arrowDraw)}
+            strokeDasharray={ARROW_R_LEN_DYN}
+            strokeDashoffset={ARROW_R_LEN_DYN * (1 - arrowDraw)}
           />
           {/* Arrowhead */}
           <polygon
             points={`${ANS_X},${BOX_CY - 8} ${ANS_X + 14},${BOX_CY} ${ANS_X},${BOX_CY + 8}`}
-            fill={colors.lime500}
+            fill={answerColor}
             opacity={arrowDraw}
           />
 
-          {/* Answer block — ✓ and ANSWER label combined in one box */}
+          {/* Answer block — icon and label combined in one box */}
           <g
             opacity={answerOpacity}
             transform={`translate(${ANS_X + 14 + ANS_W * (1 - answerScale) / 2} ${ANS_Y + ANS_H * (1 - answerScale) / 2}) scale(${answerScale})`}
@@ -226,30 +252,32 @@ export const ProblemBlackBox: React.FC<Props> = ({
               x={0} y={0}
               width={ANS_W} height={ANS_H}
               rx="18"
-              fill={colors.lime500}
+              fill={answerColor}
             />
+            {answerIcon && (
+              <text
+                x={ANS_W / 2}
+                y={52}
+                textAnchor="middle"
+                fontFamily={fonts.serif}
+                fontSize="46"
+                fontWeight="700"
+                fill={colors.white}
+              >
+                {answerIcon}
+              </text>
+            )}
             <text
               x={ANS_W / 2}
-              y={52}
-              textAnchor="middle"
-              fontFamily={fonts.serif}
-              fontSize="46"
-              fontWeight="700"
-              fill={colors.white}
-            >
-              ✓
-            </text>
-            <text
-              x={ANS_W / 2}
-              y={ANS_H - 14}
+              y={answerIcon ? ANS_H - 14 : ANS_H / 2 + 6}
               textAnchor="middle"
               fontFamily={fonts.sans}
               fontSize="14"
               fontWeight="700"
               letterSpacing="3"
-              fill="rgba(255,255,255,0.85)"
+              fill="rgba(255,255,255,0.9)"
             >
-              ANSWER
+              {answerLabel.toUpperCase()}
             </text>
           </g>
 

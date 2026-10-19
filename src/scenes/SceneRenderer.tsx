@@ -19,6 +19,13 @@ import { PromptExample } from './PromptExample';
 import { TakeawayStack } from './TakeawayStack';
 import { TitleSlideTransition } from './TitleSlideTransition';
 import { DefineRangeDiagram } from './DefineRangeDiagram';
+import { AutomationBiasDiagram } from './AutomationBiasDiagram';
+import { CockpitCrossCheckDiagram } from './CockpitCrossCheckDiagram';
+import { DoubtConfidenceDiagram } from './DoubtConfidenceDiagram';
+import { ReasonEvidenceDiagram } from './ReasonEvidenceDiagram';
+import { AlternativesConversationDiagram } from './AlternativesConversationDiagram';
+import { FactsVerificationDiagram } from './FactsVerificationDiagram';
+import { StakesVerificationDiagram } from './StakesVerificationDiagram';
 import { CoTComparison } from './CoTComparison';
 import { ReasoningChain } from './ReasoningChain';
 import { ThinkingTraceUI } from './ThinkingTraceUI';
@@ -27,9 +34,18 @@ import { PromptBoxSplit } from './PromptBoxSplit';
 import { ThreeModeColumns } from './ThreeModeColumns';
 import { ModelPickerLocations } from './ModelPickerLocations';
 import { LargeLabelBodySplit } from './LargeLabelBodySplit';
+import { VideoClip } from './VideoClip';
+import { ImageMarquee } from './ImageMarquee';
+import { AcronymSpotlight } from './AcronymSpotlight';
+import { LineChart } from './LineChart';
+import { JaggedFrontierDiagram } from './diagrams/JaggedFrontierDiagram';
+import { MeetingChecklistDiagram } from './diagrams/MeetingChecklistDiagram';
+import { AccessWorkflowDiagram } from './diagrams/AccessWorkflowDiagram';
+import { BoundedAutonomyDiagram } from './diagrams/BoundedAutonomyDiagram';
+import { BiasFunnelDiagram } from './diagrams/BiasFunnelDiagram';
 
 // Routes a scene to its component. Add new layouts here as you create them.
-export const SceneRenderer: React.FC<{ scene: Scene }> = ({ scene }) => {
+export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> = ({ scene, hasClipLayer }) => {
   switch (scene.layout) {
     case 'title-card-green':
       return (
@@ -57,6 +73,7 @@ export const SceneRenderer: React.FC<{ scene: Scene }> = ({ scene }) => {
           animation={scene.animation}
           objectFit={scene.objectFit}
           imageWidth={scene.imageWidth}
+          imageZoom={scene.imageZoom}
         />
       );
     case 'centered-quote':
@@ -65,6 +82,9 @@ export const SceneRenderer: React.FC<{ scene: Scene }> = ({ scene }) => {
           text={scene.text}
           attribution={scene.attribution}
           animation={scene.animation}
+          highlight={scene.highlight}
+          highlightFrame={scene.highlightFrame}
+          lineTimings={scene.lineTimings}
         />
       );
     case 'comparison':
@@ -87,18 +107,28 @@ export const SceneRenderer: React.FC<{ scene: Scene }> = ({ scene }) => {
         <LabelTitleBody
           label={scene.label}
           title={scene.title}
+          titleHighlight={scene.titleHighlight}
           body={scene.body}
           bodyTimings={scene.bodyTimings}
           image={scene.image}
+          diagram={scene.diagram}
+          diagramTimings={scene.diagramTimings}
           imageZoom={scene.imageZoom}
           imageZoomKeyframes={scene.imageZoomKeyframes}
           imageZoomNoEntry={scene.imageZoomNoEntry}
+          imageSwaps={scene.imageSwaps}
           hideLogo={scene.hideLogo}
           imageFullScreen={scene.imageFullScreen}
+          pricingGrid={scene.pricingGrid}
           bodyRight={scene.bodyRight}
           bodyCards={scene.bodyCards}
           bodyCardIcons={scene.bodyCardIcons}
+          bodyCardCompact={scene.bodyCardCompact}
+          bodyCardBouncy={scene.bodyCardBouncy}
+          bodyCardAccents={scene.bodyCardAccents}
           bodyXList={scene.bodyXList}
+          titleNote={scene.titleNote}
+          titleNoteDelay={scene.titleNoteDelay}
           imageLeft={scene.imageLeft}
           images={scene.images}
           imageTimings={scene.imageTimings}
@@ -138,6 +168,14 @@ export const SceneRenderer: React.FC<{ scene: Scene }> = ({ scene }) => {
           context={scene.context}
           contextTiming={scene.contextTiming}
           image={scene.image}
+          images={scene.images}
+          imageTimings={scene.imageTimings}
+          imageZoom={scene.imageZoom}
+          split={scene.split}
+          hideStat={scene.hideStat}
+          imageLeft={scene.imageLeft}
+          imagesLayout={scene.imagesLayout}
+          imageAspect={scene.imageAspect}
         />
       );
     case 'split-contrast':
@@ -163,6 +201,9 @@ export const SceneRenderer: React.FC<{ scene: Scene }> = ({ scene }) => {
           equal={scene.equal}
           leftBodyHighlightIndices={scene.leftBodyHighlightIndices}
           asCards={(scene as any).asCards}
+          rightTitleBreak={scene.rightTitleBreak}
+          rightTitleBreakFrame={scene.rightTitleBreakFrame}
+          rightLightUpFrame={scene.rightLightUpFrame}
         />
       );
     case 'methods-slide':
@@ -195,11 +236,16 @@ export const SceneRenderer: React.FC<{ scene: Scene }> = ({ scene }) => {
           title={scene.title}
           steps={scene.steps}
           stepTimings={scene.stepTimings}
+          activeTimings={scene.activeTimings}
           rightLabel={scene.rightLabel}
           rightSteps={scene.rightSteps}
           rightStepTimings={scene.rightStepTimings}
+          rightActiveTimings={scene.rightActiveTimings}
           highlights={scene.highlights}
           animation={scene.animation}
+          horizontal={scene.horizontal}
+          cardStyle={scene.cardStyle}
+          titleSize={scene.titleSize}
         />
       );
     case 'prompt-example':
@@ -212,6 +258,11 @@ export const SceneRenderer: React.FC<{ scene: Scene }> = ({ scene }) => {
           afterLabel={scene.afterLabel}
           after={scene.after}
           afterTiming={scene.afterTiming}
+          beforeOutcome={scene.beforeOutcome}
+          afterOutcome={scene.afterOutcome}
+          beforeTiming={scene.beforeTiming}
+          beforeOutcomeTiming={scene.beforeOutcomeTiming}
+          afterOutcomeTiming={scene.afterOutcomeTiming}
         />
       );
     case 'three-mode-columns':
@@ -238,8 +289,92 @@ export const SceneRenderer: React.FC<{ scene: Scene }> = ({ scene }) => {
       );
     case 'define-range-diagram':
       return <DefineRangeDiagram modelAppearFrame={scene.modelAppearFrame} />;
+    case 'automation-bias-diagram':
+      return (
+        <AutomationBiasDiagram
+          judgmentAppearFrame={scene.judgmentAppearFrame}
+          zoomStartFrame={scene.zoomStartFrame}
+          zoomScale={scene.zoomScale}
+        />
+      );
+    case 'cockpit-cross-check-diagram':
+      return (
+        <CockpitCrossCheckDiagram
+          pilotsAppearFrame={scene.pilotsAppearFrame}
+          flyingLabelFrame={scene.flyingLabelFrame}
+          monitoringLabelFrame={scene.monitoringLabelFrame}
+          challengeAppearFrame={scene.challengeAppearFrame}
+          responseAppearFrame={scene.responseAppearFrame}
+          crossCheckAppearFrame={scene.crossCheckAppearFrame}
+          zoomStartFrame={scene.zoomStartFrame}
+          zoomScale={scene.zoomScale}
+        />
+      );
+    case 'doubt-confidence-diagram':
+      return (
+        <DoubtConfidenceDiagram
+          label={scene.label}
+          title={scene.title}
+          titleHighlight={scene.titleHighlight}
+          cardAppearFrame={scene.cardAppearFrame}
+          confidentAppearFrame={scene.confidentAppearFrame}
+          notEqualAppearFrame={scene.notEqualAppearFrame}
+        />
+      );
+    case 'reason-evidence-diagram':
+      return (
+        <ReasonEvidenceDiagram
+          label={scene.label}
+          title={scene.title}
+          titleHighlight={scene.titleHighlight}
+          outputAppearFrame={scene.outputAppearFrame}
+          assumptionsAppearFrame={scene.assumptionsAppearFrame}
+          evidenceAppearFrame={scene.evidenceAppearFrame}
+          conclusionAppearFrame={scene.conclusionAppearFrame}
+          humanAppearFrame={scene.humanAppearFrame}
+          weakConnectionAppearFrame={scene.weakConnectionAppearFrame}
+          zoomStartFrame={scene.zoomStartFrame}
+          zoomScale={scene.zoomScale}
+        />
+      );
+    case 'alternatives-conversation-diagram':
+      return (
+        <AlternativesConversationDiagram
+          label={scene.label}
+          title={scene.title}
+          titleHighlight={scene.titleHighlight}
+          humanAppearFrame={scene.humanAppearFrame}
+          aiAppearFrame={scene.aiAppearFrame}
+          humanEmphasisFrame={scene.humanEmphasisFrame}
+          aiEmphasisFrame={scene.aiEmphasisFrame}
+          humanQuote={scene.humanQuote}
+          humanQuoteFrame={scene.humanQuoteFrame}
+          aiQuote={scene.aiQuote}
+          aiQuoteFrame={scene.aiQuoteFrame}
+        />
+      );
+    case 'facts-verification-diagram':
+      return (
+        <FactsVerificationDiagram
+          label={scene.label}
+          title={scene.title}
+          titleHighlight={scene.titleHighlight}
+          documentAppearFrame={scene.documentAppearFrame}
+          moneyCheckFrame={scene.moneyCheckFrame}
+          dateCheckFrame={scene.dateCheckFrame}
+          percentCheckFrame={scene.percentCheckFrame}
+          companyCheckFrame={scene.companyCheckFrame}
+        />
+      );
+    case 'stakes-verification-diagram':
+      return (
+        <StakesVerificationDiagram
+          leftAppearFrame={scene.leftAppearFrame}
+          rightAppearFrame={scene.rightAppearFrame}
+        />
+      );
     case 'title-slide-transition':
-      return <TitleSlideTransition text={scene.text} label={scene.label} body={scene.body} bodyTimings={scene.bodyTimings} bodyRows={scene.bodyRows} bodyRowTimings={scene.bodyRowTimings} />;
+      return <TitleSlideTransition text={scene.text} label={scene.label} body={scene.body} bodyTimings={scene.bodyTimings} bodyRows={scene.bodyRows} bodyRowTimings={scene.bodyRowTimings} bodyRowsAsCards={scene.bodyRowsAsCards} centered={scene.centered} />;
     case 'cot-comparison':
       return (
         <CoTComparison
@@ -275,6 +410,11 @@ export const SceneRenderer: React.FC<{ scene: Scene }> = ({ scene }) => {
           text={scene.text}
           highlight={scene.highlight}
           lineTimings={scene.lineTimings}
+          flyingTexts={scene.flyingTexts}
+          answerColor={scene.answerColor}
+          answerLabel={scene.answerLabel}
+          answerIcon={scene.answerIcon}
+          answerWidth={scene.answerWidth}
         />
       );
     case 'prompt-box-split':
@@ -300,6 +440,34 @@ export const SceneRenderer: React.FC<{ scene: Scene }> = ({ scene }) => {
           bodyTimings={(scene as any).bodyTimings}
         />
       );
+    case 'video-clip':
+      return (
+        <VideoClip
+          videoSrc={scene.videoSrc}
+          videoStartTime={scene.videoStartTime}
+          label={scene.label}
+          title={scene.title}
+          body={scene.body}
+          bodyTimings={scene.bodyTimings}
+          overlayPosition={scene.overlayPosition}
+          overlayHideFrom={scene.overlayHideFrom}
+          bodyOpenFrom={scene.bodyOpenFrom}
+          bodyAnimation={scene.bodyAnimation}
+          openBodyAnimation={scene.openBodyAnimation}
+          openBodyVariant={scene.openBodyVariant}
+          openBodyHideFrom={scene.openBodyHideFrom}
+          titleCentered={scene.titleCentered}
+          logoPosition={scene.logoPosition}
+          panelLayout={scene.panelLayout}
+          panelLeft={scene.panelLeft}
+          clipTransform={scene.clipTransform}
+          clipZoomKeyframes={(scene as any).clipZoomKeyframes}
+          skipVideo={!!hasClipLayer}
+          skipCardAnimation={scene.skipCardAnimation}
+          cardDelay={scene.cardDelay}
+          whiteoutBox={scene.whiteoutBox}
+        />
+      );
     case 'takeaway-stack':
       return (
         <TakeawayStack
@@ -307,6 +475,57 @@ export const SceneRenderer: React.FC<{ scene: Scene }> = ({ scene }) => {
           title={scene.title}
           takeaways={scene.takeaways}
           timings={scene.timings}
+          centered={scene.centered}
+        />
+      );
+    case 'image-marquee':
+      return (
+        <ImageMarquee
+          label={scene.label}
+          title={scene.title}
+          subtitle={scene.subtitle}
+          images={scene.images}
+        />
+      );
+    case 'acronym-spotlight':
+      return (
+        <AcronymSpotlight
+          label={scene.label}
+          items={scene.items}
+          spotlight={scene.spotlight}
+          durationInFrames={scene.durationInFrames}
+        />
+      );
+    case 'line-chart':
+      return <LineChart title={scene.title} data={scene.data} />;
+    case 'jagged-frontier-diagram':
+      return (
+        <JaggedFrontierDiagram
+          lineStartFrame={scene.lineStartFrame}
+          lineDrawFrames={scene.lineDrawFrames}
+          graduateCardFrame={scene.graduateCardFrame}
+          gameCardFrame={scene.gameCardFrame}
+        />
+      );
+    case 'meeting-checklist-diagram':
+      return <MeetingChecklistDiagram itemTimings={scene.itemTimings} />;
+    case 'access-workflow-diagram':
+      return <AccessWorkflowDiagram arrowFrame={scene.arrowFrame} />;
+    case 'bounded-autonomy-diagram':
+      return (
+        <BoundedAutonomyDiagram
+          aiFrame={scene.aiFrame}
+          humanFrame={scene.humanFrame}
+          approvalFrame={scene.approvalFrame}
+          judgmentFrame={scene.judgmentFrame}
+          accountabilityFrame={scene.accountabilityFrame}
+        />
+      );
+    case 'bias-funnel-diagram':
+      return (
+        <BiasFunnelDiagram
+          cardTimings={scene.cardTimings}
+          modelAppearFrame={scene.modelAppearFrame}
         />
       );
   }

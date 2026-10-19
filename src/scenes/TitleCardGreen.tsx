@@ -15,7 +15,7 @@ type TitleCardGreenProps = {
 export const TitleCardGreen: React.FC<TitleCardGreenProps> = ({
   title,
   subtitle,
-  label = 'ADVANCED: PROMPT ENGINEERING',
+  label,
 }) => {
   return (
     <AbsoluteFill style={{ backgroundColor: colors.titleGreen }}>

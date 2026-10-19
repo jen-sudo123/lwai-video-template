@@ -1,0 +1,194 @@
+WEBVTT
+
+00:02.120 --> 00:07.380
+Copilot agents are reusable mini-assistants you can configure for a specific workflow.
+
+00:07.800 --> 00:12.300
+Instead of re-explaining the same task every time you open a new chat, you can give the
+
+00:12.300 --> 00:17.500
+agent a clear role, standing instructions, approved knowledge sources, and optional capabilities.
+
+00:18.100 --> 00:21.240
+Think of it as turning a super prompt into a reusable assistant.
+
+00:21.780 --> 00:27.720
+You can create agents from the Microsoft 365 Copilot app, OneDrive, or SharePoint, depending
+
+00:27.720 --> 00:30.620
+on your license, permissions, and organization settings.
+
+00:31.180 --> 00:36.320
+For this demo, I'll use the most common path, the Microsoft 365 Copilot app.
+
+00:36.820 --> 00:39.700
+To begin, I go to the left side panel and click New Agent.
+
+00:40.200 --> 00:45.180
+Here, I can either describe the agent I want to create in the prompt box, or skip directly
+
+00:45.180 --> 00:45.860
+to configuration.
+
+00:46.700 --> 00:49.420
+Since I already know what I want to build, I'll skip to configuration.
+
+00:50.120 --> 00:54.440
+In this example, I'll build an assistant that helps me write weekly leadership updates.
+
+00:55.000 --> 00:55.900
+I'll name it Larry.
+
+00:56.400 --> 00:58.020
+Then, I add a short description.
+
+00:58.580 --> 01:00.700
+Helps me write weekly leadership updates.
+
+01:01.580 --> 01:03.080
+Next, I configure the agent.
+
+01:03.720 --> 01:07.560
+This brings me to the most important part, the instructions field.
+
+01:08.280 --> 01:12.480
+This is where I paste my tested prompt template, personalized, to my workflow.
+
+01:13.180 --> 01:18.340
+For this example, the instructions include four consistent elements, aligned with C.O.
+
+01:18.500 --> 01:23.600
+Do super prompting, the role of the assistant, the objective of the workflow, the do's and
+
+01:23.600 --> 01:27.180
+don'ts, and the output format I want every time.
+
+01:27.880 --> 01:29.760
+The fifth element is the variable part.
+
+01:30.360 --> 01:34.740
+That is what I provide each time I use the assistant, such as this week's notes, priorities,
+
+01:35.060 --> 01:36.720
+metrics, or meeting context.
+
+01:37.500 --> 01:40.660
+The goal is not to write a long prompt every time.
+
+01:41.260 --> 01:45.340
+The goal is to write it once, test it, improve it, and make it reusable.
+
+01:46.180 --> 01:48.440
+Then I can choose the knowledge sources.
+
+01:48.440 --> 01:54.920
+Agent builder can use sources like SharePoint, OneDrive, websites, teams, and approved connectors,
+
+01:55.160 --> 01:57.020
+depending on your organization's settings.
+
+01:57.680 --> 01:58.940
+The practical rule is simple.
+
+01:59.300 --> 02:01.160
+Only add sources that improve the workflow.
+
+02:01.640 --> 02:06.020
+Too much context can create noise, contradictions, or outdated references.
+
+02:06.700 --> 02:10.320
+For this leadership update assistant, I'll keep it prompt-based first.
+
+02:10.740 --> 02:13.020
+After that, I review the agent's capabilities.
+
+02:13.620 --> 02:17.480
+Depending on your setup, you may be able to enable features like document creation,
+
+02:17.480 --> 02:19.660
+charts, code, or images.
+
+02:20.220 --> 02:26.380
+I'll enable document creation, so the final output can be turned into a word document more easily.
+
+02:26.940 --> 02:28.500
+I can also add starter prompts.
+
+02:29.140 --> 02:32.720
+This is optional, but useful if you want to share the agent to others.
+
+02:33.320 --> 02:37.820
+For Larry, I might add, draft this week's leadership update for my notes.
+
+02:38.540 --> 02:42.020
+Turn these project updates into an executive-ready summary.
+
+02:42.700 --> 02:45.620
+Rewrite this update to make it clearer and more concise.
+
+02:46.500 --> 02:51.680
+These prompts help people understand what the agent is for without needing a separate explanation.
+
+02:52.140 --> 02:55.600
+And before I finalize it, I choose Preview to test the agent.
+
+02:56.000 --> 02:58.140
+I paste the variable part of my workflow.
+
+02:58.680 --> 03:01.160
+Here are my inputs for the upcoming leadership meeting.
+
+03:01.480 --> 03:02.520
+Please process them.
+
+03:02.860 --> 03:06.960
+The agent generates a draft leadership update, and now I review it.
+
+03:07.320 --> 03:07.900
+Is it clear?
+
+03:08.300 --> 03:09.500
+Is it executive-ready?
+
+03:10.000 --> 03:11.900
+Does it follow the structure I asked for?
+
+03:12.280 --> 03:14.760
+Does it avoid details that are too tactical?
+
+03:15.320 --> 03:18.420
+If not, I can refine the instructions and test again.
+
+03:19.040 --> 03:22.220
+Since I'm satisfied with the result, I click on Create.
+
+03:22.780 --> 03:27.740
+By default, the agent starts as private, but sharing options may include your organization
+
+03:27.740 --> 03:30.720
+or specific users, depending on admin policy.
+
+03:31.320 --> 03:34.660
+Once created, the agent usually appears in the left-side panel.
+
+03:35.020 --> 03:41.120
+In some Microsoft 365 experiences, I can also call an agent by ad mentioning it in a new chat.
+
+03:41.120 --> 03:45.820
+That lets me bring the agent into the flow of work instead of switching contexts.
+
+03:46.560 --> 03:48.220
+And finally, notes on availability.
+
+03:49.140 --> 03:55.480
+What you see may depend on your Microsoft 365 license, admin settings, and work or school
+
+03:55.480 --> 03:55.980
+environment.
+
+03:56.640 --> 04:00.920
+And for more advanced agents with automation and integrations, use Copilot Studio,
+
+04:00.920 --> 04:04.440
+which is only available for business or enterprise-level subscriptions.
+

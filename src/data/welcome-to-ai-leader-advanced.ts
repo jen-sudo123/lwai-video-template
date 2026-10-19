@@ -398,8 +398,8 @@ export const welcomeToAiLeaderAdvanced: VideoData = {
       title: 'The Outcome',
       steps: [
         {
-          title: 'Working assistant, deployed',
-          body: 'Every graduate ships at least one functional AI assistant before the program ends.',
+          title: 'Working assistants, deployed',
+          body: '6 AI assistants deployed once the program ends.',
         },
         {
           title: '10–50% time back within month one',
@@ -407,7 +407,7 @@ export const welcomeToAiLeaderAdvanced: VideoData = {
         },
         {
           title: 'A different relationship with work',
-          body: 'More than time savings — the way you work fundamentally changes.',
+          body: 'More than time savings, the way you work fundamentally changes.',
         },
       ],
       stepTimings: [0, 155, 420],

@@ -122,7 +122,7 @@ export const ChecklistSlide: React.FC<ChecklistSlideProps> = ({
             <div style={{ ...typography.title, color: colors.black }}>
               <HighlightFadeText text={title.slice(0, title.indexOf(titleHighlight))} highlight="" frame={frame} />
             </div>
-            <div style={{ ...typography.label, marginTop: 20, marginBottom: 20 }}>{label}</div>
+            <div style={{ ...typography.label, marginTop: 20, marginBottom: 20, color: colors.lime500 }}>{label}</div>
             <div style={{ ...typography.title, color: colors.lime500 }}>
               <HighlightFadeText text={titleHighlight} highlight={titleHighlight} frame={frame} />
             </div>

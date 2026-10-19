@@ -1,0 +1,101 @@
+<speak>
+<break time="50ms"/>So far, we've looked at two layers of personalization.
+
+<break time="50ms"/>Custom Instructions are what you deliberately tell AI about yourself and how you want it to work with you.
+
+<break time="50ms"/>Memory is what AI learns and carries forward from your interactions over time.
+
+<break time="50ms"/>But most of your actual work doesn't live inside your AI conversations.
+
+<break time="50ms"/>It lives in your email, calendar, documents, messages, project tools, CRM, and other workplace systems.
+
+<break time="50ms"/>This brings us to the third layer of personalization: Work Context.
+
+<break time="50ms"/>Work Context extends AI beyond what you tell it, or what it learns about you, by bringing AI closer to the systems where your work actually happens.
+
+<break time="50ms"/>Imagine you ask AI:
+
+<break time="50ms"/>"Prepare me for my meeting with Acme tomorrow."
+
+<break time="50ms"/>Without access to your work systems, you're still the middleman.
+
+<break time="50ms"/>You check your calendar, search your inbox, find the latest documents, and bring all of that information into AI before it can start helping.
+
+<break time="50ms"/>Connections change this.
+
+<break time="50ms"/>Depending on the platform, you might hear them called Connectors, Connected Apps, or simply connections.
+
+<break time="50ms"/>They create an authorized link between AI and another system, such as your email, calendar, cloud storage, workplace messages, or CRM.
+
+<break time="50ms"/>So now, you could ask:
+
+<break time="50ms"/>"Prepare me for my meeting with Acme tomorrow. Find the relevant emails and documents, and summarize what I need to know."
+
+<break time="50ms"/>Instead of bringing the context to AI yourself, AI can retrieve relevant information from the systems you've authorized it to access.
+
+<break time="50ms"/>And some connections go further. They can allow AI to take actions, such as creating an event, updating a file, or interacting with another application.
+
+<break time="50ms"/>But access alone isn't enough.
+
+<break time="50ms"/>Imagine AI can access thousands of documents in your Drive.
+
+<break time="50ms"/>It still needs to know which information matters, what steps to follow, and what a useful result looks like.
+
+<break time="50ms"/>That's where reusable instructions and workflows come in.
+
+<break time="50ms"/>Imagine preparing for customer meetings is something you do every week.
+
+<break time="50ms"/>Each time, you follow roughly the same process.
+
+<break time="50ms"/>Find the latest customer correspondence.
+
+<break time="50ms"/>Identify outstanding commitments and decisions.
+
+<break time="50ms"/>Review the latest account documents.
+
+<break time="50ms"/>Flag important risks.
+
+<break time="50ms"/>Then create a one-page briefing with the key points and questions to ask.
+
+<break time="50ms"/>Instead of explaining that process every time, you can turn those steps into a reusable set of instructions that tells AI how to perform that workflow.
+
+<break time="50ms"/>Different platforms package this differently. You might use Skills and Plugins in ChatGPT, Skills in Claude, Gems in Gemini, or Agents in Microsoft Copilot.
+
+<break time="50ms"/>But the principle is similar: give AI reusable instructions for how to perform the work with the context available to it.
+
+<break time="50ms"/>Now, when you return to that recurring task, you don't need to rebuild the workflow from scratch.
+
+<break time="50ms"/>AI has access to your work context and a reusable workflow for working with it.
+
+<break time="50ms"/>Together, these extend AI from something you constantly have to brief into something that can work much closer to where your work actually happens.
+
+<break time="50ms"/>But as you give AI more access to your work, you also need to think about permissions and control.
+
+<break time="50ms"/>A connection doesn't necessarily give AI unrestricted access.
+
+<break time="50ms"/>What it can reach depends on your permissions, what you've authorized, the platform, and your organization's policies.
+
+<break time="50ms"/>And accessing information is different from taking action.
+
+<break time="50ms"/>Reading an email is different from sending one.
+
+<break time="50ms"/>Finding a document is different from changing or deleting it.
+
+<break time="50ms"/>So when you bring Work Context into AI, remember three questions.
+
+<break time="50ms"/>First, access.
+
+<break time="50ms"/>What information and systems does AI actually need access to?
+
+<break time="50ms"/>Second, workflow.
+
+<break time="50ms"/>What recurring work do I want AI to perform with that context?
+
+<break time="50ms"/>And third, control.
+
+<break time="50ms"/>What should AI be allowed to do, and where should I stay in the loop?
+
+<break time="50ms"/>The goal isn't to give AI access to everything.
+
+<break time="50ms"/>It's to give it the right context, the right workflow, and the right level of control for the work you want it to do.
+</speak>

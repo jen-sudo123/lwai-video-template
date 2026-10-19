@@ -1,0 +1,239 @@
+WEBVTT
+
+00:01.280 --> 00:06.720
+JGBT is no longer just the AI chatbot that everyone has heard of, it's really becoming
+
+00:06.720 --> 00:12.860
+an operating system for how leaders write, research, analyze, automate and get all of
+
+00:12.860 --> 00:14.120
+their work done.
+
+00:14.580 --> 00:20.380
+And with close to a billion weekly users, OpenAI's flagship assistant now combines powerful
+
+00:20.380 --> 00:23.900
+models with an incredible amount of features.
+
+00:24.100 --> 00:25.740
+So let's take a look at those features.
+
+00:25.740 --> 00:29.500
+First of all, there's Surge, which pulls live web answers.
+
+00:30.060 --> 00:35.520
+And there's also Deep Research, which synthesizes many sources into a structured sighted report.
+
+00:36.120 --> 00:41.560
+There's file uploads, vision and data analysis, so you can drop in PDFs, spreadsheets, images
+
+00:41.560 --> 00:44.560
+or charts and then JGBT will analyze them for you.
+
+00:45.080 --> 00:50.780
+Voice lets you talk naturally to JGBT and paid plans even at real-time video and screen
+
+00:50.780 --> 00:52.140
+sharing on mobile.
+
+00:52.620 --> 00:55.740
+The newly launched Images 2.0 is amazing.
+
+00:56.000 --> 01:01.820
+It generates visuals like mock-ups, diagrams and posters with better text layout and instruction
+
+01:01.820 --> 01:02.320
+following.
+
+01:02.880 --> 01:08.080
+Canvas is a dedicated workspace for writing and coding rather than managing long projects
+
+01:08.080 --> 01:09.020
+in a chat thread.
+
+01:09.880 --> 01:15.440
+Projects organize your chats, your files and instructions around ongoing work, while custom
+
+01:15.440 --> 01:19.060
+JGBTs let you build reusable task-specific assistants.
+
+01:19.760 --> 01:25.160
+Apps connect external tools like drives like GitHub, HubSpot and Asana so that JGBT can
+
+01:25.160 --> 01:31.180
+answer from your private work context and skills package repeatable workflows with instructions,
+
+01:31.620 --> 01:35.760
+example and codes for more consistent task execution.
+
+01:36.600 --> 01:41.880
+Tasks handle scheduled lightweight automation work like reminders, recurring briefings and
+
+01:41.880 --> 01:42.780
+future follow-ups.
+
+01:43.060 --> 01:48.640
+And JGBT agent can autonomously browse the web for you, navigate pages, fill forms and
+
+01:48.640 --> 01:49.700
+edit spreadsheets.
+
+01:50.320 --> 01:56.120
+Memory, custom instructions and tone let JGBT learn your preferences and adapt its behavior
+
+01:56.120 --> 01:57.000
+over time.
+
+01:57.540 --> 02:01.680
+And then there's Codex, which is OpenAI's coding agent for writing, reviewing, debugging
+
+02:01.680 --> 02:02.860
+and shipping code.
+
+02:04.720 --> 02:05.540
+Now those are the features.
+
+02:05.760 --> 02:08.380
+What about the models that power this platform?
+
+02:08.760 --> 02:13.840
+Well, the models are best understood in three layers, Instant, Thinking and Pro.
+
+02:14.900 --> 02:18.820
+GPT 5.5 Instant is the fast everyday model.
+
+02:19.280 --> 02:23.960
+It is designed for normal questions, writing, summarizing, brainstorming, image analysis
+
+02:23.960 --> 02:25.180
+and quick work.
+
+02:25.760 --> 02:33.720
+First previewed on June 26, 2026, GPT 5.6 is OpenAI's newest model family and is now
+
+02:33.720 --> 02:36.760
+gradually rolling out to eligible chat GPT plans.
+
+02:37.160 --> 02:42.620
+It includes Sol, the flagship model for complex reasoning and professional work, Terra, which
+
+02:42.620 --> 02:49.420
+balances capability, speed and cost, and Luna, the fastest and most cost efficient option.
+
+02:50.360 --> 02:55.900
+In standard chat GPT conversations, the main model available from this family is GPT 5.6
+
+02:55.900 --> 02:56.180
+Sol.
+
+02:56.480 --> 03:03.620
+GPT 5.6 Sol is designed for demanding tasks such as coding, research, science, data analysis,
+
+03:04.000 --> 03:06.400
+computer use, cybersecurity and design.
+
+03:06.840 --> 03:12.180
+GPT 5.6 Sol Pro is the highest capability option for the hardest questions and longer
+
+03:12.180 --> 03:12.840
+running workflows.
+
+03:13.240 --> 03:17.680
+Use it when you need deeper reasoning, stronger structure and greater confidence in the final
+
+03:17.680 --> 03:18.200
+result.
+
+03:19.860 --> 03:24.600
+Now, in terms of privacy and data use for personal plans, training and data sharing settings
+
+03:24.600 --> 03:30.100
+can be adjusted in settings, but for business, enterprise and education plans, OpenAI says
+
+03:30.100 --> 03:33.900
+that organizational data is not used for training by default.
+
+03:34.460 --> 03:39.600
+Then on May 1, GPT also rolled out advanced account security, which then adds stronger
+
+03:39.600 --> 03:44.580
+sign in protection like pass keys or security keys and stricter recovery checks.
+
+03:45.100 --> 03:50.040
+Of course, regardless of any plan, avoid sharing sensitive information that you wouldn't share
+
+03:50.040 --> 03:53.820
+with a third party vendor and verify any outputs that matter.
+
+03:54.560 --> 04:00.240
+And finally, in terms of plans and pricing, chat GPT now offers a pretty wide range of
+
+04:00.240 --> 04:00.600
+options.
+
+04:01.020 --> 04:07.320
+There's free for everyday use, with limited access to GPT 5.5 Instant, plus web search,
+
+04:07.320 --> 04:11.960
+file uploads, data analysis, image generation and GPTs.
+
+04:12.460 --> 04:18.520
+The exact model limit can vary and once you reach it, chat GPT switches you to GPT 5.5
+
+04:18.520 --> 04:19.100
+Instant Mini.
+
+04:19.580 --> 04:23.120
+Then there's Go, which costs $8 per month in the US.
+
+04:23.660 --> 04:29.760
+It gives you more messages, uploads, image generation, data analysis, memory and a larger
+
+04:29.760 --> 04:31.340
+context window than free.
+
+04:31.900 --> 04:35.080
+But for most professionals, Plus is probably the better fit.
+
+04:35.560 --> 04:41.840
+At $20 per month, Plus gives you higher model limits, more advanced reasoning, faster responses,
+
+04:42.420 --> 04:49.120
+voice, image generation, file analysis, deep research, agent mode, custom GPT creation
+
+04:49.120 --> 04:51.420
+and expanded access to Codex.
+
+04:52.020 --> 04:55.340
+If you regularly run into those limits, then there's Pro.
+
+04:55.960 --> 05:02.280
+The $100 plan gives you five times the usage of Plus, while the $200 plan gives you 20
+
+05:02.280 --> 05:03.200
+times the usage.
+
+05:03.620 --> 05:09.480
+Both include access to chat GPT's most advanced models and tools, and then business and enterprise
+
+05:09.480 --> 05:14.900
+ad shared workspaces, admin controls, stronger security and governance, company knowledge,
+
+05:15.280 --> 05:18.820
+shared projects, agents, apps and organizational permissions.
+
+05:19.640 --> 05:24.480
+Business costs $25 per user per month, or $20 per user per month with annual billing,
+
+05:24.780 --> 05:26.760
+and requires at least two users.
+
+05:27.420 --> 05:29.320
+Enterprise uses custom pricing.
+
+05:30.280 --> 05:35.260
+But in short, chat GPT now really covers more of the senior work that you would do than
+
+05:35.260 --> 05:37.020
+any single tool before it.
+

@@ -1,0 +1,88 @@
+start	end	text
+3420	6340	Now, in our quest to personalize AI,
+6620	8320	we start with custom instructions.
+9220	12260	This is because you can shape them directly and they
+12260	15680	make every following conversation immediately more valuable.
+16560	19260	Custom instructions are useful because they let you
+19260	21280	establish recurring contexts and expectations
+21280	25400	once rather than rebuilding them inside every single prompt.
+26340	29420	Without them, even experienced AI users
+29420	31340	can spend part of each conversation
+31340	34220	re-explaining things like who the audience is,
+34560	37900	how much detail is useful, how decisions should be presented,
+38160	40620	or how critically AI should engage with their thinking.
+41020	43740	Custom instructions move that recurring information
+43740	47920	out of the individual prompts and into a persistent setting
+47920	50540	that the AI reads before every conversation.
+51900	54320	And that means that your prompts can focus more
+54320	56200	on what is unique about each task
+56780	59260	while AI starts with a stronger understanding
+59260	60540	of how to work with you.
+61500	63780	There are three things worth telling AI
+63780	66440	and we call them the three Cs framework,
+67060	69680	context, communication, and collaboration.
+70980	74040	So context is all about what AI should know about you.
+74660	76720	So you provide the recurring context
+76720	79500	that helps AI give you more relevant responses.
+80160	82700	That could include your role, responsibilities,
+83420	86540	expertise, and the people that you typically communicate with.
+87300	88620	Then there's communication.
+89460	93240	So you can define how you prefer information to be presented.
+94000	97480	So think about things like tone, length, structure,
+97860	100660	the level of detail, and how much reasoning you want to see.
+101460	104080	Now be careful about asking for two things at once here.
+104520	106720	If you request concise and comprehensive
+106720	109820	in the same profile, you'll get neither.
+110680	112700	Especially the newer reasoning models
+112700	114760	are sticklers for this level of detail.
+115760	116840	And then there's collaboration.
+117760	119900	This is all about how you want AI
+119900	121740	to approach the work itself.
+123320	124280	Should it challenge you?
+124660	125660	Should it bring up risks?
+126240	128280	Should it name trade-offs between options?
+129100	131740	Should it ask you questions or tell you
+131740	134280	when there isn't enough information to answer well?
+135640	137320	Now once you've written all three,
+137500	140140	you wanna save them together as a single document
+140140	142460	somewhere that you can easily open and update.
+143340	145860	An MD file especially will serve you well
+145860	148320	when you're working with multiple platforms and agents.
+149160	150580	This will then be the reference
+150580	152240	that you'll return to every time
+152240	154860	you wanna personalize a new AI tool or agent
+155380	157520	so you're not rebuilding it from scratch every time.
+158300	160220	Don't forget that everything you write
+160220	161740	into these custom instructions
+161740	164560	runs before every prompt moving forward.
+165120	167220	So you wanna avoid providing information
+167220	169260	that's either only applicable sometimes
+169980	172100	or otherwise would confuse the AI
+172100	173880	in context of your prompts.
+175460	177340	Now of course we also wanna keep
+177340	178940	these custom instructions relevant.
+179840	182840	These custom instructions should evolve as you do.
+183600	184680	Your context, communication,
+185220	187040	and collaboration preferences today
+187040	190260	are likely to change within let's say the next six months.
+191160	194080	So as your roles or responsibilities change,
+194200	195700	you wanna update your context.
+196620	198960	If you repeatedly find yourself asking
+198960	201940	for a different tone, format, or a level of detail,
+202480	204500	you wanna adjust your communication preferences.
+205380	207780	And if AI is getting too argumentative
+207780	209940	or conversely too pleasing,
+210520	212720	you wanna refine your collaboration instructions.
+213980	216020	A useful signal here is repetition.
+217080	219640	If you keep giving AI the same instruction
+219640	220660	across conversations,
+221240	223600	you wanna ask yourself whether you want AI
+223600	225640	to know or follow this most of the time.
+226960	229080	If it's a yes, then consider adding it
+229080	230460	to your custom instructions.
+231240	233540	Of course, if it's specific to just one task,
+233600	235180	then you wanna keep it in the prompt.
+236140	238400	Now the more refined and the more up to date
+238400	239860	these custom instructions are,
+240320	243660	the more that AI truly moves from a general purpose tool
+243660	246900	to one based on you and the work that you need to get done.

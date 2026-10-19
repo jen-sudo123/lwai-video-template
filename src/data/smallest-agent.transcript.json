@@ -1,0 +1,4127 @@
+{
+ "text": "We've already seen how Larry, our leadership update agent, can access information, use tools, and ask for approval before taking action. But how do we decide which capabilities an agent actually needs, and how the work should be divided between the agent, automation, and people? That's what we need to establish before building, a clear sequence of work with the right responsibilities assigned to each part. To turn a workflow into a real agent, we can use our OVER framework to design the work. We start with the output we want, identify the verbs or individual steps required, evaluate which steps AI can handle, and route the work between AI, tools, and people. But designing the workflow is only half the challenge. We also need to turn that design into a system that can carry the work forward. Our agent-built blueprint brings the necessary capabilities together through five design decisions. First, the job. What exactly is the agent responsible for, and what does a successful result look like? Clear instructions establish that responsibility. Second, the knowledge. What information does the agent need? This includes relevant context and access to approved documents, data, or other sources. Third, the method. How should the work be performed? Instructions and reusable skills can establish consistent procedures for analyzing information, making comparisons, and checking results. Fourth, the capabilities. What does the agent need to do beyond generating a response? Connectors and tools let it retrieve information, interact with systems, and carry out actions. Finally, the control. How does the agent decide what happens next, and when should a human intervene? This is where orchestration comes in. The agent can select an available action, examine the result, and decide whether to continue or change course. It also needs to track its progress during the task and operate within clear permission, approval, and escalation boundaries. These five decisions give us a complete design without requiring unnecessary complexity. To put all this together, let's think back to Larry, our leadership update writer. His job is to produce a decision-ready leadership briefing. His knowledge comes from approved project information in SharePoint. His method is to identify meaningful developments, check important claims, and highlight decisions requiring attention. His capabilities allow him to retrieve information and prepare an update for Microsoft Teams. And his control allows him to investigate missing details, flag conflicting information, and request approval before publishing. Larry can now carry a meaningful multi-step workflow forward without us managing every action. The same blueprint works for any suitable workflow. Start with a clear job, give the agent what it needs, and retain human control where it matters. That's how we build agents that deliver real value without taking on more complexity than necessary.",
+ "segments": [
+  {
+   "id": 0,
+   "seek": 0,
+   "start": 0.0,
+   "end": 3.4,
+   "text": " We've already seen how Larry, our leadership update agent,",
+   "tokens": [
+    50364,
+    492,
+    600,
+    1217,
+    1612,
+    577,
+    18145,
+    11,
+    527,
+    5848,
+    5623,
+    9461,
+    11,
+    50552
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.11997082710266113,
+   "compression_ratio": 1.610236220472441,
+   "no_speech_prob": 0.0012451193761080503,
+   "words": [
+    {
+     "word": " We've",
+     "start": 0.0,
+     "end": 0.24,
+     "probability": 0.9700472354888916
+    },
+    {
+     "word": " already",
+     "start": 0.24,
+     "end": 0.5,
+     "probability": 0.9980331063270569
+    },
+    {
+     "word": " seen",
+     "start": 0.5,
+     "end": 0.88,
+     "probability": 0.9985400438308716
+    },
+    {
+     "word": " how",
+     "start": 0.88,
+     "end": 1.14,
+     "probability": 0.9975882768630981
+    },
+    {
+     "word": " Larry,",
+     "start": 1.14,
+     "end": 1.52,
+     "probability": 0.9745625853538513
+    },
+    {
+     "word": " our",
+     "start": 1.9,
+     "end": 2.08,
+     "probability": 0.9969033598899841
+    },
+    {
+     "word": " leadership",
+     "start": 2.08,
+     "end": 2.54,
+     "probability": 0.6270785331726074
+    },
+    {
+     "word": " update",
+     "start": 2.54,
+     "end": 2.92,
+     "probability": 0.9876064658164978
+    },
+    {
+     "word": " agent,",
+     "start": 2.92,
+     "end": 3.4,
+     "probability": 0.9972477555274963
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "seek": 0,
+   "start": 3.76,
+   "end": 6.06,
+   "text": " can access information, use tools,",
+   "tokens": [
+    50552,
+    393,
+    2105,
+    1589,
+    11,
+    764,
+    3873,
+    11,
+    50680
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.11997082710266113,
+   "compression_ratio": 1.610236220472441,
+   "no_speech_prob": 0.0012451193761080503,
+   "words": [
+    {
+     "word": " can",
+     "start": 3.76,
+     "end": 3.94,
+     "probability": 0.997946560382843
+    },
+    {
+     "word": " access",
+     "start": 3.94,
+     "end": 4.32,
+     "probability": 0.9994500279426575
+    },
+    {
+     "word": " information,",
+     "start": 4.32,
+     "end": 4.8,
+     "probability": 0.9974512457847595
+    },
+    {
+     "word": " use",
+     "start": 5.44,
+     "end": 5.64,
+     "probability": 0.9963096976280212
+    },
+    {
+     "word": " tools,",
+     "start": 5.64,
+     "end": 6.06,
+     "probability": 0.9993353486061096
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "seek": 0,
+   "start": 6.42,
+   "end": 8.86,
+   "text": " and ask for approval before taking action.",
+   "tokens": [
+    50680,
+    293,
+    1029,
+    337,
+    13317,
+    949,
+    1940,
+    3069,
+    13,
+    50842
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.11997082710266113,
+   "compression_ratio": 1.610236220472441,
+   "no_speech_prob": 0.0012451193761080503,
+   "words": [
+    {
+     "word": " and",
+     "start": 6.42,
+     "end": 6.5,
+     "probability": 0.9987359642982483
+    },
+    {
+     "word": " ask",
+     "start": 6.5,
+     "end": 6.84,
+     "probability": 0.9966553449630737
+    },
+    {
+     "word": " for",
+     "start": 6.84,
+     "end": 7.04,
+     "probability": 0.9996167421340942
+    },
+    {
+     "word": " approval",
+     "start": 7.04,
+     "end": 7.54,
+     "probability": 0.9984466433525085
+    },
+    {
+     "word": " before",
+     "start": 7.54,
+     "end": 7.98,
+     "probability": 0.9909602403640747
+    },
+    {
+     "word": " taking",
+     "start": 7.98,
+     "end": 8.44,
+     "probability": 0.9983394145965576
+    },
+    {
+     "word": " action.",
+     "start": 8.44,
+     "end": 8.86,
+     "probability": 0.99842369556427
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "seek": 0,
+   "start": 9.56,
+   "end": 11.8,
+   "text": " But how do we decide which capabilities",
+   "tokens": [
+    50842,
+    583,
+    577,
+    360,
+    321,
+    4536,
+    597,
+    10862,
+    50962
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.11997082710266113,
+   "compression_ratio": 1.610236220472441,
+   "no_speech_prob": 0.0012451193761080503,
+   "words": [
+    {
+     "word": " But",
+     "start": 9.56,
+     "end": 9.76,
+     "probability": 0.9917382597923279
+    },
+    {
+     "word": " how",
+     "start": 9.76,
+     "end": 10.14,
+     "probability": 0.9375552535057068
+    },
+    {
+     "word": " do",
+     "start": 10.14,
+     "end": 10.26,
+     "probability": 0.9957004189491272
+    },
+    {
+     "word": " we",
+     "start": 10.26,
+     "end": 10.36,
+     "probability": 0.9994170665740967
+    },
+    {
+     "word": " decide",
+     "start": 10.36,
+     "end": 10.78,
+     "probability": 0.9977992177009583
+    },
+    {
+     "word": " which",
+     "start": 10.78,
+     "end": 11.12,
+     "probability": 0.9949134588241577
+    },
+    {
+     "word": " capabilities",
+     "start": 11.12,
+     "end": 11.8,
+     "probability": 0.9982151985168457
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "seek": 0,
+   "start": 11.8,
+   "end": 13.46,
+   "text": " an agent actually needs,",
+   "tokens": [
+    50962,
+    364,
+    9461,
+    767,
+    2203,
+    11,
+    51056
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.11997082710266113,
+   "compression_ratio": 1.610236220472441,
+   "no_speech_prob": 0.0012451193761080503,
+   "words": [
+    {
+     "word": " an",
+     "start": 11.8,
+     "end": 12.08,
+     "probability": 0.9941984415054321
+    },
+    {
+     "word": " agent",
+     "start": 12.08,
+     "end": 12.36,
+     "probability": 0.9976763129234314
+    },
+    {
+     "word": " actually",
+     "start": 12.36,
+     "end": 12.9,
+     "probability": 0.9969671368598938
+    },
+    {
+     "word": " needs,",
+     "start": 12.9,
+     "end": 13.46,
+     "probability": 0.9981361627578735
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "seek": 0,
+   "start": 13.84,
+   "end": 15.5,
+   "text": " and how the work should be divided",
+   "tokens": [
+    51056,
+    293,
+    577,
+    264,
+    589,
+    820,
+    312,
+    6666,
+    51146
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.11997082710266113,
+   "compression_ratio": 1.610236220472441,
+   "no_speech_prob": 0.0012451193761080503,
+   "words": [
+    {
+     "word": " and",
+     "start": 13.84,
+     "end": 14.02,
+     "probability": 0.9981847405433655
+    },
+    {
+     "word": " how",
+     "start": 14.02,
+     "end": 14.34,
+     "probability": 0.9991456270217896
+    },
+    {
+     "word": " the",
+     "start": 14.34,
+     "end": 14.5,
+     "probability": 0.997352123260498
+    },
+    {
+     "word": " work",
+     "start": 14.5,
+     "end": 14.7,
+     "probability": 0.9748215079307556
+    },
+    {
+     "word": " should",
+     "start": 14.7,
+     "end": 14.9,
+     "probability": 0.9975091218948364
+    },
+    {
+     "word": " be",
+     "start": 14.9,
+     "end": 15.04,
+     "probability": 0.9994152784347534
+    },
+    {
+     "word": " divided",
+     "start": 15.04,
+     "end": 15.5,
+     "probability": 0.9974105954170227
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "seek": 0,
+   "start": 15.5,
+   "end": 17.96,
+   "text": " between the agent, automation, and people?",
+   "tokens": [
+    51146,
+    1296,
+    264,
+    9461,
+    11,
+    17769,
+    11,
+    293,
+    561,
+    30,
+    51294
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.11997082710266113,
+   "compression_ratio": 1.610236220472441,
+   "no_speech_prob": 0.0012451193761080503,
+   "words": [
+    {
+     "word": " between",
+     "start": 15.5,
+     "end": 15.86,
+     "probability": 0.9987282156944275
+    },
+    {
+     "word": " the",
+     "start": 15.86,
+     "end": 16.04,
+     "probability": 0.9927144646644592
+    },
+    {
+     "word": " agent,",
+     "start": 16.04,
+     "end": 16.46,
+     "probability": 0.9908548593521118
+    },
+    {
+     "word": " automation,",
+     "start": 16.76,
+     "end": 17.18,
+     "probability": 0.9979148507118225
+    },
+    {
+     "word": " and",
+     "start": 17.52,
+     "end": 17.64,
+     "probability": 0.9995587468147278
+    },
+    {
+     "word": " people?",
+     "start": 17.64,
+     "end": 17.96,
+     "probability": 0.998450756072998
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "seek": 0,
+   "start": 18.6,
+   "end": 21.02,
+   "text": " That's what we need to establish before building,",
+   "tokens": [
+    51294,
+    663,
+    311,
+    437,
+    321,
+    643,
+    281,
+    8327,
+    949,
+    2390,
+    11,
+    51442
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.11997082710266113,
+   "compression_ratio": 1.610236220472441,
+   "no_speech_prob": 0.0012451193761080503,
+   "words": [
+    {
+     "word": " That's",
+     "start": 18.6,
+     "end": 19.0,
+     "probability": 0.9970713257789612
+    },
+    {
+     "word": " what",
+     "start": 19.0,
+     "end": 19.12,
+     "probability": 0.9989751577377319
+    },
+    {
+     "word": " we",
+     "start": 19.12,
+     "end": 19.26,
+     "probability": 0.9994117021560669
+    },
+    {
+     "word": " need",
+     "start": 19.26,
+     "end": 19.4,
+     "probability": 0.9988378882408142
+    },
+    {
+     "word": " to",
+     "start": 19.4,
+     "end": 19.56,
+     "probability": 0.9994837045669556
+    },
+    {
+     "word": " establish",
+     "start": 19.56,
+     "end": 20.0,
+     "probability": 0.99866783618927
+    },
+    {
+     "word": " before",
+     "start": 20.0,
+     "end": 20.5,
+     "probability": 0.989618718624115
+    },
+    {
+     "word": " building,",
+     "start": 20.5,
+     "end": 21.02,
+     "probability": 0.9852702617645264
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "seek": 0,
+   "start": 21.52,
+   "end": 23.04,
+   "text": " a clear sequence of work",
+   "tokens": [
+    51442,
+    257,
+    1850,
+    8310,
+    295,
+    589,
+    51524
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.11997082710266113,
+   "compression_ratio": 1.610236220472441,
+   "no_speech_prob": 0.0012451193761080503,
+   "words": [
+    {
+     "word": " a",
+     "start": 21.52,
+     "end": 21.66,
+     "probability": 0.9946399331092834
+    },
+    {
+     "word": " clear",
+     "start": 21.66,
+     "end": 22.0,
+     "probability": 0.9972965121269226
+    },
+    {
+     "word": " sequence",
+     "start": 22.0,
+     "end": 22.42,
+     "probability": 0.999319314956665
+    },
+    {
+     "word": " of",
+     "start": 22.42,
+     "end": 22.7,
+     "probability": 0.9997870326042175
+    },
+    {
+     "word": " work",
+     "start": 22.7,
+     "end": 23.04,
+     "probability": 0.9995064735412598
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "seek": 0,
+   "start": 23.04,
+   "end": 26.02,
+   "text": " with the right responsibilities assigned to each part.",
+   "tokens": [
+    51524,
+    365,
+    264,
+    558,
+    16190,
+    13279,
+    281,
+    1184,
+    644,
+    13,
+    51684
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.11997082710266113,
+   "compression_ratio": 1.610236220472441,
+   "no_speech_prob": 0.0012451193761080503,
+   "words": [
+    {
+     "word": " with",
+     "start": 23.04,
+     "end": 23.34,
+     "probability": 0.9144746661186218
+    },
+    {
+     "word": " the",
+     "start": 23.34,
+     "end": 23.48,
+     "probability": 0.9994938373565674
+    },
+    {
+     "word": " right",
+     "start": 23.48,
+     "end": 23.76,
+     "probability": 0.9989134073257446
+    },
+    {
+     "word": " responsibilities",
+     "start": 23.76,
+     "end": 24.54,
+     "probability": 0.9960566759109497
+    },
+    {
+     "word": " assigned",
+     "start": 24.54,
+     "end": 25.2,
+     "probability": 0.9981729984283447
+    },
+    {
+     "word": " to",
+     "start": 25.2,
+     "end": 25.42,
+     "probability": 0.9993733763694763
+    },
+    {
+     "word": " each",
+     "start": 25.42,
+     "end": 25.7,
+     "probability": 0.9996899366378784
+    },
+    {
+     "word": " part.",
+     "start": 25.7,
+     "end": 26.02,
+     "probability": 0.998245120048523
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "seek": 2498,
+   "start": 26.5,
+   "end": 32.38,
+   "text": " To turn a workflow into a real agent, we can use our OVER framework to design the work.",
+   "tokens": [
+    51310,
+    1407,
+    1261,
+    257,
+    20993,
+    666,
+    257,
+    957,
+    9461,
+    11,
+    321,
+    393,
+    764,
+    527,
+    422,
+    9398,
+    8388,
+    281,
+    1715,
+    264,
+    589,
+    13,
+    51626
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.12370322545369467,
+   "compression_ratio": 1.579646017699115,
+   "no_speech_prob": 0.16974550485610962,
+   "words": [
+    {
+     "word": " To",
+     "start": 26.5,
+     "end": 26.7,
+     "probability": 0.9943625926971436
+    },
+    {
+     "word": " turn",
+     "start": 26.7,
+     "end": 26.96,
+     "probability": 0.9990253448486328
+    },
+    {
+     "word": " a",
+     "start": 26.96,
+     "end": 27.08,
+     "probability": 0.9849955439567566
+    },
+    {
+     "word": " workflow",
+     "start": 27.08,
+     "end": 27.4,
+     "probability": 0.9814748764038086
+    },
+    {
+     "word": " into",
+     "start": 27.4,
+     "end": 27.8,
+     "probability": 0.9970266222953796
+    },
+    {
+     "word": " a",
+     "start": 27.8,
+     "end": 28.0,
+     "probability": 0.9981411695480347
+    },
+    {
+     "word": " real",
+     "start": 28.0,
+     "end": 28.28,
+     "probability": 0.9788273572921753
+    },
+    {
+     "word": " agent,",
+     "start": 28.28,
+     "end": 28.8,
+     "probability": 0.9982140064239502
+    },
+    {
+     "word": " we",
+     "start": 29.04,
+     "end": 29.22,
+     "probability": 0.9955822825431824
+    },
+    {
+     "word": " can",
+     "start": 29.22,
+     "end": 29.42,
+     "probability": 0.9985275268554688
+    },
+    {
+     "word": " use",
+     "start": 29.42,
+     "end": 29.64,
+     "probability": 0.9987793564796448
+    },
+    {
+     "word": " our",
+     "start": 29.64,
+     "end": 29.84,
+     "probability": 0.9943723678588867
+    },
+    {
+     "word": " OVER",
+     "start": 29.84,
+     "end": 30.46,
+     "probability": 0.6288575083017349
+    },
+    {
+     "word": " framework",
+     "start": 30.46,
+     "end": 31.12,
+     "probability": 0.9528944492340088
+    },
+    {
+     "word": " to",
+     "start": 31.12,
+     "end": 31.48,
+     "probability": 0.99793541431427
+    },
+    {
+     "word": " design",
+     "start": 31.48,
+     "end": 31.88,
+     "probability": 0.9991938471794128
+    },
+    {
+     "word": " the",
+     "start": 31.88,
+     "end": 32.06,
+     "probability": 0.9990793466567993
+    },
+    {
+     "word": " work.",
+     "start": 32.06,
+     "end": 32.38,
+     "probability": 0.99919193983078
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "seek": 4974,
+   "start": 32.38,
+   "end": 37.94,
+   "text": " We start with the output we want, identify the verbs or individual steps required,",
+   "tokens": [
+    50384,
+    492,
+    722,
+    365,
+    264,
+    5598,
+    321,
+    528,
+    11,
+    5876,
+    264,
+    30051,
+    420,
+    2609,
+    4439,
+    4739,
+    11,
+    50664
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.11784803197624978,
+   "compression_ratio": 1.6184738955823292,
+   "no_speech_prob": 0.03694331273436546,
+   "words": [
+    {
+     "word": " We",
+     "start": 32.38,
+     "end": 33.0,
+     "probability": 0.644309401512146
+    },
+    {
+     "word": " start",
+     "start": 33.0,
+     "end": 33.3,
+     "probability": 0.9606120586395264
+    },
+    {
+     "word": " with",
+     "start": 33.3,
+     "end": 33.54,
+     "probability": 0.9975389242172241
+    },
+    {
+     "word": " the",
+     "start": 33.54,
+     "end": 33.64,
+     "probability": 0.9973408579826355
+    },
+    {
+     "word": " output",
+     "start": 33.64,
+     "end": 34.02,
+     "probability": 0.9893478155136108
+    },
+    {
+     "word": " we",
+     "start": 34.02,
+     "end": 34.24,
+     "probability": 0.991668701171875
+    },
+    {
+     "word": " want,",
+     "start": 34.24,
+     "end": 34.52,
+     "probability": 0.9989320635795593
+    },
+    {
+     "word": " identify",
+     "start": 34.9,
+     "end": 35.46,
+     "probability": 0.9886639714241028
+    },
+    {
+     "word": " the",
+     "start": 35.46,
+     "end": 35.7,
+     "probability": 0.999055802822113
+    },
+    {
+     "word": " verbs",
+     "start": 35.7,
+     "end": 36.16,
+     "probability": 0.980172336101532
+    },
+    {
+     "word": " or",
+     "start": 36.16,
+     "end": 36.52,
+     "probability": 0.8492975831031799
+    },
+    {
+     "word": " individual",
+     "start": 36.52,
+     "end": 36.96,
+     "probability": 0.9881104230880737
+    },
+    {
+     "word": " steps",
+     "start": 36.96,
+     "end": 37.44,
+     "probability": 0.9955306649208069
+    },
+    {
+     "word": " required,",
+     "start": 37.44,
+     "end": 37.94,
+     "probability": 0.9970073103904724
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "seek": 4974,
+   "start": 38.54,
+   "end": 44.44,
+   "text": " evaluate which steps AI can handle, and route the work between AI, tools, and people.",
+   "tokens": [
+    50664,
+    13059,
+    597,
+    4439,
+    7318,
+    393,
+    4813,
+    11,
+    293,
+    7955,
+    264,
+    589,
+    1296,
+    7318,
+    11,
+    3873,
+    11,
+    293,
+    561,
+    13,
+    50992
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.11784803197624978,
+   "compression_ratio": 1.6184738955823292,
+   "no_speech_prob": 0.03694331273436546,
+   "words": [
+    {
+     "word": " evaluate",
+     "start": 38.54,
+     "end": 39.0,
+     "probability": 0.9939980506896973
+    },
+    {
+     "word": " which",
+     "start": 39.0,
+     "end": 39.38,
+     "probability": 0.9976995587348938
+    },
+    {
+     "word": " steps",
+     "start": 39.38,
+     "end": 39.74,
+     "probability": 0.9850397109985352
+    },
+    {
+     "word": " AI",
+     "start": 39.74,
+     "end": 40.02,
+     "probability": 0.9616167545318604
+    },
+    {
+     "word": " can",
+     "start": 40.02,
+     "end": 40.34,
+     "probability": 0.9978298544883728
+    },
+    {
+     "word": " handle,",
+     "start": 40.34,
+     "end": 40.76,
+     "probability": 0.9989718198776245
+    },
+    {
+     "word": " and",
+     "start": 41.22,
+     "end": 41.32,
+     "probability": 0.9975734353065491
+    },
+    {
+     "word": " route",
+     "start": 41.32,
+     "end": 41.6,
+     "probability": 0.9731878638267517
+    },
+    {
+     "word": " the",
+     "start": 41.6,
+     "end": 41.8,
+     "probability": 0.998224675655365
+    },
+    {
+     "word": " work",
+     "start": 41.8,
+     "end": 42.06,
+     "probability": 0.998661994934082
+    },
+    {
+     "word": " between",
+     "start": 42.06,
+     "end": 42.38,
+     "probability": 0.9986467957496643
+    },
+    {
+     "word": " AI,",
+     "start": 42.38,
+     "end": 42.8,
+     "probability": 0.9934585690498352
+    },
+    {
+     "word": " tools,",
+     "start": 43.4,
+     "end": 43.62,
+     "probability": 0.9817841053009033
+    },
+    {
+     "word": " and",
+     "start": 44.04,
+     "end": 44.12,
+     "probability": 0.9980770349502563
+    },
+    {
+     "word": " people.",
+     "start": 44.12,
+     "end": 44.44,
+     "probability": 0.9984058737754822
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "seek": 4974,
+   "start": 45.04,
+   "end": 47.74,
+   "text": " But designing the workflow is only half the challenge.",
+   "tokens": [
+    50992,
+    583,
+    14685,
+    264,
+    20993,
+    307,
+    787,
+    1922,
+    264,
+    3430,
+    13,
+    51152
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.11784803197624978,
+   "compression_ratio": 1.6184738955823292,
+   "no_speech_prob": 0.03694331273436546,
+   "words": [
+    {
+     "word": " But",
+     "start": 45.04,
+     "end": 45.22,
+     "probability": 0.992021381855011
+    },
+    {
+     "word": " designing",
+     "start": 45.22,
+     "end": 45.62,
+     "probability": 0.9821143746376038
+    },
+    {
+     "word": " the",
+     "start": 45.62,
+     "end": 45.8,
+     "probability": 0.9985142350196838
+    },
+    {
+     "word": " workflow",
+     "start": 45.8,
+     "end": 46.18,
+     "probability": 0.9873850345611572
+    },
+    {
+     "word": " is",
+     "start": 46.18,
+     "end": 46.5,
+     "probability": 0.9974182844161987
+    },
+    {
+     "word": " only",
+     "start": 46.5,
+     "end": 46.76,
+     "probability": 0.9988904595375061
+    },
+    {
+     "word": " half",
+     "start": 46.76,
+     "end": 47.12,
+     "probability": 0.9955295920372009
+    },
+    {
+     "word": " the",
+     "start": 47.12,
+     "end": 47.3,
+     "probability": 0.9936610460281372
+    },
+    {
+     "word": " challenge.",
+     "start": 47.3,
+     "end": 47.74,
+     "probability": 0.9988675117492676
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "seek": 4974,
+   "start": 48.2,
+   "end": 52.5,
+   "text": " We also need to turn that design into a system that can carry the work forward.",
+   "tokens": [
+    51152,
+    492,
+    611,
+    643,
+    281,
+    1261,
+    300,
+    1715,
+    666,
+    257,
+    1185,
+    300,
+    393,
+    3985,
+    264,
+    589,
+    2128,
+    13,
+    51392
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.11784803197624978,
+   "compression_ratio": 1.6184738955823292,
+   "no_speech_prob": 0.03694331273436546,
+   "words": [
+    {
+     "word": " We",
+     "start": 48.2,
+     "end": 48.36,
+     "probability": 0.9977626800537109
+    },
+    {
+     "word": " also",
+     "start": 48.36,
+     "end": 48.68,
+     "probability": 0.9969738721847534
+    },
+    {
+     "word": " need",
+     "start": 48.68,
+     "end": 48.88,
+     "probability": 0.9987132549285889
+    },
+    {
+     "word": " to",
+     "start": 48.88,
+     "end": 49.02,
+     "probability": 0.9985083937644958
+    },
+    {
+     "word": " turn",
+     "start": 49.02,
+     "end": 49.32,
+     "probability": 0.9986703395843506
+    },
+    {
+     "word": " that",
+     "start": 49.32,
+     "end": 49.52,
+     "probability": 0.9906896352767944
+    },
+    {
+     "word": " design",
+     "start": 49.52,
+     "end": 49.92,
+     "probability": 0.9974689483642578
+    },
+    {
+     "word": " into",
+     "start": 49.92,
+     "end": 50.2,
+     "probability": 0.9967833757400513
+    },
+    {
+     "word": " a",
+     "start": 50.2,
+     "end": 50.4,
+     "probability": 0.999213695526123
+    },
+    {
+     "word": " system",
+     "start": 50.4,
+     "end": 50.82,
+     "probability": 0.9993395209312439
+    },
+    {
+     "word": " that",
+     "start": 50.82,
+     "end": 51.04,
+     "probability": 0.9985081553459167
+    },
+    {
+     "word": " can",
+     "start": 51.04,
+     "end": 51.22,
+     "probability": 0.9967949986457825
+    },
+    {
+     "word": " carry",
+     "start": 51.22,
+     "end": 51.58,
+     "probability": 0.9988446235656738
+    },
+    {
+     "word": " the",
+     "start": 51.58,
+     "end": 51.76,
+     "probability": 0.9979496598243713
+    },
+    {
+     "word": " work",
+     "start": 51.76,
+     "end": 52.0,
+     "probability": 0.9992799162864685
+    },
+    {
+     "word": " forward.",
+     "start": 52.0,
+     "end": 52.5,
+     "probability": 0.9980552196502686
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "seek": 4974,
+   "start": 53.08,
+   "end": 58.68,
+   "text": " Our agent-built blueprint brings the necessary capabilities together through five design decisions.",
+   "tokens": [
+    51392,
+    2621,
+    9461,
+    12,
+    23018,
+    35868,
+    5607,
+    264,
+    4818,
+    10862,
+    1214,
+    807,
+    1732,
+    1715,
+    5327,
+    13,
+    51716
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.11784803197624978,
+   "compression_ratio": 1.6184738955823292,
+   "no_speech_prob": 0.03694331273436546,
+   "words": [
+    {
+     "word": " Our",
+     "start": 53.08,
+     "end": 53.28,
+     "probability": 0.9959086179733276
+    },
+    {
+     "word": " agent",
+     "start": 53.28,
+     "end": 53.68,
+     "probability": 0.5470451712608337
+    },
+    {
+     "word": "-built",
+     "start": 53.68,
+     "end": 53.98,
+     "probability": 0.6825263798236847
+    },
+    {
+     "word": " blueprint",
+     "start": 53.98,
+     "end": 54.46,
+     "probability": 0.8717570900917053
+    },
+    {
+     "word": " brings",
+     "start": 54.46,
+     "end": 54.94,
+     "probability": 0.9958782196044922
+    },
+    {
+     "word": " the",
+     "start": 54.94,
+     "end": 55.16,
+     "probability": 0.9987456798553467
+    },
+    {
+     "word": " necessary",
+     "start": 55.16,
+     "end": 55.66,
+     "probability": 0.9994033575057983
+    },
+    {
+     "word": " capabilities",
+     "start": 55.66,
+     "end": 56.3,
+     "probability": 0.998229444026947
+    },
+    {
+     "word": " together",
+     "start": 56.3,
+     "end": 56.86,
+     "probability": 0.9971705079078674
+    },
+    {
+     "word": " through",
+     "start": 56.86,
+     "end": 57.28,
+     "probability": 0.9913414120674133
+    },
+    {
+     "word": " five",
+     "start": 57.28,
+     "end": 57.7,
+     "probability": 0.8823056221008301
+    },
+    {
+     "word": " design",
+     "start": 57.7,
+     "end": 58.24,
+     "probability": 0.9799513816833496
+    },
+    {
+     "word": " decisions.",
+     "start": 58.24,
+     "end": 58.68,
+     "probability": 0.9983313679695129
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "seek": 7604,
+   "start": 59.4,
+   "end": 60.66,
+   "text": " First, the job.",
+   "tokens": [
+    50400,
+    2386,
+    11,
+    264,
+    1691,
+    13,
+    50484
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.12537887484528298,
+   "compression_ratio": 1.5682819383259912,
+   "no_speech_prob": 0.07569093257188797,
+   "words": [
+    {
+     "word": " First,",
+     "start": 59.4,
+     "end": 59.76,
+     "probability": 0.4321421980857849
+    },
+    {
+     "word": " the",
+     "start": 60.2,
+     "end": 60.32,
+     "probability": 0.9590030908584595
+    },
+    {
+     "word": " job.",
+     "start": 60.32,
+     "end": 60.66,
+     "probability": 0.9773285984992981
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "seek": 7604,
+   "start": 61.18,
+   "end": 65.96,
+   "text": " What exactly is the agent responsible for, and what does a successful result look like?",
+   "tokens": [
+    50484,
+    708,
+    2293,
+    307,
+    264,
+    9461,
+    6250,
+    337,
+    11,
+    293,
+    437,
+    775,
+    257,
+    4406,
+    1874,
+    574,
+    411,
+    30,
+    50748
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.12537887484528298,
+   "compression_ratio": 1.5682819383259912,
+   "no_speech_prob": 0.07569093257188797,
+   "words": [
+    {
+     "word": " What",
+     "start": 61.18,
+     "end": 61.38,
+     "probability": 0.9690470099449158
+    },
+    {
+     "word": " exactly",
+     "start": 61.38,
+     "end": 61.94,
+     "probability": 0.9937537312507629
+    },
+    {
+     "word": " is",
+     "start": 61.94,
+     "end": 62.14,
+     "probability": 0.9933698177337646
+    },
+    {
+     "word": " the",
+     "start": 62.14,
+     "end": 62.3,
+     "probability": 0.9961586594581604
+    },
+    {
+     "word": " agent",
+     "start": 62.3,
+     "end": 62.52,
+     "probability": 0.9583733081817627
+    },
+    {
+     "word": " responsible",
+     "start": 62.52,
+     "end": 62.92,
+     "probability": 0.998526930809021
+    },
+    {
+     "word": " for,",
+     "start": 62.92,
+     "end": 63.48,
+     "probability": 0.9986593723297119
+    },
+    {
+     "word": " and",
+     "start": 63.82,
+     "end": 63.96,
+     "probability": 0.9947105646133423
+    },
+    {
+     "word": " what",
+     "start": 63.96,
+     "end": 64.2,
+     "probability": 0.9980252981185913
+    },
+    {
+     "word": " does",
+     "start": 64.2,
+     "end": 64.36,
+     "probability": 0.9969902038574219
+    },
+    {
+     "word": " a",
+     "start": 64.36,
+     "end": 64.5,
+     "probability": 0.9723934531211853
+    },
+    {
+     "word": " successful",
+     "start": 64.5,
+     "end": 64.92,
+     "probability": 0.9991124272346497
+    },
+    {
+     "word": " result",
+     "start": 64.92,
+     "end": 65.34,
+     "probability": 0.9980186223983765
+    },
+    {
+     "word": " look",
+     "start": 65.34,
+     "end": 65.64,
+     "probability": 0.9969751834869385
+    },
+    {
+     "word": " like?",
+     "start": 65.64,
+     "end": 65.96,
+     "probability": 0.9996496438980103
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "seek": 7604,
+   "start": 66.44,
+   "end": 68.96,
+   "text": " Clear instructions establish that responsibility.",
+   "tokens": [
+    50748,
+    14993,
+    9415,
+    8327,
+    300,
+    6357,
+    13,
+    50916
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.12537887484528298,
+   "compression_ratio": 1.5682819383259912,
+   "no_speech_prob": 0.07569093257188797,
+   "words": [
+    {
+     "word": " Clear",
+     "start": 66.44,
+     "end": 66.72,
+     "probability": 0.9578256011009216
+    },
+    {
+     "word": " instructions",
+     "start": 66.72,
+     "end": 67.26,
+     "probability": 0.9808622002601624
+    },
+    {
+     "word": " establish",
+     "start": 67.26,
+     "end": 68.0,
+     "probability": 0.9636270999908447
+    },
+    {
+     "word": " that",
+     "start": 68.0,
+     "end": 68.38,
+     "probability": 0.9980105757713318
+    },
+    {
+     "word": " responsibility.",
+     "start": 68.38,
+     "end": 68.96,
+     "probability": 0.9984511137008667
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "seek": 7604,
+   "start": 69.8,
+   "end": 71.06,
+   "text": " Second, the knowledge.",
+   "tokens": [
+    50916,
+    5736,
+    11,
+    264,
+    3601,
+    13,
+    51008
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.12537887484528298,
+   "compression_ratio": 1.5682819383259912,
+   "no_speech_prob": 0.07569093257188797,
+   "words": [
+    {
+     "word": " Second,",
+     "start": 69.8,
+     "end": 70.16,
+     "probability": 0.9803764820098877
+    },
+    {
+     "word": " the",
+     "start": 70.66,
+     "end": 70.72,
+     "probability": 0.9975094795227051
+    },
+    {
+     "word": " knowledge.",
+     "start": 70.72,
+     "end": 71.06,
+     "probability": 0.9934815168380737
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "seek": 7604,
+   "start": 71.64,
+   "end": 73.48,
+   "text": " What information does the agent need?",
+   "tokens": [
+    51008,
+    708,
+    1589,
+    775,
+    264,
+    9461,
+    643,
+    30,
+    51124
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.12537887484528298,
+   "compression_ratio": 1.5682819383259912,
+   "no_speech_prob": 0.07569093257188797,
+   "words": [
+    {
+     "word": " What",
+     "start": 71.64,
+     "end": 71.86,
+     "probability": 0.9936111569404602
+    },
+    {
+     "word": " information",
+     "start": 71.86,
+     "end": 72.36,
+     "probability": 0.9991527795791626
+    },
+    {
+     "word": " does",
+     "start": 72.36,
+     "end": 72.72,
+     "probability": 0.997901439666748
+    },
+    {
+     "word": " the",
+     "start": 72.72,
+     "end": 72.88,
+     "probability": 0.9984429478645325
+    },
+    {
+     "word": " agent",
+     "start": 72.88,
+     "end": 73.12,
+     "probability": 0.9994428753852844
+    },
+    {
+     "word": " need?",
+     "start": 73.12,
+     "end": 73.48,
+     "probability": 0.9991577863693237
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "seek": 7604,
+   "start": 74.0,
+   "end": 79.24,
+   "text": " This includes relevant context and access to approved documents, data, or other sources.",
+   "tokens": [
+    51124,
+    639,
+    5974,
+    7340,
+    4319,
+    293,
+    2105,
+    281,
+    10826,
+    8512,
+    11,
+    1412,
+    11,
+    420,
+    661,
+    7139,
+    13,
+    51428
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.12537887484528298,
+   "compression_ratio": 1.5682819383259912,
+   "no_speech_prob": 0.07569093257188797,
+   "words": [
+    {
+     "word": " This",
+     "start": 74.0,
+     "end": 74.2,
+     "probability": 0.9960193037986755
+    },
+    {
+     "word": " includes",
+     "start": 74.2,
+     "end": 74.58,
+     "probability": 0.998569130897522
+    },
+    {
+     "word": " relevant",
+     "start": 74.58,
+     "end": 74.94,
+     "probability": 0.9965360164642334
+    },
+    {
+     "word": " context",
+     "start": 74.94,
+     "end": 75.54,
+     "probability": 0.9100947380065918
+    },
+    {
+     "word": " and",
+     "start": 75.54,
+     "end": 75.92,
+     "probability": 0.9597084522247314
+    },
+    {
+     "word": " access",
+     "start": 75.92,
+     "end": 76.32,
+     "probability": 0.9987648725509644
+    },
+    {
+     "word": " to",
+     "start": 76.32,
+     "end": 76.58,
+     "probability": 0.9991893172264099
+    },
+    {
+     "word": " approved",
+     "start": 76.58,
+     "end": 76.98,
+     "probability": 0.9917373061180115
+    },
+    {
+     "word": " documents,",
+     "start": 76.98,
+     "end": 77.54,
+     "probability": 0.9993091821670532
+    },
+    {
+     "word": " data,",
+     "start": 77.92,
+     "end": 78.2,
+     "probability": 0.9994533658027649
+    },
+    {
+     "word": " or",
+     "start": 78.52,
+     "end": 78.62,
+     "probability": 0.997132420539856
+    },
+    {
+     "word": " other",
+     "start": 78.62,
+     "end": 78.84,
+     "probability": 0.9988985061645508
+    },
+    {
+     "word": " sources.",
+     "start": 78.84,
+     "end": 79.24,
+     "probability": 0.9962707757949829
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "seek": 7604,
+   "start": 79.96,
+   "end": 81.22,
+   "text": " Third, the method.",
+   "tokens": [
+    51428,
+    12548,
+    11,
+    264,
+    3170,
+    13,
+    51516
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.12537887484528298,
+   "compression_ratio": 1.5682819383259912,
+   "no_speech_prob": 0.07569093257188797,
+   "words": [
+    {
+     "word": " Third,",
+     "start": 79.96,
+     "end": 80.38,
+     "probability": 0.9942072629928589
+    },
+    {
+     "word": " the",
+     "start": 80.82,
+     "end": 80.88,
+     "probability": 0.9985693693161011
+    },
+    {
+     "word": " method.",
+     "start": 80.88,
+     "end": 81.22,
+     "probability": 0.9966714382171631
+    }
+   ]
+  },
+  {
+   "id": 21,
+   "seek": 7604,
+   "start": 81.82,
+   "end": 83.16,
+   "text": " How should the work be performed?",
+   "tokens": [
+    51516,
+    1012,
+    820,
+    264,
+    589,
+    312,
+    10332,
+    30,
+    51616
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.12537887484528298,
+   "compression_ratio": 1.5682819383259912,
+   "no_speech_prob": 0.07569093257188797,
+   "words": [
+    {
+     "word": " How",
+     "start": 81.82,
+     "end": 82.0,
+     "probability": 0.9738214612007141
+    },
+    {
+     "word": " should",
+     "start": 82.0,
+     "end": 82.22,
+     "probability": 0.9988364577293396
+    },
+    {
+     "word": " the",
+     "start": 82.22,
+     "end": 82.34,
+     "probability": 0.9946807026863098
+    },
+    {
+     "word": " work",
+     "start": 82.34,
+     "end": 82.54,
+     "probability": 0.9994415640830994
+    },
+    {
+     "word": " be",
+     "start": 82.54,
+     "end": 82.72,
+     "probability": 0.9993364214897156
+    },
+    {
+     "word": " performed?",
+     "start": 82.72,
+     "end": 83.16,
+     "probability": 0.9959618449211121
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "seek": 10052,
+   "start": 83.72,
+   "end": 89.12,
+   "text": " Instructions and reusable skills can establish consistent procedures for analyzing information,",
+   "tokens": [
+    50392,
+    2730,
+    1757,
+    626,
+    293,
+    41807,
+    3942,
+    393,
+    8327,
+    8398,
+    13846,
+    337,
+    23663,
+    1589,
+    11,
+    50680
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.07169126695202242,
+   "compression_ratio": 1.6356589147286822,
+   "no_speech_prob": 0.02283092960715294,
+   "words": [
+    {
+     "word": " Instructions",
+     "start": 83.72,
+     "end": 84.54,
+     "probability": 0.9519552787144979
+    },
+    {
+     "word": " and",
+     "start": 84.54,
+     "end": 84.72,
+     "probability": 0.992230236530304
+    },
+    {
+     "word": " reusable",
+     "start": 84.72,
+     "end": 85.12,
+     "probability": 0.9417669177055359
+    },
+    {
+     "word": " skills",
+     "start": 85.12,
+     "end": 85.76,
+     "probability": 0.9967581629753113
+    },
+    {
+     "word": " can",
+     "start": 85.76,
+     "end": 86.02,
+     "probability": 0.9955021739006042
+    },
+    {
+     "word": " establish",
+     "start": 86.02,
+     "end": 86.48,
+     "probability": 0.9965302348136902
+    },
+    {
+     "word": " consistent",
+     "start": 86.48,
+     "end": 87.12,
+     "probability": 0.996894359588623
+    },
+    {
+     "word": " procedures",
+     "start": 87.12,
+     "end": 87.68,
+     "probability": 0.9988000392913818
+    },
+    {
+     "word": " for",
+     "start": 87.68,
+     "end": 87.98,
+     "probability": 0.9959618449211121
+    },
+    {
+     "word": " analyzing",
+     "start": 87.98,
+     "end": 88.46,
+     "probability": 0.9597868323326111
+    },
+    {
+     "word": " information,",
+     "start": 88.46,
+     "end": 89.12,
+     "probability": 0.9986901879310608
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "seek": 10052,
+   "start": 89.52,
+   "end": 91.72,
+   "text": " making comparisons, and checking results.",
+   "tokens": [
+    50680,
+    1455,
+    33157,
+    11,
+    293,
+    8568,
+    3542,
+    13,
+    50828
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.07169126695202242,
+   "compression_ratio": 1.6356589147286822,
+   "no_speech_prob": 0.02283092960715294,
+   "words": [
+    {
+     "word": " making",
+     "start": 89.52,
+     "end": 89.82,
+     "probability": 0.9964338541030884
+    },
+    {
+     "word": " comparisons,",
+     "start": 89.82,
+     "end": 90.38,
+     "probability": 0.9980229139328003
+    },
+    {
+     "word": " and",
+     "start": 90.82,
+     "end": 90.98,
+     "probability": 0.9974714517593384
+    },
+    {
+     "word": " checking",
+     "start": 90.98,
+     "end": 91.22,
+     "probability": 0.9981421232223511
+    },
+    {
+     "word": " results.",
+     "start": 91.22,
+     "end": 91.72,
+     "probability": 0.999249279499054
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "seek": 10052,
+   "start": 92.46,
+   "end": 93.74,
+   "text": " Fourth, the capabilities.",
+   "tokens": [
+    50828,
+    23773,
+    11,
+    264,
+    10862,
+    13,
+    50932
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.07169126695202242,
+   "compression_ratio": 1.6356589147286822,
+   "no_speech_prob": 0.02283092960715294,
+   "words": [
+    {
+     "word": " Fourth,",
+     "start": 92.46,
+     "end": 92.76,
+     "probability": 0.9382537603378296
+    },
+    {
+     "word": " the",
+     "start": 93.22,
+     "end": 93.3,
+     "probability": 0.9857538938522339
+    },
+    {
+     "word": " capabilities.",
+     "start": 93.3,
+     "end": 93.74,
+     "probability": 0.9547228217124939
+    }
+   ]
+  },
+  {
+   "id": 25,
+   "seek": 10052,
+   "start": 94.58,
+   "end": 97.52,
+   "text": " What does the agent need to do beyond generating a response?",
+   "tokens": [
+    50932,
+    708,
+    775,
+    264,
+    9461,
+    643,
+    281,
+    360,
+    4399,
+    17746,
+    257,
+    4134,
+    30,
+    51116
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.07169126695202242,
+   "compression_ratio": 1.6356589147286822,
+   "no_speech_prob": 0.02283092960715294,
+   "words": [
+    {
+     "word": " What",
+     "start": 94.58,
+     "end": 94.74,
+     "probability": 0.9923999309539795
+    },
+    {
+     "word": " does",
+     "start": 94.74,
+     "end": 94.94,
+     "probability": 0.996442973613739
+    },
+    {
+     "word": " the",
+     "start": 94.94,
+     "end": 95.1,
+     "probability": 0.9955409169197083
+    },
+    {
+     "word": " agent",
+     "start": 95.1,
+     "end": 95.34,
+     "probability": 0.9729929566383362
+    },
+    {
+     "word": " need",
+     "start": 95.34,
+     "end": 95.56,
+     "probability": 0.9977920055389404
+    },
+    {
+     "word": " to",
+     "start": 95.56,
+     "end": 95.76,
+     "probability": 0.9992004036903381
+    },
+    {
+     "word": " do",
+     "start": 95.76,
+     "end": 95.98,
+     "probability": 0.9990369081497192
+    },
+    {
+     "word": " beyond",
+     "start": 95.98,
+     "end": 96.46,
+     "probability": 0.9796774983406067
+    },
+    {
+     "word": " generating",
+     "start": 96.46,
+     "end": 96.94,
+     "probability": 0.9982467889785767
+    },
+    {
+     "word": " a",
+     "start": 96.94,
+     "end": 97.16,
+     "probability": 0.9988799691200256
+    },
+    {
+     "word": " response?",
+     "start": 97.16,
+     "end": 97.52,
+     "probability": 0.9988940358161926
+    }
+   ]
+  },
+  {
+   "id": 26,
+   "seek": 10052,
+   "start": 98.24,
+   "end": 103.48,
+   "text": " Connectors and tools let it retrieve information, interact with systems, and carry out actions.",
+   "tokens": [
+    51116,
+    11653,
+    830,
+    293,
+    3873,
+    718,
+    309,
+    30254,
+    1589,
+    11,
+    4648,
+    365,
+    3652,
+    11,
+    293,
+    3985,
+    484,
+    5909,
+    13,
+    51388
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.07169126695202242,
+   "compression_ratio": 1.6356589147286822,
+   "no_speech_prob": 0.02283092960715294,
+   "words": [
+    {
+     "word": " Connectors",
+     "start": 98.24,
+     "end": 98.76,
+     "probability": 0.99390709400177
+    },
+    {
+     "word": " and",
+     "start": 98.76,
+     "end": 98.94,
+     "probability": 0.9974355101585388
+    },
+    {
+     "word": " tools",
+     "start": 98.94,
+     "end": 99.24,
+     "probability": 0.9969590902328491
+    },
+    {
+     "word": " let",
+     "start": 99.24,
+     "end": 99.6,
+     "probability": 0.9884479641914368
+    },
+    {
+     "word": " it",
+     "start": 99.6,
+     "end": 99.7,
+     "probability": 0.9967361092567444
+    },
+    {
+     "word": " retrieve",
+     "start": 99.7,
+     "end": 100.08,
+     "probability": 0.9993550181388855
+    },
+    {
+     "word": " information,",
+     "start": 100.08,
+     "end": 100.62,
+     "probability": 0.9991810917854309
+    },
+    {
+     "word": " interact",
+     "start": 101.08,
+     "end": 101.46,
+     "probability": 0.9988371729850769
+    },
+    {
+     "word": " with",
+     "start": 101.46,
+     "end": 101.7,
+     "probability": 0.9995356798171997
+    },
+    {
+     "word": " systems,",
+     "start": 101.7,
+     "end": 102.08,
+     "probability": 0.99839848279953
+    },
+    {
+     "word": " and",
+     "start": 102.54,
+     "end": 102.62,
+     "probability": 0.9993718266487122
+    },
+    {
+     "word": " carry",
+     "start": 102.62,
+     "end": 102.92,
+     "probability": 0.9994121789932251
+    },
+    {
+     "word": " out",
+     "start": 102.92,
+     "end": 103.12,
+     "probability": 0.9625825881958008
+    },
+    {
+     "word": " actions.",
+     "start": 103.12,
+     "end": 103.48,
+     "probability": 0.9976242184638977
+    }
+   ]
+  },
+  {
+   "id": 27,
+   "seek": 10052,
+   "start": 104.18,
+   "end": 105.68,
+   "text": " Finally, the control.",
+   "tokens": [
+    51424,
+    6288,
+    11,
+    264,
+    1969,
+    13,
+    51516
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.07169126695202242,
+   "compression_ratio": 1.6356589147286822,
+   "no_speech_prob": 0.02283092960715294,
+   "words": [
+    {
+     "word": " Finally,",
+     "start": 104.18,
+     "end": 104.74,
+     "probability": 0.9951525926589966
+    },
+    {
+     "word": " the",
+     "start": 105.18,
+     "end": 105.24,
+     "probability": 0.9972456693649292
+    },
+    {
+     "word": " control.",
+     "start": 105.24,
+     "end": 105.68,
+     "probability": 0.9874979257583618
+    }
+   ]
+  },
+  {
+   "id": 28,
+   "seek": 10052,
+   "start": 106.26,
+   "end": 110.28,
+   "text": " How does the agent decide what happens next, and when should a human intervene?",
+   "tokens": [
+    51516,
+    1012,
+    775,
+    264,
+    9461,
+    4536,
+    437,
+    2314,
+    958,
+    11,
+    293,
+    562,
+    820,
+    257,
+    1952,
+    30407,
+    30,
+    51752
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.07169126695202242,
+   "compression_ratio": 1.6356589147286822,
+   "no_speech_prob": 0.02283092960715294,
+   "words": [
+    {
+     "word": " How",
+     "start": 106.26,
+     "end": 106.46,
+     "probability": 0.9981295466423035
+    },
+    {
+     "word": " does",
+     "start": 106.46,
+     "end": 106.62,
+     "probability": 0.9975975155830383
+    },
+    {
+     "word": " the",
+     "start": 106.62,
+     "end": 106.76,
+     "probability": 0.9987180233001709
+    },
+    {
+     "word": " agent",
+     "start": 106.76,
+     "end": 107.04,
+     "probability": 0.9993190765380859
+    },
+    {
+     "word": " decide",
+     "start": 107.04,
+     "end": 107.48,
+     "probability": 0.9994137287139893
+    },
+    {
+     "word": " what",
+     "start": 107.48,
+     "end": 107.74,
+     "probability": 0.9994385838508606
+    },
+    {
+     "word": " happens",
+     "start": 107.74,
+     "end": 108.12,
+     "probability": 0.9985939860343933
+    },
+    {
+     "word": " next,",
+     "start": 108.12,
+     "end": 108.5,
+     "probability": 0.9994993209838867
+    },
+    {
+     "word": " and",
+     "start": 108.74,
+     "end": 108.98,
+     "probability": 0.9987667798995972
+    },
+    {
+     "word": " when",
+     "start": 108.98,
+     "end": 109.2,
+     "probability": 0.9993225336074829
+    },
+    {
+     "word": " should",
+     "start": 109.2,
+     "end": 109.42,
+     "probability": 0.9988086223602295
+    },
+    {
+     "word": " a",
+     "start": 109.42,
+     "end": 109.52,
+     "probability": 0.9974731802940369
+    },
+    {
+     "word": " human",
+     "start": 109.52,
+     "end": 109.84,
+     "probability": 0.999112069606781
+    },
+    {
+     "word": " intervene?",
+     "start": 109.84,
+     "end": 110.28,
+     "probability": 0.9990634322166443
+    }
+   ]
+  },
+  {
+   "id": 29,
+   "seek": 12764,
+   "start": 110.92,
+   "end": 112.96,
+   "text": " This is where orchestration comes in.",
+   "tokens": [
+    50396,
+    639,
+    307,
+    689,
+    14161,
+    2405,
+    1487,
+    294,
+    13,
+    50516
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.05054927594733961,
+   "compression_ratio": 1.6397058823529411,
+   "no_speech_prob": 0.008169759064912796,
+   "words": [
+    {
+     "word": " This",
+     "start": 110.82,
+     "end": 111.16,
+     "probability": 0.4325322210788727
+    },
+    {
+     "word": " is",
+     "start": 111.16,
+     "end": 111.44,
+     "probability": 0.9885860085487366
+    },
+    {
+     "word": " where",
+     "start": 111.44,
+     "end": 111.62,
+     "probability": 0.987255334854126
+    },
+    {
+     "word": " orchestration",
+     "start": 111.62,
+     "end": 112.38,
+     "probability": 0.9558389782905579
+    },
+    {
+     "word": " comes",
+     "start": 112.38,
+     "end": 112.72,
+     "probability": 0.9972623586654663
+    },
+    {
+     "word": " in.",
+     "start": 112.72,
+     "end": 112.96,
+     "probability": 0.9970308542251587
+    }
+   ]
+  },
+  {
+   "id": 30,
+   "seek": 12764,
+   "start": 113.44,
+   "end": 118.06,
+   "text": " The agent can select an available action, examine the result, and decide whether to",
+   "tokens": [
+    50516,
+    440,
+    9461,
+    393,
+    3048,
+    364,
+    2435,
+    3069,
+    11,
+    17496,
+    264,
+    1874,
+    11,
+    293,
+    4536,
+    1968,
+    281,
+    50752
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.05054927594733961,
+   "compression_ratio": 1.6397058823529411,
+   "no_speech_prob": 0.008169759064912796,
+   "words": [
+    {
+     "word": " The",
+     "start": 113.44,
+     "end": 113.54,
+     "probability": 0.975376546382904
+    },
+    {
+     "word": " agent",
+     "start": 113.54,
+     "end": 113.82,
+     "probability": 0.9851690530776978
+    },
+    {
+     "word": " can",
+     "start": 113.82,
+     "end": 114.06,
+     "probability": 0.9979286193847656
+    },
+    {
+     "word": " select",
+     "start": 114.06,
+     "end": 114.46,
+     "probability": 0.9974550604820251
+    },
+    {
+     "word": " an",
+     "start": 114.46,
+     "end": 114.62,
+     "probability": 0.9634419083595276
+    },
+    {
+     "word": " available",
+     "start": 114.62,
+     "end": 114.88,
+     "probability": 0.9985425472259521
+    },
+    {
+     "word": " action,",
+     "start": 114.88,
+     "end": 115.42,
+     "probability": 0.9877653121948242
+    },
+    {
+     "word": " examine",
+     "start": 115.84,
+     "end": 116.18,
+     "probability": 0.9877128601074219
+    },
+    {
+     "word": " the",
+     "start": 116.18,
+     "end": 116.38,
+     "probability": 0.9988441467285156
+    },
+    {
+     "word": " result,",
+     "start": 116.38,
+     "end": 116.7,
+     "probability": 0.9878391027450562
+    },
+    {
+     "word": " and",
+     "start": 117.08,
+     "end": 117.2,
+     "probability": 0.9973964691162109
+    },
+    {
+     "word": " decide",
+     "start": 117.2,
+     "end": 117.62,
+     "probability": 0.9986798167228699
+    },
+    {
+     "word": " whether",
+     "start": 117.62,
+     "end": 117.86,
+     "probability": 0.9971283078193665
+    },
+    {
+     "word": " to",
+     "start": 117.86,
+     "end": 118.06,
+     "probability": 0.999437153339386
+    }
+   ]
+  },
+  {
+   "id": 31,
+   "seek": 12764,
+   "start": 118.06,
+   "end": 119.58,
+   "text": " continue or change course.",
+   "tokens": [
+    50752,
+    2354,
+    420,
+    1319,
+    1164,
+    13,
+    50856
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.05054927594733961,
+   "compression_ratio": 1.6397058823529411,
+   "no_speech_prob": 0.008169759064912796,
+   "words": [
+    {
+     "word": " continue",
+     "start": 118.06,
+     "end": 118.52,
+     "probability": 0.9973345994949341
+    },
+    {
+     "word": " or",
+     "start": 118.52,
+     "end": 118.88,
+     "probability": 0.9862698912620544
+    },
+    {
+     "word": " change",
+     "start": 118.88,
+     "end": 119.22,
+     "probability": 0.9986370205879211
+    },
+    {
+     "word": " course.",
+     "start": 119.22,
+     "end": 119.58,
+     "probability": 0.9959083795547485
+    }
+   ]
+  },
+  {
+   "id": 32,
+   "seek": 12764,
+   "start": 120.16,
+   "end": 124.82,
+   "text": " It also needs to track its progress during the task and operate within clear permission,",
+   "tokens": [
+    50856,
+    467,
+    611,
+    2203,
+    281,
+    2837,
+    1080,
+    4205,
+    1830,
+    264,
+    5633,
+    293,
+    9651,
+    1951,
+    1850,
+    11226,
+    11,
+    51108
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.05054927594733961,
+   "compression_ratio": 1.6397058823529411,
+   "no_speech_prob": 0.008169759064912796,
+   "words": [
+    {
+     "word": " It",
+     "start": 120.16,
+     "end": 120.32,
+     "probability": 0.9930954575538635
+    },
+    {
+     "word": " also",
+     "start": 120.32,
+     "end": 120.64,
+     "probability": 0.997998058795929
+    },
+    {
+     "word": " needs",
+     "start": 120.64,
+     "end": 120.88,
+     "probability": 0.9964340925216675
+    },
+    {
+     "word": " to",
+     "start": 120.88,
+     "end": 121.04,
+     "probability": 0.9976733326911926
+    },
+    {
+     "word": " track",
+     "start": 121.04,
+     "end": 121.38,
+     "probability": 0.9995447993278503
+    },
+    {
+     "word": " its",
+     "start": 121.38,
+     "end": 121.56,
+     "probability": 0.9877734780311584
+    },
+    {
+     "word": " progress",
+     "start": 121.56,
+     "end": 121.98,
+     "probability": 0.9983886480331421
+    },
+    {
+     "word": " during",
+     "start": 121.98,
+     "end": 122.34,
+     "probability": 0.9980512857437134
+    },
+    {
+     "word": " the",
+     "start": 122.34,
+     "end": 122.5,
+     "probability": 0.9971672892570496
+    },
+    {
+     "word": " task",
+     "start": 122.5,
+     "end": 122.94,
+     "probability": 0.9941026568412781
+    },
+    {
+     "word": " and",
+     "start": 122.94,
+     "end": 123.2,
+     "probability": 0.8796055316925049
+    },
+    {
+     "word": " operate",
+     "start": 123.2,
+     "end": 123.64,
+     "probability": 0.9969526529312134
+    },
+    {
+     "word": " within",
+     "start": 123.64,
+     "end": 123.94,
+     "probability": 0.995736837387085
+    },
+    {
+     "word": " clear",
+     "start": 123.94,
+     "end": 124.36,
+     "probability": 0.977799654006958
+    },
+    {
+     "word": " permission,",
+     "start": 124.36,
+     "end": 124.82,
+     "probability": 0.9962676167488098
+    }
+   ]
+  },
+  {
+   "id": 33,
+   "seek": 12764,
+   "start": 125.24,
+   "end": 127.06,
+   "text": " approval, and escalation boundaries.",
+   "tokens": [
+    51108,
+    13317,
+    11,
+    293,
+    17871,
+    399,
+    13180,
+    13,
+    51212
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.05054927594733961,
+   "compression_ratio": 1.6397058823529411,
+   "no_speech_prob": 0.008169759064912796,
+   "words": [
+    {
+     "word": " approval,",
+     "start": 125.24,
+     "end": 125.62,
+     "probability": 0.999371349811554
+    },
+    {
+     "word": " and",
+     "start": 125.96,
+     "end": 126.06,
+     "probability": 0.9989960789680481
+    },
+    {
+     "word": " escalation",
+     "start": 126.06,
+     "end": 126.66,
+     "probability": 0.9976407289505005
+    },
+    {
+     "word": " boundaries.",
+     "start": 126.66,
+     "end": 127.06,
+     "probability": 0.9992050528526306
+    }
+   ]
+  },
+  {
+   "id": 34,
+   "seek": 12764,
+   "start": 127.84,
+   "end": 132.78,
+   "text": " These five decisions give us a complete design without requiring unnecessary complexity.",
+   "tokens": [
+    51240,
+    1981,
+    1732,
+    5327,
+    976,
+    505,
+    257,
+    3566,
+    1715,
+    1553,
+    24165,
+    19350,
+    14024,
+    13,
+    51516
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.05054927594733961,
+   "compression_ratio": 1.6397058823529411,
+   "no_speech_prob": 0.008169759064912796,
+   "words": [
+    {
+     "word": " These",
+     "start": 127.84,
+     "end": 128.1,
+     "probability": 0.9939951300621033
+    },
+    {
+     "word": " five",
+     "start": 128.1,
+     "end": 128.4,
+     "probability": 0.8716576099395752
+    },
+    {
+     "word": " decisions",
+     "start": 128.4,
+     "end": 128.94,
+     "probability": 0.9961948394775391
+    },
+    {
+     "word": " give",
+     "start": 128.94,
+     "end": 129.2,
+     "probability": 0.9955398440361023
+    },
+    {
+     "word": " us",
+     "start": 129.2,
+     "end": 129.34,
+     "probability": 0.9978418350219727
+    },
+    {
+     "word": " a",
+     "start": 129.34,
+     "end": 129.48,
+     "probability": 0.9931393265724182
+    },
+    {
+     "word": " complete",
+     "start": 129.48,
+     "end": 129.82,
+     "probability": 0.9988135099411011
+    },
+    {
+     "word": " design",
+     "start": 129.82,
+     "end": 130.42,
+     "probability": 0.9992747902870178
+    },
+    {
+     "word": " without",
+     "start": 130.42,
+     "end": 130.84,
+     "probability": 0.9551763534545898
+    },
+    {
+     "word": " requiring",
+     "start": 130.84,
+     "end": 131.48,
+     "probability": 0.9987612962722778
+    },
+    {
+     "word": " unnecessary",
+     "start": 131.48,
+     "end": 132.1,
+     "probability": 0.9967768788337708
+    },
+    {
+     "word": " complexity.",
+     "start": 132.1,
+     "end": 132.78,
+     "probability": 0.9995586276054382
+    }
+   ]
+  },
+  {
+   "id": 35,
+   "seek": 12764,
+   "start": 133.4,
+   "end": 137.48,
+   "text": " To put all this together, let's think back to Larry, our leadership update writer.",
+   "tokens": [
+    51516,
+    1407,
+    829,
+    439,
+    341,
+    1214,
+    11,
+    718,
+    311,
+    519,
+    646,
+    281,
+    18145,
+    11,
+    527,
+    5848,
+    5623,
+    9936,
+    13,
+    51744
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.05054927594733961,
+   "compression_ratio": 1.6397058823529411,
+   "no_speech_prob": 0.008169759064912796,
+   "words": [
+    {
+     "word": " To",
+     "start": 133.4,
+     "end": 133.6,
+     "probability": 0.9965745210647583
+    },
+    {
+     "word": " put",
+     "start": 133.6,
+     "end": 133.76,
+     "probability": 0.9990766048431396
+    },
+    {
+     "word": " all",
+     "start": 133.76,
+     "end": 133.9,
+     "probability": 0.988792359828949
+    },
+    {
+     "word": " this",
+     "start": 133.9,
+     "end": 134.08,
+     "probability": 0.9042319059371948
+    },
+    {
+     "word": " together,",
+     "start": 134.08,
+     "end": 134.48,
+     "probability": 0.9994122982025146
+    },
+    {
+     "word": " let's",
+     "start": 134.8,
+     "end": 135.04,
+     "probability": 0.9915264248847961
+    },
+    {
+     "word": " think",
+     "start": 135.04,
+     "end": 135.18,
+     "probability": 0.9972934126853943
+    },
+    {
+     "word": " back",
+     "start": 135.18,
+     "end": 135.38,
+     "probability": 0.9971939325332642
+    },
+    {
+     "word": " to",
+     "start": 135.38,
+     "end": 135.56,
+     "probability": 0.9950354099273682
+    },
+    {
+     "word": " Larry,",
+     "start": 135.56,
+     "end": 135.82,
+     "probability": 0.9907295107841492
+    },
+    {
+     "word": " our",
+     "start": 136.22,
+     "end": 136.3,
+     "probability": 0.9977579712867737
+    },
+    {
+     "word": " leadership",
+     "start": 136.3,
+     "end": 136.68,
+     "probability": 0.8252329230308533
+    },
+    {
+     "word": " update",
+     "start": 136.68,
+     "end": 137.08,
+     "probability": 0.9749734401702881
+    },
+    {
+     "word": " writer.",
+     "start": 137.08,
+     "end": 137.48,
+     "probability": 0.9914434552192688
+    }
+   ]
+  },
+  {
+   "id": 36,
+   "seek": 15484,
+   "start": 137.48,
+   "end": 141.04,
+   "text": " His job is to produce a decision-ready leadership briefing.",
+   "tokens": [
+    50380,
+    2812,
+    1691,
+    307,
+    281,
+    5258,
+    257,
+    3537,
+    12,
+    1201,
+    5848,
+    28878,
+    13,
+    50552
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.04803446064824644,
+   "compression_ratio": 1.6468531468531469,
+   "no_speech_prob": 0.03477568179368973,
+   "words": [
+    {
+     "word": " His",
+     "start": 137.48,
+     "end": 138.12,
+     "probability": 0.38345322012901306
+    },
+    {
+     "word": " job",
+     "start": 138.12,
+     "end": 138.46,
+     "probability": 0.9893504977226257
+    },
+    {
+     "word": " is",
+     "start": 138.46,
+     "end": 138.68,
+     "probability": 0.9966346621513367
+    },
+    {
+     "word": " to",
+     "start": 138.68,
+     "end": 138.8,
+     "probability": 0.9974796175956726
+    },
+    {
+     "word": " produce",
+     "start": 138.8,
+     "end": 139.1,
+     "probability": 0.9937595725059509
+    },
+    {
+     "word": " a",
+     "start": 139.1,
+     "end": 139.34,
+     "probability": 0.9926303625106812
+    },
+    {
+     "word": " decision",
+     "start": 139.34,
+     "end": 139.72,
+     "probability": 0.846018373966217
+    },
+    {
+     "word": "-ready",
+     "start": 139.72,
+     "end": 140.08,
+     "probability": 0.8866511583328247
+    },
+    {
+     "word": " leadership",
+     "start": 140.08,
+     "end": 140.58,
+     "probability": 0.98306804895401
+    },
+    {
+     "word": " briefing.",
+     "start": 140.58,
+     "end": 141.04,
+     "probability": 0.9979548454284668
+    }
+   ]
+  },
+  {
+   "id": 37,
+   "seek": 15484,
+   "start": 141.42,
+   "end": 144.94,
+   "text": " His knowledge comes from approved project information in SharePoint.",
+   "tokens": [
+    50552,
+    2812,
+    3601,
+    1487,
+    490,
+    10826,
+    1716,
+    1589,
+    294,
+    14945,
+    18705,
+    13,
+    50756
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.04803446064824644,
+   "compression_ratio": 1.6468531468531469,
+   "no_speech_prob": 0.03477568179368973,
+   "words": [
+    {
+     "word": " His",
+     "start": 141.42,
+     "end": 141.6,
+     "probability": 0.9914407730102539
+    },
+    {
+     "word": " knowledge",
+     "start": 141.6,
+     "end": 141.98,
+     "probability": 0.9877153038978577
+    },
+    {
+     "word": " comes",
+     "start": 141.98,
+     "end": 142.34,
+     "probability": 0.9972757697105408
+    },
+    {
+     "word": " from",
+     "start": 142.34,
+     "end": 142.62,
+     "probability": 0.99810791015625
+    },
+    {
+     "word": " approved",
+     "start": 142.62,
+     "end": 143.0,
+     "probability": 0.9767002463340759
+    },
+    {
+     "word": " project",
+     "start": 143.0,
+     "end": 143.48,
+     "probability": 0.9860500693321228
+    },
+    {
+     "word": " information",
+     "start": 143.48,
+     "end": 144.16,
+     "probability": 0.9975724816322327
+    },
+    {
+     "word": " in",
+     "start": 144.16,
+     "end": 144.44,
+     "probability": 0.9825415015220642
+    },
+    {
+     "word": " SharePoint.",
+     "start": 144.44,
+     "end": 144.94,
+     "probability": 0.9920233190059662
+    }
+   ]
+  },
+  {
+   "id": 38,
+   "seek": 15484,
+   "start": 145.46,
+   "end": 149.8,
+   "text": " His method is to identify meaningful developments, check important claims,",
+   "tokens": [
+    50756,
+    2812,
+    3170,
+    307,
+    281,
+    5876,
+    10995,
+    20862,
+    11,
+    1520,
+    1021,
+    9441,
+    11,
+    50992
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.04803446064824644,
+   "compression_ratio": 1.6468531468531469,
+   "no_speech_prob": 0.03477568179368973,
+   "words": [
+    {
+     "word": " His",
+     "start": 145.46,
+     "end": 145.64,
+     "probability": 0.9916595816612244
+    },
+    {
+     "word": " method",
+     "start": 145.64,
+     "end": 146.06,
+     "probability": 0.9951139092445374
+    },
+    {
+     "word": " is",
+     "start": 146.06,
+     "end": 146.34,
+     "probability": 0.9989737272262573
+    },
+    {
+     "word": " to",
+     "start": 146.34,
+     "end": 146.46,
+     "probability": 0.9988282322883606
+    },
+    {
+     "word": " identify",
+     "start": 146.46,
+     "end": 147.0,
+     "probability": 0.9883759021759033
+    },
+    {
+     "word": " meaningful",
+     "start": 147.0,
+     "end": 147.6,
+     "probability": 0.9959751963615417
+    },
+    {
+     "word": " developments,",
+     "start": 147.6,
+     "end": 148.24,
+     "probability": 0.9945971965789795
+    },
+    {
+     "word": " check",
+     "start": 148.78,
+     "end": 148.9,
+     "probability": 0.9973549842834473
+    },
+    {
+     "word": " important",
+     "start": 148.9,
+     "end": 149.34,
+     "probability": 0.9982397556304932
+    },
+    {
+     "word": " claims,",
+     "start": 149.34,
+     "end": 149.8,
+     "probability": 0.9993057250976562
+    }
+   ]
+  },
+  {
+   "id": 39,
+   "seek": 15484,
+   "start": 150.2,
+   "end": 152.36,
+   "text": " and highlight decisions requiring attention.",
+   "tokens": [
+    50992,
+    293,
+    5078,
+    5327,
+    24165,
+    3202,
+    13,
+    51128
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.04803446064824644,
+   "compression_ratio": 1.6468531468531469,
+   "no_speech_prob": 0.03477568179368973,
+   "words": [
+    {
+     "word": " and",
+     "start": 150.2,
+     "end": 150.36,
+     "probability": 0.9978715181350708
+    },
+    {
+     "word": " highlight",
+     "start": 150.36,
+     "end": 150.7,
+     "probability": 0.9984114170074463
+    },
+    {
+     "word": " decisions",
+     "start": 150.7,
+     "end": 151.2,
+     "probability": 0.994572103023529
+    },
+    {
+     "word": " requiring",
+     "start": 151.2,
+     "end": 151.8,
+     "probability": 0.9985417127609253
+    },
+    {
+     "word": " attention.",
+     "start": 151.8,
+     "end": 152.36,
+     "probability": 0.997929573059082
+    }
+   ]
+  },
+  {
+   "id": 40,
+   "seek": 15484,
+   "start": 152.96,
+   "end": 158.02,
+   "text": " His capabilities allow him to retrieve information and prepare an update for Microsoft Teams.",
+   "tokens": [
+    51128,
+    2812,
+    10862,
+    2089,
+    796,
+    281,
+    30254,
+    1589,
+    293,
+    5940,
+    364,
+    5623,
+    337,
+    8116,
+    24702,
+    13,
+    51408
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.04803446064824644,
+   "compression_ratio": 1.6468531468531469,
+   "no_speech_prob": 0.03477568179368973,
+   "words": [
+    {
+     "word": " His",
+     "start": 152.96,
+     "end": 153.1,
+     "probability": 0.9972127079963684
+    },
+    {
+     "word": " capabilities",
+     "start": 153.1,
+     "end": 153.64,
+     "probability": 0.9980584979057312
+    },
+    {
+     "word": " allow",
+     "start": 153.64,
+     "end": 154.18,
+     "probability": 0.9948646426200867
+    },
+    {
+     "word": " him",
+     "start": 154.18,
+     "end": 154.44,
+     "probability": 0.9981569647789001
+    },
+    {
+     "word": " to",
+     "start": 154.44,
+     "end": 154.56,
+     "probability": 0.9991328120231628
+    },
+    {
+     "word": " retrieve",
+     "start": 154.56,
+     "end": 154.98,
+     "probability": 0.999345600605011
+    },
+    {
+     "word": " information",
+     "start": 154.98,
+     "end": 155.48,
+     "probability": 0.9983964562416077
+    },
+    {
+     "word": " and",
+     "start": 155.48,
+     "end": 155.96,
+     "probability": 0.9783188700675964
+    },
+    {
+     "word": " prepare",
+     "start": 155.96,
+     "end": 156.28,
+     "probability": 0.9962688684463501
+    },
+    {
+     "word": " an",
+     "start": 156.28,
+     "end": 156.46,
+     "probability": 0.9943530559539795
+    },
+    {
+     "word": " update",
+     "start": 156.46,
+     "end": 156.82,
+     "probability": 0.9985396862030029
+    },
+    {
+     "word": " for",
+     "start": 156.82,
+     "end": 157.1,
+     "probability": 0.9962942004203796
+    },
+    {
+     "word": " Microsoft",
+     "start": 157.1,
+     "end": 157.48,
+     "probability": 0.9986810088157654
+    },
+    {
+     "word": " Teams.",
+     "start": 157.48,
+     "end": 158.02,
+     "probability": 0.7947436571121216
+    }
+   ]
+  },
+  {
+   "id": 41,
+   "seek": 15484,
+   "start": 158.5,
+   "end": 163.54,
+   "text": " And his control allows him to investigate missing details, flag conflicting information,",
+   "tokens": [
+    51408,
+    400,
+    702,
+    1969,
+    4045,
+    796,
+    281,
+    15013,
+    5361,
+    4365,
+    11,
+    7166,
+    43784,
+    1589,
+    11,
+    51684
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.04803446064824644,
+   "compression_ratio": 1.6468531468531469,
+   "no_speech_prob": 0.03477568179368973,
+   "words": [
+    {
+     "word": " And",
+     "start": 158.5,
+     "end": 158.66,
+     "probability": 0.9529706239700317
+    },
+    {
+     "word": " his",
+     "start": 158.66,
+     "end": 158.82,
+     "probability": 0.9898350834846497
+    },
+    {
+     "word": " control",
+     "start": 158.82,
+     "end": 159.36,
+     "probability": 0.9817065596580505
+    },
+    {
+     "word": " allows",
+     "start": 159.36,
+     "end": 159.8,
+     "probability": 0.9902397394180298
+    },
+    {
+     "word": " him",
+     "start": 159.8,
+     "end": 160.06,
+     "probability": 0.9974786639213562
+    },
+    {
+     "word": " to",
+     "start": 160.06,
+     "end": 160.18,
+     "probability": 0.9981784820556641
+    },
+    {
+     "word": " investigate",
+     "start": 160.18,
+     "end": 160.62,
+     "probability": 0.9971331357955933
+    },
+    {
+     "word": " missing",
+     "start": 160.62,
+     "end": 161.16,
+     "probability": 0.9985848665237427
+    },
+    {
+     "word": " details,",
+     "start": 161.16,
+     "end": 161.72,
+     "probability": 0.9975863695144653
+    },
+    {
+     "word": " flag",
+     "start": 162.14,
+     "end": 162.42,
+     "probability": 0.9977401494979858
+    },
+    {
+     "word": " conflicting",
+     "start": 162.42,
+     "end": 162.9,
+     "probability": 0.8596764206886292
+    },
+    {
+     "word": " information,",
+     "start": 162.9,
+     "end": 163.54,
+     "probability": 0.9994521737098694
+    }
+   ]
+  },
+  {
+   "id": 42,
+   "seek": 15484,
+   "start": 163.88,
+   "end": 165.96,
+   "text": " and request approval before publishing.",
+   "tokens": [
+    51684,
+    293,
+    5308,
+    13317,
+    949,
+    17832,
+    13,
+    51812
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.04803446064824644,
+   "compression_ratio": 1.6468531468531469,
+   "no_speech_prob": 0.03477568179368973,
+   "words": [
+    {
+     "word": " and",
+     "start": 163.88,
+     "end": 164.14,
+     "probability": 0.9990732669830322
+    },
+    {
+     "word": " request",
+     "start": 164.14,
+     "end": 164.46,
+     "probability": 0.9972962737083435
+    },
+    {
+     "word": " approval",
+     "start": 164.46,
+     "end": 165.0,
+     "probability": 0.9994032382965088
+    },
+    {
+     "word": " before",
+     "start": 165.0,
+     "end": 165.42,
+     "probability": 0.9974230527877808
+    },
+    {
+     "word": " publishing.",
+     "start": 165.42,
+     "end": 165.96,
+     "probability": 0.998363196849823
+    }
+   ]
+  },
+  {
+   "id": 43,
+   "seek": 18332,
+   "start": 165.96,
+   "end": 172.16,
+   "text": " Larry can now carry a meaningful multi-step workflow forward without us managing every action.",
+   "tokens": [
+    50388,
+    18145,
+    393,
+    586,
+    3985,
+    257,
+    10995,
+    4825,
+    12,
+    16792,
+    20993,
+    2128,
+    1553,
+    505,
+    11642,
+    633,
+    3069,
+    13,
+    50696
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.07913492821358345,
+   "compression_ratio": 1.5426008968609866,
+   "no_speech_prob": 0.007415901403874159,
+   "words": [
+    {
+     "word": " Larry",
+     "start": 165.96,
+     "end": 166.78,
+     "probability": 0.776652991771698
+    },
+    {
+     "word": " can",
+     "start": 166.78,
+     "end": 167.08,
+     "probability": 0.992316722869873
+    },
+    {
+     "word": " now",
+     "start": 167.08,
+     "end": 167.32,
+     "probability": 0.9963163137435913
+    },
+    {
+     "word": " carry",
+     "start": 167.32,
+     "end": 167.7,
+     "probability": 0.9982831478118896
+    },
+    {
+     "word": " a",
+     "start": 167.7,
+     "end": 167.9,
+     "probability": 0.9939389228820801
+    },
+    {
+     "word": " meaningful",
+     "start": 167.9,
+     "end": 168.36,
+     "probability": 0.9937863349914551
+    },
+    {
+     "word": " multi",
+     "start": 168.36,
+     "end": 168.88,
+     "probability": 0.6937090158462524
+    },
+    {
+     "word": "-step",
+     "start": 168.88,
+     "end": 169.16,
+     "probability": 0.9303562641143799
+    },
+    {
+     "word": " workflow",
+     "start": 169.16,
+     "end": 169.66,
+     "probability": 0.9970098733901978
+    },
+    {
+     "word": " forward",
+     "start": 169.66,
+     "end": 170.14,
+     "probability": 0.9967690706253052
+    },
+    {
+     "word": " without",
+     "start": 170.14,
+     "end": 170.6,
+     "probability": 0.9595334529876709
+    },
+    {
+     "word": " us",
+     "start": 170.6,
+     "end": 170.92,
+     "probability": 0.9989996552467346
+    },
+    {
+     "word": " managing",
+     "start": 170.92,
+     "end": 171.38,
+     "probability": 0.9978899359703064
+    },
+    {
+     "word": " every",
+     "start": 171.38,
+     "end": 171.74,
+     "probability": 0.9973635077476501
+    },
+    {
+     "word": " action.",
+     "start": 171.74,
+     "end": 172.16,
+     "probability": 0.996867835521698
+    }
+   ]
+  },
+  {
+   "id": 44,
+   "seek": 18332,
+   "start": 172.7,
+   "end": 175.3,
+   "text": " The same blueprint works for any suitable workflow.",
+   "tokens": [
+    50696,
+    440,
+    912,
+    35868,
+    1985,
+    337,
+    604,
+    12873,
+    20993,
+    13,
+    50852
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.07913492821358345,
+   "compression_ratio": 1.5426008968609866,
+   "no_speech_prob": 0.007415901403874159,
+   "words": [
+    {
+     "word": " The",
+     "start": 172.7,
+     "end": 172.84,
+     "probability": 0.9940558671951294
+    },
+    {
+     "word": " same",
+     "start": 172.84,
+     "end": 173.12,
+     "probability": 0.9986190795898438
+    },
+    {
+     "word": " blueprint",
+     "start": 173.12,
+     "end": 173.46,
+     "probability": 0.9573632478713989
+    },
+    {
+     "word": " works",
+     "start": 173.46,
+     "end": 173.86,
+     "probability": 0.9980783462524414
+    },
+    {
+     "word": " for",
+     "start": 173.86,
+     "end": 174.08,
+     "probability": 0.998580813407898
+    },
+    {
+     "word": " any",
+     "start": 174.08,
+     "end": 174.4,
+     "probability": 0.997517466545105
+    },
+    {
+     "word": " suitable",
+     "start": 174.4,
+     "end": 174.72,
+     "probability": 0.9955927729606628
+    },
+    {
+     "word": " workflow.",
+     "start": 174.72,
+     "end": 175.3,
+     "probability": 0.9920571446418762
+    }
+   ]
+  },
+  {
+   "id": 45,
+   "seek": 18332,
+   "start": 175.78,
+   "end": 181.32,
+   "text": " Start with a clear job, give the agent what it needs, and retain human control where it matters.",
+   "tokens": [
+    50852,
+    6481,
+    365,
+    257,
+    1850,
+    1691,
+    11,
+    976,
+    264,
+    9461,
+    437,
+    309,
+    2203,
+    11,
+    293,
+    18340,
+    1952,
+    1969,
+    689,
+    309,
+    7001,
+    13,
+    51160
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.07913492821358345,
+   "compression_ratio": 1.5426008968609866,
+   "no_speech_prob": 0.007415901403874159,
+   "words": [
+    {
+     "word": " Start",
+     "start": 175.78,
+     "end": 176.1,
+     "probability": 0.9974933862686157
+    },
+    {
+     "word": " with",
+     "start": 176.1,
+     "end": 176.3,
+     "probability": 0.9995710253715515
+    },
+    {
+     "word": " a",
+     "start": 176.3,
+     "end": 176.42,
+     "probability": 0.9971727132797241
+    },
+    {
+     "word": " clear",
+     "start": 176.42,
+     "end": 176.6,
+     "probability": 0.989108681678772
+    },
+    {
+     "word": " job,",
+     "start": 176.6,
+     "end": 177.04,
+     "probability": 0.9981762170791626
+    },
+    {
+     "word": " give",
+     "start": 177.4,
+     "end": 177.64,
+     "probability": 0.9954611659049988
+    },
+    {
+     "word": " the",
+     "start": 177.64,
+     "end": 177.8,
+     "probability": 0.9973439574241638
+    },
+    {
+     "word": " agent",
+     "start": 177.8,
+     "end": 178.04,
+     "probability": 0.953480064868927
+    },
+    {
+     "word": " what",
+     "start": 178.04,
+     "end": 178.26,
+     "probability": 0.9992738366127014
+    },
+    {
+     "word": " it",
+     "start": 178.26,
+     "end": 178.38,
+     "probability": 0.9979003667831421
+    },
+    {
+     "word": " needs,",
+     "start": 178.38,
+     "end": 178.72,
+     "probability": 0.9987008571624756
+    },
+    {
+     "word": " and",
+     "start": 179.12,
+     "end": 179.22,
+     "probability": 0.9977062940597534
+    },
+    {
+     "word": " retain",
+     "start": 179.22,
+     "end": 179.62,
+     "probability": 0.9946637153625488
+    },
+    {
+     "word": " human",
+     "start": 179.62,
+     "end": 180.06,
+     "probability": 0.9785395860671997
+    },
+    {
+     "word": " control",
+     "start": 180.06,
+     "end": 180.54,
+     "probability": 0.9988275170326233
+    },
+    {
+     "word": " where",
+     "start": 180.54,
+     "end": 180.84,
+     "probability": 0.9935734868049622
+    },
+    {
+     "word": " it",
+     "start": 180.84,
+     "end": 180.98,
+     "probability": 0.9988489151000977
+    },
+    {
+     "word": " matters.",
+     "start": 180.98,
+     "end": 181.32,
+     "probability": 0.9994127750396729
+    }
+   ]
+  },
+  {
+   "id": 46,
+   "seek": 18332,
+   "start": 181.94,
+   "end": 187.18,
+   "text": " That's how we build agents that deliver real value without taking on more complexity than necessary.",
+   "tokens": [
+    51160,
+    663,
+    311,
+    577,
+    321,
+    1322,
+    12554,
+    300,
+    4239,
+    957,
+    2158,
+    1553,
+    1940,
+    322,
+    544,
+    14024,
+    813,
+    4818,
+    13,
+    51440
+   ],
+   "temperature": 0.0,
+   "avg_logprob": -0.07913492821358345,
+   "compression_ratio": 1.5426008968609866,
+   "no_speech_prob": 0.007415901403874159,
+   "words": [
+    {
+     "word": " That's",
+     "start": 181.94,
+     "end": 182.3,
+     "probability": 0.9963405132293701
+    },
+    {
+     "word": " how",
+     "start": 182.3,
+     "end": 182.42,
+     "probability": 0.999285876750946
+    },
+    {
+     "word": " we",
+     "start": 182.42,
+     "end": 182.54,
+     "probability": 0.998417854309082
+    },
+    {
+     "word": " build",
+     "start": 182.54,
+     "end": 182.76,
+     "probability": 0.995693564414978
+    },
+    {
+     "word": " agents",
+     "start": 182.76,
+     "end": 183.14,
+     "probability": 0.9865500926971436
+    },
+    {
+     "word": " that",
+     "start": 183.14,
+     "end": 183.36,
+     "probability": 0.9982597231864929
+    },
+    {
+     "word": " deliver",
+     "start": 183.36,
+     "end": 183.7,
+     "probability": 0.9964838027954102
+    },
+    {
+     "word": " real",
+     "start": 183.7,
+     "end": 184.12,
+     "probability": 0.9906817674636841
+    },
+    {
+     "word": " value",
+     "start": 184.12,
+     "end": 184.68,
+     "probability": 0.9899133443832397
+    },
+    {
+     "word": " without",
+     "start": 184.68,
+     "end": 185.06,
+     "probability": 0.8766033053398132
+    },
+    {
+     "word": " taking",
+     "start": 185.06,
+     "end": 185.46,
+     "probability": 0.9978815913200378
+    },
+    {
+     "word": " on",
+     "start": 185.46,
+     "end": 185.7,
+     "probability": 0.994379460811615
+    },
+    {
+     "word": " more",
+     "start": 185.7,
+     "end": 185.98,
+     "probability": 0.999131977558136
+    },
+    {
+     "word": " complexity",
+     "start": 185.98,
+     "end": 186.52,
+     "probability": 0.9994408488273621
+    },
+    {
+     "word": " than",
+     "start": 186.52,
+     "end": 186.82,
+     "probability": 0.9956961870193481
+    },
+    {
+     "word": " necessary.",
+     "start": 186.82,
+     "end": 187.18,
+     "probability": 0.9980685114860535
+    }
+   ]
+  }
+ ],
+ "note": "Replacement intro (dumping/Audio replacement.mp3, 0-26.436s) + original VO from 43.80s shifted by -17.364s"
+}

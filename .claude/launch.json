@@ -3,9 +3,15 @@
   "configurations": [
     {
       "name": "Remotion Studio",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["start"],
-      "port": 3001
+      "runtimeExecutable": "/Users/yen-pc/.nvm/versions/node/v20.20.2/bin/node",
+      "runtimeArgs": ["node_modules/@remotion/cli/remotion-cli.js", "studio"],
+      "port": 3000
+    },
+    {
+      "name": "Remotion Studio Script",
+      "runtimeExecutable": "/bin/bash",
+      "runtimeArgs": ["start-studio.sh"],
+      "port": 3000
     }
   ]
 }

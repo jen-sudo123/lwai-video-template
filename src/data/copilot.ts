@@ -31,8 +31,7 @@ import { VideoData } from '../scenes/types';
 //                                                       total       9427
 
 export const copilot: VideoData = {
-  audioSrc: 'audio/copilot.mp3',
-  avatarSrc: 'video/copilot-avatar.mp4',
+  audioSrc: 'audio/copilot-combined.mp3',
   scenes: [
     // 1 — Title card (silent 0:00 → 0:03.26)
     {
@@ -267,78 +266,133 @@ export const copilot: VideoData = {
       body: ['For admins: agent management, multi-agent orchestration, and advanced governance'],
       image: 'images/copilot/studio.jpg',
       imageHeight: 540,
-      durationInFrames: 109,
+      durationInFrames: 139,
     },
 
-    // 18 — Models: GPT lineup (2:35.80 → 2:57.20, 21.40s)
-    // VO: "Now, in terms of the models, Co-Pilot doesn't run its own or even just one fixed model.
-    //      The current lineup includes GPT 5.5 Think Deeper for complex reasoning,
-    //      GPT 5.4 Think Deeper for multi-step analysis,
-    //      and then GPT 5.2 for the faster everyday responses."
+    // 18 — Feature: Copilot Cowork (2:36.25 → 2:52.58, 16.35s)
+    // VO: "Finally, Microsoft has introduced Copilot Cowork, enabling Copilot to function as an
+    //      agentic assistant: you describe the desired outcome, and it carries out tasks across
+    //      Microsoft 365 while transparently showing its steps and requesting approval when necessary."
+    {
+      layout: 'label-title-body',
+      label: 'NEW FEATURE',
+      title: 'Copilot Cowork',
+      body: [
+        'Copilot acts as an agentic assistant — describe the outcome, it handles the execution',
+        'Carries out tasks across Microsoft 365 apps autonomously',
+        'Transparently shows its steps and requests approval when necessary',
+      ],
+      bodyTimings: [0, 270, 375],
+      image: 'images/copilot/cowork.jpg',
+      imageHeight: 480,
+      durationInFrames: 491,
+    },
+
+    // ── Models section — new VO spliced in (dumping/Copilot-models.wav, 109.12s) ──
+    // Audio: 2:53.05 → 3:50.21 of the original replaced with the new WAV starting at 2:53.05.
+    // Transcript: src/data/copilot-models.transcript.json (t = seconds into the WAV).
+    // Section starts at comp frame 5196 (t = 0.15); scene boundaries in t:
+    //   19a picker 0.15 · 19b families 18.4 · 19c GPT 43.6 · 19d Claude 72.3 · 19e takeaway 93.5 → 283.06 (privacy)
+    // Cues = word onset − 8 frames (FadeText lead).
+
+    // 19a — Model picker (t 0.15 → 18.40)
+    // VO: "Now, when you open up Microsoft Copilot, Auto is the default model, but Copilot also has
+    //      a model picker that lets you switch between different underlying models. So in other words,
+    //      using Copilot doesn't always mean working with the same AI model."
     {
       layout: 'label-title-body',
       label: 'THE MODELS',
-      title: 'Copilot uses a mix of AI models',
+      title: 'Copilot has a model picker',
       body: [
-        'GPT-5.5 Think Deeper: complex reasoning',
-        'GPT-5.4 Think Deeper: multi-step analysis',
-        'GPT-5.2: fast everyday responses',
+        'Auto is the default model',
+        'Switch between different underlying models',
+        'Using Copilot does not always mean the same AI model',
       ],
-      bodyTimings: [224, 391, 505],
-      image: 'images/copilot/models.png',
-      imageHeight: 580,
-      // Zoom into each model row as it's mentioned (Y: 0=top, 1=bottom of image)
-      imageZoomKeyframes: [
-        { startFrame: 0,   centerX: 0.5, centerY: 0.5, scale: 1 },   // full image
-        { startFrame: 210, centerX: 0.5, centerY: 0.63, scale: 2.4 }, // GPT-5.5 Think Deeper
-        { startFrame: 377, centerX: 0.5, centerY: 0.79, scale: 2.4 }, // GPT-5.4 Think Deeper
-        { startFrame: 491, centerX: 0.5, centerY: 0.90, scale: 2.4 }, // GPT-5.2
-      ],
-      durationInFrames: 642,
+      bodyTimings: [113, 265, 406], // Auto 4.18 · switch 9.26 · using 13.94
+      image: 'images/copilot/model-picker.svg',
+      imageHeight: 760,
+      durationInFrames: 548,
     },
 
-    // 19 — Models: Claude Opus (2:57.20 → 3:08.13, 10.93s)
-    // VO: "Microsoft has recently also expanded beyond OpenAI models with Claude Opus..."
+    // 19b — Two model families (t 18.40 → 43.60)
+    // VO: "Now, some of these models come from OpenAI, which is the company behind ChatGPT, and others
+    //      come from Anthropic, which is the company behind Claude... Then exactly which one you see
+    //      really depends on your organization's license, settings, and also Microsoft's rollout schedule."
     {
       layout: 'label-title-body',
       label: 'THE MODELS',
-      title: 'Now including Claude Opus',
+      title: 'Models from OpenAI and Anthropic',
       body: [
-        'Microsoft expanded beyond OpenAI, Claude Opus is now in the model selector',
+        'OpenAI, the company behind ChatGPT',
+        'Anthropic, the company behind Claude',
+        'What you see depends on your license, settings, and Microsoft rollout',
       ],
-      bodyTimings: [25],
-      image: 'images/copilot/models.png',
-      imageHeight: 580,
-      // Start frozen at the GPT-5.2 zoom from scene 18, then pan up to Opus/Claude when mentioned
-      imageZoomKeyframes: [
-        { startFrame: 0,  centerX: 0.5, centerY: 0.90, scale: 2.4 }, // held from scene 18 end
-        { startFrame: 10, centerX: 0.5, centerY: 0.44, scale: 2.4 }, // Opus / Claude row
-      ],
-      imageZoomNoEntry: true,
-      durationInFrames: 328,
+      bodyTimings: [39, 162, 485], // OpenAI 19.98 · Anthropic 24.08 · exactly 34.84
+      image: 'images/copilot/model-picker.svg',
+      imageHeight: 760,
+      durationInFrames: 756,
     },
 
-    // 20 — Under the hood: auto-routing + manual selection (3:08.13 → 3:33.70, 25.57s)
-    // VO: "Co-Pilot will automatically route requests to whichever model it thinks is best...
-    //      we always recommend to select manually in the model picker."
+    // 19c — GPT models (t 43.60 → 72.30)
+    // VO: "Most likely, what you'll see is GPT 5.6 Quick Response, which is available across Copilot Chat
+    //      and Microsoft 365 apps... Copilot can show you more than one GPT generation at once...
+    //      You could also see GPT 6, which is a newer OpenAI model... rollout... in September 2026"
     {
       layout: 'label-title-body',
-      label: 'UNDER THE HOOD',
-      title: 'Auto-routing and model selection',
+      label: 'OPENAI MODELS',
+      title: 'GPT in Copilot',
       body: [
-        'Copilot auto-routes to the best-fit model, convenient but low visibility',
-        'For high-stakes analysis, always select manually in the model picker',
+        'GPT-5.6 Quick Response: across Copilot Chat, Word, Excel, and PowerPoint',
+        'More than one GPT generation can appear at once',
+        'GPT-6: the newer OpenAI model, rolling out from September 2026',
       ],
-      bodyTimings: [15, 496],
-      image: 'images/copilot/models.png',
-      imageHeight: 580,
-      // Spring from Opus directly to Auto row at the scene start
-      imageZoomKeyframes: [
-        { startFrame: 0,  centerX: 0.5, centerY: 0.44, scale: 2.4 }, // held at Opus from scene 19
-        { startFrame: 10, centerX: 0.5, centerY: 0.10, scale: 2.5 }, // zoom to Auto row
+      bodyTimings: [45, 374, 563], // GPT 45.38 · more 56.34 · GPT 6 62.64
+      image: 'images/copilot/models-gpt-picker.svg',
+      // Move the highlight box to GPT 6.0 Sol on "You could also see GPT 6" (62.64)
+      imageSwaps: [{ from: 567, src: 'images/copilot/models-gpt-picker-gpt6.svg' }],
+      imageHeight: 760,
+      durationInFrames: 861,
+    },
+
+    // 19d — Claude models (t 72.30 → 93.50)
+    // VO: "...and then Claude Opus 5.5, which is a newer Anthropic model joining Copilot in that same rollout.
+    //      Anthropic reports improvements in knowledge work and writing over the previous Opus version,
+    //      and if your organization has enabled those Anthropic models, Opus 5.5 may become another option
+    //      alongside OpenAI's models."
+    {
+      layout: 'label-title-body',
+      label: 'ANTHROPIC MODELS',
+      title: 'Claude in Copilot',
+      body: [
+        'Claude Opus 5.5 joins Copilot in the same rollout',
+        'Improvements in knowledge work and writing over the previous Opus',
+        'If your org enables Anthropic models, Opus sits alongside OpenAI',
       ],
-      imageZoomNoEntry: true,
-      durationInFrames: 767,
+      bodyTimings: [47, 233, 437], // Claude 74.12 · Anthropic 80.32 · enabled 87.14
+      image: 'images/copilot/models-claude-picker.svg',
+      // Move the highlight box from Sonnet to Opus on "Claude Opus 5.5" (Opus 74.38)
+      imageSwaps: [{ from: 58, src: 'images/copilot/models-claude-picker-opus.svg' }],
+      imageHeight: 760,
+      durationInFrames: 636,
+    },
+
+    // 19e — Takeaway (t 93.50 → 110.00, ends where the original privacy scene resumed)
+    // VO: "Now, you don't need to remember every model name or version number, because they will change.
+    //      But the important shift here is that Copilot can bring together several leading models into
+    //      the same work environment and that the model picker shows you which choices are available to you."
+    {
+      layout: 'label-title-body',
+      label: 'THE MODELS',
+      title: 'Names change, the picker stays',
+      body: [
+        'No need to remember every model name or version',
+        'Copilot brings several leading models into one work environment',
+        'The model picker shows which choices are available to you',
+      ],
+      bodyTimings: [21, 204, 356], // remember 94.48 · bring 100.58 · picker 105.64
+      image: 'images/copilot/model-picker.svg',
+      imageHeight: 760,
+      durationInFrames: 495,
     },
 
     // 20 — Privacy & security (3:33.70 → 4:05.04, 31.34s)
@@ -390,7 +444,8 @@ export const copilot: VideoData = {
         'Without a license, it is equivalent to the free Copilot account',
       ],
       bodyTimings: [67, 387, 533],
-      durationInFrames: 634,
+      // +50f so the video runs to the end of the audio (385.27s) instead of stopping 1.3s after the last word
+      durationInFrames: 684,
     },
   ],
 };

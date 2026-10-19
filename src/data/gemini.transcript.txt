@@ -1,0 +1,97 @@
+Gemini is Google's AI Assistant.
+You can chat with it, upload files,
+and use voice and camera to get help
+with writing, analyzing, researching, and creating.
+And the big advantage is that if your work
+already lives in Google,
+Gemini is designed to meet you there.
+It operates in two main ways.
+First, there's Gemini as a chat assistant.
+You can ask questions, brainstorm ideas,
+summarize information, generate images,
+analyze files, and do research
+similar to tools like ChatGPT.
+And second, there's Gemini Inside Google Workspace.
+If your organization runs on Google Workspace,
+Gemini appears where work already happens
+across apps like Gmail, Docs, Sheets, Slides, Drive, and Meet.
+In terms of key features,
+Gemini often matches ChatGPT in range,
+but with native integration across Google's ecosystem.
+Depending on your plan, you may have access to search,
+which includes web search with source-specific filters,
+plus Q&A grounded in your workspace data.
+There's also deep research,
+which creates comprehensive, cited reports
+using web sources, workspace context, or both.
+Gemini Live supports real-time voice conversations
+with optional camera or screen sharing,
+so Gemini can respond to what you're showing or saying.
+For image creation,
+Nano Banana 2 is a high-quality image generator
+and photo editor with strong text rendering
+and up to 4K output.
+Gemini Omni is a new model for generating and editing video
+from blended text, audio, image, and video inputs.
+Notebook LM turns internal sources
+into a structured knowledge base
+and can generate outputs like presentation feedback,
+slide decks, and mind maps.
+And now you can access Notebook LM directly in Gemini
+with the Notebook feature.
+We also have Gems, which are specialized assistants
+you can build to standardize repeat workflows
+and reduce repetitive prompting.
+Workspace Studio supports Agentec Automation,
+helping orchestrate multi-step processes
+across workspace apps.
+Canvas gives you a dedicated space
+to create and iterate on documents and code
+with export paths to docs or even live web apps.
+Scheduled actions can automate recurring or future AI prompts,
+such as daily reports, research tasks, or email summaries.
+Coming soon is Gemini Spark,
+a 24-7 personal AI agent designed to work in the background
+across workspace, connectors, and the open web.
+You'll be able to delegate multi-step tasks,
+set recurring work, and teach it new skills.
+And for developers, code assist anti-gravity
+and Firebase support workflows from vibe coding
+through deploying full-stack apps.
+A practical advantage, especially on higher tiers,
+is that Gemini supports a context window
+of up to 1 million tokens.
+That's useful for reasoning over
+or creating long documents.
+Now, in terms of models,
+the Gemini 3 family includes Gemini 3.5 Flash,
+Google's strongest Agentec model to date.
+Gemini 3.5 Pro is currently in testing
+and expected in June, 2026.
+In the Gemini apps, these typically appear
+as fast, thinking, and pro.
+On privacy and data use,
+consumer Gemini users can manage Gemini apps activity
+and choose whether interactions help improve Google AI,
+although Google notes some processing
+may still occur for safety.
+For Google workspace customers with Gemini protections,
+submissions aren't used to train models,
+aren't reviewed by humans,
+and remain within workspace enterprise security
+and admin controls.
+Finally, pricing varies by plan.
+Free Gemini offers general AI and web help,
+including access to Gemini 3.5 Flash
+with limits on advanced models and features.
+For individuals, Google AI Plus is $7.99 per month.
+Pro is $19.99 per month,
+and Ultra starts from $99.99 per month.
+For organizations, workspace plans include Gemini capabilities,
+starting with business starter at $7 per user per month,
+business standard at $14,
+and business plus at $22 build annually.
+One important detail, workspace Gemini access
+depends on admin settings and licensing,
+so the full in-app experience
+depends on what your admin has enabled.

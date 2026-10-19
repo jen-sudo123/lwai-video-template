@@ -1,0 +1,37 @@
+Detecting language using up to the first 30 seconds. Use `--language` to specify the language
+Detected language: English
+[00:00.000 --> 00:05.000]  If you're already using notebook.lm to deep dive into a topic, your raw data set doesn't need
+[00:05.000 --> 00:10.200]  a separate trip to a spreadsheet before it's useful. Because while most people still treat
+[00:10.200 --> 00:15.200]  data as its own errands, which means that research happens in docs and numbers get a separate stop
+[00:15.200 --> 00:21.840]  in a spreadsheet, you can now do the connecting. Because data tables in notebook.lm closes that
+[00:21.840 --> 00:27.300]  gap, it can read your data set with the same engine that's already used to synthesizing
+[00:27.300 --> 00:33.780]  everything else in your notebook. So data tables is one of notebook.lm studio outputs sitting alongside
+[00:33.780 --> 00:39.760]  things like audio overview and reports. And it works just as well on a data set as on meeting
+[00:40.360 --> 00:45.260]  transcripts. notebook.lm will read whatever you give it, then organize it into rows and columns,
+[00:45.620 --> 00:51.160]  and then hand the results to Google Sheets. So let's take a look at a practical example.
+[00:51.900 --> 00:56.940]  So in this case here, I'm working with a raw job market export. So we have hundreds of rows of
+[00:56.940 --> 01:04.220]  role titles, compensation ranges, required experience, skills and locations. And I can now upload this
+[01:04.220 --> 01:10.760]  file as a source in notebook.lm using the CSV format. And before I ask for anything structured,
+[01:10.940 --> 01:16.020]  I can run one summarizing question in the chat and just say, summarize what this data set contains
+[01:16.020 --> 01:21.360]  and list what each column represents with a couple of sample values. And that's how I can spot any
+[01:21.360 --> 01:27.040]  issues in how it's interpreting this data. So if a column is mislabeled or a value looks off,
+[01:27.240 --> 01:32.340]  then I can see it before it gets into a table that I'm going to do other work.
+[01:33.160 --> 01:38.240]  But once the summary checks out, I can open up the studio panel, select data table here,
+[01:38.560 --> 01:43.860]  and then turn one of notebook.lm's own suggested questions for this data set into a table request.
+[01:44.480 --> 01:49.060]  In this case, it's build a table of the highest paying roles that offer fully remote work,
+[01:49.060 --> 01:55.480]  including the compensation range and the required experience for each. And now notebook.lm returns
+[01:55.480 --> 02:01.980]  a table, narrows to just the roles above that pay threshold. So the role, the company, the compensation
+[02:01.980 --> 02:07.540]  range and the required experience. And a table with defined columns is something that I can
+[02:07.540 --> 02:13.100]  definitely sort and act on. But I can also use the chat to learn more about the data by asking
+[02:13.100 --> 02:18.860]  things like summarize the salary ranges for data science roles by city, what are the common
+[02:18.860 --> 02:25.060]  skills required for these roles or compare remote versus in-person salary ranges for the engineering
+[02:25.060 --> 02:32.460]  manager. And if I want to dig deeper into the data, I can open up the three dot menu on the table
+[02:32.460 --> 02:38.680]  and then select export to sheets. And now the table populates the first tab of a new spreadsheet
+[02:38.680 --> 02:43.620]  with all of the source citations in a second tab. And then from here, you can continue to use
+[02:43.620 --> 02:49.560]  Gemini or chat in sheets to further analyze the data, create charge and anything else that you
+[02:49.560 --> 02:55.660]  would like to do. Now a couple of logistical notes. Data tables is on every notebook.lm plan,
+[02:55.840 --> 03:01.780]  including the free one, with no separate toggle to turn it on. And building and exporting data
+[03:01.780 --> 03:07.560]  tables is now only available for the web. It's not yet available for the mobile app. But in summary,
+[03:08.120 --> 03:13.520]  a data set that's in your research doesn't need its own separate platform anymore.
+[03:13.880 --> 03:18.220]  You can just describe the table that you need and then let the same notebook that's already
+[03:18.220 --> 03:21.720]  synthesizing everything else build the first draft of your table.

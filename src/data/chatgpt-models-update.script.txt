@@ -1,0 +1,7 @@
+<break time="500ms"/>GPT-5.5 Instant is the fast everyday model. It is designed for normal questions, writing, summarizing, brainstorming, image analysis, and quick work.
+
+<break time="500ms"/>First previewed on June 26th, 2026, GPT-5.6 is OpenAI's newest model family and is now gradually rolling out to eligible ChatGPT plans. It includes Sol, the flagship model for complex reasoning and professional work; Terra, which balances capability, speed, and cost; and Luna, the fastest and most cost-efficient option. In standard ChatGPT conversations, the main model available from this family is GPT-5.6 Sol.
+
+<break time="500ms"/>GPT-5.6 Sol is designed for demanding tasks such as coding, research, science, data analysis, computer use, cybersecurity, and design.
+
+<break time="500ms"/>GPT-5.6 Sol Pro is the highest-capability option for the hardest questions and longer-running workflows. Use it when you need deeper reasoning, stronger structure, and greater confidence in the final result.

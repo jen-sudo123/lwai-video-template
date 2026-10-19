@@ -1,0 +1,80 @@
+JGBT is no longer just the AI chatbot that everyone has heard of, it's really becoming
+an operating system for how leaders write, research, analyze, automate and get all of
+their work done.
+And with close to a billion weekly users, OpenAI's flagship assistant now combines powerful
+models with an incredible amount of features.
+So let's take a look at those features.
+First of all, there's Surge, which pulls live web answers.
+And there's also Deep Research, which synthesizes many sources into a structured sighted report.
+There's file uploads, vision and data analysis, so you can drop in PDFs, spreadsheets, images
+or charts and then JGBT will analyze them for you.
+Voice lets you talk naturally to JGBT and paid plans even at real-time video and screen
+sharing on mobile.
+The newly launched Images 2.0 is amazing.
+It generates visuals like mock-ups, diagrams and posters with better text layout and instruction
+following.
+Canvas is a dedicated workspace for writing and coding rather than managing long projects
+in a chat thread.
+Projects organize your chats, your files and instructions around ongoing work, while custom
+JGBTs let you build reusable task-specific assistants.
+Apps connect external tools like drives like GitHub, HubSpot and Asana so that JGBT can
+answer from your private work context and skills package repeatable workflows with instructions,
+example and codes for more consistent task execution.
+Tasks handle scheduled lightweight automation work like reminders, recurring briefings and
+future follow-ups.
+And JGBT agent can autonomously browse the web for you, navigate pages, fill forms and
+edit spreadsheets.
+Memory, custom instructions and tone let JGBT learn your preferences and adapt its behavior
+over time.
+And then there's Codex, which is OpenAI's coding agent for writing, reviewing, debugging
+and shipping code.
+Now those are the features.
+What about the models that power this platform?
+Well, the models are best understood in three layers, Instant, Thinking and Pro.
+GPT 5.5 Instant is the fast everyday model.
+It is designed for normal questions, writing, summarizing, brainstorming, image analysis
+and quick work.
+First previewed on June 26, 2026, GPT 5.6 is OpenAI's newest model family and is now
+gradually rolling out to eligible chat GPT plans.
+It includes Sol, the flagship model for complex reasoning and professional work, Terra, which
+balances capability, speed and cost, and Luna, the fastest and most cost efficient option.
+In standard chat GPT conversations, the main model available from this family is GPT 5.6
+Sol.
+GPT 5.6 Sol is designed for demanding tasks such as coding, research, science, data analysis,
+computer use, cybersecurity and design.
+GPT 5.6 Sol Pro is the highest capability option for the hardest questions and longer
+running workflows.
+Use it when you need deeper reasoning, stronger structure and greater confidence in the final
+result.
+
+Now, in terms of privacy and data use for personal plans, training and data sharing settings
+can be adjusted in settings, but for business, enterprise and education plans, OpenAI says
+that organizational data is not used for training by default.
+Then on May 1, GPT also rolled out advanced account security, which then adds stronger
+sign in protection like pass keys or security keys and stricter recovery checks.
+Of course, regardless of any plan, avoid sharing sensitive information that you wouldn't share
+with a third party vendor and verify any outputs that matter.
+And finally, in terms of plans and pricing, chat GPT now offers a pretty wide range of
+options.
+There's free for everyday use, with limited access to GPT 5.5 Instant, plus web search,
+file uploads, data analysis, image generation and GPTs.
+The exact model limit can vary and once you reach it, chat GPT switches you to GPT 5.5
+Instant Mini.
+Then there's Go, which costs $8 per month in the US.
+It gives you more messages, uploads, image generation, data analysis, memory and a larger
+context window than free.
+But for most professionals, Plus is probably the better fit.
+At $20 per month, Plus gives you higher model limits, more advanced reasoning, faster responses,
+voice, image generation, file analysis, deep research, agent mode, custom GPT creation
+and expanded access to Codex.
+If you regularly run into those limits, then there's Pro.
+The $100 plan gives you five times the usage of Plus, while the $200 plan gives you 20
+times the usage.
+Both include access to chat GPT's most advanced models and tools, and then business and enterprise
+ad shared workspaces, admin controls, stronger security and governance, company knowledge,
+shared projects, agents, apps and organizational permissions.
+Business costs $25 per user per month, or $20 per user per month with annual billing,
+and requires at least two users.
+Enterprise uses custom pricing.
+But in short, chat GPT now really covers more of the senior work that you would do than
+any single tool before it.

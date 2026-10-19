@@ -1,0 +1,276 @@
+1
+00:00:01,280 --> 00:00:06,720
+JGBT is no longer just the AI chatbot that everyone has heard of, it's really becoming
+
+2
+00:00:06,720 --> 00:00:12,860
+an operating system for how leaders write, research, analyze, automate and get all of
+
+3
+00:00:12,860 --> 00:00:14,120
+their work done.
+
+4
+00:00:14,580 --> 00:00:20,380
+And with close to a billion weekly users, OpenAI's flagship assistant now combines powerful
+
+5
+00:00:20,380 --> 00:00:23,900
+models with an incredible amount of features.
+
+6
+00:00:24,100 --> 00:00:25,740
+So let's take a look at those features.
+
+7
+00:00:25,740 --> 00:00:29,500
+First of all, there's Surge, which pulls live web answers.
+
+8
+00:00:30,060 --> 00:00:35,520
+And there's also Deep Research, which synthesizes many sources into a structured sighted report.
+
+9
+00:00:36,120 --> 00:00:41,560
+There's file uploads, vision and data analysis, so you can drop in PDFs, spreadsheets, images
+
+10
+00:00:41,560 --> 00:00:44,560
+or charts and then JGBT will analyze them for you.
+
+11
+00:00:45,080 --> 00:00:50,780
+Voice lets you talk naturally to JGBT and paid plans even at real-time video and screen
+
+12
+00:00:50,780 --> 00:00:52,140
+sharing on mobile.
+
+13
+00:00:52,620 --> 00:00:55,740
+The newly launched Images 2.0 is amazing.
+
+14
+00:00:56,000 --> 00:01:01,820
+It generates visuals like mock-ups, diagrams and posters with better text layout and instruction
+
+15
+00:01:01,820 --> 00:01:02,320
+following.
+
+16
+00:01:02,880 --> 00:01:08,080
+Canvas is a dedicated workspace for writing and coding rather than managing long projects
+
+17
+00:01:08,080 --> 00:01:09,020
+in a chat thread.
+
+18
+00:01:09,880 --> 00:01:15,440
+Projects organize your chats, your files and instructions around ongoing work, while custom
+
+19
+00:01:15,440 --> 00:01:19,060
+JGBTs let you build reusable task-specific assistants.
+
+20
+00:01:19,740 --> 00:01:25,160
+Apps connect external tools like drives like GitHub, HubSpot and Asana so that JGBT can
+
+21
+00:01:25,160 --> 00:01:31,180
+answer from your private work context and skills package repeatable workflows with instructions,
+
+22
+00:01:31,620 --> 00:01:35,760
+example and codes for more consistent task execution.
+
+23
+00:01:36,600 --> 00:01:41,880
+Tasks handle scheduled lightweight automation work like reminders, recurring briefings and
+
+24
+00:01:41,880 --> 00:01:42,780
+future follow-ups.
+
+25
+00:01:43,060 --> 00:01:48,640
+And JGBT agent can autonomously browse the web for you, navigate pages, fill forms and
+
+26
+00:01:48,640 --> 00:01:49,700
+edit spreadsheets.
+
+27
+00:01:50,320 --> 00:01:56,120
+Memory, custom instructions and tone let JGBT learn your preferences and adapt its behavior
+
+28
+00:01:56,120 --> 00:02:01,100
+over time and then there's Codex which is OpenAI's coding agent for writing, reviewing,
+
+29
+00:02:01,420 --> 00:02:02,880
+debugging and shipping code.
+
+30
+00:02:04,380 --> 00:02:05,540
+Now those are the features.
+
+31
+00:02:05,720 --> 00:02:08,380
+What about the models that power this platform?
+
+32
+00:02:08,740 --> 00:02:11,420
+Well, the models are best understood in three layers.
+
+33
+00:02:11,680 --> 00:02:13,820
+Instant, Thinking and Pro.
+
+34
+00:02:13,820 --> 00:02:20,380
+So, JGBT 5.3 Instant is the current fast everyday model which is designed for normal questions,
+
+35
+00:02:20,740 --> 00:02:24,280
+for writing, for summarizing, for brainstorming and any kind of quick work.
+
+36
+00:02:24,760 --> 00:02:32,280
+But launched on April 23rd, JGBT 5.5 Thinking is the main model for serious professional work.
+
+37
+00:02:32,400 --> 00:02:33,880
+This is the one that we always use.
+
+38
+00:02:34,460 --> 00:02:39,560
+OpenAI calls it the smartest and most intuitive to use model yet and the strengths really are in
+
+39
+00:02:39,560 --> 00:02:44,760
+coding and online research, in data analysis, in document and spreadsheet creation,
+
+40
+00:02:45,200 --> 00:02:48,300
+tool use and even in operating software.
+
+41
+00:02:48,760 --> 00:02:54,500
+And then there is JGBT 5.5 Pro which is a research grade model for your hardest questions
+
+42
+00:02:54,500 --> 00:02:56,720
+and your highest accuracy work.
+
+43
+00:02:56,860 --> 00:03:01,000
+So, you can really use this for tasks that need deeper reasoning, stronger structure
+
+44
+00:03:01,000 --> 00:03:03,500
+and more confidence in the final answer.
+
+45
+00:03:04,520 --> 00:03:09,740
+Now, in terms of privacy and data use, for personal plans, training and data sharing settings
+
+46
+00:03:09,740 --> 00:03:11,480
+can be adjusted in settings.
+
+47
+00:03:12,000 --> 00:03:16,460
+But for business, enterprise and education plans, OpenAI says that organizational data
+
+48
+00:03:16,460 --> 00:03:19,000
+is not used for training by default.
+
+49
+00:03:19,560 --> 00:03:24,720
+Then on May 1, JGBT also rolled out advanced account security which then adds stronger
+
+50
+00:03:24,720 --> 00:03:29,680
+sign in protection like pass keys or security keys and strict recovery checks.
+
+51
+00:03:29,680 --> 00:03:35,140
+Of course, regardless of any plan, avoid sharing sensitive information that you wouldn't share
+
+52
+00:03:35,140 --> 00:03:38,940
+with a third party vendor and verify any outputs that matter.
+
+53
+00:03:39,840 --> 00:03:45,160
+And finally, in terms of plans and pricing, JGBT now offers a pretty wide range of pricing
+
+54
+00:03:45,160 --> 00:03:45,620
+models.
+
+55
+00:03:45,840 --> 00:03:51,900
+There's free for everyday use with 10 messages on JGBT 5.3 every 5 hours and then after that
+
+56
+00:03:51,900 --> 00:03:53,520
+you fall back to 5.3 mini.
+
+57
+00:03:53,700 --> 00:03:56,220
+You can also get a couple of tools but with pretty tight limits.
+
+58
+00:03:56,220 --> 00:04:01,760
+There's Go which is $8 per month which gives you slightly higher limits than free plus a
+
+59
+00:04:01,760 --> 00:04:05,920
+larger context window but most of us should be using plus.
+
+60
+00:04:06,140 --> 00:04:11,600
+20 bucks per month, higher 5.5 thinking limits, you have faster responses, you also get voice,
+
+61
+00:04:11,780 --> 00:04:15,360
+you get image generation, you get file uploads and analysis, you get deep research,
+
+62
+00:04:15,820 --> 00:04:19,120
+custom JGBT creation and use and even codecs.
+
+63
+00:04:19,680 --> 00:04:23,320
+Now, if you run into usage limits there then you have to switch to Pro which is between
+
+64
+00:04:23,320 --> 00:04:29,700
+100 and 200 bucks per month which also includes access to 5.5 pro and then there's the business
+
+65
+00:04:29,700 --> 00:04:35,420
+and enterprise plans which adds access and then there's the business and enterprise plans which
+
+66
+00:04:35,420 --> 00:04:42,160
+also adds admin controls, governance, share projects, company knowledge, agents and permissions and
+
+67
+00:04:42,160 --> 00:04:45,900
+these plans start around $25 per user per month.
+
+68
+00:04:46,700 --> 00:04:51,780
+But in short, JGBT now really covers more of the senior work that you would do than any
+
+69
+00:04:51,780 --> 00:04:53,140
+single tool before it.
+

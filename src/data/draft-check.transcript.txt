@@ -1,0 +1,58 @@
+Every modern cockpit has a pilot flying and a pilot monitoring, working in a strict challenge
+and response protocol.
+That cross-checking exists to catch human error and complacency, and is exactly what
+we also need alongside our AI co-pilots.
+This makes you the pilot monitoring, and it keeps you in control of the workflow.
+For this, we have a one-minute framework called the Draft Check, where each letter neutralizes
+one of the five common challenges with AI.
+The D in draft stands for doubt the confidence.
+So when a perfectly formatted and confident-sounding answer appears, you remember that fluent does
+not mean correct.
+The machine that just produced this very elegant-looking output may also fail to solve a basic puzzle,
+and will sound certain either way.
+This is exactly why you don't accept the results outright and what sets you apart from
+a normal AI user.
+The R is for reasoning.
+Make the AI show its work, and make it show you what it left out.
+Expand or ask it to walk you through the assumptions behind its outputs and the weakest links in
+its logic.
+That question pushes the model into lower probability territory, and it forces it to
+service any errors that the confident draft didn't.
+Then ask it what it left out, and what someone with deep expertise would expect to see but
+isn't here.
+This is because an answer can be completely accurate and still be missing the one thing
+that mattered.
+The A is for alternatives.
+So these models again are trained on human feedback that rewards helpful and agreeable
+answers.
+So again, are you sure as our typical pushback can result in the model caving, apologizing,
+and inventing a new answer that's matching the bias that you just gave it?
+You are basically leading a witness that's mathematically desperate for your approval.
+So replace that question with a command.
+Adopt the persona of our most aggressive competitor, and still mend the argument or this plan.
+This forces out the counterarguments that it was suppressing to please you, and it drags
+the model off of the statistical average of human thought, which is where generic output
+comes from.
+The F is for effects and sources.
+So of course check what's already checkable, right, like the proper nouns, dates, events,
+and numbers.
+But if it gives you a citation, don't just click the link to see whether the page loads,
+but actually search inside for the specific claim and confirm that the model didn't
+muddy or alter the meaning of the author.
+This helps you verify the actual insight or finding and not whether the source exists.
+And the final letter is the T for take ownership, and this may be the most consequential one.
+Before your name goes on this deliverable, the question is not only whether the content
+is true, but about whether it's the right thing to send to this audience and at these
+stakes, and you want to verify in proportion to the stakes.
+So on a low stakes piece of work, like a quick internal message, doubting the confidence
+and a fast fact check may be the only checks that you need.
+But on something that's going to a client or a leadership team, you will likely want
+to run all five and where F becomes a real deep verification step instead of just a quick
+scan.
+And knowing which situation you're in is crucial to running these draft checks diligently.
+So doubt the confidence, reason, ask for alternatives, check facts and sources and always take ownership.
+Companies like Clay already demand that you must stand behind every idea and every sentence
+in the work that you produce.
+And with the draft check, you've challenged AI's common failure modes in just 60 seconds,
+and you've moved from accepting the first output to producing real work that you can
+stand behind.

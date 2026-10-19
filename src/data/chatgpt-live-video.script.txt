@@ -1,0 +1,31 @@
+<break time="500ms"/>Sometimes, the fastest way to use AI is not to explain the situation. But to show it.
+
+<break time="500ms"/>Video and screen sharing are useful when the work is easier to demonstrate than describe. Instead of writing a long prompt, you can point ChatGPT at a slide, dashboard, landing page, or workflow, and ask it to help you observe, diagnose, and decide what to do next.
+
+<break time="500ms"/>Here's how it works. To use live video or screen sharing, open the ChatGPT mobile app. You need to be signed in and on a paid plan.
+
+<break time="500ms"/>Then, tap the Voice icon in the bottom-right corner of the screen.
+
+<break time="500ms"/>Once the voice conversation starts, tap the Plus icon.
+
+<break time="500ms"/>From there, you can choose Live video, which turns on your camera and lets ChatGPT see what you are looking at. Or you can choose Share screen, which lets ChatGPT view what is on your mobile screen while you talk.
+
+<break time="500ms"/>In this demo, I'll use screen sharing to ask ChatGPT to review our Lead with AI landing page.
+
+<break time="500ms"/>First, I start a voice conversation in the ChatGPT mobile app. Then I tap the Plus icon, select Share Screen, and choose Start Broadcast.
+
+<break time="500ms"/>Remember, from this point, ChatGPT can see what is showing on my mobile screen.
+
+<break time="500ms"/>Now I move to the landing page on my phone. Before I ask ChatGPT to review or suggest anything, I start with a simple question: "Describe what you see on the screen." This helps me check whether ChatGPT is looking at the right information, and catch any misunderstandings early.
+
+<break time="500ms"/>Once ChatGPT responds, and I'm confident it understands the context, I ask: "Can you review this landing page and tell me if the value proposition is clear?" ChatGPT looks at the page and gives feedback on the messaging, structure, and clarity.
+
+<break time="500ms"/>From there, I can refine the conversation naturally. For example: "Turn this into a practical improvement plan, including messaging, layout, and calls to action."
+
+<break time="500ms"/>If I want to give ChatGPT more context that isn't on the screen, I can stop the screen share and switch to Live video.
+
+<break time="500ms"/>The conversation is documented in the chat, so afterward I can reread ChatGPT's observations, feedback, and suggestions, and turn the live discussion into notes, next steps, or a follow-up action plan.
+
+<break time="500ms"/>A few practical notes. ChatGPT live video and screen sharing are currently available only in the ChatGPT mobile app, and require a paid plan. Be careful with what you share, avoid confidential, personal, or sensitive information. And always verify the output before using it for any decisions.
+
+<break time="500ms"/>The shift is simple. Stop translating every visual situation into text. Show ChatGPT the context directly, then use your judgment to decide what to trust, what to refine, and what to act on.

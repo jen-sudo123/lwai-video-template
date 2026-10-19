@@ -1,0 +1,37 @@
+<speak>
+<break time="500ms"/>Welcome to your journey toward fully understanding and implementing AI in your work and life!
+
+<break time="500ms"/>Before we dive in, I want to ground us in something important: AI may sound technical or even intimidating, but it's actually the most human technology ever created.
+
+<break time="500ms"/>That may sound counterintuitive. After all, AI is just software, code, and data. But its design and purpose are deeply human: to understand, to interact, to think like us. We are miles away from those clunky old chatbots. Today's AI can hear, see, speak, and truly understand.
+
+<break time="500ms"/>AI isn't just a backend tool anymore. It's something we can talk to, learn from, and even laugh with. Like a friend.
+
+<break time="500ms"/>The idea of AI has been around for over 100 years, but it really started taking shape in the 1950s when Alan Turing — yes, from the Turing Test — wrote a now-famous paper asking a deceptively simple question: Can machines think?
+
+<break time="500ms"/>That question became the foundation of what we now call Artificial Intelligence: technology designed to perform tasks that typically require human intelligence, such as recognizing patterns, making decisions, learning from experience, and understanding language.
+
+<break time="500ms"/>In the decades since Turing's famous paper, many AI boom and bust cycles followed. One major breakthrough came in the 2000s and 2010s with the rise of Predictive AI. Predictive AI uses historical data to identify patterns and predict future outcomes.
+
+<break time="500ms"/>A great example? Amazon. By the time you click Buy, they've probably already predicted it and optimized the warehouse to ship it fast.
+
+<break time="500ms"/>While extremely powerful, Predictive AI was generally designed for specific tasks. It could forecast demand or recommend products, but it couldn't easily hold a conversation, answer open-ended questions, or create new content. Plus, you typically had to interact with it through specialized software rather than simply telling it what you wanted in plain language.
+
+<break time="500ms"/>Then, in the early 2020s, a new breakthrough emerged: Generative AI.
+
+<break time="500ms"/>Generative AI is a branch of AI that doesn't just recognize patterns but creates new content — text, images, code, and more — based on the data it's been trained on.
+
+<break time="500ms"/>Instead of being limited to a narrow prediction task, Generative AI can understand natural language instructions and help people brainstorm ideas, write reports, analyze information, generate visuals, and solve problems through conversation.
+
+<break time="500ms"/>The breakthrough moment came when Generative AI became accessible through chat.
+
+<break time="500ms"/>ChatGPT, launched by OpenAI in November 2022, wasn't the first Generative AI model, but it was the first to achieve widespread public adoption and demonstrate what this technology could do.
+
+<break time="500ms"/>It reached one million users in five days. One hundred million in two months. It moved faster than TikTok, faster than Instagram, faster than any consumer platform on record. By May 2026, roughly three years after launch, it crossed one billion monthly active users.
+
+<break time="500ms"/>Within 18 months of ChatGPT's launch, every major technology company had released a competing model: Google with Gemini, Anthropic with Claude, Meta with Llama, Microsoft embedding AI directly into the tools your teams already use every day. Today, AI is being used across fields ranging from economics and finance to healthcare, education, public policy, research, and software development — helping executives analyze information, automate routine tasks, and support decision-making.
+
+<break time="500ms"/>For leaders, the question stopped being "is this real?" and became "which one do I use, and how?" That's exactly what this course is designed to answer.
+
+<break time="500ms"/>So, let's reflect on all these concepts and definitions in the next section. Not because you need to be an AI researcher, but because they help you understand everything to follow.
+</speak>

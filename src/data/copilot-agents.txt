@@ -1,0 +1,107 @@
+Microsoft 365.
+Copilot agents are reusable mini assistants
+you can configure for a specific workflow.
+Instead of re-explaining the same task
+every time you open a new chat,
+you can give the agent a clear role,
+standing instructions, approved knowledge sources,
+and optional capabilities.
+Think of it as turning a super prompt
+into a reusable assistant.
+You can create agents from the Microsoft 365 Copilot app,
+OneDrive or SharePoint,
+depending on your license, permissions,
+and organization settings.
+For this demo, I'll use the most common path,
+the Microsoft 365 Copilot app.
+To begin, I go to the left side panel
+and click New Agent.
+Here, I can either describe the agent
+I want to create in the prompt box,
+or skip directly to configuration.
+Since I already know what I want to build,
+I'll skip to configuration.
+In this example, I'll build an assistant
+that helps me write weekly leadership updates.
+I'll name it Larry.
+Then I add a short description.
+Helps me write weekly leadership updates.
+Next, I configure the agent.
+This brings me to the most important part,
+the instructions field.
+This is where I paste my tested prompt template,
+personalized to my workflow.
+For this example, the instructions include
+four consistent elements,
+aligned with CEO do super prompting,
+the role of the assistant,
+the objective of the workflow,
+the do's and don'ts,
+and the output format I want every time.
+The fifth element is the variable part.
+That is what I provide each time I use the assistant,
+such as this week's notes,
+priorities, metrics, or meeting context.
+The goal is not to write a long prompt every time.
+The goal is to write it once,
+test it, improve it, and make it reusable.
+Then I can choose the knowledge sources.
+Agent Builder can use sources like SharePoint,
+OneDrive, websites, teams, and approved connectors,
+depending on your organization's settings.
+The practical rule is simple.
+Only add sources that improve the workflow.
+Too much context can create noise,
+contradictions, or outdated references.
+For this leadership update assistant,
+I'll keep it prompt based first.
+After that, I review the agent's capabilities.
+Depending on your setup,
+you may be able to enable features like document creation,
+charts, code, or images.
+For this assistant, I'll enable document creation
+so the final output can be turned
+into a Word document more easily.
+I can also add starter prompts.
+This is optional, but useful
+if you want to share the agent to others.
+For Larry, I might add,
+draft this week's leadership update for my notes.
+Turn these project updates
+into an executive-ready summary.
+Rewrite this update to make it clearer and more concise.
+These prompts help people understand
+what the agent is for
+without needing a separate explanation.
+And before I finalize it,
+I choose Preview to test the agent.
+I paste the variable part of my workflow.
+Here are my inputs for the upcoming leadership meeting.
+Please process them.
+Then I add my notes.
+The agent generates a draft leadership update,
+and now I review it.
+Is it clear?
+Is it executive-ready?
+Does it follow the structure I asked for?
+Does it avoid details that are too tactical?
+If not, I can refine the instructions and test again.
+Since I'm satisfied with the results,
+I click on Create.
+By default, the agent starts as private,
+but sharing options may include your organization
+or specific users, depending on admin policy.
+Once created, the agent usually appears
+in the left-side panel in Microsoft 365 Copilot.
+In some Microsoft 365 experiences,
+I can also call an agent
+by ad mentioning it in a new chat.
+That lets me bring the agent into the flow of work
+instead of switching contexts.
+And finally, notes on availability.
+What you see may depend on your Microsoft 365 license,
+admin settings, and work or school environment.
+And for more advanced agents with automation
+and integrations, use Copilot Studio,
+which is only available for business
+or enterprise-level Microsoft 365 subscriptions.

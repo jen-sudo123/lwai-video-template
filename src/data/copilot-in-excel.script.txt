@@ -1,0 +1,39 @@
+<speak>
+<break time="500ms"/>Copilot for Excel is built directly into Excel, and Microsoft has recently extended it with Copilot agents, which let you turn repeated analysis work into a reusable assistant. Instead of manually inspecting rows, building pivots, and guessing where to look first, Copilot helps you move from raw data to meaningful insight much faster.
+
+<break time="500ms"/>Before the demo, a quick technical grounding on what happens behind the scenes. Copilot does not replace Excel's calculation engine. Excel still performs all of the formulas, aggregations, pivots, and charts exactly as it always has.
+
+<break time="500ms"/>Copilot sits on top as an assistant to help you direct Excel. It interprets your request in natural language, then extracts a structured snapshot of the relevant context, including tables, headers, selected ranges, and data types, rather than passing the entire workbook to the model. Copilot then proposes actions: what questions to ask, what formulas to generate, summaries to write, or visualizations to create. Finally, Excel itself executes and renders those results.
+
+<break time="500ms"/>So Copilot helps you decide what to look for and how to express it, while Excel remains the system of record for anything that needs to be correct. It's very much like working with a data analyst handling Excel on your behalf.
+
+<break time="500ms"/>In an Excel workbook, on the web or in the desktop app, the Copilot icon can be found in the lower-right corner. Once the panel is open, everything happens from there.
+
+<break time="500ms"/>Step one: open the data set. Here, it's a spreadsheet containing job market data, roles, compensation, skills, locations, and other attributes.
+
+<break time="500ms"/>Before asking any smart questions, I want to make sure Copilot is interpreting the data correctly. So I run a prompt to check: "List every column and explain what each appears to represent. List five random samples of the data for each column."
+
+<break time="500ms"/>Copilot returns a data dictionary for the worksheet. I scan it to confirm it matches the file. If something were off, this is where I'd clean up headers or clarify structure before moving on. It's easy to skip this step, but it really helps reduce downstream errors.
+
+<break time="500ms"/>Now that I trust the interpretation, I can move into actual analysis. I prompt Copilot: "What are the five most interesting questions that this data set can answer?"
+
+<break time="500ms"/>This flips the workflow. Instead of guessing what to analyze, I'm asking Copilot to propose. It scans the data and surfaces questions grounded in the available fields, one of the fastest ways to find non-obvious angles I might not have thought to check.
+
+<break time="500ms"/>From this list, I pick one about job titles to drill into. I ask a follow-up: "Which job titles offer the highest salary ranges after normalizing by required experience?"
+
+<break time="500ms"/>Copilot analyzes the relevant columns, performs the necessary aggregation, and summarizes the findings in plain language. The logic makes sense, the definition of high-paying makes sense, and the right columns were included. Copilot can be fast, but I'm still the one accountable, so I make those checks.
+
+<break time="500ms"/>Now I want to make this insight shareable. I ask Copilot: "Create a chart showing the top skills associated with high-paying roles."
+
+<break time="500ms"/>Depending on the request, Copilot will either suggest a chart type, generate a chart directly in Excel, or propose a couple of visualization options. Here, it creates the chart directly, so I click Add to Sheet, and it's included in the file.
+
+<break time="500ms"/>A few additional Copilot features in Excel are worth knowing. First, you can choose the preferred AI model from the model selector in the upper-right corner of the panel. Depending on the account and organizational settings, GPT or Claude models can be selected, though access to third-party models must be enabled by an administrator for organizational accounts.
+
+<break time="500ms"/>Next, in the prompt field, you'll also find workbook rules. Selecting Create Workbook Rules lets you set instructions and guardrails for a particular workbook, for example, telling Copilot to never edit or delete the raw data worksheet, put new analysis in a separate worksheet, or format salary values in US dollars. Because these rules are stored inside the workbook, they travel with the file when it's shared, so the same instructions apply when other people use Copilot in that workbook.
+
+<break time="500ms"/>You'll also find Skills here. Microsoft provides pre-configured skills for tasks like working with and analyzing data. A skill can be selected from the list or called in the prompt with an @ mention, and with the right Microsoft 365 license and settings, you can create your own and share them with others.
+
+<break time="500ms"/>To get started with Copilot for Excel, you'll need a Microsoft 365 Copilot license. Some features may not be available depending on your organization's admin settings; for example, the COPILOT function, which brings the model directly into spreadsheet formulas, is only available where admins have opted in.
+
+<break time="500ms"/>And of course, you need to use the tool strategically: validate your understanding of new data sets, surface good analytical questions, accelerate insight discovery, or get advice on fixing formula issues. But regardless, you remain in the driver's seat. Copilot is really just removing the friction that typically slows the work down.
+</speak>

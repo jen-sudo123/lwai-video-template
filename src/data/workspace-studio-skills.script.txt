@@ -1,0 +1,69 @@
+<speak>
+<break time="500ms"/>Google Workspace Studio Skills let you package reusable instructions and expertise into a Skill, so you can apply the same way of working again without rebuilding the prompt every time.
+
+<break time="500ms"/>Once you create a Skill, you can use it directly with Gemini in supported Workspace apps like Docs, Sheets, and Slides, or include it as part of an automated flow in Workspace Studio.
+
+<break time="500ms"/>There are two main ways to trigger a Skill.
+
+<break time="500ms"/>First, directly in Gemini in Workspace. Open the Ask Gemini side panel, type the "at" symbol, and select the Skill you want to use.
+
+<break time="500ms"/>Second, inside a Workspace Studio Flow. You can add the Skill to an Ask Gemini step, so the same instructions are applied automatically as part of a larger workflow.
+
+<break time="500ms"/>So, how do you create one?
+
+<break time="500ms"/>Skills are created and managed in Google Workspace Studio.
+
+<break time="500ms"/>For each Skill, you define a name, a description of what it does and when to use it, and the instructions Gemini should follow.
+
+<break time="500ms"/>Let's build one.
+
+<break time="500ms"/>In this example, I'm creating a Skill called Larry that turns rough leadership notes into a polished weekly update.
+
+<break time="500ms"/>First, I open Google Workspace Studio.
+
+<break time="500ms"/>From the left-hand menu, I select Skills, and then click Create.
+
+<break time="500ms"/>Here, I have two options.
+
+<break time="500ms"/>On the left, I can ask Gemini to help me create the Skill.
+
+<break time="500ms"/>Or, on the right, I can enter the instructions myself.
+
+<break time="500ms"/>I've already prepared my instructions, so I'll use the second option.
+
+<break time="500ms"/>I name the Skill Larry and add a short description explaining when I want to use it.
+
+<break time="500ms"/>Then I add the instructions.
+
+<break time="500ms"/>Using my CODO prompt template, I define what Larry should do, the context it should consider, and what the final leadership update should look like.
+
+<break time="500ms"/>Once everything looks right, I save the Skill and click Turn on.
+
+<break time="500ms"/>Now let's test it.
+
+<break time="500ms"/>I open a Google Doc containing my rough leadership notes and click Ask Gemini in the top-right corner.
+
+<break time="500ms"/>In the Gemini side panel, I add any supporting files I need from Google Drive.
+
+<break time="500ms"/>Then, in the prompt box, I type "at Larry" and select the Skill.
+
+<break time="500ms"/>I ask Gemini to apply Larry to my notes.
+
+<break time="500ms"/>Gemini now follows the instructions saved inside the Skill and turns my rough notes into the weekly leadership update structure I defined.
+
+<break time="500ms"/>Instead of rebuilding that prompt every week, I can simply reuse Larry.
+
+<break time="500ms"/>And if I later want to automate more of this process, I can use the same Skill inside a Workspace Studio Flow.
+
+<break time="500ms"/>A few practical notes before you start.
+
+<break time="500ms"/>Skills are currently part of Gemini Beta for Workspace accounts. Your organization needs to be enrolled in the Beta, and an administrator must enable Skills before you can create or use them.
+
+<break time="500ms"/>A Skill also needs to be turned on before you can invoke it through Gemini in Workspace.
+
+<break time="500ms"/>And finally, keep each Skill focused on one repeatable task.
+
+<break time="500ms"/>A good place to start is something you already do frequently, like preparing leadership updates, meeting recaps, project summaries, or status reports.
+
+<break time="500ms"/>The goal is simple: if you keep giving Gemini the same instructions for the same type of work, that may be a good workflow to turn into a reusable Skill.
+</speak>

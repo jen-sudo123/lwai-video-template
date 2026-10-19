@@ -1,0 +1,37 @@
+<speak>
+<break time="50ms"/>The fifteen minutes you spend setting up your AI will save you hours of going back and forth to get the answer you want.
+
+<break time="50ms"/>Think about how you'd brief a good assistant. You don't reintroduce yourself every morning. You tell them your role, how you like things done, and the projects you're on — and from then on, they just know. AI can get there too.
+
+<break time="50ms"/>There are three layers you can set, and they stack.
+
+<break time="50ms"/>The first is instructions. This is your standing brief: your role, your industry, how you like answers formatted, and what you want it to stop doing. Use them for what rarely changes.
+
+<break time="50ms"/>The second is memory. With memory on, the AI remembers details across conversations — the project you mentioned last week, your preferred format, the tools your team uses. Instructions are what you set on purpose. Memory is what it picks up as you work.
+
+<break time="50ms"/>The third is connections. Apps and connectors link the AI to where your work already lives: your documents, your email, your project tools. Instead of pasting context in, it reaches in and pulls what it needs.
+
+<break time="50ms"/>Put together — that's your profile across your AI tools.
+
+<break time="50ms"/>Here's where to find it in the tools you're likely already using.
+
+<break time="50ms"/>In ChatGPT, go to Settings. This is where you'll find Custom Instructions, Memory, and connected apps. You can also manage memory conversationally — just tell it what to remember or forget, right in the chat.
+
+<break time="50ms"/>In Claude, go to Settings and look for instructions, preferences, styles, memory, and connected tools.
+
+<break time="50ms"/>In Gemini, personalization is closely tied to your Google account. Check Connected Apps — if your work already lives in Google Workspace, this is often the fastest setup win.
+
+<break time="50ms"/>In Microsoft Copilot, especially on a work account, check what's enabled in Copilot settings. Memory and connectors may depend on your organization's admin controls, so don't assume Copilot can see everything.
+
+<break time="50ms"/>Start with this structure for your instructions: "I am a role at a type of organization. I mainly use AI for these workflows. Give me this answer style. Avoid this. Flag risks, assumptions, or missing context."
+
+<break time="50ms"/>For example: "I am a VP of Operations at a mid-size manufacturer. I use AI for planning, communication, process improvement, and decision support. Give me the direct answer first, then the reasoning. Use clear headings. Do not open with praise. Flag assumptions and anything I should verify."
+
+<break time="50ms"/>Next, actively manage memory. When a detail should carry forward, say so explicitly. In ChatGPT and Claude, you can review and edit saved memories directly in Settings.
+
+<break time="50ms"/>Finally, connect one or two work apps. Start with where your context already lives — email, calendar, documents, or project tools. Then test it: reference that app in a prompt and see if the AI can actually draw from it.
+
+<break time="50ms"/>The next time you open a fresh chat and start retyping who you are — stop.
+
+<break time="50ms"/>That belongs in your settings, memory, or connected apps. Prompts are for the task in front of you. Personalization is for the context that spans across everything.
+</speak>

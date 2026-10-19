@@ -1,0 +1,67 @@
+When you use AI repeatedly, you may notice that it starts to carry context from one conversation into another.
+
+It might remember a project you've been discussing, a decision you made previously, or a change in priorities that came up along the way.
+
+That's the role of Memory.
+
+While Custom Instructions are the context you deliberately give AI upfront, Memory helps AI build an evolving understanding from your interactions over time.
+
+So, how does that actually work?
+
+A common misconception is that AI is retraining itself on you every time you have a conversation.
+
+That's not usually what's happening.
+
+Instead, the AI system maintains a separate layer of context based on your previous interactions.
+
+As you work with AI, a memory process can identify information that may be useful again. For example, it might notice that you're evaluating a new market, that your team has already ruled out one option, or that a decision depends on a particular stakeholder.
+
+It can then organize that information into memory and update it as new information appears.
+
+So, you can think of the process like this:
+
+You interact. AI identifies useful context. Memory evolves. And relevant memory is brought into future conversations.
+
+Importantly, AI doesn't need to bring everything it remembers into every conversation. It can retrieve the context that appears relevant to what you're asking now.
+
+Over time, this creates an evolving working context around you and your work.
+
+So why does that matter?
+
+The biggest benefit is continuity.
+
+Imagine you've been discussing a market expansion across several conversations. You've explored different options, ruled some out, and discussed new constraints.
+
+Later, you might simply ask, "What should we do next?"
+
+Memory can help AI understand what has already happened instead of treating that question as a completely new problem.
+
+But that continuity also creates a risk.
+
+Memory can become a persistent assumption.
+
+Imagine AI remembers that cost reduction is your priority. Three months later, your strategy changes to growth.
+
+If the old memory continues to influence its answers, the response may still feel personalized, but it's personalized to outdated context.
+
+That's why an important principle is:
+
+Memory can make AI more relevant. It does not automatically make AI more correct.
+
+So there are three habits worth building.
+
+First, pay attention to what AI is carrying forward. When it references previous decisions, projects, or priorities, check whether they're still accurate.
+
+Second, correct it when things change. Treat memory as evolving context, not a permanent record.
+
+And third, know when you want a fresh start. For a one-off task, a sensitive question, or when you want an independent perspective, you may want to use a temporary or non-personalized conversation where the platform supports it.
+
+The distinction to remember is simple:
+
+Custom Instructions are what you intentionally tell AI about how to work with you.
+
+Memory is what AI learns and carries forward from working with you over time.
+
+One gives AI a starting point.
+
+The other builds continuity as you work together.

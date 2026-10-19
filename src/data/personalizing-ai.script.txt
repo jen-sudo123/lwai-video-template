@@ -1,0 +1,97 @@
+The fifteen minutes you spend setting up your AI can save you hours of going back and forth to get the answer you want.
+
+Every time you start from zero, you are spending energy on context the AI should already know.
+
+Think about how you would brief a good assistant.
+
+You do not reintroduce yourself every morning. You tell them your role, how you like things done, and the projects you are working on.
+
+From then on, they just know. AI can work in a similar way, but only if you give it the right setup first.
+
+That is what personalization is for.
+
+There are three layers you can set, and they stack.
+
+The first is instructions. This is your standing brief.
+
+This is where you tell the AI your role, your industry, how you like answers formatted, and what you want the AI to stop doing.
+
+Once your standing brief is in place, the next layer is memory.
+
+With memory on, the AI can remember details across conversations.
+
+It might remember a project you mentioned last week, your preferred format, or the tools your team uses.
+
+Instructions are what you set on purpose. Memory is what it picks up as you work.
+
+Then comes the third layer: connections.
+
+Apps and connectors link the AI to where your work already lives.
+
+That might be your documents, your email, your calendar, and your project tools.
+
+Instead of pasting context in every time, the AI can reach into the right place and pull what it needs.
+
+When these three layers work together, they become your working profile for AI tools.
+
+In other words, the AI has a clearer sense of who you are, how you work, and where your context lives.
+
+So where do you set this up?
+
+In ChatGPT, go to Settings. This is where you can manage Custom Instructions in Personalization, Memory, and connected apps.
+
+Once memory is enabled, you can also manage memory right in the prompt box by asking.
+
+For example: "Remember that I lead the weekly operations meeting and prefer concise executive summaries."
+
+Or: "Forget that I'm working on that project."
+
+The same idea applies in Claude. Go to Settings and look for personalization features in General settings for instructions, preferences, and styles.
+
+You can also check Capabilities for memory, and Connectors for connected tools.
+
+In Gemini, personalization is closely tied to your Google account.
+
+Check Connected Apps to see whether Gemini is connected to tools like Gmail, Drive, Docs, Calendar, Sheets, or Meet.
+
+If your work already lives in Google Workspace, this can be the fastest setup win.
+
+In Microsoft Copilot, especially on a work account, check what is enabled in Copilot settings.
+
+Memory, connectors, and Microsoft 365 context may depend on your organization's admin controls, so do not assume Copilot can see everything.
+
+Once you know where to look, start with customized instructions.
+
+For example: I am a VP of operations at a mid-size manufacturer.
+
+I use AI for planning, internal communication, process improvement, and decision support.
+
+Give me the direct answer first, then the reasoning. Use clear headings and practical next steps.
+
+Do not open with praise.
+
+Flag assumptions, risks, and anything I should verify.
+
+This helps the AI consistently match your expectations, reduce unnecessary back-and-forth, and deliver outputs that are immediately usable in your day-to-day work.
+
+After that, actively manage memory to keep it up to date.
+
+When a detail should carry forward, say so explicitly.
+
+In ChatGPT and Claude, you can also review and edit saved memories in Settings.
+
+Then connect one or two work apps.
+
+Start with the place where your work context already lives: email, calendar, documents, or project tools.
+
+Then test the connection by referencing or tagging that app in your prompt and checking whether the AI can actually use the context.
+
+The first time, you may need to sign in, approve access, or connect the account before it works.
+
+The next time you open a fresh chat and start retyping who you are and how you like answers formatted, stop.
+
+That information belongs in your settings, memory, or connected apps.
+
+Prompts are for the task in front of you. Personalization is for the context that spans across multiple tasks.
+
+Set it up once, and every prompt after that has a better starting point.

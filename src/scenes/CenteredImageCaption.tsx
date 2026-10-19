@@ -14,6 +14,12 @@ type CenteredImageCaptionProps = {
   // 'cover' (default) fills the box; 'contain' shows the full image without cropping.
   objectFit?: 'cover' | 'contain';
   imageWidth?: number;
+  imageZoom?: {
+    centerX: number;
+    centerY?: number;
+    scale?: number;
+    startFrame?: number;
+  };
 };
 
 // Big centered image with optional caption underneath.
@@ -24,6 +30,7 @@ export const CenteredImageCaption: React.FC<CenteredImageCaptionProps> = ({
   animation = 'typewriter',
   objectFit = 'cover',
   imageWidth = 1200,
+  imageZoom,
 }) => {
   const frame = useCurrentFrame();
   const imageHeight = caption ? 700 : 820;
@@ -36,6 +43,15 @@ export const CenteredImageCaption: React.FC<CenteredImageCaptionProps> = ({
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
+  const zoomStartFrame = imageZoom?.startFrame ?? 0;
+  const zoomScale = imageZoom?.scale ?? 1;
+  const zoomCenterX = imageZoom?.centerX ?? 0.5;
+  const zoomCenterY = imageZoom?.centerY ?? 0.5;
+  const zoomProgress = interpolate(frame, [zoomStartFrame, zoomStartFrame + 28], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const currentScale = 1 + (zoomScale - 1) * zoomProgress;
 
   return (
     <AbsoluteFill style={{ backgroundColor: colors.white }}>
@@ -57,7 +73,13 @@ export const CenteredImageCaption: React.FC<CenteredImageCaptionProps> = ({
         ) : (
           <Img
             src={staticFile(image)}
-            style={{ width: '100%', height: '100%', objectFit }}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit,
+              transform: `scale(${currentScale})`,
+              transformOrigin: `${zoomCenterX * 100}% ${zoomCenterY * 100}%`,
+            }}
           />
         )}
       </div>
@@ -74,6 +96,7 @@ export const CenteredImageCaption: React.FC<CenteredImageCaptionProps> = ({
             fontFamily: typography.subtitle.fontFamily,
             fontSize: 36,
             color: colors.black,
+            whiteSpace: 'pre-line',
           }}
         >
           <AnimatedText text={caption} animation={animation} />

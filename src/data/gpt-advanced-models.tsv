@@ -1,0 +1,61 @@
+start	end	text
+1920	6640	Most ChatDBT users just open up the app or the websites and start typing.
+7680	13320	And that's definitely fine for low stakes work, but you're leaving a lot of performance on the table.
+13900	18720	Because ChatDBT actually gives eligible users access to much more powerful models,
+18880	22200	we call them reasoning models or thinking models or advanced models,
+22640	26260	and those can significantly improve the quality of the output.
+26260	30160	So if you look at the whole lineup of all of the ChatDBT models,
+30540	34600	it's really built around different levels of speed and reasoning.
+35500	42320	So the model that most questions get routed to is GPT 5.5 Instant,
+42860	46520	and this is actually a really good fast everyday model.
+47060	52420	It's designed for quick questions, for writing, summarizing, brainstorming, translation,
+52420	56820	even image analysis, and even explaining some concepts.
+57760	63340	But for higher stakes and more demanding work, this is where you want to get into these advanced models.
+64260	71400	So first of all, we have GPT 5.6 Sol, and you can use those through the thinking and pro options.
+72120	77720	And 5.6 Sol was released just last week, and this is OpenAI's flagship reasoning model
+77720	82420	designed to handle complex work from the beginning all the way until the end.
+83160	88700	So the biggest improvement here compared to the previous models is not that it's giving smarter answers,
+88700	96220	but it's also better at staying focused across longer workflows and using tools and checking results midway through,
+96760	100640	and then turning those rough inputs into more finished, ready to use outputs.
+101640	108120	The benchmarks are showing that this model is particularly strong in coding, in research, in presentations,
+108640	114780	documents, spreadsheets, design, science, cybersecurity, and other advanced professional work.
+115800	118120	There's a couple of other things that it's good at as well.
+118320	123960	It has a lot stronger visual judgment than the previous models, and computer use capabilities,
+123960	126360	meaning it can control your computer for you.
+126360	132260	So that means that it can inspect what it creates, identify problems on its own,
+132640	136500	and then refine the result rather than just simply handing you a first draft.
+137400	141640	And then it's also a lot more efficient, which is becoming increasingly important.
+142340	147140	OpenAI says that it can complete demanding tasks with fewer tokens, fewer steps,
+147360	149680	and with less guidance than earlier models.
+151160	156460	Now, the broader GPT 5.6 family also includes Terra and Luna,
+156800	160840	but these models are not available in a standard ChatTBT configuration.
+161940	164200	Okay, so how do we actually access these models?
+164340	166240	Well, first of all, we're going to open up a new chat,
+166940	173060	and then on the web version of ChatTBT, you'll find the selected models inside the model picker on mobile.
+173760	176540	The model name typically shows up on top of the screen.
+177280	182400	So you want to open up that model picker and choose the option that best fits your task.
+182980	186700	For most routine and conversational work, instant is fine,
+187100	192680	but whenever a task requires judgment, research, analysis, or several connected steps,
+193100	195540	then I would always manually select thinking.
+196400	201660	And for the most difficult or high stakes work where depth and accuracy matter more than speed,
+201860	203860	I always use Pro when it is available.
+204860	208860	In the GPT app, there are sometimes also other options available,
+209460	214760	like increasing the reasoning effort to medium, high, and extra high.
+215620	220540	Now, these deeper reasoning options usually take longer and they may use your credits more quickly,
+220920	225580	so you want to really save them for the work that genuinely benefits from the additional depth.
+226260	230860	One cool thing that has been added recently is that you can actually give more follow-up instructions
+231100	233800	or things that come to mind while it's processing,
+234320	238620	and then it will be included in its answer while it's creating the output.
+239140	243940	Another tip here is that if you realize after submitting your question or task
+243940	248840	that you really only needed a quick response, you can ask it to answer immediately,
+249300	254280	and you can also retry a completed response later using another available model.
+255080	262860	Now, in terms of the availability, the GPT 5.5 Instant remains the default everyday model across GPT plans,
+263260	268960	so you have to switch manually to other models like GPT 5.6 reasoning,
+269220	273460	for which you will need a plus plan while on Pro, business, and enterprise,
+273680	277560	you typically get more reasoning capacity and access to Pro.
+278360	285940	As of now, free, go, and users who haven't logged in to chat to GPT are not included in the 5.6 rollout.
+286920	291480	Now, all these exact options really depend on your plan, on your workspace settings,
+291620	294660	and which version of the model picker has been rolled out to you,
+295060	298040	so what you see may vary a bit from what we showed you today,
+298460	303220	but generally, choosing these advanced models really gives you a lot more reasoning power
+303220	306200	and therefore really increases the quality of your work.

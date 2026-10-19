@@ -1,0 +1,63 @@
+There is a new horse in the race for the best AI PowerPoint tool, and maybe unexpectedly,
+it's cloud.
+So cloud design is a new design creation workspace that can help you quickly move from
+an idea or a product concept or a raw visual direction to a polished design artifacts.
+What makes cloud design different is that it's not limited to just generating images.
+You can use it for visuals, pitch decks, and presentations, which what we'll talk about
+today, product wire frames, interactive prototypes, marketing, collateral, lending pages,
+and entire websites, and even code power prototypes that include richer interactions.
+Again, for this demo, we'll use cloud design to create a 10-slip presentation, I think
+it's one of the best use cases at this point.
+Now, cloud design is a separate workspace from the standard cloud chat, so you can access
+it either from the sidebar, or you can go on the website to cloud.ai-slash-design.
+But now here, I am in cloud design, and for this demo, I choose slides as the output
+forbets.
+So on the left, I have the chat and the project controls, and on the right, I have the canvas
+where the deck will appear.
+So I'm going to paste the prompt here and ask cloud design to create a presentation for
+my leadership team about how we should prepare the company for a world, where AI disrupts
+our industry significantly using the outline in my reference file.
+Now, before cloud starts building and designing, it will ask a few clarifying questions,
+and this is one of the most useful parts of the interface, because I can quickly click
+on the options rather than just replying in chats.
+Once I have answered all of these questions, I click on continue, and now cloud will build
+the presentation on the canvas.
+I can see it working through the source, I can see it creating the deck, and even applying
+my own design system.
+And so in this example, it produced a 10-slide leadership briefing, even with speaker notes,
+pretty incredible.
+Now, of course, I want to verify before I make any final changes, so I'm going to check
+the title, the slide sequence, the speaker notes, and also whether cloud use the right
+section of the reference file, I can also look in case anything was generated for any
+unsupported claims, maybe some made up examples, or anything that we wouldn't stand for.
+I'm also reviewing the design itself, sometimes there are elements where things are a
+little bit too small to read, which I can then change here in cloud design.
+So now, as the next step, I want to refine the presentation, right?
+So it's great that we have a first draft here, but I definitely want to make a couple of
+tweaks to make the presentation a bit more engaging.
+Now, cloud gives me several ways to adjust the deck, I can use chats, I can use the tweak
+panel, I can use annotations, or I can do direct text editing on the slides.
+So let's click here on the tweaks button, and then type something like animate the brand
+graphics, and cloud automatically sends this instruction to the chat.
+And then updates the deck, and I can see the graphics floating on the side, pretty neat.
+The tweaks button then becomes a control panel where I can also turn the animation
+on or off, or even select different animation styles.
+Once I feel like the presentation is fully ready, I can go to share, and then to export,
+and then depending on the project, I could see PDF, video, PowerPoint, project archives,
+standalone HTML, or other options to send it to other apps.
+For this workflow, obviously, I'm going to choose PowerPoint, because I need editable slides
+for my leadership meeting, and if I were sharing an interactive briefing, then I would
+choose this standalone HTML option.
+And then from here, the deck is ready to finalize in PowerPoint, and then move it into
+your leadership meeting, your workshop, your internal update, or your strategy review.
+Now, some practical notes, cloud design is available for cloud pro, max, team, and enterprise
+subscribers.
+And in many accounts, you will see it directly in the left side bar as design, and if you
+don't see it there, especially in companies, then maybe your team or enterprise admin
+has not enabled it yet.
+The second is that cloud design is still in beta, so I can use it as a high speed drafting
+and prototyping workspace, but it's not really ready for final approvals, and that's why
+I would typically explore the PowerPoints, or maybe HTML, and then make some edits.
+So make sure that you verify everything and don't ship anything that you wouldn't
+stand for yourself.
+So that's cloud code, a very helpful new way to create artifacts with AI.

@@ -1,0 +1,60 @@
+Most ChatDBT users just open up the app or the websites and start typing.
+And that's definitely fine for low stakes work, but you're leaving a lot of performance on the table.
+Because ChatDBT actually gives eligible users access to much more powerful models,
+we call them reasoning models or thinking models or advanced models,
+and those can significantly improve the quality of the output.
+So if you look at the whole lineup of all of the ChatDBT models,
+it's really built around different levels of speed and reasoning.
+So the model that most questions get routed to is GPT 5.5 Instant,
+and this is actually a really good fast everyday model.
+It's designed for quick questions, for writing, summarizing, brainstorming, translation,
+even image analysis, and even explaining some concepts.
+But for higher stakes and more demanding work, this is where you want to get into these advanced models.
+So first of all, we have GPT 5.6 Sol, and you can use those through the thinking and pro options.
+And 5.6 Sol was released just last week, and this is OpenAI's flagship reasoning model
+designed to handle complex work from the beginning all the way until the end.
+So the biggest improvement here compared to the previous models is not that it's giving smarter answers,
+but it's also better at staying focused across longer workflows and using tools and checking results midway through,
+and then turning those rough inputs into more finished, ready to use outputs.
+The benchmarks are showing that this model is particularly strong in coding, in research, in presentations,
+documents, spreadsheets, design, science, cybersecurity, and other advanced professional work.
+There's a couple of other things that it's good at as well.
+It has a lot stronger visual judgment than the previous models, and computer use capabilities,
+meaning it can control your computer for you.
+So that means that it can inspect what it creates, identify problems on its own,
+and then refine the result rather than just simply handing you a first draft.
+And then it's also a lot more efficient, which is becoming increasingly important.
+OpenAI says that it can complete demanding tasks with fewer tokens, fewer steps,
+and with less guidance than earlier models.
+Now, the broader GPT 5.6 family also includes Terra and Luna,
+but these models are not available in a standard ChatTBT configuration.
+Okay, so how do we actually access these models?
+Well, first of all, we're going to open up a new chat,
+and then on the web version of ChatTBT, you'll find the selected models inside the model picker on mobile.
+The model name typically shows up on top of the screen.
+So you want to open up that model picker and choose the option that best fits your task.
+For most routine and conversational work, instant is fine,
+but whenever a task requires judgment, research, analysis, or several connected steps,
+then I would always manually select thinking.
+And for the most difficult or high stakes work where depth and accuracy matter more than speed,
+I always use Pro when it is available.
+In the GPT app, there are sometimes also other options available,
+like increasing the reasoning effort to medium, high, and extra high.
+Now, these deeper reasoning options usually take longer and they may use your credits more quickly,
+so you want to really save them for the work that genuinely benefits from the additional depth.
+One cool thing that has been added recently is that you can actually give more follow-up instructions
+or things that come to mind while it's processing,
+and then it will be included in its answer while it's creating the output.
+Another tip here is that if you realize after submitting your question or task
+that you really only needed a quick response, you can ask it to answer immediately,
+and you can also retry a completed response later using another available model.
+Now, in terms of the availability, the GPT 5.5 Instant remains the default everyday model across GPT plans,
+so you have to switch manually to other models like GPT 5.6 reasoning,
+for which you will need a plus plan while on Pro, business, and enterprise,
+you typically get more reasoning capacity and access to Pro.
+As of now, free, go, and users who haven't logged in to chat to GPT are not included in the 5.6 rollout.
+Now, all these exact options really depend on your plan, on your workspace settings,
+and which version of the model picker has been rolled out to you,
+so what you see may vary a bit from what we showed you today,
+but generally, choosing these advanced models really gives you a lot more reasoning power
+and therefore really increases the quality of your work.

@@ -1,0 +1,40 @@
+With ChatGBT for PowerPoint, you can very quickly turn what's on your mind into organized, but more importantly, editable slides.
+So this is an add-in. It sits directly in PowerPoint, it's currently in beta, and it allows you to create and edit and polish presentations without leaving the presentation itself.
+So a couple of things that it can do, it can create new presentation drafts from a prompt or also from reference material.
+It can edit and polish existing slides using natural language, so just like you would normally talk to ChatGBT.
+It can help you understand and summarize the content of a presentation.
+It can of course refine the storyline and the structure and the executive messaging, and again, it keeps slides editable, so you can continue working in PowerPoint.
+There's a few ways that you can use ChatGBT in PowerPoint first.
+If you are using PowerPoint on the web or on your desktop app, then you can open up your presentation, go to home and then to add-ins and then search for ChatGBT.
+And if you're in an organization, then your admin may already have deployed it, or you need to ask them to.
+In that case, you will see ChatGBT directly under the ribbon, under add-ins, or behind that three dot menu, depending on the PowerPoint layout you will see.
+But either way, when you have installed it, when you have opened it, you can click on the ChatGBT logo and then the sidebar will open.
+So once I have done this, just to show you a step by step, I can now paste in my prompt.
+So I could say something like, create a presentation for my leadership team about how we should prepare the company for a world where AI disrupts our industry significantly using the outline in my reference file.
+And I'm going to attach that reference file because I want the first draft to be grounded in our actual thinking from a previous reasoning step, not just something that ChatGBT generates on the spot.
+Then I can send the prompt.
+And before I polish individual slides, I can now review the storyline by checking things like, does the deck open with a business risk?
+Does it move from disruption to decisions?
+Does it end with clear leadership actions, right?
+The kind of things that I would want to see in my presentation.
+Now, if the flow is too broad, then I can refine it directly in the sidebar so I can say things like, reorder this deck so that it leads with this and then explains this, et cetera, et cetera.
+Now, once you submit that, then ChatGBT will update the structure directly inside PowerPoint while keeping all the work editable.
+So as you can see, it really feels like you're instructing someone who is then managing the PowerPoint creation.
+Now, once that structure is there, then I can go and refine and edit the slides.
+So I can ask, for example, like, hey, across all the slides, tighten the titles so that they read like conclusions.
+This is really where ChatGBT becomes more than just the chat, because instead of copying text back and forth, I'm asking for those edits directly on the deck itself.
+I can also add slides by giving instructions like, add one more slide with key risks and mitigation actions before the final recommendation slide,
+and then ChatGBT can do that contextual to the entire presentation that's already there.
+Now, of course, we always want to verify any kind of AI outputs.
+So I'm going to review the slides that ChatGBT changed, especially things like numbers or claims or examples or recommendations it may have put in.
+And I'm going to also scan the formatting.
+So because this adding is still in beta, you know, when you have a complex template or you have custom fonts, maybe some advanced PowerPoint formatting,
+it may not always be preserved perfectly.
+So before I send, I just want to make sure I run through it and check everything to be okay.
+So that is ChatGBT for PowerPoint.
+Now, a couple of practical notes.
+ChatGBT for PowerPoint is available globally on most ChatGBT plans, but for enterprise users, it may still be gated by administrator settings,
+mostly on the side of integrating it into PowerPoint.
+Now, first of all, again, this is a beta tool, so it can be incomplete or inconsistent.
+So don't rely on it too much.
+And of course, as with all things AI, make sure you review all its outcomes.

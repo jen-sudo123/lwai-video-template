@@ -1,0 +1,182 @@
+WEBVTT
+
+00:01.920 --> 00:06.640
+Most ChatDBT users just open up the app or the websites and start typing.
+
+00:07.680 --> 00:13.320
+And that's definitely fine for low stakes work, but you're leaving a lot of performance on the table.
+
+00:13.900 --> 00:18.720
+Because ChatDBT actually gives eligible users access to much more powerful models,
+
+00:18.880 --> 00:22.200
+we call them reasoning models or thinking models or advanced models,
+
+00:22.640 --> 00:26.260
+and those can significantly improve the quality of the output.
+
+00:26.260 --> 00:30.160
+So if you look at the whole lineup of all of the ChatDBT models,
+
+00:30.540 --> 00:34.600
+it's really built around different levels of speed and reasoning.
+
+00:35.500 --> 00:42.320
+So the model that most questions get routed to is GPT 5.5 Instant,
+
+00:42.860 --> 00:46.520
+and this is actually a really good fast everyday model.
+
+00:47.060 --> 00:52.420
+It's designed for quick questions, for writing, summarizing, brainstorming, translation,
+
+00:52.420 --> 00:56.820
+even image analysis, and even explaining some concepts.
+
+00:57.760 --> 01:03.340
+But for higher stakes and more demanding work, this is where you want to get into these advanced models.
+
+01:04.260 --> 01:11.400
+So first of all, we have GPT 5.6 Sol, and you can use those through the thinking and pro options.
+
+01:12.120 --> 01:17.720
+And 5.6 Sol was released just last week, and this is OpenAI's flagship reasoning model
+
+01:17.720 --> 01:22.420
+designed to handle complex work from the beginning all the way until the end.
+
+01:23.160 --> 01:28.700
+So the biggest improvement here compared to the previous models is not that it's giving smarter answers,
+
+01:28.700 --> 01:36.220
+but it's also better at staying focused across longer workflows and using tools and checking results midway through,
+
+01:36.760 --> 01:40.640
+and then turning those rough inputs into more finished, ready to use outputs.
+
+01:41.640 --> 01:48.120
+The benchmarks are showing that this model is particularly strong in coding, in research, in presentations,
+
+01:48.640 --> 01:54.780
+documents, spreadsheets, design, science, cybersecurity, and other advanced professional work.
+
+01:55.800 --> 01:58.120
+There's a couple of other things that it's good at as well.
+
+01:58.320 --> 02:03.960
+It has a lot stronger visual judgment than the previous models, and computer use capabilities,
+
+02:03.960 --> 02:06.360
+meaning it can control your computer for you.
+
+02:06.360 --> 02:12.260
+So that means that it can inspect what it creates, identify problems on its own,
+
+02:12.640 --> 02:16.500
+and then refine the result rather than just simply handing you a first draft.
+
+02:17.400 --> 02:21.640
+And then it's also a lot more efficient, which is becoming increasingly important.
+
+02:22.340 --> 02:27.140
+OpenAI says that it can complete demanding tasks with fewer tokens, fewer steps,
+
+02:27.360 --> 02:29.680
+and with less guidance than earlier models.
+
+02:31.160 --> 02:36.460
+Now, the broader GPT 5.6 family also includes Terra and Luna,
+
+02:36.800 --> 02:40.840
+but these models are not available in a standard ChatTBT configuration.
+
+02:41.940 --> 02:44.200
+Okay, so how do we actually access these models?
+
+02:44.340 --> 02:46.240
+Well, first of all, we're going to open up a new chat,
+
+02:46.940 --> 02:53.060
+and then on the web version of ChatTBT, you'll find the selected models inside the model picker on mobile.
+
+02:53.760 --> 02:56.540
+The model name typically shows up on top of the screen.
+
+02:57.280 --> 03:02.400
+So you want to open up that model picker and choose the option that best fits your task.
+
+03:02.980 --> 03:06.700
+For most routine and conversational work, instant is fine,
+
+03:07.100 --> 03:12.680
+but whenever a task requires judgment, research, analysis, or several connected steps,
+
+03:13.100 --> 03:15.540
+then I would always manually select thinking.
+
+03:16.400 --> 03:21.660
+And for the most difficult or high stakes work where depth and accuracy matter more than speed,
+
+03:21.860 --> 03:23.860
+I always use Pro when it is available.
+
+03:24.860 --> 03:28.860
+In the GPT app, there are sometimes also other options available,
+
+03:29.460 --> 03:34.760
+like increasing the reasoning effort to medium, high, and extra high.
+
+03:35.620 --> 03:40.540
+Now, these deeper reasoning options usually take longer and they may use your credits more quickly,
+
+03:40.920 --> 03:45.580
+so you want to really save them for the work that genuinely benefits from the additional depth.
+
+03:46.260 --> 03:51.100
+One cool thing that has been added recently is that you can actually give more follow-up instructions
+
+03:51.100 --> 03:53.800
+or things that come to mind while it's processing,
+
+03:54.320 --> 03:58.620
+and then it will be included in its answer while it's creating the output.
+
+03:59.140 --> 04:03.940
+Another tip here is that if you realize after submitting your question or task
+
+04:03.940 --> 04:08.840
+that you really only needed a quick response, you can ask it to answer immediately,
+
+04:09.300 --> 04:14.280
+and you can also retry a completed response later using another available model.
+
+04:15.080 --> 04:22.860
+Now, in terms of the availability, the GPT 5.5 Instant remains the default everyday model across GPT plans,
+
+04:23.260 --> 04:28.960
+so you have to switch manually to other models like GPT 5.6 reasoning,
+
+04:29.220 --> 04:33.460
+for which you will need a plus plan while on Pro, business, and enterprise,
+
+04:33.680 --> 04:37.560
+you typically get more reasoning capacity and access to Pro.
+
+04:38.360 --> 04:45.940
+As of now, free, go, and users who haven't logged in to chat to GPT are not included in the 5.6 rollout.
+
+04:46.920 --> 04:51.480
+Now, all these exact options really depend on your plan, on your workspace settings,
+
+04:51.620 --> 04:54.660
+and which version of the model picker has been rolled out to you,
+
+04:55.060 --> 04:58.040
+so what you see may vary a bit from what we showed you today,
+
+04:58.460 --> 05:03.220
+but generally, choosing these advanced models really gives you a lot more reasoning power
+
+05:03.220 --> 05:06.200
+and therefore really increases the quality of your work.
+

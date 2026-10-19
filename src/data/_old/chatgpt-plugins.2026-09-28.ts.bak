@@ -1,0 +1,170 @@
+import { VideoData } from '../scenes/types';
+
+// ChatGPT Plugins — Tutorial / demo video
+// Audio: audio/chatgpt-plugins.mp3 — narration extracted from dumping/ChatGPT Plugins.mp4, PRE-PADDED with
+//        3.00s of silence (Video.tsx trims audioStartFrame frames off the file), 223.42s padded / 220.40s raw.
+// Video: video/chatgpt-plugins.mp4 — screen recording with embedded narration (same recording), 1024x576.
+// Whisper run on the unpadded audio; comp_frame = 90 + round(t * 30).
+// Cues anchored ON the word each card/line names (no pre-roll lead) — the user found sentence-start
+// cues minus an 8-frame lead read as early.
+// Source recording is blank/white from 0.00–49.10s and 163.83–220.40s (presenter narrating before/after
+// screen-sharing) — those stretches are graphic scenes using the OpenAI plugin promo crops in
+// images/chatgpt-plugins/. Per [[feedback_no_step_cards]] the demo video-clip scene carries no overlay card.
+//
+//  scene                                              | start (s) | end (s) | dur (frames @30fps)
+//  ---------------------------------------------------|-----------|---------|--------------------
+//  1  title-card-green (silent intro)                 |   0.00    |   3.00  |    90
+//  2  label-title-body + image (hook)                 |   0.00    |  12.30  |   369
+//  3  label-title-body (app vs plugin)                |  12.30    |  21.70  |   282
+//  4a label-title-body (customer support example)     |  21.70    |  33.80  |   363
+//  4b centered-image-caption (right tools for work)   |  33.80    |  45.20  |   342
+//  5  centered-image-caption (two ways to find)       |  45.20    |  49.10  |   117
+//  6  video-clip (demo, no overlay)                   |  49.10    | 163.83  |  3442
+//  7  label-title-body (things to keep in mind)       | 163.83    | 202.80  |  1169
+//  8  big-statement (closing)                         | 202.80    | 220.40+ |   548
+//                                                                   total       6722
+
+export const chatGPTPlugins: VideoData = {
+  audioSrc: 'audio/chatgpt-plugins.mp3',
+  audioStartFrame: 90,
+  clipSrc: 'video/chatgpt-plugins.mp4',
+  clipStartFrame: 90,
+  scenes: [
+    // 1 — Title card
+    {
+      layout: 'title-card-green',
+      title: 'Plugins in ChatGPT',
+      label: 'CHATGPT PLUGINS',
+      durationInFrames: 90,
+    },
+
+    // 2 — Hook (0.00 → 12.30)
+    // VO: "Plugins in ChatGPT extend what ChatGPT can access and do for a particular workflow. So a plugin
+    //      can package together different capabilities, including skills, apps, and even app templates."
+    {
+      layout: 'label-title-body',
+      label: 'PLUGINS',
+      title: 'Extend what ChatGPT\ncan access and do',
+      body: [
+        'Built around a particular workflow',
+        'Packages skills, apps and app templates together',
+      ],
+      bodyTimings: [130, 206],
+      image: 'images/chatgpt-plugins/plugins-hero.png',
+      imageHeight: 520,
+      durationInFrames: 369,
+    },
+
+    // 3 — App vs plugin (12.30 → 21.70)
+    // VO: "The app connects to an external service like Gmail or Google Calendar, and the plugin brings
+    //      capabilities together around a particular type of work."
+    {
+      layout: 'label-title-body',
+      label: 'HOW IT FITS TOGETHER',
+      title: 'Apps and plugins',
+      body: [
+        'App: connects to an external service like Gmail or Google Calendar',
+        'Plugin: brings capabilities together around a type of work',
+      ],
+      bodyTimings: [16, 158],
+      bodyRight: true,
+      bodyCards: true,
+      bodyCardIcons: ['bolt', 'sparkles'],
+      durationInFrames: 282,
+    },
+
+    // 4a — Example (21.70 → 33.80)
+    // VO: "So for example, a customer support plugin could connect ChatGPT to your support platform and
+    //      give it a workflow for reviewing customer history, finding relevant information, and
+    //      preparing a response."
+    {
+      layout: 'label-title-body',
+      label: 'FOR EXAMPLE',
+      title: 'A customer support plugin',
+      body: [
+        'Connect: ChatGPT links to your support platform',
+        'Workflow: review customer history, find relevant info, prepare a response',
+      ],
+      bodyTimings: [83, 187],
+      bodyRight: true,
+      bodyCards: true,
+      bodyCardIcons: ['user', 'check'],
+      durationInFrames: 363,
+    },
+
+    // 4b — Right tools for the work (33.80 → 45.20)
+    // VO: "So instead of manually finding the information and then bringing it into ChatGPT and explaining
+    //      what to do with it, you can give ChatGPT access to the relevant tools and use a plugin designed
+    //      for that work."
+    {
+      layout: 'centered-image-caption',
+      image: 'images/chatgpt-plugins/plugins-benefits.png',
+      imageWidth: 1600,
+      caption: 'No more manually gathering information and explaining what to do',
+      objectFit: 'contain',
+      durationInFrames: 342,
+    },
+
+    // 5 — Two ways to find plugins (45.20 → 49.10)
+    // VO: "Now there are two ways to find plugins in ChatGPT."
+    {
+      layout: 'centered-image-caption',
+      image: 'images/chatgpt-plugins/plugins-discover.png',
+      imageWidth: 1300,
+      caption: 'Two ways to find plugins in ChatGPT',
+      objectFit: 'contain',
+      durationInFrames: 117,
+    },
+
+    // 6 — Demo (49.10 → 163.83), no overlay card
+    // VO covers: sidebar → Plugins, or profile icon → Settings → Plugins (may still say "Apps") → browse and
+    // connect → demo: prep for a customer meeting with Google Calendar + Gmail → connect, choose account,
+    // review permissions, authorize → "help me prepare for my meeting with Acme tomorrow…" → verify the
+    // meeting and emails → follow-up: any newer emails in the last 7 days → draft a follow-up email →
+    // sending requires approval; review recipient and message first.
+    {
+      layout: 'video-clip',
+      videoSrc: 'video/chatgpt-plugins.mp4',
+      videoStartTime: 49.10,
+      durationInFrames: 3442,
+    },
+
+    // 7 — Things to keep in mind (163.83 → 202.80)
+    // VO: "Now to wrap up, a few things to keep in mind. A plugin and an app are not the same thing. The app
+    //      is what provides access to an external service or information source, while a plugin can package
+    //      that access together with instructions and other capabilities for a particular workflow. The
+    //      second thing is that actions may require approval… And third, the availability varies. So the
+    //      plugins, the apps and the actions that are available to you can depend on your plan, your region,
+    //      your workspace, and of course also your organization's admin settings."
+    {
+      layout: 'label-title-body',
+      label: 'GOOD TO KNOW',
+      title: 'A few things to keep in mind',
+      body: [
+        'Apps and plugins differ: an app provides access, a plugin packages it with instructions for a workflow',
+        'Actions may require approval: it depends on the app, the action and the permissions you granted',
+        'Availability varies: by plan, region, workspace and admin settings',
+      ],
+      bodyTimings: [81, 537, 844],
+      bodyRight: true,
+      bodyCards: true,
+      bodyCardCompact: true,
+      bodyCardIcons: ['compare', 'check', 'sliders'],
+      durationInFrames: 1169,
+    },
+
+    // 8 — Closing (202.80 → end)
+    // VO: "Whenever you connect to a work account, you want to review the permissions very carefully before
+    //      granting any access. And the goal isn't to connect everything, it's just to give ChatGPT access to
+    //      the right context and the right capabilities for the approved workflow that you wanted to help with."
+    {
+      layout: 'big-statement',
+      text: 'Review permissions before granting access.\nThe goal isn\'t to connect everything.\nIt\'s the right context for the right workflow.',
+      label: 'THE TAKEAWAY',
+      size: 'title',
+      animation: 'fade',
+      lineTimings: [70, 200, 327],
+      durationInFrames: 548,
+    },
+  ],
+};

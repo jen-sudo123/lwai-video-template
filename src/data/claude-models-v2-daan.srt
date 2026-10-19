@@ -1,0 +1,403 @@
+1
+00:00:00,000 --> 00:00:01,680
+you're paying for AI capability.
+
+2
+00:00:02,360 --> 00:00:04,800
+But the real skill is knowing when to use
+
+3
+00:00:04,800 --> 00:00:06,040
+which level of capability.
+
+4
+00:00:06,620 --> 00:00:08,240
+Claude is not just one model.
+
+5
+00:00:08,640 --> 00:00:09,720
+It gives you a set of models
+
+6
+00:00:09,720 --> 00:00:11,460
+and each one has a different job.
+
+7
+00:00:12,040 --> 00:00:13,140
+Let's look at the model lineup.
+
+8
+00:00:13,460 --> 00:00:14,200
+Start with Sonnet.
+
+9
+00:00:14,460 --> 00:00:16,660
+Claude Sonnet 5 is now the default model
+
+10
+00:00:16,660 --> 00:00:17,700
+for free and pro users.
+
+11
+00:00:18,200 --> 00:00:20,300
+It is also the model most people should use
+
+12
+00:00:20,300 --> 00:00:21,260
+most of the time.
+
+13
+00:00:21,700 --> 00:00:22,980
+Anthropic describes it
+
+14
+00:00:22,980 --> 00:00:25,240
+as the most agentic Sonnet model yet.
+
+15
+00:00:25,760 --> 00:00:27,220
+That means it is better at planning,
+
+16
+00:00:27,560 --> 00:00:28,360
+using tools,
+
+17
+00:00:28,360 --> 00:00:30,880
+following through on multi-step tasks
+
+18
+00:00:30,880 --> 00:00:33,060
+and handling everyday knowledge work.
+
+19
+00:00:33,520 --> 00:00:35,060
+Think drafting, summarizing,
+
+20
+00:00:35,380 --> 00:00:36,120
+research synthesis,
+
+21
+00:00:36,720 --> 00:00:37,380
+artifact review,
+
+22
+00:00:37,820 --> 00:00:39,720
+coding and workflow automation.
+
+23
+00:00:40,480 --> 00:00:41,920
+For most leadership tasks,
+
+24
+00:00:42,400 --> 00:00:43,960
+Sonnet is the right starting point.
+
+25
+00:00:44,360 --> 00:00:46,320
+It gives you a strong balance of speed,
+
+26
+00:00:46,600 --> 00:00:47,900
+quality and cost.
+
+27
+00:00:48,280 --> 00:00:50,520
+Then there is Haiku, the lightweight model.
+
+28
+00:00:51,520 --> 00:00:54,020
+Use Haiku when speed matters more than depth.
+
+29
+00:00:54,300 --> 00:00:55,820
+It is useful for quick summaries,
+
+30
+00:00:55,820 --> 00:00:58,400
+simple rewrites, classification, routing
+
+31
+00:00:58,400 --> 00:00:59,860
+or high volume tasks
+
+32
+00:00:59,860 --> 00:01:01,700
+where you do not need deep reasoning.
+
+33
+00:01:02,360 --> 00:01:03,420
+Then there is Opus.
+
+34
+00:01:04,060 --> 00:01:06,780
+Opus 4.8 is the deeper reasoning model.
+
+35
+00:01:07,220 --> 00:01:08,900
+Use it when the work is harder,
+
+36
+00:01:09,320 --> 00:01:10,840
+messier or higher stakes.
+
+37
+00:01:11,260 --> 00:01:13,220
+For example, a strategic decision,
+
+38
+00:01:13,560 --> 00:01:15,140
+a complex financial analysis,
+
+39
+00:01:15,520 --> 00:01:16,760
+a sensitive executive message
+
+40
+00:01:16,760 --> 00:01:18,880
+or a task where the first answer
+
+41
+00:01:18,880 --> 00:01:21,080
+needs to be more complete and considered.
+
+42
+00:01:21,880 --> 00:01:23,700
+You do not need Opus for everything.
+
+43
+00:01:24,260 --> 00:01:26,300
+Think of it as the specialist you bring in
+
+44
+00:01:26,300 --> 00:01:28,300
+when Sonnet's first pass is not enough.
+
+45
+00:01:28,800 --> 00:01:30,320
+Finally, there is Fable.
+
+46
+00:01:30,920 --> 00:01:33,780
+Fable 5 is Anthropics' most powerful model.
+
+47
+00:01:34,120 --> 00:01:35,780
+It was recently released more broadly
+
+48
+00:01:35,780 --> 00:01:37,600
+after being paused for safety updates.
+
+49
+00:01:38,060 --> 00:01:40,000
+It is built for hard thinking tasks
+
+50
+00:01:40,000 --> 00:01:42,320
+and for AI systems that can plan
+
+51
+00:01:42,320 --> 00:01:44,560
+and carry out many steps over time.
+
+52
+00:01:45,100 --> 00:01:47,120
+For example, it can research a topic,
+
+53
+00:01:47,580 --> 00:01:49,260
+create a plan, write documents,
+
+54
+00:01:49,620 --> 00:01:50,980
+improve them based on feedback
+
+55
+00:01:50,980 --> 00:01:53,180
+and manage tasks across tools
+
+56
+00:01:53,180 --> 00:01:54,400
+with little human help.
+
+57
+00:01:54,920 --> 00:01:57,320
+However, as the most capable model,
+
+58
+00:01:57,800 --> 00:01:59,920
+Fable 5 will draw down your usage
+
+59
+00:01:59,920 --> 00:02:02,160
+much faster than Opus 4.8.
+
+60
+00:02:02,540 --> 00:02:04,260
+So it is best suited for teams
+
+61
+00:02:04,260 --> 00:02:06,200
+building serious AI systems
+
+62
+00:02:06,200 --> 00:02:08,840
+rather than most daily individual tasks.
+
+63
+00:02:09,520 --> 00:02:12,600
+Now, where do you find and switch these models?
+
+64
+00:02:13,180 --> 00:02:14,920
+To switch models, start a new chat
+
+65
+00:02:14,920 --> 00:02:16,260
+and click the model name
+
+66
+00:02:16,260 --> 00:02:18,180
+in the right corner of the prompt box.
+
+67
+00:02:18,600 --> 00:02:20,080
+That opens the model picker
+
+68
+00:02:20,080 --> 00:02:22,040
+where you'll see your available options.
+
+69
+00:02:22,040 --> 00:02:24,520
+You'll also notice the effort options
+
+70
+00:02:24,520 --> 00:02:26,100
+from the model selection dropdown.
+
+71
+00:02:26,740 --> 00:02:28,780
+This lets you decide how much effort
+
+72
+00:02:28,780 --> 00:02:30,340
+Claude should put into a response.
+
+73
+00:02:31,100 --> 00:02:32,740
+Keep in mind, the higher the effort,
+
+74
+00:02:32,860 --> 00:02:33,740
+the slower the response
+
+75
+00:02:33,740 --> 00:02:35,300
+and the faster the credits run out.
+
+76
+00:02:35,600 --> 00:02:36,600
+So how should you choose?
+
+77
+00:02:37,260 --> 00:02:40,040
+Use Haiku when the task is simple and speed matters.
+
+78
+00:02:40,760 --> 00:02:42,720
+Use Sonnet for most daily work,
+
+79
+00:02:43,140 --> 00:02:45,700
+drafting, planning, summarizing, analysis,
+
+80
+00:02:46,080 --> 00:02:47,700
+coding and working with documents.
+
+81
+00:02:48,460 --> 00:02:51,160
+Use Opus when the task needs deeper judgment
+
+82
+00:02:51,160 --> 00:02:52,620
+or a stronger first pass.
+
+83
+00:02:53,400 --> 00:02:55,800
+Use Fable when you are building with the API,
+
+84
+00:02:56,280 --> 00:02:57,740
+working with very long context
+
+85
+00:02:57,740 --> 00:03:00,780
+or designing a long running agentic workflow.
+
+86
+00:03:01,740 --> 00:03:04,100
+Now, a quick note on availability and pricing.
+
+87
+00:03:04,700 --> 00:03:07,320
+Claude Sonetti 5 is available across all plans
+
+88
+00:03:07,320 --> 00:03:09,380
+and is the default for free in Pro.
+
+89
+00:03:09,840 --> 00:03:12,040
+Claude Opus 4.8 is available on Pro,
+
+90
+00:03:12,460 --> 00:03:13,820
+Macs, Team and Enterprise.
+
+91
+00:03:14,540 --> 00:03:16,280
+On Pro, usage is capped
+
+92
+00:03:16,280 --> 00:03:18,180
+because Opus costs more compute.
+
+93
+00:03:18,180 --> 00:03:21,180
+If you hit that limit, move to Macs for higher usage.
+
+94
+00:03:21,600 --> 00:03:24,060
+Claude Fable 5 is not on the free tier.
+
+95
+00:03:24,560 --> 00:03:26,100
+It is available on paid plans
+
+96
+00:03:26,100 --> 00:03:28,820
+and strictly limited to up to 50%
+
+97
+00:03:28,820 --> 00:03:30,180
+of your weekly usage limits.
+
+98
+00:03:30,740 --> 00:03:32,360
+So keep in mind, the model you pick
+
+99
+00:03:32,360 --> 00:03:34,600
+shapes the result before you write a single word.
+
+100
+00:03:34,960 --> 00:03:36,440
+Start making that distinction today
+
+101
+00:03:36,440 --> 00:03:38,440
+and you'll get more out of Claude.

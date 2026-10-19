@@ -1,0 +1,252 @@
+1
+00:00:00,000 --> 00:00:08,400
+There is a new horse in the race for the best AI PowerPoint tool, and maybe unexpectedly,
+
+2
+00:00:08,400 --> 00:00:09,800
+it's cloud.
+
+3
+00:00:09,800 --> 00:00:14,520
+So cloud design is a new design creation workspace that can help you quickly move from
+
+4
+00:00:14,520 --> 00:00:21,880
+an idea or a product concept or a raw visual direction to a polished design artifacts.
+
+5
+00:00:21,880 --> 00:00:26,480
+What makes cloud design different is that it's not limited to just generating images.
+
+6
+00:00:26,480 --> 00:00:31,120
+You can use it for visuals, pitch decks, and presentations, which what we'll talk about
+
+7
+00:00:31,120 --> 00:00:36,840
+today, product wire frames, interactive prototypes, marketing, collateral, lending pages,
+
+8
+00:00:36,840 --> 00:00:41,680
+and entire websites, and even code power prototypes that include richer interactions.
+
+9
+00:00:41,680 --> 00:00:46,720
+Again, for this demo, we'll use cloud design to create a 10-slip presentation, I think
+
+10
+00:00:46,720 --> 00:00:50,680
+it's one of the best use cases at this point.
+
+11
+00:00:50,680 --> 00:00:55,680
+Now, cloud design is a separate workspace from the standard cloud chat, so you can access
+
+12
+00:00:55,680 --> 00:01:02,960
+it either from the sidebar, or you can go on the website to cloud.ai-slash-design.
+
+13
+00:01:02,960 --> 00:01:07,840
+But now here, I am in cloud design, and for this demo, I choose slides as the output
+
+14
+00:01:07,840 --> 00:01:09,240
+forbets.
+
+15
+00:01:09,240 --> 00:01:13,680
+So on the left, I have the chat and the project controls, and on the right, I have the canvas
+
+16
+00:01:13,680 --> 00:01:16,000
+where the deck will appear.
+
+17
+00:01:16,000 --> 00:01:19,520
+So I'm going to paste the prompt here and ask cloud design to create a presentation for
+
+18
+00:01:19,520 --> 00:01:24,240
+my leadership team about how we should prepare the company for a world, where AI disrupts
+
+19
+00:01:24,240 --> 00:01:28,960
+our industry significantly using the outline in my reference file.
+
+20
+00:01:28,960 --> 00:01:34,240
+Now, before cloud starts building and designing, it will ask a few clarifying questions,
+
+21
+00:01:34,240 --> 00:01:37,640
+and this is one of the most useful parts of the interface, because I can quickly click
+
+22
+00:01:37,640 --> 00:01:42,000
+on the options rather than just replying in chats.
+
+23
+00:01:42,000 --> 00:01:47,520
+Once I have answered all of these questions, I click on continue, and now cloud will build
+
+24
+00:01:47,520 --> 00:01:50,160
+the presentation on the canvas.
+
+25
+00:01:50,160 --> 00:01:54,480
+I can see it working through the source, I can see it creating the deck, and even applying
+
+26
+00:01:54,480 --> 00:01:57,000
+my own design system.
+
+27
+00:01:57,000 --> 00:02:02,880
+And so in this example, it produced a 10-slide leadership briefing, even with speaker notes,
+
+28
+00:02:02,880 --> 00:02:03,880
+pretty incredible.
+
+29
+00:02:03,880 --> 00:02:09,080
+Now, of course, I want to verify before I make any final changes, so I'm going to check
+
+30
+00:02:09,080 --> 00:02:14,240
+the title, the slide sequence, the speaker notes, and also whether cloud use the right
+
+31
+00:02:14,240 --> 00:02:20,000
+section of the reference file, I can also look in case anything was generated for any
+
+32
+00:02:20,000 --> 00:02:26,920
+unsupported claims, maybe some made up examples, or anything that we wouldn't stand for.
+
+33
+00:02:26,920 --> 00:02:31,520
+I'm also reviewing the design itself, sometimes there are elements where things are a
+
+34
+00:02:31,520 --> 00:02:36,480
+little bit too small to read, which I can then change here in cloud design.
+
+35
+00:02:36,480 --> 00:02:39,680
+So now, as the next step, I want to refine the presentation, right?
+
+36
+00:02:39,680 --> 00:02:43,040
+So it's great that we have a first draft here, but I definitely want to make a couple of
+
+37
+00:02:43,040 --> 00:02:46,280
+tweaks to make the presentation a bit more engaging.
+
+38
+00:02:46,280 --> 00:02:51,720
+Now, cloud gives me several ways to adjust the deck, I can use chats, I can use the tweak
+
+39
+00:02:51,720 --> 00:02:57,520
+panel, I can use annotations, or I can do direct text editing on the slides.
+
+40
+00:02:57,520 --> 00:03:03,520
+So let's click here on the tweaks button, and then type something like animate the brand
+
+41
+00:03:03,520 --> 00:03:08,720
+graphics, and cloud automatically sends this instruction to the chat.
+
+42
+00:03:08,720 --> 00:03:15,080
+And then updates the deck, and I can see the graphics floating on the side, pretty neat.
+
+43
+00:03:15,080 --> 00:03:19,120
+The tweaks button then becomes a control panel where I can also turn the animation
+
+44
+00:03:19,120 --> 00:03:23,280
+on or off, or even select different animation styles.
+
+45
+00:03:23,280 --> 00:03:28,000
+Once I feel like the presentation is fully ready, I can go to share, and then to export,
+
+46
+00:03:28,000 --> 00:03:33,240
+and then depending on the project, I could see PDF, video, PowerPoint, project archives,
+
+47
+00:03:33,240 --> 00:03:38,000
+standalone HTML, or other options to send it to other apps.
+
+48
+00:03:38,000 --> 00:03:41,760
+For this workflow, obviously, I'm going to choose PowerPoint, because I need editable slides
+
+49
+00:03:41,760 --> 00:03:45,760
+for my leadership meeting, and if I were sharing an interactive briefing, then I would
+
+50
+00:03:45,760 --> 00:03:49,120
+choose this standalone HTML option.
+
+51
+00:03:49,120 --> 00:03:53,520
+And then from here, the deck is ready to finalize in PowerPoint, and then move it into
+
+52
+00:03:53,520 --> 00:03:58,680
+your leadership meeting, your workshop, your internal update, or your strategy review.
+
+53
+00:03:58,680 --> 00:04:04,920
+Now, some practical notes, cloud design is available for cloud pro, max, team, and enterprise
+
+54
+00:04:04,920 --> 00:04:06,440
+subscribers.
+
+55
+00:04:06,440 --> 00:04:11,000
+And in many accounts, you will see it directly in the left side bar as design, and if you
+
+56
+00:04:11,000 --> 00:04:15,880
+don't see it there, especially in companies, then maybe your team or enterprise admin
+
+57
+00:04:15,880 --> 00:04:18,520
+has not enabled it yet.
+
+58
+00:04:18,520 --> 00:04:24,520
+The second is that cloud design is still in beta, so I can use it as a high speed drafting
+
+59
+00:04:24,520 --> 00:04:30,120
+and prototyping workspace, but it's not really ready for final approvals, and that's why
+
+60
+00:04:30,120 --> 00:04:35,960
+I would typically explore the PowerPoints, or maybe HTML, and then make some edits.
+
+61
+00:04:35,960 --> 00:04:40,600
+So make sure that you verify everything and don't ship anything that you wouldn't
+
+62
+00:04:40,600 --> 00:04:42,960
+stand for yourself.
+
+63
+00:04:42,960 --> 00:04:48,320
+So that's cloud code, a very helpful new way to create artifacts with AI.
+

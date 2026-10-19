@@ -1,0 +1,59 @@
+<speak>
+As frontier models become more sophisticated, <break time="150ms"/> they require more specific prompting techniques to unlock their full potential.
+
+<break time="500ms"/>
+
+With models like GPT-5.5 and Claude Opus 4.8, <break time="150ms"/> you usually don't need to over-explain the process. <break time="400ms"/> Too much step-by-step instruction can make the answer feel mechanical — <break time="200ms"/> or limit the model's ability to find a better path.
+
+<break time="500ms"/>
+
+What these models need is a strong output brief.
+
+<break time="500ms"/>
+
+Define what good looks like by telling them the goal, <break time="150ms"/> audience, <break time="150ms"/> quality bar, <break time="150ms"/> format, <break time="150ms"/> length, <break time="150ms"/> constraints, <break time="150ms"/> and what to avoid. <break time="300ms"/> The tips below show how to do that in practice.
+
+<break time="700ms"/>
+
+The most significant shift? <break time="300ms"/> Define the destination, <break time="150ms"/> not the journey. <break time="400ms"/> Older models often needed step-by-step instructions to stay on track. <break time="350ms"/> GPT-5.5 works better when you describe the outcome clearly and let it choose the path. <break time="350ms"/> Instead of "first summarize, <break time="100ms"/> then identify risks, <break time="100ms"/> then recommend," <break time="250ms"/> try: <break time="200ms"/> "Write a one-page briefing for a CFO who needs a clear risk summary and a recommended action."
+
+<break time="700ms"/>
+
+Second, <break time="200ms"/> avoid unnecessary absolute rules. <break time="400ms"/> Older prompts often use strict words like "always," <break time="100ms"/> "never," <break time="100ms"/> "must," <break time="100ms"/> and "only" to control the model. <break time="350ms"/> Use those words only for true rules — <break time="200ms"/> such as safety requirements, <break time="150ms"/> or things that should never happen. <break time="350ms"/> For judgment calls, <break time="150ms"/> use decision rules instead. <break time="300ms"/> For example: <break time="200ms"/> "If the source does not provide enough evidence, <break time="150ms"/> flag the gap before making a recommendation."
+
+<break time="700ms"/>
+
+Third, <break time="200ms"/> add constraints and stopping conditions. <break time="400ms"/> GPT-5.5 can be thorough, <break time="150ms"/> so give it boundaries. <break time="350ms"/> Use limits like: <break time="200ms"/> "Keep this under 300 words," <break time="150ms"/> "Cover only the three main risks," <break time="150ms"/> or "Stop once you have enough evidence to answer."
+
+<break time="700ms"/>
+
+Finally, <break time="200ms"/> guardrail unsupported details. <break time="400ms"/> GPT-5.5 might fill gaps with plausible-sounding numbers and outcomes that aren't real. <break time="350ms"/> In the prompt, <break time="150ms"/> specify which claims must come from sources — <break time="200ms"/> and which parts may be creatively written.
+
+<break time="700ms"/>
+
+A note on tone: <break time="300ms"/> GPT-5.5 defaults to efficient, <break time="100ms"/> task-oriented, <break time="100ms"/> and direct. <break time="400ms"/> For human-facing tasks, <break time="150ms"/> you need to define both Personality and Collaboration style. <break time="350ms"/> Personality controls how the assistant sounds: <break time="150ms"/> tone, <break time="100ms"/> warmth, <break time="100ms"/> directness, <break time="100ms"/> and polish. <break time="300ms"/> Collaboration style controls how it works: <break time="150ms"/> when it asks questions, <break time="100ms"/> when it makes assumptions, <break time="100ms"/> and how it handles uncertainty.
+
+<break time="700ms"/>
+
+For Claude Opus 4.8, <break time="200ms"/> the first rule is to state the full scope explicitly. <break time="400ms"/> Claude follows instructions more literally. <break time="350ms"/> If you ask it to improve the introduction, <break time="150ms"/> it may improve only the introduction. <break time="350ms"/> If you want the whole document revised, <break time="150ms"/> say: <break time="200ms"/> "Revise the full document, <break time="100ms"/> not just the opening section."
+
+<break time="700ms"/>
+
+Second, <break time="200ms"/> name your constraints precisely. <break time="400ms"/> "Be concise" now means genuinely short — <break time="200ms"/> sometimes shorter than you expected. <break time="350ms"/> "Keep each section to two paragraphs" is closer to what you want.
+
+<break time="700ms"/>
+
+Third, <break time="200ms"/> prompt for tone explicitly. <break time="400ms"/> Like GPT-5.5, <break time="150ms"/> Opus 4.8 defaults to direct and opinionated with minimal warmth. <break time="350ms"/> For human-facing tasks, <break time="150ms"/> you can add: <break time="200ms"/> "Use a warm, <break time="100ms"/> collaborative tone."
+
+<break time="700ms"/>
+
+Fourth, <break time="200ms"/> signal when the task needs deeper thinking. <break time="400ms"/> For strategy, <break time="100ms"/> analysis, <break time="100ms"/> planning, <break time="100ms"/> or decision support, <break time="200ms"/> tell it not to rush. <break time="350ms"/> Add: <break time="200ms"/> "This task requires multi-step reasoning. <break time="150ms"/> Think carefully through the trade-offs before answering."
+
+<break time="700ms"/>
+
+What does this mean for your CODO prompts? <break time="350ms"/> The O in CODO is now the highest-leverage part of your brief. <break time="350ms"/> The more specific your output definition, <break time="150ms"/> the more of these models' capabilities you actually unlock.
+
+<break time="700ms"/>
+
+When your CODO prompt clearly defines the format, <break time="100ms"/> length, <break time="100ms"/> audience, <break time="100ms"/> and standard the output must meet — <break time="250ms"/> these models perform significantly better.
+</speak>

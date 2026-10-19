@@ -1,0 +1,293 @@
+WEBVTT
+
+00:00.000 --> 00:01.820
+Gemini is Google's AI Assistant.
+
+00:02.360 --> 00:04.120
+You can chat with it, upload files,
+
+00:04.340 --> 00:05.980
+and use voice and camera to get help
+
+00:05.980 --> 00:08.400
+with writing, analyzing, researching, and creating.
+
+00:08.980 --> 00:10.980
+And the big advantage is that if your work
+
+00:10.980 --> 00:12.080
+already lives in Google,
+
+00:12.600 --> 00:14.540
+Gemini is designed to meet you there.
+
+00:15.040 --> 00:16.920
+It operates in two main ways.
+
+00:17.120 --> 00:19.380
+First, there's Gemini as a chat assistant.
+
+00:19.960 --> 00:22.100
+You can ask questions, brainstorm ideas,
+
+00:22.360 --> 00:24.380
+summarize information, generate images,
+
+00:24.620 --> 00:26.320
+analyze files, and do research
+
+00:26.320 --> 00:28.220
+similar to tools like ChatGPT.
+
+00:28.220 --> 00:31.700
+And second, there's Gemini Inside Google Workspace.
+
+00:32.260 --> 00:34.600
+If your organization runs on Google Workspace,
+
+00:34.800 --> 00:36.760
+Gemini appears where work already happens
+
+00:37.300 --> 00:41.520
+across apps like Gmail, Docs, Sheets, Slides, Drive, and Meet.
+
+00:42.300 --> 00:43.700
+In terms of key features,
+
+00:44.180 --> 00:46.540
+Gemini often matches ChatGPT in range,
+
+00:46.960 --> 00:49.760
+but with native integration across Google's ecosystem.
+
+00:50.460 --> 00:53.320
+Depending on your plan, you may have access to search,
+
+00:53.680 --> 00:56.720
+which includes web search with source-specific filters,
+
+00:56.720 --> 00:59.780
+plus Q&A grounded in your workspace data.
+
+01:00.460 --> 01:01.920
+There's also deep research,
+
+01:02.120 --> 01:04.480
+which creates comprehensive, cited reports
+
+01:04.480 --> 01:07.500
+using web sources, workspace context, or both.
+
+01:08.480 --> 01:11.220
+Gemini Live supports real-time voice conversations
+
+01:11.220 --> 01:13.840
+with optional camera or screen sharing,
+
+01:13.980 --> 01:16.480
+so Gemini can respond to what you're showing or saying.
+
+01:17.080 --> 01:18.080
+For image creation,
+
+01:18.700 --> 01:21.680
+Nano Banana 2 is a high-quality image generator
+
+01:21.680 --> 01:24.560
+and photo editor with strong text rendering
+
+01:24.560 --> 01:26.300
+and up to 4K output.
+
+01:26.860 --> 01:30.200
+Gemini Omni is a new model for generating and editing video
+
+01:30.200 --> 01:33.660
+from blended text, audio, image, and video inputs.
+
+01:34.220 --> 01:36.180
+Notebook LM turns internal sources
+
+01:36.180 --> 01:37.740
+into a structured knowledge base
+
+01:37.740 --> 01:40.320
+and can generate outputs like presentation feedback,
+
+01:40.800 --> 01:42.540
+slide decks, and mind maps.
+
+01:43.120 --> 01:46.100
+And now you can access Notebook LM directly in Gemini
+
+01:46.100 --> 01:47.280
+with the Notebook feature.
+
+01:47.880 --> 01:50.240
+We also have Gems, which are specialized assistants
+
+01:50.240 --> 01:52.640
+you can build to standardize repeat workflows
+
+01:52.640 --> 01:54.780
+and reduce repetitive prompting.
+
+01:55.780 --> 01:58.740
+Workspace Studio supports Agentec Automation,
+
+01:59.220 --> 02:01.440
+helping orchestrate multi-step processes
+
+02:01.440 --> 02:02.880
+across workspace apps.
+
+02:03.840 --> 02:05.600
+Canvas gives you a dedicated space
+
+02:05.600 --> 02:08.300
+to create and iterate on documents and code
+
+02:08.300 --> 02:12.280
+with export paths to docs or even live web apps.
+
+02:12.940 --> 02:16.740
+Scheduled actions can automate recurring or future AI prompts,
+
+02:16.960 --> 02:20.840
+such as daily reports, research tasks, or email summaries.
+
+02:21.780 --> 02:23.640
+Coming soon is Gemini Spark,
+
+02:24.020 --> 02:27.560
+a 24-7 personal AI agent designed to work in the background
+
+02:27.560 --> 02:30.180
+across workspace, connectors, and the open web.
+
+02:30.720 --> 02:32.980
+You'll be able to delegate multi-step tasks,
+
+02:33.280 --> 02:35.560
+set recurring work, and teach it new skills.
+
+02:36.180 --> 02:38.780
+And for developers, code assist anti-gravity
+
+02:38.780 --> 02:41.600
+and Firebase support workflows from vibe coding
+
+02:41.600 --> 02:43.420
+through deploying full-stack apps.
+
+02:44.640 --> 02:47.200
+A practical advantage, especially on higher tiers,
+
+02:47.480 --> 02:49.560
+is that Gemini supports a context window
+
+02:49.560 --> 02:51.100
+of up to 1 million tokens.
+
+02:52.240 --> 02:54.200
+That's useful for reasoning over
+
+02:54.200 --> 02:55.760
+or creating long documents.
+
+02:56.780 --> 02:58.100
+Now, in terms of models,
+
+02:58.440 --> 03:01.980
+the Gemini 3 family includes Gemini 3.5 Flash,
+
+03:02.640 --> 03:05.000
+Google's strongest Agentec model to date.
+
+03:05.820 --> 03:08.940
+Gemini 3.5 Pro is currently in testing
+
+03:08.940 --> 03:11.040
+and expected in June, 2026.
+
+03:11.720 --> 03:13.960
+In the Gemini apps, these typically appear
+
+03:13.960 --> 03:16.140
+as fast, thinking, and pro.
+
+03:16.740 --> 03:18.300
+On privacy and data use,
+
+03:18.640 --> 03:21.740
+consumer Gemini users can manage Gemini apps activity
+
+03:22.100 --> 03:25.180
+and choose whether interactions help improve Google AI,
+
+03:25.740 --> 03:27.460
+although Google notes some processing
+
+03:27.460 --> 03:29.180
+may still occur for safety.
+
+03:30.120 --> 03:32.760
+For Google workspace customers with Gemini protections,
+
+03:33.280 --> 03:35.080
+submissions aren't used to train models,
+
+03:35.540 --> 03:36.560
+aren't reviewed by humans,
+
+03:37.080 --> 03:39.520
+and remain within workspace enterprise security
+
+03:39.520 --> 03:40.740
+and admin controls.
+
+03:41.860 --> 03:44.500
+Finally, pricing varies by plan.
+
+03:45.200 --> 03:48.260
+Free Gemini offers general AI and web help,
+
+03:48.640 --> 03:51.340
+including access to Gemini 3.5 Flash
+
+03:51.340 --> 03:54.100
+with limits on advanced models and features.
+
+03:54.800 --> 04:00.240
+For individuals, Google AI Plus is $7.99 per month.
+
+04:00.680 --> 04:04.040
+Pro is $19.99 per month,
+
+04:04.520 --> 04:08.380
+and Ultra starts from $99.99 per month.
+
+04:09.080 --> 04:12.960
+For organizations, workspace plans include Gemini capabilities,
+
+04:13.520 --> 04:16.840
+starting with business starter at $7 per user per month,
+
+04:17.400 --> 04:18.760
+business standard at $14,
+
+04:19.400 --> 04:23.000
+and business plus at $22 build annually.
+
+04:24.200 --> 04:27.220
+One important detail, workspace Gemini access
+
+04:27.220 --> 04:29.320
+depends on admin settings and licensing,
+
+04:29.900 --> 04:31.400
+so the full in-app experience
+
+04:31.400 --> 04:33.260
+depends on what your admin has enabled.
+

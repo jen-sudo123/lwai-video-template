@@ -1,0 +1,79 @@
+<speak>
+<break time="500ms"/>In Microsoft 365 Copilot, much of your work context may already be available across Microsoft 365.
+
+<break time="500ms"/>With Work IQ, Copilot can use information you already have permission to access across services like Outlook, Teams, SharePoint, OneDrive, and other Microsoft 365 apps.
+
+<break time="500ms"/>Copilot connectors can then extend that context to additional business systems.
+
+<break time="500ms"/>What Copilot can access depends on your license, your permissions, and your organization's admin settings.
+
+<break time="500ms"/>One important distinction: the consumer version of Copilot at copilot dot microsoft dot com works differently. There, you can connect supported personal services such as Outlook dot com, OneDrive, Gmail, Google Calendar, and Google Drive through Connectors.
+
+<break time="500ms"/>So, where do you find your work context in Microsoft 365 Copilot?
+
+<break time="500ms"/>Open Copilot Chat with your Microsoft 365 work account.
+
+<break time="500ms"/>First, make sure Work IQ is turned on.
+
+<break time="500ms"/>Then select the plus button and choose Change data sources.
+
+<break time="500ms"/>Here, you can see and control which work sources are available to Copilot.
+
+<break time="500ms"/>To manage external sources, go to Settings, then Sources.
+
+<break time="500ms"/>You may also see information about your work context under Settings, Personalization, and Work Profile.
+
+<break time="500ms"/>Now let's look at an example.
+
+<break time="500ms"/>In this demo, I'm using Microsoft 365 Copilot to prepare for an upcoming meeting.
+
+<break time="500ms"/>First, I make sure Work IQ is turned on.
+
+<break time="500ms"/>With Work IQ enabled, Copilot can use the work information I already have permission to access, such as emails, meetings, Teams conversations, and files.
+
+<break time="500ms"/>I can also select plus, then Change data sources to see which sources are available.
+
+<break time="500ms"/>Now I'll ask:
+
+<break time="500ms"/>"Help me prepare for my meeting with Acme tomorrow. Find the relevant meeting details, recent emails, Teams conversations, and documents. Summarize what I need to know."
+
+<break time="500ms"/>Instead of manually searching Outlook, Teams, SharePoint, and OneDrive, Copilot can bring together relevant information from across my Microsoft 365 environment.
+
+<break time="500ms"/>But I still want to verify the result.
+
+<break time="500ms"/>So I review the citations and check that Copilot found the correct meeting, the latest conversations, and the relevant files.
+
+<break time="500ms"/>I can also follow up with:
+
+<break time="500ms"/>"Check for any emails or Teams messages from Acme from the last seven days that would change this summary."
+
+<break time="500ms"/>Now, not all work lives inside Microsoft 365.
+
+<break time="500ms"/>Your organization may also use systems such as Salesforce, Jira, or ServiceNow.
+
+<break time="500ms"/>This is where Copilot connectors come in.
+
+<break time="500ms"/>Go to Settings, then Sources to see which external sources are available to connect or manage.
+
+<break time="500ms"/>A connector extends the context Copilot can work with by giving it access to information from additional systems.
+
+<break time="500ms"/>What appears here depends on what your organization has enabled and what you have permission to access.
+
+<break time="500ms"/>Microsoft 365 Copilot can take this one step further with Agents.
+
+<break time="500ms"/>Connectors give Copilot access to more context.
+
+<break time="500ms"/>Agents can combine that context with reusable instructions, knowledge, and capabilities for a specific workflow.
+
+<break time="500ms"/>For example, you could create an agent designed specifically to prepare customer meeting briefings.
+
+<break time="500ms"/>A few practical things to keep in mind.
+
+<break time="500ms"/>Work IQ does not give you new permissions.
+
+<break time="500ms"/>Available data and connectors vary based on your license, permissions, and admin settings.
+
+<break time="500ms"/>External connectors may also need to be enabled by your administrator.
+
+<break time="500ms"/>And for important work, always review the sources Copilot used before relying on the result.
+</speak>
