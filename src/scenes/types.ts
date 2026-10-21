@@ -689,6 +689,10 @@ export type VideoData = {
   // picking up the avatar video from exactly where it left off (no drift).
   avatarCutFrame?: number;
   avatarResumeFrame?: number;
+  // Opt-in scene-to-scene transition. 'slide': each scene slides in from the right while the
+  // previous one slides out left. Scene start frames are unchanged (the outgoing scene stays
+  // mounted for the extra frames), so VO timings don't move. Default 15 frames.
+  sceneTransition?: { type: 'slide'; durationInFrames?: number };
   // Word-level captions for karaoke-style subtitle overlay.
   captions?: import('../CaptionOverlay').WordCaption[];
 };

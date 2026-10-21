@@ -1,5 +1,5 @@
 import React from 'react';
-import { Series, Sequence, Audio, OffthreadVideo, staticFile, useCurrentFrame, interpolate } from 'remotion';
+import { Series, Sequence, Audio, OffthreadVideo, AbsoluteFill, Easing, staticFile, useCurrentFrame, interpolate } from 'remotion';
 import { loadFont as loadSerif } from '@remotion/google-fonts/IBMPlexSerif';
 import { loadFont as loadSans } from '@remotion/google-fonts/PublicSans';
 import { VideoData } from './scenes/types';
@@ -49,8 +49,35 @@ function resolveAvatarState(
   return { left: CANVAS_W - AVATAR_MARGIN - s, top: AVATAR_MARGIN, size: s };
 }
 
-export const Video: React.FC<VideoData> = ({ scenes, audioSrc, audioStartFrame, audioInserts, avatarSrc, avatarStartFrame, clipSrc, clipStartFrame, clipMuted, keywordJumps, avatarKeyframes, avatarHideRanges, avatarCutFrame, avatarResumeFrame, captions }) => {
+// Wraps one scene for the opt-in `sceneTransition: { type: 'slide' }` mode: slides in from the
+// right over its first `transitionFrames`, and out to the left over the extra frames it stays
+// mounted after `durationInFrames` (while the next scene slides in on top).
+const SlideFrame: React.FC<{
+  durationInFrames: number;
+  transitionFrames: number;
+  slideIn: boolean;
+  slideOut: boolean;
+  children: React.ReactNode;
+}> = ({ durationInFrames, transitionFrames, slideIn, slideOut, children }) => {
   const frame = useCurrentFrame();
+  const ease = Easing.inOut(Easing.cubic);
+  const inX = slideIn
+    ? interpolate(frame, [0, transitionFrames], [100, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease })
+    : 0;
+  const outX = slideOut
+    ? interpolate(frame, [durationInFrames, durationInFrames + transitionFrames], [0, -100], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease })
+    : 0;
+  return (
+    <AbsoluteFill style={{ transform: `translateX(${inX + outX}%)`, backgroundColor: '#FFFFFF' }}>
+      {children}
+    </AbsoluteFill>
+  );
+};
+
+export const Video: React.FC<VideoData> = ({ scenes, audioSrc, audioStartFrame, audioInserts, avatarSrc, avatarStartFrame, clipSrc, clipStartFrame, clipMuted, keywordJumps, avatarKeyframes, avatarHideRanges, avatarCutFrame, avatarResumeFrame, captions, sceneTransition }) => {
+  const frame = useCurrentFrame();
+  const sceneStarts: number[] = [];
+  scenes.reduce((sum, scene) => { sceneStarts.push(sum); return sum + scene.durationInFrames; }, 0);
 
   let cum = 0;
   let avatarHidden = false;
@@ -207,16 +234,39 @@ export const Video: React.FC<VideoData> = ({ scenes, audioSrc, audioStartFrame, 
         </Sequence>
       ) : null}
 
-      <Series>
-        {scenes.map((scene, i) => (
-          <Series.Sequence
-            key={i}
-            durationInFrames={scene.durationInFrames}
-          >
-            <SceneRenderer scene={scene} hasClipLayer={!!clipSrc} />
-          </Series.Sequence>
-        ))}
-      </Series>
+      {sceneTransition?.type === 'slide' ? (
+        // Slide between scenes without shifting any scene's start frame: each scene
+        // stays mounted for `t` extra frames while the next one slides in over it,
+        // so all VO-anchored timings stay exactly where they were.
+        scenes.map((scene, i) => {
+          const t = sceneTransition.durationInFrames ?? 15;
+          const from = sceneStarts[i];
+          const isLast = i === scenes.length - 1;
+          return (
+            <Sequence key={i} from={from} durationInFrames={scene.durationInFrames + (isLast ? 0 : t)}>
+              <SlideFrame
+                durationInFrames={scene.durationInFrames}
+                transitionFrames={t}
+                slideIn={i > 0}
+                slideOut={!isLast}
+              >
+                <SceneRenderer scene={scene} hasClipLayer={!!clipSrc} />
+              </SlideFrame>
+            </Sequence>
+          );
+        })
+      ) : (
+        <Series>
+          {scenes.map((scene, i) => (
+            <Series.Sequence
+              key={i}
+              durationInFrames={scene.durationInFrames}
+            >
+              <SceneRenderer scene={scene} hasClipLayer={!!clipSrc} />
+            </Series.Sequence>
+          ))}
+        </Series>
+      )}
 
       {captions && captions.length > 0 && (
         <CaptionOverlay captions={captions} />

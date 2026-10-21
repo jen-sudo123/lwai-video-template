@@ -646,5 +646,9 @@ export const videoDataSchema = z.object({
     startFrame: z.number(),
     endFrame: z.number(),
   })).optional(),
+  sceneTransition: z.object({
+    type: z.literal('slide'),
+    durationInFrames: z.number().optional(),
+  }).optional(),
   scenes: z.array(sceneSchema),
 });
