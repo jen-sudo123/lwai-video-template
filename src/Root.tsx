@@ -37,6 +37,7 @@ import { copilotScheduledPrompt } from './data/copilot-scheduled-prompt';
 import { copilotMeetings } from './data/copilot-meetings';
 import { copilotAgentToStudio } from './data/copilot-agent-to-studio';
 import { copilotStudioAutonomy } from './data/copilot-studio-autonomy';
+import { agentBoundaries } from './data/agent-boundaries';
 import { chatGPTInPowerPoint } from './data/chatgpt-in-powerpoint';
 import { coworkScheduledTasks } from './data/cowork-scheduled-tasks';
 import { promptingFrontierModels } from './data/prompting-frontier-models';
@@ -450,6 +451,16 @@ export const RemotionRoot: React.FC = () => {
         height={layout.height}
         schema={videoDataSchema}
         defaultProps={copilotStudioAutonomy}
+      />
+      <Composition
+        id="AgentBoundaries"
+        component={Video}
+        durationInFrames={calculateTotalFrames(agentBoundaries.scenes)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+        schema={videoDataSchema}
+        defaultProps={agentBoundaries}
       />
       <Composition
         id="ChatGPTInPowerPoint"

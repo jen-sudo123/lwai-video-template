@@ -1,0 +1,105 @@
+Yesterday, you created your agent, gave it detailed CODO instructions, and connected the information and tools it needs.
+
+But just because an agent can do something doesn't mean it should be allowed to do it independently.
+
+Remember our discussion last week about autonomy being a dial?
+
+We don't simply decide whether an agent is autonomous or not. We decide which actions it can perform independently, what requires approval, and when a person needs to step in.
+
+Open Section Four of your Agent Build Plan: Where should the human stay in control?
+
+You've already made those decisions for your workflow. Now we're going to make sure they're reflected in your agent's configuration.
+
+I'll keep using my Team Action Follow-Up Agent as the example. But as always, you'll apply these principles to your own agent.
+
+First, let's look at what our agent can actually do.
+
+I'm back in Copilot Studio, and I'll open the Tools section.
+
+Here's the SharePoint tool we connected in the previous lesson: Read Team Action Tracker.
+
+When I open it, I can see that it uses the "Get items" operation.
+
+That means it can retrieve records from our SharePoint list.
+
+But look at what we decided in Section Four of the Build Plan.
+
+Our agent can read information, compare commitments, identify possible duplicates, and prepare proposed updates.
+
+It isn't allowed to change the tracker, or send messages.
+
+And importantly, we haven't connected any tools that would let it do those things.
+
+This is a key distinction. Instructions describe what the agent should do. Configured capabilities determine what it can actually do.
+
+For your agent, review the tools you've connected against the authority you defined in your own Build Plan.
+
+If your first version doesn't need a particular action, don't give it that capability.
+
+Now, what about actions that need human approval?
+
+In my example, changing a tracker record or sending a message requires approval.
+
+But our first version doesn't need to perform those actions.
+
+So rather than adding an update tool and trying to control it afterward, we've simply left those capabilities out.
+
+That's the simplest, and strongest, boundary for our current workflow.
+
+For your agent, the right approach depends on what you've designed.
+
+For some actions, Copilot Studio can require confirmation before a tool runs.
+
+But asking the person using the agent to confirm an action isn't necessarily the same as getting formal approval from the responsible manager or business owner.
+
+If your workflow requires a specific person's approval, you need a proper approval process. Not just an instruction telling the agent to ask.
+
+We'll explore more advanced workflows later. For now, don't add a consequential capability unless the required approval controls are available, and approved.
+
+Your goal isn't maximum autonomy. It's giving your agent exactly the level of autonomy your workflow requires.
+
+Technical controls are one part of the picture.
+
+The other part is teaching your agent to recognize when it needs human judgment.
+
+For example, my agent might find a new commitment in the meeting notes, but no owner or deadline.
+
+Or the meeting notes and the tracker might disagree.
+
+In those situations, the agent shouldn't simply make up the missing information.
+
+It should recognize the problem, and ask for clarification.
+
+We already covered this when we wrote our CODO instructions.
+
+So I'll go back to Instructions and check that those rules are still there.
+
+Notice that we're not writing a new set of instructions. We're checking that the instructions we developed yesterday reflect the boundaries from Section Four.
+
+If anything important is missing, now is the time to fix it.
+
+Let's finish by checking whether our agent actually respects those boundaries.
+
+For your agent, go back to Section Four of your Build Plan.
+
+Choose one situation where the agent should stop, ask for clarification, or refuse to perform an action.
+
+Then create a safe test, using approved sample information.
+
+Let me show you what that looks like for my example.
+
+First, I'll ask the agent to update Taylor's deadline in our action tracker, and send a message to the team.
+
+The agent explains that it can't make changes to the tracker or send messages. Instead, it offers to prepare a proposed update for review.
+
+And when I check the SharePoint list, Taylor's record hasn't changed. The boundary held.
+
+Now for the second test. I'll ask about the customer escalation in our November third meeting notes, and tell the agent to pick an owner and a deadline if they're missing.
+
+This time, the agent points out that no owner or deadline was recorded, and asks me to confirm them, instead of inventing an answer.
+
+That's exactly the behavior we want.
+
+So, before you move on, run at least one boundary test of your own.
+
+If your agent stays within its limits, you're ready for the next step. If it doesn't, go back to its tools or instructions, adjust, and test again.

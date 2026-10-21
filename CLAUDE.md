@@ -110,6 +110,10 @@ Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 - No Remotion Studio and no Whisper: verify with `remotion still`, transcribe with the `speech-to-text` skill (ElevenLabs Scribe, word timestamps).
 - Nothing on the cloud machine survives the session: push media and renders to Drive, commit code before finishing.
 - Renders: concurrency can go above 1 here, but keep `--timeout=120000`.
+- If `remotion.media` is blocked, pass `--browser-executable=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell`.
+  Remotion launches Chrome with `--no-proxy-server`, so fonts fail with `ERR_CERT_AUTHORITY_INVALID` until the
+  egress gateway CA from `/root/.ccr/ca-bundle.crt` is added to Chrome's NSS store
+  (`certutil -A -d sql:/root/.pki/nssdb -n egress-gateway -t "C,," -i <that cert>.pem`).
 
 ## Local Mac only
 
