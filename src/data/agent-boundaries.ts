@@ -52,8 +52,9 @@ const img = (name: string) => `agent-boundaries/images/${name}.jpg`;
 export const agentBoundaries: VideoData = {
   audioSrc: 'audio/agent-boundaries.mp3',
   audioStartFrame: 0,
-  // Slide between scenes; start frames (and so every VO-anchored timing) are unchanged.
-  sceneTransition: { type: 'slide', durationInFrames: 15 },
+  // Slide only from one screenshot to the next (text cards cut as usual). Start frames, and so
+  // every VO-anchored timing, are unchanged.
+  sceneTransition: { type: 'slide', durationInFrames: 15, between: 'images' },
   scenes: [
     // 1 (0.00s) — "Yesterday, you created your agent"
     {

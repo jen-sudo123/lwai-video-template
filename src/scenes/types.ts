@@ -692,7 +692,9 @@ export type VideoData = {
   // Opt-in scene-to-scene transition. 'slide': each scene slides in from the right while the
   // previous one slides out left. Scene start frames are unchanged (the outgoing scene stays
   // mounted for the extra frames), so VO timings don't move. Default 15 frames.
-  sceneTransition?: { type: 'slide'; durationInFrames?: number };
+  // between: 'scenes' (default) slides at every scene change; 'images' only where one image
+  // scene follows another with a different image — all other changes stay hard cuts.
+  sceneTransition?: { type: 'slide'; durationInFrames?: number; between?: 'scenes' | 'images' };
   // Word-level captions for karaoke-style subtitle overlay.
   captions?: import('../CaptionOverlay').WordCaption[];
 };

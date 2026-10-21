@@ -649,6 +649,7 @@ export const videoDataSchema = z.object({
   sceneTransition: z.object({
     type: z.literal('slide'),
     durationInFrames: z.number().optional(),
+    between: z.enum(['scenes', 'images']).optional(),
   }).optional(),
   scenes: z.array(sceneSchema),
 });

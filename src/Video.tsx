@@ -78,6 +78,16 @@ export const Video: React.FC<VideoData> = ({ scenes, audioSrc, audioStartFrame, 
   const frame = useCurrentFrame();
   const sceneStarts: number[] = [];
   scenes.reduce((sum, scene) => { sceneStarts.push(sum); return sum + scene.durationInFrames; }, 0);
+  // Whether scene i slides in over scene i-1. between: 'images' limits slides to a change
+  // from one image to a different image (e.g. a run of screenshots); text cards cut as usual.
+  const sceneImage = (i: number): string | undefined => (scenes[i] as { image?: string } | undefined)?.image;
+  const slidesInto = (i: number): boolean => {
+    if (i <= 0 || i >= scenes.length) return false;
+    if (sceneTransition?.between !== 'images') return true;
+    const prev = sceneImage(i - 1);
+    const cur = sceneImage(i);
+    return !!prev && !!cur && prev !== cur;
+  };
 
   let cum = 0;
   let avatarHidden = false;
@@ -241,14 +251,15 @@ export const Video: React.FC<VideoData> = ({ scenes, audioSrc, audioStartFrame, 
         scenes.map((scene, i) => {
           const t = sceneTransition.durationInFrames ?? 15;
           const from = sceneStarts[i];
-          const isLast = i === scenes.length - 1;
+          const slideIn = slidesInto(i);
+          const slideOut = slidesInto(i + 1);
           return (
-            <Sequence key={i} from={from} durationInFrames={scene.durationInFrames + (isLast ? 0 : t)}>
+            <Sequence key={i} from={from} durationInFrames={scene.durationInFrames + (slideOut ? t : 0)}>
               <SlideFrame
                 durationInFrames={scene.durationInFrames}
                 transitionFrames={t}
-                slideIn={i > 0}
-                slideOut={!isLast}
+                slideIn={slideIn}
+                slideOut={slideOut}
               >
                 <SceneRenderer scene={scene} hasClipLayer={!!clipSrc} />
               </SlideFrame>
