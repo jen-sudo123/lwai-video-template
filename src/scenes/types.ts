@@ -630,6 +630,17 @@ export type Scene =
       cardTimings?: [number, number, number, number];
       modelAppearFrame?: number;
       durationInFrames: number;
+    }
+  | {
+      // Agent Build Plan (five sections, left) mapped onto CODO (four
+      // components, right). sectionFrames lights up [S1, S2, S3+4, S5];
+      // codoFrames reveals [Character, Objective, Do's & Don'ts, Output];
+      // allFrame returns every section to full strength.
+      layout: 'build-plan-codo-diagram';
+      sectionFrames?: [number, number, number, number];
+      codoFrames?: [number, number, number, number];
+      allFrame?: number;
+      durationInFrames: number;
     };
 
 export type ChatMessage = {

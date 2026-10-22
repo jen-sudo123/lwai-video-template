@@ -84,6 +84,7 @@ import { copilotWorkIq } from './data/copilot-work-iq';
 import { copilotSkills } from './data/copilot-skills';
 import { copilotResearcher } from './data/copilot-researcher';
 import { chatGPTPlugins } from './data/chatgpt-plugins';
+import { agentInstructions } from './data/agent-instructions';
 import { videoDataSchema } from './scenes/schemas';
 
 // Register one composition per video you want to render.
@@ -898,6 +899,16 @@ export const RemotionRoot: React.FC = () => {
         height={layout.height}
         schema={videoDataSchema}
         defaultProps={chatGPTPlugins}
+      />
+      <Composition
+        id="AgentInstructions"
+        component={Video}
+        durationInFrames={calculateTotalFrames(agentInstructions.scenes)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+        schema={videoDataSchema}
+        defaultProps={agentInstructions}
       />
     </>
   );

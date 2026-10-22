@@ -43,6 +43,7 @@ import { MeetingChecklistDiagram } from './diagrams/MeetingChecklistDiagram';
 import { AccessWorkflowDiagram } from './diagrams/AccessWorkflowDiagram';
 import { BoundedAutonomyDiagram } from './diagrams/BoundedAutonomyDiagram';
 import { BiasFunnelDiagram } from './diagrams/BiasFunnelDiagram';
+import { BuildPlanCodoDiagram } from './diagrams/BuildPlanCodoDiagram';
 
 // Routes a scene to its component. Add new layouts here as you create them.
 export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> = ({ scene, hasClipLayer }) => {
@@ -526,6 +527,14 @@ export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> =
         <BiasFunnelDiagram
           cardTimings={scene.cardTimings}
           modelAppearFrame={scene.modelAppearFrame}
+        />
+      );
+    case 'build-plan-codo-diagram':
+      return (
+        <BuildPlanCodoDiagram
+          sectionFrames={scene.sectionFrames}
+          codoFrames={scene.codoFrames}
+          allFrame={scene.allFrame}
         />
       );
   }

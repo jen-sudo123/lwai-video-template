@@ -627,6 +627,13 @@ export const sceneSchema = z.discriminatedUnion('layout', [
     modelAppearFrame: z.number().optional(),
     durationInFrames: z.number(),
   }),
+  z.object({
+    layout: z.literal('build-plan-codo-diagram'),
+    sectionFrames: z.tuple([z.number(), z.number(), z.number(), z.number()]).optional(),
+    codoFrames: z.tuple([z.number(), z.number(), z.number(), z.number()]).optional(),
+    allFrame: z.number().optional(),
+    durationInFrames: z.number(),
+  }),
 ]);
 
 export const videoDataSchema = z.object({
