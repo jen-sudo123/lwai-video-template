@@ -15,19 +15,19 @@ import { VideoData } from '../scenes/types';
 //  5  label-title-body  TODAY                     |   28.30 |   420
 //  6  label-title-body  MY EXAMPLE                |   42.30 |   306
 //  7  screen-demo       KNOWLEDGE                 |   52.50 |  2271
-//  8  label-title-body  YOUR AGENT · SECTION 3    |  128.20 |   486
+//  8  label-title-body  FOR YOUR WORKFLOW · SECTION 3|  128.20 |   486
 //  9  big-statement     THE PRINCIPLE             |  144.40 |   321
-//  10 screen-demo       YOUR AGENT                |  155.10 |   726
+//  10 screen-demo       FOR YOUR WORKFLOW         |  155.10 |   726
 //  11 label-title-body  MY EXAMPLE                |  179.30 |   435
 //  12 screen-demo       TOOL                      |  193.80 |  3087
 //  13 label-title-body  CONFIGURATION DECISIONS   |  296.70 |   732
 //  14 screen-demo       INSTRUCTIONS              |  321.10 |  1065
-//  15 label-title-body  YOUR AGENT                |  356.60 |   618
+//  15 label-title-body  FOR YOUR WORKFLOW         |  356.60 |   618
 //  16 screen-demo       INSTRUCTIONS              |  377.20 |    78
-//  17 label-title-body  YOUR AGENT                |  379.80 |  1020
+//  17 label-title-body  FOR YOUR WORKFLOW         |  379.80 |  1020
 //  18 label-title-body  MY EXAMPLE                |  413.80 |   225
 //  19 screen-demo       TEST 1                    |  421.30 |  1269
-//  20 label-title-body  YOUR AGENT                |  463.60 |   633
+//  20 label-title-body  FOR YOUR WORKFLOW         |  463.60 |   633
 //  21 label-title-body  IF A TEST IS BLOCKED      |  484.70 |   495
 //  22 big-statement     THE ASSIGNMENT            |  501.20 |   306
 //  23 big-statement     NEXT LESSON               |  511.40 |   192
@@ -709,10 +709,10 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 2271
     },
-    // 8 (128.20s) YOUR AGENT · SECTION 3
+    // 8 (128.20s) FOR YOUR WORKFLOW · SECTION 3
     {
       "layout": "label-title-body",
-      "label": "YOUR AGENT · SECTION 3",
+      "label": "FOR YOUR WORKFLOW · SECTION 3",
       "title": "Information:\nconnect approved sources",
       "body": [
         "A policy document",
@@ -745,10 +745,10 @@ export const agentKnowledgeTools: VideoData = {
       "label": "THE PRINCIPLE",
       "durationInFrames": 321
     },
-    // 10 (155.10s) YOUR AGENT
+    // 10 (155.10s) FOR YOUR WORKFLOW
     {
       "layout": "screen-demo",
-      "label": "YOUR AGENT",
+      "label": "FOR YOUR WORKFLOW",
       "steps": [
         {
           "from": 0,
@@ -1530,10 +1530,10 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 1065
     },
-    // 15 (356.60s) YOUR AGENT
+    // 15 (356.60s) FOR YOUR WORKFLOW
     {
       "layout": "label-title-body",
-      "label": "YOUR AGENT",
+      "label": "FOR YOUR WORKFLOW",
       "title": "Reference what\nyou connected",
       "body": [
         "Open yesterday’s CODO instructions",
@@ -1605,10 +1605,10 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 78
     },
-    // 17 (379.80s) YOUR AGENT
+    // 17 (379.80s) FOR YOUR WORKFLOW
     {
       "layout": "label-title-body",
-      "label": "YOUR AGENT",
+      "label": "FOR YOUR WORKFLOW",
       "title": "Test each\nconnected capability",
       "body": [
         "Use one knowledge source or tool",
@@ -1946,10 +1946,10 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 1269
     },
-    // 20 (463.60s) YOUR AGENT
+    // 20 (463.60s) FOR YOUR WORKFLOW
     {
       "layout": "label-title-body",
-      "label": "YOUR AGENT",
+      "label": "FOR YOUR WORKFLOW",
       "title": "Your tests will\nbe different",
       "body": [
         "Two capabilities, two tests",
