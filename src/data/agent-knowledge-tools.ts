@@ -15,24 +15,25 @@ import { VideoData } from '../scenes/types';
 //  5  label-title-body  TODAY                     |   28.30 |   420
 //  6  label-title-body  MY EXAMPLE                |   42.30 |   306
 //  7  screen-demo       KNOWLEDGE                 |   52.50 |  2271
-//  8  screen-demo       FOR YOUR WORKFLOW         |  128.20 |   807
-//  9  screen-demo       FOR YOUR WORKFLOW         |  155.10 |  1161
-//  10 screen-demo       TOOL                      |  193.80 |  3087
-//  11 label-title-body  CONFIGURATION DECISION    |  296.70 |   732
-//  12 screen-demo       INSTRUCTIONS              |  321.10 |  1065
-//  13 label-title-body  FOR YOUR WORKFLOW         |  356.60 |   618
-//  14 screen-demo       INSTRUCTIONS              |  377.20 |    78
-//  15 screen-demo       FOR YOUR WORKFLOW         |  379.80 |   324
-//  16 big-statement     FOR YOUR WORKFLOW         |  390.60 |   696
-//  17 screen-demo       MY EXAMPLE                |  413.80 |   225
-//  18 big-statement     MY EXAMPLE                |  421.30 |    69
-//  19 screen-demo       TEST 1                    |  423.60 |   804
-//  20 big-statement     MY EXAMPLE                |  450.40 |    74
-//  21 screen-demo       TEST 2                    |  452.85 |   322
-//  22 label-title-body  FOR YOUR WORKFLOW         |  463.60 |   633
-//  23 label-title-body  IF A TEST IS BLOCKED      |  484.70 |   495
-//  24 big-statement     THE ASSIGNMENT            |  501.20 |   306
-//  25 big-statement     NEXT LESSON               |  511.40 |   192
+//  8  converge          FOR YOUR WORKFLOW         |  128.20 |   807
+//  9  label-title-body  FOR YOUR WORKFLOW · TOOLS/ACTIONS|  155.10 |   726
+//  10 label-title-body  MY EXAMPLE                |  179.30 |   435
+//  11 screen-demo       TOOL                      |  193.80 |  3087
+//  12 label-title-body  CONFIGURATION DECISION    |  296.70 |   732
+//  13 screen-demo       INSTRUCTIONS              |  321.10 |  1065
+//  14 label-title-body  FOR YOUR WORKFLOW         |  356.60 |   618
+//  15 screen-demo       INSTRUCTIONS              |  377.20 |    78
+//  16 screen-demo       FOR YOUR WORKFLOW         |  379.80 |   324
+//  17 big-statement     FOR YOUR WORKFLOW         |  390.60 |   696
+//  18 screen-demo       MY EXAMPLE                |  413.80 |   225
+//  19 big-statement     MY EXAMPLE                |  421.30 |    69
+//  20 screen-demo       TEST 1                    |  423.60 |   804
+//  21 big-statement     MY EXAMPLE                |  450.40 |    74
+//  22 screen-demo       TEST 2                    |  452.85 |   322
+//  23 label-title-body  FOR YOUR WORKFLOW         |  463.60 |   633
+//  24 label-title-body  IF A TEST IS BLOCKED      |  484.70 |   495
+//  25 big-statement     THE ASSIGNMENT            |  501.20 |   306
+//  26 big-statement     NEXT LESSON               |  511.40 |   192
 //                                                    total   15534
 
 export const agentKnowledgeTools: VideoData = {
@@ -713,118 +714,112 @@ export const agentKnowledgeTools: VideoData = {
     },
     // 8 (128.20s) FOR YOUR WORKFLOW
     {
-      "layout": "screen-demo",
+      "layout": "converge",
       "label": "FOR YOUR WORKFLOW",
-      "steps": [
+      "title": "Your sources may differ.\nThe principle is the same.",
+      "titleTimings": [
+        3,
+        377
+      ],
+      "titleHighlight": "the same",
+      "sources": [
         {
-          "from": 0,
-          "text": "Section 3 → Information → Connect your approved source"
+          "text": "Approved Weekly Meeting Notes",
+          "tag": "MY EXAMPLE",
+          "icon": "DocumentTextIcon",
+          "from": 3
         },
         {
-          "from": 495,
-          "text": "Connect it, describe it, check it’s available"
+          "text": "A policy document",
+          "icon": "ShieldCheckIcon",
+          "from": 197
         },
         {
-          "from": 662,
-          "text": "You don’t need SharePoint because I use it"
-        }
-      ],
-      "shots": [
+          "text": "Project files",
+          "icon": "FolderIcon",
+          "from": 233
+        },
         {
-          "from": 0,
-          "image": "images/agent-knowledge-tools/screens/00-build-plan-section-3.png",
-          "imageSize": [
-            697,
-            341
-          ],
-          "transition": "fade",
-          "camera": [
-            {
-              "frame": 0,
-              "x": 348,
-              "y": 170,
-              "zoom": 1
-            }
-          ],
-          "marks": [
-            {
-              "type": "box",
-              "rect": [
-                44,
-                82,
-                612,
-                80
-              ],
-              "from": 12
-            }
-          ]
+          "text": "Reference materials",
+          "icon": "BookOpenIcon",
+          "from": 269
+        },
+        {
+          "text": "Another approved source",
+          "icon": "SparklesIcon",
+          "dashed": true,
+          "from": 310
         }
       ],
+      "target": {
+        "label": "CONNECT YOUR APPROVED SOURCE",
+        "steps": [
+          {
+            "text": "Connect the information it needs",
+            "icon": "LinkIcon"
+          },
+          {
+            "text": "Give it a clear description",
+            "icon": "PencilSquareIcon"
+          },
+          {
+            "text": "Verify that it’s available",
+            "icon": "CheckBadgeIcon"
+          }
+        ]
+      },
+      "convergeFrom": 495,
       "durationInFrames": 807
     },
-    // 9 (155.10s) FOR YOUR WORKFLOW
+    // 9 (155.10s) FOR YOUR WORKFLOW · TOOLS/ACTIONS
     {
-      "layout": "screen-demo",
-      "label": "FOR YOUR WORKFLOW",
-      "steps": [
-        {
-          "from": 0,
-          "text": "Section 3 → Tools/actions → Choose the required capability"
-        },
-        {
-          "from": 732,
-          "text": "My example: retrieve tracker records from a SharePoint List"
-        },
-        {
-          "from": 961,
-          "text": "No tool needed in version 1? Don’t add one"
-        }
+      "layout": "label-title-body",
+      "label": "FOR YOUR WORKFLOW · TOOLS/ACTIONS",
+      "title": "What does your agent\nneed to do?",
+      "body": [
+        "Retrieve records",
+        "Look something up in another system",
+        "Perform an approved action"
       ],
-      "shots": [
-        {
-          "from": 0,
-          "image": "images/agent-knowledge-tools/screens/00-build-plan-section-3.png",
-          "imageSize": [
-            697,
-            341
-          ],
-          "transition": "fade",
-          "camera": [
-            {
-              "frame": 0,
-              "x": 348,
-              "y": 170,
-              "zoom": 1
-            }
-          ],
-          "marks": [
-            {
-              "type": "box",
-              "rect": [
-                44,
-                168,
-                600,
-                104
-              ],
-              "from": 191,
-              "to": 726
-            },
-            {
-              "type": "box",
-              "rect": [
-                44,
-                222,
-                600,
-                50
-              ],
-              "from": 732
-            }
-          ]
-        }
+      "bodyRight": true,
+      "bodyCards": true,
+      "bodyCardIcons": [
+        "eye",
+        "compare",
+        "check"
       ],
-      "durationInFrames": 1161
+      "bodyTimings": [
+        477,
+        519,
+        587
+      ],
+      "durationInFrames": 726
     },
-    // 10 (193.80s) TOOL
+    // 10 (179.30s) MY EXAMPLE
+    {
+      "layout": "label-title-body",
+      "label": "MY EXAMPLE",
+      "title": "Retrieve commitments\nfrom a SharePoint List",
+      "body": [
+        "Choose the required capability",
+        "No tool needed in version 1? That’s fine.",
+        "Don’t add one just to follow my example"
+      ],
+      "bodyRight": true,
+      "bodyCards": true,
+      "bodyCardIcons": [
+        "sliders",
+        "check",
+        "x"
+      ],
+      "bodyTimings": [
+        144,
+        235,
+        350
+      ],
+      "durationInFrames": 435
+    },
+    // 11 (193.80s) TOOL
     {
       "layout": "screen-demo",
       "label": "TOOL",
@@ -1415,7 +1410,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 3087
     },
-    // 11 (296.70s) CONFIGURATION DECISION
+    // 12 (296.70s) CONFIGURATION DECISION
     {
       "layout": "label-title-body",
       "label": "CONFIGURATION DECISION",
@@ -1436,7 +1431,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 732
     },
-    // 12 (321.10s) INSTRUCTIONS
+    // 13 (321.10s) INSTRUCTIONS
     {
       "layout": "screen-demo",
       "label": "INSTRUCTIONS",
@@ -1614,7 +1609,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 1065
     },
-    // 13 (356.60s) FOR YOUR WORKFLOW
+    // 14 (356.60s) FOR YOUR WORKFLOW
     {
       "layout": "label-title-body",
       "label": "FOR YOUR WORKFLOW",
@@ -1633,7 +1628,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 618
     },
-    // 14 (377.20s) INSTRUCTIONS
+    // 15 (377.20s) INSTRUCTIONS
     {
       "layout": "screen-demo",
       "label": "INSTRUCTIONS",
@@ -1689,7 +1684,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 78
     },
-    // 15 (379.80s) FOR YOUR WORKFLOW
+    // 16 (379.80s) FOR YOUR WORKFLOW
     {
       "layout": "screen-demo",
       "label": "FOR YOUR WORKFLOW",
@@ -1732,7 +1727,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 324
     },
-    // 16 (390.60s) FOR YOUR WORKFLOW
+    // 17 (390.60s) FOR YOUR WORKFLOW
     {
       "layout": "big-statement",
       "text": "Ask it to use one connected source or tool\nfor a small, specific, safe task.\nCheck the result against the original source.",
@@ -1746,7 +1741,7 @@ export const agentKnowledgeTools: VideoData = {
       "label": "FOR YOUR WORKFLOW",
       "durationInFrames": 696
     },
-    // 17 (413.80s) MY EXAMPLE
+    // 18 (413.80s) MY EXAMPLE
     {
       "layout": "screen-demo",
       "label": "MY EXAMPLE",
@@ -1803,7 +1798,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 225
     },
-    // 18 (421.30s) MY EXAMPLE
+    // 19 (421.30s) MY EXAMPLE
     {
       "layout": "big-statement",
       "text": "Test 1: SharePoint tool",
@@ -1815,7 +1810,7 @@ export const agentKnowledgeTools: VideoData = {
       "label": "MY EXAMPLE",
       "durationInFrames": 69
     },
-    // 19 (423.60s) TEST 1
+    // 20 (423.60s) TEST 1
     {
       "layout": "screen-demo",
       "label": "TEST 1",
@@ -2006,7 +2001,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 804
     },
-    // 20 (450.40s) MY EXAMPLE
+    // 21 (450.40s) MY EXAMPLE
     {
       "layout": "big-statement",
       "text": "Test 2: Knowledge source",
@@ -2018,7 +2013,7 @@ export const agentKnowledgeTools: VideoData = {
       "label": "MY EXAMPLE",
       "durationInFrames": 74
     },
-    // 21 (452.85s) TEST 2
+    // 22 (452.85s) TEST 2
     {
       "layout": "screen-demo",
       "label": "TEST 2",
@@ -2127,7 +2122,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 322
     },
-    // 22 (463.60s) FOR YOUR WORKFLOW
+    // 23 (463.60s) FOR YOUR WORKFLOW
     {
       "layout": "label-title-body",
       "label": "FOR YOUR WORKFLOW",
@@ -2146,7 +2141,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 633
     },
-    // 23 (484.70s) IF A TEST IS BLOCKED
+    // 24 (484.70s) IF A TEST IS BLOCKED
     {
       "layout": "label-title-body",
       "label": "IF A TEST IS BLOCKED",
@@ -2165,7 +2160,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 495
     },
-    // 24 (501.20s) THE ASSIGNMENT
+    // 25 (501.20s) THE ASSIGNMENT
     {
       "layout": "big-statement",
       "text": "Verify they work, or find\nexactly what’s blocking them",
@@ -2178,7 +2173,7 @@ export const agentKnowledgeTools: VideoData = {
       "label": "THE ASSIGNMENT",
       "durationInFrames": 306
     },
-    // 25 (511.40s) NEXT LESSON
+    // 26 (511.40s) NEXT LESSON
     {
       "layout": "big-statement",
       "text": "Set the human-control\nboundaries",
