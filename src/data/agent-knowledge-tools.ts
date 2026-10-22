@@ -9,26 +9,30 @@ import { VideoData } from '../scenes/types';
 //
 //  #  layout            label                     | start s | frames
 //  1  title-card-green  COPILOT STUDIO            |    0.00 |   120
-//  2  screen-demo       BUILD PLAN                |    4.00 |  1455
-//  3  screen-demo       KNOWLEDGE                 |   52.50 |  2271
-//  4  screen-demo       FOR YOUR WORKFLOW         |  128.20 |   807
-//  5  screen-demo       FOR YOUR WORKFLOW         |  155.10 |  1161
-//  6  screen-demo       TOOL                      |  193.80 |  3087
-//  7  label-title-body  CONFIGURATION DECISION    |  296.70 |   732
-//  8  screen-demo       INSTRUCTIONS              |  321.10 |  1065
-//  9  label-title-body  FOR YOUR WORKFLOW         |  356.60 |   618
-//  10 screen-demo       INSTRUCTIONS              |  377.20 |    78
-//  11 screen-demo       FOR YOUR WORKFLOW         |  379.80 |   324
-//  12 big-statement     FOR YOUR WORKFLOW         |  390.60 |   696
-//  13 screen-demo       MY EXAMPLE                |  413.80 |   225
-//  14 big-statement     MY EXAMPLE                |  421.30 |    69
-//  15 screen-demo       TEST 1                    |  423.60 |   804
-//  16 big-statement     MY EXAMPLE                |  450.40 |    74
-//  17 screen-demo       TEST 2                    |  452.85 |   322
-//  18 label-title-body  FOR YOUR WORKFLOW         |  463.60 |   633
-//  19 label-title-body  IF A TEST IS BLOCKED      |  484.70 |   495
-//  20 big-statement     THE ASSIGNMENT            |  501.20 |   306
-//  21 big-statement     NEXT LESSON               |  511.40 |   192
+//  2  screen-demo       BUILD PLAN                |    4.00 |   150
+//  3  label-title-body  YESTERDAY                 |    9.00 |   276
+//  4  screen-demo       BUILD PLAN                |   18.20 |   303
+//  5  label-title-body  TODAY                     |   28.30 |   420
+//  6  label-title-body  MY EXAMPLE                |   42.30 |   306
+//  7  screen-demo       KNOWLEDGE                 |   52.50 |  2271
+//  8  screen-demo       FOR YOUR WORKFLOW         |  128.20 |   807
+//  9  screen-demo       FOR YOUR WORKFLOW         |  155.10 |  1161
+//  10 screen-demo       TOOL                      |  193.80 |  3087
+//  11 label-title-body  CONFIGURATION DECISION    |  296.70 |   732
+//  12 screen-demo       INSTRUCTIONS              |  321.10 |  1065
+//  13 label-title-body  FOR YOUR WORKFLOW         |  356.60 |   618
+//  14 screen-demo       INSTRUCTIONS              |  377.20 |    78
+//  15 screen-demo       FOR YOUR WORKFLOW         |  379.80 |   324
+//  16 big-statement     FOR YOUR WORKFLOW         |  390.60 |   696
+//  17 screen-demo       MY EXAMPLE                |  413.80 |   225
+//  18 big-statement     MY EXAMPLE                |  421.30 |    69
+//  19 screen-demo       TEST 1                    |  423.60 |   804
+//  20 big-statement     MY EXAMPLE                |  450.40 |    74
+//  21 screen-demo       TEST 2                    |  452.85 |   322
+//  22 label-title-body  FOR YOUR WORKFLOW         |  463.60 |   633
+//  23 label-title-body  IF A TEST IS BLOCKED      |  484.70 |   495
+//  24 big-statement     THE ASSIGNMENT            |  501.20 |   306
+//  25 big-statement     NEXT LESSON               |  511.40 |   192
 //                                                    total   15534
 
 export const agentKnowledgeTools: VideoData = {
@@ -50,42 +54,6 @@ export const agentKnowledgeTools: VideoData = {
         {
           "from": 0,
           "text": "Section 3: What does your agent need?"
-        },
-        {
-          "from": 157,
-          "text": "Instructions alone don’t give access"
-        },
-        {
-          "from": 433,
-          "text": "What you identified in Section 3"
-        },
-        {
-          "from": 493,
-          "text": "Information"
-        },
-        {
-          "from": 554,
-          "text": "Tools/actions"
-        },
-        {
-          "from": 642,
-          "text": "Access"
-        },
-        {
-          "from": 737,
-          "text": "Knowledge: information your agent can use"
-        },
-        {
-          "from": 844,
-          "text": "Tools: operations in other systems"
-        },
-        {
-          "from": 1157,
-          "text": "My example: meeting notes and the action tracker"
-        },
-        {
-          "from": 1277,
-          "text": "Apply it to your own Build Plan"
         }
       ],
       "shots": [
@@ -114,9 +82,70 @@ export const agentKnowledgeTools: VideoData = {
                 356,
                 38
               ],
-              "from": 96,
-              "to": 427
-            },
+              "from": 99
+            }
+          ]
+        }
+      ],
+      "durationInFrames": 150
+    },
+    // 3 (9.00s) YESTERDAY
+    {
+      "layout": "label-title-body",
+      "label": "YESTERDAY",
+      "title": "Instructions alone\naren’t access",
+      "body": [
+        "CODO tells your agent how to work",
+        "It still can’t reach your information or systems"
+      ],
+      "bodyRight": true,
+      "bodyCards": true,
+      "bodyTimings": [
+        9,
+        143
+      ],
+      "durationInFrames": 276
+    },
+    // 4 (18.20s) BUILD PLAN
+    {
+      "layout": "screen-demo",
+      "label": "BUILD PLAN",
+      "steps": [
+        {
+          "from": 0,
+          "text": "What you identified in Section 3"
+        },
+        {
+          "from": 67,
+          "text": "Information: documents and data sources"
+        },
+        {
+          "from": 128,
+          "text": "Tools/actions: what it must do"
+        },
+        {
+          "from": 216,
+          "text": "Access: can your agent reach them?"
+        }
+      ],
+      "shots": [
+        {
+          "from": 0,
+          "image": "images/agent-knowledge-tools/screens/00-build-plan-section-3.png",
+          "imageSize": [
+            697,
+            341
+          ],
+          "transition": "fade",
+          "camera": [
+            {
+              "frame": 0,
+              "x": 348,
+              "y": 170,
+              "zoom": 1
+            }
+          ],
+          "marks": [
             {
               "type": "box",
               "rect": [
@@ -125,8 +154,8 @@ export const agentKnowledgeTools: VideoData = {
                 612,
                 80
               ],
-              "from": 493,
-              "to": 548
+              "from": 67,
+              "to": 122
             },
             {
               "type": "box",
@@ -136,8 +165,8 @@ export const agentKnowledgeTools: VideoData = {
                 600,
                 104
               ],
-              "from": 554,
-              "to": 636
+              "from": 128,
+              "to": 210
             },
             {
               "type": "box",
@@ -147,57 +176,52 @@ export const agentKnowledgeTools: VideoData = {
                 310,
                 26
               ],
-              "from": 642,
-              "to": 731
-            },
-            {
-              "type": "box",
-              "rect": [
-                44,
-                82,
-                612,
-                80
-              ],
-              "from": 737,
-              "to": 838
-            },
-            {
-              "type": "box",
-              "rect": [
-                44,
-                168,
-                600,
-                104
-              ],
-              "from": 844,
-              "to": 1151
-            },
-            {
-              "type": "box",
-              "rect": [
-                44,
-                112,
-                612,
-                50
-              ],
-              "from": 1166
-            },
-            {
-              "type": "box",
-              "rect": [
-                44,
-                222,
-                600,
-                50
-              ],
-              "from": 1166
+              "from": 216
             }
           ]
         }
       ],
-      "durationInFrames": 1455
+      "durationInFrames": 303
     },
-    // 3 (52.50s) KNOWLEDGE
+    // 5 (28.30s) TODAY
+    {
+      "layout": "label-title-body",
+      "label": "TODAY",
+      "title": "Connect your agent’s\ncapabilities",
+      "body": [
+        "Knowledge: information it can use",
+        "Tools: operations, like retrieving records",
+        "You might need one or both"
+      ],
+      "bodyRight": true,
+      "bodyCards": true,
+      "bodyTimings": [
+        8,
+        115,
+        324
+      ],
+      "durationInFrames": 420
+    },
+    // 6 (42.30s) MY EXAMPLE
+    {
+      "layout": "label-title-body",
+      "label": "MY EXAMPLE",
+      "title": "Team Action\nFollow-Up Agent",
+      "body": [
+        "Knowledge: Approved Weekly Meeting Notes",
+        "Tool: Read Team Action Tracker",
+        "Apply it to your own Build Plan"
+      ],
+      "bodyRight": true,
+      "bodyCards": true,
+      "bodyTimings": [
+        17,
+        62,
+        128
+      ],
+      "durationInFrames": 306
+    },
+    // 7 (52.50s) KNOWLEDGE
     {
       "layout": "screen-demo",
       "label": "KNOWLEDGE",
@@ -687,7 +711,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 2271
     },
-    // 4 (128.20s) FOR YOUR WORKFLOW
+    // 8 (128.20s) FOR YOUR WORKFLOW
     {
       "layout": "screen-demo",
       "label": "FOR YOUR WORKFLOW",
@@ -738,7 +762,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 807
     },
-    // 5 (155.10s) FOR YOUR WORKFLOW
+    // 9 (155.10s) FOR YOUR WORKFLOW
     {
       "layout": "screen-demo",
       "label": "FOR YOUR WORKFLOW",
@@ -800,7 +824,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 1161
     },
-    // 6 (193.80s) TOOL
+    // 10 (193.80s) TOOL
     {
       "layout": "screen-demo",
       "label": "TOOL",
@@ -1391,7 +1415,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 3087
     },
-    // 7 (296.70s) CONFIGURATION DECISION
+    // 11 (296.70s) CONFIGURATION DECISION
     {
       "layout": "label-title-body",
       "label": "CONFIGURATION DECISION",
@@ -1412,7 +1436,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 732
     },
-    // 8 (321.10s) INSTRUCTIONS
+    // 12 (321.10s) INSTRUCTIONS
     {
       "layout": "screen-demo",
       "label": "INSTRUCTIONS",
@@ -1423,11 +1447,18 @@ export const agentKnowledgeTools: VideoData = {
         },
         {
           "from": 130,
-          "text": "Name the tool in the tracker step"
+          "label": "BEFORE",
+          "text": "The step about existing tracker records"
+        },
+        {
+          "from": 247,
+          "label": "AFTER",
+          "text": "Names the configured Read Team Action Tracker tool"
         },
         {
           "from": 349,
-          "text": "Name the knowledge source in the notes step"
+          "label": "INSTRUCTIONS",
+          "text": "Name Approved Weekly Meeting Notes in the notes step"
         },
         {
           "from": 503,
@@ -1453,6 +1484,81 @@ export const agentKnowledgeTools: VideoData = {
               "x": 1100,
               "y": 900,
               "zoom": 1.5
+            }
+          ]
+        },
+        {
+          "from": 130,
+          "image": "images/agent-knowledge-tools/screens/12a-instruction-before.png",
+          "imageSize": [
+            727,
+            331
+          ],
+          "transition": "fade",
+          "camera": [
+            {
+              "frame": 130,
+              "x": 364,
+              "y": 166,
+              "zoom": 1
+            }
+          ],
+          "marks": [
+            {
+              "type": "box",
+              "rect": [
+                100,
+                170,
+                348,
+                16
+              ],
+              "from": 144
+            }
+          ]
+        },
+        {
+          "from": 247,
+          "image": "images/agent-knowledge-tools/screens/12b-instruction-after.png",
+          "imageSize": [
+            1145,
+            422
+          ],
+          "transition": "fade",
+          "camera": [
+            {
+              "frame": 247,
+              "x": 572,
+              "y": 211,
+              "zoom": 1
+            }
+          ],
+          "marks": [
+            {
+              "type": "box",
+              "rect": [
+                76,
+                222,
+                966,
+                14
+              ],
+              "from": 255
+            }
+          ]
+        },
+        {
+          "from": 349,
+          "image": "images/agent-knowledge-tools/screens/12-instructions-reference-configured-resources.jpg",
+          "imageSize": [
+            2844,
+            1560
+          ],
+          "transition": "fade",
+          "camera": [
+            {
+              "frame": 349,
+              "x": 1100,
+              "y": 900,
+              "zoom": 1.5
             },
             {
               "frame": 852,
@@ -1466,22 +1572,11 @@ export const agentKnowledgeTools: VideoData = {
               "type": "box",
               "rect": [
                 196,
-                826,
-                1680,
-                82
-              ],
-              "from": 141,
-              "to": 345
-            },
-            {
-              "type": "box",
-              "rect": [
-                196,
                 786,
                 1320,
                 40
               ],
-              "from": 349,
+              "from": 357,
               "to": 846
             },
             {
@@ -1502,7 +1597,7 @@ export const agentKnowledgeTools: VideoData = {
                 282,
                 30
               ],
-              "from": 255
+              "from": 357
             },
             {
               "type": "underline",
@@ -1519,7 +1614,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 1065
     },
-    // 9 (356.60s) FOR YOUR WORKFLOW
+    // 13 (356.60s) FOR YOUR WORKFLOW
     {
       "layout": "label-title-body",
       "label": "FOR YOUR WORKFLOW",
@@ -1538,7 +1633,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 618
     },
-    // 10 (377.20s) INSTRUCTIONS
+    // 14 (377.20s) INSTRUCTIONS
     {
       "layout": "screen-demo",
       "label": "INSTRUCTIONS",
@@ -1594,7 +1689,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 78
     },
-    // 11 (379.80s) FOR YOUR WORKFLOW
+    // 15 (379.80s) FOR YOUR WORKFLOW
     {
       "layout": "screen-demo",
       "label": "FOR YOUR WORKFLOW",
@@ -1637,7 +1732,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 324
     },
-    // 12 (390.60s) FOR YOUR WORKFLOW
+    // 16 (390.60s) FOR YOUR WORKFLOW
     {
       "layout": "big-statement",
       "text": "Ask it to use one connected source or tool\nfor a small, specific, safe task.\nCheck the result against the original source.",
@@ -1651,7 +1746,7 @@ export const agentKnowledgeTools: VideoData = {
       "label": "FOR YOUR WORKFLOW",
       "durationInFrames": 696
     },
-    // 13 (413.80s) MY EXAMPLE
+    // 17 (413.80s) MY EXAMPLE
     {
       "layout": "screen-demo",
       "label": "MY EXAMPLE",
@@ -1708,7 +1803,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 225
     },
-    // 14 (421.30s) MY EXAMPLE
+    // 18 (421.30s) MY EXAMPLE
     {
       "layout": "big-statement",
       "text": "Test 1: SharePoint tool",
@@ -1720,7 +1815,7 @@ export const agentKnowledgeTools: VideoData = {
       "label": "MY EXAMPLE",
       "durationInFrames": 69
     },
-    // 15 (423.60s) TEST 1
+    // 19 (423.60s) TEST 1
     {
       "layout": "screen-demo",
       "label": "TEST 1",
@@ -1911,7 +2006,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 804
     },
-    // 16 (450.40s) MY EXAMPLE
+    // 20 (450.40s) MY EXAMPLE
     {
       "layout": "big-statement",
       "text": "Test 2: Knowledge source",
@@ -1923,7 +2018,7 @@ export const agentKnowledgeTools: VideoData = {
       "label": "MY EXAMPLE",
       "durationInFrames": 74
     },
-    // 17 (452.85s) TEST 2
+    // 21 (452.85s) TEST 2
     {
       "layout": "screen-demo",
       "label": "TEST 2",
@@ -2032,7 +2127,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 322
     },
-    // 18 (463.60s) FOR YOUR WORKFLOW
+    // 22 (463.60s) FOR YOUR WORKFLOW
     {
       "layout": "label-title-body",
       "label": "FOR YOUR WORKFLOW",
@@ -2051,7 +2146,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 633
     },
-    // 19 (484.70s) IF A TEST IS BLOCKED
+    // 23 (484.70s) IF A TEST IS BLOCKED
     {
       "layout": "label-title-body",
       "label": "IF A TEST IS BLOCKED",
@@ -2070,7 +2165,7 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 495
     },
-    // 20 (501.20s) THE ASSIGNMENT
+    // 24 (501.20s) THE ASSIGNMENT
     {
       "layout": "big-statement",
       "text": "Verify they work, or find\nexactly what’s blocking them",
@@ -2083,7 +2178,7 @@ export const agentKnowledgeTools: VideoData = {
       "label": "THE ASSIGNMENT",
       "durationInFrames": 306
     },
-    // 21 (511.40s) NEXT LESSON
+    // 25 (511.40s) NEXT LESSON
     {
       "layout": "big-statement",
       "text": "Set the human-control\nboundaries",
