@@ -136,7 +136,9 @@ Let's start with knowledge.
 
 <break time="0.5s"/>First, I'll test the SharePoint tool.
 
-<break time="0.5s"/>I'll open Preview and ask: 'Retrieve the existing commitments from the Team Action Tracker. Show the task, owner, due date, and status. Do not change anything.'
+<break time="0.5s"/>I'll open Preview and ask:
+
+<break time="0.3s"/>'Retrieve the existing commitments from the Team Action Tracker. Show the task, owner, due date, and status. Do not change anything.'
 
 <break time="0.5s"/>Now I can compare the results with the actual tracker.
 
