@@ -544,8 +544,44 @@ const imageMarquee = z.object({
   durationInFrames: z.number(),
 });
 
+const rect = z.tuple([z.number(), z.number(), z.number(), z.number()]);
+
+const screenDemo = z.object({
+  layout: z.literal('screen-demo'),
+  label: z.string(),
+  steps: z.array(z.object({ from: z.number(), text: z.string() })),
+  shots: z.array(z.object({
+    from: z.number(),
+    image: z.string().optional(),
+    imageSize: z.tuple([z.number(), z.number()]),
+    transition: z.enum(['slide', 'fade', 'cut']).optional(),
+    camera: z.array(z.object({ frame: z.number(), x: z.number(), y: z.number(), zoom: z.number() })).optional(),
+    spotlights: z.array(z.object({ rect, from: z.number(), to: z.number().optional() })).optional(),
+    marks: z.array(z.object({ type: z.enum(['underline', 'circle']), rect, from: z.number() })).optional(),
+    cursor: z.array(z.object({ frame: z.number(), x: z.number(), y: z.number(), click: z.boolean().optional() })).optional(),
+    typing: z.object({ rect, text: z.string(), from: z.number(), to: z.number(), fontSize: z.number(), textX: z.number() }).optional(),
+    reveal: z.object({ rect, from: z.number(), duration: z.number() }).optional(),
+    compare: z.object({
+      before: z.string(),
+      after: z.string(),
+      beforeLabel: z.string(),
+      afterLabel: z.string(),
+      highlight: rect,
+      highlightFrom: z.number(),
+      stamp: z.string(),
+      stampFrom: z.number(),
+      statement: z.string(),
+      statementHighlight: z.string(),
+      statementFrom: z.number(),
+      crop: rect.optional(),
+    }).optional(),
+  })),
+  durationInFrames: z.number(),
+});
+
 export const sceneSchema = z.discriminatedUnion('layout', [
   titleCardGreen,
+  screenDemo,
   blank,
   textImageSplit,
   centeredImageCaption,

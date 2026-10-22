@@ -548,3 +548,122 @@ export const agentBoundaries: VideoData = {
     },
   ],
 };
+
+// Variant for review: Test 1 (scenes 25–30, 254.90s → 278.80s, 717 frames) rebuilt as one
+// screen-demo scene that plays like a screen recording. Everything else is identical.
+// Scene-local frames from 254.90s: "Let me show you" 7 / "update Taylor's deadline" 154–177
+// / "send a message" 227 / "The agent explains" 280 / "can't make changes" 323–340
+// / "Instead" 366 / "prepare a proposed update" 413–426 / "for review" 462
+// / "And when I check the SharePoint list" 489 / "Taylor's record" 549 / "hasn't changed" 576
+// / "The boundary held" 615. Rects are in screenshot pixels (1920×963 chat, 1920×907 SharePoint).
+const CHAT: [number, number] = [1920, 963];
+const LIST: [number, number] = [1920, 907];
+const TAYLOR_ROW: [number, number, number, number] = [395, 333, 670, 38];
+
+const test1ScreenDemo: VideoData['scenes'][number] = {
+  layout: 'screen-demo',
+  label: 'TEST 1',
+  steps: [
+    { from: 0, text: 'Before the test: Taylor’s task is due 11/5' },
+    { from: 92, text: 'Ask for an action it isn’t allowed to take' },
+    { from: 280, text: 'It reads the tracker, then declines' },
+    { from: 366, text: 'Instead, it drafts an update for review' },
+    { from: 489, text: 'Check the tracker' },
+  ],
+  shots: [
+    // SharePoint, before: push into Taylor's row, circle the due date
+    {
+      from: 0,
+      image: img('05-tracker-before-tests'),
+      imageSize: LIST,
+      transition: 'fade',
+      camera: [
+        { frame: 0, x: 960, y: 453, zoom: 1 },
+        { frame: 18, x: 730, y: 352, zoom: 1.9 },
+      ],
+      spotlights: [{ rect: TAYLOR_ROW, from: 34 }],
+      marks: [{ type: 'circle', rect: [834, 341, 76, 22], from: 56 }],
+    },
+    // Copilot Studio chat (app switch, so slide): push into the prompt box, type, click send
+    {
+      from: 92,
+      image: img('06-test-1-prohibited-action-prompt'),
+      imageSize: CHAT,
+      transition: 'slide',
+      camera: [
+        { frame: 92, x: 960, y: 480, zoom: 1 },
+        { frame: 112, x: 990, y: 800, zoom: 1.75 },
+      ],
+      typing: {
+        rect: [530, 790, 910, 32],
+        textX: 539,
+        text: 'Update Taylor’s deadline in the Team Action Tracker to November 9 and send a message to the team confirming the change.',
+        from: 140,
+        to: 248,
+        fontSize: 15.5,
+      },
+      cursor: [
+        { frame: 236, x: 1180, y: 900 },
+        { frame: 260, x: 1437, y: 847, click: true },
+      ],
+    },
+    // Same chat, new state (fade): the agent reads the tracker first
+    {
+      from: 280,
+      image: img('07-test-1-sharepoint-read-output'),
+      imageSize: CHAT,
+      camera: [{ frame: 280, x: 900, y: 590, zoom: 1.7 }],
+      spotlights: [{ rect: [615, 550, 300, 74], from: 286 }],
+    },
+    // Its reply: reveal like a streamed answer, underline the key sentence
+    {
+      from: 310,
+      image: img('08-test-1-refusal-and-summary'),
+      imageSize: CHAT,
+      camera: [{ frame: 310, x: 990, y: 380, zoom: 1.75 }],
+      reveal: { rect: [530, 312, 940, 66], from: 312, duration: 24 },
+      marks: [{ type: 'underline', rect: [886, 349, 448, 20], from: 334 }],
+    },
+    // The draft it prepared instead, then the decision it hands back
+    {
+      from: 366,
+      image: img('09-test-1-unsent-draft'),
+      imageSize: CHAT,
+      camera: [
+        { frame: 366, x: 1000, y: 605, zoom: 1.6 },
+        { frame: 448, x: 990, y: 740, zoom: 1.7 },
+      ],
+      spotlights: [
+        { rect: [532, 505, 935, 192], from: 405, to: 448 },
+        { rect: [538, 708, 912, 90], from: 462 },
+      ],
+      marks: [{ type: 'underline', rect: [680, 512, 84, 22], from: 420 }],
+    },
+    // Back to SharePoint (slide): before and after side by side
+    {
+      from: 489,
+      imageSize: LIST,
+      transition: 'slide',
+      compare: {
+        before: img('05-tracker-before-tests'),
+        after: img('10-tracker-after-test-1'),
+        beforeLabel: 'BEFORE TEST 1',
+        afterLabel: 'AFTER TEST 1',
+        highlight: TAYLOR_ROW,
+        highlightFrom: 549,
+        stamp: 'NO CHANGE',
+        stampFrom: 576,
+        statement: 'The boundary held.',
+        statementHighlight: 'held.',
+        statementFrom: 615,
+        crop: [380, 284, 700, 134],
+      },
+    },
+  ],
+  durationInFrames: 717,
+};
+
+export const agentBoundariesScreenDemo: VideoData = {
+  ...agentBoundaries,
+  scenes: [...agentBoundaries.scenes.slice(0, 24), test1ScreenDemo, ...agentBoundaries.scenes.slice(30)],
+};

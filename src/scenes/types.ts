@@ -5,6 +5,16 @@ export type AnimationMode = 'kinetic' | 'fade' | 'auto';
 
 export type Scene =
   | {
+      // Screenshot tutorial that behaves like a screen recording: virtual camera, spotlight,
+      // cursor + click, typed input, revealed replies, drawn marks, before/after compare.
+      // See ScreenDemo.tsx for the shot fields (rects/points in screenshot pixels).
+      layout: 'screen-demo';
+      label: string;
+      steps: Array<{ from: number; text: string }>;
+      shots: import('./ScreenDemo').ScreenDemoShot[];
+      durationInFrames: number;
+    }
+  | {
       layout: 'title-card-green';
       title: string;
       subtitle?: string;
