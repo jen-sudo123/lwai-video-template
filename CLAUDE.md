@@ -3,6 +3,10 @@
 Remotion 4 project for Lead with AI course videos. 1920×1080, 30fps, IBM Plex Serif + Public Sans.
 Each video is a composition: a data file `src/data/<name>.ts` exporting a `VideoData`, registered in `src/Root.tsx`.
 
+Shared by Claude Code and Codex: `AGENTS.md` is a symlink to this file. Skills live in `.claude/skills/<name>/SKILL.md`
+(Codex reads `.agents/skills/`, and shared skills are symlinked between the two). If your agent doesn't load skills
+automatically, open the SKILL.md named below and follow it.
+
 ## Where things live
 
 | Path | What |
@@ -89,6 +93,17 @@ Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 - `TitleCardGreen`: omit `subtitle` for title-only.
 - `ThreeModeColumns`: column entry is triggered by the first `highlights` entry with `value === index`.
 - `centered-image-caption`: default `objectFit: 'cover'`; use `'contain'` for full screenshots.
+
+### screen-demo (screenshot tutorials)
+- No screen recording, only screenshots? Use `layout: 'screen-demo'`, not image-beside-text slides. Follow the
+  `lwai-screen-demo` skill (`.agents/skills/lwai-screen-demo/SKILL.md`). Reference: `src/scenes/ScreenDemo.tsx`, and the
+  `buildDemo` / `instructionsDemo` / `testsDemo` scenes in `src/data/agent-boundaries.ts`.
+- One scene per continuous run of screenshots; each screenshot is a shot. Keep the scene's start frame and duration equal
+  to what it replaces so VO timing elsewhere doesn't move.
+- Rects and points are in screenshot pixels. Measure with `python3 scripts/screenshot-grid.py public/<video>/images/*.jpg`.
+- Shot transitions: `slide` only for a change of app/place, `fade` for a new state of the same screen.
+- Scene-level `sceneTransition: { type: 'slide', between: 'images' }` (VideoData) slides between consecutive image
+  scenes without shifting start frames; `between: 'scenes'` slides at every change.
 
 ### video-clip
 - VideoData-level `clipSrc` = one continuous background video; each scene's `videoStartTime` is the trim offset.
