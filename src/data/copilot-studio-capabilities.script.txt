@@ -1,0 +1,167 @@
+Let's start with knowledge.
+
+<break time="0.5s"/>Before we open Copilot Studio, go back to Section 3 of your Agent Build Plan: What does your agent need?
+
+<break time="0.5s"/>Yesterday, you gave your agent detailed instructions using CODO. But instructions alone don't give an agent access to information or systems.
+
+<break time="0.5s"/>In Section 3, you identified the documents, data sources, and tools your agent needs to perform your workflow.
+
+<break time="0.5s"/>Today, we're going to connect those capabilities.
+
+<break time="0.5s"/>Knowledge sources give your agent information it can use. Tools allow it to perform specific operations, like retrieving records from a system or taking an approved action. Depending on your workflow, you might need one or both.
+
+<break time="0.5s"/>I'll demonstrate the process using my Team Action Follow-Up Agent, but the key is to apply it to the sources and capabilities identified in your own Build Plan.
+
+<break time="1.0s"/>So here I'm inside our existing agent, on the Build tab.
+
+<break time="0.5s"/>In the configuration panel, I'll find Knowledge and click the plus button to add a source.
+
+<break time="0.5s"/>For this example, I'll choose SharePoint.
+
+<break time="0.5s"/>I can paste a supported SharePoint link, or use Browse items to select the source directly. I'll use Browse items so I can choose the exact demo document.
+
+<break time="0.5s"/>Be careful with links copied from the browser's address bar. A document may open through a viewer URL that Copilot Studio won't accept. If that happens, use Browse items or a supported link copied through SharePoint's Copy link option.
+
+<break time="0.5s"/>I'll navigate to our approved location, select the meeting notes, and confirm the selection.
+
+<break time="0.5s"/>Then I'll name the source 'Approved Weekly Meeting Notes' and describe what it contains and when the agent should use it.
+
+<break time="0.5s"/>Now I'll click Add to agent.
+
+<break time="0.5s"/>The source appears under Knowledge. I'll open it and check that its status is Ready.
+
+<break time="0.5s"/>Now, its appearance in the list confirms the source was added, but it doesn't yet prove the agent can retrieve the information correctly. We'll test that shortly.
+
+<break time="0.5s"/>Also, notice that I haven't copied the meeting notes into the agent's instructions.
+
+<break time="0.5s"/>The instructions describe how the agent should work, while the knowledge source supplies the information it needs.
+
+<break time="0.5s"/>For your own workflow, connect only the approved sources identified in your Build Plan.
+
+<break time="0.5s"/>Your agent might need a policy document, project files, reference materials, or another approved information source.
+
+<break time="0.5s"/>The steps will depend on that source, but the principle is the same: connect the information your agent needs, give it a clear description, and verify that it's available.
+
+<break time="0.5s"/>You don't need to connect SharePoint just because I'm using it in my example.
+
+<break time="1.5s"/>Next, let's look at the tools your agent needs to carry out its workflow.
+
+<break time="0.5s"/>For your agent, look at the 'Tools/actions' field in Section 3 of your Build Plan.
+
+<break time="0.5s"/>What does your agent need to do beyond using its instructions and knowledge?
+
+<break time="0.5s"/>It may need to retrieve records, look something up in another system, or perform an approved action.
+
+<break time="0.5s"/>The specific tool depends on your workflow. In my example, we need to retrieve existing commitments from a SharePoint List, so I'll demonstrate how to connect that capability.
+
+<break time="0.5s"/>If your first version doesn't require a connected tool, that's fine. Don't add one just to follow my example.
+
+<break time="1.0s"/>On Build, I'll find Tools and click Add tool.
+
+<break time="0.5s"/>I'll choose SharePoint, then under Run a single action, select Get items.
+
+<break time="0.5s"/>Get items retrieves records from a SharePoint List. It doesn't create or update those records, so it fits the first version of our workflow.
+
+<break time="0.5s"/>I'll click Add and let Copilot Studio finish setting up the tool.
+
+<break time="0.5s"/>In this environment, it reused an existing SharePoint connection. You may be asked to connect your approved work account instead.
+
+<break time="0.5s"/>Once the tool appears, I'll open it and check the connection and authentication settings.
+
+<break time="0.5s"/>I'll keep End user account authentication for this example, so access depends on the account using the tool.
+
+<break time="0.5s"/>Next, we need to specify exactly which site and list it should read.
+
+<break time="1.5s"/>I'll rename the tool 'Read Team Action Tracker' and add a description explaining what it retrieves and when to use it.
+
+<break time="0.5s"/>On Inputs, Site Address and List Name initially use Fill with AI.
+
+<break time="0.5s"/>For this workflow, I don't want the agent choosing those values.
+
+<break time="0.5s"/>I'll switch Site Address to Custom and select our approved SharePoint site.
+
+<break time="0.5s"/>Then I'll switch List Name to Custom and select Team Action Tracker.
+
+<break time="0.5s"/>These fixed inputs connect the tool to the source we chose in our Build Plan.
+
+<break time="0.5s"/>I'll leave the optional and advanced parameters unchanged for this small demo, click Done, and save the agent.
+
+<break time="0.5s"/>Finally, I'll reopen the tool to confirm that the site and list were retained.
+
+<break time="0.5s"/>For a larger tracker, you'll also need to verify that retrieval returns all the records required for comparison. An incomplete result could cause the agent to mistake an existing commitment for a new one.
+
+<break time="0.5s"/>For your agent, the configuration will depend on the tool you've selected.
+
+<break time="0.5s"/>The important questions are the same: What information does the tool need to run? Which values should be fixed, rather than chosen by AI? And how will you verify that it's returning the correct information?
+
+<break time="0.5s"/>In the assignment, you'll configure the tool your workflow needs, using the decisions you made in your Build Plan.
+
+<break time="1.5s"/>Now I'll connect our instructions to the capabilities we've configured.
+
+<break time="0.5s"/>On Build, I'll find the step about checking existing commitments and explicitly name Read Team Action Tracker.
+
+<break time="0.5s"/>I'll also name Approved Weekly Meeting Notes in the instruction about reading the notes.
+
+<break time="0.5s"/>Some Copilot Studio interfaces support a resource picker. In the interface shown here, typing a slash doesn't open one, so I'll reference the configured resources by their exact names.
+
+<break time="0.5s"/>The reference makes the instruction clearer. The actual capability comes from adding and configuring the source or tool.
+
+<break time="0.5s"/>When you do this for your agent, look at the CODO instructions you created yesterday.
+
+<break time="0.5s"/>Find the steps that require information or tools, and reference the capabilities you've now connected.
+
+<break time="0.5s"/>Use their actual configured names, rather than copying the names from my example.
+
+<break time="0.5s"/>This ensures your instructions and your connected capabilities work together.
+
+<break time="0.5s"/>I'll save the agent.
+
+<break time="1.5s"/>Now it's time to verify that our connections actually work.
+
+<break time="0.5s"/>Before testing, go back to Section 3 of your own Build Plan.
+
+<break time="0.5s"/>Look at the knowledge sources and tools you've connected.
+
+<break time="0.5s"/>For each one, ask your agent to perform a small, specific task that requires that capability.
+
+<break time="0.5s"/>For example, if you've connected a document, you could ask your agent to retrieve a particular piece of information from it.
+
+<break time="0.5s"/>If you've connected a tool, you could ask it to perform one safe operation using that tool.
+
+<break time="0.5s"/>The key is knowing what the correct result should be, so you can verify it.
+
+<break time="0.5s"/>Let's look at my example.
+
+<break time="0.5s"/>I've connected two capabilities: our SharePoint action tracker and our approved meeting notes.
+
+<break time="0.5s"/>First, I'll test the SharePoint tool.
+
+<break time="0.5s"/>I'll open Preview and ask: 'Retrieve the existing commitments from the Team Action Tracker. Show the task, owner, due date, and status. Do not change anything.'
+
+<break time="0.5s"/>Now I can compare the results with the actual tracker.
+
+<break time="0.5s"/>But I also want to check whether the agent really used the tool, rather than simply producing a plausible answer.
+
+<break time="0.5s"/>So I'll inspect the available execution information to see whether Get items ran successfully.
+
+<break time="0.5s"/>Next, let's test our knowledge source.
+
+<break time="0.5s"/>I'll ask the agent to summarize the commitments from our November 3 meeting notes.
+
+<break time="0.5s"/>Again, I'll check the response against the original document and look for evidence that it used the correct source.
+
+<break time="0.5s"/>Notice that these are two different tests, because I've connected two different capabilities.
+
+<break time="0.5s"/>For your agent, your test requests will be different. They'll depend on the information and tools you identified in your own Build Plan.
+
+<break time="0.5s"/>You don't need to reproduce my prompts. You need to establish whether your agent can access and use the capabilities required for your workflow.
+
+<break time="0.5s"/>And if something doesn't work, that's useful information too.
+
+<break time="0.5s"/>Sometimes the issue is with access, permissions, or the environment rather than the agent itself. If testing is blocked, record the exact error so you can resolve it with your IT team or bring it to our live Build Clinic.
+
+<break time="0.5s"/>In the assignment that follows, you'll test your own connected capabilities.
+
+<break time="0.5s"/>Your goal is either to verify that they work or identify exactly what's preventing them from working.
+
+<break time="0.5s"/>Once that's done, you're ready to move on to setting the appropriate human-control boundaries.
