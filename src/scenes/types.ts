@@ -10,7 +10,7 @@ export type Scene =
       // See ScreenDemo.tsx for the shot fields (rects/points in screenshot pixels).
       layout: 'screen-demo';
       label: string;
-      steps: Array<{ from: number; text: string }>;
+      steps: Array<{ from: number; text: string; label?: string }>;
       shots: import('./ScreenDemo').ScreenDemoShot[];
       durationInFrames: number;
     }

@@ -549,7 +549,7 @@ const rect = z.tuple([z.number(), z.number(), z.number(), z.number()]);
 const screenDemo = z.object({
   layout: z.literal('screen-demo'),
   label: z.string(),
-  steps: z.array(z.object({ from: z.number(), text: z.string() })),
+  steps: z.array(z.object({ from: z.number(), text: z.string(), label: z.string().optional() })),
   shots: z.array(z.object({
     from: z.number(),
     image: z.string().optional(),
@@ -559,7 +559,7 @@ const screenDemo = z.object({
     spotlights: z.array(z.object({ rect, from: z.number(), to: z.number().optional() })).optional(),
     marks: z.array(z.object({ type: z.enum(['underline', 'circle']), rect, from: z.number() })).optional(),
     cursor: z.array(z.object({ frame: z.number(), x: z.number(), y: z.number(), click: z.boolean().optional() })).optional(),
-    typing: z.object({ rect, text: z.string(), from: z.number(), to: z.number(), fontSize: z.number(), textX: z.number() }).optional(),
+    typing: z.object({ rect, text: z.string(), from: z.number(), to: z.number(), fontSize: z.number(), textX: z.number(), lineHeight: z.number().optional() }).optional(),
     reveal: z.object({ rect, from: z.number(), duration: z.number() }).optional(),
     compare: z.object({
       before: z.string(),

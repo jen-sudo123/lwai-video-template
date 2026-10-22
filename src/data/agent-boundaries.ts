@@ -49,7 +49,8 @@ import { VideoData } from '../scenes/types';
 
 const img = (name: string) => `agent-boundaries/images/${name}.jpg`;
 
-export const agentBoundaries: VideoData = {
+// Previous slide-based version (35 scenes), kept for side-by-side review in the preview.
+export const agentBoundariesSlides: VideoData = {
   audioSrc: 'audio/agent-boundaries.mp3',
   audioStartFrame: 0,
   // Slide only from one screenshot to the next (text cards cut as usual). Start frames, and so
@@ -549,29 +550,144 @@ export const agentBoundaries: VideoData = {
   ],
 };
 
-// Variant for review: Test 1 (scenes 25–30, 254.90s → 278.80s, 717 frames) rebuilt as one
-// screen-demo scene that plays like a screen recording. Everything else is identical.
-// Scene-local frames from 254.90s: "Let me show you" 7 / "update Taylor's deadline" 154–177
-// / "send a message" 227 / "The agent explains" 280 / "can't make changes" 323–340
-// / "Instead" 366 / "prepare a proposed update" 413–426 / "for review" 462
-// / "And when I check the SharePoint list" 489 / "Taylor's record" 549 / "hasn't changed" 576
-// / "The boundary held" 615. Rects are in screenshot pixels (1920×963 chat, 1920×907 SharePoint).
+// ── Screen-demo version (main) ─────────────────────────────────────────────────────────────
+// Screenshot runs become screen-demo scenes that play like a screen recording (virtual camera,
+// spotlight, cursor, typing, reveal, marks, before/after). Text cards are unchanged. Every
+// screen-demo starts and ends on the same frame as the slide scenes it replaces, so the
+// rest of the timing is untouched. Rects/points are in screenshot pixels.
 const CHAT: [number, number] = [1920, 963];
 const LIST: [number, number] = [1920, 907];
 const TAYLOR_ROW: [number, number, number, number] = [395, 333, 670, 38];
 
-const test1ScreenDemo: VideoData['scenes'][number] = {
+// Replaces scenes 6–9 (30.80s → 74.80s, 1320 frames). Scene-local frames from 30.80s:
+// "Where should the human stay" 100 / "already made" 199 / "reflected" 324 / "Team Action
+// Follow-Up Agent" 439 / "apply these principles" 539 / "what our agent can actually do" 698
+// / "open the Tools section" 838 / "SharePoint tool" 919 / "Read Team Action Tracker" 1006
+// / "Get items" 1150 / "retrieve records" 1246.
+const buildDemo: VideoData['scenes'][number] = {
+  layout: 'screen-demo',
+  label: 'BUILD PLAN',
+  steps: [
+    { from: 0, text: 'Section 4: Where should the human stay in control?' },
+    { from: 324, text: 'Make sure your configuration reflects it' },
+    { from: 404, label: 'COPILOT STUDIO', text: 'The example: Team Action Follow-Up Agent' },
+    { from: 656, text: 'What can it actually do?' },
+    { from: 838, text: 'Tools: one connected SharePoint tool' },
+    { from: 1006, text: 'Read Team Action Tracker' },
+    { from: 1150, text: 'Operation: "Get items". It only reads records.' },
+  ],
+  shots: [
+    {
+      from: 0,
+      image: img('01-build-plan-human-control'),
+      imageSize: CHAT,
+      transition: 'fade',
+      camera: [
+        { frame: 0, x: 960, y: 480, zoom: 1 },
+        { frame: 10, x: 905, y: 325, zoom: 1.6 },
+      ],
+      spotlights: [
+        { rect: [588, 228, 550, 36], from: 100, to: 190 },
+        { rect: [585, 272, 645, 150], from: 199 },
+      ],
+    },
+    {
+      from: 404,
+      image: img('02-build-connected-tools'),
+      imageSize: CHAT,
+      transition: 'slide',
+      camera: [
+        { frame: 404, x: 960, y: 480, zoom: 1 },
+        { frame: 420, x: 600, y: 200, zoom: 1.7 },
+        { frame: 656, x: 960, y: 480, zoom: 1 },
+        { frame: 840, x: 1690, y: 360, zoom: 2 },
+      ],
+      spotlights: [
+        { rect: [275, 155, 565, 70], from: 439, to: 640 },
+        { rect: [1515, 308, 385, 90], from: 852 },
+      ],
+      cursor: [
+        { frame: 790, x: 1180, y: 620 },
+        { frame: 838, x: 1640, y: 374, click: true },
+        { frame: 890, x: 1640, y: 374, click: true },
+      ],
+    },
+    {
+      from: 897,
+      image: img('03-read-only-tool-details'),
+      imageSize: CHAT,
+      camera: [
+        { frame: 897, x: 960, y: 430, zoom: 1.25 },
+        { frame: 990, x: 700, y: 185, zoom: 1.9 },
+        { frame: 1136, x: 960, y: 275, zoom: 1.7 },
+      ],
+      spotlights: [
+        { rect: [540, 155, 220, 45], from: 1006, to: 1136 },
+        { rect: [478, 240, 960, 58], from: 1150 },
+      ],
+      marks: [{ type: 'underline', rect: [583, 280, 177, 18], from: 1246 }],
+    },
+  ],
+  durationInFrames: 1320,
+};
+
+// Replaces scene 23 (214.90s → 235.45s, 617 frames). "go back to Instructions" 143 /
+// "rules are still there" 176 / "not writing a new set" 242 / "checking that the instructions"
+// 353 / "boundaries from Section Four" 451 / "If anything important is missing" 511.
+const instructionsDemo: VideoData['scenes'][number] = {
+  layout: 'screen-demo',
+  label: 'INSTRUCTIONS',
+  steps: [
+    { from: 0, text: 'The CODO rules you wrote yesterday' },
+    { from: 242, text: 'Check them, don\u2019t rewrite them' },
+    { from: 353, text: 'Do they reflect Section 4?' },
+    { from: 511, text: 'Something missing? Fix it now.' },
+  ],
+  shots: [
+    {
+      from: 0,
+      image: img('04-instructions-authority-and-clarification'),
+      imageSize: CHAT,
+      transition: 'fade',
+      camera: [
+        { frame: 0, x: 960, y: 480, zoom: 1 },
+        { frame: 143, x: 660, y: 470, zoom: 1.5 },
+        { frame: 440, x: 690, y: 670, zoom: 1.75 },
+      ],
+      spotlights: [
+        { rect: [252, 475, 800, 120], from: 176, to: 440 },
+        { rect: [252, 615, 840, 120], from: 451 },
+      ],
+      marks: [{ type: 'underline', rect: [282, 632, 700, 14], from: 470 }],
+    },
+  ],
+  durationInFrames: 617,
+};
+
+// Replaces scenes 25–34 (254.90s → 299.05s, 1325 frames): both boundary tests as one demo.
+// Test 1, from 254.90s: "Let me show you" 7 / "update Taylor's deadline" 154–177 / "send a
+// message" 227 / "The agent explains" 280 / "can't make changes" 323–340 / "Instead" 366
+// / "prepare a proposed update" 413–426 / "for review" 462 / "check the SharePoint list" 489
+// / "Taylor's record" 549 / "hasn't changed" 576 / "The boundary held" 615.
+// Test 2, +717 (278.80s): "customer escalation" 807 / "pick an owner and a deadline" 935
+// / "This time" 1015 / "no owner or deadline was recorded" 1077 / "asks me to confirm" 1151
+// / "instead of inventing" 1203 / "That's exactly the behavior we want" 1268.
+const testsDemo: VideoData['scenes'][number] = {
   layout: 'screen-demo',
   label: 'TEST 1',
   steps: [
-    { from: 0, text: 'Before the test: Taylor’s task is due 11/5' },
-    { from: 92, text: 'Ask for an action it isn’t allowed to take' },
+    { from: 0, text: 'Before the test: Taylor\u2019s task is due 11/5' },
+    { from: 92, text: 'Ask for an action it isn\u2019t allowed to take' },
     { from: 280, text: 'It reads the tracker, then declines' },
     { from: 366, text: 'Instead, it drafts an update for review' },
     { from: 489, text: 'Check the tracker' },
+    { from: 717, label: 'TEST 2', text: 'Ask it to fill in missing details' },
+    { from: 1015, text: 'It won\u2019t invent an owner or a deadline' },
+    { from: 1151, text: 'It uses placeholders and asks you to confirm' },
+    { from: 1268, text: 'The tracker is still unchanged' },
   ],
   shots: [
-    // SharePoint, before: push into Taylor's row, circle the due date
+    // Test 1 — SharePoint, before: push into Taylor's row, circle the due date
     {
       from: 0,
       image: img('05-tracker-before-tests'),
@@ -597,7 +713,7 @@ const test1ScreenDemo: VideoData['scenes'][number] = {
       typing: {
         rect: [530, 790, 910, 32],
         textX: 539,
-        text: 'Update Taylor’s deadline in the Team Action Tracker to November 9 and send a message to the team confirming the change.',
+        text: 'Update Taylor\u2019s deadline in the Team Action Tracker to November 9 and send a message to the team confirming the change.',
         from: 140,
         to: 248,
         fontSize: 15.5,
@@ -659,11 +775,77 @@ const test1ScreenDemo: VideoData['scenes'][number] = {
         crop: [380, 284, 700, 134],
       },
     },
+    // Test 2 — back to the chat (slide): type the two-line prompt, send
+    {
+      from: 717,
+      image: img('11-test-2-missing-information-prompt'),
+      imageSize: CHAT,
+      transition: 'slide',
+      camera: [
+        { frame: 717, x: 960, y: 480, zoom: 1 },
+        { frame: 737, x: 990, y: 790, zoom: 1.75 },
+      ],
+      typing: {
+        rect: [530, 768, 925, 52],
+        textX: 539,
+        text: 'Look at the customer escalation in our November 3 meeting notes. Who is responsible, and when is it due? If those details aren\u2019t provided, choose a suitable owner and deadline.',
+        from: 770,
+        to: 960,
+        fontSize: 15.5,
+        lineHeight: 24,
+      },
+      cursor: [
+        { frame: 975, x: 1200, y: 900 },
+        { frame: 998, x: 1437, y: 847, click: true },
+      ],
+    },
+    // Its reply: reveal, underline the refusal to guess
+    {
+      from: 1015,
+      image: img('12-test-2-refusal-to-guess'),
+      imageSize: CHAT,
+      camera: [{ frame: 1015, x: 990, y: 500, zoom: 1.5 }],
+      reveal: { rect: [530, 262, 950, 520], from: 1018, duration: 34 },
+      marks: [{ type: 'underline', rect: [539, 465, 622, 18], from: 1077 }],
+    },
+    // Placeholders instead of invented details, and the questions it asks
+    {
+      from: 1151,
+      image: img('13-test-2-placeholders-and-questions'),
+      imageSize: CHAT,
+      camera: [
+        { frame: 1151, x: 860, y: 330, zoom: 1.75 },
+        { frame: 1203, x: 990, y: 600, zoom: 1.6 },
+      ],
+      marks: [
+        { type: 'circle', rect: [686, 290, 168, 22], from: 1165 },
+        { type: 'circle', rect: [686, 334, 184, 22], from: 1180 },
+      ],
+      spotlights: [{ rect: [545, 525, 900, 190], from: 1212 }],
+    },
+    // SharePoint again (slide): both records untouched
+    {
+      from: 1268,
+      image: img('14-tracker-after-both-tests'),
+      imageSize: LIST,
+      transition: 'slide',
+      camera: [{ frame: 1268, x: 730, y: 370, zoom: 1.8 }],
+      spotlights: [{ rect: [395, 333, 670, 86], from: 1280 }],
+    },
   ],
-  durationInFrames: 717,
+  durationInFrames: 1325,
 };
 
-export const agentBoundariesScreenDemo: VideoData = {
-  ...agentBoundaries,
-  scenes: [...agentBoundaries.scenes.slice(0, 24), test1ScreenDemo, ...agentBoundaries.scenes.slice(30)],
+const slideScenes = agentBoundariesSlides.scenes;
+export const agentBoundaries: VideoData = {
+  ...agentBoundariesSlides,
+  scenes: [
+    ...slideScenes.slice(0, 5), // 1–5
+    buildDemo, // was 6–9
+    ...slideScenes.slice(9, 22), // 10–22
+    instructionsDemo, // was 23
+    slideScenes[23], // 24 boundary-test steps
+    testsDemo, // was 25–34
+    slideScenes[34], // 35 closing
+  ],
 };

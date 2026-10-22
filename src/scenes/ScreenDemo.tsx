@@ -21,7 +21,8 @@ export type ScreenDemoShot = {
   spotlights?: Array<{ rect: Rect; from: number; to?: number }>;
   marks?: Array<{ type: 'underline' | 'circle'; rect: Rect; from: number }>;
   cursor?: Array<{ frame: number; x: number; y: number; click?: boolean }>;
-  typing?: { rect: Rect; text: string; from: number; to: number; fontSize: number; textX: number };
+  // Single line by default; set lineHeight to wrap across lines inside rect.
+  typing?: { rect: Rect; text: string; from: number; to: number; fontSize: number; textX: number; lineHeight?: number };
   reveal?: { rect: Rect; from: number; duration: number };
   compare?: {
     before: string;
@@ -42,7 +43,8 @@ export type ScreenDemoShot = {
 
 export type ScreenDemoProps = {
   label: string;
-  steps: Array<{ from: number; text: string }>;
+  // label overrides the scene label from that step on (e.g. TEST 1 → TEST 2).
+  steps: Array<{ from: number; text: string; label?: string }>;
   shots: ScreenDemoShot[];
   durationInFrames: number;
 };
@@ -206,10 +208,14 @@ const ShotLayer: React.FC<{ shot: ScreenDemoShot; offset: number; incoming: bool
             const caretOn = Math.floor(f / 8) % 2 === 0 || (f >= t.from && f < t.to);
             return (
               <div style={{ position: 'absolute', left: t.rect[0], top: t.rect[1], width: t.rect[2], height: t.rect[3], backgroundColor: '#fff' }}>
-                <div style={{ position: 'absolute', left: t.textX - t.rect[0], top: 0, height: t.rect[3], display: 'flex', alignItems: 'center',
+                <div style={t.lineHeight ? {
+                  position: 'absolute', left: t.textX - t.rect[0], top: 0, width: t.rect[2] - (t.textX - t.rect[0]),
+                  fontFamily: `'Segoe UI', ${fonts.sans}, sans-serif`, fontSize: t.fontSize, lineHeight: `${t.lineHeight}px`, color: '#242424', whiteSpace: 'pre-wrap',
+                } : {
+                  position: 'absolute', left: t.textX - t.rect[0], top: 0, height: t.rect[3], display: 'flex', alignItems: 'center',
                   fontFamily: `'Segoe UI', ${fonts.sans}, sans-serif`, fontSize: t.fontSize, color: '#242424', whiteSpace: 'pre' }}>
                   {t.text.slice(0, n)}
-                  <span style={{ display: 'inline-block', width: 1.5, height: t.fontSize * 1.2, backgroundColor: '#242424', marginLeft: 1, opacity: caretOn ? 1 : 0 }} />
+                  <span style={{ display: 'inline-block', verticalAlign: 'middle', width: 1.5, height: t.fontSize * 1.2, backgroundColor: '#242424', marginLeft: 1, opacity: caretOn ? 1 : 0 }} />
                 </div>
               </div>
             );
@@ -276,11 +282,13 @@ const StepChip: React.FC<{ label: string; steps: ScreenDemoProps['steps'] }> = (
   let idx = 0;
   steps.forEach((s, i) => { if (f >= s.from) idx = i; });
   const since = f - steps[idx].from;
+  let currentLabel = label;
+  steps.forEach((s, i) => { if (i <= idx && s.label) currentLabel = s.label; });
   const o = interpolate(since, [0, 10], [0, 1], clamp);
   return (
     <div style={{ position: 'absolute', left: 80, top: 40, display: 'flex', alignItems: 'center', gap: 16, padding: '12px 22px 12px 14px',
       backgroundColor: '#fff', borderRadius: 999, boxShadow: '0 6px 20px rgba(30,45,20,0.12)', fontFamily: fonts.sans }}>
-      <span style={{ backgroundColor: colors.lime500, color: '#fff', fontWeight: 700, fontSize: 20, letterSpacing: '0.1em', padding: '6px 14px', borderRadius: 999 }}>{label}</span>
+      <span style={{ backgroundColor: colors.lime500, color: '#fff', fontWeight: 700, fontSize: 20, letterSpacing: '0.1em', padding: '6px 14px', borderRadius: 999 }}>{currentLabel}</span>
       <span style={{ fontSize: 26, color: '#1b2316', opacity: o, transform: `translateY(${(1 - o) * 6}px)` }}>{steps[idx].text}</span>
     </div>
   );
