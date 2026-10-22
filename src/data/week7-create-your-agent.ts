@@ -336,7 +336,7 @@ export const week7CreateYourAgent: VideoData = {
         },
         {
           from: 2453,
-          image: "images/week7-create-your-agent/screens/11-edit-description.jpg",
+          image: "images/week7-create-your-agent/screens/11-edit-description-save.jpg",
           imageSize: [1363, 936],
           transition: "fade",
           camera: [
@@ -350,7 +350,7 @@ export const week7CreateYourAgent: VideoData = {
           reveal: { rect: [152, 362, 656, 46], from: 2670, duration: 210 },
           cursor: [
             { frame: 3012, x: 600, y: 300 },
-            { frame: 3040, x: 786, y: 157, click: true },
+            { frame: 3040, x: 806, y: 165, click: true },
           ],
         },
         {
