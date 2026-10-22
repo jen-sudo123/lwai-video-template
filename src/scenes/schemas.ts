@@ -582,7 +582,7 @@ const screenDemo = z.object({
     transition: z.enum(['slide', 'fade', 'cut']).optional(),
     camera: z.array(z.object({ frame: z.number(), x: z.number(), y: z.number(), zoom: z.number() })).optional(),
     spotlights: z.array(z.object({ rect, from: z.number(), to: z.number().optional() })).optional(),
-    marks: z.array(z.object({ type: z.enum(['underline', 'circle']), rect, from: z.number() })).optional(),
+    marks: z.array(z.object({ type: z.enum(['underline', 'circle', 'box']), rect, from: z.number(), to: z.number().optional() })).optional(),
     cursor: z.array(z.object({ frame: z.number(), x: z.number(), y: z.number(), click: z.boolean().optional() })).optional(),
     typing: z.object({ rect, text: z.string(), from: z.number(), to: z.number(), fontSize: z.number(), textX: z.number(), lineHeight: z.number().optional() }).optional(),
     reveal: z.object({ rect, from: z.number(), duration: z.number() }).optional(),

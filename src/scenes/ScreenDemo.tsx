@@ -19,7 +19,8 @@ export type ScreenDemoShot = {
   transition?: 'slide' | 'fade' | 'cut';
   camera?: Array<{ frame: number; x: number; y: number; zoom: number }>;
   spotlights?: Array<{ rect: Rect; from: number; to?: number }>;
-  marks?: Array<{ type: 'underline' | 'circle'; rect: Rect; from: number }>;
+  // 'box' outlines a large region (paragraph, table) without dimming; `to` fades a mark out.
+  marks?: Array<{ type: 'underline' | 'circle' | 'box'; rect: Rect; from: number; to?: number }>;
   cursor?: Array<{ frame: number; x: number; y: number; click?: boolean }>;
   // Single line by default; set lineHeight to wrap across lines inside rect.
   typing?: { rect: Rect; text: string; from: number; to: number; fontSize: number; textX: number; lineHeight?: number };
@@ -108,17 +109,30 @@ const Spotlight: React.FC<{ rect: Rect; f: number; from: number; to?: number; s:
   );
 };
 
-const Mark: React.FC<{ type: 'underline' | 'circle'; rect: Rect; f: number; from: number; s: number }> = ({ type, rect, f, from, s }) => {
+const Mark: React.FC<{ type: 'underline' | 'circle' | 'box'; rect: Rect; f: number; from: number; to?: number; s: number }> = ({ type, rect, f, from, to, s }) => {
   const p = interpolate(f, [from, from + 16], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
-  if (p <= 0) return null;
+  const o = to === undefined ? 1 : interpolate(f, [to, to + 10], [1, 0], clamp);
+  if (p <= 0 || o <= 0) return null;
   const [x, y, w, h] = rect;
   const stroke = 4 / s;
   if (type === 'underline') {
     const len = w;
     return (
-      <svg style={{ position: 'absolute', left: x, top: y + h + 2, overflow: 'visible' }} width={w} height={10}>
+      <svg style={{ position: 'absolute', left: x, top: y + h + 2, overflow: 'visible', opacity: o }} width={w} height={10}>
         <path d={`M0 4 Q ${w / 2} ${8} ${w} 3`} fill="none" stroke={colors.lime500} strokeWidth={stroke} strokeLinecap="round"
           strokeDasharray={len * 1.1} strokeDashoffset={len * 1.1 * (1 - p)} />
+      </svg>
+    );
+  }
+  if (type === 'box') {
+    const pad = 12;
+    const bw = w + pad * 2;
+    const bh = h + pad * 2;
+    const per = 2 * (bw + bh);
+    return (
+      <svg style={{ position: 'absolute', left: x - pad, top: y - pad, overflow: 'visible', opacity: o }} width={bw} height={bh}>
+        <rect x={0} y={0} width={bw} height={bh} rx={14 / s} fill="none" stroke={colors.lime500} strokeWidth={stroke}
+          strokeDasharray={per} strokeDashoffset={per * (1 - p)} />
       </svg>
     );
   }
@@ -126,7 +140,7 @@ const Mark: React.FC<{ type: 'underline' | 'circle'; rect: Rect; f: number; from
   const ry = h / 2 + 12;
   const c = Math.PI * (3 * (rx + ry) - Math.sqrt((3 * rx + ry) * (rx + 3 * ry)));
   return (
-    <svg style={{ position: 'absolute', left: x - 14, top: y - 12, overflow: 'visible' }} width={w + 28} height={h + 24}>
+    <svg style={{ position: 'absolute', left: x - 14, top: y - 12, overflow: 'visible', opacity: o }} width={w + 28} height={h + 24}>
       <ellipse cx={rx} cy={ry} rx={rx} ry={ry} fill="none" stroke={colors.lime500} strokeWidth={stroke}
         strokeDasharray={c} strokeDashoffset={c * (1 - p)} transform={`rotate(-4 ${rx} ${ry})`} />
     </svg>
@@ -222,7 +236,7 @@ const ShotLayer: React.FC<{ shot: ScreenDemoShot; offset: number; incoming: bool
           })()}
         </div>
         {shot.spotlights?.map((sp, i) => <Spotlight key={i} rect={sp.rect} f={f} from={sp.from} to={sp.to} s={cam.s} />)}
-        {shot.marks?.map((m, i) => <Mark key={i} type={m.type} rect={m.rect} f={f} from={m.from} s={cam.s} />)}
+        {shot.marks?.map((m, i) => <Mark key={i} type={m.type} rect={m.rect} f={f} from={m.from} to={m.to} s={cam.s} />)}
       </div>
       <Cursor shot={shot} f={f} cam={cam} />
     </AbsoluteFill>

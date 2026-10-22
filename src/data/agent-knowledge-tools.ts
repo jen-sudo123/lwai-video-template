@@ -214,20 +214,15 @@ export const agentKnowledgeTools: VideoData = {
               "zoom": 1
             },
             {
-              "frame": 75,
-              "x": 1200,
-              "y": 330,
-              "zoom": 1.8
-            },
-            {
               "frame": 171,
-              "x": 2400,
+              "x": 2200,
               "y": 900,
-              "zoom": 1.9
+              "zoom": 1.5
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "circle",
               "rect": [
                 1100,
                 190,
@@ -238,6 +233,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 171
             },
             {
+              "type": "circle",
               "rect": [
                 2030,
                 900,
@@ -272,13 +268,14 @@ export const agentKnowledgeTools: VideoData = {
           "camera": [
             {
               "frame": 275,
-              "x": 1440,
-              "y": 1100,
-              "zoom": 1.6
+              "x": 1420,
+              "y": 900,
+              "zoom": 1.3
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "circle",
               "rect": [
                 1440,
                 1056,
@@ -314,12 +311,13 @@ export const agentKnowledgeTools: VideoData = {
             {
               "frame": 357,
               "x": 1420,
-              "y": 560,
-              "zoom": 1.9
+              "y": 800,
+              "zoom": 1.3
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "circle",
               "rect": [
                 1062,
                 508,
@@ -330,6 +328,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 441
             },
             {
+              "type": "circle",
               "rect": [
                 706,
                 508,
@@ -340,6 +339,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 645
             },
             {
+              "type": "circle",
               "rect": [
                 1062,
                 508,
@@ -350,6 +350,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 930
             },
             {
+              "type": "circle",
               "rect": [
                 706,
                 508,
@@ -357,9 +358,7 @@ export const agentKnowledgeTools: VideoData = {
                 56
               ],
               "from": 935
-            }
-          ],
-          "marks": [
+            },
             {
               "type": "underline",
               "rect": [
@@ -397,12 +396,13 @@ export const agentKnowledgeTools: VideoData = {
             {
               "frame": 1091,
               "x": 1420,
-              "y": 1020,
-              "zoom": 1.6
+              "y": 900,
+              "zoom": 1.3
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "box",
               "rect": [
                 880,
                 1044,
@@ -413,6 +413,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 1197
             },
             {
+              "type": "circle",
               "rect": [
                 1690,
                 1286,
@@ -455,11 +456,12 @@ export const agentKnowledgeTools: VideoData = {
               "frame": 1248,
               "x": 1420,
               "y": 900,
-              "zoom": 1.6
+              "zoom": 1.3
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "circle",
               "rect": [
                 1204,
                 784,
@@ -470,6 +472,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 1353
             },
             {
+              "type": "circle",
               "rect": [
                 1692,
                 784,
@@ -480,6 +483,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 1455
             },
             {
+              "type": "circle",
               "rect": [
                 1746,
                 1352,
@@ -514,13 +518,14 @@ export const agentKnowledgeTools: VideoData = {
           "camera": [
             {
               "frame": 1526,
-              "x": 2400,
-              "y": 950,
-              "zoom": 2.0
+              "x": 2200,
+              "y": 900,
+              "zoom": 1.5
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "circle",
               "rect": [
                 2040,
                 1000,
@@ -560,8 +565,9 @@ export const agentKnowledgeTools: VideoData = {
               "zoom": 1.5
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "box",
               "rect": [
                 588,
                 516,
@@ -584,24 +590,13 @@ export const agentKnowledgeTools: VideoData = {
             {
               "frame": 1953,
               "x": 1422,
-              "y": 780,
-              "zoom": 1
-            },
-            {
-              "frame": 1962,
-              "x": 1000,
-              "y": 1060,
-              "zoom": 1.5
-            },
-            {
-              "frame": 2184,
-              "x": 2400,
-              "y": 950,
-              "zoom": 1.9
+              "y": 900,
+              "zoom": 1.15
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "box",
               "rect": [
                 170,
                 720,
@@ -612,6 +607,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 2184
             },
             {
+              "type": "circle",
               "rect": [
                 2040,
                 1000,
@@ -796,19 +792,14 @@ export const agentKnowledgeTools: VideoData = {
           "camera": [
             {
               "frame": 0,
-              "x": 1422,
-              "y": 780,
-              "zoom": 1
-            },
-            {
-              "frame": 18,
-              "x": 2400,
-              "y": 760,
-              "zoom": 1.9
+              "x": 2200,
+              "y": 800,
+              "zoom": 1.5
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "circle",
               "rect": [
                 2030,
                 690,
@@ -844,12 +835,13 @@ export const agentKnowledgeTools: VideoData = {
             {
               "frame": 130,
               "x": 1420,
-              "y": 820,
-              "zoom": 1.5
+              "y": 860,
+              "zoom": 1.3
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "circle",
               "rect": [
                 706,
                 780,
@@ -885,8 +877,20 @@ export const agentKnowledgeTools: VideoData = {
             {
               "frame": 177,
               "x": 1420,
-              "y": 620,
-              "zoom": 1.7
+              "y": 860,
+              "zoom": 1.3
+            }
+          ],
+          "marks": [
+            {
+              "type": "circle",
+              "rect": [
+                706,
+                516,
+                704,
+                116
+              ],
+              "from": 244
             }
           ],
           "typing": {
@@ -902,17 +906,6 @@ export const agentKnowledgeTools: VideoData = {
             "to": 231,
             "fontSize": 28
           },
-          "spotlights": [
-            {
-              "rect": [
-                706,
-                516,
-                704,
-                116
-              ],
-              "from": 244
-            }
-          ],
           "cursor": [
             {
               "frame": 243,
@@ -939,12 +932,13 @@ export const agentKnowledgeTools: VideoData = {
             {
               "frame": 304,
               "x": 1420,
-              "y": 620,
-              "zoom": 1.7
+              "y": 860,
+              "zoom": 1.3
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "circle",
               "rect": [
                 700,
                 600,
@@ -955,6 +949,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 546
             },
             {
+              "type": "circle",
               "rect": [
                 1940,
                 432,
@@ -962,9 +957,7 @@ export const agentKnowledgeTools: VideoData = {
                 60
               ],
               "from": 554
-            }
-          ],
-          "marks": [
+            },
             {
               "type": "underline",
               "rect": [
@@ -1002,30 +995,13 @@ export const agentKnowledgeTools: VideoData = {
             {
               "frame": 680,
               "x": 1420,
-              "y": 560,
-              "zoom": 1.6
-            },
-            {
-              "frame": 1259,
-              "x": 1420,
-              "y": 1100,
-              "zoom": 1.5
-            },
-            {
-              "frame": 1429,
-              "x": 1420,
-              "y": 560,
-              "zoom": 1.6
-            },
-            {
-              "frame": 1660,
-              "x": 1420,
-              "y": 1100,
-              "zoom": 1.6
+              "y": 870,
+              "zoom": 1.2
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "circle",
               "rect": [
                 1736,
                 444,
@@ -1036,6 +1012,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 1050
             },
             {
+              "type": "circle",
               "rect": [
                 2140,
                 486,
@@ -1046,6 +1023,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 1254
             },
             {
+              "type": "box",
               "rect": [
                 420,
                 940,
@@ -1056,6 +1034,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 1425
             },
             {
+              "type": "circle",
               "rect": [
                 588,
                 450,
@@ -1066,6 +1045,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 1530
             },
             {
+              "type": "box",
               "rect": [
                 460,
                 606,
@@ -1076,6 +1056,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 1656
             },
             {
+              "type": "box",
               "rect": [
                 2110,
                 946,
@@ -1086,6 +1067,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 1938
             },
             {
+              "type": "box",
               "rect": [
                 420,
                 956,
@@ -1096,6 +1078,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 2088
             },
             {
+              "type": "box",
               "rect": [
                 420,
                 1184,
@@ -1106,6 +1089,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 2229
             },
             {
+              "type": "box",
               "rect": [
                 420,
                 940,
@@ -1113,18 +1097,6 @@ export const agentKnowledgeTools: VideoData = {
                 420
               ],
               "from": 2233
-            }
-          ],
-          "marks": [
-            {
-              "type": "circle",
-              "rect": [
-                2140,
-                486,
-                240,
-                46
-              ],
-              "from": 1074
             },
             {
               "type": "circle",
@@ -1134,7 +1106,8 @@ export const agentKnowledgeTools: VideoData = {
                 134,
                 56
               ],
-              "from": 1968
+              "from": 1968,
+              "to": 2088
             },
             {
               "type": "circle",
@@ -1144,7 +1117,8 @@ export const agentKnowledgeTools: VideoData = {
                 134,
                 56
               ],
-              "from": 2118
+              "from": 2118,
+              "to": 2229
             }
           ],
           "cursor": [
@@ -1184,12 +1158,13 @@ export const agentKnowledgeTools: VideoData = {
             {
               "frame": 2373,
               "x": 1420,
-              "y": 1150,
-              "zoom": 1.5
+              "y": 870,
+              "zoom": 1.2
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "box",
               "rect": [
                 420,
                 1090,
@@ -1200,6 +1175,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 2502
             },
             {
+              "type": "circle",
               "rect": [
                 2230,
                 1396,
@@ -1234,13 +1210,14 @@ export const agentKnowledgeTools: VideoData = {
           "camera": [
             {
               "frame": 2538,
-              "x": 2200,
-              "y": 420,
-              "zoom": 1.8
+              "x": 2100,
+              "y": 500,
+              "zoom": 1.5
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "circle",
               "rect": [
                 2326,
                 190,
@@ -1276,12 +1253,13 @@ export const agentKnowledgeTools: VideoData = {
             {
               "frame": 2582,
               "x": 1420,
-              "y": 1100,
-              "zoom": 1.5
+              "y": 870,
+              "zoom": 1.2
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "box",
               "rect": [
                 420,
                 940,
@@ -1292,6 +1270,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 2724
             },
             {
+              "type": "box",
               "rect": [
                 420,
                 1184,
@@ -1362,25 +1341,20 @@ export const agentKnowledgeTools: VideoData = {
           "camera": [
             {
               "frame": 0,
-              "x": 1422,
-              "y": 780,
-              "zoom": 1
-            },
-            {
-              "frame": 130,
               "x": 1100,
-              "y": 850,
-              "zoom": 1.8
+              "y": 900,
+              "zoom": 1.5
             },
             {
               "frame": 852,
-              "x": 2400,
+              "x": 2200,
               "y": 860,
-              "zoom": 1.8
+              "zoom": 1.5
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "box",
               "rect": [
                 196,
                 826,
@@ -1391,6 +1365,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 345
             },
             {
+              "type": "box",
               "rect": [
                 196,
                 786,
@@ -1401,6 +1376,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 846
             },
             {
+              "type": "box",
               "rect": [
                 2030,
                 690,
@@ -1408,9 +1384,7 @@ export const agentKnowledgeTools: VideoData = {
                 370
               ],
               "from": 927
-            }
-          ],
-          "marks": [
+            },
             {
               "type": "underline",
               "rect": [
@@ -1477,13 +1451,14 @@ export const agentKnowledgeTools: VideoData = {
           "camera": [
             {
               "frame": 0,
-              "x": 2200,
-              "y": 420,
-              "zoom": 1.8
+              "x": 2100,
+              "y": 500,
+              "zoom": 1.5
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "circle",
               "rect": [
                 2326,
                 190,
@@ -1601,19 +1576,14 @@ export const agentKnowledgeTools: VideoData = {
           "camera": [
             {
               "frame": 0,
-              "x": 1422,
-              "y": 780,
-              "zoom": 1
-            },
-            {
-              "frame": 109,
-              "x": 1700,
-              "y": 760,
-              "zoom": 1.7
+              "x": 1500,
+              "y": 800,
+              "zoom": 1.3
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "circle",
               "rect": [
                 1230,
                 190,
@@ -1624,6 +1594,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 108
             },
             {
+              "type": "box",
               "rect": [
                 1110,
                 700,
@@ -1668,13 +1639,14 @@ export const agentKnowledgeTools: VideoData = {
           "camera": [
             {
               "frame": 416,
-              "x": 1200,
-              "y": 560,
-              "zoom": 1.7
+              "x": 1300,
+              "y": 700,
+              "zoom": 1.4
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "box",
               "rect": [
                 510,
                 408,
@@ -1701,8 +1673,9 @@ export const agentKnowledgeTools: VideoData = {
               "zoom": 1.6
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "box",
               "rect": [
                 700,
                 736,
@@ -1724,13 +1697,14 @@ export const agentKnowledgeTools: VideoData = {
           "camera": [
             {
               "frame": 509,
-              "x": 1400,
-              "y": 1150,
-              "zoom": 1.7
+              "x": 1500,
+              "y": 800,
+              "zoom": 1.3
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "box",
               "rect": [
                 510,
                 1040,
@@ -1741,6 +1715,7 @@ export const agentKnowledgeTools: VideoData = {
               "to": 696
             },
             {
+              "type": "circle",
               "rect": [
                 510,
                 1094,
@@ -1748,9 +1723,7 @@ export const agentKnowledgeTools: VideoData = {
                 48
               ],
               "from": 699
-            }
-          ],
-          "marks": [
+            },
             {
               "type": "underline",
               "rect": [
@@ -1774,19 +1747,14 @@ export const agentKnowledgeTools: VideoData = {
           "camera": [
             {
               "frame": 879,
-              "x": 1422,
-              "y": 780,
-              "zoom": 1
-            },
-            {
-              "frame": 953,
               "x": 1420,
-              "y": 700,
-              "zoom": 1.5
+              "y": 760,
+              "zoom": 1.3
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "box",
               "rect": [
                 510,
                 410,
@@ -1810,11 +1778,12 @@ export const agentKnowledgeTools: VideoData = {
               "frame": 1089,
               "x": 1400,
               "y": 930,
-              "zoom": 1.7
+              "zoom": 1.5
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "box",
               "rect": [
                 770,
                 750,
@@ -1836,13 +1805,14 @@ export const agentKnowledgeTools: VideoData = {
           "camera": [
             {
               "frame": 1189,
-              "x": 1400,
-              "y": 720,
-              "zoom": 1.6
+              "x": 1450,
+              "y": 760,
+              "zoom": 1.3
             }
           ],
-          "spotlights": [
+          "marks": [
             {
+              "type": "box",
               "rect": [
                 510,
                 494,
