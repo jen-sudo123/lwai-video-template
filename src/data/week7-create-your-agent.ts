@@ -15,20 +15,10 @@ import { VideoData } from '../scenes/types';
 //  4  label-title-body   MY EXAMPLE               |   38.60 |   423
 //  5  big-statement      YOUR AGENT               |   52.70 |   381
 //  6  big-statement      BUILD PLAN · SECTION 1   |   65.40 |   168
-//  7  label-title-body   SECTION 1                |   71.00 |   693
-//  8  label-title-body   KEEP IN MIND             |   94.10 |   582
-//  9  big-statement                               |  113.50 |    75
-//  10 label-title-body   STEP 1                   |  116.00 |   207
-//  11 label-title-body   STEP 2                   |  122.90 |   327
-//  12 label-title-body   STEP 3                   |  133.80 |   510
-//  13 label-title-body   STEP 4                   |  150.80 |   102
-//  14 label-title-body   STEP 5                   |  154.20 |   480
-//  15 label-title-body   STEP 6                   |  170.20 |   255
-//  16 label-title-body   STEP 7                   |  178.70 |   237
-//  17 label-title-body   STEP 8                   |  186.60 |   327
-//  18 label-title-body   STEP 9                   |  197.50 |   621
-//  19 label-title-body   STEP 10                  |  218.20 |   147
-//  20 big-statement      NEXT LESSON              |  223.10 |   255
+//  7  screen-demo        BUILD PLAN               |   71.00 |  1275
+//  8  big-statement                               |  113.50 |    75
+//  9  screen-demo        STEP 1                   |  116.00 |  3213
+//  10 big-statement      NEXT LESSON              |  223.10 |   255
 //                                                       total   6948
 
 export const week7CreateYourAgent: VideoData = {
@@ -110,45 +100,48 @@ export const week7CreateYourAgent: VideoData = {
       lineTimings: [6, 95],
       durationInFrames: 168,
     },
-    // 7 (71.00s) SECTION 1 Read your inputs
+    // 7 (71.00s) BUILD PLAN BUILD PLAN
     {
-      layout: "label-title-body",
-      label: "SECTION 1",
-      title: "Read your inputs",
-      body: [
-        "Workflow name: the starting point for your agent’s name",
-        "My agent will: the useful result it produces",
-        "When: when the work starts",
+      layout: "screen-demo",
+      label: "BUILD PLAN",
+      steps: [
+        { from: 0, text: "Section 1: What work will your agent take on?" },
+        { from: 40, text: "Workflow name: your agent’s name" },
+        { from: 229, text: "My agent will: the useful result" },
+        { from: 437, text: "When: when the work starts" },
+        { from: 698, text: "Start it manually until it works" },
+        { from: 915, text: "Baseline: time today, what to improve" },
+        { from: 1154, text: "We measure value next week" },
       ],
-      image: "images/week7-create-your-agent/bp-s1.png",
-      imageHeight: 560,
-      bodyTimings: [5, 185, 407],
-      imageSwaps: [
-        { from: 5, src: "images/week7-create-your-agent/bp-s1-name.png" },
-        { from: 185, src: "images/week7-create-your-agent/bp-s1-agentwill.png" },
-        { from: 407, src: "images/week7-create-your-agent/bp-s1-when.png" },
+      shots: [
+        {
+          from: 0,
+          image: "images/week7-create-your-agent/screens/01-build-plan-example.png",
+          imageSize: [1547, 2002],
+          transition: "fade",
+          camera: [
+            { frame: 0, x: 774, y: 990, zoom: 2.9 },
+            { frame: 30, x: 560, y: 860, zoom: 3.4 },
+            { frame: 219, x: 780, y: 940, zoom: 3.1 },
+            { frame: 426, x: 660, y: 880, zoom: 3.4 },
+            { frame: 900, x: 560, y: 1150, zoom: 3.2 },
+            { frame: 1146, x: 774, y: 1000, zoom: 2.9 },
+          ],
+          spotlights: [
+            { rect: [155, 788, 645, 40], from: 40, to: 222 },
+            { rect: [155, 914, 1240, 86], from: 229, to: 429 },
+            { rect: [155, 852, 1005, 40], from: 437, to: 906 },
+            { rect: [155, 1026, 695, 252], from: 915, to: 1146 },
+          ],
+          marks: [
+            { type: "underline", rect: [252, 870, 290, 14], from: 603 },
+            { type: "circle", rect: [258, 1035, 240, 36], from: 979 },
+          ],
+        },
       ],
-      durationInFrames: 693,
+      durationInFrames: 1275,
     },
-    // 8 (94.10s) KEEP IN MIND Start manually,
-    {
-      layout: "label-title-body",
-      label: "KEEP IN MIND",
-      title: "Start manually,\nmeasure later",
-      body: [
-        "Start the agent manually until it has proven it works",
-        "Your baseline: time today, and what you want to improve",
-        "We use it next week to measure your agent’s value",
-      ],
-      image: "images/week7-create-your-agent/bp-s1.png",
-      imageHeight: 560,
-      bodyTimings: [5, 181, 461],
-      imageSwaps: [
-        { from: 181, src: "images/week7-create-your-agent/bp-s1-baseline.png" },
-      ],
-      durationInFrames: 582,
-    },
-    // 9 (113.50s)  Now, let’s create
+    // 8 (113.50s)  Now, let’s create
     {
       layout: "big-statement",
       text: "Now, let’s create\nthe agent.",
@@ -157,200 +150,211 @@ export const week7CreateYourAgent: VideoData = {
       lineTimings: [4, 29],
       durationInFrames: 75,
     },
-    // 10 (116.00s) STEP 1 Open Copilot Studio
+    // 9 (116.00s) STEP 1 STEP 1
     {
-      layout: "label-title-body",
+      layout: "screen-demo",
       label: "STEP 1",
-      title: "Open Copilot Studio",
-      body: [
-        "copilotstudio.microsoft.com",
-        "Follow any first-time setup prompts",
+      steps: [
+        { from: 0, text: "Open copilotstudio.microsoft.com" },
+        { from: 92, text: "Follow any first-time setup prompts" },
+        { from: 216, label: "STEP 2", text: "Use the classic experience" },
+        { from: 442, text: "Dismiss the feedback panel" },
+        { from: 542, label: "STEP 3", text: "Check your environment" },
+        { from: 745, text: "Select the approved environment" },
+        { from: 869, text: "Not listed? Contact your IT administrator" },
+        { from: 1052, label: "STEP 4", text: "Select Agents" },
+        { from: 1153, label: "STEP 5", text: "Create blank agent" },
+        { from: 1234, text: "You could also describe it in plain language" },
+        { from: 1450, text: "We start blank: the Build Plan has the design" },
+        { from: 1632, label: "STEP 6", text: "Name it from your Build Plan" },
+        { from: 1888, label: "STEP 7", text: "Click Create" },
+        { from: 1943, text: "The Overview page: your agent exists" },
+        { from: 2319, label: "STEP 8", text: "Details, then Edit" },
+        { from: 2453, label: "STEP 9", text: "Describe the job from Section 1" },
+        { from: 2898, text: "Your workflow, not my example" },
+        { from: 3022, label: "STEP 10", text: "Save" },
+        { from: 3073, label: "DONE", text: "Agent created, purpose defined" },
       ],
-      image: "images/week7-create-your-agent/cs-home.png",
-      imageHeight: 700,
-      bodyTimings: [4, 92],
-      durationInFrames: 207,
+      shots: [
+        {
+          from: 0,
+          image: "images/week7-create-your-agent/screens/02-copilot-studio-home.jpg",
+          imageSize: [1363, 936],
+          transition: "fade",
+          camera: [
+            { frame: 0, x: 682, y: 468, zoom: 1 },
+          ],
+        },
+        {
+          from: 216,
+          image: "images/week7-create-your-agent/screens/03-open-classic-menu.jpg",
+          imageSize: [1363, 936],
+          transition: "fade",
+          camera: [
+            { frame: 216, x: 682, y: 468, zoom: 1 },
+            { frame: 231, x: 380, y: 700, zoom: 1.8 },
+          ],
+          spotlights: [
+            { rect: [242, 640, 200, 28], from: 260 },
+          ],
+          cursor: [
+            { frame: 252, x: 520, y: 820 },
+            { frame: 317, x: 330, y: 654, click: true },
+          ],
+        },
+        {
+          from: 442,
+          image: "images/week7-create-your-agent/screens/04-skip-feedback.jpg",
+          imageSize: [1363, 936],
+          transition: "fade",
+          camera: [
+            { frame: 442, x: 682, y: 468, zoom: 1.5 },
+          ],
+          spotlights: [
+            { rect: [700, 648, 120, 32], from: 463 },
+          ],
+          cursor: [
+            { frame: 468, x: 560, y: 560 },
+            { frame: 503, x: 760, y: 664, click: true },
+          ],
+        },
+        {
+          from: 542,
+          image: "images/week7-create-your-agent/screens/05-classic-home.jpg",
+          imageSize: [1363, 936],
+          transition: "fade",
+          camera: [
+            { frame: 542, x: 682, y: 468, zoom: 1 },
+            { frame: 573, x: 1060, y: 200, zoom: 1.9 },
+          ],
+          spotlights: [
+            { rect: [1002, 6, 214, 40], from: 626 },
+          ],
+          cursor: [
+            { frame: 747, x: 900, y: 260 },
+            { frame: 775, x: 1110, y: 28, click: true },
+          ],
+        },
+        {
+          from: 792,
+          image: "images/week7-create-your-agent/screens/06-select-environment.jpg",
+          imageSize: [1363, 936],
+          transition: "fade",
+          camera: [
+            { frame: 792, x: 1100, y: 260, zoom: 1.8 },
+          ],
+          spotlights: [
+            { rect: [960, 354, 380, 36], from: 818 },
+          ],
+          cursor: [
+            { frame: 792, x: 1110, y: 28 },
+            { frame: 835, x: 1100, y: 372, click: true },
+          ],
+        },
+        {
+          from: 1052,
+          image: "images/week7-create-your-agent/screens/07-agents.jpg",
+          imageSize: [1363, 936],
+          transition: "fade",
+          camera: [
+            { frame: 1052, x: 682, y: 468, zoom: 1 },
+            { frame: 1065, x: 360, y: 260, zoom: 1.8 },
+            { frame: 1153, x: 1000, y: 200, zoom: 1.8 },
+            { frame: 1234, x: 712, y: 300, zoom: 1.4 },
+            { frame: 1450, x: 1000, y: 200, zoom: 1.8 },
+          ],
+          spotlights: [
+            { rect: [8, 112, 52, 38], from: 1098, to: 1155 },
+            { rect: [1008, 66, 170, 31], from: 1183, to: 1332 },
+            { rect: [244, 216, 935, 97], from: 1363, to: 1449 },
+            { rect: [1008, 66, 170, 31], from: 1479 },
+          ],
+          cursor: [
+            { frame: 1089, x: 300, y: 300 },
+            { frame: 1118, x: 34, y: 130, click: true },
+            { frame: 1183, x: 1093, y: 81, click: true },
+            { frame: 1587, x: 1093, y: 81 },
+            { frame: 1611, x: 1093, y: 81, click: true },
+          ],
+        },
+        {
+          from: 1632,
+          image: "images/week7-create-your-agent/screens/08-create-blank-agent.jpg",
+          imageSize: [1363, 936],
+          transition: "fade",
+          camera: [
+            { frame: 1632, x: 682, y: 490, zoom: 1.7 },
+          ],
+          spotlights: [
+            { rect: [408, 432, 548, 30], from: 1649, to: 1888 },
+            { rect: [757, 539, 96, 32], from: 1894 },
+          ],
+          typing: {
+            rect: [410, 434, 400, 26],
+            textX: 420,
+            text: "Weekly Team Action Follow-Up",
+            from: 1715,
+            to: 1771,
+            fontSize: 13,
+          },
+          cursor: [
+            { frame: 1878, x: 640, y: 600 },
+            { frame: 1906, x: 805, y: 555, click: true },
+          ],
+        },
+        {
+          from: 1943,
+          image: "images/week7-create-your-agent/screens/10-agent-overview.jpg",
+          imageSize: [1363, 936],
+          transition: "fade",
+          camera: [
+            { frame: 1943, x: 682, y: 468, zoom: 1 },
+            { frame: 2319, x: 520, y: 270, zoom: 1.8 },
+          ],
+          spotlights: [
+            { rect: [135, 130, 700, 285], from: 2380, to: 2409 },
+            { rect: [755, 146, 62, 23], from: 2410 },
+          ],
+          cursor: [
+            { frame: 2397, x: 600, y: 300 },
+            { frame: 2424, x: 786, y: 157, click: true },
+          ],
+        },
+        {
+          from: 2453,
+          image: "images/week7-create-your-agent/screens/11-edit-description.jpg",
+          imageSize: [1363, 936],
+          transition: "fade",
+          camera: [
+            { frame: 2453, x: 520, y: 330, zoom: 1.8 },
+            { frame: 3022, x: 620, y: 250, zoom: 1.8 },
+          ],
+          spotlights: [
+            { rect: [150, 357, 661, 54], from: 2459, to: 3018 },
+            { rect: [755, 146, 62, 23], from: 3028 },
+          ],
+          reveal: { rect: [152, 362, 656, 46], from: 2670, duration: 210 },
+          cursor: [
+            { frame: 3012, x: 600, y: 300 },
+            { frame: 3040, x: 786, y: 157, click: true },
+          ],
+        },
+        {
+          from: 3073,
+          image: "images/week7-create-your-agent/screens/12-saved-description.jpg",
+          imageSize: [1363, 936],
+          transition: "fade",
+          camera: [
+            { frame: 3073, x: 520, y: 290, zoom: 1.7 },
+          ],
+          spotlights: [
+            { rect: [148, 256, 672, 62], from: 3125 },
+          ],
+        },
+      ],
+      durationInFrames: 3213,
     },
-    // 11 (122.90s) STEP 2 Switch to the classic experience
-    {
-      layout: "label-title-body",
-      label: "STEP 2",
-      title: "Switch to the classic experience",
-      body: [
-        "Open the menu and choose Open classic experience",
-        "Dismiss the feedback panel",
-      ],
-      image: "images/week7-create-your-agent/cs-classic-menu.png",
-      imageHeight: 700,
-      bodyTimings: [9, 235],
-      imageSwaps: [
-        { from: 235, src: "images/week7-create-your-agent/cs-skip-feedback.png" },
-      ],
-      imageZoomKeyframes: [
-        { startFrame: 0, centerX: 0.5, centerY: 0.5, scale: 1 },
-        { startFrame: 15, centerX: 0.25, centerY: 0.7, scale: 1.7 },
-        { startFrame: 235, centerX: 0.56, centerY: 0.71, scale: 1.7 },
-      ],
-      durationInFrames: 327,
-    },
-    // 12 (133.80s) STEP 3 Check your environment
-    {
-      layout: "label-title-body",
-      label: "STEP 3",
-      title: "Check your environment",
-      body: [
-        "Match the environment your organization approved",
-        "Not listed? Contact your IT administrator",
-      ],
-      image: "images/week7-create-your-agent/cs-environment.png",
-      imageHeight: 700,
-      bodyTimings: [74, 335],
-      imageSwaps: [
-        { from: 211, src: "images/week7-create-your-agent/cs-select-environment.png" },
-      ],
-      imageZoomKeyframes: [
-        { startFrame: 0, centerX: 0.5, centerY: 0.5, scale: 1 },
-        { startFrame: 15, centerX: 0.81, centerY: 0.05, scale: 1.8 },
-        { startFrame: 211, centerX: 0.84, centerY: 0.4, scale: 1.7 },
-      ],
-      durationInFrames: 510,
-    },
-    // 13 (150.80s) STEP 4 Select Agents
-    {
-      layout: "label-title-body",
-      label: "STEP 4",
-      title: "Select Agents",
-      body: ["In the left navigation"],
-      image: "images/week7-create-your-agent/cs-agents-nav.png",
-      imageHeight: 700,
-      bodyTimings: [8],
-      imageZoomKeyframes: [
-        { startFrame: 0, centerX: 0.5, centerY: 0.5, scale: 1 },
-        { startFrame: 15, centerX: 0.05, centerY: 0.14, scale: 1.8 },
-      ],
-      durationInFrames: 102,
-    },
-    // 14 (154.20s) STEP 5 Create blank agent
-    {
-      layout: "label-title-body",
-      label: "STEP 5",
-      title: "Create blank agent",
-      body: [
-        "You could also describe an agent in plain language",
-        "We start blank: the Build Plan has the design",
-      ],
-      image: "images/week7-create-your-agent/cs-create-blank.png",
-      imageHeight: 700,
-      bodyTimings: [88, 304],
-      imageSwaps: [
-        { from: 88, src: "images/week7-create-your-agent/cs-describe.png" },
-        { from: 304, src: "images/week7-create-your-agent/cs-create-blank.png" },
-      ],
-      imageZoomKeyframes: [
-        { startFrame: 0, centerX: 0.5, centerY: 0.5, scale: 1 },
-        { startFrame: 12, centerX: 0.8, centerY: 0.09, scale: 1.8 },
-        { startFrame: 88, centerX: 0.52, centerY: 0.28, scale: 1.4 },
-        { startFrame: 304, centerX: 0.8, centerY: 0.09, scale: 1.8 },
-      ],
-      durationInFrames: 480,
-    },
-    // 15 (170.20s) STEP 6 Name your agent
-    {
-      layout: "label-title-body",
-      label: "STEP 6",
-      title: "Name your agent",
-      body: ["Use the workflow name from your Build Plan"],
-      image: "images/week7-create-your-agent/cs-name-empty.png",
-      imageHeight: 700,
-      bodyTimings: [165],
-      imageSwaps: [
-        { from: 89, src: "images/week7-create-your-agent/cs-name-entered.png" },
-      ],
-      imageZoomKeyframes: [
-        { startFrame: 0, centerX: 0.5, centerY: 0.5, scale: 1 },
-        { startFrame: 12, centerX: 0.5, centerY: 0.49, scale: 1.6 },
-      ],
-      durationInFrames: 255,
-    },
-    // 16 (178.70s) STEP 7 Click Create
-    {
-      layout: "label-title-body",
-      label: "STEP 7",
-      title: "Click Create",
-      body: ["When the Overview page opens, your agent exists"],
-      image: "images/week7-create-your-agent/cs-click-create.png",
-      imageHeight: 700,
-      bodyTimings: [62],
-      imageSwaps: [
-        { from: 62, src: "images/week7-create-your-agent/cs-overview.png" },
-      ],
-      imageZoomKeyframes: [
-        { startFrame: 0, centerX: 0.5, centerY: 0.5, scale: 1 },
-        { startFrame: 6, centerX: 0.59, centerY: 0.59, scale: 1.8 },
-        { startFrame: 62, centerX: 0.5, centerY: 0.5, scale: 1 },
-      ],
-      durationInFrames: 237,
-    },
-    // 17 (186.60s) STEP 8 Open the details
-    {
-      layout: "label-title-body",
-      label: "STEP 8",
-      title: "Open the details",
-      body: [
-        "It doesn’t yet know what it’s responsible for",
-        "On Overview, find Details and click Edit",
-      ],
-      image: "images/week7-create-your-agent/cs-overview.png",
-      imageHeight: 700,
-      bodyTimings: [7, 201],
-      imageSwaps: [
-        { from: 201, src: "images/week7-create-your-agent/cs-details-edit.png" },
-      ],
-      imageZoomKeyframes: [
-        { startFrame: 0, centerX: 0.5, centerY: 0.5, scale: 1 },
-        { startFrame: 201, centerX: 0.58, centerY: 0.17, scale: 1.8 },
-      ],
-      durationInFrames: 327,
-    },
-    // 18 (197.50s) STEP 9 Describe the job
-    {
-      layout: "label-title-body",
-      label: "STEP 9",
-      title: "Describe the job",
-      body: [
-        "Summarize Section 1 of your Build Plan",
-        "Your workflow, not my example",
-        "Click Save",
-      ],
-      image: "images/week7-create-your-agent/cs-description.png",
-      imageHeight: 700,
-      bodyTimings: [8, 453, 577],
-      imageSwaps: [
-        { from: 577, src: "images/week7-create-your-agent/cs-save.png" },
-      ],
-      imageZoomKeyframes: [
-        { startFrame: 0, centerX: 0.5, centerY: 0.5, scale: 1 },
-        { startFrame: 12, centerX: 0.35, centerY: 0.41, scale: 1.5 },
-        { startFrame: 577, centerX: 0.58, centerY: 0.17, scale: 1.8 },
-      ],
-      durationInFrames: 621,
-    },
-    // 19 (218.20s) STEP 10 Agent created, purpose defined
-    {
-      layout: "label-title-body",
-      label: "STEP 10",
-      title: "Agent created, purpose defined",
-      body: ["That’s our starting point"],
-      image: "images/week7-create-your-agent/cs-saved.png",
-      imageHeight: 700,
-      bodyTimings: [7],
-      imageZoomKeyframes: [
-        { startFrame: 0, centerX: 0.5, centerY: 0.5, scale: 1 },
-        { startFrame: 12, centerX: 0.36, centerY: 0.31, scale: 1.5 },
-      ],
-      durationInFrames: 147,
-    },
-    // 20 (223.10s) NEXT LESSON Write the detailed instructions
+    // 10 (223.10s) NEXT LESSON Write the detailed instructions
     {
       layout: "big-statement",
       label: "NEXT LESSON",

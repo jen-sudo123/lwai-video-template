@@ -56,6 +56,8 @@ const editableFields = (scene) => {
     if (typeof v === 'string' && TEXT_KEYS.includes(k) && !isMedia(v)) fields[k] = v;
     else if (Array.isArray(v) && v.length && v.every((x) => typeof x === 'string') && !v.some(isMedia)
       && !/(Icons|images|Timings)$/.test(k)) fields[k] = v;
+    // screen-demo step chips: edit their text as one line per step (timings stay in the data file).
+    else if (k === 'steps' && Array.isArray(v) && v.every((x) => x && typeof x.text === 'string')) fields[k] = v.map((x) => x.text);
   }
   return fields;
 };

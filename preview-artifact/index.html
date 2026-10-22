@@ -156,7 +156,7 @@ input:focus-visible, textarea:focus-visible, button:focus-visible { outline: 2px
 (() => {
   const $ = (id) => document.getElementById(id);
   const FIELD_NAMES = { label: 'Label', title: 'Title', subtitle: 'Subtitle', text: 'Text', caption: 'Caption',
-    attribution: 'Attribution', body: 'Body lines', highlight: 'Highlight', titleHighlight: 'Title highlight' };
+    attribution: 'Attribution', body: 'Body lines', steps: 'Step labels', highlight: 'Highlight', titleHighlight: 'Title highlight' };
   const fieldName = (k) => FIELD_NAMES[k] || k.replace(/([A-Z])/g, ' $1').replace(/^./, (c) => c.toUpperCase());
   const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
   const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
