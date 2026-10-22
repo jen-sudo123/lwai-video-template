@@ -9,15 +9,15 @@ import { VideoData } from '../scenes/types';
 //
 //  #  layout            label                     | start s | frames
 //  1  title-card-green  COPILOT STUDIO            |    0.00 |   120
-//  2  big-statement     BUILD PLAN · SECTION 3    |    4.00 |   150
+//  2  screen-demo       BUILD PLAN                |    4.00 |   150
 //  3  label-title-body  YESTERDAY                 |    9.00 |   276
-//  4  label-title-body  BUILD PLAN · SECTION 3    |   18.20 |   303
+//  4  screen-demo       BUILD PLAN                |   18.20 |   303
 //  5  label-title-body  TODAY                     |   28.30 |   420
 //  6  label-title-body  MY EXAMPLE                |   42.30 |   306
 //  7  screen-demo       KNOWLEDGE                 |   52.50 |  2271
 //  8  label-title-body  YOUR AGENT · SECTION 3    |  128.20 |   486
 //  9  big-statement     THE PRINCIPLE             |  144.40 |   321
-//  10 label-title-body  YOUR AGENT · SECTION 3    |  155.10 |   726
+//  10 screen-demo       YOUR AGENT                |  155.10 |   726
 //  11 label-title-body  MY EXAMPLE                |  179.30 |   435
 //  12 screen-demo       TOOL                      |  193.80 |  3087
 //  13 label-title-body  CONFIGURATION DECISIONS   |  296.70 |   732
@@ -44,17 +44,47 @@ export const agentKnowledgeTools: VideoData = {
       "label": "COPILOT STUDIO",
       "durationInFrames": 120
     },
-    // 2 (4.00s) BUILD PLAN · SECTION 3
+    // 2 (4.00s) BUILD PLAN
     {
-      "layout": "big-statement",
-      "text": "What does your\nagent need?",
-      "size": "title",
-      "animation": "fade",
-      "lineTimings": [
-        6,
-        96
+      "layout": "screen-demo",
+      "label": "BUILD PLAN",
+      "steps": [
+        {
+          "from": 0,
+          "text": "Section 3: What does your agent need?"
+        }
       ],
-      "label": "BUILD PLAN · SECTION 3",
+      "shots": [
+        {
+          "from": 0,
+          "image": "images/agent-knowledge-tools/screens/00-build-plan-section-3.png",
+          "imageSize": [
+            697,
+            341
+          ],
+          "transition": "fade",
+          "camera": [
+            {
+              "frame": 0,
+              "x": 348,
+              "y": 170,
+              "zoom": 1
+            }
+          ],
+          "marks": [
+            {
+              "type": "box",
+              "rect": [
+                44,
+                40,
+                356,
+                38
+              ],
+              "from": 99
+            }
+          ]
+        }
+      ],
       "durationInFrames": 150
     },
     // 3 (9.00s) YESTERDAY
@@ -74,22 +104,80 @@ export const agentKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 276
     },
-    // 4 (18.20s) BUILD PLAN · SECTION 3
+    // 4 (18.20s) BUILD PLAN
     {
-      "layout": "label-title-body",
-      "label": "BUILD PLAN · SECTION 3",
-      "title": "What your agent\nneeds",
-      "body": [
-        "Information: documents and data sources",
-        "Tools/actions: what it must do in other systems",
-        "Access: approved accounts and permissions"
+      "layout": "screen-demo",
+      "label": "BUILD PLAN",
+      "steps": [
+        {
+          "from": 0,
+          "text": "What you identified in Section 3"
+        },
+        {
+          "from": 67,
+          "text": "Information: documents and data sources"
+        },
+        {
+          "from": 128,
+          "text": "Tools/actions: what it must do"
+        },
+        {
+          "from": 216,
+          "text": "Access: can your agent reach them?"
+        }
       ],
-      "bodyRight": true,
-      "bodyCards": true,
-      "bodyTimings": [
-        67,
-        128,
-        216
+      "shots": [
+        {
+          "from": 0,
+          "image": "images/agent-knowledge-tools/screens/00-build-plan-section-3.png",
+          "imageSize": [
+            697,
+            341
+          ],
+          "transition": "fade",
+          "camera": [
+            {
+              "frame": 0,
+              "x": 348,
+              "y": 170,
+              "zoom": 1
+            }
+          ],
+          "marks": [
+            {
+              "type": "box",
+              "rect": [
+                44,
+                82,
+                612,
+                80
+              ],
+              "from": 67,
+              "to": 122
+            },
+            {
+              "type": "box",
+              "rect": [
+                44,
+                168,
+                600,
+                104
+              ],
+              "from": 128,
+              "to": 210
+            },
+            {
+              "type": "box",
+              "rect": [
+                44,
+                288,
+                310,
+                26
+              ],
+              "from": 216
+            }
+          ]
+        }
       ],
       "durationInFrames": 303
     },
@@ -657,22 +745,54 @@ export const agentKnowledgeTools: VideoData = {
       "label": "THE PRINCIPLE",
       "durationInFrames": 321
     },
-    // 10 (155.10s) YOUR AGENT · SECTION 3
+    // 10 (155.10s) YOUR AGENT
     {
-      "layout": "label-title-body",
-      "label": "YOUR AGENT · SECTION 3",
-      "title": "Tools/actions:\nwhat must it do?",
-      "body": [
-        "Retrieve records",
-        "Look something up in another system",
-        "Perform an approved action"
+      "layout": "screen-demo",
+      "label": "YOUR AGENT",
+      "steps": [
+        {
+          "from": 0,
+          "text": "Next: the tools your agent needs"
+        },
+        {
+          "from": 191,
+          "text": "Section 3: Tools/actions"
+        },
+        {
+          "from": 477,
+          "text": "Retrieve, look something up, or take an approved action"
+        }
       ],
-      "bodyRight": true,
-      "bodyCards": true,
-      "bodyTimings": [
-        477,
-        519,
-        587
+      "shots": [
+        {
+          "from": 0,
+          "image": "images/agent-knowledge-tools/screens/00-build-plan-section-3.png",
+          "imageSize": [
+            697,
+            341
+          ],
+          "transition": "fade",
+          "camera": [
+            {
+              "frame": 0,
+              "x": 348,
+              "y": 170,
+              "zoom": 1
+            }
+          ],
+          "marks": [
+            {
+              "type": "box",
+              "rect": [
+                44,
+                168,
+                600,
+                104
+              ],
+              "from": 191
+            }
+          ]
+        }
       ],
       "durationInFrames": 726
     },
