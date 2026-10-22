@@ -17,6 +17,12 @@ export type Scene =
       durationInFrames: number;
     }
   | {
+      // Instructions doc rewritten line by line, each configured name linked to the real
+      // tool / knowledge source in a "configured" panel. See InstructionLink.tsx.
+      layout: 'instruction-link';
+      durationInFrames: number;
+    } & import('./InstructionLink').InstructionLinkProps
+  | {
       // Recap note: title left, reminder note right whose items tick off on the VO words,
       // then an optional dark "next" bar and serif kicker. See ReminderNote.tsx.
       layout: 'reminder';

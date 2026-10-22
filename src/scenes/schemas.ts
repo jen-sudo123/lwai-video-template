@@ -559,6 +559,25 @@ const converge = z.object({
   durationInFrames: z.number(),
 });
 
+const instructionLink = z.object({
+  layout: z.literal('instruction-link'),
+  label: z.string(),
+  title: z.string(),
+  titleTimings: z.array(z.number()).optional(),
+  docLabel: z.string(),
+  docSection: z.string(),
+  lines: z.array(z.object({ text: z.string().optional(), before: z.string().optional(), after: z.string().optional(),
+    highlight: z.string().optional(), focusFrom: z.number().optional(), changeFrom: z.number().optional(),
+    linkFrom: z.number().optional(), resource: z.number().optional() })),
+  panelLabel: z.string(),
+  resources: z.array(z.object({ kind: z.string(), name: z.string(), meta: z.string(), icon: z.string().optional(), from: z.number() })),
+  notes: z.array(z.object({ text: z.string(), from: z.number(), to: z.number().optional() })).optional(),
+  capabilityFrom: z.number().optional(),
+  capabilityText: z.string().optional(),
+  clarityText: z.string().optional(),
+  durationInFrames: z.number(),
+});
+
 const reminder = z.object({
   layout: z.literal('reminder'),
   label: z.string(),
@@ -606,6 +625,7 @@ const screenDemo = z.object({
 
 export const sceneSchema = z.discriminatedUnion('layout', [
   converge,
+  instructionLink,
   reminder,
   titleCardGreen,
   screenDemo,

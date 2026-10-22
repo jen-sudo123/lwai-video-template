@@ -20,7 +20,7 @@ import { VideoData } from '../scenes/types';
 //  10 label-title-body  MY EXAMPLE                |  179.30 |   435
 //  11 screen-demo       TOOL                      |  193.80 |  3087
 //  12 label-title-body  CONFIGURATION DECISION    |  296.70 |   732
-//  13 screen-demo       INSTRUCTIONS              |  321.10 |  1065
+//  13 instruction-link  INSTRUCTIONS              |  321.10 |  1065
 //  14 label-title-body  FOR YOUR WORKFLOW         |  356.60 |   618
 //  15 screen-demo       INSTRUCTIONS              |  377.20 |    78
 //  16 screen-demo       FOR YOUR WORKFLOW         |  379.80 |   324
@@ -1444,180 +1444,77 @@ export const agentKnowledgeTools: VideoData = {
     },
     // 13 (321.10s) INSTRUCTIONS
     {
-      "layout": "screen-demo",
+      "layout": "instruction-link",
       "label": "INSTRUCTIONS",
-      "steps": [
+      "title": "Name the capabilities\nyou configured",
+      "titleTimings": [
+        3,
+        18
+      ],
+      "docLabel": "INSTRUCTIONS",
+      "docSection": "Inputs & Access",
+      "lines": [
         {
-          "from": 0,
-          "text": "Return to Build: Instructions"
+          "before": "Verify that meeting notes are approved.",
+          "after": "Use Approved Weekly Meeting Notes to read the meeting notes. Verify that meeting notes are approved.",
+          "highlight": "Approved Weekly Meeting Notes",
+          "focusFrom": 349,
+          "changeFrom": 357,
+          "linkFrom": 389,
+          "resource": 0
         },
         {
-          "from": 130,
-          "label": "BEFORE",
-          "text": "The step about existing tracker records"
+          "before": "Retrieve tracker records only through approved access.",
+          "after": "Use the configured Read Team Action Tracker tool to retrieve existing commitments before comparing. Its site and list are fixed; do not guess other sources.",
+          "highlight": "Read Team Action Tracker",
+          "focusFrom": 130,
+          "changeFrom": 247,
+          "linkFrom": 302,
+          "resource": 1
         },
         {
-          "from": 247,
-          "label": "AFTER",
-          "text": "Names the configured Read Team Action Tracker tool"
+          "text": "These instructions do not establish tool access."
         },
         {
-          "from": 349,
-          "label": "INSTRUCTIONS",
-          "text": "Name Approved Weekly Meeting Notes in the notes step"
+          "text": "If notes are unavailable or not approved, request them and stop."
+        }
+      ],
+      "panelLabel": "CONFIGURED IN COPILOT STUDIO",
+      "resources": [
+        {
+          "kind": "KNOWLEDGE",
+          "name": "Approved Weekly Meeting Notes",
+          "meta": "SharePoint document",
+          "icon": "BookOpenIcon",
+          "from": 68
         },
         {
+          "kind": "TOOL",
+          "name": "Read Team Action Tracker",
+          "meta": "SharePoint · Get items",
+          "icon": "WrenchScrewdriverIcon",
+          "from": 76
+        }
+      ],
+      "notes": [
+        {
+          "text": "No resource picker in this interface? Type the exact configured names.",
           "from": 503,
-          "text": "No resource picker here: use exact names"
+          "to": 846
         },
         {
+          "text": "The reference makes the instruction clearer.",
           "from": 852,
-          "text": "The capability comes from configuring it"
+          "to": 924
+        },
+        {
+          "text": "The capability comes from adding and configuring the source or tool.",
+          "from": 927
         }
       ],
-      "shots": [
-        {
-          "from": 0,
-          "image": "images/agent-knowledge-tools/screens/12-instructions-reference-configured-resources.jpg",
-          "imageSize": [
-            2844,
-            1560
-          ],
-          "transition": "fade",
-          "camera": [
-            {
-              "frame": 0,
-              "x": 1100,
-              "y": 900,
-              "zoom": 1.5
-            }
-          ]
-        },
-        {
-          "from": 130,
-          "image": "images/agent-knowledge-tools/screens/12a-instruction-before.png",
-          "imageSize": [
-            727,
-            331
-          ],
-          "transition": "fade",
-          "camera": [
-            {
-              "frame": 130,
-              "x": 364,
-              "y": 166,
-              "zoom": 1
-            }
-          ],
-          "marks": [
-            {
-              "type": "box",
-              "rect": [
-                100,
-                170,
-                348,
-                16
-              ],
-              "from": 144
-            }
-          ]
-        },
-        {
-          "from": 247,
-          "image": "images/agent-knowledge-tools/screens/12b-instruction-after.png",
-          "imageSize": [
-            1145,
-            422
-          ],
-          "transition": "fade",
-          "camera": [
-            {
-              "frame": 247,
-              "x": 572,
-              "y": 211,
-              "zoom": 1
-            }
-          ],
-          "marks": [
-            {
-              "type": "box",
-              "rect": [
-                76,
-                222,
-                966,
-                14
-              ],
-              "from": 255
-            }
-          ]
-        },
-        {
-          "from": 349,
-          "image": "images/agent-knowledge-tools/screens/12-instructions-reference-configured-resources.jpg",
-          "imageSize": [
-            2844,
-            1560
-          ],
-          "transition": "fade",
-          "camera": [
-            {
-              "frame": 349,
-              "x": 1100,
-              "y": 900,
-              "zoom": 1.5
-            },
-            {
-              "frame": 852,
-              "x": 2200,
-              "y": 860,
-              "zoom": 1.5
-            }
-          ],
-          "marks": [
-            {
-              "type": "box",
-              "rect": [
-                196,
-                786,
-                1320,
-                40
-              ],
-              "from": 357,
-              "to": 846
-            },
-            {
-              "type": "box",
-              "rect": [
-                2030,
-                690,
-                760,
-                370
-              ],
-              "from": 927
-            },
-            {
-              "type": "underline",
-              "rect": [
-                446,
-                834,
-                282,
-                30
-              ],
-              "from": 357
-            },
-            {
-              "type": "underline",
-              "rect": [
-                254,
-                794,
-                418,
-                30
-              ],
-              "from": 375
-            }
-          ]
-        }
-      ],
+      "capabilityFrom": 927,
+      "capabilityText": "THE CAPABILITY",
+      "clarityText": "THE REFERENCE",
       "durationInFrames": 1065
     },
     // 14 (356.60s) FOR YOUR WORKFLOW

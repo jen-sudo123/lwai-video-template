@@ -4,6 +4,7 @@ import { TitleCardGreen } from './TitleCardGreen';
 import { ScreenDemo } from './ScreenDemo';
 import { ReminderNote } from './ReminderNote';
 import { Converge } from './Converge';
+import { InstructionLink } from './InstructionLink';
 import { BlankBase } from './BlankBase';
 import { TextImageSplit } from './TextImageSplit';
 import { CenteredImageCaption } from './CenteredImageCaption';
@@ -471,6 +472,10 @@ export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> =
           whiteoutBox={scene.whiteoutBox}
         />
       );
+    case 'instruction-link': {
+      const { layout: _l, durationInFrames: _d, ...props } = scene;
+      return <InstructionLink {...props} />;
+    }
     case 'converge':
       return (
         <Converge
