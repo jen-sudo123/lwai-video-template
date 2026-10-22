@@ -16,11 +16,11 @@ type Props = {
 };
 
 const SECTIONS = [
-  { title: 'The work & the result', body: 'What your agent takes on and what it should achieve' },
-  { title: 'Steps & roles', body: 'The individual steps and who performs them' },
-  { title: 'Information & capabilities', body: 'What your agent needs to do the work' },
-  { title: 'Boundaries & escalation', body: "What it's allowed to do and when to ask for help" },
-  { title: 'First version & success', body: 'What it should accomplish and what good looks like' },
+  { title: 'What work will your agent take on?', body: 'The workflow, what starts it and the result it produces' },
+  { title: 'What are the main steps, and who does what?', body: 'Agent, person or automation for each step' },
+  { title: 'What does your agent need?', body: 'Information, tools and access' },
+  { title: 'Where should the human stay in control?', body: 'What it does alone, what needs approval, when to ask' },
+  { title: "What's the smallest version you can build and test?", body: 'First version, test and what success means' },
 ];
 
 const CODO = [
@@ -190,10 +190,10 @@ export const BuildPlanCodoDiagram: React.FC<Props> = ({
               {i + 1}
             </div>
             <div>
-              <div style={{ fontFamily: fonts.serif, fontSize: 30, color: colors.black, lineHeight: 1.2 }}>
+              <div style={{ fontFamily: fonts.serif, fontSize: 25, color: colors.black, lineHeight: 1.2 }}>
                 {sec.title}
               </div>
-              <div style={{ fontFamily: fonts.sans, fontSize: 21, color: '#555555', marginTop: 4 }}>{sec.body}</div>
+              <div style={{ fontFamily: fonts.sans, fontSize: 20, color: '#555555', marginTop: 4 }}>{sec.body}</div>
             </div>
           </div>
         );

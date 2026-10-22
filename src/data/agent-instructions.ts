@@ -227,9 +227,9 @@ export const agentInstructions: VideoData = {
     {
       layout: 'split-contrast',
       leftLabel: 'IN THE MEETING',
-      leftTitle: '"Send Sarah the Q3 deck by Friday"',
+      leftTitle: '"Taylor will get the customer update out by Friday"',
       rightLabel: 'IN THE TRACKER',
-      rightTitle: '"Share quarterly slides with Sarah"',
+      rightTitle: '"Customer update email (Taylor)"',
       dividerLabel: '≈',
       equal: true,
       rightLightUpFrame: 58,
