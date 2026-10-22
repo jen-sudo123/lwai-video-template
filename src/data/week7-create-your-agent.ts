@@ -10,7 +10,7 @@ import { VideoData } from '../scenes/types';
 //
 //  #  layout             label                    | start s | frames
 //  1  title-card-green   WEEK 7 · COPILOT STUDIO  |    0.00 |    66
-//  2  label-title-body   THIS WEEK                |    2.20 |   621
+//  2  reminder           QUICK REMINDER           |    2.20 |   621
 //  3  label-title-body   BEFORE YOU START         |   22.90 |   471
 //  4  label-title-body   MY EXAMPLE               |   38.60 |   423
 //  5  big-statement      YOUR AGENT               |   52.70 |   381
@@ -32,21 +32,20 @@ export const week7CreateYourAgent: VideoData = {
       label: "WEEK 7 · COPILOT STUDIO",
       durationInFrames: 66,
     },
-    // 2 (2.20s) THIS WEEK From Build Plan
+    // 2 (2.20s) QUICK REMINDER Last week, you made
     {
-      layout: "label-title-body",
-      label: "THIS WEEK",
-      title: "From Build Plan\nto working agent",
-      body: [
-        "Last week: you completed your Build Plan",
-        "This week: turn it into an agent in Copilot Studio",
-        "Your agent: built for your workflow",
+      layout: "reminder",
+      label: "QUICK REMINDER",
+      title: "Last week, you made\nthe key decisions",
+      noteTitle: "Your Agent Build Plan",
+      noteMeta: "Completed in Week 6",
+      items: [
+        { text: "Selected a real workflow", from: 128 },
+        { text: "Worked out how it should operate", from: 182 },
+        { text: "Completed your Agent Build Plan", from: 239 },
       ],
-      bodyRight: true,
-      bodyCards: true,
-      bodyCardCompact: true,
-      bodyCardIcons: ["check", "bolt", "user"],
-      bodyTimings: [124, 322, 517],
+      next: { label: "THIS WEEK", text: "Turn it into a working agent in Copilot Studio", from: 322 },
+      kicker: { text: "Your agent, built for your workflow.", from: 517 },
       durationInFrames: 621,
     },
     // 3 (22.90s) BEFORE YOU START Open your Agent Build Plan

@@ -2,6 +2,7 @@ import React from 'react';
 import { Scene } from './types';
 import { TitleCardGreen } from './TitleCardGreen';
 import { ScreenDemo } from './ScreenDemo';
+import { ReminderNote } from './ReminderNote';
 import { BlankBase } from './BlankBase';
 import { TextImageSplit } from './TextImageSplit';
 import { CenteredImageCaption } from './CenteredImageCaption';
@@ -467,6 +468,18 @@ export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> =
           skipCardAnimation={scene.skipCardAnimation}
           cardDelay={scene.cardDelay}
           whiteoutBox={scene.whiteoutBox}
+        />
+      );
+    case 'reminder':
+      return (
+        <ReminderNote
+          label={scene.label}
+          title={scene.title}
+          noteTitle={scene.noteTitle}
+          noteMeta={scene.noteMeta}
+          items={scene.items}
+          next={scene.next}
+          kicker={scene.kicker}
         />
       );
     case 'screen-demo':

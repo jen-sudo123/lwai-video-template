@@ -5,6 +5,19 @@ export type AnimationMode = 'kinetic' | 'fade' | 'auto';
 
 export type Scene =
   | {
+      // Recap note: title left, reminder note right whose items tick off on the VO words,
+      // then an optional dark "next" bar and serif kicker. See ReminderNote.tsx.
+      layout: 'reminder';
+      label: string;
+      title: string;
+      noteTitle: string;
+      noteMeta?: string;
+      items: Array<{ text: string; from: number }>;
+      next?: { label: string; text: string; from: number };
+      kicker?: { text: string; from: number };
+      durationInFrames: number;
+    }
+  | {
       // Screenshot tutorial that behaves like a screen recording: virtual camera, spotlight,
       // cursor + click, typed input, revealed replies, drawn marks, before/after compare.
       // See ScreenDemo.tsx for the shot fields (rects/points in screenshot pixels).

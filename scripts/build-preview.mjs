@@ -47,7 +47,7 @@ const scenes = composition.props.scenes || [];
 
 // On-screen text a reviewer can edit: plain string fields and string lists, never media paths or style options.
 const TEXT_KEYS = ['label', 'title', 'subtitle', 'text', 'caption', 'attribution', 'highlight', 'titleHighlight',
-  'labelSub', 'leftLabel', 'rightLabel', 'leftTitle', 'rightTitle', 'source'];
+  'labelSub', 'noteTitle', 'noteMeta', 'leftLabel', 'rightLabel', 'leftTitle', 'rightTitle', 'source'];
 const isMedia = (s) => /\.(png|jpe?g|svg|gif|webp|mp4|mov|mp3|wav)$/i.test(s) || s.startsWith('placeholder:');
 const editableFields = (scene) => {
   const fields = {};
@@ -56,8 +56,10 @@ const editableFields = (scene) => {
     if (typeof v === 'string' && TEXT_KEYS.includes(k) && !isMedia(v)) fields[k] = v;
     else if (Array.isArray(v) && v.length && v.every((x) => typeof x === 'string') && !v.some(isMedia)
       && !/(Icons|images|Timings)$/.test(k)) fields[k] = v;
-    // screen-demo step chips: edit their text as one line per step (timings stay in the data file).
-    else if (k === 'steps' && Array.isArray(v) && v.every((x) => x && typeof x.text === 'string')) fields[k] = v.map((x) => x.text);
+    // Timed text lists (screen-demo steps, reminder items): one line per entry; timings stay in the data file.
+    else if (Array.isArray(v) && v.length && v.every((x) => x && typeof x.text === 'string')) fields[k] = v.map((x) => x.text);
+    // Timed text objects (reminder next bar / kicker): edit the text only.
+    else if (v && typeof v === 'object' && !Array.isArray(v) && typeof v.text === 'string') fields[k] = v.text;
   }
   return fields;
 };

@@ -546,6 +546,18 @@ const imageMarquee = z.object({
 
 const rect = z.tuple([z.number(), z.number(), z.number(), z.number()]);
 
+const reminder = z.object({
+  layout: z.literal('reminder'),
+  label: z.string(),
+  title: z.string(),
+  noteTitle: z.string(),
+  noteMeta: z.string().optional(),
+  items: z.array(z.object({ text: z.string(), from: z.number() })),
+  next: z.object({ label: z.string(), text: z.string(), from: z.number() }).optional(),
+  kicker: z.object({ text: z.string(), from: z.number() }).optional(),
+  durationInFrames: z.number(),
+});
+
 const screenDemo = z.object({
   layout: z.literal('screen-demo'),
   label: z.string(),
@@ -580,6 +592,7 @@ const screenDemo = z.object({
 });
 
 export const sceneSchema = z.discriminatedUnion('layout', [
+  reminder,
   titleCardGreen,
   screenDemo,
   blank,
