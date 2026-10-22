@@ -52,6 +52,14 @@ Render command (local Mac: 8 GB RAM, so concurrency 1; close Studio first):
 npx remotion render src/index.ts <CompId> out/<name>.mp4 --chrome-mode=chrome-for-testing --concurrency=1 --timeout=120000
 ```
 
+## Preview requests: scene-editor artifact (standard)
+
+Every "preview" request gets the scene-editor artifact, not a bare MP4. See `preview-artifact/README.md`.
+`npm run preview -- <CompId>` → publish `out/preview/<CompId>/` with `capabilities: { db: {}, user: {} }`;
+republish to the same URL on later previews. Reviewer edits come back from the artifact db collection `edits`
+(`scene-NN` docs with `changes`/`note`, plus `general`); apply them, then mark `status: "applied"`.
+A preview render doesn't need the render go-ahead; the final 1080p render still does.
+
 ## VO timing (most time-consuming part — get it right)
 
 - Whisper once, save next to the data file: `whisper public/audio/<name>.mp3 --model small --word_timestamps True` → `src/data/<name>.transcript.*`.

@@ -1,0 +1,396 @@
+<title>{{PAGE_TITLE}}</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400&family=Public+Sans:wght@400;600&display=swap">
+<style>
+/* Layout: a sticky player column (video, scene timeline, general note) beside a scrolling column of scene cards. */
+:root {
+  --bg: #FFFFFF; --surface: #F6F7F3; --fg: #0B0C0A; --muted: #62665E; --line: #E3E6DF;
+  --accent: #66C61C; --accent-ink: #3E7A12; --accent-soft: #E8F8D6; --title-green: #4A7C2F;
+  --warn: #9A5B00; --warn-soft: #FFF2DB;
+  --serif: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0D0F0C; --surface: #161914; --fg: #EEF1EA; --muted: #A2A89B; --line: #2A2F26;
+  --accent: #7DD63A; --accent-ink: #9BE35F; --accent-soft: #1F2C17; --title-green: #8CC46A;
+  --warn: #F2B65C; --warn-soft: #33270F; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0D0F0C; --surface: #161914; --fg: #EEF1EA; --muted: #A2A89B; --line: #2A2F26;
+  --accent: #7DD63A; --accent-ink: #9BE35F; --accent-soft: #1F2C17; --title-green: #8CC46A;
+  --warn: #F2B65C; --warn-soft: #33270F; color-scheme: dark }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1400px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.eyebrow { font-weight: 600; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.03em;
+  line-height: 1.1; margin: 6px 0 10px; text-wrap: balance; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.meta code { font-family: var(--sans); font-weight: 600; color: var(--fg); }
+.pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 12px;
+  font-weight: 600; background: var(--surface); color: var(--muted); border: 1px solid var(--line); }
+.pill.open { background: var(--warn-soft); color: var(--warn); border-color: transparent; }
+.pill.applied { background: var(--accent-soft); color: var(--accent-ink); border-color: transparent; }
+.banner { margin-top: 16px; padding: 10px 14px; border-radius: var(--radius); background: var(--surface);
+  border: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+
+.layout { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 32px; margin-top: 28px; align-items: start; }
+.player { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+video { width: 100%; aspect-ratio: 16 / 9; max-width: 100%; background: #000; border-radius: var(--radius); display: block; }
+.timeline { display: flex; height: 26px; border-radius: 6px; overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
+.seg { border: 0; padding: 0; margin: 0; background: transparent; border-right: 1px solid var(--line); cursor: pointer;
+  font: 600 10px var(--sans); color: var(--muted); min-width: 0; overflow: hidden; position: relative; }
+.seg:last-child { border-right: 0; }
+.seg:hover { background: var(--accent-soft); }
+.seg.current { background: var(--accent); color: #0B0C0A; }
+.seg.has-edit::after { content: ""; position: absolute; left: 50%; bottom: 3px; width: 5px; height: 5px; margin-left: -2.5px;
+  border-radius: 50%; background: var(--warn); }
+.seg.current.has-edit::after { background: #0B0C0A; }
+.now { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.now strong { color: var(--fg); font-weight: 600; }
+.follow { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; white-space: nowrap; }
+.general { border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; display: flex; flex-direction: column; gap: 8px; }
+.general h2 { font-family: var(--serif); font-weight: 400; font-size: 19px; margin: 0; letter-spacing: -0.02em; }
+
+.toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 14px; }
+.seg-ctl { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg-ctl button { border: 0; background: transparent; padding: 6px 12px; font: 600 13px var(--sans); color: var(--muted); cursor: pointer; }
+.seg-ctl button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.hint { font-size: 13px; color: var(--muted); }
+.list { display: flex; flex-direction: column; gap: 16px; }
+
+.card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); padding: 16px;
+  display: flex; flex-direction: column; gap: 14px; scroll-margin-top: 16px; transition: border-color .2s, box-shadow .2s; }
+.card.current { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.card-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.card-head h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; letter-spacing: -0.02em; margin: 0; flex: 1 1 220px; min-width: 0; }
+.num { font-weight: 600; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; letter-spacing: .06em; }
+.tc { border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 6px; padding: 2px 8px;
+  font: 600 12px var(--sans); font-variant-numeric: tabular-nums; cursor: pointer; }
+.tc:hover { border-color: var(--accent); }
+.chip { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: var(--surface); color: var(--muted); }
+.chip.open { background: var(--warn-soft); color: var(--warn); }
+.chip.applied { background: var(--accent-soft); color: var(--accent-ink); }
+.chip.dirty { background: var(--fg); color: var(--bg); }
+.card-body { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: 16px; align-items: start; }
+.thumb { border: 0; padding: 0; background: none; cursor: pointer; border-radius: 8px; overflow: hidden; display: block; width: 100%; }
+.thumb img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 1px solid var(--line); border-radius: 8px; }
+.thumb:hover img { border-color: var(--accent); }
+.fields { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.field label { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: var(--muted); }
+.field label .tag { font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--warn); }
+.field .orig { font-size: 12px; color: var(--muted); }
+.field .orig s { text-decoration-color: var(--warn); }
+input[type="text"], textarea { width: 100%; font: 15px/1.45 var(--sans); color: var(--fg); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; resize: vertical; }
+textarea { min-height: 42px; }
+input:focus-visible, textarea:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.field.changed input, .field.changed textarea { border-color: var(--warn); }
+.note textarea { background: var(--bg); }
+.card-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.saved-by { font-size: 12px; color: var(--muted); }
+.actions { display: flex; gap: 8px; }
+.btn { border: 1px solid var(--fg); background: var(--fg); color: var(--bg); border-radius: 8px; padding: 7px 14px;
+  font: 600 13px var(--sans); cursor: pointer; }
+.btn.secondary { background: transparent; color: var(--fg); border-color: var(--line); }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+.empty { padding: 28px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: var(--radius); }
+.error { padding: 16px; border-radius: var(--radius); background: var(--warn-soft); color: var(--warn); }
+
+@media (max-width: 980px) {
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  .player { position: static; }
+}
+@media (max-width: 560px) { .card-body { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow" id="eyebrow">Video preview</div>
+    <h1 id="title">Loading preview…</h1>
+    <div class="meta" id="meta"></div>
+    <div class="pills" id="pills"></div>
+    <div class="banner" id="banner" hidden></div>
+  </header>
+
+  <div class="layout">
+    <aside class="player">
+      <video id="video" controls playsinline preload="metadata"></video>
+      <div class="timeline" id="timeline" role="group" aria-label="Scenes"></div>
+      <div class="now">
+        <span id="now">Scene 1</span>
+        <label class="follow"><input type="checkbox" id="follow"> Scroll to the playing scene</label>
+      </div>
+      <section class="general">
+        <h2>General notes</h2>
+        <div class="hint">Anything that applies to the whole video: pacing, voice, branding.</div>
+        <textarea id="general-note" rows="3" placeholder="e.g. Hold each step a little longer before the zoom"></textarea>
+        <div class="card-foot">
+          <span class="saved-by" id="general-status"></span>
+          <button class="btn" id="general-save" disabled>Save note</button>
+        </div>
+      </section>
+    </aside>
+
+    <main>
+      <div class="toolbar">
+        <div class="seg-ctl" role="group" aria-label="Filter scenes">
+          <button id="f-all" aria-pressed="true">All scenes</button>
+          <button id="f-edited" aria-pressed="false">With edits</button>
+        </div>
+        <span class="hint">Edit the on-screen text, add a note, then save. Claude applies saved edits to the video.</span>
+      </div>
+      <div class="list" id="list"><div class="empty">Loading scenes…</div></div>
+    </main>
+  </div>
+</div>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const FIELD_NAMES = { label: 'Label', title: 'Title', subtitle: 'Subtitle', text: 'Text', caption: 'Caption',
+    attribution: 'Attribution', body: 'Body lines', highlight: 'Highlight', titleHighlight: 'Title highlight' };
+  const fieldName = (k) => FIELD_NAMES[k] || k.replace(/([A-Z])/g, ' $1').replace(/^./, (c) => c.toUpperCase());
+  const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
+  const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+  const docId = (n) => `scene-${String(n).padStart(2, '0')}`;
+  const ago = (iso) => {
+    if (!iso) return '';
+    const m = Math.round((Date.now() - new Date(iso)) / 60000);
+    return m < 1 ? 'just now' : m < 60 ? `${m} min ago` : m < 1440 ? `${Math.round(m / 60)} h ago` : new Date(iso).toLocaleDateString();
+  };
+
+  let M = null;              // manifest
+  let saved = {};            // docId -> saved edit doc
+  let db = null, uid = null, canWrite = false;
+  let filter = 'all', currentN = 0;
+  const cards = {};          // n -> { el, inputs:{key:el}, note, chip, saveBtn, revertBtn, by }
+  const dirty = {};          // n -> true when inputs differ from what is saved
+
+  // ---------- manifest ----------
+  fetch('manifest.json').then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((m) => { M = m; renderShell(); renderCards(); connect(); })
+    .catch(() => { $('list').innerHTML = '<div class="error">The scene list (manifest.json) did not load. Rebuild the preview with npm run preview and publish it again.</div>'; $('title').textContent = 'Preview unavailable'; });
+
+  function renderShell() {
+    $('eyebrow').textContent = `Video preview · ${M.compositionId}`;
+    $('title').textContent = M.title.replace(/ /g, ' ');
+    const gen = new Date(M.generatedAt);
+    const bits = [`${fmt(M.durationSec)} long`, `${M.scenes.length} scenes`, `${M.width}×${M.height} · ${M.fps} fps`];
+    if (M.gitBranch) bits.push(`branch <code>${M.gitBranch}</code>${M.gitCommit ? ' @ ' + M.gitCommit : ''}`);
+    if (M.dataFile) bits.push(`<code>${M.dataFile}</code>`);
+    bits.push(`rendered ${gen.toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' })}`);
+    $('meta').innerHTML = bits.map((b) => `<span>${b}</span>`).join('');
+    const v = $('video');
+    if (M.hasVideo) v.src = 'preview.mp4'; else v.hidden = true;
+    const tl = $('timeline');
+    M.scenes.forEach((s) => {
+      const b = document.createElement('button');
+      b.className = 'seg'; b.style.flex = `${Math.max(s.end - s.start, 0.5)} 0 0`;
+      b.title = `Scene ${s.n} · ${fmt(s.start)}`; b.textContent = s.end - s.start > 6 ? s.n : '';
+      b.setAttribute('aria-label', `Scene ${s.n}, ${fmt(s.start)}`);
+      b.addEventListener('click', () => seek(s, true));
+      s.seg = b; tl.appendChild(b);
+    });
+    v.addEventListener('timeupdate', () => setCurrent(sceneAt(v.currentTime)));
+    $('follow').addEventListener('change', () => { try { localStorage.setItem('preview-follow', $('follow').checked ? '1' : ''); } catch {} });
+    try { $('follow').checked = !!localStorage.getItem('preview-follow'); } catch {}
+    $('f-all').addEventListener('click', () => setFilter('all'));
+    $('f-edited').addEventListener('click', () => setFilter('edited'));
+    $('general-note').addEventListener('input', () => { $('general-save').disabled = !canWrite || $('general-note').value === ((saved.general || {}).note || ''); });
+    $('general-save').addEventListener('click', saveGeneral);
+    setCurrent(M.scenes[0]);
+  }
+
+  const sceneAt = (t) => M.scenes.find((s) => t >= s.start && t < s.end) || M.scenes[M.scenes.length - 1];
+  function seek(s, play) {
+    const v = $('video');
+    if (!M.hasVideo) { cards[s.n].el.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+    v.currentTime = s.start + 0.05; setCurrent(s);
+    if (play) v.play().catch(() => {});
+  }
+  function setCurrent(s) {
+    if (!s || s.n === currentN) return;
+    if (currentN) { M.scenes[currentN - 1].seg.classList.remove('current'); cards[currentN] && cards[currentN].el.classList.remove('current'); }
+    currentN = s.n; s.seg.classList.add('current');
+    const c = cards[s.n];
+    if (c) { c.el.classList.add('current'); if ($('follow').checked && !$('video').paused) c.el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    $('now').innerHTML = `<strong>Scene ${s.n}</strong> · ${fmt(s.start)}–${fmt(s.end)} · ${s.layout}`;
+  }
+
+  // ---------- scene cards ----------
+  function renderCards() {
+    const list = $('list'); list.innerHTML = '';
+    M.scenes.forEach((s) => {
+      const el = document.createElement('article'); el.className = 'card'; el.id = `scene-${s.n}`;
+      const head = document.createElement('div'); head.className = 'card-head';
+      const num = document.createElement('span'); num.className = 'num'; num.textContent = `SCENE ${String(s.n).padStart(2, '0')}`;
+      const h = document.createElement('h3'); h.textContent = (s.fields.title || s.fields.text || s.fields.label || s.layout).toString().split('\n')[0];
+      const tc = document.createElement('button'); tc.className = 'tc'; tc.textContent = `${fmt(s.start)}–${fmt(s.end)}`;
+      tc.title = 'Play from this scene'; tc.addEventListener('click', () => seek(s, true));
+      const lay = document.createElement('span'); lay.className = 'chip'; lay.textContent = s.layout;
+      const chip = document.createElement('span'); chip.className = 'chip'; chip.hidden = true;
+      head.append(num, h, tc, lay, chip);
+
+      const body = document.createElement('div'); body.className = 'card-body';
+      const th = document.createElement('button'); th.className = 'thumb'; th.title = 'Play from this scene';
+      const img = document.createElement('img'); img.src = s.still; img.alt = `Scene ${s.n} still`; img.loading = 'lazy';
+      th.appendChild(img); th.addEventListener('click', () => seek(s, true));
+
+      const fields = document.createElement('div'); fields.className = 'fields';
+      const inputs = {};
+      const keys = Object.keys(s.fields);
+      if (!keys.length) { const p = document.createElement('div'); p.className = 'hint'; p.textContent = 'No on-screen text in this scene. Use the note to request changes.'; fields.appendChild(p); }
+      keys.forEach((k) => {
+        const orig = s.fields[k]; const isList = Array.isArray(orig);
+        const f = document.createElement('div'); f.className = 'field';
+        const id = `s${s.n}-${k}`;
+        const lab = document.createElement('label'); lab.htmlFor = id; lab.textContent = fieldName(k) + (isList ? ' (one per line)' : '');
+        const tag = document.createElement('span'); tag.className = 'tag'; tag.textContent = 'changed'; tag.hidden = true; lab.appendChild(tag);
+        const value = isList ? orig.join('\n') : orig;
+        const multi = isList || value.includes('\n') || value.length > 60;
+        const inp = document.createElement(multi ? 'textarea' : 'input'); inp.id = id;
+        if (!multi) inp.type = 'text';
+        if (multi) inp.rows = Math.min(6, Math.max(2, value.split('\n').length + (value.length > 80 ? 1 : 0)));
+        inp.value = value;
+        const o = document.createElement('div'); o.className = 'orig'; o.hidden = true;
+        inp.addEventListener('input', () => onInput(s.n));
+        f.append(lab, inp, o); fields.appendChild(f);
+        inputs[k] = { inp, isList, field: f, tag, orig: o };
+      });
+      const nf = document.createElement('div'); nf.className = 'field note';
+      const nl = document.createElement('label'); nl.htmlFor = `s${s.n}-note`; nl.textContent = 'Note for Claude';
+      const note = document.createElement('textarea'); note.id = `s${s.n}-note`; note.rows = 2;
+      note.placeholder = 'Changes that are not text: timing, zoom, a different screenshot…';
+      note.addEventListener('input', () => onInput(s.n));
+      nf.append(nl, note); fields.appendChild(nf);
+      body.append(th, fields);
+
+      const foot = document.createElement('div'); foot.className = 'card-foot';
+      const by = document.createElement('span'); by.className = 'saved-by';
+      const actions = document.createElement('div'); actions.className = 'actions';
+      const revert = document.createElement('button'); revert.className = 'btn secondary'; revert.textContent = 'Undo changes'; revert.disabled = true;
+      const save = document.createElement('button'); save.className = 'btn'; save.textContent = 'Save'; save.disabled = true;
+      revert.addEventListener('click', () => { fillFromSaved(s.n); onInput(s.n); });
+      save.addEventListener('click', () => saveScene(s.n));
+      actions.append(revert, save); foot.append(by, actions);
+
+      el.append(head, body, foot); list.appendChild(el);
+      cards[s.n] = { el, inputs, note, chip, save, revert, by };
+      if (s.n === currentN) el.classList.add('current');
+    });
+    applyFilter();
+  }
+
+  function readDraft(n) {
+    const s = M.scenes[n - 1], c = cards[n], changes = {}, base = {};
+    for (const [k, x] of Object.entries(c.inputs)) {
+      const v = x.isList ? x.inp.value.split('\n').map((l) => l.trim()).filter(Boolean) : x.inp.value;
+      if (!same(v, s.fields[k])) { changes[k] = v; base[k] = s.fields[k]; }
+    }
+    return { changes, base, note: c.note.value.trim() };
+  }
+  function onInput(n) {
+    const c = cards[n], s = M.scenes[n - 1], d = readDraft(n), sv = saved[docId(n)];
+    for (const [k, x] of Object.entries(c.inputs)) {
+      const changed = k in d.changes;
+      x.field.classList.toggle('changed', changed); x.tag.hidden = !changed;
+      x.orig.hidden = !changed;
+      if (changed) { const o = s.fields[k]; x.orig.innerHTML = 'Was: <s></s>'; x.orig.querySelector('s').textContent = Array.isArray(o) ? o.join(' / ') : o; }
+    }
+    const savedChanges = sv ? sv.changes || {} : {}, savedNote = sv ? sv.note || '' : '';
+    dirty[n] = !same(d.changes, savedChanges) || d.note !== savedNote;
+    c.save.disabled = !canWrite || !dirty[n];
+    c.revert.disabled = !dirty[n];
+    paintStatus(n);
+  }
+  function fillFromSaved(n) {
+    const c = cards[n], s = M.scenes[n - 1], sv = saved[docId(n)] || {};
+    for (const [k, x] of Object.entries(c.inputs)) {
+      const v = (sv.changes && k in sv.changes) ? sv.changes[k] : s.fields[k];
+      x.inp.value = x.isList ? v.join('\n') : v;
+    }
+    c.note.value = sv.note || '';
+  }
+  function paintStatus(n) {
+    const c = cards[n], sv = saved[docId(n)];
+    if (dirty[n]) { c.chip.hidden = false; c.chip.className = 'chip dirty'; c.chip.textContent = 'Unsaved'; }
+    else if (sv) { c.chip.hidden = false; c.chip.className = `chip ${sv.status === 'applied' ? 'applied' : 'open'}`; c.chip.textContent = sv.status === 'applied' ? 'Applied' : 'Edit saved'; }
+    else c.chip.hidden = true;
+    c.by.textContent = sv ? `${sv.status === 'applied' ? 'Applied' : 'Saved'} ${ago(sv.status === 'applied' ? sv.appliedAt : sv.updatedAt)}` : '';
+    M.scenes[n - 1].seg.classList.toggle('has-edit', !!sv && sv.status !== 'applied');
+  }
+  function paintPills() {
+    const docs = Object.entries(saved).filter(([k]) => k.startsWith('scene-')).map(([, v]) => v);
+    const open = docs.filter((d) => d.status !== 'applied').length, applied = docs.length - open;
+    const p = [];
+    p.push(`<span class="pill ${open ? 'open' : ''}">${open} open edit${open === 1 ? '' : 's'}</span>`);
+    if (applied) p.push(`<span class="pill applied">${applied} applied</span>`);
+    if (saved.general && saved.general.note) p.push(`<span class="pill ${saved.general.status === 'applied' ? 'applied' : 'open'}">General note</span>`);
+    $('pills').innerHTML = p.join('');
+  }
+  function setFilter(f) {
+    filter = f; $('f-all').setAttribute('aria-pressed', f === 'all'); $('f-edited').setAttribute('aria-pressed', f === 'edited'); applyFilter();
+  }
+  function applyFilter() {
+    let shown = 0;
+    M.scenes.forEach((s) => { const has = !!saved[docId(s.n)] || dirty[s.n]; const show = filter === 'all' || has; cards[s.n].el.hidden = !show; if (show) shown++; });
+    let e = $('list').querySelector('.empty');
+    if (!shown) { if (!e) { e = document.createElement('div'); e.className = 'empty'; $('list').appendChild(e); } e.textContent = 'No scenes have edits yet. Change any text on a scene and press Save.'; e.hidden = false; }
+    else if (e) e.hidden = true;
+  }
+
+  // ---------- storage ----------
+  async function connect() {
+    const banner = (msg) => { $('banner').textContent = msg; $('banner').hidden = !msg; };
+    const ro = 'Saving is off in this view, so edits stay on this screen. Open the preview signed in to claude.ai with edit access to save them.';
+    try { db = window.claude ? await window.claude.use('db') : null; } catch { db = null; }
+    if (!db) { banner(ro); paintPills(); return; }
+    try {
+      const user = await window.claude.use('user');
+      if (user) { uid = await user.id(); const w = await user.can('data.write'); canWrite = w !== false; }
+      else canWrite = true;
+    } catch { canWrite = true; }
+    if (!canWrite) banner('You can watch and read this preview. Ask the owner for Contributor access to save edits.');
+    db.collection('edits').onSnapshot((snap) => {
+      const next = {}; snap.docs.forEach((d) => { if (d.exists) next[d.id] = d.data(); });
+      const prev = saved; saved = next;
+      M.scenes.forEach((s) => { const k = docId(s.n); if (!same(prev[k], next[k]) && !dirty[s.n]) fillFromSaved(s.n); onInput(s.n); });
+      if (!$('general-note').matches(':focus')) $('general-note').value = (saved.general || {}).note || '';
+      $('general-status').textContent = saved.general ? `${saved.general.status === 'applied' ? 'Applied' : 'Saved'} ${ago(saved.general.updatedAt)}` : '';
+      $('general-save').disabled = !canWrite || $('general-note').value === ((saved.general || {}).note || '');
+      paintPills(); applyFilter();
+    }, () => banner('Live updates stopped. Reload the page to see the latest edits.'));
+  }
+  async function saveScene(n) {
+    const c = cards[n], d = readDraft(n); c.save.disabled = true; c.save.textContent = 'Saving…';
+    const ref = db.doc(`edits/${docId(n)}`);
+    try {
+      if (!Object.keys(d.changes).length && !d.note) await ref.delete();
+      else await ref.set({ compositionId: M.compositionId, scene: n, start: M.scenes[n - 1].start, layout: M.scenes[n - 1].layout,
+        changes: d.changes, base: d.base, note: d.note, status: 'open', updatedBy: uid, updatedAt: new Date().toISOString(),
+        renderedFrom: M.gitCommit || null });
+      dirty[n] = false;
+    } catch (e) {
+      if (e && e.code === 'invalid_argument') { canWrite = false; $('banner').hidden = false; $('banner').textContent = 'Your access does not allow saving here. Ask the owner for Contributor access.'; }
+      c.by.textContent = 'Could not save. Check your connection and try again.';
+    }
+    c.save.textContent = 'Save'; onInput(n);
+  }
+  async function saveGeneral() {
+    const note = $('general-note').value.trim(); $('general-save').disabled = true;
+    try {
+      const ref = db.doc('edits/general');
+      if (!note) await ref.delete();
+      else await ref.set({ compositionId: M.compositionId, note, status: 'open', updatedBy: uid, updatedAt: new Date().toISOString() });
+    } catch { $('general-status').textContent = 'Could not save. Try again.'; }
+  }
+})();
+</script>
