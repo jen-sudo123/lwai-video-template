@@ -31,7 +31,7 @@ import { VideoData } from '../scenes/types';
 //  21 big-statement     MY EXAMPLE                |  450.40 |    74
 //  22 screen-demo       TEST 2                    |  452.85 |   322
 //  23 label-title-body  FOR YOUR WORKFLOW         |  463.60 |   633
-//  24 label-title-body  IF A TEST IS BLOCKED      |  484.70 |   495
+//  24 test-blocked      IF A TEST IS BLOCKED      |  484.70 |   495
 //  25 big-statement     THE ASSIGNMENT            |  501.20 |   306
 //  26 big-statement     NEXT LESSON               |  511.40 |   192
 //                                                    total   15534
@@ -2051,20 +2051,56 @@ export const agentKnowledgeTools: VideoData = {
     },
     // 24 (484.70s) IF A TEST IS BLOCKED
     {
-      "layout": "label-title-body",
+      "layout": "test-blocked",
       "label": "IF A TEST IS BLOCKED",
-      "title": "Record the\nexact error",
-      "body": [
-        "Often access, permissions or the environment",
-        "Resolve it with your IT team",
-        "Or bring it to the live Build Clinic"
+      "title": "A blocked test is useful information",
+      "titleTimings": [
+        3
       ],
-      "bodyRight": true,
-      "bodyCards": true,
-      "bodyTimings": [
-        108,
-        408,
-        472
+      "test": {
+        "label": "EXAMPLE TEST",
+        "prompt": "Retrieve the existing commitments from the Team Action Tracker.",
+        "error": "Access denied. You do not have permission to read this list.",
+        "blockedFrom": 50
+      },
+      "causesLabel": "OFTEN THE CAUSE",
+      "causes": [
+        {
+          "text": "Access",
+          "icon": "KeyIcon",
+          "from": 151
+        },
+        {
+          "text": "Permissions",
+          "icon": "LockClosedIcon",
+          "from": 171
+        },
+        {
+          "text": "The environment",
+          "icon": "ServerStackIcon",
+          "from": 204
+        }
+      ],
+      "notCause": {
+        "text": "The agent itself",
+        "from": 247
+      },
+      "record": {
+        "label": "RECORD THE EXACT ERROR",
+        "from": 323
+      },
+      "routesLabel": "THEN RESOLVE IT",
+      "routes": [
+        {
+          "text": "With your IT team",
+          "icon": "UserGroupIcon",
+          "from": 408
+        },
+        {
+          "text": "At the live Build Clinic",
+          "icon": "VideoCameraIcon",
+          "from": 472
+        }
       ],
       "durationInFrames": 495
     },

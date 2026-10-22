@@ -5,6 +5,7 @@ import { ScreenDemo } from './ScreenDemo';
 import { ReminderNote } from './ReminderNote';
 import { Converge } from './Converge';
 import { InstructionLink } from './InstructionLink';
+import { TestBlocked } from './TestBlocked';
 import { BlankBase } from './BlankBase';
 import { TextImageSplit } from './TextImageSplit';
 import { CenteredImageCaption } from './CenteredImageCaption';
@@ -475,6 +476,10 @@ export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> =
     case 'instruction-link': {
       const { layout: _l, durationInFrames: _d, ...props } = scene;
       return <InstructionLink {...props} />;
+    }
+    case 'test-blocked': {
+      const { layout: _l, durationInFrames: _d, ...props } = scene;
+      return <TestBlocked {...props} />;
     }
     case 'converge':
       return (

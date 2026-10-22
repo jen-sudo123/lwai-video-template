@@ -23,6 +23,12 @@ export type Scene =
       durationInFrames: number;
     } & import('./InstructionLink').InstructionLinkProps
   | {
+      // Blocked test as information: test turns Blocked, likely causes tick in, the exact
+      // error is recorded and routed to the people who can fix it. See TestBlocked.tsx.
+      layout: 'test-blocked';
+      durationInFrames: number;
+    } & import('./TestBlocked').TestBlockedProps
+  | {
       // Recap note: title left, reminder note right whose items tick off on the VO words,
       // then an optional dark "next" bar and serif kicker. See ReminderNote.tsx.
       layout: 'reminder';

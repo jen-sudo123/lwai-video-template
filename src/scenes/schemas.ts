@@ -578,6 +578,21 @@ const instructionLink = z.object({
   durationInFrames: z.number(),
 });
 
+const testBlocked = z.object({
+  layout: z.literal('test-blocked'),
+  label: z.string(),
+  title: z.string(),
+  titleTimings: z.array(z.number()).optional(),
+  test: z.object({ label: z.string(), prompt: z.string(), error: z.string(), blockedFrom: z.number() }),
+  causesLabel: z.string(),
+  causes: z.array(z.object({ text: z.string(), icon: z.string().optional(), from: z.number() })),
+  notCause: z.object({ text: z.string(), from: z.number() }).optional(),
+  record: z.object({ label: z.string(), from: z.number(), caption: z.string().optional() }),
+  routesLabel: z.string(),
+  routes: z.array(z.object({ text: z.string(), icon: z.string().optional(), from: z.number() })),
+  durationInFrames: z.number(),
+});
+
 const reminder = z.object({
   layout: z.literal('reminder'),
   label: z.string(),
@@ -626,6 +641,7 @@ const screenDemo = z.object({
 export const sceneSchema = z.discriminatedUnion('layout', [
   converge,
   instructionLink,
+  testBlocked,
   reminder,
   titleCardGreen,
   screenDemo,
