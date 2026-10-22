@@ -48,18 +48,22 @@ export const week7CreateYourAgent: VideoData = {
       kicker: { text: "Your agent, built for your workflow.", from: 517 },
       durationInFrames: 621,
     },
-    // 3 (22.90s) BEFORE YOU START Open your Agent Build Plan
+    // 3 (22.90s) BEFORE YOU START Open your Agent
     {
       layout: "label-title-body",
       label: "BEFORE YOU START",
-      title: "Open your Agent Build Plan",
+      title: "Open your Agent\nBuild Plan",
       body: [
-        "Keep it open as you work through these videos",
-        "We follow its five sections, one by one",
+        "1. What work will your agent take on?",
+        "2. What are the main steps, and who does what?",
+        "3. What does your agent need?",
+        "4. Where should the human stay in control?",
+        "5. What’s the smallest version you can build and test?",
       ],
-      image: "images/week7-create-your-agent/build-plan.png",
-      imageHeight: 700,
-      bodyTimings: [161, 242],
+      bodyRight: true,
+      bodyCards: true,
+      bodyCardCompact: true,
+      bodyTimings: [266, 284, 302, 319, 337],
       durationInFrames: 471,
     },
     // 4 (38.60s) MY EXAMPLE Weekly Team Action
@@ -119,7 +123,7 @@ export const week7CreateYourAgent: VideoData = {
       layout: "screen-demo",
       label: "BUILD PLAN",
       steps: [
-        { from: 0, text: "Section 1: What work will your agent take on?" },
+        { from: 0, text: "1. What work will your agent take on?" },
         { from: 40, text: "Workflow name: your agent’s name" },
         { from: 229, text: "My agent will: the useful result" },
         { from: 437, text: "When: when the work starts" },
