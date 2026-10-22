@@ -9,7 +9,7 @@ import { VideoData } from '../scenes/types';
 // Preview artifact: https://claude.ai/artifact/RZLjde7HdkXioVkVdhLZhN (npm run preview -- Week7CreateYourAgent, republish to this URL)
 //
 //  #  layout             label                    | start s | frames
-//  1  title-card-green   WEEK 7 · COPILOT STUDIO  |    0.00 |    66
+//  1  title-card-green   COPILOT STUDIO           |    0.00 |    66
 //  2  reminder           QUICK REMINDER           |    2.20 |   621
 //  3  label-title-body   BEFORE YOU START         |   22.90 |   471
 //  4  label-title-body   MY EXAMPLE               |   38.60 |   423
@@ -25,11 +25,11 @@ export const week7CreateYourAgent: VideoData = {
   audioSrc: 'audio/week7-create-your-agent.mp3',
   audioStartFrame: 0,
   scenes: [
-    // 1 (0.00s) WEEK 7 · COPILOT STUDIO Create Your Agent
+    // 1 (0.00s) COPILOT STUDIO Create Your Agent
     {
       layout: "title-card-green",
       title: "Create Your Agent",
-      label: "WEEK 7 · COPILOT STUDIO",
+      label: "COPILOT STUDIO",
       durationInFrames: 66,
     },
     // 2 (2.20s) QUICK REMINDER Last week, you made
