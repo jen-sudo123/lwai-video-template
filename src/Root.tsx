@@ -85,6 +85,7 @@ import { copilotSkills } from './data/copilot-skills';
 import { copilotResearcher } from './data/copilot-researcher';
 import { chatGPTPlugins } from './data/chatgpt-plugins';
 import { week7CreateYourAgent } from './data/week7-create-your-agent';
+import { agentKnowledgeTools } from './data/agent-knowledge-tools';
 import { videoDataSchema } from './scenes/schemas';
 
 // Register one composition per video you want to render.
@@ -909,6 +910,16 @@ export const RemotionRoot: React.FC = () => {
         height={layout.height}
         schema={videoDataSchema}
         defaultProps={week7CreateYourAgent}
+      />
+      <Composition
+        id="AgentKnowledgeTools"
+        component={Video}
+        durationInFrames={calculateTotalFrames(agentKnowledgeTools.scenes)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+        schema={videoDataSchema}
+        defaultProps={agentKnowledgeTools}
       />
     </>
   );
