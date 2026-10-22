@@ -1184,10 +1184,21 @@ export const agentKnowledgeTools: VideoData = {
             {
               "type": "box",
               "rect": [
-                2110,
-                946,
-                306,
-                248
+                2124,
+                958,
+                280,
+                44
+              ],
+              "from": 1674,
+              "to": 1938
+            },
+            {
+              "type": "box",
+              "rect": [
+                2124,
+                1186,
+                280,
+                42
               ],
               "from": 1674,
               "to": 1938
