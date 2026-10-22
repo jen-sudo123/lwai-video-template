@@ -546,6 +546,19 @@ const imageMarquee = z.object({
 
 const rect = z.tuple([z.number(), z.number(), z.number(), z.number()]);
 
+const converge = z.object({
+  layout: z.literal('converge'),
+  label: z.string(),
+  title: z.string(),
+  titleTimings: z.array(z.number()).optional(),
+  titleHighlight: z.string().optional(),
+  sources: z.array(z.object({ text: z.string(), tag: z.string().optional(), icon: z.string().optional(),
+    dashed: z.boolean().optional(), from: z.number() })),
+  target: z.object({ label: z.string(), steps: z.array(z.object({ text: z.string(), icon: z.string().optional() })) }),
+  convergeFrom: z.number(),
+  durationInFrames: z.number(),
+});
+
 const reminder = z.object({
   layout: z.literal('reminder'),
   label: z.string(),
@@ -592,6 +605,7 @@ const screenDemo = z.object({
 });
 
 export const sceneSchema = z.discriminatedUnion('layout', [
+  converge,
   reminder,
   titleCardGreen,
   screenDemo,

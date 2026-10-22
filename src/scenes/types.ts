@@ -5,6 +5,18 @@ export type AnimationMode = 'kinetic' | 'fade' | 'auto';
 
 export type Scene =
   | {
+      // Many inputs, one process: source chips on the left converge on a target card. See Converge.tsx.
+      layout: 'converge';
+      label: string;
+      title: string;
+      titleTimings?: number[];
+      titleHighlight?: string;
+      sources: Array<{ text: string; tag?: string; icon?: string; dashed?: boolean; from: number }>;
+      target: { label: string; steps: Array<{ text: string; icon?: string }> };
+      convergeFrom: number;
+      durationInFrames: number;
+    }
+  | {
       // Recap note: title left, reminder note right whose items tick off on the VO words,
       // then an optional dark "next" bar and serif kicker. See ReminderNote.tsx.
       layout: 'reminder';

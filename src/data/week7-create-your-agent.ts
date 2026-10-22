@@ -13,7 +13,7 @@ import { VideoData } from '../scenes/types';
 //  2  reminder           QUICK REMINDER           |    2.20 |   621
 //  3  label-title-body   BEFORE YOU START         |   22.90 |   471
 //  4  label-title-body   MY EXAMPLE               |   38.60 |   423
-//  5  big-statement      YOUR AGENT               |   52.70 |   381
+//  5  converge           YOUR AGENT               |   52.70 |   381
 //  6  big-statement      BUILD PLAN · SECTION 1   |   65.40 |   168
 //  7  screen-demo        BUILD PLAN               |   71.00 |  1275
 //  8  big-statement                               |  113.50 |    75
@@ -81,12 +81,27 @@ export const week7CreateYourAgent: VideoData = {
     },
     // 5 (52.70s) YOUR AGENT Your workflow may differ.
     {
-      layout: "big-statement",
+      layout: "converge",
       label: "YOUR AGENT",
-      text: "Your workflow may differ.\nThe process is the same.",
-      size: "title",
-      animation: "fade",
-      lineTimings: [3, 290],
+      title: "Your workflow may differ.\nThe process is the same.",
+      titleTimings: [3, 290],
+      titleHighlight: "the same",
+      sources: [
+        { text: "Weekly Team Action Follow-Up", tag: "MY EXAMPLE", icon: "UserGroupIcon", from: 3 },
+        { text: "Prepare reports", icon: "DocumentChartBarIcon", from: 82 },
+        { text: "Monitor project information", icon: "PresentationChartLineIcon", from: 120 },
+        { text: "Analyze requests", icon: "InboxArrowDownIcon", from: 173 },
+        { text: "A completely different workflow", icon: "SparklesIcon", dashed: true, from: 230 },
+      ],
+      target: {
+        label: "THE SAME PROCESS",
+        steps: [
+          { text: "Your Agent Build Plan", icon: "ClipboardDocumentListIcon" },
+          { text: "Copilot Studio settings", icon: "Cog6ToothIcon" },
+          { text: "A working agent", icon: "CheckBadgeIcon" },
+        ],
+      },
+      convergeFrom: 329,
       durationInFrames: 381,
     },
     // 6 (65.40s) BUILD PLAN · SECTION 1 What work will your
