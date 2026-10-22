@@ -1,6 +1,6 @@
-# Copilot Studio: Connect knowledge and tools (on-screen actions)
+# Give Your Agent the Knowledge and Tools It Needs (on-screen actions)
 
-On-screen only. The voiceover lives in `copilot-studio-capabilities.script.txt`.
+On-screen only. The voiceover lives in `agent-knowledge-tools.script.txt`.
 Each step lists the VO line it should sync to (the "cue").
 
 ---
