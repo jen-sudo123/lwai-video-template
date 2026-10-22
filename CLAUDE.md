@@ -63,6 +63,7 @@ Every "preview" request gets the scene-editor artifact, not a bare MP4. See `pre
 republish to the same URL on later previews. Reviewer edits come back from the artifact db collection `edits`
 (`scene-NN` docs with `changes`/`note`, plus `general`); apply them, then mark `status: "applied"`.
 A preview render doesn't need the render go-ahead; the final 1080p render still does.
+**Before every final render, read the `edits` collection and apply any `open` edits** (edits are saved silently, no notification).
 
 ## VO timing (most time-consuming part — get it right)
 

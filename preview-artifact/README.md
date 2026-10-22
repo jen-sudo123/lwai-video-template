@@ -26,6 +26,9 @@ A preview is a review render, not the final render: it doesn't need the "render"
 
 ## Reading edits back
 
+Reviewers save edits silently: nothing notifies the session. **Read the `edits` collection at the start of every
+follow-up turn on the video and always before a final render**, and apply anything still `open`.
+
 Edits live in the artifact's db, collection `edits` (read with the ArtifactData tool, `list` on `edits`):
 
 | doc id | fields |
