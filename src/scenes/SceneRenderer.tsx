@@ -1,6 +1,9 @@
 import React from 'react';
 import { Scene } from './types';
 import { TitleCardGreen } from './TitleCardGreen';
+import { ScreenDemo } from './ScreenDemo';
+import { ReminderNote } from './ReminderNote';
+import { Converge } from './Converge';
 import { BlankBase } from './BlankBase';
 import { TextImageSplit } from './TextImageSplit';
 import { CenteredImageCaption } from './CenteredImageCaption';
@@ -466,6 +469,39 @@ export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> =
           skipCardAnimation={scene.skipCardAnimation}
           cardDelay={scene.cardDelay}
           whiteoutBox={scene.whiteoutBox}
+        />
+      );
+    case 'converge':
+      return (
+        <Converge
+          label={scene.label}
+          title={scene.title}
+          titleTimings={scene.titleTimings}
+          titleHighlight={scene.titleHighlight}
+          sources={scene.sources}
+          target={scene.target}
+          convergeFrom={scene.convergeFrom}
+        />
+      );
+    case 'reminder':
+      return (
+        <ReminderNote
+          label={scene.label}
+          title={scene.title}
+          noteTitle={scene.noteTitle}
+          noteMeta={scene.noteMeta}
+          items={scene.items}
+          next={scene.next}
+          kicker={scene.kicker}
+        />
+      );
+    case 'screen-demo':
+      return (
+        <ScreenDemo
+          label={scene.label}
+          steps={scene.steps}
+          shots={scene.shots}
+          durationInFrames={scene.durationInFrames}
         />
       );
     case 'takeaway-stack':

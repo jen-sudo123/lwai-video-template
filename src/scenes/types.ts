@@ -5,6 +5,41 @@ export type AnimationMode = 'kinetic' | 'fade' | 'auto';
 
 export type Scene =
   | {
+      // Many inputs, one process: source chips on the left converge on a target card. See Converge.tsx.
+      layout: 'converge';
+      label: string;
+      title: string;
+      titleTimings?: number[];
+      titleHighlight?: string;
+      sources: Array<{ text: string; tag?: string; icon?: string; dashed?: boolean; from: number }>;
+      target: { label: string; steps: Array<{ text: string; icon?: string }> };
+      convergeFrom: number;
+      durationInFrames: number;
+    }
+  | {
+      // Recap note: title left, reminder note right whose items tick off on the VO words,
+      // then an optional dark "next" bar and serif kicker. See ReminderNote.tsx.
+      layout: 'reminder';
+      label: string;
+      title: string;
+      noteTitle: string;
+      noteMeta?: string;
+      items: Array<{ text: string; from: number }>;
+      next?: { label: string; text: string; from: number };
+      kicker?: { text: string; from: number };
+      durationInFrames: number;
+    }
+  | {
+      // Screenshot tutorial that behaves like a screen recording: virtual camera, spotlight,
+      // cursor + click, typed input, revealed replies, drawn marks, before/after compare.
+      // See ScreenDemo.tsx for the shot fields (rects/points in screenshot pixels).
+      layout: 'screen-demo';
+      label: string;
+      steps: Array<{ from: number; text: string; label?: string }>;
+      shots: import('./ScreenDemo').ScreenDemoShot[];
+      durationInFrames: number;
+    }
+  | {
       layout: 'title-card-green';
       title: string;
       subtitle?: string;
@@ -689,6 +724,12 @@ export type VideoData = {
   // picking up the avatar video from exactly where it left off (no drift).
   avatarCutFrame?: number;
   avatarResumeFrame?: number;
+  // Opt-in scene-to-scene transition. 'slide': each scene slides in from the right while the
+  // previous one slides out left. Scene start frames are unchanged (the outgoing scene stays
+  // mounted for the extra frames), so VO timings don't move. Default 15 frames.
+  // between: 'scenes' (default) slides at every scene change; 'images' only where one image
+  // scene follows another with a different image — all other changes stay hard cuts.
+  sceneTransition?: { type: 'slide'; durationInFrames?: number; between?: 'scenes' | 'images' };
   // Word-level captions for karaoke-style subtitle overlay.
   captions?: import('../CaptionOverlay').WordCaption[];
 };
