@@ -84,6 +84,7 @@ import { copilotWorkIq } from './data/copilot-work-iq';
 import { copilotSkills } from './data/copilot-skills';
 import { copilotResearcher } from './data/copilot-researcher';
 import { chatGPTPlugins } from './data/chatgpt-plugins';
+import { week7CreateYourAgent } from './data/week7-create-your-agent';
 import { videoDataSchema } from './scenes/schemas';
 
 // Register one composition per video you want to render.
@@ -898,6 +899,16 @@ export const RemotionRoot: React.FC = () => {
         height={layout.height}
         schema={videoDataSchema}
         defaultProps={chatGPTPlugins}
+      />
+      <Composition
+        id="Week7CreateYourAgent"
+        component={Video}
+        durationInFrames={calculateTotalFrames(week7CreateYourAgent.scenes)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+        schema={videoDataSchema}
+        defaultProps={week7CreateYourAgent}
       />
     </>
   );
