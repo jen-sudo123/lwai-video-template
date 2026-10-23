@@ -12,6 +12,9 @@ type Props = {
   codoFrames?: [number, number, number, number];
   // Everything lights up together ("we already have most of the ingredients").
   allFrame?: number;
+  // Start with the document and empty slots already on screen (when the
+  // previous scene set them up).
+  skipEntry?: boolean;
 };
 
 const SECTIONS = ['The work and the result', 'Steps and who does them', 'What it needs', 'Where you stay in control', 'The first version'];
@@ -57,12 +60,13 @@ export const BuildPlanCodoDiagram: React.FC<Props> = ({
   sectionFrames = [64, 389, 544, 925],
   codoFrames = [321, 343, 843, 1130],
   allFrame = 1169,
+  skipEntry = false,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const docIn = spring({ frame, fps, config: { damping: 18, mass: 0.8 } });
-  const slotsIn = interpolate(frame, [20, 45], [0, 1], clamp);
+  const docIn = skipEntry ? 1 : spring({ frame, fps, config: { damping: 18, mass: 0.8 } });
+  const slotsIn = skipEntry ? 1 : interpolate(frame, [20, 45], [0, 1], clamp);
   const finale = interpolate(frame, [allFrame, allFrame + 20], [0, 1], clamp);
 
   // Highlighter sweep progress for a section (0..1), kept once swept.
@@ -122,7 +126,7 @@ export const BuildPlanCodoDiagram: React.FC<Props> = ({
       </div>
 
       {SECTIONS.map((label, i) => {
-        const rowIn = interpolate(frame, [12 + i * 6, 30 + i * 6], [0, 1], clamp);
+        const rowIn = skipEntry ? 1 : interpolate(frame, [12 + i * 6, 30 + i * 6], [0, 1], clamp);
         const sw = sweep(i);
         const current = isCurrent(i);
         const top = ROW_Y0 + i * ROW_H;

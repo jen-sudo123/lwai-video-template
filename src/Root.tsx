@@ -72,6 +72,7 @@ import { AiAgentic, AI_AGENTIC_DURATION_S, AI_AGENTIC_TITLE_FRAMES } from './com
 import { ChoosingWork, CHOOSING_WORK_DURATION_S, CHOOSING_WORK_TITLE_FRAMES } from './compositions/ChoosingWork';
 import { AutonomyDial, AUTONOMY_DIAL_DURATION_S, AUTONOMY_DIAL_TITLE_FRAMES } from './compositions/AutonomyDial';
 import { SmallestAgent, SMALLEST_AGENT_DURATION_S, SMALLEST_AGENT_VO_FROM } from './compositions/SmallestAgent';
+import { AgentInstructions, AGENT_INSTRUCTIONS_DURATION_S, AGENT_INSTRUCTIONS_TITLE_FRAMES } from './compositions/AgentInstructions';
 import { AdvancedModelsChatGPT, ADVANCED_MODELS_DURATION_S, ADVANCED_MODELS_TITLE_FRAMES } from './compositions/AdvancedModelsChatGPT';
 import { workContext } from './data/work-context';
 import { workspaceStudioSkills } from './data/workspace-studio-skills';
@@ -84,7 +85,6 @@ import { copilotWorkIq } from './data/copilot-work-iq';
 import { copilotSkills } from './data/copilot-skills';
 import { copilotResearcher } from './data/copilot-researcher';
 import { chatGPTPlugins } from './data/chatgpt-plugins';
-import { agentInstructions } from './data/agent-instructions';
 import { videoDataSchema } from './scenes/schemas';
 
 // Register one composition per video you want to render.
@@ -902,13 +902,11 @@ export const RemotionRoot: React.FC = () => {
       />
       <Composition
         id="AgentInstructions"
-        component={Video}
-        durationInFrames={calculateTotalFrames(agentInstructions.scenes)}
+        component={AgentInstructions}
+        durationInFrames={AGENT_INSTRUCTIONS_TITLE_FRAMES + Math.ceil(AGENT_INSTRUCTIONS_DURATION_S * layout.fps)}
         fps={layout.fps}
         width={layout.width}
         height={layout.height}
-        schema={videoDataSchema}
-        defaultProps={agentInstructions}
       />
     </>
   );
