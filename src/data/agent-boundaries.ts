@@ -1,6 +1,6 @@
 import { VideoData } from '../scenes/types';
 
-// Video 4 — Where Should the Human Stay in Control? (Team Action Follow-Up agent, Copilot Studio).
+// Video 4 — Keep Your Agent Within Its Boundaries (Team Action Follow-Up agent, Copilot Studio).
 // Audio: audio/agent-boundaries.mp3 — Daan, eleven_v4, 312.6s, NOT padded (title card plays over the
 //        VO opening; audioStartFrame = 0). comp_frame = round(t * 30).
 // Images: agent-boundaries/images/01..14-*.jpg — screenshots only, no screen recording, no avatar.
@@ -60,7 +60,7 @@ export const agentBoundariesSlides: VideoData = {
     // 1 (0.00s) — "Yesterday, you created your agent"
     {
       layout: 'title-card-green',
-      title: 'Where Should the Human Stay in Control?',
+      title: 'Keep Your Agent Within Its\u00A0Boundaries',
       label: 'MICROSOFT COPILOT STUDIO',
       durationInFrames: 90,
     },
