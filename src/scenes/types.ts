@@ -3,7 +3,15 @@
 
 export type AnimationMode = 'kinetic' | 'fade' | 'auto';
 
+// Motion scenes (src/scenes/motion/): animated, illustration-led replacements for plain text cards.
 export type Scene =
+  | ({ layout: 'autonomy-dial' } & import('./motion/AutonomyDialScene').AutonomyDialProps)
+  | ({ layout: 'permission-board' } & import('./motion/PermissionBoard').PermissionBoardProps)
+  | ({ layout: 'icon-contrast' } & import('./motion/IconContrast').IconContrastProps)
+  | ({ layout: 'flow-diagram' } & import('./motion/FlowDiagram').FlowDiagramProps)
+  | ({ layout: 'evidence-cards' } & import('./motion/EvidenceCards').EvidenceCardsProps)
+  | ({ layout: 'chat-correction' } & import('./motion/ChatCorrection').ChatCorrectionProps)
+  | ({ layout: 'kinetic-line' } & import('./motion/KineticLine').KineticLineProps)
   | {
       // Screenshot tutorial that behaves like a screen recording: virtual camera, spotlight,
       // cursor + click, typed input, revealed replies, drawn marks, before/after compare.

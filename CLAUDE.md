@@ -105,6 +105,16 @@ Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 - Scene-level `sceneTransition: { type: 'slide', between: 'images' }` (VideoData) slides between consecutive image
   scenes without shifting start frames; `between: 'scenes'` slides at every change.
 
+### motion scenes (instead of plain text cards)
+- `src/scenes/motion/`: `autonomy-dial` (last week's 5-position dial, needle + captions), `permission-board` (what an
+  agent may do: allowed / blocked / approval / no tool / removed / later, with state changes on cue), `icon-contrast`
+  (two illustrated ideas: signpost vs locked gate, confirm pop-up vs approval card, plugged tool vs empty slot),
+  `flow-diagram` (steps, decision, crossed-out path, loop back), `evidence-cards` (source snippets with missing or
+  conflicting fields), `chat-correction` (invented answer struck out, the right question instead), `kinetic-line`
+  (words land on their VO word with lime / marker / strike). Shared style in `motion/kit.tsx`.
+- Prefer these over label-title-body cards when a line of VO has a concrete visual: show the thing, not a sentence about it.
+  Example of every one, timed with `at(sceneStart)(voSeconds)`: the bottom of `src/data/agent-boundaries.ts`.
+
 ### video-clip
 - VideoData-level `clipSrc` = one continuous background video; each scene's `videoStartTime` is the trim offset.
   With `clipSrc` set, the video and `clipZoomKeyframes` are rendered by `Video.tsx`, NOT `VideoClip.tsx` (`skipVideo` forced true).

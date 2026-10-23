@@ -2,6 +2,13 @@ import React from 'react';
 import { Scene } from './types';
 import { TitleCardGreen } from './TitleCardGreen';
 import { ScreenDemo } from './ScreenDemo';
+import { AutonomyDialScene } from './motion/AutonomyDialScene';
+import { PermissionBoard } from './motion/PermissionBoard';
+import { IconContrast } from './motion/IconContrast';
+import { FlowDiagram } from './motion/FlowDiagram';
+import { EvidenceCards } from './motion/EvidenceCards';
+import { ChatCorrection } from './motion/ChatCorrection';
+import { KineticLine } from './motion/KineticLine';
 import { BlankBase } from './BlankBase';
 import { TextImageSplit } from './TextImageSplit';
 import { CenteredImageCaption } from './CenteredImageCaption';
@@ -469,6 +476,20 @@ export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> =
           whiteoutBox={scene.whiteoutBox}
         />
       );
+    case 'autonomy-dial':
+      return <AutonomyDialScene {...scene} />;
+    case 'permission-board':
+      return <PermissionBoard {...scene} />;
+    case 'icon-contrast':
+      return <IconContrast {...scene} />;
+    case 'flow-diagram':
+      return <FlowDiagram {...scene} />;
+    case 'evidence-cards':
+      return <EvidenceCards {...scene} />;
+    case 'chat-correction':
+      return <ChatCorrection {...scene} />;
+    case 'kinetic-line':
+      return <KineticLine {...scene} />;
     case 'screen-demo':
       return (
         <ScreenDemo

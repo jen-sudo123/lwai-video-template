@@ -579,7 +579,23 @@ const screenDemo = z.object({
   durationInFrames: z.number(),
 });
 
+// Motion scenes: validate layout and duration; detailed props are typed in each component.
+const autonomyDialScene = z.object({ layout: z.literal('autonomy-dial'), durationInFrames: z.number() }).passthrough();
+const permissionBoardScene = z.object({ layout: z.literal('permission-board'), durationInFrames: z.number() }).passthrough();
+const iconContrastScene = z.object({ layout: z.literal('icon-contrast'), durationInFrames: z.number() }).passthrough();
+const flowDiagramScene = z.object({ layout: z.literal('flow-diagram'), durationInFrames: z.number() }).passthrough();
+const evidenceCardsScene = z.object({ layout: z.literal('evidence-cards'), durationInFrames: z.number() }).passthrough();
+const chatCorrectionScene = z.object({ layout: z.literal('chat-correction'), durationInFrames: z.number() }).passthrough();
+const kineticLineScene = z.object({ layout: z.literal('kinetic-line'), durationInFrames: z.number() }).passthrough();
+
 export const sceneSchema = z.discriminatedUnion('layout', [
+  autonomyDialScene,
+  permissionBoardScene,
+  iconContrastScene,
+  flowDiagramScene,
+  evidenceCardsScene,
+  chatCorrectionScene,
+  kineticLineScene,
   titleCardGreen,
   screenDemo,
   blank,
