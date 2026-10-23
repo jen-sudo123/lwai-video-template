@@ -30,6 +30,7 @@ import {
   ClipboardDocumentListIcon,
 } from '@heroicons/react/24/outline';
 import { LogoFooter } from '../Logo';
+import { TitleCardGreen } from '../scenes/TitleCardGreen';
 import { BuildPlanCodoDiagram } from '../scenes/diagrams/BuildPlanCodoDiagram';
 import { colors } from '../tokens';
 
@@ -37,8 +38,8 @@ loadSerif();
 loadSans();
 
 // Your Agent Needs More Than a Job Description — custom-animated version.
-// VO: audio/agent-instructions.orig.mp3 (ElevenLabs TTS, 288.9s), played from frame 15; there is no
-// title card, the video opens on the first scene. Every cue below is in SECONDS of the VO, from the ElevenLabs Scribe word timestamps in
+// VO: audio/agent-instructions.orig.mp3 (ElevenLabs TTS, 288.9s), played from frame 60 after a green
+// title card ("Creating CODO Agent Instructions"). Every cue below is in SECONDS of the VO, from the ElevenLabs Scribe word timestamps in
 // src/data/agent-instructions.transcript.json.
 //
 // Recurring visual ideas: the "weekly report" sticky note that grows into a proper brief; the Build
@@ -70,8 +71,7 @@ loadSans();
 //  22  Your four steps                         272.2
 //  23  Close                                   278.7
 
-// Short white lead-in before the VO (no title card, per review).
-export const AGENT_INSTRUCTIONS_TITLE_FRAMES = 15;
+export const AGENT_INSTRUCTIONS_TITLE_FRAMES = 60;
 export const AGENT_INSTRUCTIONS_DURATION_S = 290.0;
 
 const FPS = 30;
@@ -1732,13 +1732,16 @@ export const AgentInstructions: React.FC = () => {
 
   return (
     <AbsoluteFill style={{ backgroundColor: colors.white }}>
+      <Sequence durationInFrames={AGENT_INSTRUCTIONS_TITLE_FRAMES + 12}>
+        <TitleCardGreen title="Creating CODO Agent Instructions" />
+      </Sequence>
       <Sequence from={AGENT_INSTRUCTIONS_TITLE_FRAMES}>
         <Audio src={staticFile('audio/agent-instructions.orig.mp3')} />
       </Sequence>
 
       {SCENES.map((s, i) => {
-        if ((i > 0 && t < s.start - FADE) || t > s.end + FADE) return null;
-        const fadeIn = i === 0 ? 1 : interpolate(t, [s.start - FADE, s.start + FADE], [0, 1], clamp);
+        if (t < s.start - FADE || t > s.end + FADE) return null;
+        const fadeIn = i === 0 ? interpolate(t, [0, 0.4], [0, 1], clamp) : interpolate(t, [s.start - FADE, s.start + FADE], [0, 1], clamp);
         const next = SCENES[i + 1];
         const fadeOut = next && !next.noFade ? interpolate(t, [s.end - FADE, s.end + FADE], [1, 0], clamp) : t < s.end ? 1 : 0;
         const opacity = s.noFade ? (t >= s.start ? fadeOut : 0) : Math.min(fadeIn, fadeOut);
@@ -1759,7 +1762,7 @@ export const AgentInstructions: React.FC = () => {
         );
       })}
 
-      {!SCENES.find((s) => t >= s.start && t < s.end && s.hideLogo) && <LogoFooter variant="dark" />}
+      {t >= 0 && !SCENES.find((s) => t >= s.start && t < s.end && s.hideLogo) && <LogoFooter variant="dark" />}
     </AbsoluteFill>
   );
 };
