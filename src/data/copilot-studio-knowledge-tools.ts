@@ -6,7 +6,8 @@ import { VideoData } from '../scenes/types';
 // silence at 276.11s), NOT padded (audioStartFrame = 0). Timings from the Scribe word timestamps in
 // copilot-studio-knowledge-tools.transcript.json; comp_frame = round(t * 30).
 // Screenshots: copilot-studio-knowledge-tools/images/ (Drive walkthrough folder; captured pointer removed with
-// scripts/remove-captured-pointer.py + scripts/transplant-text.py). 06 (wrong site) is not used; 11 (renamed tool) was supplied separately.
+// scripts/remove-captured-pointer.py + scripts/transplant-text.py). 06 (wrong site) is not used; 11 (renamed tool) was supplied separately;
+// 22 (original notes) is 18-original-meeting-notes-for-verification.jpg from the AgentKnowledgeTools Drive shot folder.
 // Preview artifact: https://claude.ai/artifact/UHeAkDj1kGMv1k7vXhKSap (npm run preview -- CopilotStudioKnowledgeTools, republish to this URL)
 //
 //  #  layout            label                | start s | frames
@@ -26,7 +27,7 @@ import { VideoData } from '../scenes/types';
 //  14 screen-demo       TEST                 |  363.20 |   457
 //  15 label-title-body  TEST 1: THE TOOL     |  378.43 |   602
 //  16 screen-demo       TEST 2               |  398.50 |   843
-//  17 label-title-body  TEST 2: VERIFIED     |  426.60 |   533
+//  17 screen-demo       TEST 2: VERIFIED     |  426.60 |   533
 //  18 screen-demo       TEST 2               |  444.37 |   328
 //  19 label-title-body  FOR YOUR WORKFLOW    |  455.30 |   661
 //  20 big-statement                          |  477.33 |   273
@@ -1523,27 +1524,95 @@ export const copilotStudioKnowledgeTools: VideoData = {
       ],
       "durationInFrames": 843
     },
-    // 17 (426.60s) verified
+    // 17 (426.60s) verified against the notes
     {
-      "layout": "label-title-body",
+      "layout": "screen-demo",
       "label": "TEST 2: VERIFIED",
-      "title": "Three commitments,\nall match the notes",
-      "body": [
-        "Taylor: launch readiness checklist, November 9",
-        "Chris: onboarding FAQs, November 10",
-        "Customer escalation: no owner or deadline yet"
+      "steps": [
+        {
+          "from": 0,
+          "text": "Check the cited answer against the original notes"
+        },
+        {
+          "from": 55,
+          "text": "Taylor: launch readiness checklist, November 9"
+        },
+        {
+          "from": 176,
+          "text": "Chris: onboarding FAQs, November 10"
+        },
+        {
+          "from": 285,
+          "text": "Customer escalation: no owner or deadline"
+        },
+        {
+          "from": 415,
+          "text": "All three match the original document"
+        }
       ],
-      "bodyTimings": [
-        55,
-        176,
-        285
-      ],
-      "bodyRight": true,
-      "bodyCards": true,
-      "bodyCardIcons": [
-        "user",
-        "user",
-        "x"
+      "shots": [
+        {
+          "from": 0,
+          "image": "copilot-studio-knowledge-tools/images/22-original-meeting-notes.jpg",
+          "imageSize": [
+            2844,
+            1560
+          ],
+          "transition": "fade",
+          "camera": [
+            {
+              "frame": 0,
+              "x": 1400,
+              "y": 1000,
+              "zoom": 1.75
+            }
+          ],
+          "marks": [
+            {
+              "type": "box",
+              "rect": [
+                770,
+                884,
+                1250,
+                90
+              ],
+              "from": 55,
+              "to": 176
+            },
+            {
+              "type": "box",
+              "rect": [
+                770,
+                998,
+                816,
+                50
+              ],
+              "from": 176,
+              "to": 285
+            },
+            {
+              "type": "box",
+              "rect": [
+                770,
+                1060,
+                1256,
+                50
+              ],
+              "from": 285,
+              "to": 415
+            },
+            {
+              "type": "box",
+              "rect": [
+                770,
+                878,
+                1262,
+                236
+              ],
+              "from": 415
+            }
+          ]
+        }
       ],
       "durationInFrames": 533
     },

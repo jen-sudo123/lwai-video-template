@@ -20,6 +20,7 @@ SHOTS = {
     '05': ('05-sharepoint-authenticated-source.png', SMALL), '08': ('08-existing-tools.png', BIG),
     '09': ('09-read-tool-credentials.png', BIG), '10': ('10-fixed-site-and-list-before-save.png', BIG),
     '11': ('11-read-tool-renamed.png', RENAMED),  # supplied by the user after the walkthrough
+    '22': ('22-original-meeting-notes.jpg', BIG),  # from the AgentKnowledgeTools shot folder on Drive
     '12': ('12-approved-meeting-notes-selected.png', BIG), '13': ('13-meeting-notes-source-metadata.png', BIG),
     '14': ('14-knowledge-source-added.png', BIG), '16': ('16-resource-instructions-entered.png', BIG),
     '17': ('17-resource-instructions-saved.png', BIG), '20': ('20-source-ready-and-test-prompt.png', BIG),
@@ -347,13 +348,19 @@ d.step(W('read team action tracker also', f), 'Read Team Action Tracker also com
 d.box(W('read team action tracker also', f), [278, 376, 1010, 46])
 add(11955, 'knowledge test', d)
 
-# 17 — verified commitments
-s = 12798
-add(s, 'verified', cards(
-    'TEST 2: VERIFIED', 'Three commitments,\nall match the notes',
-    ['Taylor: launch readiness checklist, November 9', 'Chris: onboarding FAQs, November 10',
-     'Customer escalation: no owner or deadline yet'],
-    [W("taylor's", s), W("chris's", s), W('customer escalation', s)], ['user', 'user', 'x'], s))
+# 17 — verified against the original meeting notes (screenshot 22)
+d = Demo(12798, 'TEST 2: VERIFIED')
+d.step(12798, 'Check the cited answer against the original notes')
+d.shot(12798, '22', (1400, 1000, 1.75))
+d.box(W("taylor's", 12798), [770, 884, 1250, 90], to=W("chris's", 12798))
+d.step(W("taylor's", 12798), 'Taylor: launch readiness checklist, November 9')
+d.box(W("chris's", 12798), [770, 998, 816, 50], to=W('customer escalation', 12798))
+d.step(W("chris's", 12798), 'Chris: onboarding FAQs, November 10')
+d.box(W('customer escalation', 12798), [770, 1060, 1256, 50], to=W('those three', 12798))
+d.step(W('customer escalation', 12798), 'Customer escalation: no owner or deadline')
+d.box(W('those three', 12798), [770, 878, 1262, 236])
+d.step(W('those three', 12798), 'All three match the original document')
+add(12798, 'verified against the notes', d)
 
 # 18 — the cited answer
 d = Demo(13331, 'TEST 2')
@@ -400,7 +407,8 @@ ts = f"""import {{ VideoData }} from '../scenes/types';
 // silence at 276.11s), NOT padded (audioStartFrame = 0). Timings from the Scribe word timestamps in
 // copilot-studio-knowledge-tools.transcript.json; comp_frame = round(t * 30).
 // Screenshots: copilot-studio-knowledge-tools/images/ (Drive walkthrough folder; captured pointer removed with
-// scripts/remove-captured-pointer.py + scripts/transplant-text.py). 06 (wrong site) is not used; 11 (renamed tool) was supplied separately.
+// scripts/remove-captured-pointer.py + scripts/transplant-text.py). 06 (wrong site) is not used; 11 (renamed tool) was supplied separately;
+// 22 (original notes) is 18-original-meeting-notes-for-verification.jpg from the AgentKnowledgeTools Drive shot folder.
 // Preview artifact: https://claude.ai/artifact/UHeAkDj1kGMv1k7vXhKSap (npm run preview -- CopilotStudioKnowledgeTools, republish to this URL)
 //
 //  #  layout            label                | start s | frames
