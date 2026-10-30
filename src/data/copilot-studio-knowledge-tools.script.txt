@@ -1,0 +1,143 @@
+<speak>
+<break time="500ms"/>Let's give our agent the knowledge and tools it needs.
+
+Start with Section 3 of your Agent Build Plan: What does your agent need?
+
+<break time="500ms"/>Your instructions describe how the agent should work. Knowledge sources provide information it can use. Tools let it perform specific operations, such as retrieving records from a system.
+
+In our example, the agent needs approved weekly meeting notes and an existing team action tracker. The first version reads those sources and prepares proposals for human review.
+
+<break time="500ms"/>I'll demonstrate the setup in our Weekly Team Action Follow-Up Demo. As you watch, think about the information and capabilities identified in your own Build Plan.
+
+<break time="500ms"/>Here we are inside the existing agent in Copilot Studio.
+
+This interface has separate Overview, Knowledge, and Tools tabs. I'll open Knowledge and select Add knowledge.
+
+Under Featured, I'll choose SharePoint.
+
+<break time="500ms"/>The dialog tells us that this source will only be available to authenticated end users. For your own agent, that means checking whether the intended users have access to the underlying content.
+
+<break time="500ms"/>I'll select Browse items, navigate to FlexOS Global Ltd., and open Documents.
+
+Then I'll select Weekly Meeting Notes, November 3, and click Confirm selection.
+
+We're connecting the specific document needed for this demonstration.
+
+<break time="500ms"/>Next, I'll name the source Approved Weekly Meeting Notes.
+
+The description explains that it contains approved weekly team meeting notes, and that the agent should use it to identify explicit commitments, owners, deadlines, and follow-up actions. It also tells the agent to refer to the relevant meeting and source when presenting findings.
+
+I'll click Add to agent.
+
+<break time="500ms"/>The source is now connected. Later, on Overview, we'll confirm that it shows Ready before testing retrieval.
+
+Adding the source and seeing Ready are useful setup checks. We still need to test whether the agent retrieves the correct information.
+
+<break time="500ms"/>For your own workflow, connect the approved information identified in your Build Plan. That might be a policy document, project files, reference materials, or another source. Use the source your workflow needs.
+
+<break time="800ms"/>Next, let's look at tools.
+
+Return to the Tools and actions field in Section 3 of your Build Plan. What operation does your agent need to perform?
+
+In our example, it needs to retrieve existing commitments from a SharePoint list.
+
+<break time="500ms"/>I'll open the Tools tab.
+
+This agent already has a SharePoint Get items tool, so we'll configure that existing tool. We don't need to add another copy.
+
+If the capability your agent needs isn't already connected, Add a tool is the starting point for finding and adding it.
+
+<break time="500ms"/>Get items reads records from a SharePoint list. That fits the read-only first version described in our Build Plan.
+
+There is also a separate flow called Create Approved Follow-Up Action. That flow can create a tracker item. We won't run it during this demonstration.
+
+<break time="500ms"/>Now I'll open the read tool and check its settings.
+
+Under Additional details, Credentials to use is set to End user credentials.
+
+Ask the end user before running is set to No for this read operation. The creation flow has a separate setting that asks for approval before creating an item.
+
+For your own agent, consider the operation and its effect when deciding where confirmation is needed.
+
+<break time="500ms"/>Next, I'll make the read tool's purpose clearer.
+
+In Details, I'll name it Read Team Action Tracker and add a description.
+
+The description explains that it retrieves existing tasks, owners, due dates, and statuses from the Team Action Tracker list. It tells the agent to use the tool before comparing meeting commitments with existing actions, and makes clear that the tool only reads records.
+
+<break time="500ms"/>Now I'll check Inputs.
+
+Site Address is already set to a Custom value for our approved SharePoint site.
+
+List Name initially uses Dynamically fill with AI. For this workflow, we already know which list the tool should read.
+
+I'll change List Name to Custom value and select Team Action Tracker.
+
+Both inputs now point to the approved location. I'll click Save to keep the tool changes.
+
+<break time="500ms"/>For your own tool, check which inputs should be fixed and which genuinely need to vary with the user's request.
+
+You'll also need to check that retrieval returns all the information required for the task. If records are missing, a comparison may be incomplete.
+
+<break time="800ms"/>Now let's connect the configured resources to the instructions.
+
+I'll return to Overview and edit Instructions.
+
+The Instructions field in this demo was empty, so I'm adding the resource-use instructions here.
+
+For your own agent, review the instructions you already have and refine the steps that depend on connected information or tools.
+
+<break time="500ms"/>First, I'll tell the agent to use Approved Weekly Meeting Notes to identify explicit commitments and include the supporting source.
+
+If an owner or deadline is missing or ambiguous, it should ask for clarification rather than invent a value.
+
+<break time="500ms"/>Next, I'll tell it to use Read Team Action Tracker before comparing the notes with existing commitments.
+
+It should use the configured site and list. If retrieval fails or appears incomplete, it should report that limitation before presenting the comparison as complete.
+
+<break time="500ms"/>Finally, I'll tell it to present proposed new actions and possible changes separately for human review.
+
+It must not call Create Approved Follow-Up Action until the user approves the exact task title, owner, and due date.
+
+It must also avoid claiming that an existing tracker item was updated unless an appropriate update tool completed that operation.
+
+<break time="500ms"/>I'm using the resources' exact configured names in these instructions. For your agent, use the names of the capabilities you've connected.
+
+Then save the instructions.
+
+<break time="800ms"/>Now it's time to test.
+
+On Overview, Approved Weekly Meeting Notes shows Ready. We can also see Read Team Action Tracker in the Tools section.
+
+I'll use Test to open the Test your agent pane.
+
+<break time="500ms"/>First, I'll ask the read tool to retrieve existing commitments and show the task, owner, due date, and status, without creating or changing anything.
+
+The execution details showed that Read Team Action Tracker completed.
+
+That confirms the tool ran. We did not independently complete a comparison against the live SharePoint list, so that verification remains a separate step.
+
+<break time="500ms"/>Next, I'll test the knowledge source.
+
+I'll ask the agent to summarize the commitments recorded in the November 3 meeting, include owners and deadlines where recorded, identify missing details, and cite the source. The request also says not to create or change tracker items.
+
+<break time="500ms"/>The first attempt displayed Unable to connect.
+
+On retry, Search sources completed successfully. Read Team Action Tracker also completed during that test.
+
+<break time="500ms"/>The cited answer identified Taylor's launch readiness checklist deadline as November 9, Chris's onboarding FAQs as November 10, and the customer escalation follow-up as missing an owner and deadline.
+
+Those three commitments match the original meeting-notes document.
+
+The screenshot shows the completed knowledge retrieval and part of the cited answer. The remaining commitments were checked against the original document separately.
+
+No write tool was shown in the test execution.
+
+<break time="800ms"/>For your own agent, test each connected capability with a small, specific, safe request. Know what the correct result should be, inspect the available execution information, and compare the response with the original source.
+
+If a test fails, record the exact error and check the connection, source status, access, and permissions.
+
+<break time="500ms"/>Your goal is to verify that the agent can use the capabilities your workflow requires, or identify exactly what still needs attention.
+
+Once those checks are complete, you're ready to review the human-control boundaries for your workflow.
+</speak>
