@@ -3,6 +3,10 @@
 Remotion 4 project for Lead with AI course videos. 1920×1080, 30fps, IBM Plex Serif + Public Sans.
 Each video is a composition: a data file `src/data/<name>.ts` exporting a `VideoData`, registered in `src/Root.tsx`.
 
+Shared by Claude Code and Codex: `AGENTS.md` is a symlink to this file. Skills live in `.claude/skills/<name>/SKILL.md`
+(Codex reads `.agents/skills/`, and shared skills are symlinked between the two). If your agent doesn't load skills
+automatically, open the SKILL.md named below and follow it.
+
 ## Where things live
 
 | Path | What |
@@ -52,6 +56,15 @@ Render command (local Mac: 8 GB RAM, so concurrency 1; close Studio first):
 npx remotion render src/index.ts <CompId> out/<name>.mp4 --chrome-mode=chrome-for-testing --concurrency=1 --timeout=120000
 ```
 
+## Preview requests: scene-editor artifact (standard)
+
+Every "preview" request gets the scene-editor artifact, not a bare MP4. See `preview-artifact/README.md`.
+`npm run preview -- <CompId>` → publish `out/preview/<CompId>/` with `capabilities: { db: {}, user: {} }`;
+republish to the same URL on later previews. Reviewer edits come back from the artifact db collection `edits`
+(`scene-NN` docs with `changes`/`note`, plus `general`); apply them, then mark `status: "applied"`.
+A preview render doesn't need the render go-ahead; the final 1080p render still does.
+**Before every final render, read the `edits` collection and apply any `open` edits** (edits are saved silently, no notification).
+
 ## VO timing (most time-consuming part — get it right)
 
 - Whisper once, save next to the data file: `whisper public/audio/<name>.mp3 --model small --word_timestamps True` → `src/data/<name>.transcript.*`.
@@ -90,6 +103,17 @@ Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 - `ThreeModeColumns`: column entry is triggered by the first `highlights` entry with `value === index`.
 - `centered-image-caption`: default `objectFit: 'cover'`; use `'contain'` for full screenshots.
 
+### screen-demo (screenshot tutorials)
+- No screen recording, only screenshots? Use `layout: 'screen-demo'`, not image-beside-text slides. Follow the
+  `lwai-screen-demo` skill (`.agents/skills/lwai-screen-demo/SKILL.md`). Reference: `src/scenes/ScreenDemo.tsx`, and the
+  `buildDemo` / `instructionsDemo` / `testsDemo` scenes in `src/data/agent-boundaries.ts`.
+- One scene per continuous run of screenshots; each screenshot is a shot. Keep the scene's start frame and duration equal
+  to what it replaces so VO timing elsewhere doesn't move.
+- Rects and points are in screenshot pixels. Measure with `python3 scripts/screenshot-grid.py public/<video>/images/*.jpg`.
+- Shot transitions: `slide` only for a change of app/place, `fade` for a new state of the same screen.
+- Scene-level `sceneTransition: { type: 'slide', between: 'images' }` (VideoData) slides between consecutive image
+  scenes without shifting start frames; `between: 'scenes'` slides at every change.
+
 ### video-clip
 - VideoData-level `clipSrc` = one continuous background video; each scene's `videoStartTime` is the trim offset.
   With `clipSrc` set, the video and `clipZoomKeyframes` are rendered by `Video.tsx`, NOT `VideoClip.tsx` (`skipVideo` forced true).
@@ -110,6 +134,10 @@ Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 - No Remotion Studio and no Whisper: verify with `remotion still`, transcribe with the `speech-to-text` skill (ElevenLabs Scribe, word timestamps).
 - Nothing on the cloud machine survives the session: push media and renders to Drive, commit code before finishing.
 - Renders: concurrency can go above 1 here, but keep `--timeout=120000`.
+- If `remotion.media` is blocked, pass `--browser-executable=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell`.
+  Remotion launches Chrome with `--no-proxy-server`, so fonts fail with `ERR_CERT_AUTHORITY_INVALID` until the
+  egress gateway CA from `/root/.ccr/ca-bundle.crt` is added to Chrome's NSS store
+  (`certutil -A -d sql:/root/.pki/nssdb -n egress-gateway -t "C,," -i <that cert>.pem`).
 
 ## Local Mac only
 

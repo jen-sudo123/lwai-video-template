@@ -544,8 +544,107 @@ const imageMarquee = z.object({
   durationInFrames: z.number(),
 });
 
+const rect = z.tuple([z.number(), z.number(), z.number(), z.number()]);
+
+const converge = z.object({
+  layout: z.literal('converge'),
+  label: z.string(),
+  title: z.string(),
+  titleTimings: z.array(z.number()).optional(),
+  titleHighlight: z.string().optional(),
+  sources: z.array(z.object({ text: z.string(), tag: z.string().optional(), icon: z.string().optional(),
+    dashed: z.boolean().optional(), from: z.number() })),
+  target: z.object({ label: z.string(), steps: z.array(z.object({ text: z.string(), icon: z.string().optional() })) }),
+  convergeFrom: z.number(),
+  durationInFrames: z.number(),
+});
+
+const instructionLink = z.object({
+  layout: z.literal('instruction-link'),
+  label: z.string(),
+  title: z.string(),
+  titleTimings: z.array(z.number()).optional(),
+  docLabel: z.string(),
+  docSection: z.string(),
+  lines: z.array(z.object({ text: z.string().optional(), before: z.string().optional(), after: z.string().optional(),
+    highlight: z.string().optional(), focusFrom: z.number().optional(), changeFrom: z.number().optional(),
+    linkFrom: z.number().optional(), resource: z.number().optional() })),
+  panelLabel: z.string(),
+  resources: z.array(z.object({ kind: z.string(), name: z.string(), meta: z.string(), icon: z.string().optional(), from: z.number() })),
+  notes: z.array(z.object({ text: z.string(), from: z.number(), to: z.number().optional() })).optional(),
+  capabilityFrom: z.number().optional(),
+  capabilityText: z.string().optional(),
+  clarityText: z.string().optional(),
+  durationInFrames: z.number(),
+});
+
+const testBlocked = z.object({
+  layout: z.literal('test-blocked'),
+  label: z.string(),
+  title: z.string(),
+  titleTimings: z.array(z.number()).optional(),
+  test: z.object({ label: z.string(), prompt: z.string(), error: z.string(), blockedFrom: z.number() }),
+  causesLabel: z.string(),
+  causes: z.array(z.object({ text: z.string(), icon: z.string().optional(), from: z.number() })),
+  notCause: z.object({ text: z.string(), from: z.number() }).optional(),
+  record: z.object({ label: z.string(), from: z.number(), caption: z.string().optional() }),
+  routesLabel: z.string(),
+  routes: z.array(z.object({ text: z.string(), icon: z.string().optional(), from: z.number() })),
+  durationInFrames: z.number(),
+});
+
+const reminder = z.object({
+  layout: z.literal('reminder'),
+  label: z.string(),
+  title: z.string(),
+  noteTitle: z.string(),
+  noteMeta: z.string().optional(),
+  items: z.array(z.object({ text: z.string(), from: z.number() })),
+  next: z.object({ label: z.string(), text: z.string(), from: z.number() }).optional(),
+  kicker: z.object({ text: z.string(), from: z.number() }).optional(),
+  durationInFrames: z.number(),
+});
+
+const screenDemo = z.object({
+  layout: z.literal('screen-demo'),
+  label: z.string(),
+  steps: z.array(z.object({ from: z.number(), text: z.string(), label: z.string().optional() })),
+  shots: z.array(z.object({
+    from: z.number(),
+    image: z.string().optional(),
+    imageSize: z.tuple([z.number(), z.number()]),
+    transition: z.enum(['slide', 'fade', 'cut']).optional(),
+    camera: z.array(z.object({ frame: z.number(), x: z.number(), y: z.number(), zoom: z.number() })).optional(),
+    spotlights: z.array(z.object({ rect, from: z.number(), to: z.number().optional() })).optional(),
+    marks: z.array(z.object({ type: z.enum(['underline', 'circle', 'box']), rect, from: z.number(), to: z.number().optional() })).optional(),
+    cursor: z.array(z.object({ frame: z.number(), x: z.number(), y: z.number(), click: z.boolean().optional() })).optional(),
+    typing: z.object({ rect, text: z.string(), from: z.number(), to: z.number(), fontSize: z.number(), textX: z.number(), lineHeight: z.number().optional() }).optional(),
+    reveal: z.object({ rect, from: z.number(), duration: z.number() }).optional(),
+    compare: z.object({
+      before: z.string(),
+      after: z.string(),
+      beforeLabel: z.string(),
+      afterLabel: z.string(),
+      highlight: rect,
+      highlightFrom: z.number(),
+      stamp: z.string(),
+      stampFrom: z.number(),
+      statement: z.string(),
+      statementHighlight: z.string(),
+      statementFrom: z.number(),
+      crop: rect.optional(),
+    }).optional(),
+  })),
+  durationInFrames: z.number(),
+});
+
 export const sceneSchema = z.discriminatedUnion('layout', [
+  converge,
+  instructionLink,
+  testBlocked,
+  reminder,
   titleCardGreen,
+  screenDemo,
   blank,
   textImageSplit,
   centeredImageCaption,
@@ -646,5 +745,10 @@ export const videoDataSchema = z.object({
     startFrame: z.number(),
     endFrame: z.number(),
   })).optional(),
+  sceneTransition: z.object({
+    type: z.literal('slide'),
+    durationInFrames: z.number().optional(),
+    between: z.enum(['scenes', 'images']).optional(),
+  }).optional(),
   scenes: z.array(sceneSchema),
 });

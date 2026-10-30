@@ -1,11 +1,12 @@
 {
   "name": "lwai-video-template",
   "version": "1.0.0",
-  "description": "Lead with AI branded video template — Remotion-powered, driven by a scenes JSON.",
+  "description": "Lead with AI branded video template \u2014 Remotion-powered, driven by a scenes JSON.",
   "scripts": {
     "start": "remotion studio",
     "build": "remotion render",
-    "upgrade": "remotion upgrade"
+    "upgrade": "remotion upgrade",
+    "preview": "node scripts/build-preview.mjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
