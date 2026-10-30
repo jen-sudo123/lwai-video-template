@@ -7,6 +7,7 @@ import { VideoData } from '../scenes/types';
 // copilot-studio-knowledge-tools.transcript.json; comp_frame = round(t * 30).
 // Screenshots: copilot-studio-knowledge-tools/images/ (Drive walkthrough folder; captured pointer removed with
 // scripts/remove-captured-pointer.py + scripts/transplant-text.py). 06 (wrong site) is not used.
+// Preview artifact: https://claude.ai/artifact/UHeAkDj1kGMv1k7vXhKSap (npm run preview -- CopilotStudioKnowledgeTools, republish to this URL)
 //
 //  #  layout            label                | start s | frames
 //  1  title-card-green  COPILOT STUDIO       |    0.00 |   108
