@@ -13,12 +13,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 WORDS = json.loads((ROOT / 'src/data/copilot-studio-knowledge-tools.transcript.json').read_text())['words']
 IMG = 'copilot-studio-knowledge-tools/images/'
-SMALL, BIG = [1110, 610], [2844, 1560]
+SMALL, BIG, RENAMED = [1110, 610], [2844, 1560], [2000, 1091]
 SHOTS = {
     '01': ('01-build-plan-section-3.png', SMALL), '02': ('02-agent-overview-before.png', SMALL),
     '03': ('03-knowledge-empty.png', SMALL), '04': ('04-add-knowledge-options.png', SMALL),
     '05': ('05-sharepoint-authenticated-source.png', SMALL), '08': ('08-existing-tools.png', BIG),
     '09': ('09-read-tool-credentials.png', BIG), '10': ('10-fixed-site-and-list-before-save.png', BIG),
+    '11': ('11-read-tool-renamed.png', RENAMED),  # supplied by the user after the walkthrough
     '12': ('12-approved-meeting-notes-selected.png', BIG), '13': ('13-meeting-notes-source-metadata.png', BIG),
     '14': ('14-knowledge-source-added.png', BIG), '16': ('16-resource-instructions-entered.png', BIG),
     '17': ('17-resource-instructions-saved.png', BIG), '20': ('20-source-ready-and-test-prompt.png', BIG),
@@ -235,29 +236,42 @@ add(4216, 'tools', d)
 # 9 — confirmation matches effect
 add(6209, 'confirmation', statement('Match confirmation\nto the effect', 'the effect', label='FOR YOUR WORKFLOW'))
 
-# 10 — tool details (no screenshot of the rename)
-s = 6374
-add(s, 'tool details', cards(
-    'TOOL DETAILS', 'Read Team\nAction Tracker',
-    ['Retrieves: tasks, owners, due dates and statuses', 'Use it: before comparing commitments with existing actions',
-     'Read-only: the tool only reads records'],
-    [W('retrieves existing', s), W('it tells the agent', s), W('only reads', s)], ['eye', 'compare', 'check'], s))
+# 10 — tool details: the renamed tool (screenshot 11)
+d = Demo(6374, 'TOOL DETAILS')
+d.step(6374, "Make the read tool's purpose clearer")
+d.shot(6374, '11', (830, 520, 1.3))
+f = W('in details', 6374)
+d.step(f, 'Name: Read Team Action Tracker')
+d.box(W('read team action tracker', f), [402, 413, 853, 54], to=W('the description explains', f))
+d.step(W('the description explains', f), 'Retrieves tasks, owners, due dates and statuses')
+d.box(W('the description explains', f), [402, 533, 853, 86])
+d.step(W('it tells the agent', f), 'Use it before comparing commitments')
+d.step(W('only reads', f), 'It only reads records')
+d.box(W('only reads', f), [402, 690, 222, 42])
+add(6374, 'tool details', d)
 
-# 11 — inputs
+# 11 — inputs (camera kept low on 09/10 so their old "Get items" title stays out of view)
 d = Demo(7116, 'INPUTS')
-d.step(7116, 'Site Address: Custom value, the approved site')
-d.shot(7116, '09', (1300, 1250, 1.35))
-d.box(W('site address', 7116), [578, 1328, 1190, 84], to=W('list name initially', 7116))
+d.step(7116, 'Open Inputs')
+d.shot(7116, '11', (830, 620, 1.2))
+d.box(7116 + 4, [136, 354, 104, 40])
+d.click(W('check inputs', 7116) + 6, 184, 373)
+f = W('site address', 7116) - 6
+d.step(f, 'Site Address: Custom value, the approved site')
+d.shot(f, '09', (1250, 1250, 1.6))
+d.box(f + 6, [578, 1328, 1190, 84], to=W('list name initially', 7116))
 d.step(W('list name initially', 7116), 'List Name starts as Dynamically fill with AI')
 d.box(W('list name initially', 7116), [578, 1454, 1190, 92])
 f = W("i'll change list name", 7116)
 d.step(f, 'List Name: Custom value, Team Action Tracker')
-d.shot(f, '10', (1300, 820, 1.3))
+d.shot(f, '10', (1250, 1050, 1.6))
 d.box(W('custom value and', f), [578, 962, 1194, 80], to=W('both inputs', f))
-d.box(W('both inputs', f), [578, 826, 1194, 216], to=W("i'll click save", f))
-d.step(W("i'll click save", f), 'Save the tool')
-d.box(W("i'll click save", f), [1630, 286, 200, 72])
-d.click(W('save to keep', f), 1730, 322)
+d.box(W('both inputs', f), [578, 826, 1194, 216])
+f = W("i'll click save", 7116)
+d.step(f, 'Save the tool')
+d.shot(f, '11', (1300, 450, 1.3))
+d.box(f + 4, [1152, 189, 144, 52])
+d.click(W('save to keep', f), 1224, 215)
 add(7116, 'inputs', d)
 
 # 12 — for your workflow: inputs
@@ -386,7 +400,7 @@ ts = f"""import {{ VideoData }} from '../scenes/types';
 // silence at 276.11s), NOT padded (audioStartFrame = 0). Timings from the Scribe word timestamps in
 // copilot-studio-knowledge-tools.transcript.json; comp_frame = round(t * 30).
 // Screenshots: copilot-studio-knowledge-tools/images/ (Drive walkthrough folder; captured pointer removed with
-// scripts/remove-captured-pointer.py + scripts/transplant-text.py). 06 (wrong site) is not used.
+// scripts/remove-captured-pointer.py + scripts/transplant-text.py). 06 (wrong site) is not used; 11 (renamed tool) was supplied separately.
 // Preview artifact: https://claude.ai/artifact/UHeAkDj1kGMv1k7vXhKSap (npm run preview -- CopilotStudioKnowledgeTools, republish to this URL)
 //
 //  #  layout            label                | start s | frames

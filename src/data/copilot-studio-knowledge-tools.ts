@@ -6,7 +6,7 @@ import { VideoData } from '../scenes/types';
 // silence at 276.11s), NOT padded (audioStartFrame = 0). Timings from the Scribe word timestamps in
 // copilot-studio-knowledge-tools.transcript.json; comp_frame = round(t * 30).
 // Screenshots: copilot-studio-knowledge-tools/images/ (Drive walkthrough folder; captured pointer removed with
-// scripts/remove-captured-pointer.py + scripts/transplant-text.py). 06 (wrong site) is not used.
+// scripts/remove-captured-pointer.py + scripts/transplant-text.py). 06 (wrong site) is not used; 11 (renamed tool) was supplied separately.
 // Preview artifact: https://claude.ai/artifact/UHeAkDj1kGMv1k7vXhKSap (npm run preview -- CopilotStudioKnowledgeTools, republish to this URL)
 //
 //  #  layout            label                | start s | frames
@@ -19,7 +19,7 @@ import { VideoData } from '../scenes/types';
 //  7  converge          FOR YOUR WORKFLOW    |  126.13 |   432
 //  8  screen-demo       TOOLS                |  140.53 |  1993
 //  9  big-statement     FOR YOUR WORKFLOW    |  206.97 |   165
-//  10 label-title-body  TOOL DETAILS         |  212.47 |   742
+//  10 screen-demo       TOOL DETAILS         |  212.47 |   742
 //  11 screen-demo       INPUTS               |  237.20 |   723
 //  12 label-title-body  FOR YOUR WORKFLOW    |  261.30 |   468
 //  13 screen-demo       INSTRUCTIONS         |  276.90 |  2589
@@ -825,25 +825,81 @@ export const copilotStudioKnowledgeTools: VideoData = {
     },
     // 10 (212.47s) tool details
     {
-      "layout": "label-title-body",
+      "layout": "screen-demo",
       "label": "TOOL DETAILS",
-      "title": "Read Team\nAction Tracker",
-      "body": [
-        "Retrieves: tasks, owners, due dates and statuses",
-        "Use it: before comparing commitments with existing actions",
-        "Read-only: the tool only reads records"
+      "steps": [
+        {
+          "from": 0,
+          "text": "Make the read tool's purpose clearer"
+        },
+        {
+          "from": 108,
+          "text": "Name: Read Team Action Tracker"
+        },
+        {
+          "from": 252,
+          "text": "Retrieves tasks, owners, due dates and statuses"
+        },
+        {
+          "from": 483,
+          "text": "Use it before comparing commitments"
+        },
+        {
+          "from": 684,
+          "text": "It only reads records"
+        }
       ],
-      "bodyTimings": [
-        296,
-        483,
-        684
-      ],
-      "bodyRight": true,
-      "bodyCards": true,
-      "bodyCardIcons": [
-        "eye",
-        "compare",
-        "check"
+      "shots": [
+        {
+          "from": 0,
+          "image": "copilot-studio-knowledge-tools/images/11-read-tool-renamed.png",
+          "imageSize": [
+            2000,
+            1091
+          ],
+          "transition": "fade",
+          "camera": [
+            {
+              "frame": 0,
+              "x": 830,
+              "y": 520,
+              "zoom": 1.3
+            }
+          ],
+          "marks": [
+            {
+              "type": "box",
+              "rect": [
+                402,
+                413,
+                853,
+                54
+              ],
+              "from": 159,
+              "to": 252
+            },
+            {
+              "type": "box",
+              "rect": [
+                402,
+                533,
+                853,
+                86
+              ],
+              "from": 252
+            },
+            {
+              "type": "box",
+              "rect": [
+                402,
+                690,
+                222,
+                42
+              ],
+              "from": 684
+            }
+          ]
+        }
       ],
       "durationInFrames": 742
     },
@@ -854,6 +910,10 @@ export const copilotStudioKnowledgeTools: VideoData = {
       "steps": [
         {
           "from": 0,
+          "text": "Open Inputs"
+        },
+        {
+          "from": 52,
           "text": "Site Address: Custom value, the approved site"
         },
         {
@@ -872,6 +932,48 @@ export const copilotStudioKnowledgeTools: VideoData = {
       "shots": [
         {
           "from": 0,
+          "image": "copilot-studio-knowledge-tools/images/11-read-tool-renamed.png",
+          "imageSize": [
+            2000,
+            1091
+          ],
+          "transition": "fade",
+          "camera": [
+            {
+              "frame": 0,
+              "x": 830,
+              "y": 620,
+              "zoom": 1.2
+            }
+          ],
+          "marks": [
+            {
+              "type": "box",
+              "rect": [
+                136,
+                354,
+                104,
+                40
+              ],
+              "from": 4
+            }
+          ],
+          "cursor": [
+            {
+              "frame": -3,
+              "x": 344,
+              "y": 483
+            },
+            {
+              "frame": 23,
+              "x": 184,
+              "y": 373,
+              "click": true
+            }
+          ]
+        },
+        {
+          "from": 52,
           "image": "copilot-studio-knowledge-tools/images/09-read-tool-credentials.png",
           "imageSize": [
             2844,
@@ -880,10 +982,10 @@ export const copilotStudioKnowledgeTools: VideoData = {
           "transition": "fade",
           "camera": [
             {
-              "frame": 0,
-              "x": 1300,
+              "frame": 52,
+              "x": 1250,
               "y": 1250,
-              "zoom": 1.35
+              "zoom": 1.6
             }
           ],
           "marks": [
@@ -921,9 +1023,9 @@ export const copilotStudioKnowledgeTools: VideoData = {
           "camera": [
             {
               "frame": 420,
-              "x": 1300,
-              "y": 820,
-              "zoom": 1.3
+              "x": 1250,
+              "y": 1050,
+              "zoom": 1.6
             }
           ],
           "marks": [
@@ -946,30 +1048,48 @@ export const copilotStudioKnowledgeTools: VideoData = {
                 1194,
                 216
               ],
-              "from": 557,
-              "to": 648
-            },
+              "from": 557
+            }
+          ]
+        },
+        {
+          "from": 648,
+          "image": "copilot-studio-knowledge-tools/images/11-read-tool-renamed.png",
+          "imageSize": [
+            2000,
+            1091
+          ],
+          "transition": "fade",
+          "camera": [
+            {
+              "frame": 648,
+              "x": 1300,
+              "y": 450,
+              "zoom": 1.3
+            }
+          ],
+          "marks": [
             {
               "type": "box",
               "rect": [
-                1630,
-                286,
-                200,
-                72
+                1152,
+                189,
+                144,
+                52
               ],
-              "from": 648
+              "from": 652
             }
           ],
           "cursor": [
             {
               "frame": 636,
-              "x": 2050,
-              "y": 542
+              "x": 1384,
+              "y": 325
             },
             {
               "frame": 662,
-              "x": 1730,
-              "y": 322,
+              "x": 1224,
+              "y": 215,
               "click": true
             }
           ]
