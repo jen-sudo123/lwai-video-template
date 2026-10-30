@@ -115,7 +115,7 @@ I'll use Test to open the Test your agent pane.
 
 The execution details showed that Read Team Action Tracker completed.
 
-That confirms the tool ran. We did not independently complete a comparison against the live SharePoint list, so that verification remains a separate step.
+That confirms the tool ran. Checking its output against the live list is a separate step.
 
 <break time="500ms"/>Next, I'll test the knowledge source.
 
@@ -129,7 +129,7 @@ On retry, Search sources completed successfully. Read Team Action Tracker also c
 
 Those three commitments match the original meeting-notes document.
 
-The screenshot shows the completed knowledge retrieval and part of the cited answer. The remaining commitments were checked against the original document separately.
+Here you can see the completed knowledge retrieval and part of the cited answer. The remaining commitments were checked against the original document separately.
 
 No write tool was shown in the test execution.
 
