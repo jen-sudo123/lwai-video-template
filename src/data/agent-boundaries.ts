@@ -593,23 +593,24 @@ const buildDemo: VideoData['scenes'][number] = {
     },
     {
       from: 404,
-      image: img('02-build-connected-tools'),
-      imageSize: CHAT,
+      // Agent overview in the current Copilot Studio UI (2000×998). "Tools" is a top tab here,
+      // so the cursor clicks it on "open the Tools section" (838).
+      image: img('02-agent-overview'),
+      imageSize: [2000, 998],
       transition: 'slide',
       camera: [
-        { frame: 404, x: 960, y: 480, zoom: 1 },
-        { frame: 420, x: 600, y: 200, zoom: 1.7 },
-        { frame: 656, x: 960, y: 480, zoom: 1 },
-        { frame: 840, x: 1690, y: 360, zoom: 2 },
+        { frame: 404, x: 1000, y: 499, zoom: 1 },
+        { frame: 420, x: 710, y: 280, zoom: 1.6 },
+        { frame: 656, x: 1000, y: 499, zoom: 1 },
+        { frame: 840, x: 900, y: 160, zoom: 1.9 },
       ],
       spotlights: [
-        { rect: [275, 155, 565, 70], from: 439, to: 640 },
-        { rect: [1515, 308, 385, 90], from: 852 },
+        { rect: [200, 180, 1020, 200], from: 439, to: 640 },
+        { rect: [945, 26, 60, 34], from: 852 },
       ],
       cursor: [
-        { frame: 790, x: 1180, y: 620 },
-        { frame: 838, x: 1640, y: 374, click: true },
-        { frame: 890, x: 1640, y: 374, click: true },
+        { frame: 790, x: 1250, y: 520 },
+        { frame: 838, x: 975, y: 44, click: true },
       ],
     },
     {
