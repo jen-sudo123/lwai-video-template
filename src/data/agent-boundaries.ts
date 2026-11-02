@@ -647,19 +647,24 @@ const instructionsDemo: VideoData['scenes'][number] = {
   shots: [
     {
       from: 0,
-      image: img('04-instructions-authority-and-clarification'),
-      imageSize: CHAT,
+      // Instructions in the current Copilot Studio UI (2000×1007). The Authority Limits spotlight
+      // starts at "Stop and ask", leaving the Create Approved Follow-Up Action bullet out of focus.
+      image: img('04-instructions-current'),
+      imageSize: [2000, 1007],
       transition: 'fade',
       camera: [
-        { frame: 0, x: 960, y: 480, zoom: 1 },
-        { frame: 143, x: 660, y: 470, zoom: 1.5 },
-        { frame: 440, x: 690, y: 670, zoom: 1.75 },
+        { frame: 0, x: 1000, y: 503, zoom: 1 },
+        { frame: 143, x: 940, y: 385, zoom: 1.5 },
+        { frame: 440, x: 1030, y: 640, zoom: 1.5 },
       ],
       spotlights: [
-        { rect: [252, 475, 800, 120], from: 176, to: 440 },
-        { rect: [252, 615, 840, 120], from: 451 },
+        { rect: [384, 312, 1110, 146], from: 176, to: 440 },
+        { rect: [384, 570, 1292, 145], from: 451 },
       ],
-      marks: [{ type: 'underline', rect: [282, 632, 700, 14], from: 470 }],
+      marks: [
+        { type: 'underline', rect: [406, 604, 602, 20], from: 470 },
+        { type: 'underline', rect: [406, 576, 1144, 20], from: 511 },
+      ],
     },
   ],
   durationInFrames: 617,
