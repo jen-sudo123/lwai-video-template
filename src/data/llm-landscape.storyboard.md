@@ -29,8 +29,8 @@ Local timings = frames from scene start, anchored to the word the item names.
 | 3 | 0:20.2–0:28.7 | 255 | big-statement | Need a refresher? Start with AI Fundamentals Training, linked below | — | "If not, start with…" |
 | 4 | 0:28.7–0:39.55 | 325 | label-title-body | Label: TODAY · Title: Understanding the landscape · Body: Where they're similar / Where they differ / How AI-fluent leaders use them | 130, 164, 214 | "Where they're similar" / "where they…differ" / "and how AI-fluent…" |
 | 5 | 0:39.55–0:53.2 | 410 | big-statement (kinetic) | Label: THE LANDSCAPE · Many models. Four major platforms. | 66 ("Many"), 312 ("four") | "Many high-quality…" / "four platforms…" |
-| 6 | 0:53.2–1:03.4 | 306 | label-title-body, bodyRight + bodyCards + bodyCardCompact | Title: The four platforms · Cards: ChatGPT · OpenAI / Gemini · Google / Copilot · Microsoft / Claude · Anthropic | 2, 91, 151, 221 | each platform name |
-| 7 | 1:03.4–1:24.2 | 624 | label-title-body, bodyRight + bodyCards + bodyCardCompact | Label: REACH · Title: Different paths to scale · Cards: ChatGPT: largest user base / Gemini: built into Search, Workspace, Android / Copilot: Microsoft's products / Claude: the expert alternative | 4, 184, 388, 497 | "ChatGPT has…" / "Gemini also…" / "Copilot has…" / "And Claude…" |
+| 6 | 0:53.2–1:03.4 | 306 | **new: platform-logo-grid** (4 logo tiles, timed reveals) | Title: The four platforms · Tiles: [ChatGPT logo] ChatGPT · OpenAI / [Gemini logo] Gemini · Google / [Copilot logo] Copilot · Microsoft / [Claude logo] Claude · Anthropic | 2, 91, 151, 221 | each platform name |
+| 7 | 1:03.4–1:24.2 | 624 | **platform-logo-grid** (same tiles, caption under each, active tile highlighted) | Label: REACH · Title: Different paths to scale · Captions: ChatGPT: largest user base / Gemini: built into Search, Workspace, Android / Copilot: Microsoft's products / Claude: the expert alternative | 4, 184, 388, 497 | "ChatGPT has…" / "Gemini also…" / "Copilot has…" / "And Claude…" |
 | 8 | 1:24.2–1:33.55 | 280 | centered-quote | Copilot brings OpenAI's latest GPT models and Claude models into one place | — | "Copilot also brings…" |
 | 9 | 1:33.55–1:52.2 | 560 | label-title-body | Label: WHAT THEY HAVE IN COMMON · Title: Built on frontier-class models · Body: Trained on massive amounts of data / Strong at patterns in language and code / Increasingly images, audio and video | 250, 354, 448 | "They're trained…" / "recognizing patterns…" / "increasingly…" |
 | 10 | 1:52.2–2:13.3 | 633 | checklist-slide | Title: Shared strengths · Items: Conversational thinking, drafting, analysis / Files and long documents / Summarize, synthesize, restructure, ideate / Multimodal: voice and visuals | 125, 253, 354, 498 | "Conversational…" / "The ability…" / "Strong summarization…" / "And multimodal…" |
@@ -45,5 +45,9 @@ Local timings = frames from scene start, anchored to the word the item names.
 - Section headers (The Landscape / What They Have in Common / The AI-Fluent Pattern / Bottom Line) are carried as labels on
   scenes 5, 9, 12, 16, since the VO has no silent gaps for standalone title cards. Separate cards would need ~2s of silence
   spliced into the audio.
-- Scene 6/7 would be stronger with the four platform logos (none in the repo yet).
-- Avatar overlay: no avatar footage supplied.
+- Logos: from Drive folder `1MBSn9jpAbFysfrzt7tokibSu29c3PD7K` → `public/llm-landscape/images/`
+  (`chatgpt.svg`, `copilot.svg`, `claude.svg` saved; `gemini` pending, source is a 62 KB PNG).
+- Scenes 6/7 need a small new layout `platform-logo-grid` (no existing layout does 4 logos with timed reveals).
+
+## Decided
+- No avatar overlay (user, 2026-11-03).
