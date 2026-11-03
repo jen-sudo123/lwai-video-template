@@ -98,7 +98,7 @@ export const llmLandscape: VideoData = {
       title: 'The four platforms',
       platforms: [
         { name: 'ChatGPT', maker: 'OpenAI', logo: `${LOGO}/chatgpt.svg` },
-        { name: 'Gemini', maker: 'Google' },
+        { name: 'Gemini', maker: 'Google', logo: `${LOGO}/gemini.png` },
         { name: 'Copilot', maker: 'Microsoft', logo: `${LOGO}/copilot.svg` },
         { name: 'Claude', maker: 'Anthropic', logo: `${LOGO}/claude.svg` },
       ],
@@ -114,7 +114,7 @@ export const llmLandscape: VideoData = {
       title: 'Different paths to scale',
       platforms: [
         { name: 'ChatGPT', maker: 'OpenAI', logo: `${LOGO}/chatgpt.svg`, caption: 'Largest user base' },
-        { name: 'Gemini', maker: 'Google', caption: 'Built into Search, Workspace, Android' },
+        { name: 'Gemini', maker: 'Google', logo: `${LOGO}/gemini.png`, caption: 'Built into Search, Workspace, Android' },
         { name: 'Copilot', maker: 'Microsoft', logo: `${LOGO}/copilot.svg`, caption: "Reach through Microsoft's products" },
         { name: 'Claude', maker: 'Anthropic', logo: `${LOGO}/claude.svg`, caption: 'The expert alternative' },
       ],
