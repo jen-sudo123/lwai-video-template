@@ -17,6 +17,7 @@ import { ChecklistSlide } from './ChecklistSlide';
 import { ProcessSteps } from './ProcessSteps';
 import { PromptExample } from './PromptExample';
 import { TakeawayStack } from './TakeawayStack';
+import { PlatformLogoGrid } from './PlatformLogoGrid';
 import { TitleSlideTransition } from './TitleSlideTransition';
 import { DefineRangeDiagram } from './DefineRangeDiagram';
 import { AutomationBiasDiagram } from './AutomationBiasDiagram';
@@ -476,6 +477,17 @@ export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> =
           takeaways={scene.takeaways}
           timings={scene.timings}
           centered={scene.centered}
+        />
+      );
+    case 'platform-logo-grid':
+      return (
+        <PlatformLogoGrid
+          label={scene.label}
+          title={scene.title}
+          platforms={scene.platforms}
+          timings={scene.timings}
+          tilesVisible={scene.tilesVisible}
+          spotlight={scene.spotlight}
         />
       );
     case 'image-marquee':

@@ -77,6 +77,7 @@ import { workContext } from './data/work-context';
 import { workspaceStudioSkills } from './data/workspace-studio-skills';
 import { whatIsGenerativeAi } from './data/what-is-generative-ai';
 import { aiLandscape } from './data/ai-landscape';
+import { llmLandscape } from './data/llm-landscape';
 import { chatGPTDeepResearch } from './data/chatgpt-deep-research';
 import { chatGPTWebSearch } from './data/chatgpt-websearch';
 import { aiRisks } from './data/ai-risks';
@@ -818,6 +819,16 @@ export const RemotionRoot: React.FC = () => {
         height={layout.height}
         schema={videoDataSchema}
         defaultProps={whatIsGenerativeAi}
+      />
+      <Composition
+        id="LlmLandscape"
+        component={Video}
+        durationInFrames={calculateTotalFrames(llmLandscape.scenes)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+        schema={videoDataSchema}
+        defaultProps={llmLandscape}
       />
       <Composition
         id="AiLandscape"

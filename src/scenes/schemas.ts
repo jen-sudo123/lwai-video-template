@@ -482,6 +482,22 @@ const takeawayStack = z.object({
   durationInFrames: z.number(),
 });
 
+const platformLogoGrid = z.object({
+  layout: z.literal('platform-logo-grid'),
+  label: z.string().optional(),
+  title: z.string(),
+  platforms: z.array(z.object({
+    name: z.string(),
+    maker: z.string(),
+    logo: z.string().optional(),
+    caption: z.string().optional(),
+  })),
+  timings: z.array(z.number()).optional(),
+  tilesVisible: z.boolean().optional(),
+  spotlight: z.boolean().optional(),
+  durationInFrames: z.number(),
+});
+
 const videoClip = z.object({
   layout: z.literal('video-clip'),
   videoSrc: z.string(),
@@ -578,6 +594,7 @@ export const sceneSchema = z.discriminatedUnion('layout', [
   problemBlackbox,
   promptBoxSplit,
   takeawayStack,
+  platformLogoGrid,
   largeLabelBodySplit,
   videoClip,
   imageMarquee,

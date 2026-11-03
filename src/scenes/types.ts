@@ -556,6 +556,18 @@ export type Scene =
       durationInFrames: number;
     }
   | {
+      // Row of platform/product tiles (logo + name + maker), each revealing on its timing.
+      // tilesVisible: tiles shown from frame 0 and only captions reveal; spotlight: lime outline follows the latest timing.
+      layout: 'platform-logo-grid';
+      label?: string;
+      title: string;
+      platforms: Array<{ name: string; maker: string; logo?: string; caption?: string }>;
+      timings?: number[];
+      tilesVisible?: boolean;
+      spotlight?: boolean;
+      durationInFrames: number;
+    }
+  | {
       layout: 'image-marquee';
       label?: string;
       title?: string;
