@@ -1,0 +1,27 @@
+At this point, I'm assuming you already have a basic understanding of large language models. You roughly know how they work, what they're good at, and where they can fail. You've heard about hallucinations, about how these models predict language token by token, and why judgment and accountability always need to stay human.
+
+[pause] If not, start with our AI Fundamentals Training, linked below this video. It gives you the context you'll need for the rest of this lesson.
+
+[pause] Today is about understanding the landscape of the major platforms. Where they're similar, where they meaningfully differ, and how AI-fluent leaders actually use them.
+
+[pause] So first, let's zoom out. Many high-quality language models exist today. But in terms of global adoption, enterprise reach, and product maturity, there are four platforms most leaders will encounter.
+
+[pause] ChatGPT, built by OpenAI. Gemini, from Google. Copilot, from Microsoft. And Claude, built by Anthropic.
+
+[pause] ChatGPT has the largest user base, with hundreds of millions of people using it every week. Gemini also reaches a massive audience, largely because it's built into Search, Workspace, and Android. Copilot has similar reach through Microsoft's products. And Claude is quickly gaining traction as an expert alternative.
+
+[pause] Copilot also brings some of the strongest models into one place, including OpenAI's latest GPT models and certain Claude models.
+
+[pause] Before we talk about differences, let's be clear about what these platforms share. All four are built on frontier-class language models. They're trained on massive amounts of data, and they're very good at recognizing patterns in language, code, and increasingly images, audio, and video.
+
+[pause] So across all four, you'll see the same baseline strengths. Conversational interfaces for thinking, drafting, and analysis. The ability to work with files and long documents. Strong summarization, synthesis, restructuring, and ideation. And multimodal input and output, like voice and visuals.
+
+[pause] You'll also see the same known limitations. Missing context. Confident-sounding errors. And over-generalization.
+
+[pause] Here's an important insight. Highly AI-fluent leaders, which is you, in the near future, rarely rely on a single model as the only voice in the room.
+
+[pause] They deliberately use a second model to fact-check outputs, challenge assumptions, reframe a problem, expose blind spots, and test whether an answer holds up under a different model's reasoning.
+
+[pause] This is cognitive diversification. They're not using a second AI to go faster. They're using it to be more critical. Just like strong leaders seek out dissenting views, strong AI users build that challenge directly into their workflow.
+
+[pause] So, today's goal isn't to make you use multiple models. It's to help you become fluent in the landscape, so you can choose your tools intentionally. Even if you end up using just one, you'll be making that choice with awareness, and designing your system to think better.
