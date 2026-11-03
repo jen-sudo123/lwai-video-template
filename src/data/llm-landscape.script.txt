@@ -9,9 +9,9 @@
 
 <break time="500ms"/>ChatGPT, built by OpenAI. Gemini, from Google. Copilot, from Microsoft. And Claude, built by Anthropic.
 
-<break time="500ms"/>ChatGPT has the largest user base, reportedly approaching nine hundred million weekly users. Google says Gemini reaches hundreds of millions, largely because it's built into Search, Workspace, and Android. Copilot has similar reach through Microsoft's products. And Claude is quickly gaining traction as an expert alternative.
+<break time="500ms"/>ChatGPT has the largest user base, with hundreds of millions of people using it every week. Gemini also reaches a massive audience, largely because it's built into Search, Workspace, and Android. Copilot has similar reach through Microsoft's products. And Claude is quickly gaining traction as an expert alternative.
 
-<break time="500ms"/>Copilot also brings some of the strongest models into one place, including GPT-5.6 and certain Claude models.
+<break time="500ms"/>Copilot also brings some of the strongest models into one place, including OpenAI's latest GPT models and certain Claude models.
 
 <break time="500ms"/>Before we talk about differences, let's be clear about what these platforms share. All four are built on frontier-class language models. They're trained on massive amounts of data, and they're very good at recognizing patterns in language, code, and increasingly images, audio, and video.
 
