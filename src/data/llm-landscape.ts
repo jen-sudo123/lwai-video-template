@@ -183,10 +183,10 @@ export const llmLandscape: VideoData = {
     {
       layout: 'big-statement',
       label: 'THE AI-FLUENT PATTERN',
-      text: 'Not the only voice\nin the room.',
-      highlight: 'only voice',
+      text: 'AI-fluent leaders rarely rely\non a single model.',
+      highlight: 'a single model.',
       animation: 'fade',
-      lineTimings: [0, 150],
+      lineTimings: [50, 205],
       durationInFrames: 297,
     },
 
