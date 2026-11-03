@@ -1,0 +1,88 @@
+Let's return to the completed example in our Agent Build Plan.
+In Section 5, we defined the first version of our Weekly Team Action Follow-Up Agent.
+It reads meeting notes, checks the existing action tracker, and prepares proposed updates for human review.
+We also defined a test using three commitments: Taylor's existing task with a changed deadline, Chris's onboarding FAQ commitment, and a customer escalation that needs clarification.
+Today, we'll build an Agent Flow to make the tracker-checking step more consistent and reliable.
+The flow will retrieve existing commitments from SharePoint and return the information our agent needs to prepare its recommendations.
+
+In Section 2 of our Build Plan, we identified the main steps in our workflow.
+Step 2 is checking which commitments already exist in the action tracker.
+This is a good candidate for an Agent Flow because it follows a repeatable process.
+The flow will retrieve SharePoint items, check whether records were found, organize the relevant information, and return it to our agent.
+Our agent can then compare those records with the meeting notes and prepare recommendations for review.
+This flow only retrieves information. It contains no actions that create, update, or delete tracker items or send messages.
+
+I'll open Microsoft Copilot Studio.
+From the Workflows page, I'll open More create options and select Agent flows.
+This opens the Agent Flow designer.
+I'll choose the trigger called When an agent calls the flow.
+This means our workflow will start whenever the agent needs to retrieve the current tracker information.
+We don't need any inputs for this example because the flow will always read from our prepared Team Action Tracker.
+Now let's add the actions.
+
+First, I'll add the SharePoint Get items action.
+I'll select our demo SharePoint site and choose the Team Action Tracker list.
+This action retrieves the existing records from the list.
+I'll save the draft. Once the save completes, I'll click the Untitled name, rename the flow Check Team Action Tracker, and confirm the full name is displayed.
+Let's briefly look at the SharePoint list we're connecting to.
+It currently contains two records: Taylor's launch readiness checklist and Jordan's monthly supplier report. Chris's onboarding FAQs are not currently in this tracker.
+The list displays four important columns: Task, Owner, Due Date, and Status.
+We'll use these records to help our agent recognize existing commitments and avoid suggesting duplicate actions.
+
+Next, I'll add Data Operation — Select after Get items.
+For each expression, I'll open Insert expression (the fx editor), enter the expression, and choose Add. I'll keep the map's field names as plain text and use expressions for their values.
+In From, I'll use the expression body('Get_items')?['value'].
+This selects from the array of records returned by SharePoint, rather than the entire response.
+I'll map five fields: ID, Title, Owner, DueDate, and Status.
+ID uses item()['ID'], and Title uses item()['Title'].
+In our prepared list, Owner uses item()['field_1'], DueDate uses item()['Dateandtime'], and Status uses item()['field_3'].
+These are the internal names verified in an actual Get items test run. Learners should check the names in their own list rather than copy these custom field names automatically.
+The ID gives the reviewer an unambiguous reference to an existing tracker record.
+Now I'll add Respond to the agent after Select, then configure two Text outputs. Starting from the Workflows page does not add this action automatically. If you create the flow from an agent's Tools page and it already includes a response action, configure that existing action instead.
+TrackerRecords uses string(body('Select')). This converts the structured array into JSON text for the agent.
+LookupStatus uses if(greater(length(body('Select')),0),'Ready','NoRecords').
+That expression checks the record count and returns Ready when records exist or NoRecords when the list is empty.
+We don't need a separate Condition action here: Select returns an empty array for an empty input, and the status expression handles both cases.
+This means the response is always defined after a successful retrieval, including the empty-list case.
+A failed SharePoint retrieval must not be interpreted as an empty tracker or as permission to classify an action as new.
+Under the response action's Settings, I'll confirm Asynchronous response is Off. This Standard agent needs the response during its request, within the 100-second action limit.
+I'll run Flow checker, resolve any errors, and publish the completed flow.
+
+Now I'll open our Weekly Team Action Follow-Up Demo agent.
+This is the Standard agent we're using for the demonstration.
+Under Tools, I'll add our new Check Team Action Tracker workflow.
+I'll give it a clear description explaining that it retrieves existing commitments from SharePoint and returns their ID, Title, Owner, DueDate, and Status for comparison with meeting notes.
+The flow doesn't need any inputs, so I'll save the tool configuration and confirm that it's enabled.
+We also have an older tool called Read Team Action Tracker.
+I'll confirm it is off so the agent uses our new Agent Flow for tracker retrieval.
+Then I'll align the agent's instructions with this first version: use the enabled Check Team Action Tracker tool before classifying commitments, prepare recommendations only, and do not change records or send messages. If the tool is unavailable, it must say it could not call the tool; it must not search meeting-note knowledge for tracker records or describe a knowledge search as a tracker response. I'll remove references to later-stage readiness and creation tools that are not part of this demonstration.
+Our Approved Weekly Meeting Notes knowledge source is already connected and ready.
+The agent now has access to the meeting notes and a repeatable process for retrieving the current tracker records.
+
+Let's test the agent against the scenario from Section 5 of our Build Plan, using the records currently in SharePoint.
+I'll open Test your agent and start a new conversation.
+I'll ask the agent to review the approved weekly meeting notes, retrieve the current tracker records using Check Team Action Tracker, and prepare recommendations for human review.
+I'll also make clear that it should not modify SharePoint items or send messages.
+The agent can access the meeting notes through its connected knowledge source.
+It then calls our Agent Flow to retrieve the current SharePoint records.
+Let's look at the recommendations. I'll use compact numbered review items so the classification, current and proposed values, and source evidence remain readable in the test pane.
+First, Taylor's launch readiness checklist.
+The tracker shows a deadline of November 5, but the meeting notes indicate November 9.
+The agent should recommend updating the existing commitment.
+Next, Chris's onboarding FAQs.
+After checking all returned tracker records, the agent should find no reasonable match and classify Chris's commitment as a New Action for review.
+This is a recommendation only; it must not create a new SharePoint item.
+Finally, the customer escalation.
+The meeting notes don't provide a confirmed owner or deadline, so the agent should flag it as needing clarification.
+The agent prepares these recommendations for human review, following the boundaries we defined in our Build Plan.
+
+Let's return to our Agent Build Plan.
+We started with Step 2: checking which commitments already exist in the action tracker.
+We turned that step into an Agent Flow that retrieves and organizes information consistently.
+Now it's your turn.
+Open Section 5 of your Build Plan and review the first version of your agent.
+Then look at Section 2 and choose one step that could follow a repeatable process.
+It might involve retrieving information, checking required fields, or organizing data.
+Build or design an Agent Flow for that step and connect it to your agent.
+Make sure your agent's instructions explain when to use the flow.
+Then test it against your expected results, inspect the information returned, and confirm that the agent stays within its defined boundaries.

@@ -72,6 +72,7 @@ import { AiAgentic, AI_AGENTIC_DURATION_S, AI_AGENTIC_TITLE_FRAMES } from './com
 import { ChoosingWork, CHOOSING_WORK_DURATION_S, CHOOSING_WORK_TITLE_FRAMES } from './compositions/ChoosingWork';
 import { AutonomyDial, AUTONOMY_DIAL_DURATION_S, AUTONOMY_DIAL_TITLE_FRAMES } from './compositions/AutonomyDial';
 import { SmallestAgent, SMALLEST_AGENT_DURATION_S, SMALLEST_AGENT_VO_FROM } from './compositions/SmallestAgent';
+import { AgentFlowTracker, AGENT_FLOW_TRACKER_DURATION_S, AGENT_FLOW_TRACKER_VO_FROM } from './compositions/AgentFlowTracker';
 import { AdvancedModelsChatGPT, ADVANCED_MODELS_DURATION_S, ADVANCED_MODELS_TITLE_FRAMES } from './compositions/AdvancedModelsChatGPT';
 import { workContext } from './data/work-context';
 import { workspaceStudioSkills } from './data/workspace-studio-skills';
@@ -757,6 +758,14 @@ export const RemotionRoot: React.FC = () => {
         id="SmallestAgent"
         component={SmallestAgent}
         durationInFrames={SMALLEST_AGENT_VO_FROM + Math.ceil(SMALLEST_AGENT_DURATION_S * layout.fps)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+      />
+      <Composition
+        id="AgentFlowTracker"
+        component={AgentFlowTracker}
+        durationInFrames={AGENT_FLOW_TRACKER_VO_FROM + Math.ceil(AGENT_FLOW_TRACKER_DURATION_S * layout.fps)}
         fps={layout.fps}
         width={layout.width}
         height={layout.height}
