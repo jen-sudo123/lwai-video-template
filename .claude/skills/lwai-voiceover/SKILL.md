@@ -9,6 +9,17 @@ compatibility: Requires internet access and an ElevenLabs API key (ELEVENLABS_AP
 
 Generate voiceover audio for LWAI videos using ElevenLabs TTS, following the house style refined over multiple video productions.
 
+## Default method (user preference — overrides steps 2–3 below)
+
+Always generate through the **ElevenLabs connector** (MCP tool `creative_generate_speech`) with **`model_id: eleven_v4`**:
+- Verify the voice with `creative_list_voices` (search "Daan"), then generate with the default 2 takes.
+- v4 ignores `<break>` and has no style/speed: put `[pause]` at the start of each scene paragraph, no `<speak>` wrapper, no `voice_settings`.
+- Save the v4 prompt as `src/data/<id>.v4.script.txt` next to the `<break>` version.
+- Poll `creative_get_flow_run_status` until `all_completed`, then share the take links. If `elevenlabsusercontent.com`
+  is blocked, ask the user to drop the chosen take in `gdrive:dumping/`.
+
+The curl/`eleven_multilingual_v2` workflow below is legacy: use it only if the user asks.
+
 ## Default voice
 
 **Daan** — voice_id: `mY3gNkLi7iAw6IzipDpw`

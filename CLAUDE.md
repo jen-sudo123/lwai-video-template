@@ -66,9 +66,17 @@ npx remotion render src/index.ts <CompId> out/<name>.mp4 --chrome-mode=chrome-fo
 
 ## Voiceover (ElevenLabs)
 
-Use the `lwai-voiceover` skill. Key: `ELEVENLABS_API_KEY` env var (cloud) / macOS Keychain service `11labs-use` (local Mac).
-Default voice **Daan** `mY3gNkLi7iAw6IzipDpw`. Plain text + `<break>` tags only — no heavy SSML. Settings:
-stability 0.10, style 0.55, similarityBoost 0.85, speed 0.95. Show a storyboard table (scene / title / VO line) for approval before generating.
+Use the `lwai-voiceover` skill. Default voice **Daan** `mY3gNkLi7iAw6IzipDpw`.
+Show a storyboard table (scene / title / VO line) for approval before generating.
+
+**Default (user preference): generate via the ElevenLabs connector (MCP `creative_generate_speech`) with model `eleven_v4`.**
+- v4 takes no `<break>` tags and no style/speed settings: use `[pause]` tags between scenes, plain text otherwise, and leave `voice_settings` unset.
+- Keep the `<break>` version in `src/data/<id>.script.txt`; save the v4 prompt as `src/data/<id>.v4.script.txt`.
+- Poll `creative_get_flow_run_status` until done. Downloading from `elevenlabsusercontent.com` needs that host allowed in the
+  network policy; otherwise give the user the ElevenLabs links and have them drop the chosen take in `gdrive:dumping/`.
+
+Legacy (only if the user asks for it): direct API / `ELEVENLABS_API_KEY` (cloud) or Keychain `11labs-use` (Mac), `eleven_multilingual_v2`,
+plain text + `<break>` tags, stability 0.10, style 0.55, similarityBoost 0.85, speed 0.95.
 Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 
 ## Brand + layout rules
