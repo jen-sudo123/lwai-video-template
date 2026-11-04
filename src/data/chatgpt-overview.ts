@@ -59,7 +59,7 @@ export const chatGPTOverview: VideoData = {
       title: 'Image Generation',
       body: ['Mock-ups, diagrams, posters + other visuals', 'Strong text rendering + instruction following'],
       bodyTimings: [46, 161],
-      image: 'chatgpt-overview/images/05-image-generation-text.jpg',
+      image: 'chatgpt-overview/images/05-chatgpt-images-2-5.png',
       durationInFrames: 255,
     },
 
