@@ -9,7 +9,7 @@ export const chatGPTOverview: VideoData = {
   audioStartFrame: 0,
   scenes: [
     // 0 → 143 (0.00–4.76) hook
-    { layout: 'title-card-green', title: 'ChatGPT', subtitle: 'More than a chatbot', durationInFrames: 143 },
+    { layout: 'title-card-green', title: 'ChatGPT', durationInFrames: 143 },
 
     // 143 → 354 (4.76–11.80) operating system: write 80, research 109, analyze 135, automate 157, done 185
     {
