@@ -1,0 +1,41 @@
+<speak>
+<break time="50ms"/>Most people pick one AI model and use it for everything.
+
+<break time="50ms"/>That can mean waiting longer than you need to for a simple answer, or missing the chance to use more reasoning on a complex problem.
+
+<break time="50ms"/>Gemini gives you several model choices. In the Workspace account shown in this lesson, the options are Flash, Thinking, and Pro.
+
+<break time="50ms"/>The models you see may differ, depending on your account, your Workspace license, and your administrator settings.
+
+<break time="50ms"/>Gemini Flash is a practical starting point for straightforward tasks.
+
+<break time="50ms"/>Use it for the work you simply need to get done. Summarizing a document, drafting an email, brainstorming a list, rewriting a paragraph, or answering a straightforward question.
+
+<break time="50ms"/>When the task has more moving parts, try Gemini Thinking.
+
+<break time="50ms"/>Use it when you're comparing options, working through trade-offs, structuring a plan, debugging a messy issue, or turning scattered information into a clear recommendation.
+
+<break time="50ms"/>Give it the information and constraints that matter. For example, when you're comparing options, include your budget, your deadlines, and the criteria you want it to use.
+
+<break time="50ms"/>For heavier work, step up to Gemini Pro.
+
+<break time="50ms"/>This is the option for advanced math, coding, complex analysis, dense strategy work, and tasks where you need stronger performance across text, files, images, or video.
+
+<break time="50ms"/>Use Pro when the answer has real consequences. Pressure-testing a strategic brief, analyzing multiple documents, working through a technical problem, or making sense of a complex decision.
+
+<break time="50ms"/>To switch models in Gemini on desktop, start a chat and click the model name in the prompt box. From there, choose a model that's available on your plan.
+
+<break time="50ms"/>In my interface, the options are three point six Flash for all-around help, three point eight Thinking for complex problems, and three point one Pro for advanced reasoning.
+
+<break time="50ms"/>A few practical notes. More demanding reasoning can take longer, and Thinking and Pro have usage limits that depend on your account and plan.
+
+<break time="50ms"/>Long conversations, large files, and complex requests can also affect how quickly you reach those limits.
+
+<break time="50ms"/>For personal accounts, access depends on your Google AI plan. For Workspace accounts, it depends on your organization's license, any additional subscriptions, and your administrator settings.
+
+<break time="50ms"/>Model availability and usage limits can change, so check Google's support pages for the latest details. You'll find the links with this lesson.
+
+<break time="50ms"/>My rule of thumb is simple. Use Flash for straightforward work, and Thinking or Pro when the task needs more analysis.
+
+<break time="50ms"/>Give Gemini clear instructions, check the result, and use more reasoning when it helps solve the problem.
+</speak>
