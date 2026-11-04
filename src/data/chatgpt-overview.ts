@@ -230,7 +230,9 @@ export const chatGPTOverview: VideoData = {
       title: 'Business, Enterprise + Edu',
       body: ["Per OpenAI, organizational data isn't used to train models by default"],
       bodyTimings: [84],
-      image: 'chatgpt-overview/images/19-plan-business.png',
+      image: 'chatgpt-overview/images/19-plans-business-enterprise-usd.png',
+      // Zoom to the Business card's "No training on your business data by default" line
+      imageZoomKeyframes: [{ startFrame: 84, centerX: 0.25, centerY: 0.74, scale: 2.2 }],
       durationInFrames: 238,
     },
 
@@ -259,7 +261,7 @@ export const chatGPTOverview: VideoData = {
         'Pro plan: heavier use, more demanding reasoning',
       ],
       bodyTimings: [0, 300, 478, 694],
-      image: 'chatgpt-overview/images/18-plans-individual.png',
+      image: 'chatgpt-overview/images/18-plans-individual-usd.png',
       imageZoomKeyframes: [
         { startFrame: 20, centerX: 0.14, centerY: 0.35, scale: 1.9 },
         { startFrame: 300, centerX: 0.38, centerY: 0.35, scale: 1.9 },
@@ -276,7 +278,7 @@ export const chatGPTOverview: VideoData = {
       title: 'Business + Enterprise',
       body: ['Shared workspaces', 'Administration', 'Security + governance controls'],
       bodyTimings: [96, 144, 173],
-      image: 'chatgpt-overview/images/19-plans-business-enterprise.png',
+      image: 'chatgpt-overview/images/19-plans-business-enterprise-usd.png',
       durationInFrames: 235,
     },
 
