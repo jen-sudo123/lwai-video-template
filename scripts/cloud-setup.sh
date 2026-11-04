@@ -19,9 +19,14 @@ $SUDO apt-get update -qq && $SUDO apt-get install -y -qq unzip ffmpeg \
 
 if ! command -v rclone >/dev/null; then
   tmp=$(mktemp -d)
-  curl -fsSL https://downloads.rclone.org/rclone-current-linux-amd64.zip -o "$tmp/rclone.zip"
-  unzip -q "$tmp/rclone.zip" -d "$tmp"
-  $SUDO install -m 755 "$tmp"/rclone-*-linux-amd64/rclone /usr/local/bin/rclone
+  if curl -fsSL https://downloads.rclone.org/rclone-current-linux-amd64.zip -o "$tmp/rclone.zip" \
+     && unzip -q "$tmp/rclone.zip" -d "$tmp"; then
+    $SUDO install -m 755 "$tmp"/rclone-*-linux-amd64/rclone /usr/local/bin/rclone
+  else
+    # downloads.rclone.org blocked by the network policy: fall back to the distro package
+    echo "rclone download failed; installing from apt"
+    $SUDO apt-get install -y -qq rclone || echo "rclone install failed; asset scripts won't work"
+  fi
   rm -rf "$tmp"
 fi
 
