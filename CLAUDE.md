@@ -108,6 +108,7 @@ Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 - Setup script: `bash scripts/cloud-setup.sh`. Env vars: `RCLONE_CONFIG_GDRIVE_TOKEN`, `ELEVENLABS_API_KEY`.
 - Network must allow: `www.googleapis.com`, `oauth2.googleapis.com`, `downloads.rclone.org`, `api.elevenlabs.io`,
   `storage.googleapis.com` + `remotion.media` (Chrome download), plus npm/GitHub defaults.
+- Stills/renders fail on Google Fonts (ERR_CERT_AUTHORITY_INVALID via the proxy) unless you add `--ignore-certificate-errors`.
 - No Remotion Studio and no Whisper: verify with `remotion still`, transcribe with the `speech-to-text` skill (ElevenLabs Scribe, word timestamps).
 - Nothing on the cloud machine survives the session: push media and renders to Drive, commit code before finishing.
 - Renders: concurrency can go above 1 here, but keep `--timeout=120000`.
