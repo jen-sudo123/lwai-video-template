@@ -1,6 +1,4 @@
-<break time="500ms"/>Claude Sonnet 5.5 is a practical starting point for everyday professional work.
-
-<break time="500ms"/>Drafting, summarizing, bringing research together, reviewing documents, coding, and working through tasks with several steps.
+<break time="500ms"/>Claude Sonnet 5.5 is a practical starting point for everyday professional work: drafting, summarizing, bringing research together, reviewing documents, coding, and working through tasks with several steps.
 
 <break time="500ms"/>For most leadership tasks, I would start here.
 
@@ -16,9 +14,7 @@
 
 <break time="500ms"/>Opus 5.5 is built for demanding analysis, coding, and extended work across tools and documents.
 
-<break time="500ms"/>I would try it when the work is harder or messier.
-
-<break time="500ms"/>Comparing strategic options, analyzing financial information, reviewing conflicting documents, or working through a technical problem.
+<break time="500ms"/>I would try it when the work is harder or messier: comparing strategic options, analyzing financial information, reviewing conflicting documents, or working through a technical problem.
 
 <break time="500ms"/>Think of it as an option to try when Sonnet's first pass is not enough.
 
