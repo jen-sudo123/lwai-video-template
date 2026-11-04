@@ -9,6 +9,17 @@ compatibility: Requires internet access and an ElevenLabs API key (ELEVENLABS_AP
 
 Generate voiceover audio for LWAI videos using ElevenLabs TTS, following the house style refined over multiple video productions.
 
+## Standard model: eleven_v4 (since 2026-11)
+
+Use `eleven_v4` with Daan for all new LWAI VOs unless the user says otherwise. v4 differs from the v2 recipe below:
+- No `<break>`/SSML: put `[pause]` at the start of each paragraph after the first; pace with `[pause]`/`[long pause]`, ellipses, commas.
+- Audio tags in square brackets set delivery and hold until the next tag. Use sparingly: one `[confident]` (or `[warmly]`) on the opening line is usually enough.
+- Write numbers, versions and URLs in normal written form (`Gemini 3.6 Flash`, `gemini.google.com`, `4K`), not spelled out.
+- No `style`/`speed`/`use_speaker_boost`; leave voice settings at defaults (only `stability`, `similarity` exist).
+- In cloud sessions, generate via the ElevenLabs connector (`creative_generate_speech`, `model_id: eleven_v4`) if direct API auth fails.
+
+The `<break>`-tag / settings sections below apply only to legacy `eleven_multilingual_v2` regenerations.
+
 ## Default voice
 
 **Daan** — voice_id: `mY3gNkLi7iAw6IzipDpw`
