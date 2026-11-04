@@ -242,7 +242,7 @@ export const geminiModels: VideoData = {
     // VO: "To switch models in Gemini on desktop, start a chat (101.60) and click
     //      the model name (102.88) in the prompt box. From there, choose (106.98)
     //      a model that's available on your plan."
-    // model-picker-v2.png = updated picker screenshot (3.6 Flash / 3.8 Thinking / 3.1 Pro)
+    // model-picker-v2.png = model-picker.png edited to match the current picker (3.8 Thinking, "Advanced reasoning")
     {
       layout: 'label-title-body',
       label: 'HOW TO SWITCH',
