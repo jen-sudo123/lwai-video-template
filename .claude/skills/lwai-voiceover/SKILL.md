@@ -36,7 +36,19 @@ To look up any other voice name from an ID:
 curl -s "https://api.elevenlabs.io/v1/voices/<voice_id>" -H "xi-api-key: $ELEVENLABS_API_KEY"
 ```
 
-## Workflow
+## Standard (from Nov 2026): ElevenLabs connector + `eleven_v4`
+
+Generate with the ElevenLabs connector tool `creative_generate_speech`, `model_id: "eleven_v4"`, `voice_id: "mY3gNkLi7iAw6IzipDpw"` (Daan).
+Use this by default; the direct-API / `eleven_multilingual_v2` workflow below is a fallback only (e.g. connector unavailable).
+
+- **Script format for v4:** plain text, one paragraph per scene, each scene after the first starting with `[pause]`.
+  Optional sparing audio tags describing delivery (`[warmly]`, `[curious]`), placed where the tone changes. No `<speak>`/`<break>` tags.
+- **No voice settings / speed on v4.** Pace with `[pause]`, ellipses and `[slowly]`; tone with tags.
+- **URLs and numbers:** write them normally (`claude.com/pricing`); v4 reads them correctly.
+- Leave `generations_count` at the default (2 takes); never re-call to retry (it charges again). Poll `creative_get_flow_run_status`.
+- Save the chosen take to `public/audio/<id>.mp3`, transcribe for timings, then `scripts/assets-push.sh`.
+
+## Workflow (fallback: direct API, eleven_multilingual_v2)
 
 ### 1. Break the script into scenes
 

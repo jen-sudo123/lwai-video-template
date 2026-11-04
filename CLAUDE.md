@@ -66,9 +66,11 @@ npx remotion render src/index.ts <CompId> out/<name>.mp4 --chrome-mode=chrome-fo
 
 ## Voiceover (ElevenLabs)
 
-Use the `lwai-voiceover` skill. Key: `ELEVENLABS_API_KEY` env var (cloud) / macOS Keychain service `11labs-use` (local Mac).
-Default voice **Daan** `mY3gNkLi7iAw6IzipDpw`. Plain text + `<break>` tags only — no heavy SSML. Settings:
-stability 0.10, style 0.55, similarityBoost 0.85, speed 0.95. Show a storyboard table (scene / title / VO line) for approval before generating.
+Use the `lwai-voiceover` skill. **Standard: the ElevenLabs connector (`creative_generate_speech`) with model `eleven_v4`**,
+default voice **Daan** `mY3gNkLi7iAw6IzipDpw`. v4 script format: plain text, `[pause]` at the start of each scene,
+sparing audio tags (`[warmly]`), no `<speak>`/`<break>` (v4 has no voice settings or speed; pace with `[pause]`/`[slowly]`).
+Show a storyboard table (scene / title / VO line) for approval before generating. Fallback only: direct API with
+`ELEVENLABS_API_KEY` + `eleven_multilingual_v2` (stability 0.10, style 0.55, similarityBoost 0.85, speed 0.95, `<break>` tags).
 Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 
 ## Brand + layout rules

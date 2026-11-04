@@ -1,41 +1,39 @@
-<speak>
-<break time="500ms"/>Claude is an AI assistant built by Anthropic, a company focused on making AI systems that are capable, reliable, and safe.
+[warmly] Claude is an AI assistant built by Anthropic, a company focused on making AI systems that are capable, reliable, and safe.
 
-<break time="500ms"/>Claude can help you write, edit, code, and make sense of complex information. Use it to refine a document, work through a tough problem, or build software.
+[pause] Claude can help you write, edit, code, and make sense of complex information. Use it to refine a document, work through a tough problem, or build software.
 
-<break time="500ms"/>Anthropic puts a strong emphasis on AI safety. Its approach, called Constitutional AI, trains Claude to respond responsibly, and to take extra care with sensitive or high-stakes requests.
+[pause] Anthropic puts a strong emphasis on AI safety. Its approach, called Constitutional AI, trains Claude to respond responsibly, and to take extra care with sensitive or high-stakes requests.
 
-<break time="500ms"/>Let's look at the key features.
+[pause] Let's look at the key features.
 
-<break time="500ms"/>Artifacts let you create standalone documents, slides, code, and even interactive mini-apps. You can iterate on them, and share them, right from the chat.
+[pause] Artifacts let you create standalone documents, slides, code, and even interactive mini-apps. You can iterate on them, and share them, right from the chat.
 
-<break time="500ms"/>Projects give you persistent workspaces. Your instructions, files, and context carry over from one conversation to the next, so you don't have to re-brief Claude every time you start a new chat.
+[pause] Projects give you persistent workspaces. Your instructions, files, and context carry over from one conversation to the next, so you don't have to re-brief Claude every time you start a new chat.
 
-<break time="500ms"/>Plugins package Skills and Connectors into reusable workflows.
+[pause] Plugins package Skills and Connectors into reusable workflows.
 
-<break time="500ms"/>Web Search and Research find current information online, or dig into more complex questions across multiple sources.
+[pause] Web Search and Research find current information online, or dig into more complex questions across multiple sources.
 
-<break time="500ms"/>And Voice mode supports full spoken conversations, as well as hands-free dictation.
+[pause] And Voice mode supports full spoken conversations, as well as hands-free dictation.
 
-<break time="500ms"/>For more technical work, there's Claude Code. It's an agentic coding assistant that runs in your terminal. It reads your repository, edits files, runs commands, and handles version control, end to end.
+[pause] For more technical work, there's Claude Code. It's an agentic coding assistant that runs in your terminal. It reads your repository, edits files, runs commands, and handles version control, end to end.
 
-<break time="500ms"/>Claude comes in four model families, each with a different job.
+[pause] Claude comes in four model families, each with a different job.
 
-<break time="500ms"/>Fable is Anthropic's most advanced. It's built for the hardest reasoning, research, and coding work, and for long-running workflows that can keep going on their own for hours, or even days.
+[pause] Fable is Anthropic's most advanced. It's built for the hardest reasoning, research, and coding work, and for long-running workflows that can keep going on their own for hours, or even days.
 
-<break time="500ms"/>Opus comes close to Fable-level intelligence at a lower cost. It's a strong choice for complex analysis, coding, and multi-step work where quality matters more than speed.
+[pause] Opus comes close to Fable-level intelligence at a lower cost. It's a strong choice for complex analysis, coding, and multi-step work where quality matters more than speed.
 
-<break time="500ms"/>Sonnet is the everyday workhorse. It offers the best balance of speed and quality for most professional work, like writing, analysis, and creating documents.
+[pause] Sonnet is the everyday workhorse. It offers the best balance of speed and quality for most professional work, like writing, analysis, and creating documents.
 
-<break time="500ms"/>And Haiku is the fastest and most economical. It's best for quick requests, simple tasks, and high-volume work.
+[pause] And Haiku is the fastest and most economical. It's best for quick requests, simple tasks, and high-volume work.
 
-<break time="500ms"/>You can switch models when you start a new chat, and set the Effort level anywhere from Low to Max. Higher effort can improve results on complex tasks, but it takes longer, and uses more tokens.
+[pause] You can switch models when you start a new chat, and set the Effort level anywhere from Low to Max. Higher effort can improve results on complex tasks, but it takes longer, and uses more tokens.
 
-<break time="500ms"/>Claude offers several plans. There's a Free tier for everyday use, Pro and Max for individuals who need more power and higher limits, and Team and Enterprise for organizations that need shared administration, security, and controls.
+[pause] Claude offers several plans. There's a Free tier for everyday use, Pro and Max for individuals who need more power and higher limits, and Team and Enterprise for organizations that need shared administration, security, and controls.
 
-<break time="500ms"/>Plans and features change often, so for the latest details, check Claude's pricing page, at claude dot com slash pricing.
+[pause] Plans and features change often, so for the latest details, check Claude's pricing page, at claude.com/pricing.
 
-<break time="500ms"/>Finally, a word on privacy. On personal plans, you can review your privacy and data-sharing preferences in Settings.
+[pause] Finally, a word on privacy. On personal plans, you can review your privacy and data-sharing preferences in Settings.
 
-<break time="500ms"/>On organizational plans, Anthropic adds extra admin controls and data protections. And by default, under its commercial terms, Anthropic doesn't use business data to train its models.
-</speak>
+[pause] On organizational plans, Anthropic adds extra admin controls and data protections. And by default, under its commercial terms, Anthropic doesn't use business data to train its models.
