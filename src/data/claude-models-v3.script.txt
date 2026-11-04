@@ -1,3 +1,9 @@
+<break time="500ms"/>Claude gives you several levels of AI capability.
+
+<break time="500ms"/>The real skill is knowing when to use each one.
+
+<break time="500ms"/>The models overlap in what they can do, but differ in speed, capability, and how quickly they use your allowance.
+
 <break time="500ms"/>Start with Sonnet.
 
 <break time="500ms"/>Claude Sonnet 5.5 is a practical starting point for everyday professional work: drafting, summarizing, bringing research together, reviewing documents, coding, and working through tasks with several steps.
@@ -20,68 +26,56 @@
 
 <break time="500ms"/>Think of it as an option to try when Sonnet's first pass is not enough.
 
-<break time="500ms"/>Give it the missing context, and explain what needs to improve, rather than simply repeating the same prompt.
+<break time="500ms"/>Give it the missing context and explain what needs to improve, rather than simply repeating the same prompt.
 
 <break time="500ms"/>Finally, there is Fable.
 
 <break time="500ms"/>Fable 5.1 is Anthropic's most powerful publicly available model.
 
-<break time="500ms"/>It is built for hard thinking tasks, and for AI systems that can plan and carry out many steps over time.
+<break time="500ms"/>It is built for hard thinking tasks and for AI systems that can plan and carry out many steps over time.
 
 <break time="500ms"/>For example, it can research a topic, create a plan, write documents, improve them based on feedback, and manage tasks across tools with little human help.
 
-<break time="500ms"/>The latest version also cut down on unnecessary safety refusals on everyday technical questions, and made long-context work cheaper to run.
+<break time="500ms"/>The latest version also cut down on unnecessary safety refusals on everyday technical questions and made long-context work cheaper to run.
 
-<break time="500ms"/>However, as the most capable model, Fable will draw down your usage much faster than the other models.
+<break time="500ms"/>However, as the most capable model, Fable will draw down your usage much faster than the other models, so it is best suited for teams building serious AI systems rather than most daily individual tasks.
 
-<break time="500ms"/>So it is best suited for teams building serious AI systems, rather than most daily individual tasks.
-
-<break time="500ms"/>Now, where do you find and switch these models?
-
-<break time="500ms"/>Open a new or existing chat, and click the model name in the right corner of the prompt box.
+<break time="500ms"/>To switch models, open a new or existing chat and click the model name in the right corner of the prompt box.
 
 <break time="500ms"/>That opens the model picker, where you'll see your available options.
 
-<break time="500ms"/>You'll also notice the Effort options in the same dropdown.
+<break time="500ms"/>You'll also notice the Effort options in the model selection dropdown.
 
 <break time="500ms"/>This controls how much work Claude puts into a response.
 
-<break time="500ms"/>Lower effort can save time and usage, and still perform strongly.
+<break time="500ms"/>Lower effort can reduce time and usage while still performing strongly, while the highest settings are best reserved for genuinely difficult tasks.
 
-<break time="500ms"/>The highest settings are best reserved for genuinely difficult tasks.
-
-<break time="500ms"/>One thing to know: effort does not reliably control how long the answer is.
-
-<break time="500ms"/>So if length and format matter, ask for them directly in your prompt.
-
-<break time="500ms"/>So how should you choose?
+<break time="500ms"/>Effort does not reliably control the visible answer length, so specify the length and format directly in your prompt.
 
 <break time="500ms"/>Use Haiku when the task is straightforward and speed matters.
 
-<break time="500ms"/>Use Sonnet as your starting point for daily writing, planning, analysis, coding, and document work.
+<break time="500ms"/>Use Sonnet as a starting point for daily writing, planning, analysis, coding, and document work.
 
-<break time="500ms"/>Use Opus for demanding analysis, or when Sonnet's first pass needs a stronger follow-up.
+<break time="500ms"/>Use Opus for demanding analysis or when Sonnet's first pass needs a stronger follow-up.
 
-<break time="500ms"/>And use Fable for particularly difficult or long-running work, where the extra capability justifies the usage or cost.
+<break time="500ms"/>Use Fable for particularly difficult or long-running work where the additional capability justifies the usage or cost.
 
-<break time="500ms"/>The best way to decide is to try the models on a task you know well.
+<break time="500ms"/>Try the models on a task you know well.
 
-<break time="500ms"/>Compare how closely they follow your instructions, how they handle the evidence, and whether they produce something you can actually use.
-
-<break time="500ms"/>Now, a quick note on availability and pricing.
+<break time="500ms"/>Compare how closely they follow your instructions, handle the evidence, and produce something you can use.
 
 <break time="500ms"/>Sonnet and Haiku are available on Free and paid plans, with different usage limits.
 
 <break time="500ms"/>Opus is available on paid plans.
 
-<break time="500ms"/>Fable 5.1 is also available on paid plans, but access does not always mean its usage is included in your subscription.
+<break time="500ms"/>Fable 5.1 is available on paid plans, but access does not always mean its usage is included in your subscription.
 
 <break time="500ms"/>On Pro and Team Standard seats, Fable uses additional paid usage credits.
 
 <break time="500ms"/>On Max, Ultra, and Team Premium seats, Fable is included up to 50% of your weekly usage allowance.
 
-<break time="500ms"/>Beyond that, you can continue with usage credits, or switch to another model.
+<break time="500ms"/>Beyond that, you can continue with usage credits or switch to another model.
 
 <break time="500ms"/>On Enterprise, Fable's billing and allowance depend on your organization's agreement and seat type.
 
-<break time="500ms"/>And the models and effort settings you see may also depend on your workspace permissions.
+<break time="500ms"/>The models and effort settings you see may also depend on your workspace permissions.
