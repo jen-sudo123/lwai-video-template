@@ -1,0 +1,69 @@
+<speak>
+<break time="50ms"/>ChatGPT is no longer just the AI chatbot everyone has heard of.
+
+<break time="50ms"/>It's becoming the operating system for how leaders write, research, analyze, automate, and get work done.
+
+<break time="500ms"/>Let's start with the key features.
+
+<break time="50ms"/>Search retrieves live information from the web. Deep Research goes further, synthesizing many sources into a structured, cited report.
+
+<break time="50ms"/>Voice lets you speak naturally with ChatGPT. And with Advanced Voice in the mobile apps, eligible subscribers can also share live video and their screen.
+
+<break time="50ms"/>Image generation creates mock-ups, diagrams, posters, and other visuals, with strong text rendering and instruction following.
+
+<break time="50ms"/>Projects organize your chats, files, and instructions around ongoing work.
+
+<break time="50ms"/>Skills define how to carry out a recurring task.
+
+<break time="50ms"/>Apps connect services like Google Drive, Microsoft 365, Slack, and GitHub, within the permissions you set.
+
+<break time="50ms"/>And Plugins bring it together. A plugin can contain skills, apps, or both. What's available depends on your plan and workspace settings.
+
+<break time="50ms"/>For larger tasks, there's ChatGPT Work.
+
+<break time="50ms"/>It can research, analyze information, work across your connected apps and files, and produce finished documents, spreadsheets, presentations, reports, and Sites.
+
+<break time="50ms"/>Along the way, you can monitor its progress, answer its questions, redirect it, and approve important actions.
+
+<break time="50ms"/>For software development, Codex provides a dedicated workspace for writing, reviewing, debugging, and shipping code.
+
+<break time="50ms"/>On desktop, ChatGPT brings Chat, Work, and Codex into a more unified experience, while keeping Codex as its own workspace.
+
+<break time="500ms"/>Next, the models.
+
+<break time="50ms"/>ChatGPT offers different models and thinking settings. What you see depends on whether you're in Chat, Work, or Codex, and on your plan and workspace settings.
+
+<break time="50ms"/>In Chat, the thinking settings are Instant, Medium, High, Extra High, and Pro.
+
+<break time="50ms"/>Instant gives fast responses for straightforward tasks.
+
+<break time="50ms"/>Medium, High, and Extra High allow more thinking, for tasks with several connected steps or competing constraints.
+
+<break time="50ms"/>And Pro is designed for particularly demanding work.
+
+<break time="50ms"/>When you select GPT-6, GPT-6 Sol powers Instant through Extra High.
+
+<break time="50ms"/>GPT-6 Pro is powered by GPT-6 Astra, which also supports demanding work in ChatGPT Work and Codex. Access and usage limits vary by plan.
+
+<break time="500ms"/>Now, a word on privacy.
+
+<break time="50ms"/>On personal plans, you can manage training and data-sharing preferences in Settings.
+
+<break time="50ms"/>For Business, Enterprise, and Edu, OpenAI says it doesn't use organizational data to train its models by default.
+
+<break time="50ms"/>Whatever your plan, avoid sharing sensitive information, connect only the apps you trust, and always verify important outputs.
+
+<break time="500ms"/>Finally, plans and pricing.
+
+<break time="50ms"/>Free covers everyday chat and Search, with limited access to tools like file uploads, data analysis, image generation, Voice, and Deep Research.
+
+<break time="50ms"/>Go raises the limits for everyday use, including uploads, image generation, and Voice.
+
+<break time="50ms"/>Plus adds advanced reasoning, and expands access to tools like Deep Research, Codex, and ChatGPT Work.
+
+<break time="50ms"/>Pro is built for heavier use, with higher usage allowances and access to more demanding reasoning options.
+
+<break time="50ms"/>Business and Enterprise support organizational use, with shared workspaces, administration, security, and governance controls.
+
+<break time="50ms"/>Plans, pricing, and model access change often, so check the official ChatGPT pricing page for the latest details.
+</speak>
