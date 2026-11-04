@@ -1,0 +1,42 @@
+# ChatGPTOverview VO take 1 (eleven_v4, Daan). ElevenLabs Scribe timestamps, seconds, unpadded audio.
+# Source: ElevenLabs flow ZzoLuNnICnGq6hsk5ilU, TTS generation 4FVF56mCOWs0thoFsiSK, transcript generation oNLZehUjhpZVTR8UTKqZ (full word list there).
+# Audio: gdrive:public/audio/chatgpt-overview.mp3 (228.4 s). Key word anchors in the last column.
+start	end	line	anchors
+0.00	4.72	ChatGPT is no longer just the AI chatbot everyone has heard of.	
+4.76	11.76	It's becoming the operating system for how leaders write, research, analyze, automate, and get work done.	write 7.44; research 8.40; analyze 9.28; automate 10.00
+11.80	12.72	[pause]	
+12.80	14.80	Let's start with the key features.	
+15.12	24.32	Search retrieves live information ... Deep Research goes further ... cited report.	Deep Research 18.40
+24.64	33.92	Voice lets you speak naturally ... Advanced Voice ... live video and their screen.	Advanced Voice 28.32; live video 32.16
+34.48	42.68	Image generation creates mock-ups ... instruction following.	
+42.96	48.12	Projects organize your chats, files, and instructions around ongoing work.	
+48.40	51.44	Skills define how to carry out a recurring task.	
+51.92	59.76	Apps connect services like Google Drive, Microsoft 365, Slack, and GitHub ...	
+59.88	68.88	And Plugins bring it together ... plan and workspace settings.	Plugins 60.08
+68.96	72.08	For larger tasks, there's ChatGPT Work.	ChatGPT Work 70.48
+72.16	82.64	It can research ... documents, spreadsheets, presentations, reports, and Sites.	documents 78.16; spreadsheets 78.96; presentations 80.00; reports 81.12; Sites 81.84
+82.72	89.68	Along the way, you can monitor ... approve important actions.	monitor 83.84; answer 85.36; redirect 86.84; approve 87.84
+89.76	97.04	For software development, Codex provides a dedicated workspace ...	Codex 91.20
+97.12	105.60	On desktop, ChatGPT brings Chat, Work, and Codex ...	Chat 99.28; Work 99.92; Codex 100.56
+105.64	106.64	[pause]	
+106.72	108.40	Next, the models.	
+108.64	118.88	ChatGPT offers different models and thinking settings ...	
+118.96	125.04	In Chat, the thinking settings are Instant, Medium, High, Extra High, and Pro.	Instant 120.88; Medium 121.68; High 122.48; Extra High 123.20; Pro 124.40
+125.12	128.72	Instant gives fast responses for straightforward tasks.	
+128.80	135.92	Medium, High, and Extra High allow more thinking ...	
+136.04	139.44	And Pro is designed for particularly demanding work.	
+139.52	145.28	When you select GPT-6, GPT-6 Sol powers Instant through Extra High.	GPT-6 Sol 141.60
+145.36	155.92	GPT-6 Pro is powered by GPT-6 Astra ... vary by plan.	GPT-6 Astra 147.36; ChatGPT Work 151.12; Codex 152.48
+156.80	156.92	[pause]	
+156.96	159.12	Now, a word on privacy.	
+159.20	164.00	On personal plans, you can manage training and data-sharing preferences in Settings.	
+164.08	171.76	For Business, Enterprise, and Edu, OpenAI says ... by default.	
+172.00	180.03	Whatever your plan, avoid sharing sensitive information ... verify important outputs.	avoid 173.36; connect 175.60; verify 178.32
+180.05	181.04	[pause]	
+181.12	183.12	Finally, plans and pricing.	
+183.60	193.32	Free covers everyday chat and Search ...	Free 183.60
+193.60	199.32	Go raises the limits ...	Go 193.60
+199.52	206.32	Plus adds advanced reasoning ...	Plus 199.52
+206.72	213.04	Pro is built for heavier use ...	Pro 206.72
+213.44	221.08	Business and Enterprise support organizational use ...	Business 213.44
+221.28	228.56	Plans, pricing, and model access change often ... latest details.	

@@ -34,7 +34,32 @@ Product and feature names always appear on screen as proper names, so spoken wor
 | 13 | Plans | Free · Go · Plus · Pro · Business · Enterprise | What each tier adds |
 | 14 | Close | ChatGPT Pricing | Check the official pricing page |
 
+## VO timing (take 1, audioStartFrame 0, 30 fps)
+
+Full line-level timings in `chatgpt-overview.transcript.tsv`. Scene starts (frame = round(s × 30)):
+
+| # | Scene | Start s | Start frame | Frames |
+|---|---|---|---|---|
+| 1 | Hook | 0.00 | 0 | 354 |
+| 2 | Key Features card | 11.80 | 354 | 100 |
+| 3 | Search vs Deep Research | 15.12 | 454 | 285 |
+| 4 | Voice | 24.64 | 739 | 295 |
+| 5 | Image Generation | 34.48 | 1034 | 255 |
+| 6 | Projects · Skills · Apps · Plugins | 42.96 | 1289 | 780 |
+| 7 | ChatGPT Work | 68.96 | 2069 | 624 |
+| 8 | Codex + desktop | 89.76 | 2693 | 476 |
+| 9 | The Models card + intro | 105.64 | 3169 | 400 |
+| 10 | Thinking settings | 118.96 | 3569 | 617 |
+| 11 | GPT-6 mapping | 139.52 | 4186 | 518 |
+| 12 | Privacy | 156.80 | 4704 | 698 |
+| 13 | Plans | 180.05 | 5402 | 1236 |
+| 14 | Close | 221.28 | 6638 | 232 |
+
+Total ≈ 6870 frames (229 s, VO ends 228.56 s + ~0.5 s tail).
+Card anchors inside scenes: Skills 48.40, Apps 51.92, Plugins 60.08; Sites 81.84; GPT-6 Sol 141.60, Astra 147.36;
+Go 193.60, Plus 199.52, Pro 206.72, Business 213.44.
+
 ## Open items
 
 - Confirm product facts (GPT-6 Sol/Astra, ChatGPT Work, Go tier) against current OpenAI docs.
-- VO not yet generated — awaiting approval.
+- Audio is on Drive (`public/audio/chatgpt-overview.mp3`) but not yet in this cloud session's `public/` (no rclone token here).
