@@ -1,0 +1,67 @@
+ChatGPT is no longer just the AI chatbot everyone has heard of.
+
+It's becoming the operating system for how leaders write, research, analyze, automate, and get work done.
+
+[pause] Let's start with the key features.
+
+Search retrieves live information from the web. Deep Research goes further, synthesizing many sources into a structured, cited report.
+
+Voice lets you speak naturally with ChatGPT. And with Advanced Voice in the mobile apps, eligible subscribers can also share live video and their screen.
+
+Image generation creates mock-ups, diagrams, posters, and other visuals, with strong text rendering and instruction following.
+
+Projects organize your chats, files, and instructions around ongoing work.
+
+Skills define how to carry out a recurring task.
+
+Apps connect services like Google Drive, Microsoft 365, Slack, and GitHub, within the permissions you set.
+
+And Plugins bring it together. A plugin can contain skills, apps, or both. What's available depends on your plan and workspace settings.
+
+For larger tasks, there's ChatGPT Work.
+
+It can research, analyze information, work across your connected apps and files, and produce finished documents, spreadsheets, presentations, reports, and Sites.
+
+Along the way, you can monitor its progress, answer its questions, redirect it, and approve important actions.
+
+For software development, Codex provides a dedicated workspace for writing, reviewing, debugging, and shipping code.
+
+On desktop, ChatGPT brings Chat, Work, and Codex into a more unified experience, while keeping Codex as its own workspace.
+
+[pause] Next, the models.
+
+ChatGPT offers different models and thinking settings. What you see depends on whether you're in Chat, Work, or Codex, and on your plan and workspace settings.
+
+In Chat, the thinking settings are Instant, Medium, High, Extra High, and Pro.
+
+Instant gives fast responses for straightforward tasks.
+
+Medium, High, and Extra High allow more thinking, for tasks with several connected steps or competing constraints.
+
+And Pro is designed for particularly demanding work.
+
+When you select GPT-6, GPT-6 Sol powers Instant through Extra High.
+
+GPT-6 Pro is powered by GPT-6 Astra, which also supports demanding work in ChatGPT Work and Codex. Access and usage limits vary by plan.
+
+[pause] Now, a word on privacy.
+
+On personal plans, you can manage training and data-sharing preferences in Settings.
+
+For Business, Enterprise, and Edu, OpenAI says it doesn't use organizational data to train its models by default.
+
+Whatever your plan, avoid sharing sensitive information, connect only the apps you trust, and always verify important outputs.
+
+[pause] Finally, plans and pricing.
+
+Free covers everyday chat and Search, with limited access to tools like file uploads, data analysis, image generation, Voice, and Deep Research.
+
+Go raises the limits for everyday use, including uploads, image generation, and Voice.
+
+Plus adds advanced reasoning, and expands access to tools like Deep Research, Codex, and ChatGPT Work.
+
+Pro is built for heavier use, with higher usage allowances and access to more demanding reasoning options.
+
+Business and Enterprise support organizational use, with shared workspaces, administration, security, and governance controls.
+
+Plans, pricing, and model access change often, so check the official ChatGPT pricing page for the latest details.
