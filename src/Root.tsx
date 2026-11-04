@@ -26,6 +26,7 @@ import { geminiModels } from './data/gemini-models';
 import { claudeModels } from './data/claude-models';
 import { claudeModelsV2 } from './data/claude-models-v2';
 import { claude } from './data/claude';
+import { claudeOverview } from './data/claude-overview';
 import { chatGPTVoice } from './data/chatgpt-voice';
 import { chatGPTForWriting } from './data/chatgpt-for-writing';
 import { geminiLive } from './data/gemini-live';
@@ -360,6 +361,16 @@ export const RemotionRoot: React.FC = () => {
         height={layout.height}
         schema={videoDataSchema}
         defaultProps={claude}
+      />
+      <Composition
+        id="ClaudeOverview"
+        component={Video}
+        durationInFrames={calculateTotalFrames(claudeOverview.scenes)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+        schema={videoDataSchema}
+        defaultProps={claudeOverview}
       />
       <Composition
         id="CopilotVoice"
