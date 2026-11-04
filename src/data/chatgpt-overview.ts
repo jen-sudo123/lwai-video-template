@@ -23,7 +23,7 @@ export const chatGPTOverview: VideoData = {
     },
 
     // 354 → 454 (11.80–15.12) section
-    { layout: 'title-card-green', title: 'Key Features', durationInFrames: 100 },
+    { layout: 'big-statement', text: 'Key Features', size: 'hero', animation: 'kinetic', durationInFrames: 100 },
 
     // 454 → 739 (15.12–24.64) Search vs Deep Research (Deep Research @ 18.40 → local 98)
     {
@@ -164,7 +164,7 @@ export const chatGPTOverview: VideoData = {
     },
 
     // 3169 → 3259 (105.64–108.64) section
-    { layout: 'title-card-green', title: 'The Models', durationInFrames: 90 },
+    { layout: 'big-statement', text: 'The Models', size: 'hero', animation: 'kinetic', durationInFrames: 90 },
 
     // 3259 → 3569 (108.64–118.96) depends on where + plan: 108, 232
     {
@@ -210,7 +210,7 @@ export const chatGPTOverview: VideoData = {
     },
 
     // 4704 → 4776 (156.80–159.20) section
-    { layout: 'title-card-green', title: 'Privacy', durationInFrames: 72 },
+    { layout: 'big-statement', text: 'Privacy', size: 'hero', animation: 'kinetic', durationInFrames: 72 },
 
     // 4776 → 4922 (159.20–164.08) personal plans: manage 49
     {
@@ -245,7 +245,7 @@ export const chatGPTOverview: VideoData = {
     },
 
     // 5402 → 5508 (180.05–183.60) section
-    { layout: 'title-card-green', title: 'Plans + Pricing', durationInFrames: 106 },
+    { layout: 'big-statement', text: 'Plans + Pricing', size: 'hero', animation: 'kinetic', durationInFrames: 106 },
 
     // 5508 → 6403 (183.60–213.44) individual plans, image pans to each plan as named: Free 0, Go 300, Plus 478, Pro 694
     {
