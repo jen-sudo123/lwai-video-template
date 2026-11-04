@@ -179,18 +179,18 @@ export const chatGPTOverview: VideoData = {
 
     // 3569 → 4186 (118.96–139.52) thinking settings: listed 57/81/163, explained 185/295/512
     {
-      layout: 'process-steps',
+      layout: 'label-title-body',
       label: 'In Chat',
       title: 'Thinking Settings',
-      horizontal: true,
-      cardStyle: true,
-      steps: [
-        { title: 'Instant', body: 'Fast responses for straightforward tasks' },
-        { title: 'Medium, High, Extra High', body: 'More thinking for connected steps + competing constraints' },
-        { title: 'Pro', body: 'Particularly demanding work' },
+      body: [
+        'Instant: fast responses for straightforward tasks',
+        'Medium, High, Extra High: more thinking for connected steps + competing constraints',
+        'Pro: particularly demanding work',
       ],
-      stepTimings: [57, 81, 163],
-      activeTimings: [185, 295, 512],
+      bodyTimings: [57, 81, 163],
+      image: 'chatgpt-overview/images/13-thinking-effort-slider.png',
+      // Source is only 306×154 px: keep it small so it isn't upscaled into blur.
+      imageHeight: 300,
       durationInFrames: 617,
     },
 
