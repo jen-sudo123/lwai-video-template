@@ -6,7 +6,7 @@ import { VideoData } from '../scenes/types';
 //   audio starts at frame 0 and the title card overlaps the first line).
 // Transcript: src/data/copilot-model-picker.transcript.json (ElevenLabs Scribe,
 //   word timestamps, t = seconds into the mp3). Script: copilot-model-picker.script.txt.
-// Graphics-only: no Copilot model-picker screen recording available yet.
+// Model-picker screenshot (images/copilot-model-picker/model-picker.png) on scenes 2, 6, 9.
 //
 // Scene boundaries (s): 0 · 3.0 · 13.0 · 16.3 · 38.9 · 42.0 · 56.1 · 67.3 · 79.1
 //   · 94.0 · 96.7 · 115.8 · 129.7 · 145.7 → 155.0 (4650 frames)
@@ -33,9 +33,7 @@ export const copilotModelPicker: VideoData = {
         'Depending on your access, more models in the model picker',
       ],
       bodyTimings: [13, 181], // "many" 3.42 · "additional" 9.04
-      bodyRight: true,
-      bodyCards: true,
-      bodyCardIcons: ['check', 'sliders'],
+      image: 'images/copilot-model-picker/model-picker.png',
       durationInFrames: 300,
     },
 
@@ -95,10 +93,12 @@ export const copilotModelPicker: VideoData = {
         'Options from OpenAI’s GPT family and Anthropic’s Claude family',
       ],
       bodyTimings: [4, 168, 297], // "Open" 42.14 · "expand" 47.60 · "OpenAI's" 51.90
-      bodyRight: true,
-      bodyCards: true,
-      bodyCardCompact: true,
-      bodyCardIcons: ['eye', 'sliders', 'compare'],
+      image: 'images/copilot-model-picker/model-picker.png',
+      // Zoom into the Claude / GPT rows as the VO names the families.
+      imageZoomKeyframes: [
+        { startFrame: 0, scale: 1, centerX: 0.5, centerY: 0.5 },
+        { startFrame: 289, scale: 2, centerX: 0.18, centerY: 0.68 },
+      ],
       durationInFrames: 423,
     },
 
@@ -149,10 +149,12 @@ export const copilotModelPicker: VideoData = {
         'More reasoning takes longer and doesn’t guarantee a correct answer',
       ],
       bodyTimings: [116, 218, 317], // "use quick" 82.98 · "think" 86.36 · "More" 89.66
-      bodyRight: true,
-      bodyCards: true,
-      bodyCardCompact: true,
-      bodyCardIcons: ['bolt', 'lightbulb', 'clock'],
+      image: 'images/copilot-model-picker/model-picker.png',
+      // Zoom into the Quick response / Think deeper rows ("quick response" 80.70).
+      imageZoomKeyframes: [
+        { startFrame: 0, scale: 1, centerX: 0.5, centerY: 0.5 },
+        { startFrame: 48, scale: 2, centerX: 0.18, centerY: 0.31 },
+      ],
       durationInFrames: 447,
     },
 
