@@ -74,6 +74,7 @@ Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 ## Brand + layout rules
 
 - 80px safe margin on every edge; right-aligned text ends at x = 1840; vertically centred right columns start at y ≥ 160–190.
+- `title-card-green` is ONLY for the opening card. Section headings mid-video use white `big-statement` (hero, kinetic).
 - No bare em-dashes in on-screen text — replace ` — ` with `, ` or a space.
 - `@remotion/media` is NOT installed. Use `OffthreadVideo` from `remotion` (`Video` doesn't render visibly).
 - Avatar overlay: outside `<Series>` in `Video.tsx`, top-right, `top: 20, right: 20`, 150px circle, `muted`.

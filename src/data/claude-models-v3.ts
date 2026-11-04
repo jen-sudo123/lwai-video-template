@@ -7,14 +7,14 @@ import { VideoData } from '../scenes/types';
 //   Script: src/data/claude-models-v3.script.txt
 //   Word timings: src/data/claude-models-v3.transcript.json (ElevenLabs Scribe)
 //   Section headings were voiced as [long pause] (~1.5–2s); each pause holds a
-//   title-only green section card.
+//   white section heading (green title card is used only for the opening).
 //
 // Scene layout (comp frames):
 //  #  Layout                      Start   Dur   End   VO
 //  1  title-card-green                0    90    90   intro (overlaps)
 //  2  big-statement (hook)           90   118   208   "The real skill..."
 //  3  big-statement (overlap)       208   206   414   "The models overlap..."
-//  4  title-card-green (section)    414    56   470   [pause] The Model Line-Up
+//  4  big-statement (section)    414    56   470   [pause] The Model Line-Up
 //  5  big-statement hero Sonnet     470    48   518   "Start with Sonnet."
 //  6  label-title-body Sonnet       518   639  1157
 //  7  big-statement hero Haiku     1157    72  1229
@@ -25,13 +25,13 @@ import { VideoData } from '../scenes/types';
 // 12  big-statement hero Fable     2674    84  2758
 // 13  label-title-body Fable 1     2758   645  3403   (image)
 // 14  label-title-body Fable 2     3403   643  4046
-// 15  title-card-green (section)   4046    45  4091   [pause] Where To Find...
+// 15  big-statement (section)   4046    45  4091   [pause] Where To Find...
 // 16  label-title-body switch      4091   321  4412   (model-picker screenshot)
 // 17  label-title-body effort      4412   742  5154   (effort screenshot)
-// 18  title-card-green (section)   5154    59  5213   [pause] How To Choose
+// 18  big-statement (section)   5154    59  5213   [pause] How To Choose
 // 19  label-title-body choose      5213   758  5971
 // 20  big-statement try them       5971   248  6219
-// 21  title-card-green (section)   6219    59  6278   [pause] Availability...
+// 21  big-statement (section)   6219    59  6278   [pause] Availability...
 // 22  label-title-body plans       6278   495  6773
 // 23  label-title-body Fable seats 6773   715  7488
 // 24  big-statement closing        7488   142  7630
@@ -67,7 +67,14 @@ export const claudeModelsV3: VideoData = {
       durationInFrames: 206,
     },
     // 13.81 [long pause]
-    { layout: 'title-card-green', title: 'The Model Line-Up', durationInFrames: 56 },
+    {
+      layout: 'big-statement',
+      text: 'The Model Line-Up',
+      highlight: 'Line-Up',
+      size: 'hero',
+      animation: 'kinetic',
+      durationInFrames: 56,
+    },
 
     // 15.68 "Start with Sonnet."
     {
@@ -221,7 +228,14 @@ export const claudeModelsV3: VideoData = {
       durationInFrames: 643,
     },
     // 134.85 [long pause]
-    { layout: 'title-card-green', title: 'Where to Find and Switch Models', durationInFrames: 45 },
+    {
+      layout: 'big-statement',
+      text: 'Where to Find and Switch Models',
+      highlight: 'Switch Models',
+      size: 'hero',
+      animation: 'kinetic',
+      durationInFrames: 45,
+    },
 
     // 136.36 "To switch models, open a new or existing chat ... options."
     {
@@ -255,7 +269,14 @@ export const claudeModelsV3: VideoData = {
       durationInFrames: 742,
     },
     // 171.79 [long pause]
-    { layout: 'title-card-green', title: 'How to Choose', durationInFrames: 59 },
+    {
+      layout: 'big-statement',
+      text: 'How to Choose',
+      highlight: 'Choose',
+      size: 'hero',
+      animation: 'kinetic',
+      durationInFrames: 59,
+    },
 
     // 173.76 "Use Haiku ... usage or cost."
     {
@@ -287,7 +308,14 @@ export const claudeModelsV3: VideoData = {
       durationInFrames: 248,
     },
     // 207.31 [long pause]
-    { layout: 'title-card-green', title: 'Availability and Pricing', durationInFrames: 59 },
+    {
+      layout: 'big-statement',
+      text: 'Availability and Pricing',
+      highlight: 'Pricing',
+      size: 'hero',
+      animation: 'kinetic',
+      durationInFrames: 59,
+    },
 
     // 209.28 "Sonnet and Haiku are available ... subscription."
     {
