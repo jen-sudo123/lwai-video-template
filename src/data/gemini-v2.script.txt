@@ -15,7 +15,7 @@
 
 <break time="500ms"/>Beyond the basics, the feature set has grown fast.
 
-<break time="500ms"/>Deep Research produces multi-source reports, grounded in your actual Workspace data.
+<break time="500ms"/>Deep Research produces multi-source reports, and can draw on your Workspace files.
 
 <break time="500ms"/>Gemini Live gives you a real-time voice conversation, with optional camera or screen sharing.
 
@@ -47,7 +47,7 @@
 
 <break time="500ms"/>Finally, plans and pricing. For individuals, Google offers three paid AI plans.
 
-<break time="500ms"/>Google AI Plus expands your access to Gemini's features and usage limits. Google AI Pro adds higher limits and broader access to advanced capabilities. And Google AI Ultra offers the highest allowances, for intensive research, creative, and development work.
+<break time="500ms"/>Google AI Plus expands your access to Gemini's features and usage limits. Google AI Pro adds higher limits and broader access to advanced capabilities. And Google AI Ultra offers higher allowances, for intensive research, creative, and development work.
 
 <break time="500ms"/>For organizations, Google Workspace plans include different levels of Gemini access.
 
