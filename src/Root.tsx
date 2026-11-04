@@ -21,6 +21,7 @@ import { geminiInSheet } from './data/gemini-in-sheet';
 import { chatGPTImage } from './data/chatgpt-image';
 import { geminiInSlides } from './data/gemini-in-slides';
 import { gemini } from './data/gemini';
+import { geminiV2 } from './data/gemini-v2';
 import { aiVideoIntro } from './data/ai-video-intro';
 import { geminiModels } from './data/gemini-models';
 import { claudeModels } from './data/claude-models';
@@ -290,6 +291,16 @@ export const RemotionRoot: React.FC = () => {
         height={layout.height}
         schema={videoDataSchema}
         defaultProps={gemini}
+      />
+      <Composition
+        id="GeminiV2"
+        component={Video}
+        durationInFrames={calculateTotalFrames(geminiV2.scenes)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+        schema={videoDataSchema}
+        defaultProps={geminiV2}
       />
       <Composition
         id="AiVideoIntro"
