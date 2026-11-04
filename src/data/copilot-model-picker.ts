@@ -6,7 +6,7 @@ import { VideoData } from '../scenes/types';
 //   audio starts at frame 0 and the title card overlaps the first line).
 // Transcript: src/data/copilot-model-picker.transcript.json (ElevenLabs Scribe,
 //   word timestamps, t = seconds into the mp3). Script: copilot-model-picker.script.txt.
-// Model-picker screenshot (images/copilot-model-picker/model-picker.png) on scenes 2, 6, 9.
+// Model-picker screenshot (images/copilot-model-picker/model-picker.png) on scenes 2, 6, 9a, 9b.
 //
 // Scene boundaries (s): 0 · 3.0 · 13.0 · 16.3 · 38.9 · 42.0 · 56.1 · 67.3 · 79.1
 //   · 94.0 · 96.7 · 115.8 · 129.7 · 145.7 → 155.0 (4650 frames)
@@ -26,8 +26,8 @@ export const copilotModelPicker: VideoData = {
     //   Copilot may offer additional models in the model picker in the Copilot chat window."
     {
       layout: 'label-title-body',
-      label: 'AUTO MODE',
-      title: 'Copilot Starts in Auto',
+      label: 'THE MODEL PICKER',
+      title: 'Auto Mode',
       body: [
         'Works perfectly well for many tasks',
         'Depending on your access, more models in the model picker',
@@ -54,8 +54,8 @@ export const copilotModelPicker: VideoData = {
     //   external-facing, or complex work, advanced models can be very useful."
     {
       layout: 'label-title-body',
-      label: 'AUTO',
-      title: 'Copilot Picks the Model for You',
+      label: 'THE MODEL PICKER',
+      title: 'Auto',
       body: [
         'Chooses the model it thinks best suits your prompt',
         'Usually enough for routine work: drafting, summarizing, rewriting, translation, quick questions',
@@ -136,26 +136,43 @@ export const copilotModelPicker: VideoData = {
       durationInFrames: 354,
     },
 
-    // 79.1 → 94.0  VO: "Where your interface offers quick response and think deeper, use quick
-    //   response for straightforward tasks and try think deeper when the task needs more
-    //   analysis. More reasoning may take longer and does not guarantee a correct answer."
+    // 79.1 → 85.8  VO: "Where your interface offers quick response and think deeper, use quick
+    //   response for straightforward tasks"
     {
       layout: 'label-title-body',
       label: 'RESPONSE MODES',
-      title: 'Quick Response or Think Deeper',
+      title: 'Quick Response',
       body: [
-        'Quick response: straightforward tasks',
-        'Think deeper: tasks that need more analysis',
-        'More reasoning takes longer and doesn’t guarantee a correct answer',
+        'Answers right away',
+        'Use it for straightforward tasks',
       ],
-      bodyTimings: [116, 218, 317], // "use quick" 82.98 · "think" 86.36 · "More" 89.66
+      bodyTimings: [48, 116], // "quick response" 80.70 · "use quick" 82.98
       image: 'images/copilot-model-picker/model-picker.png',
-      // Zoom into the Quick response / Think deeper rows ("quick response" 80.70).
       imageZoomKeyframes: [
         { startFrame: 0, scale: 1, centerX: 0.5, centerY: 0.5 },
-        { startFrame: 48, scale: 2, centerX: 0.18, centerY: 0.31 },
+        { startFrame: 40, scale: 2.2, centerX: 0.18, centerY: 0.25 },
       ],
-      durationInFrames: 447,
+      durationInFrames: 201,
+    },
+
+    // 85.8 → 94.0  VO: "and try think deeper when the task needs more analysis. More reasoning
+    //   may take longer and does not guarantee a correct answer."
+    {
+      layout: 'label-title-body',
+      label: 'RESPONSE MODES',
+      title: 'Think Deeper',
+      body: [
+        'Try it when the task needs more analysis',
+        'Takes longer and doesn’t guarantee a correct answer',
+      ],
+      bodyTimings: [17, 116], // "think" 86.36 · "More" 89.66
+      image: 'images/copilot-model-picker/model-picker.png',
+      imageZoomKeyframes: [
+        { startFrame: -30, scale: 2.2, centerX: 0.18, centerY: 0.25 },
+        { startFrame: 10, scale: 2.2, centerX: 0.18, centerY: 0.39 },
+      ],
+      imageZoomNoEntry: true,
+      durationInFrames: 246,
     },
 
     // 94.0 → 96.7  VO: "So when might you try another model?"
