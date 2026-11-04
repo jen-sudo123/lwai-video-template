@@ -1,5 +1,3 @@
-<break time="500ms"/>Start with Sonnet.
-
 <break time="500ms"/>Claude Sonnet 5.5 is a practical starting point for everyday professional work.
 
 <break time="500ms"/>Drafting, summarizing, bringing research together, reviewing documents, coding, and working through tasks with several steps.
