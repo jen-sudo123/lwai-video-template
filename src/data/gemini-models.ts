@@ -76,7 +76,12 @@ export const geminiModels: VideoData = {
           body: ['Demanding tasks', 'Where quality matters most'],
         },
       ],
+      // Cards enter on "several model choices" (14.13s), then re-highlight on each name.
       highlights: [
+        { from: 33, value: 0 },
+        { from: 45, value: 1 },
+        { from: 57, value: 2 },
+        { from: 69, value: null },
         { from: 202, value: 0 },
         { from: 216, value: 1 },
         { from: 239, value: 2 },
