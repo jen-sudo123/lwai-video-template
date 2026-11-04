@@ -27,6 +27,7 @@ import { claudeModels } from './data/claude-models';
 import { claudeModelsV2 } from './data/claude-models-v2';
 import { claude } from './data/claude';
 import { chatGPTVoice } from './data/chatgpt-voice';
+import { chatGPTOverview } from './data/chatgpt-overview';
 import { chatGPTForWriting } from './data/chatgpt-for-writing';
 import { geminiLive } from './data/gemini-live';
 import { geminiScreenSharing } from './data/gemini-screen-sharing';
@@ -898,6 +899,16 @@ export const RemotionRoot: React.FC = () => {
         height={layout.height}
         schema={videoDataSchema}
         defaultProps={chatGPTPlugins}
+      />
+      <Composition
+        id="ChatGPTOverview"
+        component={Video}
+        durationInFrames={calculateTotalFrames(chatGPTOverview.scenes)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+        schema={videoDataSchema}
+        defaultProps={chatGPTOverview}
       />
     </>
   );
