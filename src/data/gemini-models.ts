@@ -20,8 +20,8 @@ import { VideoData } from '../scenes/types';
 // 10  big-statement           2115    87   2202   Pro hero
 // 11  label-title-body        2202   346   2548   Pro strengths
 // 12  label-title-body        2548   430   2978   Pro real consequences
-// 13  label-title-body        2978   336   3314   how to switch (model-picker-v2.png)
-// 14  three-mode-columns      3314   319   3633   "3.6 Flash, 3.8 Thinking, 3.1 Pro"
+// 13  label-title-body        2978   336   3314   how to switch (step cards)
+// 14  centered-image-caption  3314   319   3633   model-picker-v2.png "3.6 Flash, 3.8 Thinking, 3.1 Pro"
 // 15  label-title-body        3633   437   4070   practical notes: speed + limits
 // 16  label-title-body        4070   305   4375   access: personal vs Workspace
 // 17  label-title-body        4375   236   4611   availability can change
@@ -242,7 +242,6 @@ export const geminiModels: VideoData = {
     // VO: "To switch models in Gemini on desktop, start a chat (101.60) and click
     //      the model name (102.88) in the prompt box. From there, choose (106.98)
     //      a model that's available on your plan."
-    // model-picker-v2.png = model-picker.png edited to match the current picker (3.8 Thinking, "Advanced reasoning")
     {
       layout: 'label-title-body',
       label: 'HOW TO SWITCH',
@@ -253,29 +252,23 @@ export const geminiModels: VideoData = {
         'Choose a model available on your plan',
       ],
       bodyTimings: [70, 108, 231],
-      image: 'images/gemini-models/model-picker-v2.png',
+      bodyRight: true,
+      bodyCards: true,
+      bodyCardCompact: true,
+      bodyCardIcons: ['chat-bubble-left-right', 'sliders', 'check'],
       durationInFrames: 336,
     },
 
     // 14 ── 110.47 → 121.12s models in my interface ─────────────────────
-    // VO: "three point six Flash (112.30) for all-around help, three point eight
-    //      Thinking (115.03) for complex problems, and three point one Pro
-    //      (118.00) for advanced reasoning."
+    // VO: "In my interface, the options are three point six Flash for all-around
+    //      help, three point eight Thinking for complex problems, and three point
+    //      one Pro for advanced reasoning."
+    // model-picker-v2.png = model-picker.png edited to match the current picker (3.8 Thinking, "Advanced reasoning")
     {
-      layout: 'three-mode-columns',
-      label: 'IN MY INTERFACE',
-      title: 'The Models in the Picker',
-      columns: [
-        { label: '3.6', title: 'Flash', body: ['All-around help'] },
-        { label: '3.8', title: 'Thinking', body: ['Complex problems'] },
-        { label: '3.1', title: 'Pro', body: ['Advanced reasoning'] },
-      ],
-      highlights: [
-        { from: 47, value: 0 },
-        { from: 129, value: 1 },
-        { from: 218, value: 2 },
-        { from: 290, value: null },
-      ],
+      layout: 'centered-image-caption',
+      image: 'images/gemini-models/model-picker-v2.png',
+      objectFit: 'contain',
+      caption: 'The models in my interface',
       durationInFrames: 319,
     },
 
