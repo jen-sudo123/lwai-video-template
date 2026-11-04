@@ -1,0 +1,21 @@
+Microsoft Copilot starts in auto mode. For many tasks, that works perfectly well. Depending on your access, Copilot may 
+offer additional models in the model picker in the Copilot chat window. So let's start with how the model picker works. 
+In auto, Copilot automatically chooses the model it thinks best suits your prompt. For most inconsequential routine 
+work like drafting, summarizing, rewriting, translation, and quick questions, this is usually enough. However, for 
+higher stakes, external-facing, or complex work, advanced models can be very useful. Now, let's look at choosing a 
+specific model. Open the model picker in your Copilot chat window. Depending on your interface, you may need to expand 
+the menu to see additional choices. You may see options from OpenAI's GPT family and Anthropic's Claude family. The 
+exact models available can change, so do not focus too much on memorizing every model name. What matters more is that 
+different models handle the same task differently. For example, one may follow your instructions more closely. Another 
+may structure the answer differently, handle a long document better, or produce writing that better matches the tone 
+you want. Where your interface offers quick response and think deeper, use quick response for straightforward tasks and 
+try think deeper when the task needs more analysis. More reasoning may take longer and does not guarantee a correct 
+answer. So when might you try another model? You may want to manually choose another available model when the first 
+result is not quite what you need, when you want a second approach, or when you want to compare how different models 
+handle the same instructions. You may also have learned through experience that one model works particularly well for a 
+certain type of task. The important thing is to keep the task the same when you compare. Use the same prompt, context, 
+and source material. Then look at which model follows your instructions best and produces the most useful result. 
+Finally, a note on access and pricing. The models you see depend on your Microsoft license, your organization's admin 
+settings, and when Microsoft rolls out each model. Plans, model availability, and usage limits are subject to change. 
+For the latest details, see Microsoft's official Copilot licensing guidance and subscription and usage-based billing 
+guidance.
