@@ -8,41 +8,32 @@ export const chatGPTOverview: VideoData = {
   audioSrc: 'audio/chatgpt-overview.mp3',
   audioStartFrame: 0,
   scenes: [
-    // 0 → 143 (0.00–4.76) hook: no longer just the chatbot everyone has heard of
-    {
-      layout: 'title-card-green',
-      title: 'ChatGPT',
-      subtitle: 'More than a chatbot',
-      durationInFrames: 143,
-    },
+    // 0 → 143 (0.00–4.76) hook
+    { layout: 'title-card-green', title: 'ChatGPT', subtitle: 'More than a chatbot', durationInFrames: 143 },
 
-    // 143 → 354 (4.76–11.80) operating system for how leaders work
+    // 143 → 354 (4.76–11.80) operating system: write 80, research 109, analyze 135, automate 157, done 185
     {
       layout: 'label-title-body',
       label: 'ChatGPT',
       title: 'The Operating System for How Leaders Work',
       body: ['Write', 'Research', 'Analyze', 'Automate', 'Get work done'],
       bodyTimings: [80, 109, 135, 157, 185],
+      image: 'chatgpt-overview/images/01-chatgpt-desktop-overview.png',
       durationInFrames: 211,
     },
 
-    // 354 → 454 (11.80–15.12) section: key features
-    {
-      layout: 'title-card-green',
-      title: 'Key Features',
-      durationInFrames: 100,
-    },
+    // 354 → 454 (11.80–15.12) section
+    { layout: 'title-card-green', title: 'Key Features', durationInFrames: 100 },
 
     // 454 → 739 (15.12–24.64) Search vs Deep Research (Deep Research @ 18.40 → local 98)
     {
-      layout: 'split-contrast',
-      leftLabel: 'Feature',
-      leftTitle: 'Search',
-      leftBody: 'Live information from the web',
-      rightLabel: 'Feature',
-      rightTitle: 'Deep Research',
-      rightBody: 'Many sources, one structured, cited report',
-      rightBodyDelay: 98,
+      layout: 'comparison',
+      title: 'Search + Deep Research',
+      leftImage: 'chatgpt-overview/images/02-search-citations.png',
+      leftLabel: 'Search: live web information',
+      rightImage: 'chatgpt-overview/images/03-deep-research-report.png',
+      rightLabel: 'Deep Research: a structured, cited report',
+      objectFit: 'contain',
       highlights: [
         { from: 0, value: 'left' },
         { from: 98, value: 'right' },
@@ -55,11 +46,9 @@ export const chatGPTOverview: VideoData = {
       layout: 'label-title-body',
       label: 'Feature',
       title: 'Voice',
-      body: [
-        'Speak naturally with ChatGPT',
-        'Advanced Voice: live video + screen sharing in the mobile apps',
-      ],
+      body: ['Speak naturally with ChatGPT', 'Advanced Voice: live video + screen sharing in the mobile apps'],
       bodyTimings: [16, 111],
+      image: 'chatgpt-overview/images/04-voice-screen-sharing.webp',
       durationInFrames: 295,
     },
 
@@ -68,49 +57,71 @@ export const chatGPTOverview: VideoData = {
       layout: 'label-title-body',
       label: 'Feature',
       title: 'Image Generation',
-      body: [
-        'Mock-ups, diagrams, posters + other visuals',
-        'Strong text rendering + instruction following',
-      ],
+      body: ['Mock-ups, diagrams, posters + other visuals', 'Strong text rendering + instruction following'],
       bodyTimings: [46, 161],
+      image: 'chatgpt-overview/images/05-image-generation-text.jpg',
       durationInFrames: 255,
     },
 
-    // 1289 → 2069 (42.96–68.96) building blocks: Projects 0, Skills 163, Apps 269, Plugins 513
+    // 1289 → 1452 (42.96–48.40) Projects: organize 21, ongoing work 108
     {
       layout: 'label-title-body',
-      label: 'Organize + Connect',
-      title: 'Projects, Skills, Apps + Plugins',
-      bodyRight: true,
-      bodyCards: true,
-      bodyCardCompact: true,
-      body: [
-        'Projects: Chats, files + instructions around ongoing work',
-        'Skills: How to carry out a recurring task',
-        'Apps: Google Drive, Microsoft 365, Slack, GitHub, within your permissions',
-        'Plugins: Skills, apps, or both, in one package',
-      ],
-      bodyTimings: [0, 163, 269, 513],
-      titleNote: 'Availability depends on your plan + workspace settings',
-      titleNoteDelay: 672,
-      durationInFrames: 780,
+      label: 'Feature',
+      title: 'Projects',
+      body: ['Chats, files + instructions in one place', 'Organized around ongoing work'],
+      bodyTimings: [21, 108],
+      image: 'chatgpt-overview/images/06-projects-files-instructions.png',
+      durationInFrames: 163,
     },
 
-    // 2069 → 2482 (68.96–82.72) ChatGPT Work outputs: documents 276, spreadsheets 300,
-    // presentations 331, reports 365, Sites 386
+    // 1452 → 1558 (48.40–51.92) Skills: define 17
+    {
+      layout: 'label-title-body',
+      label: 'Feature',
+      title: 'Skills',
+      body: ['How to carry out a recurring task'],
+      bodyTimings: [17],
+      image: 'chatgpt-overview/images/08-skills-panel.png',
+      durationInFrames: 106,
+    },
+
+    // 1558 → 2069 (51.92–68.96) Apps 0, permissions 181, Plugins 244, availability 403
+    {
+      layout: 'label-title-body',
+      label: 'Connect',
+      title: 'Apps + Plugins',
+      body: [
+        'Apps: Google Drive, Microsoft 365, Slack, GitHub',
+        'Within the permissions you set',
+        'Plugins: skills, apps, or both',
+        'Availability depends on plan + workspace settings',
+      ],
+      bodyTimings: [0, 181, 244, 403],
+      image: 'chatgpt-overview/images/07-plugins-app-directory.jpg',
+      durationInFrames: 511,
+    },
+
+    // 2069 → 2345 (68.96–78.16) ChatGPT Work: research 114, work across 175
     {
       layout: 'label-title-body',
       label: 'For Larger Tasks',
       title: 'ChatGPT Work',
-      bodyRight: true,
-      bodyCards: true,
-      bodyCardCompact: true,
+      body: ['Researches + analyzes', 'Works across your connected apps + files'],
+      bodyTimings: [114, 175],
+      image: 'chatgpt-overview/images/09-work-presentation.png',
+      durationInFrames: 276,
+    },
+
+    // 2345 → 2482 (78.16–82.72) outputs: documents 0, spreadsheets 24, presentations 55, reports 89, Sites 110
+    {
+      layout: 'label-title-body',
+      label: 'ChatGPT Work',
+      title: 'Finished Outputs',
       body: ['Documents', 'Spreadsheets', 'Presentations', 'Reports', 'Sites'],
-      bodyTimings: [276, 300, 331, 365, 386],
-      // "It can research, analyze information, work across your connected apps and files" @ 72.16
-      titleNote: 'Researches, analyzes + works across your connected apps and files',
-      titleNoteDelay: 96,
-      durationInFrames: 413,
+      bodyTimings: [0, 24, 55, 89, 110],
+      images: ['chatgpt-overview/images/10-work-spreadsheet.webp', 'chatgpt-overview/images/16-sites-dashboard.webp'],
+      imageTimings: [24, 110],
+      durationInFrames: 137,
     },
 
     // 2482 → 2693 (82.72–89.76) you stay in control: monitor 33, answer 79, redirect 123, approve 153
@@ -130,41 +141,43 @@ export const chatGPTOverview: VideoData = {
       durationInFrames: 211,
     },
 
-    // 2693 → 3169 (89.76–105.64) Codex: dedicated 74, write/review 119, desktop 221
+    // 2693 → 2914 (89.76–97.12) Codex: dedicated 74, write/review 119
     {
       layout: 'label-title-body',
       label: 'For Software Development',
       title: 'Codex',
-      body: [
-        'A dedicated workspace for code',
-        'Write, review, debug + ship',
-        'On desktop: Chat, ChatGPT Work + Codex in one experience',
-      ],
-      bodyTimings: [74, 119, 221],
-      durationInFrames: 476,
+      body: ['A dedicated workspace for code', 'Write, review, debug + ship'],
+      bodyTimings: [74, 119],
+      image: 'chatgpt-overview/images/12-codex-workspace.png',
+      durationInFrames: 221,
     },
 
-    // 3169 → 3259 (105.64–108.64) section: the models
+    // 2914 → 3169 (97.12–105.64) desktop: unified 139, keeping 189
     {
-      layout: 'title-card-green',
-      title: 'The Models',
-      durationInFrames: 90,
+      layout: 'label-title-body',
+      label: 'On Desktop',
+      title: 'Chat, ChatGPT Work + Codex',
+      body: ['A more unified experience', 'Codex keeps its own workspace'],
+      bodyTimings: [139, 189],
+      image: 'chatgpt-overview/images/11-work-desktop.png',
+      durationInFrames: 255,
     },
 
-    // 3259 → 3569 (108.64–118.96) what you see depends on where + plan: 108, 232
+    // 3169 → 3259 (105.64–108.64) section
+    { layout: 'title-card-green', title: 'The Models', durationInFrames: 90 },
+
+    // 3259 → 3569 (108.64–118.96) depends on where + plan: 108, 232
     {
       layout: 'label-title-body',
       label: 'The Models',
       title: 'Models + Thinking Settings',
-      body: [
-        'Depends on Chat, ChatGPT Work or Codex',
-        'And on your plan + workspace settings',
-      ],
+      body: ['Depends on Chat, ChatGPT Work or Codex', 'And on your plan + workspace settings'],
       bodyTimings: [108, 232],
+      image: 'chatgpt-overview/images/13-thinking-settings.png',
       durationInFrames: 310,
     },
 
-    // 3569 → 4186 (118.96–139.52) thinking settings: names listed 57/81/163, explained 185/295/512
+    // 3569 → 4186 (118.96–139.52) thinking settings: listed 57/81/163, explained 185/295/512
     {
       layout: 'process-steps',
       label: 'In Chat',
@@ -181,46 +194,44 @@ export const chatGPTOverview: VideoData = {
       durationInFrames: 617,
     },
 
-    // 4186 → 4704 (139.52–156.80) GPT-6 mapping: Sol 62, Astra 235, ChatGPT Work + Codex 348
+    // 4186 → 4704 (139.52–156.80) GPT-6: Sol 62, Astra 235, ChatGPT Work + Codex 348
     {
-      layout: 'split-contrast',
-      leftLabel: 'Instant through Extra High',
-      leftTitle: 'GPT-6 Sol',
-      leftBody: 'Powers everyday + extended thinking',
-      leftBodyDelay: 62,
-      rightLabel: 'GPT-6 Pro',
-      rightTitle: 'GPT-6 Astra',
-      rightBodies: ['Powers GPT-6 Pro', 'Demanding work in ChatGPT Work + Codex'],
-      rightBodyTimings: [235, 348],
-      highlights: [
-        { from: 0, value: 'left' },
-        { from: 235, value: 'right' },
+      layout: 'label-title-body',
+      label: 'When You Select GPT-6',
+      title: 'GPT-6 Sol + GPT-6 Astra',
+      body: [
+        'GPT-6 Sol: Instant through Extra High',
+        'GPT-6 Astra: powers GPT-6 Pro',
+        'Astra also handles demanding work in ChatGPT Work + Codex',
       ],
+      bodyTimings: [62, 235, 348],
+      image: 'chatgpt-overview/images/14-astra-model-art.webp',
       durationInFrames: 518,
     },
 
-    // 4704 → 4776 (156.80–159.20) section: privacy
+    // 4704 → 4776 (156.80–159.20) section
+    { layout: 'title-card-green', title: 'Privacy', durationInFrames: 72 },
+
+    // 4776 → 4922 (159.20–164.08) personal plans: manage 49
     {
-      layout: 'title-card-green',
-      title: 'Privacy',
-      durationInFrames: 72,
+      layout: 'label-title-body',
+      label: 'Privacy',
+      title: 'Personal Plans',
+      body: ['Manage training + data-sharing preferences in Settings'],
+      bodyTimings: [49],
+      image: 'chatgpt-overview/images/15-privacy-data-controls.png',
+      durationInFrames: 146,
     },
 
-    // 4776 → 5160 (159.20–172.00) personal vs Business/Enterprise/Edu (@ 164.08 → local 146)
+    // 4922 → 5160 (164.08–172.00) org plans: OpenAI 84
     {
-      layout: 'split-contrast',
-      leftLabel: 'Personal Plans',
-      leftTitle: 'Your Settings',
-      leftBody: 'Manage training + data-sharing preferences in Settings',
-      rightLabel: 'Business, Enterprise + Edu',
-      rightTitle: 'Not Used for Training',
-      rightBody: 'Organizational data, by default (per OpenAI)',
-      rightBodyDelay: 146,
-      highlights: [
-        { from: 0, value: 'left' },
-        { from: 146, value: 'right' },
-      ],
-      durationInFrames: 384,
+      layout: 'label-title-body',
+      label: 'Privacy',
+      title: 'Business, Enterprise + Edu',
+      body: ["Per OpenAI, organizational data isn't used to train models by default"],
+      bodyTimings: [84],
+      image: 'chatgpt-overview/images/19-plan-business.png',
+      durationInFrames: 238,
     },
 
     // 5160 → 5402 (172.00–180.05) three rules: avoid 41, connect 108, verify 190
@@ -228,37 +239,33 @@ export const chatGPTOverview: VideoData = {
       layout: 'checklist-slide',
       label: 'Whatever Your Plan',
       title: 'Three Rules',
-      items: [
-        'Avoid sharing sensitive information',
-        'Connect only the apps you trust',
-        'Always verify important outputs',
-      ],
+      items: ['Avoid sharing sensitive information', 'Connect only the apps you trust', 'Always verify important outputs'],
       itemTimings: [41, 108, 190],
       durationInFrames: 242,
     },
 
-    // 5402 → 5508 (180.05–183.60) section: plans + pricing
-    {
-      layout: 'title-card-green',
-      title: 'Plans + Pricing',
-      durationInFrames: 106,
-    },
+    // 5402 → 5508 (180.05–183.60) section
+    { layout: 'title-card-green', title: 'Plans + Pricing', durationInFrames: 106 },
 
-    // 5508 → 6403 (183.60–213.44) individual plans: Free 0, Go 300, Plus 478, Pro plan 694
+    // 5508 → 6403 (183.60–213.44) individual plans, image pans to each plan as named: Free 0, Go 300, Plus 478, Pro 694
     {
       layout: 'label-title-body',
       label: 'Plans',
       title: 'Free, Go, Plus + Pro',
-      bodyRight: true,
-      bodyCards: true,
-      bodyCardCompact: true,
       body: [
-        'Free: Everyday chat + Search, limited tool access',
-        'Go: Higher limits for uploads, image generation + Voice',
-        'Plus: Advanced reasoning, more Deep Research, Codex + ChatGPT Work',
-        'Pro plan: Heavier use, higher allowances, more demanding reasoning',
+        'Free: everyday chat + Search, limited tools',
+        'Go: higher limits for everyday use',
+        'Plus: advanced reasoning + more tools',
+        'Pro plan: heavier use, more demanding reasoning',
       ],
       bodyTimings: [0, 300, 478, 694],
+      image: 'chatgpt-overview/images/18-plans-individual.png',
+      imageZoomKeyframes: [
+        { startFrame: 20, centerX: 0.14, centerY: 0.35, scale: 1.9 },
+        { startFrame: 300, centerX: 0.38, centerY: 0.35, scale: 1.9 },
+        { startFrame: 478, centerX: 0.62, centerY: 0.35, scale: 1.9 },
+        { startFrame: 694, centerX: 0.86, centerY: 0.35, scale: 1.9 },
+      ],
       durationInFrames: 895,
     },
 
@@ -267,16 +274,13 @@ export const chatGPTOverview: VideoData = {
       layout: 'label-title-body',
       label: 'For Organizations',
       title: 'Business + Enterprise',
-      body: [
-        'Shared workspaces',
-        'Administration',
-        'Security + governance controls',
-      ],
+      body: ['Shared workspaces', 'Administration', 'Security + governance controls'],
       bodyTimings: [96, 144, 173],
+      image: 'chatgpt-overview/images/19-plans-business-enterprise.png',
       durationInFrames: 235,
     },
 
-    // 6638 → 6870 (221.28–229.00) close: check the official pricing page
+    // 6638 → 6870 (221.28–229.00) close
     {
       layout: 'centered-quote',
       text: 'Plans change often. Check the official ChatGPT pricing page.',
