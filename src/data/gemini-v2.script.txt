@@ -1,0 +1,59 @@
+<speak>
+<break time="500ms"/>Gemini's real advantage is this: for teams on Google Workspace, the assistant shows up where the work is already buried.
+
+<break time="500ms"/>For most leaders, the friction isn't the work itself. It's the constant reassembly of context. The email thread, the meeting notes, the draft deck, the spreadsheet, the project document, the calendar invite.
+
+<break time="500ms"/>Every time you ask a separate AI tool for help, you have to upload files, paste in background, and explain the situation all over again.
+
+<break time="500ms"/>Gemini can reduce that context tax for teams already working inside Google.
+
+<break time="500ms"/>There are two main ways to use it.
+
+<break time="500ms"/>First, Gemini as a standalone chatbot. You go to gemini dot google dot com, and you can do what you'd do with ChatGPT or Claude: brainstorm, research, analyze files, and generate images. It's a capable, general-purpose assistant.
+
+<break time="500ms"/>The second mode is where it gets strategic. Gemini is built directly into Google Workspace. It shows up in Gmail, Docs, Sheets, Slides, Drive, and Meet. The AI appears where the work is already happening.
+
+<break time="500ms"/>Beyond the basics, the feature set has grown fast.
+
+<break time="500ms"/>Deep Research produces multi-source reports, grounded in your actual Workspace data.
+
+<break time="500ms"/>Gemini Live gives you a real-time voice conversation, with optional camera or screen sharing.
+
+<break time="500ms"/>Gems are custom assistants for repeating workflows. So you stop rewriting the same prompt every Monday.
+
+<break time="500ms"/>Canvas is a dedicated space for iterating on documents or code.
+
+<break time="500ms"/>Nano Banana 2 generates images, up to four K.
+
+<break time="500ms"/>Gemini Omni handles video generation and editing, using text, image, audio, and video inputs.
+
+<break time="500ms"/>Workspace Studio lets you build multi-step automations across your Google apps, without writing code.
+
+<break time="500ms"/>And Scheduled Actions automate recurring AI tasks, like a daily email summary or a regular research pull.
+
+<break time="500ms"/>Now, the models. In the Workspace account shown here, the model selector offers three options: Gemini three point six Flash, Gemini three point eight Thinking, and Gemini three point one Pro. Your options may differ, depending on your account and license.
+
+<break time="500ms"/>Flash is your everyday option, for writing, brainstorming, and summarizing.
+
+<break time="500ms"/>Thinking is for complex problems, and tasks with several connected steps.
+
+<break time="500ms"/>Pro provides advanced reasoning, for demanding analysis and problem-solving.
+
+<break time="500ms"/>The more demanding options may take longer, and use more of your allowance. And whichever you choose, always check important facts and assumptions.
+
+<break time="500ms"/>On privacy: you can manage your Gemini Apps Activity, and choose whether your interactions help improve Google's AI.
+
+<break time="500ms"/>For Google Workspace customers, your submissions aren't used to train models. They stay within Workspace's enterprise security and admin controls.
+
+<break time="500ms"/>Finally, plans and pricing. For individuals, Google offers three paid AI plans.
+
+<break time="500ms"/>Google AI Plus expands your access to Gemini's features and usage limits. Google AI Pro adds higher limits and broader access to advanced capabilities. And Google AI Ultra offers the highest allowances, for intensive research, creative, and development work.
+
+<break time="500ms"/>For organizations, Google Workspace plans include different levels of Gemini access.
+
+<break time="500ms"/>Business Starter includes Gemini in Gmail, plus the Gemini app. Business Standard extends Gemini into apps like Docs and Meet. Business Plus adds enhanced security, management, and data retention. And Enterprise brings additional security, compliance, and admin controls.
+
+<break time="500ms"/>What your team can actually use depends on its Workspace license, any add-on subscriptions, and your admin settings.
+
+<break time="500ms"/>So here's the bottom line. Gemini's real leverage is context proximity. It helps your team move faster, inside the work. But you still own the judgment.
+</speak>
