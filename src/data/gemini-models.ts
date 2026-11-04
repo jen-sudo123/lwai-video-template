@@ -1,47 +1,37 @@
 import { VideoData } from '../scenes/types';
 
-// Gemini Models: Flash, Thinking, and Pro
-// Audio: audio/gemini-models.wav (trimmed — 95.88→104.32s section removed)
-// Total audio duration: ~138.5s => 4156 frames @ 30fps
-// Model versions updated: 3.6 Flash, 3.6 Thinking, 3.1 Pro
-// Mobile switching section removed; model picker zoom scene removed
-//
-// Whisper VO map (after trim):
-//   0.00 →  16.08  Opening hook (title card + big-statement)
-//  16.08 →  20.64  "Gemini is better understood as a set of model choices."
-//  20.64 →  26.96  "...three practical options: Flash, Thinking, and Pro."
-//  26.96 →  31.84  "The default is Gemini Flash. Fast, responsive, practical."
-//  31.84 →  41.20  "Use it for summarizing, drafting, brainstorming..."
-//  41.20 →  52.64  "When the task has more moving parts, switch to Gemini Thinking..."
-//  52.64 →  62.80  "Use it when comparing options, trade-offs, structuring..."
-//  62.80 →  65.32  "For heavier work, step up to Gemini Pro."
-//  65.32 →  86.60  "Complex analysis, dense strategy... real consequences."
-//  86.60 →  95.88  "To switch models on desktop, click the model name..."
-//  95.88 → 117.20  "Advanced models use more compute... save it for..."  [was 104.32 in orig]
-// 117.20 → 138.53  "Gemini Flash is available broadly... workspace users..."
+// Gemini Models: Flash, Thinking, and Pro (v2 — Nov 2026 update)
+// Script: src/data/gemini-models.script.txt
+// Audio:  audio/gemini-models-v2.mp3 (ElevenLabs, Daan, take B) — 165.05s => 4952 frames
+// Words:  src/data/gemini-models-v2.words.json (word timestamps on take B)
+// Audio starts at frame 0 (no audioStartFrame); the title card plays over the first line.
 //
 // Scene layout:
-//  #  Layout                Start    Dur    End   VO coverage
-//  1  title-card-green          0     50     50   [pre-VO]
-//  2  big-statement            50    432    482   0.00 → 16.08 opening hook
-//  3  centered-image-caption  482    137    619   16.08 → 20.64 model choices
-//  4  three-mode-columns      619    190    809   20.64 → 26.96 three options
-//  5  big-statement           809    146    955   26.96 → 31.84 Flash hero
-//  6  label-title-body        955    281   1236   31.84 → 41.20 Flash use cases
-//  7  big-statement          1236    343   1579   41.20 → 52.64 Thinking hero
-//  8  label-title-body       1579    305   1884   52.64 → 62.80 Thinking use cases
-//  9  big-statement          1884     76   1960   62.80 → 65.32 Pro hero
-// 10  label-title-body       1960    638   2598   65.32 → 86.60 Pro use cases
-// 11  label-title-body       2598    278   2876   86.60 → 95.88 desktop switching
-// 12  split-contrast         2876    642   3518   95.88 → 117.20 compute limits
-// 13  label-title-body       3518    631   4149  117.20 → 138.53 availability
-//                                          ────
-//                                   Total: 4149 frames (~138.3s)
+//  #  Layout                 Start   Dur    End   VO
+//  1  title-card-green           0    50     50   "Most people pick..." (under title)
+//  2  big-statement             50   340    390   hook + cost
+//  3  three-mode-columns       390   278    668   "several model choices... Flash, Thinking, Pro"
+//  4  label-title-body         668   209    877   "models you see may differ..."
+//  5  big-statement            877   148   1025   Flash hero
+//  6  label-title-body        1025   362   1387   Flash use cases
+//  7  big-statement           1387   112   1499   Thinking hero
+//  8  label-title-body        1499   316   1815   Thinking use cases
+//  9  label-title-body        1815   300   2115   Thinking tip: constraints
+// 10  big-statement           2115    87   2202   Pro hero
+// 11  label-title-body        2202   346   2548   Pro strengths
+// 12  label-title-body        2548   430   2978   Pro real consequences
+// 13  label-title-body        2978   336   3314   how to switch (model-picker-v2.png)
+// 14  three-mode-columns      3314   319   3633   "3.6 Flash, 3.8 Thinking, 3.1 Pro"
+// 15  label-title-body        3633   437   4070   practical notes: speed + limits
+// 16  label-title-body        4070   305   4375   access: personal vs Workspace
+// 17  label-title-body        4375   236   4611   availability can change
+// 18  split-contrast          4611   167   4778   rule of thumb
+// 19  big-statement           4778   204   4982   close (+30f tail after VO)
 
 export const geminiModels: VideoData = {
-  audioSrc: 'audio/gemini-models.wav',
+  audioSrc: 'audio/gemini-models-v2.mp3',
   scenes: [
-    // ── 00:00.00  title card (pre-VO) ──────────────────────────────────
+    // 1 ── 0.00s title card ─────────────────────────────────────────────
     {
       layout: 'title-card-green',
       title: 'Gemini Models',
@@ -49,239 +39,335 @@ export const geminiModels: VideoData = {
       durationInFrames: 50,
     },
 
-    // ── 00:00.00 → 00:16.08  opening hook ─────────────────────────────
-    // VO: "Most people pick one AI model and use it for everything.
-    //      That habit costs you. Either you are waiting too long for
-    //      simple answers, or you are getting shallow responses on
-    //      work that actually matters."
+    // 2 ── 1.67 → 13.02s hook ───────────────────────────────────────────
+    // VO: "Most people pick one AI model and use it for everything. That can
+    //      mean waiting longer than you need to for a simple answer, or missing
+    //      the chance to use more reasoning on a complex problem."
     {
       layout: 'big-statement',
       text: 'One model for everything\nis costing you.',
       highlight: 'costing',
       size: 'hero',
       animation: 'kinetic',
-      durationInFrames: 432,
+      durationInFrames: 340,
     },
 
-    // ── 00:16.08 → 00:20.64  model choices — image ────────────────────
-    // VO: "Gemini is better understood as a set of model choices."
-    {
-      layout: 'centered-image-caption',
-      image: 'images/gemini-models/models-option.png',
-      objectFit: 'contain',
-      caption: 'Three practical options',
-      durationInFrames: 137,
-    },
-
-    // ── 00:20.64 → 00:26.96  three practical options ──────────────────
-    // VO: "...three practical options, Flash, Thinking, and Pro."
+    // 3 ── 13.02 → 22.28s three options ─────────────────────────────────
+    // VO: "Gemini gives you several model choices... the options are Flash (20.02),
+    //      Thinking (20.48), and Pro (21.24)."
     {
       layout: 'three-mode-columns',
       label: 'THREE OPTIONS',
       title: 'Pick the Model That Matches the Task',
       columns: [
         {
-          label: 'DEFAULT',
+          label: 'EVERYDAY',
           title: 'Flash',
-          body: [
-            'Fast, responsive, practical',
-            'Everyday work that needs to get done',
-          ],
+          body: ['Fast, everyday work', 'Summarize, draft, brainstorm'],
         },
         {
-          label: 'MIDDLE GROUND',
+          label: 'MORE REASONING',
           title: 'Thinking',
-          body: [
-            'More room to reason',
-            'Complex problems, trade-offs, plans',
-          ],
+          body: ['Complex problems', 'Options, trade-offs, plans'],
         },
         {
           label: 'ADVANCED',
           title: 'Pro',
-          body: [
-            'Strongest performance',
-            'High-stakes analysis and strategy',
-          ],
+          body: ['Demanding tasks', 'Where quality matters most'],
         },
       ],
       highlights: [
-        { from: 0, value: 0 },
-        { from: 1, value: 1 },
-        { from: 2, value: 2 },
-        { from: 3, value: null },
-        { from: 120, value: 0 },
-        { from: 139, value: 1 },
-        { from: 158, value: null },
+        { from: 202, value: 0 },
+        { from: 216, value: 1 },
+        { from: 239, value: 2 },
+        { from: 262, value: null },
       ],
-      durationInFrames: 190,
+      durationInFrames: 278,
     },
 
-    // ── 00:26.96 → 00:31.84  Gemini Flash — hero intro ───────────────
-    // VO: "The default is Gemini Flash. It is fast, responsive, and practical."
+    // 4 ── 22.28 → 29.22s options may differ ────────────────────────────
+    // VO: "The models you see may differ, depending on your account (24.59),
+    //      your Workspace license (25.29), and your administrator settings (26.73)."
+    {
+      layout: 'label-title-body',
+      label: 'YOUR OPTIONS MAY DIFFER',
+      title: 'What You See Depends On',
+      body: ['Your account', 'Your Workspace license', 'Your administrator settings'],
+      bodyTimings: [70, 91, 134],
+      bodyRight: true,
+      bodyCards: true,
+      bodyCardIcons: ['user', 'check', 'sliders'],
+      durationInFrames: 209,
+    },
+
+    // 5 ── 29.22 → 34.17s Flash hero ────────────────────────────────────
+    // VO: "Gemini Flash is a practical starting point for straightforward tasks."
     {
       layout: 'big-statement',
-      label: 'DEFAULT',
+      label: 'FAST, EVERYDAY WORK',
       text: 'Gemini Flash',
       highlight: 'Flash',
       size: 'hero',
       animation: 'kinetic',
-      durationInFrames: 146,
+      durationInFrames: 148,
     },
 
-    // ── 00:31.84 → 00:41.20  Gemini Flash — use cases ─────────────────
-    // VO: "Use it for the work you simply need to get done like summarizing
-    //      a document, drafting an email, brainstorming a list, or
-    //      answering a straightforward question."
+    // 6 ── 34.17 → 46.23s Flash use cases ───────────────────────────────
+    // VO: "Use it for the work you simply need to get done. Summarizing (37.72),
+    //      drafting (39.41), brainstorming (40.94), rewriting (42.54),
+    //      answering (43.94)..."
     {
       layout: 'label-title-body',
       label: 'GEMINI FLASH',
-      title: 'Fast, Responsive, Practical',
+      title: 'Work You Simply Need to Get Done',
       body: [
-        'The default model for everyday work',
-        'Summarize, draft, brainstorm, quick answers',
+        'Summarize a document',
+        'Draft an email',
+        'Brainstorm a list',
+        'Rewrite a paragraph',
+        'Answer a straightforward question',
       ],
-      bodyTimings: [0, 100],
+      bodyTimings: [107, 157, 203, 251, 293],
       bodyRight: true,
       bodyCards: true,
-      bodyCardIcons: ['bolt', 'chat-bubble-left-right'],
-      durationInFrames: 281,
+      bodyCardCompact: true,
+      bodyCardIcons: ['sparkles', 'chat-bubble-left-right', 'lightbulb', 'pencil', 'check'],
+      durationInFrames: 362,
     },
 
-    // ── 00:41.20 → 00:52.64  Gemini Thinking — hero intro ────────────
-    // VO: "When the task has more moving parts, switch to Gemini Thinking.
-    //      It is still designed to be practical, but it gives Gemini more
-    //      room to reason through the problem before it answers."
+    // 7 ── 46.23 → 49.98s Thinking hero ─────────────────────────────────
+    // VO: "When the task has more moving parts, try Gemini Thinking."
     {
       layout: 'big-statement',
-      label: 'MIDDLE GROUND',
+      label: 'MORE MOVING PARTS',
       text: 'Gemini Thinking',
       highlight: 'Thinking',
       size: 'hero',
       animation: 'kinetic',
-      durationInFrames: 343,
+      durationInFrames: 112,
     },
 
-    // ── 00:52.64 → 01:02.80  Gemini Thinking — use cases ─────────────
-    // VO: "Use it when you are comparing options, working through
-    //      trade-offs, structuring a plan, debugging, or turning
-    //      scattered information into a clear recommendation."
+    // 8 ── 49.98 → 60.49s Thinking use cases ────────────────────────────
+    // VO: "comparing options (51.14), working through trade-offs (52.55),
+    //      structuring a plan (54.00), debugging (55.17), turning scattered
+    //      information (56.81) into a clear recommendation."
     {
       layout: 'label-title-body',
       label: 'GEMINI THINKING',
       title: 'More Reasoning for Complex Problems',
       body: [
-        'More room to reason before answering',
-        'Compare options, structure plans, debug, synthesize',
+        'Compare options',
+        'Work through trade-offs',
+        'Structure a plan',
+        'Debug a messy issue',
+        'Turn scattered information into a recommendation',
       ],
-      bodyTimings: [0, 50],
+      bodyTimings: [35, 77, 121, 156, 205],
       bodyRight: true,
       bodyCards: true,
-      bodyCardIcons: ['light-bulb', 'puzzle-piece'],
-      durationInFrames: 305,
+      bodyCardCompact: true,
+      bodyCardIcons: ['compare', 'sliders', 'trending', 'eye', 'lightbulb'],
+      durationInFrames: 316,
     },
 
-    // ── 01:02.80 → 01:05.32  Gemini Pro — hero intro ──────────────────
+    // 9 ── 60.49 → 70.51s Thinking tip ──────────────────────────────────
+    // VO: "Give it the information and constraints that matter... include your
+    //      budget (66.15), your deadlines (66.87), and the criteria (67.86)..."
+    {
+      layout: 'label-title-body',
+      label: 'TIP',
+      title: 'Give It the Constraints That Matter',
+      body: ['Your budget', 'Your deadlines', 'The criteria to use'],
+      bodyTimings: [170, 191, 221],
+      bodyRight: true,
+      bodyCards: true,
+      bodyCardIcons: ['sliders', 'clock', 'check'],
+      durationInFrames: 300,
+    },
+
+    // 10 ── 70.51 → 73.40s Pro hero ─────────────────────────────────────
     // VO: "For heavier work, step up to Gemini Pro."
     {
       layout: 'big-statement',
-      label: 'ADVANCED',
+      label: 'HEAVIER WORK',
       text: 'Gemini Pro',
       highlight: 'Pro',
       size: 'hero',
       animation: 'kinetic',
-      durationInFrames: 76,
+      durationInFrames: 87,
     },
 
-    // ── 01:05.32 → 01:26.60  Gemini Pro — use cases ───────────────────
-    // VO: "This is the option for complex analysis, dense strategy work...
-    //      Use Pro when the answer has real consequences."
+    // 11 ── 73.40 → 84.93s Pro strengths ────────────────────────────────
+    // VO: "advanced math (74.63), coding, complex analysis (76.21), dense strategy
+    //      work, and tasks where you need stronger performance (80.40) across
+    //      text, files, images, or video."
     {
       layout: 'label-title-body',
       label: 'GEMINI PRO',
-      title: 'Advanced Work, Real Consequences',
+      title: 'Advanced Reasoning for Demanding Tasks',
       body: [
-        'Complex analysis, strategy, code, dense technical work',
-        'Use when the cost of a weak answer is high',
+        'Advanced math and coding',
+        'Complex analysis and dense strategy work',
+        'Stronger performance across text, files, images, and video',
       ],
-      bodyTimings: [0, 260],
+      bodyTimings: [37, 84, 210],
       bodyRight: true,
       bodyCards: true,
-      bodyCardIcons: ['star', 'shield-check'],
-      durationInFrames: 638,
+      bodyCardIcons: ['star', 'trending', 'sparkles'],
+      durationInFrames: 346,
     },
 
-    // ── 01:26.60 → 01:35.88  how to switch — desktop ──────────────────
-    // VO: "To switch models in Gemini on desktop, start a chat and click
-    //      the model name in the prompt box. From there, choose the model
-    //      available on your plan."
+    // 12 ── 84.93 → 99.27s Pro real consequences ────────────────────────
+    // VO: "Use Pro when the answer has real consequences. Pressure-testing (89.05),
+    //      analyzing (91.29), working through (93.67), making sense (96.22)..."
+    {
+      layout: 'label-title-body',
+      label: 'WHEN QUALITY MATTERS MOST',
+      title: 'Use Pro When the Answer Has Real Consequences',
+      body: [
+        'Pressure-test a strategic brief',
+        'Analyze multiple documents',
+        'Work through a technical problem',
+        'Make sense of a complex decision',
+      ],
+      bodyTimings: [123, 191, 262, 339],
+      bodyRight: true,
+      bodyCards: true,
+      bodyCardCompact: true,
+      bodyCardIcons: ['check', 'eye', 'sliders', 'lightbulb'],
+      durationInFrames: 430,
+    },
+
+    // 13 ── 99.27 → 110.47s how to switch ───────────────────────────────
+    // VO: "To switch models in Gemini on desktop, start a chat (101.60) and click
+    //      the model name (102.88) in the prompt box. From there, choose (106.98)
+    //      a model that's available on your plan."
+    // model-picker-v2.png = updated picker screenshot (3.6 Flash / 3.8 Thinking / 3.1 Pro)
     {
       layout: 'label-title-body',
       label: 'HOW TO SWITCH',
       title: 'On Desktop',
       body: [
+        'Start a chat',
         'Click the model name in the prompt box',
+        'Choose a model available on your plan',
       ],
-      bodyTimings: [0],
-      image: 'images/gemini-models/model-picker.png',
-      durationInFrames: 278,
+      bodyTimings: [70, 108, 231],
+      image: 'images/gemini-models/model-picker-v2.png',
+      durationInFrames: 336,
     },
 
-    // ── 01:35.88 → 01:57.20  compute cost and limits ──────────────────
-    // VO: "One key thing to understand is that advanced models use more
-    //      compute. A simple Flash response uses less compute than a
-    //      Thinking or Pro response — that is why the most capable options
-    //      usually come with tighter limits. Do not spend your highest
-    //      reasoning mode on simple tasks. Save it for work where better
-    //      reasoning actually changes the outcome."
+    // 14 ── 110.47 → 121.12s models in my interface ─────────────────────
+    // VO: "three point six Flash (112.30) for all-around help, three point eight
+    //      Thinking (115.03) for complex problems, and three point one Pro
+    //      (118.00) for advanced reasoning."
+    {
+      layout: 'three-mode-columns',
+      label: 'IN MY INTERFACE',
+      title: 'The Models in the Picker',
+      columns: [
+        { label: '3.6', title: 'Flash', body: ['All-around help'] },
+        { label: '3.8', title: 'Thinking', body: ['Complex problems'] },
+        { label: '3.1', title: 'Pro', body: ['Advanced reasoning'] },
+      ],
+      highlights: [
+        { from: 47, value: 0 },
+        { from: 129, value: 1 },
+        { from: 218, value: 2 },
+        { from: 290, value: null },
+      ],
+      durationInFrames: 319,
+    },
+
+    // 15 ── 121.12 → 135.67s practical notes ────────────────────────────
+    // VO: "More demanding reasoning (122.50) can take longer, and Thinking and Pro
+    //      (125.30) have usage limits... Long conversations (130.00), large files,
+    //      and complex requests can also affect how quickly you reach those limits."
+    {
+      layout: 'label-title-body',
+      label: 'PRACTICAL NOTES',
+      title: 'Speed and Usage Limits',
+      body: [
+        'Takes longer: More demanding reasoning needs more time',
+        'Usage limits: Thinking and Pro limits depend on your plan',
+        'Heavier use: Long chats, large files, and complex requests',
+      ],
+      bodyTimings: [42, 126, 267],
+      bodyRight: true,
+      bodyCards: true,
+      bodyCardCompact: true,
+      bodyCardIcons: ['clock', 'sliders', 'bolt'],
+      durationInFrames: 437,
+    },
+
+    // 16 ── 135.67 → 145.84s access ─────────────────────────────────────
+    // VO: "For personal accounts (135.87), access depends on your Google AI plan.
+    //      For Workspace accounts (139.11), it depends on your organization's
+    //      license, any additional subscriptions, and your administrator settings."
+    {
+      layout: 'label-title-body',
+      label: 'ACCESS',
+      title: 'What Determines Access',
+      body: [
+        'Personal accounts: Your Google AI plan',
+        'Workspace accounts: License, subscriptions, and admin settings',
+      ],
+      bodyTimings: [6, 103],
+      bodyRight: true,
+      bodyCards: true,
+      bodyCardIcons: ['user', 'sliders'],
+      durationInFrames: 305,
+    },
+
+    // 17 ── 145.84 → 153.72s stay current ───────────────────────────────
+    // VO: "Model availability and usage limits can change, so check (148.22)
+    //      Google's support pages for the latest details. You'll find the links
+    //      (151.46) with this lesson."
+    {
+      layout: 'label-title-body',
+      label: 'STAY CURRENT',
+      title: 'Availability and Limits Can Change',
+      body: ["Check Google's support pages", 'Links are included with this lesson'],
+      bodyTimings: [72, 169],
+      bodyRight: true,
+      bodyCards: true,
+      bodyCardIcons: ['eye', 'check'],
+      durationInFrames: 236,
+    },
+
+    // 18 ── 153.72 → 159.25s rule of thumb ──────────────────────────────
+    // VO: "My rule of thumb is simple. Use Flash (155.16) for straightforward work,
+    //      and Thinking (156.54) or Pro when the task needs more analysis."
     {
       layout: 'split-contrast',
       leftLabel: 'FLASH',
-      leftTitle: 'Less Compute',
-      leftBodies: [
-        'Fast responses, broad usage limits',
-        'Right for everyday tasks where speed matters',
-      ],
-      leftBodyTimings: [0, 142],
-      rightLabel: 'THINKING & PRO',
-      rightTitle: 'More Compute',
-      rightBodies: [
-        'Deeper reasoning, tighter usage limits',
-        'Save for work where quality changes the outcome',
-      ],
-      rightBodyTimings: [142, 407],
+      leftTitle: 'Straightforward Work',
+      leftBodies: ['Fast answers for everyday tasks'],
+      leftBodyTimings: [44],
+      rightLabel: 'THINKING OR PRO',
+      rightTitle: 'More Analysis',
+      rightBodies: ['When the task needs more reasoning'],
+      rightBodyTimings: [85],
       showDivider: true,
       dividerLabel: 'vs',
       highlights: [
         { from: 0, value: null },
-        { from: 142, value: 'left' },
-        { from: 310, value: 'right' },
+        { from: 44, value: 'left' },
+        { from: 85, value: 'right' },
       ],
-      durationInFrames: 642,
+      durationInFrames: 167,
     },
 
-    // ── 02:05.72 → 02:26.76  availability and pricing ─────────────────
-    // VO: "On availability, Gemini Flash is available broadly, including
-    //      on the free tier. Google AI Plus adds higher usage limits and
-    //      access to Flash Thinking. Google AI Pro adds access to the
-    //      Pro model. For workspace users, availability depends on your
-    //      organization's edition, add-ons, and admin settings."
+    // 19 ── 159.25 → 166.05s close ──────────────────────────────────────
+    // VO: "Give Gemini clear instructions, check the result, and use more
+    //      reasoning when it helps solve the problem."
     {
-      layout: 'label-title-body',
-      label: 'AVAILABILITY',
-      title: 'Who Gets What',
-      body: [
-        'Flash: Free tier — available broadly',
-        'Google AI Plus: Higher limits + Flash Thinking',
-        'Google AI Pro: Pro model + advanced capabilities',
-        'Workspace: Depends on edition and admin settings',
-      ],
-      bodyTimings: [0, 155, 284, 458],
-      bodyRight: true,
-      bodyCards: true,
-      bodyCardCompact: true,
-      bodyCardIcons: ['bolt', 'plus', 'star', 'building-office'],
-      durationInFrames: 631,
+      layout: 'big-statement',
+      text: 'Clear instructions.\nCheck the result.',
+      highlight: 'Check',
+      size: 'hero',
+      animation: 'kinetic',
+      durationInFrames: 204,
     },
   ],
 };
