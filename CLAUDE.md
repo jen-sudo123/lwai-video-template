@@ -45,7 +45,11 @@ A missing-asset render error almost always means the pull was skipped.
 4. Verify with CLI stills across scenes (Studio isn't available in cloud sessions):
    `npx remotion still src/index.ts <CompId> out/stills/<n>.png --frame=N`
 5. **Never render without the user's explicit go-ahead**, even after they approve a preview. Approving ≠ render.
-6. Render, then `scripts/assets-push.sh --renders` so the user can get the file from Drive.
+6. **Preview as an Artifact first, then Drive.** Every render (preview or final) is published as a private claude.ai Artifact
+   for review BEFORE anything goes to Drive: re-encode to fit the 15 MB file limit
+   (`ffmpeg -i out/<name>.mp4 -c:v libx264 -crf 30 -c:a aac -b:a 96k -movflags +faststart out/<name>-web.mp4`),
+   page = video player + clickable scene list + open decisions. Push to Drive (`scripts/assets-push.sh --renders`)
+   only after the user approves the Artifact.
 
 Render command (local Mac: 8 GB RAM, so concurrency 1; close Studio first):
 ```
