@@ -205,7 +205,7 @@ export const chatGPTOverview: VideoData = {
         'Astra also handles demanding work in ChatGPT Work + Codex',
       ],
       bodyTimings: [62, 235, 348],
-      image: 'chatgpt-overview/images/14-astra-model-art.webp',
+      image: 'chatgpt-overview/images/14-gpt-astra-art.webp',
       durationInFrames: 518,
     },
 
