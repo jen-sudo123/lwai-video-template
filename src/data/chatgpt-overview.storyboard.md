@@ -61,5 +61,5 @@ Go 193.60, Plus 199.52, Pro 206.72, Business 213.44.
 
 ## Open items
 
-- Confirm product facts (GPT-6 Sol/Astra, ChatGPT Work, Go tier) against current OpenAI docs.
+- Product facts confirmed by Jen (2026-11-04).
 - Audio is on Drive (`public/audio/chatgpt-overview.mp3`) but not yet in this cloud session's `public/` (no rclone token here).
