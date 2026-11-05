@@ -1,3 +1,4 @@
+import type { ArtifactKind } from './artifacts/ArtifactGlyph';
 // Scene types. This is what you fill in when creating a video.
 // Every scene needs a `durationInFrames` (30 frames = 1 second at 30fps).
 
@@ -629,6 +630,36 @@ export type Scene =
       layout: 'bias-funnel-diagram';
       cardTimings?: [number, number, number, number];
       modelAppearFrame?: number;
+      durationInFrames: number;
+    }
+  | {
+      // Work artifacts as tiles. mode 'tax': tiles collapse into a block of
+      // plain text you typed, then a TRANSLATION TAX stamp lands. mode 'direct':
+      // tiles connect straight into an AI box (multimodal, no transcription).
+      layout: 'artifact-flow';
+      mode: 'tax' | 'direct';
+      label?: string;
+      titles?: Array<{ from: number; text: string; highlight?: string }>;
+      items: Array<{ kind: ArtifactKind; label: string }>;
+      itemTimings?: number[];
+      convertFrame?: number;
+      stampFrame?: number;
+      stampText?: string;
+      aiFrame?: number;
+      badgeFrame?: number;
+      badgeText?: string;
+      durationInFrames: number;
+    }
+  | {
+      // A drawn artifact mock (left) "uploaded" with the prompt(s) typed beside it (right).
+      layout: 'artifact-prompt';
+      variant: 'dashboard' | 'deck' | 'whiteboard';
+      label: string;
+      title: string;
+      fileName: string;
+      artifactTiming?: number;
+      prompts: string[];
+      promptTimings?: number[];
       durationInFrames: number;
     };
 

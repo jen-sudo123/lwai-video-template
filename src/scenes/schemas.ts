@@ -627,6 +627,35 @@ export const sceneSchema = z.discriminatedUnion('layout', [
     modelAppearFrame: z.number().optional(),
     durationInFrames: z.number(),
   }),
+  z.object({
+    layout: z.literal('artifact-flow'),
+    mode: z.enum(['tax', 'direct']),
+    label: z.string().optional(),
+    titles: z.array(z.object({ from: z.number(), text: z.string(), highlight: z.string().optional() })).optional(),
+    items: z.array(z.object({
+      kind: z.enum(['chart', 'slide', 'dashboard', 'notes', 'file', 'screenshot', 'photo', 'audio', 'video', 'inputs']),
+      label: z.string(),
+    })),
+    itemTimings: z.array(z.number()).optional(),
+    convertFrame: z.number().optional(),
+    stampFrame: z.number().optional(),
+    stampText: z.string().optional(),
+    aiFrame: z.number().optional(),
+    badgeFrame: z.number().optional(),
+    badgeText: z.string().optional(),
+    durationInFrames: z.number(),
+  }),
+  z.object({
+    layout: z.literal('artifact-prompt'),
+    variant: z.enum(['dashboard', 'deck', 'whiteboard']),
+    label: z.string(),
+    title: z.string(),
+    fileName: z.string(),
+    artifactTiming: z.number().optional(),
+    prompts: z.array(z.string()),
+    promptTimings: z.array(z.number()).optional(),
+    durationInFrames: z.number(),
+  }),
 ]);
 
 export const videoDataSchema = z.object({

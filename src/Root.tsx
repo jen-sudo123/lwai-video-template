@@ -40,6 +40,7 @@ import { copilotStudioAutonomy } from './data/copilot-studio-autonomy';
 import { chatGPTInPowerPoint } from './data/chatgpt-in-powerpoint';
 import { coworkScheduledTasks } from './data/cowork-scheduled-tasks';
 import { promptingFrontierModels } from './data/prompting-frontier-models';
+import { promptingWithArtifacts } from './data/prompting-with-artifacts';
 import { chatgptLiveVideo } from './data/chatgpt-live-video';
 import { copilotAgents } from './data/copilot-agents';
 import { copilotAgentsLarry } from './data/copilot-agents-larry';
@@ -200,6 +201,16 @@ export const RemotionRoot: React.FC = () => {
         height={layout.height}
         schema={videoDataSchema}
         defaultProps={gptThinkingPro}
+      />
+      <Composition
+        id="PromptingWithArtifacts"
+        component={Video}
+        durationInFrames={calculateTotalFrames(promptingWithArtifacts.scenes)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+        schema={videoDataSchema}
+        defaultProps={promptingWithArtifacts}
       />
       <Composition
         id="WhyPromptingMatters"

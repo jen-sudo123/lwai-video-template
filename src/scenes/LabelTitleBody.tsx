@@ -1,7 +1,7 @@
 import React from 'react';
 import { AbsoluteFill, useCurrentFrame, interpolate, spring, Img, staticFile } from 'remotion';
 import { colors, typography, layout, fonts } from '../tokens';
-import { BoltIcon, SparklesIcon, StarIcon, RocketLaunchIcon, LightBulbIcon, ArrowTrendingUpIcon, ClockIcon, UserCircleIcon, ArrowsRightLeftIcon, EyeIcon, CheckCircleIcon, XCircleIcon, AdjustmentsHorizontalIcon, PencilSquareIcon, ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline';
+import { BoltIcon, SparklesIcon, StarIcon, RocketLaunchIcon, LightBulbIcon, ArrowTrendingUpIcon, ClockIcon, UserCircleIcon, ArrowsRightLeftIcon, EyeIcon, CheckCircleIcon, XCircleIcon, AdjustmentsHorizontalIcon, PencilSquareIcon, ChatBubbleLeftRightIcon, SpeakerWaveIcon } from '@heroicons/react/24/outline';
 import { LogoFooter } from '../Logo';
 import { AnimatedText } from '../animations/AnimatedText';
 import { FadeText } from '../animations/FadeText';
@@ -31,6 +31,7 @@ const HERO_ICONS: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
   'adjustments-horizontal': AdjustmentsHorizontalIcon,
   pencil: PencilSquareIcon,
   'chat-bubble-left-right': ChatBubbleLeftRightIcon,
+  'speaker-wave': SpeakerWaveIcon,
 };
 
 const XListItem: React.FC<{ text: string; delayFrames: number }> = ({ text, delayFrames }) => {

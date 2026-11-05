@@ -43,6 +43,8 @@ import { MeetingChecklistDiagram } from './diagrams/MeetingChecklistDiagram';
 import { AccessWorkflowDiagram } from './diagrams/AccessWorkflowDiagram';
 import { BoundedAutonomyDiagram } from './diagrams/BoundedAutonomyDiagram';
 import { BiasFunnelDiagram } from './diagrams/BiasFunnelDiagram';
+import { ArtifactFlow } from './ArtifactFlow';
+import { ArtifactPrompt } from './ArtifactPrompt';
 
 // Routes a scene to its component. Add new layouts here as you create them.
 export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> = ({ scene, hasClipLayer }) => {
@@ -526,6 +528,34 @@ export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> =
         <BiasFunnelDiagram
           cardTimings={scene.cardTimings}
           modelAppearFrame={scene.modelAppearFrame}
+        />
+      );
+    case 'artifact-flow':
+      return (
+        <ArtifactFlow
+          mode={scene.mode}
+          label={scene.label}
+          titles={scene.titles}
+          items={scene.items}
+          itemTimings={scene.itemTimings}
+          convertFrame={scene.convertFrame}
+          stampFrame={scene.stampFrame}
+          stampText={scene.stampText}
+          aiFrame={scene.aiFrame}
+          badgeFrame={scene.badgeFrame}
+          badgeText={scene.badgeText}
+        />
+      );
+    case 'artifact-prompt':
+      return (
+        <ArtifactPrompt
+          variant={scene.variant}
+          label={scene.label}
+          title={scene.title}
+          fileName={scene.fileName}
+          artifactTiming={scene.artifactTiming}
+          prompts={scene.prompts}
+          promptTimings={scene.promptTimings}
         />
       );
   }
