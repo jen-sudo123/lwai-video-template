@@ -5,42 +5,39 @@ import { VideoData } from '../scenes/types';
 //        of silence (audioStartFrame 60). Unpadded original: audio/voice-tests/claude-file-uploads-v4-take1.mp3
 // Script: src/data/claude-file-uploads.v4.script.txt
 // Transcript (ElevenLabs Scribe, word timestamps, UNPADDED): src/data/prompting-with-artifacts.transcript.json
-// Screenshots: prompting-with-artifacts/images/01..10 (1920x992). imageWidth 1586 keeps the 820px box at the
-//              screenshot's aspect, so imageZoom centerX/centerY map 1:1 to screenshot coordinates.
+// Demo: the 10 screenshots (prompting-with-artifacts/images/, 1920x992) are stitched into one continuous clip,
+//       prompting-with-artifacts/video/demo.mp4 (1920x1080, white pad top/bottom, 10-frame crossfades), played via
+//       clipSrc like a screen recording. Camera moves are clipZoomKeyframes (origin in %, 30-frame lerp). This follows
+//       the house demo pattern (see claude-instructions.ts) instead of cutting between separate image scenes.
+//       Rebuild the clip with the shot plan in the comment on each video-clip scene if timings change.
 //
-// Comp frame = 60 + round(VO_s * 30).
+// Comp frame = 60 + round(VO_s * 30). Clip frame = comp frame - 1991.
 //
-//  #  scene                               | VO start | comp start | dur
-//  1  title card                          |    -     |      0     |  60
-//  2  intro: text-only → multimodal       |   0.00   |     60     | 322
-//  3  supported formats                   |  10.74   |    382     | 579
-//  4  three ways to upload                |  30.02   |    961     | 653
-//  5  PDFs vs other docs                  |  51.80   |   1614     | 377
-//  6  demo: handwritten notes (04 zoom)   |  64.37   |   1991     | 372
-//  7  01 Claude start                     |  76.77   |   2363     |  85
-//  8  02 + menu                           |  79.60   |   2448     | 220
-//  9  verify first (statement)            |  86.93   |   2668     | 224
-// 10  03 photo + verification prompt      |  94.40   |   2892     | 410
-// 11  why verify (cards)                  | 108.05   |   3302     | 314
-// 12  04 transcript with source           | 118.53   |   3616     | 185
-// 13  06 confirm + arrange prompt         | 124.70   |   3801     | 120
-// 14  07 arranged by level                | 128.69   |   3921     | 216
-// 15  08 expansion prompt                 | 135.90   |   4137     |  96
-// 16  09 matrix artifact (top)            | 139.09   |   4233     | 120
-// 17  10 matrix artifact (bottom)         | 143.10   |   4353     | 120
-// 18  chat vs Project knowledge           | 147.10   |   4473     | 256
-// 19  upload limits                       | 155.62   |   4729     | 696
-// 20  PDF limits                          | 178.84   |   5425     | 523
-// 21  limits change (statement)           | 196.28   |   5948     | 214
-// 22  uploads vs Artifacts (close)        | 203.40   |   6162     | 438
-//                                                       total   6600 (220.0s)
+//  #  scene                                   | VO start | comp start | dur
+//  1  title card                              |    -     |      0     |  60
+//  2  intro: text-only → multimodal           |   0.00   |     60     | 322
+//  3  supported formats                       |  10.74   |    382     | 579
+//  4  three ways to upload                    |  30.02   |    961     | 653
+//  5  PDFs vs other docs                      |  51.80   |   1614     | 377
+//  6  demo clip: note → 01 → 02               |  64.37   |   1991     | 677
+//  7  verify first (statement)                |  86.93   |   2668     | 224
+//  8  demo clip: 03 verification prompt       |  94.40   |   2892     | 410
+//  9  why verify (cards)                      | 108.05   |   3302     | 314
+// 10  demo clip: 04 → 05 → 06 → 07 → 08 → 09 → 10 | 118.53 | 3616   | 857
+// 11  chat vs Project knowledge               | 147.10   |   4473     | 256
+// 12  upload limits                           | 155.62   |   4729     | 696
+// 13  PDF limits                              | 178.84   |   5425     | 523
+// 14  limits change (statement)               | 196.28   |   5948     | 214
+// 15  uploads vs Artifacts (close)            | 203.40   |   6162     | 438
+//                                                           total   6600 (220.0s)
 
-const IMG = 'prompting-with-artifacts/images/';
-const SHOT = { objectFit: 'contain' as const, imageWidth: 1586 };
+const DEMO = 'prompting-with-artifacts/video/demo.mp4';
 
 export const promptingWithArtifacts: VideoData = {
   audioSrc: 'audio/prompting-with-artifacts.mp3',
   audioStartFrame: 60,
+  clipSrc: DEMO,
+  clipStartFrame: 1991,
   scenes: [
     // 1 — Title
     {
@@ -121,33 +118,20 @@ export const promptingWithArtifacts: VideoData = {
       durationInFrames: 377,
     },
 
-    // 6 — VO: "Let's see it in action. Here, I have handwritten notes with indicators for an AI fluency
-    //          matrix... Normally, I'd have to retype everything first."
+    // 6–8 — Continuous demo clip, part 1 (comp 1991 → 2668). No overlay.
+    // VO: "Let's see it in action. Here, I have handwritten notes..." [note zoom]
+    //     "Instead, I open Claude on my computer," [372: 01 start page]
+    //     "click the plus button, and upload a photo..." [457: 02 + menu]
     {
-      layout: 'centered-image-caption',
-      image: `${IMG}04-transcription-with-source.png`,
-      ...SHOT,
-      imageZoom: { centerX: 0.567, centerY: 0.2, scale: 2.4, startFrame: 0 },
-      durationInFrames: 372,
-    },
-
-    // 7 — VO: "Instead, I open Claude on my computer,"
-    {
-      layout: 'centered-image-caption',
-      image: `${IMG}01-claude-start.png`,
-      ...SHOT,
-      imageZoom: { centerX: 0.46, centerY: 0.55, scale: 1.5, startFrame: 0 },
-      durationInFrames: 85,
-    },
-
-    // 8 — VO: "click the plus button, and upload a photo of the notes. I could also drag and drop the
-    //          image, or paste it from my clipboard."
-    {
-      layout: 'centered-image-caption',
-      image: `${IMG}02-add-files-menu.png`,
-      ...SHOT,
-      imageZoom: { centerX: 0.39, centerY: 0.62, scale: 1.8, startFrame: 0 },
-      durationInFrames: 220,
+      layout: 'video-clip',
+      videoSrc: DEMO,
+      videoStartTime: 0,
+      clipZoomKeyframes: [
+        { startFrame: -30, scale: 2.4, originX: 56.7, originY: 22.6 },
+        { startFrame: 372, scale: 1.5, originX: 46, originY: 54.5 },
+        { startFrame: 457, scale: 1.8, originX: 39, originY: 63.3 },
+      ],
+      durationInFrames: 677,
     },
 
     // 9 — VO: "Before asking Claude for new ideas, it's important to check [89.92] how it read the image.
@@ -161,12 +145,15 @@ export const promptingWithArtifacts: VideoData = {
       durationInFrames: 224,
     },
 
-    // 10 — VO: the verification prompt, read verbatim
+    // 10 — Demo clip, part 2 (comp 2892 → 3302): 03 verification prompt, read verbatim.
     {
-      layout: 'centered-image-caption',
-      image: `${IMG}03-photo-and-verification-prompt.png`,
-      ...SHOT,
-      imageZoom: { centerX: 0.5, centerY: 0.5, scale: 1.7, startFrame: 0 },
+      layout: 'video-clip',
+      videoSrc: DEMO,
+      videoStartTime: 0,
+      clipZoomKeyframes: [
+        { startFrame: -30, scale: 1.4, originX: 50, originY: 50.4 },
+        { startFrame: 20, scale: 1.8, originX: 50, originY: 52 },
+      ],
       durationInFrames: 410,
     },
 
@@ -187,59 +174,28 @@ export const promptingWithArtifacts: VideoData = {
       durationInFrames: 314,
     },
 
-    // 12 — VO: "In this case, Claude reads the handwriting quite well, and gives me a clean transcript,
-    //           with no retyping."
+    // 12–17 — Demo clip, part 3 (comp 3616 → 4473). No overlay.
+    //   0 04 transcript with source   "Claude reads the handwriting quite well..."
+    //  92 05 legibility notes          "...a clean transcript, with no retyping."
+    // 185 06 confirm + arrange prompt  "I compare it with the original image..."
+    // 305 07 arranged by level         "Once the transcription is accurate... arrange it by level,"
+    // 521 08 expansion prompt          "or to suggest three more indicators for each level."
+    // 617 09 matrix artifact (top)     "For more relevant, grounded output..."
+    // 737 10 matrix artifact (bottom)  "...consider them together, in the same conversation."
     {
-      layout: 'centered-image-caption',
-      image: `${IMG}04-transcription-with-source.png`,
-      ...SHOT,
-      durationInFrames: 185,
-    },
-
-    // 13 — VO: "I compare it with the original image, and correct anything it misread."
-    {
-      layout: 'centered-image-caption',
-      image: `${IMG}06-confirmation-and-arrange-prompt.png`,
-      ...SHOT,
-      imageZoom: { centerX: 0.5, centerY: 0.92, scale: 1.7, startFrame: 0 },
-      durationInFrames: 120,
-    },
-
-    // 14 — VO: "Once the transcription is accurate, I can keep working with the content. For example, I
-    //           might ask Claude to arrange it by level,"
-    {
-      layout: 'centered-image-caption',
-      image: `${IMG}07-indicators-arranged-by-level.png`,
-      ...SHOT,
-      imageZoom: { centerX: 0.5, centerY: 0.35, scale: 1.4, startFrame: 0 },
-      durationInFrames: 216,
-    },
-
-    // 15 — VO: "or to suggest three more indicators for each level."
-    {
-      layout: 'centered-image-caption',
-      image: `${IMG}08-expansion-prompt.png`,
-      ...SHOT,
-      imageZoom: { centerX: 0.5, centerY: 0.92, scale: 1.7, startFrame: 0 },
-      durationInFrames: 96,
-    },
-
-    // 16 — VO: "For more relevant, grounded output, I can upload additional files"
-    {
-      layout: 'centered-image-caption',
-      image: `${IMG}09-expanded-matrix-artifact-top.png`,
-      ...SHOT,
-      imageZoom: { centerX: 0.64, centerY: 0.4, scale: 1.3, startFrame: 0 },
-      durationInFrames: 120,
-    },
-
-    // 17 — VO: "and ask Claude to consider them together, in the same conversation."
-    {
-      layout: 'centered-image-caption',
-      image: `${IMG}10-expanded-matrix-artifact-bottom.png`,
-      ...SHOT,
-      imageZoom: { centerX: 0.62, centerY: 0.4, scale: 1.3, startFrame: 0 },
-      durationInFrames: 120,
+      layout: 'video-clip',
+      videoSrc: DEMO,
+      videoStartTime: 0,
+      clipZoomKeyframes: [
+        { startFrame: -30, scale: 1.25, originX: 55, originY: 30 },
+        { startFrame: 92, scale: 1.3, originX: 50, originY: 45 },
+        { startFrame: 185, scale: 1.8, originX: 50, originY: 88.3 },
+        { startFrame: 305, scale: 1.4, originX: 50, originY: 41 },
+        { startFrame: 521, scale: 1.8, originX: 50, originY: 88.3 },
+        { startFrame: 617, scale: 1.3, originX: 64, originY: 40 },
+        { startFrame: 737, scale: 1.3, originX: 62, originY: 40 },
+      ],
+      durationInFrames: 857,
     },
 
     // 18 — VO: "You can attach files to a single chat [148.56], or add them to a Project's [150.48]
