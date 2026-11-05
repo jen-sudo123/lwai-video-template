@@ -91,6 +91,7 @@ type Shot = {
   boxes?: Box[];
   chips?: Chip[];
   fade?: number;
+  chipTop?: boolean;
 };
 
 const Screenshot: React.FC<{ t: number; shot: Shot }> = ({ t, shot }) => {
@@ -148,7 +149,7 @@ const Screenshot: React.FC<{ t: number; shot: Shot }> = ({ t, shot }) => {
             style={{
               position: 'absolute',
               left: 80,
-              bottom: 70,
+              ...(shot.chipTop ? { top: 70 } : { bottom: 70 }),
               padding: '18px 30px',
               borderRadius: 14,
               backgroundColor: '#111',
@@ -255,9 +256,40 @@ const SHOTS: Shot[] = [
   {
     start: 159.31,
     img: IMG('05-rebuilt-select'),
+    chipTop: true,
+    // Zooms into the real Select card (no side panel): From field, then each Map row.
+    // The card shows the values only as collapsed item() chips, so the caption chip spells
+    // out each expression as the VO names it. Status's row is below the screenshot's edge.
     cams: [
-      { t: 159.31, s: 1.3, f: [990, 760], at: [700, 560] },
-      { t: 160.0, s: 1.5, f: [990, 800], at: [520, 560] },
+      // f.y keeps the screenshot's bottom edge at the frame's bottom (the card sits at the
+      // bottom of the screenshot): f.y = 999 - 540 / (s * K).
+      { t: 159.31, s: 1.3, f: [990, 545] },
+      { t: 160.0, s: 1.5, f: [990, 606] },
+      { t: 176.6, s: 2.2, f: [1000, 731] },
+      { t: 187.6, s: 1.9, f: [960, 689] },
+      { t: 194.5, s: 2.3, f: [960, 743] },
+      { t: 213.8, s: 1.8, f: [960, 672] },
+    ],
+    boxes: [
+      { t: 177.29, end: 187.4, r: [716, 728, 566, 28] },
+      { t: 188.31, end: 194.6, r: [700, 796, 516, 150] },
+      { t: 194.86, end: 200.0, r: [700, 798, 516, 26] },
+      { t: 200.24, end: 202.1, r: [700, 838, 516, 26] },
+      { t: 202.3, end: 205.1, r: [700, 878, 516, 26] },
+      { t: 205.29, end: 210.0, r: [700, 918, 516, 26] },
+      { t: 224.63, end: 229.4, r: [700, 798, 516, 26] },
+    ],
+    chips: [
+      { t: 164.51, end: 176.9, text: 'Field names as plain text, values as expressions (fx)' },
+      { t: 177.29, end: 187.4, text: "From: body('Get_items')?['value']" },
+      { t: 188.31, end: 194.6, text: 'Map five fields: ID, Title, Owner, DueDate, Status' },
+      { t: 194.86, end: 200.0, text: "ID: item()['ID']" },
+      { t: 200.24, end: 202.1, text: "Title: item()['Title']" },
+      { t: 202.3, end: 205.1, text: "Owner: item()['field_1']" },
+      { t: 205.29, end: 210.0, text: "DueDate: item()['Dateandtime']" },
+      { t: 210.12, end: 214.0, text: "Status: item()['field_3']" },
+      { t: 218.51, end: 224.3, text: 'These are this list\'s internal names. Check the names in your own list.' },
+      { t: 224.63, end: 229.4, text: 'ID: an unambiguous reference to the tracker record' },
     ],
   },
   {
@@ -645,39 +677,6 @@ const PanelShell: React.FC<{ t: number; at: number; children: React.ReactNode }>
   );
 };
 
-const SelectPanel: React.FC<{ t: number }> = ({ t }) => (
-  <PanelShell t={t} at={161.0}>
-    <div className="af-panel-title">Select</div>
-    <div className="af-panel-sub" style={enter(t, 164.51, { y: 8 })}>
-      Field names as plain text, values as expressions (fx)
-    </div>
-    <div className="af-row" style={enter(t, 177.29)}>
-      <div className="af-row-label">From</div>
-      <div className="af-code">body('Get_items')?['value']</div>
-    </div>
-    <div className="af-row" style={enter(t, 188.31)}>
-      <div className="af-row-label">Map: five fields</div>
-      <div className="af-map">
-        {[
-          { at: 194.86, k: 'ID', v: "item()['ID']" },
-          { at: 200.24, k: 'Title', v: "item()['Title']" },
-          { at: 202.3, k: 'Owner', v: "item()['field_1']" },
-          { at: 205.29, k: 'DueDate', v: "item()['Dateandtime']" },
-          { at: 210.12, k: 'Status', v: "item()['field_3']" },
-        ].map((r) => (
-          <React.Fragment key={r.k}>
-            <div className="af-row-label" style={enter(t, r.at, { y: 6 })}>{r.k}</div>
-            <div className="af-code" style={enter(t, r.at, { y: 6 })}>{r.v}</div>
-          </React.Fragment>
-        ))}
-      </div>
-    </div>
-    <div className="af-note" style={enter(t, 218.51)}>
-      field_1, Dateandtime and field_3 are this list's internal names. Check the names in your own list.
-    </div>
-  </PanelShell>
-);
-
 const RespondPanel: React.FC<{ t: number }> = ({ t }) => (
   <PanelShell t={t} at={231.0}>
     <div className="af-panel-title">Respond to the agent</div>
@@ -712,7 +711,6 @@ const ITEMS: Item[] = [
 ].sort((a, b) => a.start - b.start);
 
 const PANELS: { from: number; to: number; C: React.FC<{ t: number }> }[] = [
-  { from: 159.31, to: 229.65, C: SelectPanel },
   { from: 229.65, to: 264.96, C: RespondPanel },
 ];
 
