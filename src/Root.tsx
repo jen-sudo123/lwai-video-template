@@ -49,6 +49,7 @@ import { promptingGptOpusFable } from './data/prompting-gpt-opus-fable';
 import { gptAdvancedModels } from './data/gpt-advanced-models';
 import { chatGPTTasks } from './data/chatgpt-tasks';
 import { claudeDesign } from './data/claude-design';
+import { promptingWithArtifacts } from './data/prompting-with-artifacts';
 import { copilotInWord } from './data/copilot-in-word';
 import { copilotInPowerPoint } from './data/copilot-in-powerpoint';
 import { copilotInPowerPointV2 } from './data/copilot-in-powerpoint-v2';
@@ -570,6 +571,16 @@ export const RemotionRoot: React.FC = () => {
         height={layout.height}
         schema={videoDataSchema}
         defaultProps={claudeDesign}
+      />
+      <Composition
+        id="PromptingWithArtifacts"
+        component={Video}
+        durationInFrames={calculateTotalFrames(promptingWithArtifacts.scenes)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+        schema={videoDataSchema}
+        defaultProps={promptingWithArtifacts}
       />
       <Composition
         id="CopilotInWord"
