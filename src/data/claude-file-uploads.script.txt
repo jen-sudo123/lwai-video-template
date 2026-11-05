@@ -1,0 +1,35 @@
+<speak>
+<break time="500ms"/>When Claude first launched as a rival to ChatGPT, it could only process text. But with newer multimodal models, Claude now works with far more formats.
+
+<break time="500ms"/>You can upload documents and images directly into Claude, including PDFs, Word documents, CSVs, and text files, plus common image formats like JPEG, PNG, GIF, and WebP. Claude can also work with Excel files, when code execution and file creation are turned on.
+
+<break time="500ms"/>Uploading files into Claude is simple, and it works much the same across platforms. On mobile, you can take a photo directly.
+
+<break time="500ms"/>On the web, or in the desktop app, you have three options. Drag and drop files into the chat. Click the plus button in the prompt box to add files or photos. Or copy and paste an image straight into the chat.
+
+<break time="500ms"/>One thing to remember. Claude can analyze the visual elements in supported PDFs. But for other documents, like Word files, it generally extracts the text, rather than reading the embedded images.
+
+<break time="500ms"/>Let's see it in action. Here, I have handwritten notes with indicators for an AI fluency matrix, and I want Claude to help me generate more ideas. Normally, I'd have to retype everything first.
+
+<break time="500ms"/>Instead, I open Claude on my computer, click the plus button, and upload a photo of the notes. I could also drag and drop the image, or paste it from my clipboard.
+
+<break time="500ms"/>Before asking Claude for new ideas, it's important to check how it read the image. So I start with a prompt like this.
+
+<break time="500ms"/>"This is a brainstorming note on indicators for AI fluency levels. First, tell me what you can clearly see. Then mark any unclear text as illegible. Do not organize or improve anything yet."
+
+<break time="500ms"/>This step catches transcription mistakes before you build on them. Especially with messy handwriting, blurry images, or anything that includes names, numbers, or dates.
+
+<break time="500ms"/>In this case, Claude reads the handwriting quite well, and gives me a clean transcript, with no retyping. I compare it with the original image, and correct anything it misread.
+
+<break time="500ms"/>Once the transcription is accurate, I can keep working with the content. For example, I might ask Claude to arrange it by level, or to suggest three more indicators for each level.
+
+<break time="500ms"/>For more relevant, grounded output, I can upload additional files and ask Claude to consider them together, in the same conversation. You can attach files to a single chat, or add them to a Project's knowledge, so you can reuse them across many conversations.
+
+<break time="500ms"/>A few practical limits to keep in mind. In a standard chat, each file can be up to five hundred megabytes, with up to twenty files per chat. Files in a Project's knowledge have a separate limit of thirty megabytes each. Images can be up to eight thousand by eight thousand pixels. And Excel files need code execution and file creation turned on.
+
+<break time="500ms"/>For PDFs, Claude can analyze both text and visuals, like charts and images, in files of up to one hundred pages. From there up to a thousand pages, it reads the text only. And anything over a thousand pages isn't supported in a standard chat.
+
+<break time="500ms"/>These limits can change, so check Claude's latest documentation when you're working with large or complex files.
+
+<break time="500ms"/>Finally, don't confuse uploads with Claude Artifacts. Artifacts is the side-by-side workspace for documents, code, and apps. It's a separate feature, but the two work really well together.
+</speak>
