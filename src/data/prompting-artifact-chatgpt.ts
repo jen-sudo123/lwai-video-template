@@ -1,6 +1,6 @@
 import { VideoData } from '../scenes/types';
 
-// Prompting with an Artifact in ChatGPT - Tutorial / demo video
+// Prompting with Artifacts in ChatGPT - Tutorial / demo video
 // Source: Prompting_artifact_with_chatGPT_2.mp4 (VEED export, 199.67s, narration embedded).
 // Video: video/prompting-artifact-chatgpt.mp4 = source with the VEED watermark and burned-in logo removed:
 //        python3 scripts/remove-veed-watermark.py <source>.mp4 <out>.mp4 --erase 44,996,252,52
@@ -40,7 +40,7 @@ export const promptingArtifactChatGPT: VideoData = {
     // 1 (0:00 -> 0:03)
     {
       layout: 'title-card-green',
-      title: 'Prompting with an Artifact',
+      title: 'Prompting with Artifacts in ChatGPT',
       label: 'CHATGPT DEMO',
       durationInFrames: 90,
     },
