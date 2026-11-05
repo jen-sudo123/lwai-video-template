@@ -45,6 +45,7 @@ import { copilotAgents } from './data/copilot-agents';
 import { copilotAgentsLarry } from './data/copilot-agents-larry';
 import { customGPTs } from './data/custom-gpts';
 import { chatGPTProjects } from './data/chatgpt-projects';
+import { promptingArtifactChatGPT } from './data/prompting-artifact-chatgpt';
 import { promptingGptOpusFable } from './data/prompting-gpt-opus-fable';
 import { gptAdvancedModels } from './data/gpt-advanced-models';
 import { chatGPTTasks } from './data/chatgpt-tasks';
@@ -898,6 +899,16 @@ export const RemotionRoot: React.FC = () => {
         height={layout.height}
         schema={videoDataSchema}
         defaultProps={chatGPTPlugins}
+      />
+      <Composition
+        id="PromptingArtifactChatGPT"
+        component={Video}
+        durationInFrames={calculateTotalFrames(promptingArtifactChatGPT.scenes)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+        schema={videoDataSchema}
+        defaultProps={promptingArtifactChatGPT}
       />
     </>
   );
