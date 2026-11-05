@@ -125,8 +125,8 @@ export const promptingArtifactChatGPT: VideoData = {
       videoSrc: CLIP,
       videoStartTime: 125.03,
       clipZoomKeyframes: [
-        { startFrame: -30, scale: 1.2, originX: 50, originY: 50 },
-        { startFrame: 122, scale: 1.35, originX: 65, originY: 55 },
+        { startFrame: -30, scale: 1.25, originX: 100, originY: 50 },
+        { startFrame: 122, scale: 1.35, originX: 85, originY: 55 },
       ],
       durationInFrames: 433,
     },
