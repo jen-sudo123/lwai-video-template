@@ -17,6 +17,8 @@ Usage: remove-veed-watermark.py in.mp4 out.mp4 [--plate-a T] [--plate-b T] [--tp
   --tpl-time : time (s) of a frame where the watermark sits top-right on pure white (default 2)
   --plate-a  : time of a frame whose non-TR corners are clean background (default 2)
   --plate-b  : time of a frame whose TR corner is clean background (default 10)
+  --erase    : extra box x,y,w,h to blank out (e.g. a burned-in logo); repeatable. Only applied on
+               frames where the box's surroundings are flat background. The plate must not contain it.
 Requires: opencv-python-headless, numpy, ffmpeg.
 """
 import argparse, subprocess, sys
@@ -29,6 +31,7 @@ ap.add_argument('--plate-a', type=float, default=2.0)
 ap.add_argument('--plate-b', type=float, default=10.0)
 ap.add_argument('--first-hop', type=int, default=133, help='last rest frame before the first corner hop')
 ap.add_argument('--max-frames', type=int, default=0)
+ap.add_argument('--erase', action='append', default=[])
 ap.add_argument('--debug', default=None, help='write per-frame detections to this file')
 a = ap.parse_args()
 
@@ -70,6 +73,7 @@ OUT_R = [1542, 1568, 1616, 1697, 1817]       # x offsets sliding off the right e
 OUT_L = [5, -20, -68, -149, -268]            # sliding off the left edge
 CORNERS = [('R', YT), ('L', YT), ('R', YB), ('L', YB)]  # TR, TL, BR, BL
 FIRST, PERIOD = a.first_hop, 900
+ERASE = [tuple(int(v) for v in e.split(',')) for e in a.erase]
 
 def positions(i):
     """List of (x, y, moving) watermark placements for frame i."""
@@ -107,6 +111,14 @@ while True:
         sx0, sx1 = max(0, x), min(W, x + tw)
         if sx1 > sx0:
             mask[y:y + th, sx0:sx1] |= sh[:, sx0 - x:sx1 - x]
+    for (ex, ey, ew, eh) in ERASE:
+        y0, y1 = max(0, ey - 12), min(H, ey + eh + 12)
+        x0, x1 = max(0, ex - 12), min(W, ex + ew + 12)
+        keep = mask[y0:y1, x0:x1] == 0          # ignore watermark pixels when judging the surroundings
+        keep[ey - y0:ey - y0 + eh, ex - x0:ex - x0 + ew] = False
+        ring = f[y0:y1, x0:x1][keep].astype(np.float32)
+        if len(ring) > 50 and ring.std(axis=0).max() < 4:
+            mask[ey:ey + eh, ex:ex + ew] = 1
     if dbg: print(i, hits, file=dbg)
     if mask.any():
         delta = f.astype(np.int16) - plate.astype(np.int16)

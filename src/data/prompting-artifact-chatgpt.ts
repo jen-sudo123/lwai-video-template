@@ -2,8 +2,8 @@ import { VideoData } from '../scenes/types';
 
 // Prompting with an Artifact in ChatGPT - Tutorial / demo video
 // Source: Prompting_artifact_with_chatGPT_2.mp4 (VEED export, 199.67s, narration embedded).
-// Video: video/prompting-artifact-chatgpt.mp4 = source with the VEED watermark removed
-//        (scripts/remove-veed-watermark.py). Played continuously; composition frame N == source time N/30.
+// Video: video/prompting-artifact-chatgpt.mp4 = source with the VEED watermark and burned-in logo removed:
+//        python3 scripts/remove-veed-watermark.py <source>.mp4 <out>.mp4 --erase 44,996,252,52 Played continuously; composition frame N == source time N/30.
 // Audio: audio/prompting-artifact-chatgpt.mp3, narration extracted from the source (raw, no padding).
 //
 // The source is blank (white) from 0:00-0:29 and 2:19.5-3:19.7; those stretches are placeholders
@@ -28,10 +28,6 @@ import { VideoData } from '../scenes/types';
 //                                                                  total   5990
 
 const CLIP = 'video/prompting-artifact-chatgpt.mp4';
-
-// Burned-in "Lead with AI" logo in the source (bottom-left). Hidden on unzoomed scenes;
-// VideoClip draws its own logo bottom-right.
-const HIDE_SOURCE_LOGO = { top: 990, left: 30, width: 300, height: 70 };
 
 export const promptingArtifactChatGPT: VideoData = {
   audioSrc: 'audio/prompting-artifact-chatgpt.mp3',
@@ -76,7 +72,6 @@ export const promptingArtifactChatGPT: VideoData = {
       layout: 'video-clip',
       videoSrc: CLIP,
       videoStartTime: 41.37,
-      whiteoutBox: HIDE_SOURCE_LOGO,
       durationInFrames: 428,
     },
 
@@ -85,7 +80,6 @@ export const promptingArtifactChatGPT: VideoData = {
       layout: 'video-clip',
       videoSrc: CLIP,
       videoStartTime: 55.63,
-      whiteoutBox: HIDE_SOURCE_LOGO,
       durationInFrames: 449,
     },
 
@@ -94,7 +88,7 @@ export const promptingArtifactChatGPT: VideoData = {
       layout: 'video-clip',
       videoSrc: CLIP,
       videoStartTime: 70.6,
-      clipZoom: { scale: 1.5, originX: 50, originY: 45 },
+      clipZoom: { scale: 1.3, originX: 50, originY: 70 },
       durationInFrames: 587,
     },
 
@@ -103,7 +97,7 @@ export const promptingArtifactChatGPT: VideoData = {
       layout: 'video-clip',
       videoSrc: CLIP,
       videoStartTime: 90.17,
-      clipZoom: { scale: 1.5, originX: 50, originY: 10 },
+      clipZoom: { scale: 1.4, originX: 50, originY: 0 },
       durationInFrames: 464,
     },
 
@@ -112,7 +106,7 @@ export const promptingArtifactChatGPT: VideoData = {
       layout: 'video-clip',
       videoSrc: CLIP,
       videoStartTime: 105.63,
-      clipZoom: { scale: 1.5, originX: 50, originY: 40 },
+      clipZoom: { scale: 1.3, originX: 50, originY: 70 },
       durationInFrames: 468,
     },
 
@@ -121,7 +115,7 @@ export const promptingArtifactChatGPT: VideoData = {
       layout: 'video-clip',
       videoSrc: CLIP,
       videoStartTime: 121.23,
-      clipZoom: { scale: 1.5, originX: 50, originY: 20 },
+      clipZoom: { scale: 1.4, originX: 50, originY: 0 },
       durationInFrames: 114,
     },
 
