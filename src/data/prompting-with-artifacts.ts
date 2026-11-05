@@ -32,7 +32,6 @@ export const promptingWithArtifacts: VideoData = {
     {
       layout: 'title-card-green',
       title: 'Prompting with Artifacts',
-      subtitle: 'Stop paying the translation tax',
       durationInFrames: 45,
     },
 
@@ -41,9 +40,8 @@ export const promptingWithArtifacts: VideoData = {
     //      is the extra work that you do just to make AI usable."
     {
       layout: 'big-statement',
-      label: 'THE TRANSLATION TAX',
-      text: 'The extra work you do\njust to make AI usable.',
-      highlight: 'just to make AI usable.',
+      text: 'The translation tax\nis the extra work you do\njust to make AI usable.',
+      highlight: 'The translation tax',
       size: 'title',
       animation: 'kinetic',
       durationInFrames: 300,
