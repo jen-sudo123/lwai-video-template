@@ -252,7 +252,7 @@ const SHOTS: Shot[] = [
     ],
     chips: [{ t: 141.21, end: 145.6, text: "Chris's onboarding FAQs: not in the tracker" }],
   },
-  // Respond to the agent outputs: expression panel handled by <ExpressionPanel>
+  // Select and Respond to the agent: zooms into the real cards, captions spell out the expressions
   {
     start: 159.31,
     img: IMG('05-rebuilt-select'),
@@ -295,9 +295,26 @@ const SHOTS: Shot[] = [
   {
     start: 229.65,
     img: IMG('05b-rebuilt-outputs'),
+    // Zooms into the real Respond to the agent card (no side panel). f.y keeps the
+    // screenshot's bottom edge at the frame's bottom: f.y = 999 - 540 / (s * K).
     cams: [
-      { t: 229.65, s: 1.35, f: [990, 690], at: [520, 560] },
-      { t: 230.0, s: 1.5, f: [990, 690], at: [520, 560], dur: 2 },
+      { t: 229.65, s: 1.3, f: [990, 545] },
+      { t: 230.2, s: 1.6, f: [990, 631] },
+      { t: 247.0, s: 2.3, f: [990, 743] },
+    ],
+    boxes: [
+      { t: 230.69, end: 233.7, r: [700, 538, 580, 30] },
+      { t: 233.92, end: 247.0, r: [736, 586, 510, 128] },
+      { t: 247.42, end: 256.4, r: [736, 590, 510, 28] },
+      { t: 256.62, end: 264.7, r: [736, 686, 510, 28] },
+    ],
+    chips: [
+      { t: 233.92, end: 235.6, text: 'Two Text outputs' },
+      { t: 235.78, end: 239.8, text: "Started from the Workflows page? Add this action yourself." },
+      { t: 240.0, end: 247.0, text: "Created from an agent's Tools page? Configure the existing action." },
+      { t: 247.42, end: 251.2, text: "TrackerRecords: string(body('Select'))" },
+      { t: 251.34, end: 256.4, text: 'Converts the array into JSON text for the agent' },
+      { t: 256.62, end: 264.7, text: "LookupStatus: if(greater(length(body('Select')),0),'Ready','NoRecords')" },
     ],
   },
   // Run output: Ready
@@ -666,41 +683,6 @@ const CARDS: CardDef[] = [
   },
 ];
 
-// ── Expression panels (beside the zoomed Select / Respond cards) ─────────
-
-const PanelShell: React.FC<{ t: number; at: number; children: React.ReactNode }> = ({ t, at, children }) => {
-  const p = prog(t, at, 0.7);
-  return (
-    <div className="af-panel" style={{ opacity: p, transform: `translateX(${40 * (1 - p)}px)` }}>
-      {children}
-    </div>
-  );
-};
-
-const RespondPanel: React.FC<{ t: number }> = ({ t }) => (
-  <PanelShell t={t} at={231.0}>
-    <div className="af-panel-title">Respond to the agent</div>
-    <div className="af-panel-sub" style={enter(t, 232.0, { y: 8 })}>Two Text outputs</div>
-    <div className="af-row" style={enter(t, 247.42)}>
-      <div className="af-row-label">TrackerRecords</div>
-      <div className="af-code">string(body('Select'))</div>
-      <div className="af-row-note" style={enter(t, 251.34, { y: 6 })}>Converts the array into JSON text for the agent</div>
-    </div>
-    <div className="af-row" style={{ marginTop: 34, ...enter(t, 256.62) }}>
-      <div className="af-row-label">LookupStatus</div>
-      <div className="af-code">
-        if(greater(length(body('Select')),0),
-        <br />
-        'Ready','NoRecords')
-      </div>
-    </div>
-    <div className="af-note" style={enter(t, 237.6)}>
-      Starting from the Workflows page doesn't add this action. If your flow already has one (created from an
-      agent's Tools page), configure that action instead.
-    </div>
-  </PanelShell>
-);
-
 // ── Timeline ─────────────────────────────────────────────────────────────
 
 type Item = { start: number; fade: number; node: (t: number) => React.ReactNode; logo?: boolean };
@@ -710,9 +692,6 @@ const ITEMS: Item[] = [
   ...CARDS.map((c) => ({ start: c.start, fade: CROSSFADE, node: c.render, logo: true })),
 ].sort((a, b) => a.start - b.start);
 
-const PANELS: { from: number; to: number; C: React.FC<{ t: number }> }[] = [
-  { from: 229.65, to: 264.96, C: RespondPanel },
-];
 
 const Body: React.FC = () => {
   const frame = useCurrentFrame();
@@ -736,13 +715,6 @@ const Body: React.FC = () => {
           </AbsoluteFill>
         );
       })}
-      {PANELS.map(({ from, to, C }, i) =>
-        t >= from && t < to + CROSSFADE ? (
-          <AbsoluteFill key={`p${i}`} style={{ zIndex: 200, opacity: 1 - prog(t, to, CROSSFADE, IN_OUT) }}>
-            <C t={t} />
-          </AbsoluteFill>
-        ) : null,
-      )}
       <AbsoluteFill style={{ backgroundColor: colors.white, opacity: endFade, zIndex: 300 }} />
     </AbsoluteFill>
   );
