@@ -92,6 +92,8 @@ type Shot = {
   chips?: Chip[];
   fade?: number;
   chipTop?: boolean;
+  /** Source height when the screenshot isn't 1920x999 (width is always 1920). */
+  h?: number;
 };
 
 const Screenshot: React.FC<{ t: number; shot: Shot }> = ({ t, shot }) => {
@@ -108,7 +110,7 @@ const Screenshot: React.FC<{ t: number; shot: Shot }> = ({ t, shot }) => {
           left,
           top,
           width: SRC_W,
-          height: SRC_H,
+          height: shot.h ?? SRC_H,
           transform: `scale(${scale})`,
           transformOrigin: '0 0',
           borderRadius: 18 / scale,
@@ -117,7 +119,7 @@ const Screenshot: React.FC<{ t: number; shot: Shot }> = ({ t, shot }) => {
           backgroundColor: colors.white,
         }}
       >
-        <Img src={staticFile(shot.img)} style={{ width: SRC_W, height: SRC_H, display: 'block' }} />
+        <Img src={staticFile(shot.img)} style={{ width: SRC_W, height: shot.h ?? SRC_H, display: 'block' }} />
         {(shot.boxes ?? []).map((b, i) => {
           const p = prog(t, b.t - LEAD, 0.45) * (b.end ? 1 - prog(t, b.end, 0.4) : 1);
           const [x, y, w, h] = b.r;
@@ -255,29 +257,30 @@ const SHOTS: Shot[] = [
   // Select and Respond to the agent: zooms into the real cards, captions spell out the expressions
   {
     start: 159.31,
-    img: IMG('05-rebuilt-select'),
+    img: IMG('05f-select-full-map'),
+    h: 1066,
     chipTop: true,
-    // Zooms into the real Select card (no side panel): From field, then each Map row.
-    // The card shows the values only as collapsed item() chips, so the caption chip spells
-    // out each expression as the VO names it. Status's row is below the screenshot's edge.
+    // Zooms into the real Select card (no side panel): From field, then each Map row. The
+    // screenshot (user-supplied, 2000x1110 scaled to 1920x1066) shows all five rows, with
+    // values as tokens; the caption chip spells out each expression as the VO names it.
+    // f.y <= 1066 - 540 / (s * K) keeps the screenshot's bottom edge at or below the frame's.
     cams: [
-      // f.y keeps the screenshot's bottom edge at the frame's bottom (the card sits at the
-      // bottom of the screenshot): f.y = 999 - 540 / (s * K).
-      { t: 159.31, s: 1.3, f: [990, 545] },
-      { t: 160.0, s: 1.5, f: [990, 606] },
-      { t: 176.6, s: 2.2, f: [1000, 731] },
-      { t: 187.6, s: 1.9, f: [960, 689] },
-      { t: 194.5, s: 2.3, f: [960, 743] },
-      { t: 213.8, s: 1.8, f: [960, 672] },
+      { t: 159.31, s: 1.0, f: [960, 533] },
+      { t: 160.3, s: 1.4, f: [1010, 645] },
+      { t: 176.6, s: 2.0, f: [1010, 700] },
+      { t: 187.6, s: 1.7, f: [1010, 719] },
+      { t: 194.5, s: 2.1, f: [1010, 786] },
+      { t: 213.8, s: 1.6, f: [1010, 698] },
     ],
     boxes: [
-      { t: 177.29, end: 187.4, r: [716, 728, 566, 28] },
-      { t: 188.31, end: 194.6, r: [700, 796, 516, 150] },
-      { t: 194.86, end: 200.0, r: [700, 798, 516, 26] },
-      { t: 200.24, end: 202.1, r: [700, 838, 516, 26] },
-      { t: 202.3, end: 205.1, r: [700, 878, 516, 26] },
-      { t: 205.29, end: 210.0, r: [700, 918, 516, 26] },
-      { t: 224.63, end: 229.4, r: [700, 798, 516, 26] },
+      { t: 177.29, end: 187.4, r: [624, 626, 774, 38] },
+      { t: 188.31, end: 194.6, r: [622, 716, 684, 262] },
+      { t: 194.86, end: 200.0, r: [622, 719, 684, 40] },
+      { t: 200.24, end: 202.1, r: [622, 773, 684, 40] },
+      { t: 202.3, end: 205.1, r: [622, 827, 684, 40] },
+      { t: 205.29, end: 210.0, r: [622, 881, 684, 40] },
+      { t: 210.12, end: 214.0, r: [622, 935, 684, 40] },
+      { t: 224.63, end: 229.4, r: [622, 719, 684, 40] },
     ],
     chips: [
       { t: 164.51, end: 176.9, text: 'Field names as plain text, values as expressions (fx)' },
