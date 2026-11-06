@@ -110,6 +110,10 @@ Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 - No Remotion Studio and no Whisper: verify with `remotion still`, transcribe with the `speech-to-text` skill (ElevenLabs Scribe, word timestamps).
 - Nothing on the cloud machine survives the session: push media and renders to Drive, commit code before finishing.
 - Renders: concurrency can go above 1 here, but keep `--timeout=120000`.
+- Fonts fail (`ERR_CERT_AUTHORITY_INVALID`) because Remotion forces `--no-proxy-server`. Add
+  `--browser-executable=scripts/cloud-chrome.sh` to `remotion still` / `remotion render`.
+- Transcription: the direct ElevenLabs STT call can 401 here; the ElevenLabs connector's
+  `creative_transcribe_audio` works (word timestamps via `words_download_url`).
 
 ## Local Mac only
 
