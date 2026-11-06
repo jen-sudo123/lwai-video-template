@@ -482,6 +482,16 @@ const takeawayStack = z.object({
   durationInFrames: z.number(),
 });
 
+const screenshotWalkthrough = z.object({
+  layout: z.literal('screenshot-walkthrough'),
+  shots: z.array(z.object({ src: z.string(), from: z.number() })),
+  events: z.array(z.object({ frame: z.number(), x: z.number(), y: z.number(), click: z.boolean().optional() })).optional(),
+  cursorStart: z.object({ x: z.number(), y: z.number() }).optional(),
+  zoomKeyframes: z.array(z.object({ startFrame: z.number(), scale: z.number(), originX: z.number(), originY: z.number() })).optional(),
+  logoPosition: z.enum(['bottom-left', 'bottom-right']).optional(),
+  durationInFrames: z.number(),
+});
+
 const videoClip = z.object({
   layout: z.literal('video-clip'),
   videoSrc: z.string(),
@@ -580,6 +590,7 @@ export const sceneSchema = z.discriminatedUnion('layout', [
   takeawayStack,
   largeLabelBodySplit,
   videoClip,
+  screenshotWalkthrough,
   imageMarquee,
   z.object({
     layout: z.literal('acronym-spotlight'),

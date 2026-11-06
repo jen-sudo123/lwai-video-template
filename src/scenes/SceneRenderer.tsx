@@ -35,6 +35,7 @@ import { ThreeModeColumns } from './ThreeModeColumns';
 import { ModelPickerLocations } from './ModelPickerLocations';
 import { LargeLabelBodySplit } from './LargeLabelBodySplit';
 import { VideoClip } from './VideoClip';
+import { ScreenshotWalkthrough } from './ScreenshotWalkthrough';
 import { ImageMarquee } from './ImageMarquee';
 import { AcronymSpotlight } from './AcronymSpotlight';
 import { LineChart } from './LineChart';
@@ -438,6 +439,16 @@ export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> =
           subtitle={(scene as any).subtitle}
           body={(scene as any).body}
           bodyTimings={(scene as any).bodyTimings}
+        />
+      );
+    case 'screenshot-walkthrough':
+      return (
+        <ScreenshotWalkthrough
+          shots={scene.shots}
+          events={scene.events}
+          cursorStart={scene.cursorStart}
+          zoomKeyframes={scene.zoomKeyframes}
+          logoPosition={scene.logoPosition}
         />
       );
     case 'video-clip':

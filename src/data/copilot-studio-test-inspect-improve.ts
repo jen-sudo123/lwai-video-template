@@ -5,31 +5,31 @@ import { VideoData } from '../scenes/types';
 // Audio: audio/copilot-studio-test-inspect-improve.padded.mp3 = 3.0s silence + audio/copilot-studio-test-inspect-improve.mp3 (Daan, eleven_v4, two halves joined
 //        with 0.6s gap). audioStartFrame 90 trims the padding, so VO t=0 plays at comp f90.
 // Transcript (unpadded VO seconds, ElevenLabs Scribe): src/data/copilot-studio-test-inspect-improve.transcript.json
-// Background: video/copilot-studio-test-inspect-improve/copilot-studio-test-inspect-improve.mp4 = screenshot slideshow (public/copilot-studio-test-inspect-improve/images/*.png) whose timeline
-//        equals the composition timeline (clipStartFrame 0); slides hide it.
+// Screens: screenshot-walkthrough scenes over public/copilot-studio-test-inspect-improve/images/*.png, with an animated cursor,
+//        clicks timed to the narration, and click-origin transitions between screenshots.
 // comp_frame = round((vo_t + 3.0) * 30)
 //
 //  #   kind  scene                            |  VO (s) | comp f | dur
 //   1  title-card-green                      |   -3.00 |    0 |   90
-//   2  clip  The agent and its limits         |    0.00 |    90 |  570
+//   2  walk  The agent and its limits         |    0.00 |    90 |  570
 //   3  slide Three checks                     |   19.00 |   660 |  618
-//   4  clip  New evaluation, single response, |   39.60 |  1278 |  498
+//   4  walk  New evaluation, single response, |   39.60 |  1278 |  498
 //   5  slide Three decisions                  |   56.20 |  1776 | 1188
-//   6  clip  Test cases, method, score, profi |   95.80 |  2964 | 1512
-//   7  clip  Baseline: three passes           |  146.20 |  4476 |  513
+//   6  walk  Test cases, method, score, profi |   95.80 |  2964 | 1512
+//   7  walk  Baseline: three passes           |  146.20 |  4476 |  513
 //   8  slide Score is the start               |  163.30 |  4989 |  243
-//   9  clip  Taylor result, activity map      |  171.40 |  5232 |  819
+//   9  walk  Taylor result, activity map      |  171.40 |  5232 |  819
 //  10  slide Retrieval vs matching            |  198.70 |  6051 |  465
-//  11  clip  Inside the agent flow            |  214.20 |  6516 | 1089
-//  12  clip  Boundaries: tools + SharePoint   |  250.50 |  7605 |  795
+//  11  walk  Inside the agent flow            |  214.20 |  6516 | 1089
+//  12  walk  Boundaries: tools + SharePoint   |  250.50 |  7605 |  795
 //  13  slide Preserve the baseline            |  277.00 |  8400 |  486
 //  14  slide Symptom -> where to look         |  293.20 |  8886 |  816
 //  15  slide Check the test first             |  320.40 |  9702 |  624
 //  16  slide One targeted change              |  341.20 | 10326 |  180
-//  17  clip  Rerun and compare                |  347.20 | 10506 | 1284
+//  17  walk  Rerun and compare                |  347.20 | 10506 | 1284
 //  18  slide Repeatability vs regressions     |  390.00 | 11790 |  354
-//  19  clip  Final SharePoint check           |  401.80 | 12144 |  261
-//  20  clip  Monitor                          |  410.50 | 12405 |  873
+//  19  walk  Final SharePoint check           |  401.80 | 12144 |  261
+//  20  walk  Monitor                          |  410.50 | 12405 |  873
 //  21  slide Clarification can be right       |  439.60 | 13278 |  285
 //  22  slide The loop                         |  449.10 | 13563 |  213
 //  23  slide Evaluation / Activity / Monitor  |  456.20 | 13776 |  469
@@ -38,8 +38,6 @@ import { VideoData } from '../scenes/types';
 export const copilotStudioTestInspectImprove: VideoData = {
   audioSrc: 'audio/copilot-studio-test-inspect-improve.padded.mp3',
   audioStartFrame: 90,
-  clipSrc: 'video/copilot-studio-test-inspect-improve/copilot-studio-test-inspect-improve.mp4',
-  clipStartFrame: 0,
   scenes: [
     {
       layout: 'title-card-green',
@@ -47,17 +45,42 @@ export const copilotStudioTestInspectImprove: VideoData = {
       title: 'Test, Inspect, and Improve\nYour Agent',
       durationInFrames: 90,
     },
-    // 2 The agent and its limits (VO 0.00s, comp f90) shots: 01
+    // 2 The agent and its limits (VO 0.00s, comp f90)
     {
-      layout: 'video-clip',
-      videoSrc: 'video/copilot-studio-test-inspect-improve/copilot-studio-test-inspect-improve.mp4',
-      videoStartTime: 3.00,
-      logoPosition: 'bottom-left',
-      clipZoomKeyframes: [
-        { startFrame: -30, scale: 1.0, originX: 50, originY: 50 },
-        { startFrame: 30, scale: 1.35, originX: 20, originY: 30 },
+      "layout": "screenshot-walkthrough",
+      "shots": [
+        {
+          "src": "copilot-studio-test-inspect-improve/images/01-agent-overview.png",
+          "from": 0
+        }
       ],
-      durationInFrames: 570,
+      "events": [
+        {
+          "frame": 342,
+          "x": 649,
+          "y": 273
+        }
+      ],
+      "cursorStart": {
+        "x": 1240,
+        "y": 760
+      },
+      "zoomKeyframes": [
+        {
+          "startFrame": -30,
+          "scale": 1.0,
+          "originX": 50,
+          "originY": 50
+        },
+        {
+          "startFrame": 30,
+          "scale": 1.35,
+          "originX": 20,
+          "originY": 30
+        }
+      ],
+      "logoPosition": "bottom-left",
+      "durationInFrames": 570
     },
     // 3 Three checks (VO 19.00s, comp f660)
     {
@@ -83,13 +106,55 @@ export const copilotStudioTestInspectImprove: VideoData = {
       ],
       "durationInFrames": 618
     },
-    // 4 New evaluation, single response, write (VO 39.60s, comp f1278) shots: 02, 03, 04
+    // 4 New evaluation, single response, write (VO 39.60s, comp f1278)
     {
-      layout: 'video-clip',
-      videoSrc: 'video/copilot-studio-test-inspect-improve/copilot-studio-test-inspect-improve.mp4',
-      videoStartTime: 42.60,
-      logoPosition: 'bottom-left',
-      durationInFrames: 498,
+      "layout": "screenshot-walkthrough",
+      "shots": [
+        {
+          "src": "copilot-studio-test-inspect-improve/images/02-evaluation-entry.png",
+          "from": 0
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/03-single-response.png",
+          "from": 86
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/04-add-questions-write.png",
+          "from": 365
+        }
+      ],
+      "events": [
+        {
+          "frame": 81,
+          "x": 175,
+          "y": 132,
+          "click": true
+        },
+        {
+          "frame": 294,
+          "x": 144,
+          "y": 217,
+          "click": true
+        },
+        {
+          "frame": 360,
+          "x": 849,
+          "y": 661,
+          "click": true
+        },
+        {
+          "frame": 417,
+          "x": 101,
+          "y": 284,
+          "click": true
+        }
+      ],
+      "cursorStart": {
+        "x": 964,
+        "y": 69
+      },
+      "logoPosition": "bottom-left",
+      "durationInFrames": 498
     },
     // 5 Three decisions (VO 56.20s, comp f1776)
     {
@@ -115,26 +180,164 @@ export const copilotStudioTestInspectImprove: VideoData = {
       ],
       "durationInFrames": 1188
     },
-    // 6 Test cases, method, score, profile (VO 95.80s, comp f2964) shots: 05, 06, 07, 09, 08
+    // 6 Test cases, method, score, profile (VO 95.80s, comp f2964)
     {
-      layout: 'video-clip',
-      videoSrc: 'video/copilot-studio-test-inspect-improve/copilot-studio-test-inspect-improve.mp4',
-      videoStartTime: 98.80,
-      logoPosition: 'bottom-left',
-      clipZoomKeyframes: [
-        { startFrame: -30, scale: 1.0, originX: 50, originY: 50 },
-        { startFrame: 36, scale: 1.3, originX: 4, originY: 32 },
-        { startFrame: 414, scale: 1.0, originX: 50, originY: 50 },
+      "layout": "screenshot-walkthrough",
+      "shots": [
+        {
+          "src": "copilot-studio-test-inspect-improve/images/05-three-test-cases.png",
+          "from": 0
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/06-test-methods.png",
+          "from": 632
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/07-pass-score.png",
+          "from": 863
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/09-ready-to-run.png",
+          "from": 1079
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/08-profile-and-connections.png",
+          "from": 1274
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/09-ready-to-run.png",
+          "from": 1457
+        }
       ],
-      durationInFrames: 1512,
+      "events": [
+        {
+          "frame": 426,
+          "x": 1676,
+          "y": 283,
+          "click": true
+        },
+        {
+          "frame": 627,
+          "x": 1575,
+          "y": 447,
+          "click": true
+        },
+        {
+          "frame": 681,
+          "x": 1068,
+          "y": 349,
+          "click": true
+        },
+        {
+          "frame": 858,
+          "x": 1327,
+          "y": 835,
+          "click": true
+        },
+        {
+          "frame": 918,
+          "x": 940,
+          "y": 571
+        },
+        {
+          "frame": 1074,
+          "x": 1187,
+          "y": 623,
+          "click": true
+        },
+        {
+          "frame": 1176,
+          "x": 1569,
+          "y": 388
+        },
+        {
+          "frame": 1269,
+          "x": 1583,
+          "y": 581,
+          "click": true
+        },
+        {
+          "frame": 1452,
+          "x": 1187,
+          "y": 671,
+          "click": true
+        },
+        {
+          "frame": 1485,
+          "x": 1783,
+          "y": 913,
+          "click": true
+        }
+      ],
+      "cursorStart": {
+        "x": 1678,
+        "y": 284
+      },
+      "zoomKeyframes": [
+        {
+          "startFrame": -30,
+          "scale": 1.0,
+          "originX": 50,
+          "originY": 50
+        },
+        {
+          "startFrame": 36,
+          "scale": 1.3,
+          "originX": 4,
+          "originY": 32
+        },
+        {
+          "startFrame": 384,
+          "scale": 1.0,
+          "originX": 50,
+          "originY": 50
+        }
+      ],
+      "logoPosition": "bottom-left",
+      "durationInFrames": 1512
     },
-    // 7 Baseline: three passes (VO 146.20s, comp f4476) shots: 17, 13, 12
+    // 7 Baseline: three passes (VO 146.20s, comp f4476)
     {
-      layout: 'video-clip',
-      videoSrc: 'video/copilot-studio-test-inspect-improve/copilot-studio-test-inspect-improve.mp4',
-      videoStartTime: 149.20,
-      logoPosition: 'bottom-left',
-      durationInFrames: 513,
+      "layout": "screenshot-walkthrough",
+      "shots": [
+        {
+          "src": "copilot-studio-test-inspect-improve/images/17-baseline-three-passes.png",
+          "from": 0
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/13-new-action-result.png",
+          "from": 362
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/12-clarification-result.png",
+          "from": 431
+        }
+      ],
+      "events": [
+        {
+          "frame": 42,
+          "x": 1500,
+          "y": 240
+        },
+        {
+          "frame": 357,
+          "x": 369,
+          "y": 376,
+          "click": true
+        },
+        {
+          "frame": 426,
+          "x": 324,
+          "y": 227,
+          "click": true
+        }
+      ],
+      "cursorStart": {
+        "x": 1783,
+        "y": 913
+      },
+      "logoPosition": "bottom-left",
+      "durationInFrames": 513
     },
     // 8 Score is the start (VO 163.30s, comp f4989)
     {
@@ -146,19 +349,69 @@ export const copilotStudioTestInspectImprove: VideoData = {
       "animation": "kinetic",
       "durationInFrames": 243
     },
-    // 9 Taylor result, activity map (VO 171.40s, comp f5232) shots: 18, 19
+    // 9 Taylor result, activity map (VO 171.40s, comp f5232)
     {
-      layout: 'video-clip',
-      videoSrc: 'video/copilot-studio-test-inspect-improve/copilot-studio-test-inspect-improve.mp4',
-      videoStartTime: 174.40,
-      logoPosition: 'bottom-left',
-      clipZoomKeyframes: [
-        { startFrame: -30, scale: 1.0, originX: 50, originY: 50 },
-        { startFrame: 438, scale: 1.5, originX: 38, originY: 50 },
-        { startFrame: 612, scale: 1.5, originX: 38, originY: 32 },
-        { startFrame: 756, scale: 1.0, originX: 50, originY: 50 },
+      "layout": "screenshot-walkthrough",
+      "shots": [
+        {
+          "src": "copilot-studio-test-inspect-improve/images/17-baseline-three-passes.png",
+          "from": 0
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/18-update-result.png",
+          "from": 26
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/19-activity-tracker-outputs.png",
+          "from": 296
+        }
       ],
-      durationInFrames: 819,
+      "events": [
+        {
+          "frame": 21,
+          "x": 369,
+          "y": 432,
+          "click": true
+        },
+        {
+          "frame": 291,
+          "x": 1723,
+          "y": 185,
+          "click": true
+        }
+      ],
+      "cursorStart": {
+        "x": 1871,
+        "y": 123
+      },
+      "zoomKeyframes": [
+        {
+          "startFrame": -30,
+          "scale": 1.0,
+          "originX": 50,
+          "originY": 50
+        },
+        {
+          "startFrame": 438,
+          "scale": 1.5,
+          "originX": 38,
+          "originY": 50
+        },
+        {
+          "startFrame": 612,
+          "scale": 1.5,
+          "originX": 38,
+          "originY": 32
+        },
+        {
+          "startFrame": 756,
+          "scale": 1.0,
+          "originX": 50,
+          "originY": 50
+        }
+      ],
+      "logoPosition": "bottom-left",
+      "durationInFrames": 819
     },
     // 10 Retrieval vs matching (VO 198.70s, comp f6051)
     {
@@ -181,25 +434,125 @@ export const copilotStudioTestInspectImprove: VideoData = {
       ],
       "durationInFrames": 465
     },
-    // 11 Inside the agent flow (VO 214.20s, comp f6516) shots: 14, 15, 16
+    // 11 Inside the agent flow (VO 214.20s, comp f6516)
     {
-      layout: 'video-clip',
-      videoSrc: 'video/copilot-studio-test-inspect-improve/copilot-studio-test-inspect-improve.mp4',
-      videoStartTime: 217.20,
-      logoPosition: 'bottom-left',
-      durationInFrames: 1089,
-    },
-    // 12 Boundaries: tools + SharePoint (VO 250.50s, comp f7605) shots: 22, 29
-    {
-      layout: 'video-clip',
-      videoSrc: 'video/copilot-studio-test-inspect-improve/copilot-studio-test-inspect-improve.mp4',
-      videoStartTime: 253.50,
-      logoPosition: 'bottom-left',
-      clipZoomKeyframes: [
-        { startFrame: -30, scale: 1.0, originX: 50, originY: 50 },
-        { startFrame: 345, scale: 1.5, originX: 50, originY: 40 },
+      "layout": "screenshot-walkthrough",
+      "shots": [
+        {
+          "src": "copilot-studio-test-inspect-improve/images/22-tools-boundaries.png",
+          "from": 0
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/14-flow-run-history.png",
+          "from": 131
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/15-retrieval-only-flow.png",
+          "from": 242
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/16-flow-response-body.png",
+          "from": 725
+        }
       ],
-      durationInFrames: 795,
+      "events": [
+        {
+          "frame": 126,
+          "x": 215,
+          "y": 281,
+          "click": true
+        },
+        {
+          "frame": 237,
+          "x": 197,
+          "y": 243,
+          "click": true
+        },
+        {
+          "frame": 363,
+          "x": 855,
+          "y": 231
+        },
+        {
+          "frame": 408,
+          "x": 793,
+          "y": 351
+        },
+        {
+          "frame": 444,
+          "x": 783,
+          "y": 471
+        },
+        {
+          "frame": 720,
+          "x": 831,
+          "y": 591,
+          "click": true
+        },
+        {
+          "frame": 783,
+          "x": 1176,
+          "y": 637,
+          "click": true
+        }
+      ],
+      "cursorStart": {
+        "x": 686,
+        "y": 67
+      },
+      "logoPosition": "bottom-left",
+      "durationInFrames": 1089
+    },
+    // 12 Boundaries: tools + SharePoint (VO 250.50s, comp f7605)
+    {
+      "layout": "screenshot-walkthrough",
+      "shots": [
+        {
+          "src": "copilot-studio-test-inspect-improve/images/22-tools-boundaries.png",
+          "from": 0
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/29-tracker-after-tests.png",
+          "from": 276
+        }
+      ],
+      "events": [
+        {
+          "frame": 75,
+          "x": 215,
+          "y": 281
+        },
+        {
+          "frame": 147,
+          "x": 1763,
+          "y": 326
+        },
+        {
+          "frame": 447,
+          "x": 875,
+          "y": 452
+        }
+      ],
+      "cursorStart": {
+        "x": 1176,
+        "y": 637
+      },
+      "zoomKeyframes": [
+        {
+          "startFrame": -30,
+          "scale": 1.0,
+          "originX": 50,
+          "originY": 50
+        },
+        {
+          "startFrame": 345,
+          "scale": 1.5,
+          "originX": 50,
+          "originY": 40
+        }
+      ],
+      "logoPosition": "bottom-left",
+      "durationInFrames": 795
     },
     // 13 Preserve the baseline (VO 277.00s, comp f8400)
     {
@@ -272,17 +625,87 @@ export const copilotStudioTestInspectImprove: VideoData = {
       "animation": "kinetic",
       "durationInFrames": 180
     },
-    // 17 Rerun and compare (VO 347.20s, comp f10506) shots: 25, 20, 26, 27, 28
+    // 17 Rerun and compare (VO 347.20s, comp f10506)
     {
-      layout: 'video-clip',
-      videoSrc: 'video/copilot-studio-test-inspect-improve/copilot-studio-test-inspect-improve.mp4',
-      videoStartTime: 350.20,
-      logoPosition: 'bottom-left',
-      clipZoomKeyframes: [
-        { startFrame: -30, scale: 1.0, originX: 50, originY: 50 },
-        { startFrame: 654, scale: 1.25, originX: 40, originY: 50 },
+      "layout": "screenshot-walkthrough",
+      "shots": [
+        {
+          "src": "copilot-studio-test-inspect-improve/images/17-baseline-three-passes.png",
+          "from": 0
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/20-repeat-run-profile.png",
+          "from": 77
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/25-test-sets-and-history.png",
+          "from": 164
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/26-repeat-three-passes.png",
+          "from": 387
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/27-run-comparison.png",
+          "from": 521
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/28-case-comparison.png",
+          "from": 569
+        }
       ],
-      durationInFrames: 1284,
+      "events": [
+        {
+          "frame": 72,
+          "x": 1837,
+          "y": 181,
+          "click": true
+        },
+        {
+          "frame": 159,
+          "x": 1187,
+          "y": 671,
+          "click": true
+        },
+        {
+          "frame": 516,
+          "x": 1383,
+          "y": 203,
+          "click": true
+        },
+        {
+          "frame": 564,
+          "x": 368,
+          "y": 448,
+          "click": true
+        },
+        {
+          "frame": 606,
+          "x": 969,
+          "y": 135,
+          "click": true
+        }
+      ],
+      "cursorStart": {
+        "x": 1871,
+        "y": 123
+      },
+      "zoomKeyframes": [
+        {
+          "startFrame": -30,
+          "scale": 1.0,
+          "originX": 50,
+          "originY": 50
+        },
+        {
+          "startFrame": 654,
+          "scale": 1.25,
+          "originX": 40,
+          "originY": 50
+        }
+      ],
+      "logoPosition": "bottom-left",
+      "durationInFrames": 1284
     },
     // 18 Repeatability vs regressions (VO 390.00s, comp f11790)
     {
@@ -305,29 +728,94 @@ export const copilotStudioTestInspectImprove: VideoData = {
       ],
       "durationInFrames": 354
     },
-    // 19 Final SharePoint check (VO 401.80s, comp f12144) shots: 29
+    // 19 Final SharePoint check (VO 401.80s, comp f12144)
     {
-      layout: 'video-clip',
-      videoSrc: 'video/copilot-studio-test-inspect-improve/copilot-studio-test-inspect-improve.mp4',
-      videoStartTime: 404.80,
-      logoPosition: 'bottom-left',
-      clipZoomKeyframes: [
-        { startFrame: -30, scale: 1.5, originX: 50, originY: 40 },
+      "layout": "screenshot-walkthrough",
+      "shots": [
+        {
+          "src": "copilot-studio-test-inspect-improve/images/29-tracker-after-tests.png",
+          "from": 0
+        }
       ],
-      durationInFrames: 261,
+      "events": [
+        {
+          "frame": 144,
+          "x": 875,
+          "y": 452
+        }
+      ],
+      "cursorStart": {
+        "x": 1300,
+        "y": 700
+      },
+      "zoomKeyframes": [
+        {
+          "startFrame": -30,
+          "scale": 1.5,
+          "originX": 50,
+          "originY": 40
+        }
+      ],
+      "logoPosition": "bottom-left",
+      "durationInFrames": 261
     },
-    // 20 Monitor (VO 410.50s, comp f12405) shots: 23, 24
+    // 20 Monitor (VO 410.50s, comp f12405)
     {
-      layout: 'video-clip',
-      videoSrc: 'video/copilot-studio-test-inspect-improve/copilot-studio-test-inspect-improve.mp4',
-      videoStartTime: 413.50,
-      logoPosition: 'bottom-left',
-      clipZoomKeyframes: [
-        { startFrame: -30, scale: 1.0, originX: 50, originY: 50 },
-        { startFrame: 45, scale: 1.3, originX: 50, originY: 20 },
-        { startFrame: 375, scale: 1.0, originX: 50, originY: 50 },
+      "layout": "screenshot-walkthrough",
+      "shots": [
+        {
+          "src": "copilot-studio-test-inspect-improve/images/22-tools-boundaries.png",
+          "from": 0
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/23-monitor-overview.png",
+          "from": 38
+        },
+        {
+          "src": "copilot-studio-test-inspect-improve/images/24-monitor-sessions.png",
+          "from": 731
+        }
       ],
-      durationInFrames: 873,
+      "events": [
+        {
+          "frame": 33,
+          "x": 1045,
+          "y": 67,
+          "click": true
+        },
+        {
+          "frame": 726,
+          "x": 1665,
+          "y": 121,
+          "click": true
+        }
+      ],
+      "cursorStart": {
+        "x": 875,
+        "y": 452
+      },
+      "zoomKeyframes": [
+        {
+          "startFrame": -30,
+          "scale": 1.0,
+          "originX": 50,
+          "originY": 50
+        },
+        {
+          "startFrame": 75,
+          "scale": 1.3,
+          "originX": 50,
+          "originY": 20
+        },
+        {
+          "startFrame": 375,
+          "scale": 1.0,
+          "originX": 50,
+          "originY": 50
+        }
+      ],
+      "logoPosition": "bottom-left",
+      "durationInFrames": 873
     },
     // 21 Clarification can be right (VO 439.60s, comp f13278)
     {

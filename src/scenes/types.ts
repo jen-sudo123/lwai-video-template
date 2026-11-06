@@ -511,6 +511,17 @@ export type Scene =
       durationInFrames: number;
     }
   | {
+      // Still screenshots played like a screen recording: animated cursor, clicks,
+      // click-origin transitions between shots, camera zoom keyframes.
+      layout: 'screenshot-walkthrough';
+      shots: Array<{ src: string; from: number }>;
+      events?: Array<{ frame: number; x: number; y: number; click?: boolean }>;
+      cursorStart?: { x: number; y: number };
+      zoomKeyframes?: Array<{ startFrame: number; scale: number; originX: number; originY: number }>;
+      logoPosition?: 'bottom-left' | 'bottom-right';
+      durationInFrames: number;
+    }
+  | {
       layout: 'video-clip';
       videoSrc: string;
       videoStartTime: number;
