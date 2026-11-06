@@ -15,7 +15,7 @@ import { VideoData } from '../scenes/types';
 //  4  big-statement            |   15.50 |   252
 //  5  label-title-body         |   23.90 |   252
 //  6  big-statement            |   32.30 |   246
-//  7  title-card-green         |   40.50 |   243
+//  7  big-statement            |   40.50 |   243
 //  8  prompt-example           |   48.60 |   390
 //  9  label-title-body         |   61.60 |   363
 //  10 three-mode-columns       |   73.70 |   609
@@ -31,7 +31,7 @@ import { VideoData } from '../scenes/types';
 //  20 label-title-body         |  176.00 |   129
 //  21 label-title-body         |  180.30 |   255
 //  22 takeaway-stack           |  188.80 |   285
-//  23 title-card-green         |  198.30 |   261
+//  23 big-statement            |  198.30 |   261
 //  24 label-title-body         |  207.00 |   168
 //  25 label-title-body         |  212.60 |   447
 //  26 process-steps            |  227.50 |   264
@@ -163,10 +163,16 @@ export const copilotStudioEvaluation: VideoData = {
 
         // 7 (40.50s = f1215). Part 1 divider. "evaluation" 41.68 / "An evaluation checks" 43.20
 {
-      "layout": "title-card-green",
-      "label": "PART 1",
-      "title": "Evaluation",
-      "subtitle": "Does the agent behave as expected in a defined situation?",
+      "layout": "big-statement",
+      "label": "PART 1 · EVALUATION",
+      "text": "Does the agent behave as expected\nin a defined situation?",
+      "highlight": "as expected",
+      "fontSize": 76,
+      "animation": "fade",
+      "lineTimings": [
+        81,
+        188
+      ],
       "durationInFrames": 243
     },
 
@@ -550,10 +556,16 @@ export const copilotStudioEvaluation: VideoData = {
 
         // 23 (198.30s = f5949). Part 2 divider. "regular use" 203.64 / "monitoring" 205.54
 {
-      "layout": "title-card-green",
-      "label": "PART 2",
-      "title": "Monitoring",
-      "subtitle": "What happens during regular use?",
+      "layout": "big-statement",
+      "label": "PART 2 · MONITORING",
+      "text": "Evaluation tests specific scenarios.\nMonitoring shows regular use.",
+      "highlight": "regular use",
+      "fontSize": 72,
+      "animation": "fade",
+      "lineTimings": [
+        6,
+        152
+      ],
       "durationInFrames": 261
     },
 
