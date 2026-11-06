@@ -1,0 +1,67 @@
+<break time="500ms"/>Here's our Weekly Team Action Follow-Up agent. It uses one tool, Check Team Action Tracker. That's an agent flow that pulls existing commitments from SharePoint.
+
+<break time="500ms"/>The agent's job is to prepare recommendations for a human to review. It must not change tracker records, and it must not send messages.
+
+<break time="500ms"/>In the last lesson, we tested a single example. Today, we'll turn that into repeatable tests, and check three things. Did the agent get the recommendation right? Did it follow the expected process? And did it stay within its boundaries? Along the way, we'll learn to tell an agent problem apart from a problem with the test itself.
+
+<break time="500ms"/>Let's open Evaluation and select New evaluation. If you don't have any test sets yet, this button reads Create a test set instead. I'll keep Single response selected, choose to write the questions myself, and add each question with its expected response.
+
+<break time="500ms"/>We'll split our build plan example into three decisions.
+
+<break time="500ms"/>First, Taylor's launch readiness checklist. The tracker says November fifth, but the approved meeting notes move the deadline to November ninth. We expect an Update, referencing the existing tracker ID, and showing both the current and the proposed deadline.
+
+<break time="500ms"/>Second, Chris's onboarding FAQs. We expect a New Action, but only after the agent has retrieved the tracker and found no reasonable existing match.
+
+<break time="500ms"/>Third, the customer escalation. The notes don't confirm an owner or a deadline. So we expect Needs Clarification, with questions about both.
+
+<break time="500ms"/>Each question tells the agent to use the approved notes, call Check Team Action Tracker, and prepare a recommendation, without changing records or sending messages. And every run uses the same notes and the same tracker.
+
+<break time="500ms"/>I'll name this test set Commitment Review Checks. The default test method is Answer quality, but for this demo, I'll add Meaning match. Meaning match compares the response with our expected answer, without requiring identical wording.
+
+<break time="500ms"/>I'll select Next, and keep the default pass score of fifty out of a hundred. We'll use that same threshold for both runs. Then I'll remove Answer quality, so this evaluation uses Meaning match alone.
+
+<break time="500ms"/>Before running, I'll open the user profile and check the connections. The account and the SharePoint connection are already in place. I'll confirm, and select Run.
+
+<break time="500ms"/>In this baseline, all three cases pass, each scoring a hundred out of a hundred. Taylor is an Update, with tracker ID one, and the deadline moving from November fifth to November ninth. Chris is a New Action. And the customer escalation Needs Clarification.
+
+<break time="500ms"/>That covers our first criterion: outcome accuracy. But the score is only the starting point. Let's look at the evidence.
+
+<break time="500ms"/>I'll open Taylor's result. Here, we can compare the agent's response with the expected one, and read the evaluator's explanation.
+
+<break time="500ms"/>Next, I'll select Show activity map. Did the agent retrieve the approved notes? Did it call Check Team Action Tracker? Did the tool come back with a status of Ready? And did the records include Taylor's checklist, with its ID, owner, deadline, and status? Here, we can see all of it.
+
+<break time="500ms"/>These checks separate a retrieval problem from a matching problem. If the record never reached the agent, rewriting the matching instructions won't fix it. But if the right record came back and the agent misread it, the matching instructions are a good place to look.
+
+<break time="500ms"/>You can also find individual runs under the agent's Activity tab. It lists the channel, date, steps, last step, and status, including test chats and evaluations. One caution: Completed means the run finished. It doesn't mean the recommendation was right.
+
+<break time="500ms"/>Now let's look inside the agent flow itself. From Tools, I'll open Check Team Action Tracker, follow the flow link, and open a run from its activity. The flow has four steps. The agent calls the flow, it gets the items, selects the fields, and responds to the agent. Retrieval, transformation, and response.
+
+<break time="500ms"/>To see exactly what was sent back, I'll open Respond to the agent, and show the raw inputs. The same values also appear as tool outputs in the evaluation's activity map. That covers our second criterion: process execution.
+
+<break time="500ms"/>For boundaries, I'll confirm the older Read Team Action Tracker tool is still switched off, and review the available actions and the execution evidence.
+
+<break time="500ms"/>Then I'll refresh SharePoint and compare it with our baseline. Taylor's deadline should still say November fifth, because the agent recommends the change. It doesn't apply it. And Chris's commitment shouldn't have been added. That's separate evidence that the agent stayed within its boundaries.
+
+<break time="500ms"/>So, what actually needs improving? Our three cases pass, the retrieved records support the recommendations, and the agent's instructions already contain the matching rule we need. There's no matching problem to fix, so I'll keep this baseline as it is.
+
+<break time="500ms"/>If a future test does fail, let the evidence point to the fix. Wrong or missing source? Look at knowledge or retrieval. Tool not called? Check the tool's availability, description, and instructions. Right record, but the wrong classification? Look at the matching instructions. Missing evaluation settings? Repair the test. And if a sensible clarification is graded as a failure, revise the evaluation criteria.
+
+<break time="500ms"/>Before you change the agent, check that the test itself is valid. A Keyword match evaluation, for example, needs keywords defined. Without them, an Invalid result points to the test, not the agent. And when source information is missing, asking for clarification may be exactly the right behavior. Your criteria should recognize that.
+
+<break time="500ms"/>Once you've found a real problem, make one targeted change, to the component that's responsible.
+
+<break time="500ms"/>Now let's rerun. I'll select Run test set again, check the profile, and select Run. Same questions, same expected responses, same meeting notes, same tracker, same threshold.
+
+<break time="500ms"/>Again, all three cases pass, each scoring a hundred. I'll compare this with the first run, and open the Comparison tab. Here, we can see the responses, scores, evaluator explanations, tools, and knowledge sources, side by side.
+
+<break time="500ms"/>The wording varies, but the recommendations hold. Taylor is still an Update, with tracker ID one and the same deadline change. Chris is still a New Action. And the escalation still needs clarification on its owner and deadline.
+
+<break time="500ms"/>Because we haven't changed the agent, this shows repeatability. After a targeted change, rerunning these same cases checks for regressions, making sure what worked before still works.
+
+<break time="500ms"/>One last refresh of SharePoint. Nothing has changed. Taylor's checklist still says November fifth, and Chris's commitment hasn't been added.
+
+<break time="500ms"/>Finally, let's open Monitor. This dashboard summarizes performance in regular use: sessions, engagement, outcomes, reactions, answer quality, tool use, and knowledge sources. Right now, there isn't enough traffic to draw conclusions, and activity from the test panel doesn't count toward these numbers.
+
+<break time="500ms"/>Once the agent is in regular use, Monitor helps you spot patterns, dig into individual sessions, and turn recurring problems into new evaluation cases. And remember, frequent clarification isn't automatically a problem. For an escalation with no owner or deadline, clarification is the right answer.
+
+<break time="500ms"/>So here's the loop. Test. Inspect. Improve when the evidence calls for it. Then retest. Evaluation checks your defined expectations. Activity lets you investigate individual runs. And Monitor shows you the patterns over time. Together, they help you improve your agent based on evidence, not guesswork.
