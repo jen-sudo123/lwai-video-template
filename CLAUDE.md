@@ -112,6 +112,8 @@ Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 - No Remotion Studio and no Whisper: verify with `remotion still`, transcribe with the `speech-to-text` skill (ElevenLabs Scribe, word timestamps).
 - Nothing on the cloud machine survives the session: push media and renders to Drive, commit code before finishing.
 - Renders: concurrency can go above 1 here, but keep `--timeout=120000`.
+- If stills/renders fail with `ERR_CERT_AUTHORITY_INVALID` (fonts via the session proxy), add
+  `--browser-executable=/opt/pw-browsers/chromium-1243/chrome-linux64/chrome` (pre-installed Chromium trusts the proxy CA).
 
 ## Local Mac only
 
