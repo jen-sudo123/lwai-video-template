@@ -90,6 +90,13 @@ Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 - `ThreeModeColumns`: column entry is triggered by the first `highlights` entry with `value === index`.
 - `centered-image-caption`: default `objectFit: 'cover'`; use `'contain'` for full screenshots.
 
+### screenshot-walkthrough
+- For demos delivered as screenshots (no screen recording). Plays them like a recording: a cursor glides to each
+  `events[]` target (1920×1080 px), `click: true` adds a press + lime ripple, and a shot starting ≤ 12 frames after a
+  click opens with a zoom from the click point (other shot changes crossfade). `zoomKeyframes` = clip zoom semantics.
+- Pad screenshots to 1920×1080 first. Time clicks to the word that names the control; aim them at the cursor baked
+  into the next screenshot so the two line up. Example + generator: `src/data/copilot-studio-test-inspect-improve.build.py`.
+
 ### video-clip
 - VideoData-level `clipSrc` = one continuous background video; each scene's `videoStartTime` is the trim offset.
   With `clipSrc` set, the video and `clipZoomKeyframes` are rendered by `Video.tsx`, NOT `VideoClip.tsx` (`skipVideo` forced true).
@@ -109,7 +116,15 @@ Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
   `storage.googleapis.com` + `remotion.media` (Chrome download), plus npm/GitHub defaults.
 - No Remotion Studio and no Whisper: verify with `remotion still`, transcribe with the `speech-to-text` skill (ElevenLabs Scribe, word timestamps).
 - Nothing on the cloud machine survives the session: push media and renders to Drive, commit code before finishing.
-- Renders: concurrency can go above 1 here, but keep `--timeout=120000`.
+- Renders: concurrency can go above 1 here (max = `nproc`, usually 4), but keep `--timeout=120000`.
+- **Always pass `--browser-executable=scripts/chrome-proxy.sh`** to `remotion still` / `remotion render` (or
+  `browserExecutable` in the Node API). Remotion forces Chrome to bypass the session's HTTPS proxy, so Google Fonts
+  fail (`ERR_CERT_AUTHORITY_INVALID` / `ERR_PROXY_CONNECTION_FAILED` → `NetworkError`) and the render aborts. The
+  wrapper reads `$HTTPS_PROXY` at launch (the port changes when the container restarts). Never use `ignoreCertificateErrors`.
+- ElevenLabs via curl: the proxy injects auth, so send **no** `xi-api-key` header (both headers → 401). If the proxy's
+  credential is rejected, use the ElevenLabs connector instead. `eleven_v4` takes ≤ 5,000 characters per request:
+  split the script at a scene boundary, generate each half, join with a short gap, then transcribe the joined file.
+- `assets-push.sh --renders` copies `out/` recursively; previews go in `out/preview/` → `gdrive:renders/preview/`.
 
 ## Local Mac only
 
