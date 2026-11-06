@@ -482,6 +482,12 @@ export type Scene =
       finalAnswer?: string;
       callouts?: string[];
       thinkingAppearFrame?: number;
+      label?: string;
+      title?: string;
+      subtitle?: string;
+      subtitleHighlight?: string;
+      appName?: string;
+      thinkingLabel?: string;
       durationInFrames: number;
     }
   | {

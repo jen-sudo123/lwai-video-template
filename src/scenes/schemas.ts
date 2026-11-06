@@ -438,6 +438,12 @@ const thinkingTraceUI = z.object({
   finalAnswer: z.string().optional(),
   callouts: z.array(z.string()).optional(),
   thinkingAppearFrame: z.number().optional(),
+  label: z.string().optional(),
+  title: z.string().optional(),
+  subtitle: z.string().optional(),
+  subtitleHighlight: z.string().optional(),
+  appName: z.string().optional(),
+  thinkingLabel: z.string().optional(),
   durationInFrames: z.number(),
 });
 

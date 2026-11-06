@@ -401,6 +401,12 @@ export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> =
           finalAnswer={scene.finalAnswer}
           callouts={scene.callouts}
           thinkingAppearFrame={scene.thinkingAppearFrame}
+          label={scene.label}
+          title={scene.title}
+          subtitle={scene.subtitle}
+          subtitleHighlight={scene.subtitleHighlight}
+          appName={scene.appName}
+          thinkingLabel={scene.thinkingLabel}
         />
       );
     case 'problem-blackbox':

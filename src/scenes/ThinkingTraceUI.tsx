@@ -16,6 +16,13 @@ type Props = {
   callouts?: string[];
   // Scene-local frame when the collapsed "Thought for Xs" row appears (default 36).
   thinkingAppearFrame?: number;
+  // Optional left-column copy and panel labels (defaults keep the original chain-of-thought text).
+  label?: string;
+  title?: string;
+  subtitle?: string;
+  subtitleHighlight?: string;
+  appName?: string;
+  thinkingLabel?: string;
 };
 
 const PANEL_W = 980;
@@ -36,6 +43,12 @@ export const ThinkingTraceUI: React.FC<Props> = ({
     'What did it assume?',
   ],
   thinkingAppearFrame = 36,
+  label = 'Way 2',
+  title = 'Open the thinking section.',
+  subtitle = 'Expand it.',
+  subtitleHighlight = 'Then check it.',
+  appName = 'chat.app',
+  thinkingLabel,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -89,12 +102,12 @@ export const ThinkingTraceUI: React.FC<Props> = ({
           gap: 20,
         }}
       >
-        <div style={typography.label}>Way 2</div>
-        <div style={{ ...typography.title, fontSize: 56, lineHeight: 1.15 }}>
-          Open the thinking section.
+        <div style={typography.label}>{label}</div>
+        <div style={{ ...typography.title, fontSize: 56, lineHeight: 1.15, whiteSpace: 'pre-line' }}>
+          {title}
         </div>
         <div style={{ fontFamily: fonts.serif, fontSize: 32, fontWeight: 400, color: colors.neutral600, lineHeight: 1.4 }}>
-          Expand it. <span style={{ color: colors.lime500 }}>Then check it.</span>
+          {subtitle} <span style={{ color: colors.lime500 }}>{subtitleHighlight}</span>
         </div>
       </div>
 
@@ -128,7 +141,7 @@ export const ThinkingTraceUI: React.FC<Props> = ({
             <Dot color="#28C840" />
             <div style={{ flex: 1 }} />
             <div style={{ ...typography.label, color: colors.neutral600, fontSize: 18 }}>
-              chat.app
+              {appName}
             </div>
           </div>
 
@@ -172,7 +185,7 @@ export const ThinkingTraceUI: React.FC<Props> = ({
                   color: '#3F7A1F',
                 }}
               >
-                Thought for {Math.max(1, Math.round((traces.length * traceStagger) / 30))}s
+                {thinkingLabel ?? `Thought for ${Math.max(1, Math.round((traces.length * traceStagger) / 30))}s`}
               </div>
               <div style={{ flex: 1 }} />
               <div
