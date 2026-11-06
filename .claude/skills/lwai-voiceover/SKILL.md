@@ -2,7 +2,7 @@
 name: lwai-voiceover
 description: Generate LWAI-style voiceover audio with ElevenLabs — scene breakdown, script prep, plain-text delivery, and the LWAI voice roster. Use when generating a voiceover/VO for a video, tutorial, or narration and the user wants the LWAI house style (expressive, HBR-tutorial tone, not monotone).
 license: MIT
-compatibility: Requires internet access and an ElevenLabs API key (ELEVENLABS_API_KEY). Works with any agent that can call the ElevenLabs REST API (curl) or SDK — Claude Code, Codex, etc.
+compatibility: Requires the ElevenLabs connector (mcp__ElevenLabs__creative_* tools). Model eleven_v4. No direct REST API use.
 ---
 
 # LWAI Voiceover Generation
@@ -31,10 +31,7 @@ Use this unless the user names a different voice.
 | Brian | `nPczCjzI2devNBz1zQrb` | Deep, Resonant and Comforting — HBR/tutorial tone |
 | Matilda | `XrExE9yKIg1WjnnlVkGX` | Knowledgeable, Professional — HBR/tutorial tone |
 
-To look up any other voice name from an ID:
-```bash
-curl -s "https://api.elevenlabs.io/v1/voices/<voice_id>" -H "xi-api-key: $ELEVENLABS_API_KEY"
-```
+To look up other voices, use `creative_list_voices` on the connector.
 
 ## Workflow
 
@@ -42,79 +39,41 @@ curl -s "https://api.elevenlabs.io/v1/voices/<voice_id>" -H "xi-api-key: $ELEVEN
 
 Split the raw script into paragraphs — one paragraph per video scene. Drop VO for pure title/section-header cards (visual only, no audio). Present a storyboard table (scene # / title / VO line) for approval before generating audio. Suggest edits for spoken readability: cut quoted-command examples that read awkwardly aloud, remove written-doc-style rhetorical questions, simplify fill-in-the-blank templates.
 
-### 2. Write the script file as plain text + `<break>` tags only
+> **Standard (Nov 2026):** generate through the ElevenLabs connector with model `eleven_v4`.
+> Do NOT call the REST API (curl, `ELEVENLABS_API_KEY`, `<break>` tags, `speed`) — that path is retired.
 
-**Do not use heavy SSML** (`<prosody>`, `<emphasis>`, pitch/rate tags) — testing showed this makes ElevenLabs sound *more* monotone, not less. Plain text lets the model's own prosody engine drive natural expression.
+### 2. Write the script file for eleven_v4
 
-Use `<break>` tags only for:
-- Silence between scenes — wrap the whole script in `<speak>...</speak>` and put `<break time="500ms"/>` (or `"50ms"` for a tighter gap) at the start of each paragraph.
-- Extra pause at punctuation ElevenLabs tends to rush past — insert `<break time="150ms"/>`–`"400ms"` after commas/periods if pacing still feels too fast.
+- Plain text, one paragraph per scene, each paragraph starting with `[pause]`.
+- `<break>` tags are NOT supported on v4 (they'd be spoken or ignored). Pauses: `[short pause]`, `[pause]`, `[long pause]`, ellipses.
+- No `speed` setting on v4: pace with punctuation (commas before clauses ElevenLabs rushes) and `[pause]`.
+- Audio tags (`[warmly]`, `[curious]`) are allowed but use sparingly — a tag holds until the next one. Default: none.
+- Emphasis: capitalise a key word sparingly. Pronunciation fixes: IPA between slashes (`/ʃɪˈvɔːn/`).
 
-Example:
-```xml
-<speak>
-<break time="500ms"/>Your first scene's line goes here.
+```
+[pause] Your first scene's line goes here.
 
-<break time="500ms"/>Your second scene's line goes here.
-</speak>
+[pause] Your second scene's line goes here.
 ```
 
-### 3. Generate audio
+### 3. Generate audio (ElevenLabs connector)
 
-```bash
-curl -X POST "https://api.elevenlabs.io/v1/text-to-speech/mY3gNkLi7iAw6IzipDpw?output_format=mp3_44100_128" \
-  -H "xi-api-key: $ELEVENLABS_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "text": "<script text with <break> tags>",
-    "model_id": "eleven_multilingual_v2",
-    "voice_settings": {
-      "stability": 0.10,
-      "similarity_boost": 0.85,
-      "style": 0.55,
-      "use_speaker_boost": true,
-      "speed": 0.95
-    }
-  }' \
-  --output voiceover.mp3
-```
+1. `creative_create_flow` once per video (name it after the composition ID); reuse its `flow_id` for every take.
+2. Sample first: the first 1–2 sections, for approval of the delivery.
+3. `creative_generate_speech` with `model_id: "eleven_v4"`, `voice_id: "mY3gNkLi7iAw6IzipDpw"` (Daan), `prompt` = script text.
+   Leave `generations_count` at default (2 takes) and leave `voice_settings` out.
+   Never re-call to retry — each call is charged. Use `estimate_only: true` to price the full script first.
+4. Poll `creative_get_flow_run_status` (flow_id + session_ids) until `all_completed` / `has_failures`.
+5. User picks a take; download it to `public/audio/<id>.mp3`, then push with `scripts/assets-push.sh`.
 
-Or with the `with-timestamps` endpoint to also get word-level alignment:
-```bash
-curl -X POST "https://api.elevenlabs.io/v1/text-to-speech/mY3gNkLi7iAw6IzipDpw/with-timestamps?output_format=mp3_44100_128" \
-  -H "xi-api-key: $ELEVENLABS_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"text": "...", "model_id": "eleven_multilingual_v2", "voice_settings": {...}}' \
-  | python3 -c "import sys,json,base64; d=json.load(sys.stdin); open('voiceover.mp3','wb').write(base64.b64decode(d['audio_base64']))"
-```
+### 4. Changing the sound
 
-### Voice settings for expressive, non-monotone delivery
-
-| Setting | Value | Why |
-|---|---|---|
-| `stability` | `0.10` | Low = more natural variation. Higher flattens delivery. |
-| `style` | `0.55` | Higher = more expressive/dramatic. |
-| `similarity_boost` | `0.85` | Stay close to the target voice's timbre. |
-| `speed` | `0.95` | Slightly unhurried, matches a natural presenter pace. |
-
-Model: `eleven_multilingual_v2` for TTS (works well even for English-only).
-
-### 4. Optional: clone a more expressive delivery onto Daan via Voice Changer
-
-If Daan still sounds flatter than desired, generate the same script with a more naturally expressive voice (e.g. Lucan Rook `15CVCzDByBinCIoCblXo`), then convert that performance to Daan's timbre with the ElevenLabs Voice Changer (speech-to-speech). The voice-changer preserves the source's emotional delivery — a flat source produces a flat result regardless of target voice, so pick an expressive source.
-
-```bash
-curl -X POST "https://api.elevenlabs.io/v1/speech-to-speech/mY3gNkLi7iAw6IzipDpw?output_format=mp3_44100_128" \
-  -H "xi-api-key: $ELEVENLABS_API_KEY" \
-  -F "audio=@source_lucan_rook.mp3" \
-  -F "model_id=eleven_multilingual_sts_v2" \
-  -F 'voice_settings={"stability":0.10,"similarity_boost":0.85,"style":0.55,"use_speaker_boost":true}' \
-  --output daan_final.mp3
-```
+On v4, change tone with audio tags, not settings. Only if the user asks for steadier/closer-to-voice:
+`stability` (default 0.5; ~0.3 more varied, 0.7+ steadier) and `similarity` (~0.85). `use_speaker_boost` and `speed` don't exist on v4.
 
 ### 5. Get scene timing (after VO is finalized)
 
-Run Whisper on the final audio to get word-level timestamps for aligning video scenes:
+Transcribe the final audio (cloud: `speech-to-text` skill / `creative_transcribe_audio`; local: Whisper) to get word-level timestamps for aligning video scenes:
 ```bash
 whisper voiceover.mp3 --model small --word_timestamps True
 ```

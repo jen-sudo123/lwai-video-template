@@ -66,9 +66,11 @@ npx remotion render src/index.ts <CompId> out/<name>.mp4 --chrome-mode=chrome-fo
 
 ## Voiceover (ElevenLabs)
 
-Use the `lwai-voiceover` skill. Key: `ELEVENLABS_API_KEY` env var (cloud) / macOS Keychain service `11labs-use` (local Mac).
-Default voice **Daan** `mY3gNkLi7iAw6IzipDpw`. Plain text + `<break>` tags only — no heavy SSML. Settings:
-stability 0.10, style 0.55, similarityBoost 0.85, speed 0.95. Show a storyboard table (scene / title / VO line) for approval before generating.
+Use the `lwai-voiceover` skill. **Generate through the ElevenLabs connector (`mcp__ElevenLabs__creative_generate_speech`),
+model `eleven_v4`. Do not call the ElevenLabs REST API directly (no curl / `ELEVENLABS_API_KEY`).**
+Default voice **Daan** `mY3gNkLi7iAw6IzipDpw`. v4 has no `<break>` tags and no `speed`: pause with `[pause]` / `[short pause]`
+(start each scene paragraph with `[pause]`), pace with punctuation. Leave `voice_settings` out unless the user asks to change the sound.
+Show a storyboard table (scene / title / VO line) for approval, then a short sample (first 1–2 sections) before the full generation.
 Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 
 ## Brand + layout rules
@@ -104,7 +106,7 @@ Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 
 ## Cloud sessions (Claude Code on the web)
 
-- Setup script: `bash scripts/cloud-setup.sh`. Env vars: `RCLONE_CONFIG_GDRIVE_TOKEN`, `ELEVENLABS_API_KEY`.
+- Setup script: `bash scripts/cloud-setup.sh`. Env vars: `RCLONE_CONFIG_GDRIVE_TOKEN`. Voiceover goes through the ElevenLabs connector, not an API key.
 - Network must allow: `www.googleapis.com`, `oauth2.googleapis.com`, `downloads.rclone.org`, `api.elevenlabs.io`,
   `storage.googleapis.com` + `remotion.media` (Chrome download), plus npm/GitHub defaults.
 - No Remotion Studio and no Whisper: verify with `remotion still`, transcribe with the `speech-to-text` skill (ElevenLabs Scribe, word timestamps).

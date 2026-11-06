@@ -1,41 +1,41 @@
-<break time="500ms"/>We've built our first agent in Copilot Studio. Our Weekly Team Action Follow-Up Agent can read meeting notes, check existing commitments in SharePoint, identify new or updated actions, and prepare recommendations for human review.
+[pause] We've built our first agent in Copilot Studio. Our Weekly Team Action Follow-Up Agent can read meeting notes, check existing commitments in SharePoint, identify new or updated actions, and prepare recommendations for human review.
 
-<break time="500ms"/>We've given it instructions, knowledge, tools, and clear boundaries. But an agent is only one part of a larger picture.
+[pause] We've given it instructions, knowledge, tools, and clear boundaries. But an agent is only one part of a larger picture.
 
-<break time="500ms"/>When we connect AI reasoning with data, tools, repeatable processes, and human oversight, we start building an agentic system. Instead of simply responding to individual requests, the system can coordinate multiple steps to carry work forward.
+[pause] When we connect AI reasoning with data, tools, repeatable processes, and human oversight, we start building an agentic system. Instead of simply responding to individual requests, the system can coordinate multiple steps to carry work forward.
 
-<break time="500ms"/>And not every step needs AI reasoning. Some parts of work require judgment. Others should follow exactly the same process every time. That's where Agent Flows come in.
+[pause] And not every step needs AI reasoning. Some parts of work require judgment. Others should follow exactly the same process every time. That's where Agent Flows come in.
 
-<break time="500ms"/>An Agent Flow is a predefined sequence of actions that automates part of a workflow. It starts with a trigger, something that tells the flow when to run. For example, a flow might start when an agent calls it to retrieve information.
+[pause] An Agent Flow is a predefined sequence of actions that automates part of a workflow. It starts with a trigger, something that tells the flow when to run. For example, a flow might start when an agent calls it to retrieve information.
 
-<break time="500ms"/>It then performs a series of actions, such as retrieving records from SharePoint, organizing information, or returning results to the agent. Flows can also use conditions to follow different paths, based on rules we've defined.
+[pause] It then performs a series of actions, such as retrieving records from SharePoint, organizing information, or returning results to the agent. Flows can also use conditions to follow different paths, based on rules we've defined.
 
-<break time="500ms"/>The key difference is how the work is controlled. An AI agent can decide what to do next, based on its instructions, the user's request, and the information available.
+[pause] The key difference is how the work is controlled. An AI agent can decide what to do next, based on its instructions, the user's request, and the information available.
 
-<break time="500ms"/>An Agent Flow follows a process we've designed in advance. It can include AI-powered actions, but its overall sequence and rules are set ahead of time. This means we can combine the flexibility of AI reasoning with the consistency of a repeatable process.
+[pause] An Agent Flow follows a process we've designed in advance. It can include AI-powered actions, but its overall sequence and rules are set ahead of time. This means we can combine the flexibility of AI reasoning with the consistency of a repeatable process.
 
-<break time="500ms"/>Let's return to our Weekly Team Action Follow-Up Agent. After reviewing the meeting notes, it identifies three commitments. Taylor's launch readiness checklist already exists in the tracker, but the deadline has changed. Chris has a new commitment to prepare onboarding FAQs. And a customer escalation is missing an owner and a deadline.
+[pause] Let's return to our Weekly Team Action Follow-Up Agent. After reviewing the meeting notes, it identifies three commitments. Taylor's launch readiness checklist already exists in the tracker, but the deadline has changed. Chris has a new commitment to prepare onboarding FAQs. And a customer escalation is missing an owner and a deadline.
 
-<break time="500ms"/>For each one, the agent needs to decide what to recommend. Should it propose an update to an existing action? Suggest a new action? Or ask for clarification? That's where AI reasoning is valuable.
+[pause] For each one, the agent needs to decide what to recommend. Should it propose an update to an existing action? Suggest a new action? Or ask for clarification? That's where AI reasoning is valuable.
 
-<break time="500ms"/>But to make those decisions, the agent needs reliable information about what's already in the tracker. Retrieving those records is a repeatable task. The agent shouldn't have to work out the process every time.
+[pause] But to make those decisions, the agent needs reliable information about what's already in the tracker. Retrieving those records is a repeatable task. The agent shouldn't have to work out the process every time.
 
-<break time="500ms"/>Instead, we can define that process in an Agent Flow. The flow retrieves the existing commitments from SharePoint, and returns them in a consistent format. The agent can then compare those records with the meeting notes, and prepare its recommendations. The flow defines how the records are retrieved. The agent decides what they mean.
+[pause] Instead, we can define that process in an Agent Flow. The flow retrieves the existing commitments from SharePoint, and returns them in a consistent format. The agent can then compare those records with the meeting notes, and prepare its recommendations. The flow defines how the records are retrieved. The agent decides what they mean.
 
-<break time="500ms"/>So where do people fit into this system? This is where our autonomy dial comes in. Our Agent Flow only retrieves and organizes information. It doesn't create, update, or delete anything in SharePoint. So we can let the agent call this read-only flow without asking for confirmation every time.
+[pause] So where do people fit into this system? This is where our autonomy dial comes in. Our Agent Flow only retrieves and organizes information. It doesn't create, update, or delete anything in SharePoint. So we can let the agent call this read-only flow without asking for confirmation every time.
 
-<break time="500ms"/>The agent uses what comes back to prepare its recommendations, but a person still reviews them before any changes are made.
+[pause] The agent uses what comes back to prepare its recommendations, but a person still reviews them before any changes are made.
 
-<break time="500ms"/>Now imagine extending the system so it can add Chris's new commitment to SharePoint. That changes information in a real system, and that requires a different level of authority. We could set the tool to require confirmation before it runs, or design an explicit approval step, so a person can review the proposed changes before they're applied.
+[pause] Now imagine extending the system so it can add Chris's new commitment to SharePoint. That changes information in a real system, and that requires a different level of authority. We could set the tool to require confirmation before it runs, or design an explicit approval step, so a person can review the proposed changes before they're applied.
 
-<break time="500ms"/>And our boundaries would still matter. The agent shouldn't create an action when essential information is missing, like the owner and deadline for our customer escalation. The goal isn't maximum autonomy. It's giving the system the right authority for each action, with people involved where their judgment is needed.
+[pause] And our boundaries would still matter. The agent shouldn't create an action when essential information is missing, like the owner and deadline for our customer escalation. The goal isn't maximum autonomy. It's giving the system the right authority for each action, with people involved where their judgment is needed.
 
-<break time="500ms"/>Let's look at how these components form an agentic system. Our agent provides the reasoning and orchestration. It interprets the meeting notes, decides when it needs information from the tracker, and prepares recommendations.
+[pause] Let's look at how these components form an agentic system. Our agent provides the reasoning and orchestration. It interprets the meeting notes, decides when it needs information from the tracker, and prepares recommendations.
 
-<break time="500ms"/>Knowledge sources give the agent access to information, like our approved weekly meeting notes. Tools and connectors let the agent interact with other systems, such as SharePoint. Agent Flows bring predictable steps together into a repeatable process. And human oversight defines what the system can do on its own, what requires approval, and when it should stop and ask.
+[pause] Knowledge sources give the agent access to information, like our approved weekly meeting notes. Tools and connectors let the agent interact with other systems, such as SharePoint. Agent Flows bring predictable steps together into a repeatable process. And human oversight defines what the system can do on its own, what requires approval, and when it should stop and ask.
 
-<break time="500ms"/>Together, these components let the agent coordinate work across multiple steps, while staying within the boundaries we've defined. In our OVER framework, we identified which steps need judgment, which follow fixed rules, and where people should stay involved. Agent Flows help put those design decisions into practice.
+[pause] Together, these components let the agent coordinate work across multiple steps, while staying within the boundaries we've defined. In our OVER framework, we identified which steps need judgment, which follow fixed rules, and where people should stay involved. Agent Flows help put those design decisions into practice.
 
-<break time="500ms"/>But not every action needs an Agent Flow. If a single tool call does the job, that may be enough. A flow becomes useful when we want several steps to run consistently and return a predictable result. And when a decision involves uncertainty, AI reasoning or human input may still be needed.
+[pause] But not every action needs an Agent Flow. If a single tool call does the job, that may be enough. A flow becomes useful when we want several steps to run consistently and return a predictable result. And when a decision involves uncertainty, AI reasoning or human input may still be needed.
 
-<break time="500ms"/>The goal isn't to make every step intelligent. It's to combine AI reasoning with reliable execution, and the right level of human control. Next, we'll build an Agent Flow called Check Team Action Tracker, and connect it to our Weekly Team Action Follow-Up Agent. We'll see how AI reasoning and predictable automation work together, while every proposed change stays subject to human review.
+[pause] The goal isn't to make every step intelligent. It's to combine AI reasoning with reliable execution, and the right level of human control. Next, we'll build an Agent Flow called Check Team Action Tracker, and connect it to our Weekly Team Action Follow-Up Agent. We'll see how AI reasoning and predictable automation work together, while every proposed change stays subject to human review.
