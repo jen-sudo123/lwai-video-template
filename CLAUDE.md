@@ -69,7 +69,7 @@ npx remotion render src/index.ts <CompId> out/<name>.mp4 --chrome-mode=chrome-fo
 Use the `lwai-voiceover` skill. **Generate through the ElevenLabs connector (`mcp__ElevenLabs__creative_generate_speech`),
 model `eleven_v4`. Do not call the ElevenLabs REST API directly (no curl / `ELEVENLABS_API_KEY`).**
 Default voice **Daan** `mY3gNkLi7iAw6IzipDpw`. v4 has no `<break>` tags and no `speed`: pause with `[pause]` / `[short pause]`
-(start each scene paragraph with `[pause]`), pace with punctuation. Leave `voice_settings` out unless the user asks to change the sound.
+(start each scene paragraph with `[pause]`), pace with punctuation. Max 5,000 chars per call: split longer scripts at a section break and concat. Leave `voice_settings` out unless the user asks to change the sound.
 Show a storyboard table (scene / title / VO line) for approval, then a short sample (first 1–2 sections) before the full generation.
 Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 

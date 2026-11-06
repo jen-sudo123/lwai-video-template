@@ -60,6 +60,8 @@ Split the raw script into paragraphs — one paragraph per video scene. Drop VO 
 
 1. `creative_create_flow` once per video (name it after the composition ID); reuse its `flow_id` for every take.
 2. Sample first: the first 1–2 sections, for approval of the delivery.
+   **v4 limit: 5,000 characters per call.** Longer scripts: split at a section break into parts < 5,000 chars,
+   generate each part in the same flow, then join the chosen takes with ffmpeg (`-f concat -c copy`).
 3. `creative_generate_speech` with `model_id: "eleven_v4"`, `voice_id: "mY3gNkLi7iAw6IzipDpw"` (Daan), `prompt` = script text.
    Leave `generations_count` at default (2 takes) and leave `voice_settings` out.
    Never re-call to retry — each call is charged. Use `estimate_only: true` to price the full script first.
