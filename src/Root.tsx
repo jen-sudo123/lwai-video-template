@@ -72,6 +72,7 @@ import { AiFluency, AI_FLUENCY_DURATION_S, AI_FLUENCY_TITLE_FRAMES } from './com
 import { AiAgentic, AI_AGENTIC_DURATION_S, AI_AGENTIC_TITLE_FRAMES } from './compositions/AiAgentic';
 import { ChoosingWork, CHOOSING_WORK_DURATION_S, CHOOSING_WORK_TITLE_FRAMES } from './compositions/ChoosingWork';
 import { AutonomyDial, AUTONOMY_DIAL_DURATION_S, AUTONOMY_DIAL_TITLE_FRAMES } from './compositions/AutonomyDial';
+import { CopilotStudioEvaluation, COPILOT_STUDIO_EVALUATION_DURATION_S, COPILOT_STUDIO_EVALUATION_TITLE_FRAMES } from './compositions/CopilotStudioEvaluation';
 import { SmallestAgent, SMALLEST_AGENT_DURATION_S, SMALLEST_AGENT_VO_FROM } from './compositions/SmallestAgent';
 import { AdvancedModelsChatGPT, ADVANCED_MODELS_DURATION_S, ADVANCED_MODELS_TITLE_FRAMES } from './compositions/AdvancedModelsChatGPT';
 import { workContext } from './data/work-context';
@@ -453,7 +454,7 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={copilotStudioAutonomy}
       />
       <Composition
-        id="CopilotStudioEvaluation"
+        id="CopilotStudioEvaluationTemplate"
         component={Video}
         durationInFrames={calculateTotalFrames(copilotStudioEvaluation.scenes)}
         fps={layout.fps}
@@ -752,6 +753,14 @@ export const RemotionRoot: React.FC = () => {
         id="ChoosingWork"
         component={ChoosingWork}
         durationInFrames={CHOOSING_WORK_TITLE_FRAMES + Math.ceil(CHOOSING_WORK_DURATION_S * layout.fps)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+      />
+      <Composition
+        id="CopilotStudioEvaluation"
+        component={CopilotStudioEvaluation}
+        durationInFrames={COPILOT_STUDIO_EVALUATION_TITLE_FRAMES + Math.round(COPILOT_STUDIO_EVALUATION_DURATION_S * layout.fps)}
         fps={layout.fps}
         width={layout.width}
         height={layout.height}
