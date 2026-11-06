@@ -32,8 +32,6 @@
 
 <break time="500ms"/>These checks separate a retrieval problem from a matching problem. If the record never reached the agent, rewriting the matching instructions won't fix it. But if the right record came back and the agent misread it, the matching instructions are a good place to look.
 
-<break time="500ms"/>You can also find individual runs under the agent's Activity tab. It lists the channel, date, steps, last step, and status, including test chats and evaluations. One caution: Completed means the run finished. It doesn't mean the recommendation was right.
-
 <break time="500ms"/>Now let's look inside the agent flow itself. From Tools, I'll open Check Team Action Tracker, follow the flow link, and open a run from its activity. The flow has four steps. The agent calls the flow, it gets the items, selects the fields, and responds to the agent. Retrieval, transformation, and response.
 
 <break time="500ms"/>To see exactly what was sent back, I'll open Respond to the agent, and show the raw inputs. The same values also appear as tool outputs in the evaluation's activity map. That covers our second criterion: process execution.
