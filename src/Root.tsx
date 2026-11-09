@@ -76,6 +76,7 @@ import { AdvancedModelsChatGPT, ADVANCED_MODELS_DURATION_S, ADVANCED_MODELS_TITL
 import { workContext } from './data/work-context';
 import { workspaceStudioSkills } from './data/workspace-studio-skills';
 import { ClaudeSkills, CLAUDE_SKILLS_DURATION_S, CLAUDE_SKILLS_TITLE_FRAMES } from './compositions/ClaudeSkills';
+import { ChatGPTSkills, CHATGPT_SKILLS_DURATION_S, CHATGPT_SKILLS_TITLE_FRAMES } from './compositions/ChatGPTSkills';
 import { whatIsGenerativeAi } from './data/what-is-generative-ai';
 import { aiLandscape } from './data/ai-landscape';
 import { chatGPTDeepResearch } from './data/chatgpt-deep-research';
@@ -799,6 +800,14 @@ export const RemotionRoot: React.FC = () => {
         height={layout.height}
         schema={videoDataSchema}
         defaultProps={workContext}
+      />
+      <Composition
+        id="ChatGPTSkills"
+        component={ChatGPTSkills}
+        durationInFrames={CHATGPT_SKILLS_TITLE_FRAMES + Math.ceil(CHATGPT_SKILLS_DURATION_S * layout.fps)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
       />
       <Composition
         id="ClaudeSkills"
