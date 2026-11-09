@@ -10,32 +10,30 @@ import { VideoData } from '../scenes/types';
 //  #  VO window (s)      scene
 //  2     0.00 →   13.24  label-title-body (what a skill is)
 //  3    13.24 →   39.04  label-title-body (anatomy)
-//  4    39.04 →   45.76  centered-image-caption (manual: type /)
-//  5    45.76 →   52.00  centered-image-caption (manual: + > Skills)
-//  6    52.00 →   58.72  centered-image-caption (automatic loading)
-//  7    58.72 →   71.68  checklist-slide (prereqs)
-//  8    71.68 →   77.16  centered-image-caption (Customize > Skills > Add)
-//  9    77.16 →   84.16  centered-image-caption (three create options)
-// 10    84.16 →  104.72  label-title-body (record a skill)
-// 11   104.72 →  110.47  label-title-body (bridge)
-// 12   110.47 →  118.07  centered-image-caption (create with claude prompt)
-// 13   118.07 →  154.11  label-title-body (CODO)
-// 14   154.11 →  162.63  checklist-slide (five sections)
-// 15   162.63 →  174.71  label-title-body (supporting files)
-// 16   174.71 →  183.03  centered-image-caption (clarifying questions)
-// 17   183.03 →  188.31  centered-image-caption (preview)
-// 18   188.31 →  193.75  centered-image-caption (review + Save skill)
-// 19   193.75 →  196.63  centered-image-caption (enabled)
-// 20   196.63 →  205.39  centered-image-caption (/larry test)
-// 21   205.39 →  219.15  centered-image-caption (check output + TBDs)
-// 22   219.15 →  231.91  label-title-body (facts example)
-// 23   231.91 →  238.47  centered-image-caption (refine + Update larry)
-// 24   238.47 →  250.39  centered-image-caption (auto invocation check)
-// 25   250.39 →  254.60  centered-image-caption (manual retest)
-// 26   254.60 →  257.83  centered-image-caption (retest output)
-// 27   257.83 →  281.43  checklist-slide (surfaces + sync)
-// 28   281.43 →  307.83  checklist-slide (authoring tips)
-// 29   307.83 →  316.95  big-statement (closing)
+//  4    39.04 →   58.72  label-title-body (two ways to use a skill)
+//  5    58.72 →   71.68  checklist-slide (prereqs)
+//  6    71.68 →   77.16  centered-image-caption (Customize > Skills > Add)
+//  7    77.16 →   84.16  centered-image-caption (three create options)
+//  8    84.16 →  104.72  label-title-body (record a skill)
+//  9   104.72 →  110.47  label-title-body (bridge)
+// 10   110.47 →  118.07  centered-image-caption (create with claude prompt)
+// 11   118.07 →  154.11  label-title-body (CODO)
+// 12   154.11 →  162.63  checklist-slide (five sections)
+// 13   162.63 →  174.71  label-title-body (supporting files)
+// 14   174.71 →  183.03  centered-image-caption (clarifying questions)
+// 15   183.03 →  188.31  centered-image-caption (preview)
+// 16   188.31 →  193.75  centered-image-caption (review + Save skill)
+// 17   193.75 →  196.63  centered-image-caption (enabled)
+// 18   196.63 →  205.39  centered-image-caption (/larry test)
+// 19   205.39 →  219.15  centered-image-caption (check output + TBDs)
+// 20   219.15 →  231.91  label-title-body (facts example)
+// 21   231.91 →  238.47  centered-image-caption (refine + Update larry)
+// 22   238.47 →  250.39  centered-image-caption (auto invocation check)
+// 23   250.39 →  254.60  centered-image-caption (manual retest)
+// 24   254.60 →  257.83  centered-image-caption (retest output)
+// 25   257.83 →  281.43  checklist-slide (surfaces + sync)
+// 26   281.43 →  307.83  checklist-slide (authoring tips)
+// 27   307.83 →  316.95  big-statement (closing)
 
 export const claudeSkills: VideoData = {
   audioSrc: 'audio/claude-skills-padded.mp3',
@@ -74,55 +72,22 @@ export const claudeSkills: VideoData = {
       bodyTimings: [74, 320, 412, 587],
       durationInFrames: 774,
     },
-    // ── 4. manual: type / (39.04s–45.76s)
+    // ── 4. two ways to use a skill (39.04s–58.72s)
     {
-      layout: 'centered-image-caption',
-      image: 'claude-skills/images/08-slash-larry-invocation.png',
-      objectFit: 'contain',
-      imageWidth: 1640,
-      imageZoomKeyframes: [
-        {
-          startFrame: 132,
-          centerX: 0.53,
-          centerY: 0.49,
-          scale: 2.0,
-        },
+      layout: 'label-title-body',
+      label: 'USING A SKILL',
+      title: 'Two Ways to Use a Skill',
+      bodyRight: true,
+      bodyCards: true,
+      body: [
+        'Type /: Choose the skill by name',
+        'Plus button: Open Skills from the prompt box menu',
+        'Automatic: Claude loads a relevant skill based on its description',
       ],
-      durationInFrames: 202,
+      bodyTimings: [132, 230, 389],
+      durationInFrames: 591,
     },
-    // ── 5. manual: + > Skills (45.76s–52.00s)
-    {
-      layout: 'centered-image-caption',
-      image: 'claude-skills/images/09-plus-menu-skills.png',
-      objectFit: 'contain',
-      imageWidth: 1640,
-      imageZoomKeyframes: [
-        {
-          startFrame: 29,
-          centerX: 0.53,
-          centerY: 0.57,
-          scale: 1.7,
-        },
-      ],
-      durationInFrames: 187,
-    },
-    // ── 6. automatic loading (52.00s–58.72s)
-    {
-      layout: 'centered-image-caption',
-      image: 'claude-skills/images/10-automatic-larry-loading.png',
-      objectFit: 'contain',
-      imageWidth: 1640,
-      imageZoomKeyframes: [
-        {
-          startFrame: 90,
-          centerX: 0.5,
-          centerY: 0.42,
-          scale: 2.2,
-        },
-      ],
-      durationInFrames: 202,
-    },
-    // ── 7. prereqs (58.72s–71.68s)
+    // ── 5. prereqs (58.72s–71.68s)
     {
       layout: 'checklist-slide',
       label: 'BEFORE YOU BEGIN',
@@ -134,7 +99,7 @@ export const claudeSkills: VideoData = {
       itemTimings: [52, 281],
       durationInFrames: 388,
     },
-    // ── 8. Customize > Skills > Add (71.68s–77.16s)
+    // ── 6. Customize > Skills > Add (71.68s–77.16s)
     {
       layout: 'centered-image-caption',
       image: 'claude-skills/images/01-customize-skills.png',
@@ -156,7 +121,7 @@ export const claudeSkills: VideoData = {
       ],
       durationInFrames: 165,
     },
-    // ── 9. three create options (77.16s–84.16s)
+    // ── 7. three create options (77.16s–84.16s)
     {
       layout: 'centered-image-caption',
       image: 'claude-skills/images/02-add-skill-options.png',
@@ -172,7 +137,7 @@ export const claudeSkills: VideoData = {
       ],
       durationInFrames: 210,
     },
-    // ── 10. record a skill (84.16s–104.72s)
+    // ── 8. record a skill (84.16s–104.72s)
     {
       layout: 'label-title-body',
       label: 'RECORD A SKILL',
@@ -184,7 +149,7 @@ export const claudeSkills: VideoData = {
       bodyTimings: [265, 462],
       durationInFrames: 617,
     },
-    // ── 11. bridge (104.72s–110.47s)
+    // ── 9. bridge (104.72s–110.47s)
     {
       layout: 'label-title-body',
       label: 'LET\'S BUILD ONE',
@@ -192,7 +157,7 @@ export const claudeSkills: VideoData = {
       body: ['A skill that writes weekly leadership updates.'],
       durationInFrames: 172,
     },
-    // ── 12. create with claude prompt (110.47s–118.07s)
+    // ── 10. create with claude prompt (110.47s–118.07s)
     {
       layout: 'centered-image-caption',
       image: 'claude-skills/images/03-create-with-claude-prompt.png',
@@ -208,7 +173,7 @@ export const claudeSkills: VideoData = {
       ],
       durationInFrames: 228,
     },
-    // ── 13. CODO (118.07s–154.11s)
+    // ── 11. CODO (118.07s–154.11s)
     {
       layout: 'label-title-body',
       label: 'BRIEF LARRY',
@@ -225,7 +190,7 @@ export const claudeSkills: VideoData = {
       bodyTimings: [216, 382, 636, 996],
       durationInFrames: 1081,
     },
-    // ── 14. five sections (154.11s–162.63s)
+    // ── 12. five sections (154.11s–162.63s)
     {
       layout: 'checklist-slide',
       label: 'OUTPUT',
@@ -240,7 +205,7 @@ export const claudeSkills: VideoData = {
       itemTimings: [0, 37, 76, 133, 193],
       durationInFrames: 256,
     },
-    // ── 15. supporting files (162.63s–174.71s)
+    // ── 13. supporting files (162.63s–174.71s)
     {
       layout: 'label-title-body',
       label: 'OPTIONAL CONTEXT',
@@ -255,7 +220,7 @@ export const claudeSkills: VideoData = {
       bodyTimings: [79, 118, 146],
       durationInFrames: 362,
     },
-    // ── 16. clarifying questions (174.71s–183.03s)
+    // ── 14. clarifying questions (174.71s–183.03s)
     {
       layout: 'centered-image-caption',
       image: 'claude-skills/images/04-clarifying-questions.png',
@@ -271,7 +236,7 @@ export const claudeSkills: VideoData = {
       ],
       durationInFrames: 250,
     },
-    // ── 17. preview (183.03s–188.31s)
+    // ── 15. preview (183.03s–188.31s)
     {
       layout: 'centered-image-caption',
       image: 'claude-skills/images/05-generated-skill-preview.png',
@@ -287,7 +252,7 @@ export const claudeSkills: VideoData = {
       ],
       durationInFrames: 158,
     },
-    // ── 18. review + Save skill (188.31s–193.75s)
+    // ── 16. review + Save skill (188.31s–193.75s)
     {
       layout: 'centered-image-caption',
       image: 'claude-skills/images/06-skill-output-instructions.png',
@@ -309,7 +274,7 @@ export const claudeSkills: VideoData = {
       ],
       durationInFrames: 163,
     },
-    // ── 19. enabled (193.75s–196.63s)
+    // ── 17. enabled (193.75s–196.63s)
     {
       layout: 'centered-image-caption',
       image: 'claude-skills/images/07-saved-and-enabled.png',
@@ -325,7 +290,7 @@ export const claudeSkills: VideoData = {
       ],
       durationInFrames: 87,
     },
-    // ── 20. /larry test (196.63s–205.39s)
+    // ── 18. /larry test (196.63s–205.39s)
     {
       layout: 'centered-image-caption',
       image: 'claude-skills/images/08-slash-larry-invocation.png',
@@ -341,7 +306,7 @@ export const claudeSkills: VideoData = {
       ],
       durationInFrames: 263,
     },
-    // ── 21. check output + TBDs (205.39s–219.15s)
+    // ── 19. check output + TBDs (205.39s–219.15s)
     {
       layout: 'centered-image-caption',
       image: 'claude-skills/images/11-test-output-and-open-items.png',
@@ -363,7 +328,7 @@ export const claudeSkills: VideoData = {
       ],
       durationInFrames: 412,
     },
-    // ── 22. facts example (219.15s–231.91s)
+    // ── 20. facts example (219.15s–231.91s)
     {
       layout: 'label-title-body',
       label: 'CHECK THE FACTS',
@@ -377,7 +342,7 @@ export const claudeSkills: VideoData = {
       bodyTimings: [59, 282],
       durationInFrames: 383,
     },
-    // ── 23. refine + Update larry (231.91s–238.47s)
+    // ── 21. refine + Update larry (231.91s–238.47s)
     {
       layout: 'centered-image-caption',
       image: 'claude-skills/images/12-refine-skill-instructions.png',
@@ -399,7 +364,7 @@ export const claudeSkills: VideoData = {
       ],
       durationInFrames: 197,
     },
-    // ── 24. auto invocation check (238.47s–250.39s)
+    // ── 22. auto invocation check (238.47s–250.39s)
     {
       layout: 'centered-image-caption',
       image: 'claude-skills/images/10-automatic-larry-loading.png',
@@ -421,7 +386,7 @@ export const claudeSkills: VideoData = {
       ],
       durationInFrames: 358,
     },
-    // ── 25. manual retest (250.39s–254.60s)
+    // ── 23. manual retest (250.39s–254.60s)
     {
       layout: 'centered-image-caption',
       image: 'claude-skills/images/13-manual-invocation-retest.png',
@@ -437,7 +402,7 @@ export const claudeSkills: VideoData = {
       ],
       durationInFrames: 126,
     },
-    // ── 26. retest output (254.60s–257.83s)
+    // ── 24. retest output (254.60s–257.83s)
     {
       layout: 'centered-image-caption',
       image: 'claude-skills/images/14-retest-output-review.png',
@@ -453,7 +418,7 @@ export const claudeSkills: VideoData = {
       ],
       durationInFrames: 97,
     },
-    // ── 27. surfaces + sync (257.83s–281.43s)
+    // ── 25. surfaces + sync (257.83s–281.43s)
     {
       layout: 'checklist-slide',
       label: 'GOOD TO KNOW',
@@ -466,7 +431,7 @@ export const claudeSkills: VideoData = {
       itemTimings: [132, 350, 622],
       durationInFrames: 708,
     },
-    // ── 28. authoring tips (281.43s–307.83s)
+    // ── 26. authoring tips (281.43s–307.83s)
     {
       layout: 'checklist-slide',
       label: 'BEST PRACTICES',
@@ -480,7 +445,7 @@ export const claudeSkills: VideoData = {
       itemTimings: [137, 209, 338, 593],
       durationInFrames: 792,
     },
-    // ── 29. closing (307.83s–316.95s)
+    // ── 27. closing (307.83s–316.95s)
     {
       layout: 'big-statement',
       label: 'THE TAKEAWAY',
