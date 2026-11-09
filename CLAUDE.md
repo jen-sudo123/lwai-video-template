@@ -9,7 +9,8 @@ Each video is a composition: a data file `src/data/<name>.ts` exporting a `Video
 |---|---|
 | `src/scenes/` | Scene components. Props in `types.ts`, Zod schemas in `schemas.ts`, router in `SceneRenderer.tsx` |
 | `src/Video.tsx` | Composition entry (audio, continuous `clipSrc` background, avatar, zoom) |
-| `src/compositions/` | Custom one-off composition components (AiFluency, AdvancedModelsChatGPT, ...) |
+| `src/compositions/` | Custom one-off composition components (AiFluency, AdvancedModelsChatGPT, ClaudeSkills, ...) |
+| `src/kit/` | Demo kit for custom compositions: timing helpers, animated `AppWindow` for screenshots, icons, UI mocks. See `src/kit/README.md` |
 | `src/tokens.ts` | Design tokens: `safeMargin: 80`, `lime500: #66C61C`, `titleGreen: #4a7c2f` |
 | `src/data/` | Per-video data files, scripts (`*.script.txt`) and Whisper transcripts (`*.transcript.*`) |
 | `public/` | Media. **Not in git** — lives in Google Drive (see below) |
@@ -71,6 +72,20 @@ Default voice **Daan** `mY3gNkLi7iAw6IzipDpw`. Plain text + `<break>` tags only 
 stability 0.10, style 0.55, similarityBoost 0.85, speed 0.95. Show a storyboard table (scene / title / VO line) for approval before generating.
 Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 
+## Demo style (custom compositions)
+
+For screenshot walkthroughs and concept-heavy videos, build a custom composition with `src/kit` instead of
+slide scenes — `src/compositions/ClaudeSkills.tsx` is the reference. Read `src/kit/README.md` first.
+
+- One clock: `t` = VO seconds; every cue is the second of the word it names (from the transcript).
+- Screenshots go in `AppWindow`: zoom to what the VO names, click what it says to click, spotlight what to look at,
+  STEP caption underneath. Coordinates are the screenshot's pixels — pass its real `imgW`/`imgH`, verify with stills.
+- Concept scenes animate the idea itself (folder tree builds, toggle switches, document fills in) rather than bullet cards.
+- For a data-file video, the same screenshot treatment is the `app-window` scene layout (times from scene start).
+- Preview for the user: a live Remotion `Player` bundle (esbuild) in an Artifact. Inline screenshots as data URIs
+  (artifact pages don't load sibling image files) and drive the player from a plain `<audio>` element
+  (seek the player to `audio.currentTime` each animation frame) so picture and VO can't drift.
+
 ## Brand + layout rules
 
 - 80px safe margin on every edge; right-aligned text ends at x = 1840; vertically centred right columns start at y ≥ 160–190.
@@ -108,6 +123,9 @@ Scripts in `src/data/<id>.script.txt`; audio to `public/audio/<id>.mp3`.
 - Network must allow: `www.googleapis.com`, `oauth2.googleapis.com`, `downloads.rclone.org`, `api.elevenlabs.io`,
   `storage.googleapis.com` + `remotion.media` (Chrome download), plus npm/GitHub defaults.
 - No Remotion Studio and no Whisper: verify with `remotion still`, transcribe with the `speech-to-text` skill (ElevenLabs Scribe, word timestamps).
+  If the REST call is rejected for auth, use the ElevenLabs connector's `creative_transcribe_audio` instead.
+- Stills/renders fail on fonts (`ERR_CERT_AUTHORITY_INVALID`) because Remotion's Chrome bypasses the session proxy:
+  add `--browser-executable=scripts/chrome-via-proxy.sh` to `remotion still` / `remotion render`.
 - Nothing on the cloud machine survives the session: push media and renders to Drive, commit code before finishing.
 - Renders: concurrency can go above 1 here, but keep `--timeout=120000`.
 

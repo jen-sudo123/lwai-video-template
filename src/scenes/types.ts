@@ -23,6 +23,20 @@ export type Scene =
       animation?: AnimationMode;
     }
   | {
+      // Screenshot in an animated browser window (demo kit). Times are seconds from scene start;
+      // coordinates are screenshot pixels. See src/kit/README.md.
+      layout: 'app-window';
+      image: string;
+      imageWidth?: number;
+      imageHeight?: number;
+      windowTitle?: string;
+      camera?: Array<{ at: number; x: number; y: number; s: number; dur?: number }>;
+      cursor?: Array<{ at: number; x: number; y: number; click?: boolean; dur?: number }>;
+      rings?: Array<{ at: number; until?: number; x: number; y: number; w: number; h: number; spot?: boolean }>;
+      steps?: Array<{ at: number; text: string }>;
+      durationInFrames: number;
+    }
+  | {
       layout: 'centered-image-caption';
       image: string;
       caption?: string;
