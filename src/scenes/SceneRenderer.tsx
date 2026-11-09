@@ -4,6 +4,7 @@ import { TitleCardGreen } from './TitleCardGreen';
 import { BlankBase } from './BlankBase';
 import { TextImageSplit } from './TextImageSplit';
 import { CenteredImageCaption } from './CenteredImageCaption';
+import { AppWindowScene } from './AppWindowScene';
 import { CenteredQuote } from './CenteredQuote';
 import { Comparison } from './Comparison';
 import { LabelTitleBody } from './LabelTitleBody';
@@ -65,6 +66,19 @@ export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> =
           animation={scene.animation}
         />
       );
+    case 'app-window':
+      return (
+        <AppWindowScene
+          image={scene.image}
+          imageWidth={scene.imageWidth}
+          imageHeight={scene.imageHeight}
+          windowTitle={scene.windowTitle}
+          camera={scene.camera}
+          cursor={scene.cursor}
+          rings={scene.rings}
+          steps={scene.steps}
+        />
+      );
     case 'centered-image-caption':
       return (
         <CenteredImageCaption
@@ -74,6 +88,7 @@ export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> =
           objectFit={scene.objectFit}
           imageWidth={scene.imageWidth}
           imageZoom={scene.imageZoom}
+          imageZoomKeyframes={scene.imageZoomKeyframes}
         />
       );
     case 'centered-quote':

@@ -23,6 +23,19 @@ const textImageSplit = z.object({
   animation: animationMode.optional(),
 });
 
+const appWindow = z.object({
+  layout: z.literal('app-window'),
+  image: z.string(),
+  imageWidth: z.number().optional(),
+  imageHeight: z.number().optional(),
+  windowTitle: z.string().optional(),
+  camera: z.array(z.object({ at: z.number(), x: z.number(), y: z.number(), s: z.number(), dur: z.number().optional() })).optional(),
+  cursor: z.array(z.object({ at: z.number(), x: z.number(), y: z.number(), click: z.boolean().optional(), dur: z.number().optional() })).optional(),
+  rings: z.array(z.object({ at: z.number(), until: z.number().optional(), x: z.number(), y: z.number(), w: z.number(), h: z.number(), spot: z.boolean().optional() })).optional(),
+  steps: z.array(z.object({ at: z.number(), text: z.string() })).optional(),
+  durationInFrames: z.number(),
+});
+
 const centeredImageCaption = z.object({
   layout: z.literal('centered-image-caption'),
   image: z.string(),
@@ -37,6 +50,12 @@ const centeredImageCaption = z.object({
     scale: z.number().optional(),
     startFrame: z.number().optional(),
   }).optional(),
+  imageZoomKeyframes: z.array(z.object({
+    startFrame: z.number(),
+    centerX: z.number().optional(),
+    centerY: z.number().optional(),
+    scale: z.number().optional(),
+  })).optional(),
 });
 
 const centeredQuote = z.object({
@@ -548,6 +567,7 @@ export const sceneSchema = z.discriminatedUnion('layout', [
   titleCardGreen,
   blank,
   textImageSplit,
+  appWindow,
   centeredImageCaption,
   centeredQuote,
   comparison,
