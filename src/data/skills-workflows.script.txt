@@ -1,4 +1,8 @@
 <speak>
+<break time="500ms"/>Think about a task you have to re-explain to AI every single week. <break time="300ms"/> You describe the audience, walk through the steps, specify the format, and remind AI what to avoid.
+
+<break time="500ms"/>You've already learned to use Co-Do to structure these instructions clearly. <break time="300ms"/> And while you can reuse a Co-Do prompt, a Skill takes this further, by packaging the entire process into a reusable workflow.
+
 <break time="500ms"/>A Skill is a set of reusable instructions that teaches AI how to perform a specific task, or follow an established process.
 
 <break time="500ms"/>Think of it like a standard operating procedure for AI. <break time="200ms"/> It captures the steps, expectations, and rules you'd normally explain to a new colleague.
@@ -8,10 +12,6 @@
 <break time="500ms"/>Some Skills can even be invoked automatically, when AI recognizes a relevant task. <break time="200ms"/> So you don't always have to remember which Skill to use.
 
 <break time="500ms"/>You can also combine multiple Skills. <break time="300ms"/> For example, one might define your workflow, while another applies your preferred writing style.
-
-<break time="500ms"/>Think about a task you have to re-explain to AI every single week. <break time="300ms"/> You describe the audience, walk through the steps, specify the format, and remind AI what to avoid.
-
-<break time="500ms"/>You've already learned to use Co-Do to structure these instructions clearly. <break time="300ms"/> And while you can reuse a Co-Do prompt, a Skill takes this further, by packaging the entire process into a reusable workflow.
 
 <break time="500ms"/>Let's take a familiar example. <break time="300ms"/> Imagine you prepare a weekly leadership update.
 
