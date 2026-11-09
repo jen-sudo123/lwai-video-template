@@ -42,7 +42,6 @@ export const skillsWorkflows: VideoData = {
     {
       layout: 'title-card-green',
       title: 'Skills',
-      subtitle: 'Turn your best prompts into repeatable workflows',
       durationInFrames: 60,
     },
 
