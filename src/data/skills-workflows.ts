@@ -25,9 +25,9 @@ import { VideoData } from '../scenes/types';
 //  13  106.72   start with CODO                      273   big-statement (fade)
 //  14  115.84   CODO + Trigger + Resources          1087   process-steps (two columns)
 //  15  152.08   six questions → one Skill            142   skill-package-diagram (assemble)
-//  16  156.80   principle 1: explicit                276   big-statement (fade)
-//  17  166.00   principle 2: context vs inputs       367   split-contrast
-//  18  178.24   principle 3: examples                211   big-statement
+//  16  156.80   principle 1: explicit                276   checklist-slide
+//  17  166.00   principle 2: context vs inputs       367   checklist-slide
+//  18  178.24   principle 3: examples                211   checklist-slide
 //  19  185.28   principle 4: test                    284   checklist-slide
 //  20  194.72   sharing: scale or repeat             290   split-contrast
 //  21  204.40   not every task needs a Skill         226   big-statement (fade)
@@ -259,45 +259,40 @@ export const skillsWorkflows: VideoData = {
       durationInFrames: 142,
     },
 
+    // 16–19 — the four principles share one layout (checklist-slide): label "PRINCIPLE N OF 4",
+    //          principle as the title, supporting points revealed on the word that names them.
+
     // 16 — 156.80 "As you develop it, keep a few principles in mind. First (159.92), make the important
-    //      steps explicit, as if you're briefing (163.60) a capable new colleague."
+    //      steps (161.28) explicit, as if you're briefing (163.60) a capable new colleague."
     {
-      layout: 'big-statement',
-      label: 'PRINCIPLE 1',
-      text: 'Make the important steps explicit.\nBrief it like a capable new colleague.',
-      highlight: 'explicit.',
-      size: 'title',
-      animation: 'fade',
-      lineTimings: [94, 204],
+      layout: 'checklist-slide',
+      label: 'PRINCIPLE 1 OF 4',
+      title: 'Make the important steps explicit',
+      items: ['Spell out every step that matters', 'Brief it like a capable new colleague'],
+      itemTimings: [134, 204],
       durationInFrames: 276,
     },
 
-    // 17 — 166.00 "Second, separate reusable context (166.80) from variable inputs (169.04). For your
-    //      leadership update, the structure and process (172.24) belong in the Skill. This week's
-    //      notes (175.20) belong in your new request."
+    // 17 — 166.00 "Second, separate reusable context from variable inputs. For your leadership update,
+    //      the structure and process (172.24) belong in the Skill. This week's notes (175.20) belong
+    //      in your new request."
     {
-      layout: 'split-contrast',
-      leftLabel: 'REUSABLE CONTEXT',
-      leftTitle: 'Structure and process',
-      leftBody: 'Lives in the Skill',
-      leftBodyDelay: 187,
-      rightLabel: 'VARIABLE INPUTS',
-      rightTitle: "This week's notes",
-      rightBody: 'Go in your new request',
-      rightBodyDelay: 276,
-      rightLightUpFrame: 91,
+      layout: 'checklist-slide',
+      label: 'PRINCIPLE 2 OF 4',
+      title: 'Separate reusable context from variable inputs',
+      items: ['In the Skill: structure and process', "In your request: this week's notes"],
+      itemTimings: [187, 276],
       durationInFrames: 367,
     },
 
-    // 18 — 178.24 "Third, include examples of what good output (180.56) looks like, especially when
-    //      tone or format matters."
+    // 18 — 178.24 "Third, include examples of what good output (180.56) looks like, especially (182.16)
+    //      when tone or format matters."
     {
-      layout: 'big-statement',
-      label: 'PRINCIPLE 3',
-      text: 'Show AI what good output\nlooks like.',
-      highlight: 'good output',
-      size: 'title',
-      animation: 'kinetic',
+      layout: 'checklist-slide',
+      label: 'PRINCIPLE 3 OF 4',
+      title: 'Include examples of good output',
+      items: ['Show what good looks like', 'Especially when tone or format matters'],
+      itemTimings: [70, 118],
       durationInFrames: 211,
     },
 
@@ -305,8 +300,8 @@ export const skillsWorkflows: VideoData = {
     //      (189.44), flags missing information (190.80), and produces consistent results (192.48)."
     {
       layout: 'checklist-slide',
-      label: 'PRINCIPLE 4',
-      title: 'Test it with realistic inputs',
+      label: 'PRINCIPLE 4 OF 4',
+      title: 'Test with realistic inputs',
       items: ['Follows instructions', 'Flags missing information', 'Produces consistent results'],
       itemTimings: [125, 166, 216],
       durationInFrames: 284,
