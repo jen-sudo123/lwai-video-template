@@ -404,7 +404,7 @@ const ClaudeSkillsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
   return (
     <AbsoluteFill style={{ backgroundColor: '#fff' }}>
       <style>{CSS}</style>
-      <Audio src={audioSrc ?? staticFile('audio/claude-skills.mp3')} />
+      {audioSrc !== 'none' && <Audio src={audioSrc ?? staticFile('audio/claude-skills.mp3')} />}
 
       {/* 1 — Teach Claude your way of working */}
       <Scene t={t} index={0}>
@@ -685,14 +685,20 @@ const ClaudeSkillsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           Easier to <span className="cs-mark" style={markStyle(t, 87.3)}>show</span> than describe?
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 46, marginTop: 64 }}>
-          {/* recording screen */}
+          {/* recording screen: a real Claude screen being recorded */}
           <div className="cs-card" style={{ width: 640, height: 380, position: 'relative', overflow: 'hidden', background: '#FBFBF8', ...enter(t, 89.2, { y: 24 }) }}>
-            <div style={{ position: 'absolute', left: 30, top: 30, width: 260, height: 150, borderRadius: 12, background: '#fff', border: `2px solid ${LINE}` }} />
-            <div style={{ position: 'absolute', left: 320, top: 30, width: 290, height: 310, borderRadius: 12, background: '#fff', border: `2px solid ${LINE}` }} />
-            <div style={{ position: 'absolute', left: 30, top: 200, width: 260, height: 140, borderRadius: 12, background: '#fff', border: `2px solid ${LINE}` }} />
-            {[0, 1, 2, 3].map((i) => (
-              <div key={i} style={{ position: 'absolute', left: 345, top: 60 + i * 34, height: 12, width: 200 - i * 30, borderRadius: 6, background: '#ECECE6' }} />
-            ))}
+            <Img
+              src={shot('01-customize-skills')}
+              style={{
+                position: 'absolute',
+                left: 0,
+                top: 0,
+                width: 640 * 1.25,
+                height: (640 * 1.25 * IMG_H) / IMG_W,
+                transformOrigin: '0 0',
+                transform: `translate(${-prog(t, 90, 12, IN_OUT) * 140}px, ${-prog(t, 90, 12, IN_OUT) * 20}px)`,
+              }}
+            />
             {(() => {
               const path = [
                 [120, 90],
@@ -1347,7 +1353,7 @@ const ClaudeSkillsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
   );
 };
 
-// audioSrc: optional override (the browser preview passes a blob URL so the VO is always seekable).
+// audioSrc: optional override. 'none' drops the VO (the browser preview plays it outside the player and drives the frame from it).
 export const ClaudeSkills: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => (
   <AbsoluteFill style={{ backgroundColor: '#fff' }}>
     <Sequence durationInFrames={CLAUDE_SKILLS_TITLE_FRAMES}>
