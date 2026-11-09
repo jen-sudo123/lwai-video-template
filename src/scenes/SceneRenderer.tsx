@@ -44,6 +44,7 @@ import { AccessWorkflowDiagram } from './diagrams/AccessWorkflowDiagram';
 import { BoundedAutonomyDiagram } from './diagrams/BoundedAutonomyDiagram';
 import { BiasFunnelDiagram } from './diagrams/BiasFunnelDiagram';
 import { SkillPackageDiagram } from './diagrams/SkillPackageDiagram';
+import { SharedSkillDiagram } from './diagrams/SharedSkillDiagram';
 
 // Routes a scene to its component. Add new layouts here as you create them.
 export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> = ({ scene, hasClipLayer }) => {
@@ -524,6 +525,19 @@ export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> =
           accentFrom={scene.accentFrom}
           assembleFrame={scene.assembleFrame}
           assembledSub={scene.assembledSub}
+        />
+      );
+    case 'shared-skill-diagram':
+      return (
+        <SharedSkillDiagram
+          label={scene.label}
+          title={scene.title}
+          teamFrame={scene.teamFrame}
+          goodFrame={scene.goodFrame}
+          weakFrame={scene.weakFrame}
+          goodCaption={scene.goodCaption}
+          weakCaption={scene.weakCaption}
+          flawLabel={scene.flawLabel}
         />
       );
     case 'access-workflow-diagram':

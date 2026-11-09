@@ -647,6 +647,20 @@ export type Scene =
       assembleFrame?: number;
       assembledSub?: string;
       durationInFrames: number;
+    }
+  | {
+      // One Skill card radiating to a team of six. goodFrame: lime pulses give everyone a
+      // check; weakFrame: a flaw tag appears and red pulses turn every check into a cross.
+      layout: 'shared-skill-diagram';
+      label?: string;
+      title: string;
+      teamFrame?: number;
+      goodFrame?: number;
+      weakFrame?: number;
+      goodCaption?: string;
+      weakCaption?: string;
+      flawLabel?: string;
+      durationInFrames: number;
     };
 
 export type ChatMessage = {

@@ -29,7 +29,7 @@ import { VideoData } from '../scenes/types';
 //  17  166.00   principle 2: context vs inputs       367   checklist-slide
 //  18  178.24   principle 3: examples                211   checklist-slide
 //  19  185.28   principle 4: test                    284   checklist-slide
-//  20  194.72   sharing: scale or repeat             290   split-contrast
+//  20  194.72   sharing: scale or repeat             290   shared-skill-diagram
 //  21  204.40   not every task needs a Skill         226   big-statement (fade)
 //  22  211.92   start with one workflow              189   process-steps (horizontal cards)
 //  23  218.24   close (VO ends 224.64, hold → 227)   263   big-statement (fade)
@@ -307,15 +307,19 @@ export const skillsWorkflows: VideoData = {
       durationInFrames: 284,
     },
 
-    // 20 — 194.72 "This is especially important before sharing Skills with your team. A reusable Skill
-    //      can scale a good process (198.56), but (201.80) it can also repeat a weak one (203.44)."
+    // 20 — 194.72 "This is especially important before sharing (196.72) Skills with your team. A reusable
+    //      Skill can scale (200.00) a good process, but it can also repeat (202.72) a weak one (203.44)."
+    //      Custom: Skill card fans out to a team; good pulse = checks, then a flaw spreads as crosses.
     {
-      layout: 'split-contrast',
-      leftLabel: 'A SHARED SKILL CAN SCALE',
-      leftTitle: 'A good process',
-      rightLabel: 'OR REPEAT',
-      rightTitle: 'A weak one',
-      rightLightUpFrame: 212,
+      layout: 'shared-skill-diagram',
+      label: 'BEFORE YOU SHARE',
+      title: 'Whatever is in the Skill reaches your whole team',
+      teamFrame: 60,
+      goodFrame: 158,
+      weakFrame: 240,
+      goodCaption: 'Scales a good process',
+      weakCaption: 'Or repeats a weak one',
+      flawLabel: 'Unclear step',
       durationInFrames: 290,
     },
 

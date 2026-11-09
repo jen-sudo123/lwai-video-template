@@ -642,6 +642,18 @@ export const sceneSchema = z.discriminatedUnion('layout', [
     assembledSub: z.string().optional(),
     durationInFrames: z.number(),
   }),
+  z.object({
+    layout: z.literal('shared-skill-diagram'),
+    label: z.string().optional(),
+    title: z.string(),
+    teamFrame: z.number().optional(),
+    goodFrame: z.number().optional(),
+    weakFrame: z.number().optional(),
+    goodCaption: z.string().optional(),
+    weakCaption: z.string().optional(),
+    flawLabel: z.string().optional(),
+    durationInFrames: z.number(),
+  }),
 ]);
 
 export const videoDataSchema = z.object({
