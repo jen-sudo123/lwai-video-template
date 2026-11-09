@@ -34,7 +34,7 @@ I’ll choose Create with Claude.
 
 This opens a new conversation with a suggested prompt already in the message box.
 
-I’ll adapt that prompt using my CODO template: Character, Objective, Do’s and Don’ts, and Output.
+I’ll adapt that prompt using my Koh-doh template: Character, Objective, Do’s and Don’ts, and Output.
 
 For Character, Larry is a leadership update writer communicating with the executive team.
 
