@@ -396,7 +396,7 @@ const MenuList: React.FC<{ items: string[]; active?: number; style?: React.CSSPr
 );
 
 // ── Body ────────────────────────────────────────────────────────────────────
-const ClaudeSkillsBody: React.FC = () => {
+const ClaudeSkillsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
@@ -404,7 +404,7 @@ const ClaudeSkillsBody: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: '#fff' }}>
       <style>{CSS}</style>
-      <Audio src={staticFile('audio/claude-skills.mp3')} />
+      <Audio src={audioSrc ?? staticFile('audio/claude-skills.mp3')} />
 
       {/* 1 — Teach Claude your way of working */}
       <Scene t={t} index={0}>
@@ -1347,13 +1347,14 @@ const ClaudeSkillsBody: React.FC = () => {
   );
 };
 
-export const ClaudeSkills: React.FC = () => (
+// audioSrc: optional override (the browser preview passes a blob URL so the VO is always seekable).
+export const ClaudeSkills: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => (
   <AbsoluteFill style={{ backgroundColor: '#fff' }}>
     <Sequence durationInFrames={CLAUDE_SKILLS_TITLE_FRAMES}>
       <TitleCardGreen label="CLAUDE" title="Claude Skills" />
     </Sequence>
     <Sequence from={CLAUDE_SKILLS_TITLE_FRAMES}>
-      <ClaudeSkillsBody />
+      <ClaudeSkillsBody audioSrc={audioSrc} />
     </Sequence>
   </AbsoluteFill>
 );
