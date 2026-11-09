@@ -1,0 +1,91 @@
+Claude Skills lets you teach Claude your way of working.
+
+You can package your expertise, procedures, and best practices into a reusable skill, so you don’t have to explain the same workflow every time.
+
+A skill is more than a saved prompt. It’s a structured folder containing instructions and, optionally, supporting resources.
+
+Every skill needs an instruction file named SKILL dot M-D. This includes the skill’s name, a description of when to use it, and the instructions Claude should follow.
+
+You can also include examples, templates, style guides, reference documents, data files, or scripts.
+
+There are two ways to use a skill.
+
+You can select it manually by typing a forward slash and choosing its name. Or, click the plus button beside the prompt box, choose Skills, and select the one you want.
+
+Claude can also recognize when an enabled skill is relevant and load it automatically, based on its description.
+
+Before you begin, make sure code execution and file creation is enabled. In some settings layouts, this is called Create and edit files. Your organization may also control access to Skills.
+
+To create a skill, go to Customize, select Skills, and click Add.
+
+Here, you’ll see options to upload a skill, create one directly, or create one through a conversation with Claude.
+
+There’s also another option for workflows that are easier to demonstrate than describe.
+
+In Cowork in the Claude desktop app for Mac, eligible users can record themselves completing a task and explain what they’re doing and why.
+
+Claude uses that demonstration to propose a reusable skill, which you can review and refine before saving.
+
+Recording is currently available on Pro, Max, Ultra, and Team plans. It isn’t available in the browser, on mobile, or on Windows.
+
+Now, let’s create a skill called Larry, designed to write weekly leadership updates.
+
+I’ll choose Create with Claude.
+
+This opens a new conversation with a suggested prompt already in the message box.
+
+I’ll adapt that prompt using my CODO template: Character, Objective, Do’s and Don’ts, and Output.
+
+For Character, Larry is a leadership update writer communicating with the executive team.
+
+For Objective, Larry should draft a concise, one-page weekly update that helps leaders stay informed and make strategic decisions.
+
+For Do’s and Don’ts, Larry should highlight major developments, decisions, approvals, and deadlines. It should explain trade-offs, use plain language, and never invent information.
+
+For Output, I want five sections: Executive Summary, Key Developments, Decisions and Action Items, Trade-Offs or Conflicts, and Closing or Next Steps.
+
+I can also attach supporting files, such as a previous update, a roadmap, or KPI references.
+
+These give Claude examples and context without requiring me to repeat everything in the prompt.
+
+Once I send the request, Claude may ask clarifying questions about the workflow, the intended output, or how to handle missing information.
+
+After I answer, Claude generates the skill and opens a preview of its instructions.
+
+I’ll review those instructions carefully, make any adjustments, and click Save skill.
+
+Then I’ll confirm that Larry is enabled.
+
+Now, let’s test it in a fresh chat.
+
+I’ll type forward slash Larry, select the skill, and provide a sample set of weekly notes.
+
+I’ll check whether the update follows the five sections, stays concise, preserves the facts, and identifies the right decisions, owners, and deadlines.
+
+I’ll also check that it marks missing information clearly, rather than guessing.
+
+For example, if the notes say Engineering recommends a later launch date to finish testing, the update should preserve that recommendation. It shouldn’t claim that testing is already complete or guaranteed to finish.
+
+If something is wrong, I can ask Claude to refine the instructions, save the updated skill, and test it again.
+
+To test automatic invocation, I can start another fresh chat and ask for a weekly leadership update without naming Larry.
+
+Then I’ll check Claude’s activity to confirm which skill actually loaded.
+
+If several skills have similar descriptions, selecting Larry manually is the clearest way to make sure I’m testing the right one.
+
+A few practical details are worth remembering.
+
+Skills can be used across Claude dot A-I, Claude Code, and the API, although setup and available tools differ.
+
+Enabled skills can sync from Claude dot A-I to a supported version of Claude Code when you sign in with the same Claude account.
+
+That synchronization is one-way. API skills are managed separately.
+
+When creating skill files yourself, name the instruction file exactly SKILL dot M-D. Use a lowercase skill name and folder name, with hyphens between words.
+
+Pay particular attention to the description. It tells Claude what the skill does and when to use it.
+
+Finally, keep the main instructions focused. Put longer references and supporting material in separate files that Claude can load when needed.
+
+The goal is to capture a workflow clearly enough that Claude can apply it consistently, while you continue to review the results.
