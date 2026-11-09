@@ -37,6 +37,12 @@ const centeredImageCaption = z.object({
     scale: z.number().optional(),
     startFrame: z.number().optional(),
   }).optional(),
+  imageZoomKeyframes: z.array(z.object({
+    startFrame: z.number(),
+    centerX: z.number().optional(),
+    centerY: z.number().optional(),
+    scale: z.number().optional(),
+  })).optional(),
 });
 
 const centeredQuote = z.object({

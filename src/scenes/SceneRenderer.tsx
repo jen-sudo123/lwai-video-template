@@ -74,6 +74,7 @@ export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> =
           objectFit={scene.objectFit}
           imageWidth={scene.imageWidth}
           imageZoom={scene.imageZoom}
+          imageZoomKeyframes={scene.imageZoomKeyframes}
         />
       );
     case 'centered-quote':

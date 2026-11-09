@@ -36,6 +36,9 @@ export type Scene =
         scale?: number;
         startFrame?: number;
       };
+      // Multi-step zoom/pan: eases (28 frames) from the previous state to each keyframe.
+      // centerX/centerY are 0–1 of the image; omit scale to return to 1 (full view).
+      imageZoomKeyframes?: Array<{ startFrame: number; centerX?: number; centerY?: number; scale?: number }>;
     }
   | {
       layout: 'centered-quote';

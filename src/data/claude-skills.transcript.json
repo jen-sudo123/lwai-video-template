@@ -1,0 +1,3926 @@
+{
+"source": "public/audio/claude-skills.mp3 (part1 + 0.6s gap + part2, Scribe word timestamps)",
+"part2_offset": 110.47102,
+"words": [
+{
+"text": "Claude",
+"start": 0.0,
+"end": 0.32
+},
+{
+"text": "Skills",
+"start": 0.4,
+"end": 0.8
+},
+{
+"text": "lets",
+"start": 0.88,
+"end": 1.04
+},
+{
+"text": "you",
+"start": 1.12,
+"end": 1.2
+},
+{
+"text": "teach",
+"start": 1.28,
+"end": 1.52
+},
+{
+"text": "Claude",
+"start": 1.6,
+"end": 2.0
+},
+{
+"text": "your",
+"start": 2.16,
+"end": 2.4
+},
+{
+"text": "way",
+"start": 2.48,
+"end": 2.64
+},
+{
+"text": "of",
+"start": 2.72,
+"end": 2.8
+},
+{
+"text": "working.",
+"start": 2.88,
+"end": 3.68
+},
+{
+"text": "You",
+"start": 3.72,
+"end": 3.76
+},
+{
+"text": "can",
+"start": 3.84,
+"end": 4.0
+},
+{
+"text": "package",
+"start": 4.2,
+"end": 4.4
+},
+{
+"text": "your",
+"start": 4.48,
+"end": 4.56
+},
+{
+"text": "expertise,",
+"start": 4.76,
+"end": 5.52
+},
+{
+"text": "procedures,",
+"start": 5.64,
+"end": 6.32
+},
+{
+"text": "and",
+"start": 6.44,
+"end": 6.56
+},
+{
+"text": "best",
+"start": 6.64,
+"end": 6.8
+},
+{
+"text": "practices",
+"start": 6.88,
+"end": 7.52
+},
+{
+"text": "into",
+"start": 7.6,
+"end": 7.84
+},
+{
+"text": "a",
+"start": 7.92,
+"end": 8.0
+},
+{
+"text": "reusable",
+"start": 8.12,
+"end": 8.56
+},
+{
+"text": "skill,",
+"start": 8.72,
+"end": 9.44
+},
+{
+"text": "so",
+"start": 9.52,
+"end": 9.6
+},
+{
+"text": "you",
+"start": 9.68,
+"end": 9.76
+},
+{
+"text": "don\u2019t",
+"start": 9.8,
+"end": 9.92
+},
+{
+"text": "have",
+"start": 10.0,
+"end": 10.16
+},
+{
+"text": "to",
+"start": 10.2,
+"end": 10.24
+},
+{
+"text": "explain",
+"start": 10.48,
+"end": 10.72
+},
+{
+"text": "the",
+"start": 10.84,
+"end": 10.96
+},
+{
+"text": "same",
+"start": 11.08,
+"end": 11.2
+},
+{
+"text": "workflow",
+"start": 11.28,
+"end": 11.84
+},
+{
+"text": "every",
+"start": 11.92,
+"end": 12.24
+},
+{
+"text": "time.",
+"start": 12.44,
+"end": 13.2
+},
+{
+"text": "A",
+"start": 13.24,
+"end": 13.28
+},
+{
+"text": "skill",
+"start": 13.36,
+"end": 13.68
+},
+{
+"text": "is",
+"start": 13.76,
+"end": 14.0
+},
+{
+"text": "more",
+"start": 14.12,
+"end": 14.24
+},
+{
+"text": "than",
+"start": 14.32,
+"end": 14.4
+},
+{
+"text": "a",
+"start": 14.44,
+"end": 14.48
+},
+{
+"text": "saved",
+"start": 14.56,
+"end": 14.88
+},
+{
+"text": "prompt.",
+"start": 14.96,
+"end": 15.68
+},
+{
+"text": "It\u2019s",
+"start": 15.72,
+"end": 15.84
+},
+{
+"text": "a",
+"start": 15.92,
+"end": 16.0
+},
+{
+"text": "structured",
+"start": 16.24,
+"end": 16.48
+},
+{
+"text": "folder",
+"start": 16.56,
+"end": 16.96
+},
+{
+"text": "containing",
+"start": 17.04,
+"end": 17.44
+},
+{
+"text": "instructions",
+"start": 17.88,
+"end": 18.32
+},
+{
+"text": "and,",
+"start": 18.4,
+"end": 18.76
+},
+{
+"text": "optionally,",
+"start": 18.8,
+"end": 19.653
+},
+{
+"text": "supporting",
+"start": 19.787,
+"end": 20.0
+},
+{
+"text": "resources.",
+"start": 20.08,
+"end": 21.28
+},
+{
+"text": "Every",
+"start": 21.36,
+"end": 21.6
+},
+{
+"text": "skill",
+"start": 21.68,
+"end": 22.0
+},
+{
+"text": "needs",
+"start": 22.08,
+"end": 22.24
+},
+{
+"text": "an",
+"start": 22.32,
+"end": 22.36
+},
+{
+"text": "instruction",
+"start": 22.4,
+"end": 22.96
+},
+{
+"text": "file",
+"start": 23.04,
+"end": 23.36
+},
+{
+"text": "named",
+"start": 23.44,
+"end": 23.76
+},
+{
+"text": "SKILL",
+"start": 23.92,
+"end": 24.4
+},
+{
+"text": "dot",
+"start": 24.48,
+"end": 24.56
+},
+{
+"text": "M-D.",
+"start": 24.8,
+"end": 25.76
+},
+{
+"text": "This",
+"start": 25.84,
+"end": 25.92
+},
+{
+"text": "includes",
+"start": 26.12,
+"end": 26.32
+},
+{
+"text": "the",
+"start": 26.4,
+"end": 26.44
+},
+{
+"text": "skill\u2019s",
+"start": 26.48,
+"end": 26.88
+},
+{
+"text": "name,",
+"start": 26.96,
+"end": 27.52
+},
+{
+"text": "a",
+"start": 27.6,
+"end": 27.64
+},
+{
+"text": "description",
+"start": 27.68,
+"end": 28.16
+},
+{
+"text": "of",
+"start": 28.24,
+"end": 28.32
+},
+{
+"text": "when",
+"start": 28.4,
+"end": 28.48
+},
+{
+"text": "to",
+"start": 28.56,
+"end": 28.64
+},
+{
+"text": "use",
+"start": 28.72,
+"end": 28.88
+},
+{
+"text": "it,",
+"start": 28.96,
+"end": 29.36
+},
+{
+"text": "and",
+"start": 29.44,
+"end": 29.6
+},
+{
+"text": "the",
+"start": 29.64,
+"end": 29.68
+},
+{
+"text": "instructions",
+"start": 29.76,
+"end": 30.4
+},
+{
+"text": "Claude",
+"start": 30.48,
+"end": 30.72
+},
+{
+"text": "should",
+"start": 30.8,
+"end": 30.88
+},
+{
+"text": "follow.",
+"start": 30.96,
+"end": 31.6
+},
+{
+"text": "You",
+"start": 31.84,
+"end": 31.92
+},
+{
+"text": "can",
+"start": 32.0,
+"end": 32.08
+},
+{
+"text": "also",
+"start": 32.2,
+"end": 32.32
+},
+{
+"text": "include",
+"start": 32.4,
+"end": 32.72
+},
+{
+"text": "examples,",
+"start": 32.8,
+"end": 33.76
+},
+{
+"text": "templates,",
+"start": 34.08,
+"end": 34.56
+},
+{
+"text": "style",
+"start": 34.72,
+"end": 34.88
+},
+{
+"text": "guides,",
+"start": 34.96,
+"end": 35.6
+},
+{
+"text": "reference",
+"start": 35.8,
+"end": 36.0
+},
+{
+"text": "documents,",
+"start": 36.08,
+"end": 36.8
+},
+{
+"text": "data",
+"start": 36.92,
+"end": 37.04
+},
+{
+"text": "files,",
+"start": 37.2,
+"end": 37.68
+},
+{
+"text": "or",
+"start": 37.72,
+"end": 37.76
+},
+{
+"text": "scripts.",
+"start": 37.84,
+"end": 38.72
+},
+{
+"text": "There",
+"start": 39.04,
+"end": 39.12
+},
+{
+"text": "are",
+"start": 39.2,
+"end": 39.28
+},
+{
+"text": "two",
+"start": 39.36,
+"end": 39.52
+},
+{
+"text": "ways",
+"start": 39.6,
+"end": 39.84
+},
+{
+"text": "to",
+"start": 39.92,
+"end": 40.0
+},
+{
+"text": "use",
+"start": 40.16,
+"end": 40.32
+},
+{
+"text": "a",
+"start": 40.36,
+"end": 40.4
+},
+{
+"text": "skill.",
+"start": 40.48,
+"end": 41.04
+},
+{
+"text": "You",
+"start": 41.28,
+"end": 41.36
+},
+{
+"text": "can",
+"start": 41.44,
+"end": 41.52
+},
+{
+"text": "select",
+"start": 41.68,
+"end": 41.84
+},
+{
+"text": "it",
+"start": 41.92,
+"end": 42.0
+},
+{
+"text": "manually",
+"start": 42.08,
+"end": 42.64
+},
+{
+"text": "by",
+"start": 42.72,
+"end": 42.88
+},
+{
+"text": "typing",
+"start": 43.04,
+"end": 43.2
+},
+{
+"text": "a",
+"start": 43.24,
+"end": 43.28
+},
+{
+"text": "forward",
+"start": 43.44,
+"end": 43.76
+},
+{
+"text": "slash",
+"start": 43.84,
+"end": 44.24
+},
+{
+"text": "and",
+"start": 44.32,
+"end": 44.4
+},
+{
+"text": "choosing",
+"start": 44.48,
+"end": 44.8
+},
+{
+"text": "its",
+"start": 44.88,
+"end": 44.96
+},
+{
+"text": "name.",
+"start": 45.04,
+"end": 45.36
+},
+{
+"text": "Or,",
+"start": 45.76,
+"end": 46.08
+},
+{
+"text": "click",
+"start": 46.32,
+"end": 46.48
+},
+{
+"text": "the",
+"start": 46.56,
+"end": 46.64
+},
+{
+"text": "plus",
+"start": 46.72,
+"end": 46.96
+},
+{
+"text": "button",
+"start": 47.04,
+"end": 47.28
+},
+{
+"text": "beside",
+"start": 47.36,
+"end": 47.76
+},
+{
+"text": "the",
+"start": 47.8,
+"end": 47.84
+},
+{
+"text": "prompt",
+"start": 47.92,
+"end": 48.16
+},
+{
+"text": "box,",
+"start": 48.24,
+"end": 48.96
+},
+{
+"text": "choose",
+"start": 49.12,
+"end": 49.28
+},
+{
+"text": "Skills,",
+"start": 49.36,
+"end": 50.08
+},
+{
+"text": "and",
+"start": 50.16,
+"end": 50.24
+},
+{
+"text": "select",
+"start": 50.32,
+"end": 50.56
+},
+{
+"text": "the",
+"start": 50.64,
+"end": 50.72
+},
+{
+"text": "one",
+"start": 50.8,
+"end": 50.96
+},
+{
+"text": "you",
+"start": 51.04,
+"end": 51.12
+},
+{
+"text": "want.",
+"start": 51.28,
+"end": 51.52
+},
+{
+"text": "Claude",
+"start": 52.0,
+"end": 52.24
+},
+{
+"text": "can",
+"start": 52.32,
+"end": 52.48
+},
+{
+"text": "also",
+"start": 52.56,
+"end": 52.8
+},
+{
+"text": "recognize",
+"start": 52.88,
+"end": 53.44
+},
+{
+"text": "when",
+"start": 53.52,
+"end": 53.6
+},
+{
+"text": "an",
+"start": 53.68,
+"end": 53.76
+},
+{
+"text": "enabled",
+"start": 54.0,
+"end": 54.24
+},
+{
+"text": "skill",
+"start": 54.32,
+"end": 54.56
+},
+{
+"text": "is",
+"start": 54.64,
+"end": 54.72
+},
+{
+"text": "relevant",
+"start": 54.8,
+"end": 55.36
+},
+{
+"text": "and",
+"start": 55.44,
+"end": 55.52
+},
+{
+"text": "load",
+"start": 55.6,
+"end": 55.76
+},
+{
+"text": "it",
+"start": 55.84,
+"end": 55.92
+},
+{
+"text": "automatically,",
+"start": 56.0,
+"end": 56.8
+},
+{
+"text": "based",
+"start": 56.88,
+"end": 57.12
+},
+{
+"text": "on",
+"start": 57.16,
+"end": 57.2
+},
+{
+"text": "its",
+"start": 57.28,
+"end": 57.44
+},
+{
+"text": "description.",
+"start": 57.76,
+"end": 58.4
+},
+{
+"text": "Before",
+"start": 58.72,
+"end": 58.96
+},
+{
+"text": "you",
+"start": 59.04,
+"end": 59.12
+},
+{
+"text": "begin,",
+"start": 59.32,
+"end": 59.76
+},
+{
+"text": "make",
+"start": 59.84,
+"end": 60.0
+},
+{
+"text": "sure",
+"start": 60.08,
+"end": 60.32
+},
+{
+"text": "code",
+"start": 60.44,
+"end": 60.56
+},
+{
+"text": "execution",
+"start": 60.64,
+"end": 61.28
+},
+{
+"text": "and",
+"start": 61.36,
+"end": 61.44
+},
+{
+"text": "file",
+"start": 61.6,
+"end": 61.84
+},
+{
+"text": "creation",
+"start": 61.92,
+"end": 62.4
+},
+{
+"text": "is",
+"start": 62.48,
+"end": 62.56
+},
+{
+"text": "enabled.",
+"start": 62.84,
+"end": 63.52
+},
+{
+"text": "In",
+"start": 63.6,
+"end": 63.68
+},
+{
+"text": "some",
+"start": 63.76,
+"end": 63.92
+},
+{
+"text": "settings",
+"start": 64.0,
+"end": 64.24
+},
+{
+"text": "layouts,",
+"start": 64.32,
+"end": 64.96
+},
+{
+"text": "this",
+"start": 65.04,
+"end": 65.12
+},
+{
+"text": "is",
+"start": 65.2,
+"end": 65.28
+},
+{
+"text": "called",
+"start": 65.44,
+"end": 65.6
+},
+{
+"text": "Create",
+"start": 65.76,
+"end": 66.24
+},
+{
+"text": "and",
+"start": 66.32,
+"end": 66.4
+},
+{
+"text": "edit",
+"start": 66.48,
+"end": 66.72
+},
+{
+"text": "files.",
+"start": 66.8,
+"end": 67.84
+},
+{
+"text": "Your",
+"start": 67.92,
+"end": 68.0
+},
+{
+"text": "organization",
+"start": 68.08,
+"end": 68.72
+},
+{
+"text": "may",
+"start": 68.8,
+"end": 68.96
+},
+{
+"text": "also",
+"start": 69.12,
+"end": 69.28
+},
+{
+"text": "control",
+"start": 69.36,
+"end": 69.84
+},
+{
+"text": "access",
+"start": 70.08,
+"end": 70.32
+},
+{
+"text": "to",
+"start": 70.4,
+"end": 70.48
+},
+{
+"text": "Skills.",
+"start": 70.56,
+"end": 71.6
+},
+{
+"text": "To",
+"start": 71.68,
+"end": 71.76
+},
+{
+"text": "create",
+"start": 71.92,
+"end": 72.08
+},
+{
+"text": "a",
+"start": 72.12,
+"end": 72.16
+},
+{
+"text": "skill,",
+"start": 72.24,
+"end": 72.8
+},
+{
+"text": "go",
+"start": 72.88,
+"end": 72.96
+},
+{
+"text": "to",
+"start": 73.04,
+"end": 73.12
+},
+{
+"text": "Customize,",
+"start": 73.2,
+"end": 74.16
+},
+{
+"text": "select",
+"start": 74.24,
+"end": 74.56
+},
+{
+"text": "Skills,",
+"start": 74.64,
+"end": 75.36
+},
+{
+"text": "and",
+"start": 75.48,
+"end": 75.6
+},
+{
+"text": "click",
+"start": 75.72,
+"end": 75.84
+},
+{
+"text": "Add.",
+"start": 76.08,
+"end": 76.96
+},
+{
+"text": "Here,",
+"start": 77.16,
+"end": 77.4
+},
+{
+"text": "you\u2019ll",
+"start": 77.44,
+"end": 77.6
+},
+{
+"text": "see",
+"start": 77.68,
+"end": 77.76
+},
+{
+"text": "options",
+"start": 77.84,
+"end": 78.24
+},
+{
+"text": "to",
+"start": 78.32,
+"end": 78.4
+},
+{
+"text": "upload",
+"start": 78.48,
+"end": 78.8
+},
+{
+"text": "a",
+"start": 78.827,
+"end": 78.853
+},
+{
+"text": "skill,",
+"start": 78.88,
+"end": 79.52
+},
+{
+"text": "create",
+"start": 79.6,
+"end": 79.92
+},
+{
+"text": "one",
+"start": 80.0,
+"end": 80.16
+},
+{
+"text": "directly,",
+"start": 80.36,
+"end": 81.12
+},
+{
+"text": "or",
+"start": 81.2,
+"end": 81.28
+},
+{
+"text": "create",
+"start": 81.36,
+"end": 81.68
+},
+{
+"text": "one",
+"start": 81.76,
+"end": 81.84
+},
+{
+"text": "through",
+"start": 81.92,
+"end": 82.0
+},
+{
+"text": "a",
+"start": 82.16,
+"end": 82.4
+},
+{
+"text": "conversation",
+"start": 82.64,
+"end": 82.88
+},
+{
+"text": "with",
+"start": 82.96,
+"end": 83.12
+},
+{
+"text": "Claude.",
+"start": 83.2,
+"end": 84.08
+},
+{
+"text": "There\u2019s",
+"start": 84.16,
+"end": 84.32
+},
+{
+"text": "also",
+"start": 84.4,
+"end": 84.64
+},
+{
+"text": "another",
+"start": 84.84,
+"end": 85.04
+},
+{
+"text": "option",
+"start": 85.12,
+"end": 85.44
+},
+{
+"text": "for",
+"start": 85.52,
+"end": 85.6
+},
+{
+"text": "workflows",
+"start": 85.68,
+"end": 86.24
+},
+{
+"text": "that",
+"start": 86.32,
+"end": 86.4
+},
+{
+"text": "are",
+"start": 86.48,
+"end": 86.56
+},
+{
+"text": "easier",
+"start": 86.64,
+"end": 86.96
+},
+{
+"text": "to",
+"start": 87.08,
+"end": 87.2
+},
+{
+"text": "demonstrate",
+"start": 87.307,
+"end": 87.84
+},
+{
+"text": "than",
+"start": 87.92,
+"end": 88.0
+},
+{
+"text": "describe.",
+"start": 88.32,
+"end": 89.12
+},
+{
+"text": "In",
+"start": 89.24,
+"end": 89.36
+},
+{
+"text": "Cowork",
+"start": 89.44,
+"end": 90.0
+},
+{
+"text": "in",
+"start": 90.04,
+"end": 90.08
+},
+{
+"text": "the",
+"start": 90.16,
+"end": 90.24
+},
+{
+"text": "Claude",
+"start": 90.32,
+"end": 90.56
+},
+{
+"text": "desktop",
+"start": 90.8,
+"end": 91.04
+},
+{
+"text": "app,",
+"start": 91.12,
+"end": 91.68
+},
+{
+"text": "eligible",
+"start": 91.76,
+"end": 92.16
+},
+{
+"text": "users",
+"start": 92.24,
+"end": 92.64
+},
+{
+"text": "can",
+"start": 92.72,
+"end": 92.8
+},
+{
+"text": "record",
+"start": 93.0,
+"end": 93.2
+},
+{
+"text": "themselves",
+"start": 93.24,
+"end": 93.76
+},
+{
+"text": "completing",
+"start": 93.84,
+"end": 94.32
+},
+{
+"text": "a",
+"start": 94.36,
+"end": 94.4
+},
+{
+"text": "task",
+"start": 94.48,
+"end": 94.96
+},
+{
+"text": "and",
+"start": 95.0,
+"end": 95.04
+},
+{
+"text": "explain",
+"start": 95.12,
+"end": 95.6
+},
+{
+"text": "what",
+"start": 95.76,
+"end": 95.92
+},
+{
+"text": "they\u2019re",
+"start": 95.96,
+"end": 96.08
+},
+{
+"text": "doing",
+"start": 96.16,
+"end": 96.48
+},
+{
+"text": "and",
+"start": 96.56,
+"end": 96.64
+},
+{
+"text": "why.",
+"start": 96.72,
+"end": 97.52
+},
+{
+"text": "Claude",
+"start": 97.6,
+"end": 97.92
+},
+{
+"text": "uses",
+"start": 98.0,
+"end": 98.32
+},
+{
+"text": "that",
+"start": 98.4,
+"end": 98.56
+},
+{
+"text": "demonstration",
+"start": 98.64,
+"end": 99.28
+},
+{
+"text": "to",
+"start": 99.36,
+"end": 99.44
+},
+{
+"text": "propose",
+"start": 99.56,
+"end": 99.92
+},
+{
+"text": "a",
+"start": 100.0,
+"end": 100.08
+},
+{
+"text": "reusable",
+"start": 100.16,
+"end": 100.72
+},
+{
+"text": "skill,",
+"start": 100.8,
+"end": 101.44
+},
+{
+"text": "which",
+"start": 101.52,
+"end": 101.6
+},
+{
+"text": "you",
+"start": 101.68,
+"end": 101.76
+},
+{
+"text": "can",
+"start": 101.84,
+"end": 101.92
+},
+{
+"text": "review",
+"start": 102.16,
+"end": 102.4
+},
+{
+"text": "and",
+"start": 102.44,
+"end": 102.48
+},
+{
+"text": "refine",
+"start": 102.56,
+"end": 103.12
+},
+{
+"text": "before",
+"start": 103.32,
+"end": 103.52
+},
+{
+"text": "saving.",
+"start": 103.6,
+"end": 104.64
+},
+{
+"text": "Now,",
+"start": 104.72,
+"end": 105.2
+},
+{
+"text": "let\u2019s",
+"start": 105.28,
+"end": 105.44
+},
+{
+"text": "create",
+"start": 105.52,
+"end": 105.76
+},
+{
+"text": "a",
+"start": 105.8,
+"end": 105.84
+},
+{
+"text": "skill",
+"start": 105.92,
+"end": 106.16
+},
+{
+"text": "called",
+"start": 106.24,
+"end": 106.56
+},
+{
+"text": "Larry,",
+"start": 106.64,
+"end": 107.2
+},
+{
+"text": "designed",
+"start": 107.32,
+"end": 107.68
+},
+{
+"text": "to",
+"start": 107.72,
+"end": 107.76
+},
+{
+"text": "write",
+"start": 107.84,
+"end": 108.08
+},
+{
+"text": "weekly",
+"start": 108.16,
+"end": 108.48
+},
+{
+"text": "leadership",
+"start": 108.56,
+"end": 108.96
+},
+{
+"text": "updates.",
+"start": 109.04,
+"end": 109.92
+},
+{
+"text": "I\u2019ll",
+"start": 110.471,
+"end": 110.711
+},
+{
+"text": "choose",
+"start": 110.871,
+"end": 111.031
+},
+{
+"text": "Create",
+"start": 111.271,
+"end": 111.671
+},
+{
+"text": "with",
+"start": 111.751,
+"end": 111.831
+},
+{
+"text": "Claude.",
+"start": 111.911,
+"end": 112.671
+},
+{
+"text": "This",
+"start": 112.951,
+"end": 113.191
+},
+{
+"text": "opens",
+"start": 113.271,
+"end": 113.591
+},
+{
+"text": "a",
+"start": 113.631,
+"end": 113.671
+},
+{
+"text": "new",
+"start": 113.831,
+"end": 113.911
+},
+{
+"text": "conversation",
+"start": 113.991,
+"end": 114.711
+},
+{
+"text": "with",
+"start": 114.791,
+"end": 114.871
+},
+{
+"text": "a",
+"start": 114.911,
+"end": 114.951
+},
+{
+"text": "suggested",
+"start": 115.031,
+"end": 115.511
+},
+{
+"text": "prompt",
+"start": 115.591,
+"end": 115.991
+},
+{
+"text": "already",
+"start": 116.071,
+"end": 116.551
+},
+{
+"text": "in",
+"start": 116.591,
+"end": 116.631
+},
+{
+"text": "the",
+"start": 116.711,
+"end": 116.751
+},
+{
+"text": "message",
+"start": 116.791,
+"end": 117.111
+},
+{
+"text": "box.",
+"start": 117.191,
+"end": 117.831
+},
+{
+"text": "I\u2019ll",
+"start": 118.071,
+"end": 118.231
+},
+{
+"text": "adapt",
+"start": 118.431,
+"end": 118.631
+},
+{
+"text": "that",
+"start": 118.711,
+"end": 118.791
+},
+{
+"text": "prompt",
+"start": 118.871,
+"end": 119.271
+},
+{
+"text": "using",
+"start": 119.391,
+"end": 119.511
+},
+{
+"text": "my",
+"start": 119.591,
+"end": 119.671
+},
+{
+"text": "Koh-doh",
+"start": 119.831,
+"end": 120.151
+},
+{
+"text": "template:",
+"start": 120.231,
+"end": 121.031
+},
+{
+"text": "Character,",
+"start": 121.111,
+"end": 121.671
+},
+{
+"text": "Objective,",
+"start": 121.991,
+"end": 122.711
+},
+{
+"text": "Do\u2019s",
+"start": 123.031,
+"end": 123.191
+},
+{
+"text": "and",
+"start": 123.271,
+"end": 123.351
+},
+{
+"text": "Don\u2019ts,",
+"start": 123.431,
+"end": 123.951
+},
+{
+"text": "and",
+"start": 124.071,
+"end": 124.151
+},
+{
+"text": "Output.",
+"start": 124.231,
+"end": 124.991
+},
+{
+"text": "For",
+"start": 125.271,
+"end": 125.351
+},
+{
+"text": "Character,",
+"start": 125.431,
+"end": 126.311
+},
+{
+"text": "Larry",
+"start": 126.391,
+"end": 126.711
+},
+{
+"text": "is",
+"start": 126.791,
+"end": 126.871
+},
+{
+"text": "a",
+"start": 126.911,
+"end": 126.951
+},
+{
+"text": "leadership",
+"start": 127.031,
+"end": 127.511
+},
+{
+"text": "update",
+"start": 127.591,
+"end": 127.911
+},
+{
+"text": "writer",
+"start": 127.991,
+"end": 128.311
+},
+{
+"text": "communicating",
+"start": 128.391,
+"end": 129.031
+},
+{
+"text": "with",
+"start": 129.111,
+"end": 129.191
+},
+{
+"text": "the",
+"start": 129.271,
+"end": 129.351
+},
+{
+"text": "executive",
+"start": 129.511,
+"end": 129.911
+},
+{
+"text": "team.",
+"start": 129.991,
+"end": 130.311
+},
+{
+"text": "For",
+"start": 130.791,
+"end": 130.871
+},
+{
+"text": "Objective,",
+"start": 130.951,
+"end": 131.991
+},
+{
+"text": "Larry",
+"start": 132.071,
+"end": 132.391
+},
+{
+"text": "should",
+"start": 132.471,
+"end": 132.551
+},
+{
+"text": "draft",
+"start": 132.631,
+"end": 132.951
+},
+{
+"text": "a",
+"start": 132.991,
+"end": 133.031
+},
+{
+"text": "concise,",
+"start": 133.111,
+"end": 133.911
+},
+{
+"text": "one-page",
+"start": 133.991,
+"end": 134.551
+},
+{
+"text": "weekly",
+"start": 134.631,
+"end": 134.951
+},
+{
+"text": "update",
+"start": 135.191,
+"end": 135.431
+},
+{
+"text": "that",
+"start": 135.511,
+"end": 135.591
+},
+{
+"text": "helps",
+"start": 135.671,
+"end": 135.911
+},
+{
+"text": "leaders",
+"start": 135.991,
+"end": 136.311
+},
+{
+"text": "stay",
+"start": 136.431,
+"end": 136.551
+},
+{
+"text": "informed",
+"start": 136.671,
+"end": 137.191
+},
+{
+"text": "and",
+"start": 137.271,
+"end": 137.351
+},
+{
+"text": "make",
+"start": 137.431,
+"end": 137.511
+},
+{
+"text": "strategic",
+"start": 137.591,
+"end": 138.071
+},
+{
+"text": "decisions.",
+"start": 138.151,
+"end": 139.031
+},
+{
+"text": "For",
+"start": 139.271,
+"end": 139.431
+},
+{
+"text": "Do\u2019s",
+"start": 139.511,
+"end": 139.671
+},
+{
+"text": "and",
+"start": 139.751,
+"end": 139.831
+},
+{
+"text": "Don\u2019ts,",
+"start": 139.911,
+"end": 140.711
+},
+{
+"text": "Larry",
+"start": 140.791,
+"end": 141.031
+},
+{
+"text": "should",
+"start": 141.151,
+"end": 141.271
+},
+{
+"text": "highlight",
+"start": 141.471,
+"end": 141.671
+},
+{
+"text": "major",
+"start": 141.831,
+"end": 142.071
+},
+{
+"text": "developments,",
+"start": 142.151,
+"end": 142.951
+},
+{
+"text": "decisions,",
+"start": 143.031,
+"end": 143.751
+},
+{
+"text": "approvals,",
+"start": 143.911,
+"end": 144.551
+},
+{
+"text": "and",
+"start": 144.631,
+"end": 144.711
+},
+{
+"text": "deadlines.",
+"start": 144.831,
+"end": 145.831
+},
+{
+"text": "It",
+"start": 145.911,
+"end": 145.991
+},
+{
+"text": "should",
+"start": 146.071,
+"end": 146.151
+},
+{
+"text": "explain",
+"start": 146.391,
+"end": 146.631
+},
+{
+"text": "trade-offs,",
+"start": 146.711,
+"end": 147.591
+},
+{
+"text": "use",
+"start": 147.671,
+"end": 147.831
+},
+{
+"text": "plain",
+"start": 147.911,
+"end": 148.231
+},
+{
+"text": "language,",
+"start": 148.311,
+"end": 148.951
+},
+{
+"text": "and",
+"start": 149.071,
+"end": 149.191
+},
+{
+"text": "never",
+"start": 149.271,
+"end": 149.591
+},
+{
+"text": "invent",
+"start": 149.671,
+"end": 149.991
+},
+{
+"text": "information.",
+"start": 150.071,
+"end": 151.191
+},
+{
+"text": "For",
+"start": 151.271,
+"end": 151.351
+},
+{
+"text": "Output,",
+"start": 151.431,
+"end": 152.071
+},
+{
+"text": "I",
+"start": 152.151,
+"end": 152.191
+},
+{
+"text": "want",
+"start": 152.231,
+"end": 152.471
+},
+{
+"text": "five",
+"start": 152.591,
+"end": 152.711
+},
+{
+"text": "sections:",
+"start": 152.791,
+"end": 153.831
+},
+{
+"text": "Executive",
+"start": 154.111,
+"end": 154.391
+},
+{
+"text": "Summary,",
+"start": 154.471,
+"end": 155.271
+},
+{
+"text": "Key",
+"start": 155.351,
+"end": 155.431
+},
+{
+"text": "Developments,",
+"start": 155.511,
+"end": 156.551
+},
+{
+"text": "Decisions",
+"start": 156.631,
+"end": 157.111
+},
+{
+"text": "and",
+"start": 157.191,
+"end": 157.271
+},
+{
+"text": "Action",
+"start": 157.431,
+"end": 157.591
+},
+{
+"text": "Items,",
+"start": 157.671,
+"end": 158.471
+},
+{
+"text": "Trade-Offs",
+"start": 158.551,
+"end": 159.111
+},
+{
+"text": "or",
+"start": 159.151,
+"end": 159.191
+},
+{
+"text": "Conflicts,",
+"start": 159.351,
+"end": 160.311
+},
+{
+"text": "and",
+"start": 160.391,
+"end": 160.471
+},
+{
+"text": "Closing",
+"start": 160.551,
+"end": 161.111
+},
+{
+"text": "or",
+"start": 161.191,
+"end": 161.271
+},
+{
+"text": "Next",
+"start": 161.351,
+"end": 161.511
+},
+{
+"text": "Steps.",
+"start": 161.591,
+"end": 162.551
+},
+{
+"text": "I",
+"start": 162.631,
+"end": 162.711
+},
+{
+"text": "can",
+"start": 162.751,
+"end": 162.791
+},
+{
+"text": "also",
+"start": 162.871,
+"end": 163.111
+},
+{
+"text": "attach",
+"start": 163.311,
+"end": 163.511
+},
+{
+"text": "supporting",
+"start": 163.711,
+"end": 163.991
+},
+{
+"text": "files,",
+"start": 164.151,
+"end": 164.711
+},
+{
+"text": "such",
+"start": 164.791,
+"end": 164.951
+},
+{
+"text": "as",
+"start": 165.031,
+"end": 165.111
+},
+{
+"text": "a",
+"start": 165.151,
+"end": 165.191
+},
+{
+"text": "previous",
+"start": 165.271,
+"end": 165.671
+},
+{
+"text": "update,",
+"start": 165.911,
+"end": 166.391
+},
+{
+"text": "a",
+"start": 166.431,
+"end": 166.471
+},
+{
+"text": "roadmap,",
+"start": 166.551,
+"end": 167.191
+},
+{
+"text": "or",
+"start": 167.271,
+"end": 167.351
+},
+{
+"text": "KPI",
+"start": 167.511,
+"end": 167.911
+},
+{
+"text": "references.",
+"start": 167.991,
+"end": 169.111
+},
+{
+"text": "These",
+"start": 169.231,
+"end": 169.351
+},
+{
+"text": "give",
+"start": 169.431,
+"end": 169.591
+},
+{
+"text": "Claude",
+"start": 169.671,
+"end": 169.911
+},
+{
+"text": "examples",
+"start": 170.231,
+"end": 170.551
+},
+{
+"text": "and",
+"start": 170.631,
+"end": 170.711
+},
+{
+"text": "context",
+"start": 170.871,
+"end": 171.431
+},
+{
+"text": "without",
+"start": 171.511,
+"end": 171.831
+},
+{
+"text": "requiring",
+"start": 171.911,
+"end": 172.391
+},
+{
+"text": "me",
+"start": 172.471,
+"end": 172.551
+},
+{
+"text": "to",
+"start": 172.591,
+"end": 172.631
+},
+{
+"text": "repeat",
+"start": 172.711,
+"end": 173.111
+},
+{
+"text": "everything",
+"start": 173.191,
+"end": 173.511
+},
+{
+"text": "in",
+"start": 173.551,
+"end": 173.591
+},
+{
+"text": "the",
+"start": 173.631,
+"end": 173.671
+},
+{
+"text": "prompt.",
+"start": 173.751,
+"end": 174.431
+},
+{
+"text": "Once",
+"start": 174.711,
+"end": 174.871
+},
+{
+"text": "I",
+"start": 174.951,
+"end": 175.031
+},
+{
+"text": "send",
+"start": 175.111,
+"end": 175.271
+},
+{
+"text": "the",
+"start": 175.311,
+"end": 175.351
+},
+{
+"text": "request,",
+"start": 175.631,
+"end": 176.151
+},
+{
+"text": "Claude",
+"start": 176.231,
+"end": 176.471
+},
+{
+"text": "may",
+"start": 176.551,
+"end": 176.631
+},
+{
+"text": "ask",
+"start": 176.791,
+"end": 176.951
+},
+{
+"text": "clarifying",
+"start": 177.071,
+"end": 177.511
+},
+{
+"text": "questions",
+"start": 177.671,
+"end": 178.071
+},
+{
+"text": "about",
+"start": 178.191,
+"end": 178.311
+},
+{
+"text": "the",
+"start": 178.351,
+"end": 178.391
+},
+{
+"text": "workflow,",
+"start": 178.471,
+"end": 179.271
+},
+{
+"text": "the",
+"start": 179.311,
+"end": 179.351
+},
+{
+"text": "intended",
+"start": 179.431,
+"end": 179.831
+},
+{
+"text": "output,",
+"start": 179.911,
+"end": 180.631
+},
+{
+"text": "or",
+"start": 180.751,
+"end": 180.871
+},
+{
+"text": "how",
+"start": 180.951,
+"end": 181.031
+},
+{
+"text": "to",
+"start": 181.111,
+"end": 181.191
+},
+{
+"text": "handle",
+"start": 181.351,
+"end": 181.511
+},
+{
+"text": "missing",
+"start": 181.591,
+"end": 181.831
+},
+{
+"text": "information.",
+"start": 181.911,
+"end": 182.791
+},
+{
+"text": "After",
+"start": 183.031,
+"end": 183.351
+},
+{
+"text": "I",
+"start": 183.431,
+"end": 183.511
+},
+{
+"text": "answer,",
+"start": 183.751,
+"end": 184.231
+},
+{
+"text": "Claude",
+"start": 184.311,
+"end": 184.631
+},
+{
+"text": "generates",
+"start": 184.751,
+"end": 185.111
+},
+{
+"text": "the",
+"start": 185.151,
+"end": 185.191
+},
+{
+"text": "skill",
+"start": 185.271,
+"end": 185.671
+},
+{
+"text": "and",
+"start": 185.751,
+"end": 185.831
+},
+{
+"text": "opens",
+"start": 185.911,
+"end": 186.151
+},
+{
+"text": "a",
+"start": 186.231,
+"end": 186.311
+},
+{
+"text": "preview",
+"start": 186.391,
+"end": 186.711
+},
+{
+"text": "of",
+"start": 186.791,
+"end": 186.871
+},
+{
+"text": "its",
+"start": 186.951,
+"end": 187.031
+},
+{
+"text": "instructions.",
+"start": 187.431,
+"end": 188.071
+},
+{
+"text": "I\u2019ll",
+"start": 188.311,
+"end": 188.471
+},
+{
+"text": "review",
+"start": 188.631,
+"end": 188.791
+},
+{
+"text": "those",
+"start": 188.871,
+"end": 188.951
+},
+{
+"text": "instructions",
+"start": 189.031,
+"end": 189.591
+},
+{
+"text": "carefully,",
+"start": 189.671,
+"end": 190.471
+},
+{
+"text": "make",
+"start": 190.591,
+"end": 190.711
+},
+{
+"text": "any",
+"start": 190.791,
+"end": 190.871
+},
+{
+"text": "adjustments,",
+"start": 191.071,
+"end": 191.751
+},
+{
+"text": "and",
+"start": 191.831,
+"end": 191.911
+},
+{
+"text": "click",
+"start": 191.991,
+"end": 192.231
+},
+{
+"text": "Save",
+"start": 192.551,
+"end": 192.791
+},
+{
+"text": "skill.",
+"start": 192.871,
+"end": 193.271
+},
+{
+"text": "Then",
+"start": 193.751,
+"end": 193.991
+},
+{
+"text": "I\u2019ll",
+"start": 194.151,
+"end": 194.231
+},
+{
+"text": "confirm",
+"start": 194.311,
+"end": 194.711
+},
+{
+"text": "that",
+"start": 194.791,
+"end": 194.951
+},
+{
+"text": "Larry",
+"start": 195.031,
+"end": 195.351
+},
+{
+"text": "is",
+"start": 195.431,
+"end": 195.511
+},
+{
+"text": "enabled.",
+"start": 195.791,
+"end": 196.351
+},
+{
+"text": "Now,",
+"start": 196.631,
+"end": 197.031
+},
+{
+"text": "let\u2019s",
+"start": 197.111,
+"end": 197.351
+},
+{
+"text": "test",
+"start": 197.471,
+"end": 197.591
+},
+{
+"text": "it",
+"start": 197.671,
+"end": 197.751
+},
+{
+"text": "in",
+"start": 197.791,
+"end": 197.831
+},
+{
+"text": "a",
+"start": 197.911,
+"end": 197.991
+},
+{
+"text": "fresh",
+"start": 198.071,
+"end": 198.311
+},
+{
+"text": "chat.",
+"start": 198.391,
+"end": 198.951
+},
+{
+"text": "I\u2019ll",
+"start": 199.191,
+"end": 199.351
+},
+{
+"text": "type",
+"start": 199.431,
+"end": 199.671
+},
+{
+"text": "forward",
+"start": 199.911,
+"end": 200.231
+},
+{
+"text": "slash",
+"start": 200.311,
+"end": 200.631
+},
+{
+"text": "Larry,",
+"start": 200.791,
+"end": 201.511
+},
+{
+"text": "select",
+"start": 201.591,
+"end": 201.911
+},
+{
+"text": "the",
+"start": 201.951,
+"end": 201.991
+},
+{
+"text": "skill,",
+"start": 202.071,
+"end": 202.711
+},
+{
+"text": "and",
+"start": 202.791,
+"end": 202.871
+},
+{
+"text": "provide",
+"start": 203.031,
+"end": 203.191
+},
+{
+"text": "a",
+"start": 203.271,
+"end": 203.351
+},
+{
+"text": "sample",
+"start": 203.511,
+"end": 203.671
+},
+{
+"text": "set",
+"start": 203.751,
+"end": 203.911
+},
+{
+"text": "of",
+"start": 203.991,
+"end": 204.071
+},
+{
+"text": "weekly",
+"start": 204.151,
+"end": 204.471
+},
+{
+"text": "notes.",
+"start": 204.551,
+"end": 205.351
+},
+{
+"text": "I\u2019ll",
+"start": 205.391,
+"end": 205.591
+},
+{
+"text": "check",
+"start": 205.671,
+"end": 205.831
+},
+{
+"text": "whether",
+"start": 205.951,
+"end": 206.071
+},
+{
+"text": "the",
+"start": 206.151,
+"end": 206.231
+},
+{
+"text": "update",
+"start": 206.431,
+"end": 206.631
+},
+{
+"text": "follows",
+"start": 206.711,
+"end": 207.084
+},
+{
+"text": "the",
+"start": 207.138,
+"end": 207.191
+},
+{
+"text": "five",
+"start": 207.311,
+"end": 207.431
+},
+{
+"text": "sections,",
+"start": 207.511,
+"end": 208.311
+},
+{
+"text": "stays",
+"start": 208.391,
+"end": 208.631
+},
+{
+"text": "concise,",
+"start": 208.711,
+"end": 209.591
+},
+{
+"text": "preserves",
+"start": 209.671,
+"end": 209.991
+},
+{
+"text": "the",
+"start": 210.071,
+"end": 210.151
+},
+{
+"text": "facts,",
+"start": 210.231,
+"end": 210.871
+},
+{
+"text": "and",
+"start": 210.911,
+"end": 210.951
+},
+{
+"text": "identifies",
+"start": 211.031,
+"end": 211.671
+},
+{
+"text": "the",
+"start": 211.751,
+"end": 211.831
+},
+{
+"text": "right",
+"start": 211.911,
+"end": 211.991
+},
+{
+"text": "decisions,",
+"start": 212.071,
+"end": 212.871
+},
+{
+"text": "owners,",
+"start": 212.951,
+"end": 213.404
+},
+{
+"text": "and",
+"start": 213.458,
+"end": 213.511
+},
+{
+"text": "deadlines.",
+"start": 213.631,
+"end": 214.631
+},
+{
+"text": "I\u2019ll",
+"start": 214.671,
+"end": 214.871
+},
+{
+"text": "also",
+"start": 215.031,
+"end": 215.191
+},
+{
+"text": "check",
+"start": 215.271,
+"end": 215.431
+},
+{
+"text": "that",
+"start": 215.511,
+"end": 215.591
+},
+{
+"text": "it",
+"start": 215.671,
+"end": 215.751
+},
+{
+"text": "marks",
+"start": 215.911,
+"end": 216.071
+},
+{
+"text": "missing",
+"start": 216.231,
+"end": 216.391
+},
+{
+"text": "information",
+"start": 216.711,
+"end": 217.031
+},
+{
+"text": "clearly,",
+"start": 217.111,
+"end": 217.751
+},
+{
+"text": "rather",
+"start": 217.871,
+"end": 217.991
+},
+{
+"text": "than",
+"start": 218.071,
+"end": 218.231
+},
+{
+"text": "guessing.",
+"start": 218.351,
+"end": 219.111
+},
+{
+"text": "For",
+"start": 219.151,
+"end": 219.191
+},
+{
+"text": "example,",
+"start": 219.271,
+"end": 219.911
+},
+{
+"text": "if",
+"start": 219.991,
+"end": 220.071
+},
+{
+"text": "the",
+"start": 220.151,
+"end": 220.191
+},
+{
+"text": "notes",
+"start": 220.231,
+"end": 220.551
+},
+{
+"text": "say",
+"start": 220.671,
+"end": 220.791
+},
+{
+"text": "Engineering",
+"start": 221.111,
+"end": 221.671
+},
+{
+"text": "recommends",
+"start": 221.751,
+"end": 222.231
+},
+{
+"text": "a",
+"start": 222.311,
+"end": 222.471
+},
+{
+"text": "later",
+"start": 222.631,
+"end": 222.791
+},
+{
+"text": "launch",
+"start": 222.951,
+"end": 223.111
+},
+{
+"text": "date",
+"start": 223.231,
+"end": 223.351
+},
+{
+"text": "to",
+"start": 223.431,
+"end": 223.511
+},
+{
+"text": "finish",
+"start": 223.631,
+"end": 223.751
+},
+{
+"text": "testing,",
+"start": 223.831,
+"end": 224.631
+},
+{
+"text": "the",
+"start": 224.711,
+"end": 224.791
+},
+{
+"text": "update",
+"start": 224.991,
+"end": 225.191
+},
+{
+"text": "should",
+"start": 225.271,
+"end": 225.351
+},
+{
+"text": "preserve",
+"start": 225.431,
+"end": 225.911
+},
+{
+"text": "that",
+"start": 225.991,
+"end": 226.071
+},
+{
+"text": "recommendation.",
+"start": 226.151,
+"end": 227.351
+},
+{
+"text": "It",
+"start": 227.471,
+"end": 227.591
+},
+{
+"text": "shouldn\u2019t",
+"start": 227.671,
+"end": 227.911
+},
+{
+"text": "claim",
+"start": 228.071,
+"end": 228.231
+},
+{
+"text": "that",
+"start": 228.311,
+"end": 228.391
+},
+{
+"text": "testing",
+"start": 228.551,
+"end": 228.711
+},
+{
+"text": "is",
+"start": 228.791,
+"end": 228.951
+},
+{
+"text": "already",
+"start": 229.111,
+"end": 229.271
+},
+{
+"text": "complete",
+"start": 229.351,
+"end": 229.911
+},
+{
+"text": "or",
+"start": 229.991,
+"end": 230.071
+},
+{
+"text": "guaranteed",
+"start": 230.151,
+"end": 230.711
+},
+{
+"text": "to",
+"start": 230.791,
+"end": 230.871
+},
+{
+"text": "finish.",
+"start": 230.951,
+"end": 231.831
+},
+{
+"text": "If",
+"start": 231.911,
+"end": 231.991
+},
+{
+"text": "something",
+"start": 232.151,
+"end": 232.311
+},
+{
+"text": "is",
+"start": 232.351,
+"end": 232.391
+},
+{
+"text": "wrong,",
+"start": 232.471,
+"end": 233.031
+},
+{
+"text": "I",
+"start": 233.111,
+"end": 233.191
+},
+{
+"text": "can",
+"start": 233.271,
+"end": 233.351
+},
+{
+"text": "ask",
+"start": 233.471,
+"end": 233.591
+},
+{
+"text": "Claude",
+"start": 233.671,
+"end": 233.911
+},
+{
+"text": "to",
+"start": 233.951,
+"end": 233.991
+},
+{
+"text": "refine",
+"start": 234.071,
+"end": 234.471
+},
+{
+"text": "the",
+"start": 234.551,
+"end": 234.591
+},
+{
+"text": "instructions,",
+"start": 234.631,
+"end": 235.591
+},
+{
+"text": "save",
+"start": 235.671,
+"end": 235.911
+},
+{
+"text": "the",
+"start": 235.951,
+"end": 235.991
+},
+{
+"text": "updated",
+"start": 236.071,
+"end": 236.391
+},
+{
+"text": "skill,",
+"start": 236.471,
+"end": 237.031
+},
+{
+"text": "and",
+"start": 237.111,
+"end": 237.191
+},
+{
+"text": "test",
+"start": 237.351,
+"end": 237.511
+},
+{
+"text": "it",
+"start": 237.551,
+"end": 237.591
+},
+{
+"text": "again.",
+"start": 237.671,
+"end": 238.231
+},
+{
+"text": "To",
+"start": 238.471,
+"end": 238.631
+},
+{
+"text": "test",
+"start": 238.751,
+"end": 238.871
+},
+{
+"text": "automatic",
+"start": 238.951,
+"end": 239.431
+},
+{
+"text": "invocation,",
+"start": 239.511,
+"end": 240.391
+},
+{
+"text": "I",
+"start": 240.471,
+"end": 240.511
+},
+{
+"text": "can",
+"start": 240.551,
+"end": 240.631
+},
+{
+"text": "start",
+"start": 240.711,
+"end": 240.951
+},
+{
+"text": "another",
+"start": 241.031,
+"end": 241.351
+},
+{
+"text": "fresh",
+"start": 241.511,
+"end": 241.751
+},
+{
+"text": "chat",
+"start": 241.831,
+"end": 242.151
+},
+{
+"text": "and",
+"start": 242.231,
+"end": 242.311
+},
+{
+"text": "ask",
+"start": 242.471,
+"end": 242.631
+},
+{
+"text": "for",
+"start": 242.711,
+"end": 242.791
+},
+{
+"text": "a",
+"start": 242.831,
+"end": 242.871
+},
+{
+"text": "weekly",
+"start": 242.951,
+"end": 243.271
+},
+{
+"text": "leadership",
+"start": 243.431,
+"end": 243.751
+},
+{
+"text": "update",
+"start": 243.831,
+"end": 244.231
+},
+{
+"text": "without",
+"start": 244.431,
+"end": 244.631
+},
+{
+"text": "naming",
+"start": 244.711,
+"end": 244.951
+},
+{
+"text": "Larry.",
+"start": 245.031,
+"end": 245.671
+},
+{
+"text": "Then",
+"start": 245.911,
+"end": 246.151
+},
+{
+"text": "I\u2019ll",
+"start": 246.311,
+"end": 246.471
+},
+{
+"text": "check",
+"start": 246.591,
+"end": 246.711
+},
+{
+"text": "Claude\u2019s",
+"start": 246.791,
+"end": 247.071
+},
+{
+"text": "activity",
+"start": 247.111,
+"end": 247.671
+},
+{
+"text": "to",
+"start": 247.711,
+"end": 247.751
+},
+{
+"text": "confirm",
+"start": 247.831,
+"end": 248.231
+},
+{
+"text": "which",
+"start": 248.311,
+"end": 248.551
+},
+{
+"text": "skill",
+"start": 248.631,
+"end": 248.951
+},
+{
+"text": "actually",
+"start": 249.111,
+"end": 249.431
+},
+{
+"text": "loaded.",
+"start": 249.511,
+"end": 250.151
+},
+{
+"text": "If",
+"start": 250.391,
+"end": 250.551
+},
+{
+"text": "several",
+"start": 250.631,
+"end": 250.951
+},
+{
+"text": "skills",
+"start": 251.031,
+"end": 251.351
+},
+{
+"text": "have",
+"start": 251.471,
+"end": 251.591
+},
+{
+"text": "similar",
+"start": 251.751,
+"end": 251.911
+},
+{
+"text": "descriptions,",
+"start": 252.031,
+"end": 252.951
+},
+{
+"text": "selecting",
+"start": 253.031,
+"end": 253.431
+},
+{
+"text": "Larry",
+"start": 253.511,
+"end": 253.831
+},
+{
+"text": "manually",
+"start": 253.911,
+"end": 254.471
+},
+{
+"text": "is",
+"start": 254.551,
+"end": 254.631
+},
+{
+"text": "the",
+"start": 254.711,
+"end": 254.791
+},
+{
+"text": "clearest",
+"start": 254.871,
+"end": 255.271
+},
+{
+"text": "way",
+"start": 255.351,
+"end": 255.431
+},
+{
+"text": "to",
+"start": 255.511,
+"end": 255.591
+},
+{
+"text": "make",
+"start": 255.671,
+"end": 255.751
+},
+{
+"text": "sure",
+"start": 255.831,
+"end": 256.071
+},
+{
+"text": "I\u2019m",
+"start": 256.111,
+"end": 256.231
+},
+{
+"text": "testing",
+"start": 256.431,
+"end": 256.631
+},
+{
+"text": "the",
+"start": 256.671,
+"end": 256.711
+},
+{
+"text": "right",
+"start": 256.791,
+"end": 257.031
+},
+{
+"text": "one.",
+"start": 257.111,
+"end": 257.591
+},
+{
+"text": "A",
+"start": 257.831,
+"end": 257.991
+},
+{
+"text": "few",
+"start": 258.071,
+"end": 258.151
+},
+{
+"text": "practical",
+"start": 258.231,
+"end": 258.711
+},
+{
+"text": "details",
+"start": 258.791,
+"end": 259.191
+},
+{
+"text": "are",
+"start": 259.271,
+"end": 259.351
+},
+{
+"text": "worth",
+"start": 259.431,
+"end": 259.591
+},
+{
+"text": "remembering.",
+"start": 259.671,
+"end": 260.311
+},
+{
+"text": "Skills",
+"start": 260.711,
+"end": 261.111
+},
+{
+"text": "can",
+"start": 261.191,
+"end": 261.271
+},
+{
+"text": "be",
+"start": 261.311,
+"end": 261.351
+},
+{
+"text": "used",
+"start": 261.511,
+"end": 261.671
+},
+{
+"text": "across",
+"start": 261.751,
+"end": 262.151
+},
+{
+"text": "Claude",
+"start": 262.231,
+"end": 262.551
+},
+{
+"text": "dot",
+"start": 262.631,
+"end": 262.711
+},
+{
+"text": "A-I,",
+"start": 262.791,
+"end": 263.511
+},
+{
+"text": "Claude",
+"start": 263.591,
+"end": 263.831
+},
+{
+"text": "Code,",
+"start": 263.911,
+"end": 264.471
+},
+{
+"text": "and",
+"start": 264.591,
+"end": 264.711
+},
+{
+"text": "the",
+"start": 264.751,
+"end": 264.791
+},
+{
+"text": "API,",
+"start": 264.871,
+"end": 265.751
+},
+{
+"text": "although",
+"start": 265.911,
+"end": 266.071
+},
+{
+"text": "setup",
+"start": 266.151,
+"end": 266.471
+},
+{
+"text": "and",
+"start": 266.511,
+"end": 266.551
+},
+{
+"text": "available",
+"start": 266.791,
+"end": 267.031
+},
+{
+"text": "tools",
+"start": 267.111,
+"end": 267.511
+},
+{
+"text": "differ.",
+"start": 267.591,
+"end": 268.151
+},
+{
+"text": "Enabled",
+"start": 268.231,
+"end": 268.711
+},
+{
+"text": "skills",
+"start": 268.791,
+"end": 269.191
+},
+{
+"text": "can",
+"start": 269.271,
+"end": 269.351
+},
+{
+"text": "sync",
+"start": 269.511,
+"end": 269.751
+},
+{
+"text": "from",
+"start": 269.831,
+"end": 269.911
+},
+{
+"text": "Claude",
+"start": 270.071,
+"end": 270.391
+},
+{
+"text": "dot",
+"start": 270.471,
+"end": 270.551
+},
+{
+"text": "A-I",
+"start": 270.711,
+"end": 271.111
+},
+{
+"text": "to",
+"start": 271.191,
+"end": 271.271
+},
+{
+"text": "a",
+"start": 271.311,
+"end": 271.351
+},
+{
+"text": "supported",
+"start": 271.431,
+"end": 271.911
+},
+{
+"text": "version",
+"start": 271.991,
+"end": 272.311
+},
+{
+"text": "of",
+"start": 272.351,
+"end": 272.391
+},
+{
+"text": "Claude",
+"start": 272.551,
+"end": 272.791
+},
+{
+"text": "Code",
+"start": 272.951,
+"end": 273.351
+},
+{
+"text": "when",
+"start": 273.431,
+"end": 273.511
+},
+{
+"text": "you",
+"start": 273.591,
+"end": 273.671
+},
+{
+"text": "sign",
+"start": 273.751,
+"end": 273.991
+},
+{
+"text": "in",
+"start": 274.071,
+"end": 274.231
+},
+{
+"text": "with",
+"start": 274.311,
+"end": 274.391
+},
+{
+"text": "the",
+"start": 274.431,
+"end": 274.471
+},
+{
+"text": "same",
+"start": 274.631,
+"end": 274.871
+},
+{
+"text": "Claude",
+"start": 274.951,
+"end": 275.191
+},
+{
+"text": "account.",
+"start": 275.271,
+"end": 275.751
+},
+{
+"text": "That",
+"start": 276.231,
+"end": 276.391
+},
+{
+"text": "synchronization",
+"start": 276.471,
+"end": 277.271
+},
+{
+"text": "is",
+"start": 277.351,
+"end": 277.431
+},
+{
+"text": "one-way.",
+"start": 277.591,
+"end": 278.151
+},
+{
+"text": "API",
+"start": 278.551,
+"end": 279.031
+},
+{
+"text": "skills",
+"start": 279.111,
+"end": 279.511
+},
+{
+"text": "are",
+"start": 279.591,
+"end": 279.671
+},
+{
+"text": "managed",
+"start": 279.751,
+"end": 280.151
+},
+{
+"text": "separately.",
+"start": 280.231,
+"end": 281.111
+},
+{
+"text": "When",
+"start": 281.431,
+"end": 281.511
+},
+{
+"text": "creating",
+"start": 281.591,
+"end": 281.991
+},
+{
+"text": "skill",
+"start": 282.071,
+"end": 282.311
+},
+{
+"text": "files",
+"start": 282.391,
+"end": 282.711
+},
+{
+"text": "yourself,",
+"start": 282.791,
+"end": 283.591
+},
+{
+"text": "name",
+"start": 283.671,
+"end": 283.911
+},
+{
+"text": "the",
+"start": 283.991,
+"end": 284.031
+},
+{
+"text": "instruction",
+"start": 284.071,
+"end": 284.631
+},
+{
+"text": "file",
+"start": 284.711,
+"end": 284.951
+},
+{
+"text": "exactly",
+"start": 285.031,
+"end": 285.751
+},
+{
+"text": "SKILL",
+"start": 285.991,
+"end": 286.471
+},
+{
+"text": "dot",
+"start": 286.551,
+"end": 286.711
+},
+{
+"text": "M-D.",
+"start": 286.951,
+"end": 287.751
+},
+{
+"text": "Use",
+"start": 287.991,
+"end": 288.151
+},
+{
+"text": "a",
+"start": 288.231,
+"end": 288.311
+},
+{
+"text": "lowercase",
+"start": 288.391,
+"end": 288.951
+},
+{
+"text": "skill",
+"start": 289.111,
+"end": 289.271
+},
+{
+"text": "name",
+"start": 289.351,
+"end": 289.591
+},
+{
+"text": "and",
+"start": 289.671,
+"end": 289.831
+},
+{
+"text": "folder",
+"start": 289.991,
+"end": 290.311
+},
+{
+"text": "name,",
+"start": 290.391,
+"end": 290.711
+},
+{
+"text": "with",
+"start": 290.791,
+"end": 290.871
+},
+{
+"text": "hyphens",
+"start": 290.951,
+"end": 291.351
+},
+{
+"text": "between",
+"start": 291.431,
+"end": 291.751
+},
+{
+"text": "words.",
+"start": 291.831,
+"end": 292.511
+},
+{
+"text": "Pay",
+"start": 292.711,
+"end": 292.871
+},
+{
+"text": "particular",
+"start": 292.951,
+"end": 293.591
+},
+{
+"text": "attention",
+"start": 293.831,
+"end": 294.071
+},
+{
+"text": "to",
+"start": 294.151,
+"end": 294.231
+},
+{
+"text": "the",
+"start": 294.271,
+"end": 294.311
+},
+{
+"text": "description.",
+"start": 294.671,
+"end": 295.231
+},
+{
+"text": "It",
+"start": 295.431,
+"end": 295.511
+},
+{
+"text": "tells",
+"start": 295.591,
+"end": 295.831
+},
+{
+"text": "Claude",
+"start": 295.911,
+"end": 296.231
+},
+{
+"text": "what",
+"start": 296.311,
+"end": 296.471
+},
+{
+"text": "the",
+"start": 296.511,
+"end": 296.551
+},
+{
+"text": "skill",
+"start": 296.631,
+"end": 296.871
+},
+{
+"text": "does",
+"start": 297.031,
+"end": 297.431
+},
+{
+"text": "and",
+"start": 297.511,
+"end": 297.591
+},
+{
+"text": "when",
+"start": 297.671,
+"end": 297.831
+},
+{
+"text": "to",
+"start": 297.911,
+"end": 297.991
+},
+{
+"text": "use",
+"start": 298.071,
+"end": 298.231
+},
+{
+"text": "it.",
+"start": 298.311,
+"end": 298.751
+},
+{
+"text": "Finally,",
+"start": 299.031,
+"end": 299.671
+},
+{
+"text": "keep",
+"start": 299.751,
+"end": 299.911
+},
+{
+"text": "the",
+"start": 299.991,
+"end": 300.071
+},
+{
+"text": "main",
+"start": 300.151,
+"end": 300.311
+},
+{
+"text": "instructions",
+"start": 300.391,
+"end": 301.031
+},
+{
+"text": "focused.",
+"start": 301.191,
+"end": 301.951
+},
+{
+"text": "Put",
+"start": 302.151,
+"end": 302.311
+},
+{
+"text": "longer",
+"start": 302.391,
+"end": 302.711
+},
+{
+"text": "references",
+"start": 302.791,
+"end": 303.431
+},
+{
+"text": "and",
+"start": 303.471,
+"end": 303.511
+},
+{
+"text": "supporting",
+"start": 303.591,
+"end": 304.071
+},
+{
+"text": "material",
+"start": 304.351,
+"end": 304.631
+},
+{
+"text": "in",
+"start": 304.711,
+"end": 304.871
+},
+{
+"text": "separate",
+"start": 304.951,
+"end": 305.271
+},
+{
+"text": "files",
+"start": 305.351,
+"end": 305.751
+},
+{
+"text": "that",
+"start": 305.831,
+"end": 305.911
+},
+{
+"text": "Claude",
+"start": 305.991,
+"end": 306.311
+},
+{
+"text": "can",
+"start": 306.391,
+"end": 306.471
+},
+{
+"text": "load",
+"start": 306.551,
+"end": 306.791
+},
+{
+"text": "when",
+"start": 306.871,
+"end": 306.951
+},
+{
+"text": "needed.",
+"start": 307.031,
+"end": 307.631
+},
+{
+"text": "The",
+"start": 307.831,
+"end": 307.991
+},
+{
+"text": "goal",
+"start": 308.151,
+"end": 308.311
+},
+{
+"text": "is",
+"start": 308.391,
+"end": 308.471
+},
+{
+"text": "to",
+"start": 308.551,
+"end": 308.631
+},
+{
+"text": "capture",
+"start": 308.831,
+"end": 309.031
+},
+{
+"text": "a",
+"start": 309.111,
+"end": 309.191
+},
+{
+"text": "workflow",
+"start": 309.471,
+"end": 309.751
+},
+{
+"text": "clearly",
+"start": 309.831,
+"end": 310.231
+},
+{
+"text": "enough",
+"start": 310.311,
+"end": 310.631
+},
+{
+"text": "that",
+"start": 310.711,
+"end": 310.791
+},
+{
+"text": "Claude",
+"start": 310.871,
+"end": 311.191
+},
+{
+"text": "can",
+"start": 311.231,
+"end": 311.271
+},
+{
+"text": "apply",
+"start": 311.351,
+"end": 311.671
+},
+{
+"text": "it",
+"start": 311.751,
+"end": 311.831
+},
+{
+"text": "consistently,",
+"start": 311.991,
+"end": 312.871
+},
+{
+"text": "while",
+"start": 312.991,
+"end": 313.111
+},
+{
+"text": "you",
+"start": 313.191,
+"end": 313.351
+},
+{
+"text": "continue",
+"start": 313.591,
+"end": 313.831
+},
+{
+"text": "to",
+"start": 313.911,
+"end": 313.991
+},
+{
+"text": "review",
+"start": 314.151,
+"end": 314.311
+},
+{
+"text": "the",
+"start": 314.351,
+"end": 314.391
+},
+{
+"text": "results.",
+"start": 314.471,
+"end": 315.351
+}
+]
+}
