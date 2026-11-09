@@ -1,0 +1,57 @@
+Think about a task you have to re-explain to AI every single week. You describe the audience, walk through the steps, specify the format, and remind AI what to avoid.
+
+You've already learned to use /ˈkoʊdoʊ/ to structure these instructions clearly. And while you can reuse a /ˈkoʊdoʊ/ prompt, a Skill takes this further, by packaging the entire process into a reusable workflow.
+
+A Skill is a set of reusable instructions that teaches AI how to perform a specific task, or follow an established process.
+
+Think of it like a standard operating procedure for AI. It captures the steps, expectations, and rules you'd normally explain to a new colleague.
+
+A Skill can contain more than written instructions. It can also include supporting files, templates, reference materials, and scripts.
+
+Some Skills can even be invoked automatically, when AI recognizes a relevant task. So you don't always have to remember which Skill to use.
+
+You can also combine multiple Skills. For example, one might define your workflow, while another applies your preferred writing style.
+
+Let's take a familiar example. Imagine you prepare a weekly leadership update.
+
+Your instructions might tell AI to act as a Chief of Staff, review scattered notes, identify important developments, highlight decisions needed, and produce a concise update.
+
+With a Skill, you can save those instructions, include your reporting template, and add checks to ensure the result meets your expectations.
+
+Then, each week, you provide the latest information, and AI follows the established process. The same approach works for recurring reports, meeting follow-ups, or reviewing documents against a checklist.
+
+So, how do you create effective instructions for a Skill? You don't need to start from scratch. Begin with the four familiar parts of /ˈkoʊdoʊ/.
+
+Character. What role or expertise should AI bring to the task?
+
+Objective. What should the Skill accomplish?
+
+Do and Don't. What steps should AI follow, and what should it check, avoid, or ask you to confirm?
+
+Output. What should the final result look like?
+
+Then, add two considerations that make those instructions reusable.
+
+Trigger. When should AI use this Skill? What kind of request should activate it?
+
+And Resources. What supporting documents, templates, examples, or reference materials should it use?
+
+Together, these six questions give you the foundation for a useful Skill.
+
+As you develop it, keep a few principles in mind.
+
+First, make the important steps explicit, as if you're briefing a capable new colleague.
+
+Second, separate reusable context from variable inputs. For your leadership update, the structure and process belong in the Skill. This week's notes belong in your new request.
+
+Third, include examples of what good output looks like, especially when tone or format matters.
+
+Finally, test the Skill with realistic inputs. Check whether it follows instructions, flags missing information, and produces consistent results.
+
+This is especially important before sharing Skills with your team. A reusable Skill can scale a good process, but it can also repeat a weak one.
+
+Not every task needs a Skill. But when a process repeats, and consistency matters, it's worth making it reusable.
+
+Start with one workflow you know well. Capture the process, test it, and improve it over time.
+
+The goal is to spend less time explaining the work to AI, and more time getting value from the results.
