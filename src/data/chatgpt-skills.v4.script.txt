@@ -1,0 +1,87 @@
+# eleven_v4 prompt, sent as two parts (5000-char limit). Part 2 starts at 'For this demo'. Voice Daan, stability 0.10, similarity 0.85.
+
+ChatGPT Skills let you create and reuse your own workflows.
+
+[pause] A Skill teaches ChatGPT a specific way of working. It packages instructions, examples, and optional code into a workflow that ChatGPT can apply whenever it's relevant.
+
+[pause] A Skill is more than a saved prompt. It captures a reusable process, so ChatGPT handles repeated tasks consistently, with less setup each time.
+
+[pause] Skills are especially useful for work that follows a pattern, like weekly updates, meeting summaries, decision memos, and status reports. Instead of explaining the same requirements every time, you give ChatGPT a workflow to reuse.
+
+[pause] At the center of every Skill is a file called SKILL dot M-D. It defines the Skill's name, when it should be used, and the instructions ChatGPT should follow.
+
+[pause] A Skill can also include examples that show the expected style or output, reference files and templates, and optional code that helps ChatGPT run the workflow reliably.
+
+[pause] Once a Skill is installed, ChatGPT can use it whenever it's relevant to the task.
+
+[pause] There are two ways to trigger a Skill.
+
+[pause] You can call it manually. Type the at symbol, and select the Skill from the menu.
+
+[pause] Or ChatGPT can trigger it automatically. When your prompt matches an installed Skill, ChatGPT applies its instructions without you naming it.
+
+[pause] There are three practical ways to create a Skill.
+
+[pause] First, create it in conversation. Ask ChatGPT to build a Skill, or go to Plugins, then Skills, then Add, and choose Create with chat. This opens Work with the built-in skill-creator, ready to guide you.
+
+[pause] Second, use the editor. Choose Create with editor, enter the Skill's name, description, and instructions, then select Create.
+
+[pause] Third, upload a Skill you already have from your computer.
+
+[pause] Menu labels and options can vary by product and workspace.
+
+[pause] If you're using the ChatGPT desktop app on a Mac, there's one more option, called Record and Replay.
+
+[pause] With Computer Use enabled, open Work or Codex, go to Plugins, open the plus menu, and select Record a skill. Then demonstrate the workflow on your Mac.
+
+[pause] When you finish recording, ChatGPT uses that demonstration to draft a reusable Skill that you can review and refine.
+
+[pause] For this demo, we'll create a Skill directly in conversation.
+
+[pause] Let's build a Skill called Larry, the Leadership Update Writer.
+
+[pause] The goal is simple. Each week, I want ChatGPT to turn rough leadership notes into a concise update, in a consistent format.
+
+[pause] I'll start by asking ChatGPT to help me create a skill called Larry, Leadership Update Writer.
+
+[pause] Next, I'll add my Koh-doh prompt template: Character, Objective, Do's and Don'ts, and Output.
+
+[pause] For Character, Larry is a leadership update writer communicating with the executive team.
+
+[pause] For Objective, Larry should draft a concise, one-page weekly update that helps leaders stay informed and make strategic decisions.
+
+[pause] For Do's and Don'ts, Larry should highlight major developments, decisions, approvals, and deadlines. It should explain trade-offs, use plain language, and never invent information.
+
+[pause] For Output, I want five sections: Executive Summary, Key Developments, Decisions and Action Items, Trade-Offs or Conflicts, and Closing or Next Steps.
+
+[pause] If needed, I can also add previous leadership updates or reporting templates as examples.
+
+[pause] ChatGPT uses all of this to generate the Skill's instructions, which I can review and refine before installing it.
+
+[pause] Now, let's test Larry with a sample set of weekly notes.
+
+[pause] I'll ask ChatGPT to turn these notes into this week's leadership update.
+
+[pause] Notice that I haven't mentioned Larry, or selected the Skill.
+
+[pause] I want to see whether ChatGPT recognizes that this task matches my installed Skill, and applies it automatically.
+
+[pause] Once the response appears, I'll open Sources and check that the leadership update Skill is listed under Skills. That's evidence the Skill was actually used, not just familiar headings.
+
+[pause] Then I'll check that the update follows the expected structure, tone, and level of detail.
+
+[pause] If something isn't right, I can refine the Skill's instructions or description, and test again. I can also try different sets of notes, to check that the updates stay consistent.
+
+[pause] And depending on workspace permissions, I can share the Skill with teammates, so they can reuse the same workflow.
+
+[pause] A few practical notes.
+
+[pause] Skill availability depends on your plan, workspace permissions, and product. In managed workspaces, administrators may control who can create, upload, use, share, and install Skills.
+
+[pause] Skills are also supported in Codex and the OpenAI API, although installation and syncing can differ between products.
+
+[pause] For business plans, OpenAI doesn't use inputs or outputs from ChatGPT Business, ChatGPT Enterprise, or the API to train its models by default, unless your organization opts in.
+
+[pause] Finally, three tips. Skills work best for repeatable workflows that benefit from consistency. A clear description of when to use the Skill helps ChatGPT recognize the right tasks. And examples and supporting resources help it follow the workflow reliably.
+
+[pause] The goal is to capture a useful way of working that ChatGPT can apply again and again, without you explaining everything from scratch each time.

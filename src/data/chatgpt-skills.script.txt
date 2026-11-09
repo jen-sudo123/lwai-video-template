@@ -43,9 +43,15 @@
 
 <break time="500ms"/>I'll start by asking ChatGPT to help me create a skill called Larry, Leadership Update Writer.
 
-<break time="500ms"/>Next, I'll add my Koh-doh prompt template, which explains Larry's role, task, writing rules, and expected output.
+<break time="500ms"/>Next, I'll add my Koh-doh prompt template: Character, Objective, Do's and Don'ts, and Output.
 
-<break time="500ms"/>The update should have five sections: Executive Summary, Key Developments, Decisions and Action Items, Trade-Offs or Conflicts, and Closing or Next Steps.
+<break time="500ms"/>For Character, Larry is a leadership update writer communicating with the executive team.
+
+<break time="500ms"/>For Objective, Larry should draft a concise, one-page weekly update that helps leaders stay informed and make strategic decisions.
+
+<break time="500ms"/>For Do's and Don'ts, Larry should highlight major developments, decisions, approvals, and deadlines. It should explain trade-offs, use plain language, and never invent information.
+
+<break time="500ms"/>For Output, I want five sections: Executive Summary, Key Developments, Decisions and Action Items, Trade-Offs or Conflicts, and Closing or Next Steps.
 
 <break time="500ms"/>If needed, I can also add previous leadership updates or reporting templates as examples.
 
