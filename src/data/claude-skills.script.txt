@@ -22,11 +22,9 @@ Here, you’ll see options to upload a skill, create one directly, or create one
 
 There’s also another option for workflows that are easier to demonstrate than describe.
 
-In Cowork in the Claude desktop app for Mac, eligible users can record themselves completing a task and explain what they’re doing and why.
+In Cowork in the Claude desktop app, eligible users can record themselves completing a task and explain what they’re doing and why.
 
 Claude uses that demonstration to propose a reusable skill, which you can review and refine before saving.
-
-Recording is currently available on Pro, Max, Ultra, and Team plans. It isn’t available in the browser, on mobile, or on Windows.
 
 Now, let’s create a skill called Larry, designed to write weekly leadership updates.
 
