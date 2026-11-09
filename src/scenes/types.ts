@@ -630,6 +630,23 @@ export type Scene =
       cardTimings?: [number, number, number, number];
       modelAppearFrame?: number;
       durationInFrames: number;
+    }
+  | {
+      // Central "Skill" package card; labelled chips snap in from both sides,
+      // wired to the card. Optional assembleFrame packs every chip into the card.
+      layout: 'skill-package-diagram';
+      label?: string;
+      title: string;
+      titleHighlight?: string;
+      centerTitle?: string;
+      centerSub?: string;
+      chips: string[];
+      chipKickers?: string[];
+      chipTimings?: number[];
+      accentFrom?: number;
+      assembleFrame?: number;
+      assembledSub?: string;
+      durationInFrames: number;
     };
 
 export type ChatMessage = {

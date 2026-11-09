@@ -43,6 +43,7 @@ import { MeetingChecklistDiagram } from './diagrams/MeetingChecklistDiagram';
 import { AccessWorkflowDiagram } from './diagrams/AccessWorkflowDiagram';
 import { BoundedAutonomyDiagram } from './diagrams/BoundedAutonomyDiagram';
 import { BiasFunnelDiagram } from './diagrams/BiasFunnelDiagram';
+import { SkillPackageDiagram } from './diagrams/SkillPackageDiagram';
 
 // Routes a scene to its component. Add new layouts here as you create them.
 export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> = ({ scene, hasClipLayer }) => {
@@ -509,6 +510,22 @@ export const SceneRenderer: React.FC<{ scene: Scene; hasClipLayer?: boolean }> =
       );
     case 'meeting-checklist-diagram':
       return <MeetingChecklistDiagram itemTimings={scene.itemTimings} />;
+    case 'skill-package-diagram':
+      return (
+        <SkillPackageDiagram
+          label={scene.label}
+          title={scene.title}
+          titleHighlight={scene.titleHighlight}
+          centerTitle={scene.centerTitle}
+          centerSub={scene.centerSub}
+          chips={scene.chips}
+          chipKickers={scene.chipKickers}
+          chipTimings={scene.chipTimings}
+          accentFrom={scene.accentFrom}
+          assembleFrame={scene.assembleFrame}
+          assembledSub={scene.assembledSub}
+        />
+      );
     case 'access-workflow-diagram':
       return <AccessWorkflowDiagram arrowFrame={scene.arrowFrame} />;
     case 'bounded-autonomy-diagram':

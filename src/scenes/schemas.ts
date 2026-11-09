@@ -627,6 +627,21 @@ export const sceneSchema = z.discriminatedUnion('layout', [
     modelAppearFrame: z.number().optional(),
     durationInFrames: z.number(),
   }),
+  z.object({
+    layout: z.literal('skill-package-diagram'),
+    label: z.string().optional(),
+    title: z.string(),
+    titleHighlight: z.string().optional(),
+    centerTitle: z.string().optional(),
+    centerSub: z.string().optional(),
+    chips: z.array(z.string()),
+    chipKickers: z.array(z.string()).optional(),
+    chipTimings: z.array(z.number()).optional(),
+    accentFrom: z.number().optional(),
+    assembleFrame: z.number().optional(),
+    assembledSub: z.string().optional(),
+    durationInFrames: z.number(),
+  }),
 ]);
 
 export const videoDataSchema = z.object({
