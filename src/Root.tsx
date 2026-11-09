@@ -75,7 +75,7 @@ import { SmallestAgent, SMALLEST_AGENT_DURATION_S, SMALLEST_AGENT_VO_FROM } from
 import { AdvancedModelsChatGPT, ADVANCED_MODELS_DURATION_S, ADVANCED_MODELS_TITLE_FRAMES } from './compositions/AdvancedModelsChatGPT';
 import { workContext } from './data/work-context';
 import { workspaceStudioSkills } from './data/workspace-studio-skills';
-import { claudeSkills } from './data/claude-skills';
+import { ClaudeSkills, CLAUDE_SKILLS_DURATION_S, CLAUDE_SKILLS_TITLE_FRAMES } from './compositions/ClaudeSkills';
 import { whatIsGenerativeAi } from './data/what-is-generative-ai';
 import { aiLandscape } from './data/ai-landscape';
 import { chatGPTDeepResearch } from './data/chatgpt-deep-research';
@@ -802,13 +802,11 @@ export const RemotionRoot: React.FC = () => {
       />
       <Composition
         id="ClaudeSkills"
-        component={Video}
-        durationInFrames={calculateTotalFrames(claudeSkills.scenes)}
+        component={ClaudeSkills}
+        durationInFrames={CLAUDE_SKILLS_TITLE_FRAMES + Math.ceil(CLAUDE_SKILLS_DURATION_S * layout.fps)}
         fps={layout.fps}
         width={layout.width}
         height={layout.height}
-        schema={videoDataSchema}
-        defaultProps={claudeSkills}
       />
       <Composition
         id="WorkspaceStudioSkills"
