@@ -1,89 +1,59 @@
 <speak>
+<break time="500ms"/>A Skill is a set of reusable instructions that teaches AI how to perform a specific task, or follow an established process.
+
+<break time="500ms"/>Think of it like a standard operating procedure for AI. <break time="200ms"/> It captures the steps, expectations, and rules you'd normally explain to a new colleague.
+
+<break time="500ms"/>A Skill can contain more than written instructions. <break time="300ms"/> It can also include supporting files, templates, reference materials, and scripts.
+
+<break time="500ms"/>Some Skills can even be invoked automatically, when AI recognizes a relevant task. <break time="200ms"/> So you don't always have to remember which Skill to use.
+
+<break time="500ms"/>You can also combine multiple Skills. <break time="300ms"/> For example, one might define your workflow, while another applies your preferred writing style.
+
 <break time="500ms"/>Think about a task you have to re-explain to AI every single week. <break time="300ms"/> You describe the audience, walk through the steps, specify the format, and remind AI what to avoid.
 
-<break time="500ms"/>You've already learned to use Co-Do to structure these instructions clearly. <break time="300ms"/> But what if you could save that entire process, and reuse it whenever you need it?
+<break time="500ms"/>You've already learned to use Co-Do to structure these instructions clearly. <break time="300ms"/> And while you can reuse a Co-Do prompt, a Skill takes this further, by packaging the entire process into a reusable workflow.
 
-<break time="500ms"/>That's where Skills come in. <break time="300ms"/> A Skill is a set of reusable instructions that tells AI how to handle a particular task.
+<break time="500ms"/>Let's take a familiar example. <break time="300ms"/> Imagine you prepare a weekly leadership update.
 
-<break time="500ms"/>Think of it as a standard operating procedure for AI. <break time="200ms"/> It captures the steps and expectations you'd normally explain to a new colleague.
+<break time="500ms"/>Your instructions might tell AI to act as a Chief of Staff, review scattered notes, identify important developments, highlight decisions needed, and produce a concise update.
 
-<break time="500ms"/>While Co-Do helps you structure the instructions, a Skill packages them into a repeatable workflow, along with supporting resources and quality checks.
+<break time="500ms"/>With a Skill, you can save those instructions, include your reporting template, and add checks to ensure the result meets your expectations.
 
-<break time="500ms"/>Some Skills can even be used automatically, when AI recognizes a relevant task. <break time="300ms"/> And you can combine multiple Skills. For example, one might define your workflow, while another applies your preferred writing style.
+<break time="500ms"/>Then, each week, you provide the latest information, and AI follows the established process. <break time="300ms"/> The same approach works for recurring reports, meeting follow-ups, or reviewing documents against a checklist.
 
-<break time="500ms"/>Let's take a familiar example. <break time="300ms"/> Imagine you prepare a weekly leadership update. You might already have a Co-Do prompt for this.
+<break time="500ms"/>So, how do you create effective instructions for a Skill? <break time="300ms"/> You don't need to start from scratch. Begin with the four familiar parts of Co-Do.
 
-<break time="500ms"/>Your Character is a Chief of Staff supporting senior leadership. <break time="300ms"/> Your Objective is to prepare a concise, decision-ready update.
+<break time="500ms"/>Character. <break time="200ms"/> What role or expertise should AI bring to the task?
 
-<break time="500ms"/>Under Do and Don't, you instruct AI to review your notes, identify important developments, highlight decisions needed, and avoid inventing missing information.
+<break time="500ms"/>Objective. <break time="200ms"/> What should the Skill accomplish?
 
-<break time="500ms"/>And for Output, you specify a short update, with clear sections for developments, decisions, and next steps.
+<break time="500ms"/>Do and Don't. <break time="200ms"/> What steps should AI follow, and what should it check, avoid, or ask you to confirm?
 
-<break time="500ms"/>Now, you could reuse that prompt every week. <break time="300ms"/> But with a Skill, you can take it further.
+<break time="500ms"/>Output. <break time="200ms"/> What should the final result look like?
 
-<break time="500ms"/>You can save those instructions, include your preferred reporting template, define when the Skill should be used, and add checks to make sure the result meets your expectations.
+<break time="500ms"/>Then, add two considerations that make those instructions reusable.
 
-<break time="500ms"/>Then, each week, you just provide the latest information, and AI follows the same process. <break time="300ms"/> The same principle applies to recurring reports, meeting follow-ups, or reviewing documents against a checklist.
+<break time="500ms"/>Trigger. <break time="200ms"/> When should AI use this Skill? What kind of request should activate it?
 
-<break time="500ms"/>Co-Do helps you design the instructions. <break time="300ms"/> A Skill helps you reuse them consistently.
+<break time="500ms"/>And Resources. <break time="200ms"/> What supporting documents, templates, examples, or reference materials should it use?
 
-<break time="500ms"/>So, how do you create one? <break time="300ms"/> You don't need to start from scratch. Begin with the four familiar parts of Co-Do.
+<break time="500ms"/>Together, these six questions give you the foundation for a useful Skill.
 
-<break time="500ms"/>First, Character. <break time="200ms"/> What role or expertise should AI bring to the task?
+<break time="500ms"/>As you develop it, keep a few principles in mind.
 
-<break time="500ms"/>Second, Objective. <break time="200ms"/> What should the Skill accomplish?
+<break time="500ms"/>First, make the important steps explicit, as if you're briefing a capable new colleague.
 
-<break time="500ms"/>Third, Do and Don't. <break time="200ms"/> What steps should AI follow, and what should it check or avoid?
+<break time="500ms"/>Second, separate reusable context from variable inputs. <break time="300ms"/> For your leadership update, the structure and process belong in the Skill. This week's notes belong in your new request.
 
-<break time="500ms"/>And fourth, Output. <break time="200ms"/> What should the final result look like?
+<break time="500ms"/>Third, include examples of what good output looks like, especially when tone or format matters.
 
-<break time="500ms"/>Then, add two more questions. <break time="300ms"/> Trigger. <break time="200ms"/> When should AI use this Skill? What kind of request should activate it?
+<break time="500ms"/>Finally, test the Skill with realistic inputs. <break time="300ms"/> Check whether it follows instructions, flags missing information, and produces consistent results.
 
-<break time="500ms"/>And Resources. <break time="200ms"/> What supporting documents, templates, or reference materials should it use?
+<break time="500ms"/>This is especially important before sharing Skills with your team. <break time="300ms"/> A reusable Skill can scale a good process, <break time="200ms"/> but it can also repeat a weak one.
 
-<break time="500ms"/>Together, these six questions give you the foundation for a reusable Skill.
+<break time="500ms"/>Not every task needs a Skill. <break time="300ms"/> But when a process repeats, and consistency matters, it's worth making it reusable.
 
-<break time="500ms"/>Now, let's look at a few practices that make Skills more useful.
+<break time="500ms"/>Start with one workflow you know well. <break time="300ms"/> Capture the process, test it, and improve it over time.
 
-<break time="500ms"/>Start with a clear purpose. <break time="300ms"/> Focus on one specific task. The clearer the purpose, the easier it is for AI to recognize when the Skill is relevant.
-
-<break time="500ms"/>Next, write down the steps that normally live in your head. <break time="300ms"/> Imagine explaining the work to a capable new colleague. What context would they need? What steps should they follow? And what should they avoid?
-
-<break time="500ms"/>Make those instructions explicit, rather than assuming AI will figure everything out.
-
-<break time="500ms"/>Then, include supporting material when useful. <break time="300ms"/> Skills can contain more than instructions. They can also include templates, reference documents, and even scripts.
-
-<break time="500ms"/>For our leadership update, that might mean including your team's reporting template and communication guidelines.
-
-<break time="500ms"/>Examples are also valuable. <break time="300ms"/> Instead of describing the ideal result in abstract terms, show AI what a good output looks like.
-
-<break time="500ms"/>This reinforces the Output part of Co-Do, and helps establish expectations for structure, tone, and quality.
-
-<break time="500ms"/>Another important principle is separating reusable context from variable inputs.
-
-<break time="500ms"/>Your Skill should contain what stays the same, such as the process, preferred structure, and writing style. <break time="300ms"/> Your one-off prompt should provide what changes, such as this week's meeting notes or project updates.
-
-<break time="500ms"/>That way, the Skill stays useful across different situations.
-
-<break time="500ms"/>Finally, add quality checks. <break time="300ms"/> Before returning the result, should AI verify that all required sections are present? Flag missing information? Check claims against the available sources? <break time="300ms"/> And should it ask for confirmation before making an important assumption?
-
-<break time="500ms"/>These checks help make the process more reliable.
-
-<break time="500ms"/>Once you've created and tested a useful Skill, you may also be able to share it with your colleagues, depending on your AI platform.
-
-<break time="500ms"/>This can help teams standardize recurring work, reinforce established processes, and reduce repeated setup.
-
-<break time="500ms"/>But there's an important consideration. <break time="300ms"/> Sharing a Skill means sharing both its strengths, and its weaknesses.
-
-<break time="500ms"/>If the instructions are unclear, or the checks are incomplete, those problems can be repeated across the team.
-
-<break time="500ms"/>So before sharing, test the Skill with realistic inputs. <break time="300ms"/> Check whether the outputs are accurate, whether important information is missing, and whether AI follows the instructions consistently.
-
-<break time="500ms"/>The key takeaway is that you don't need to abandon what you've already learned about prompting.
-
-<break time="500ms"/>Co-Do helps you write better instructions. <break time="300ms"/> Skills let you turn those instructions into repeatable workflows.
-
-<break time="500ms"/>So the next time you find yourself explaining the same process to AI again, consider whether it's time to turn it into a Skill.
-
-<break time="500ms"/>That way, you spend less time repeating instructions, and more time working with the results.
+<break time="500ms"/>The goal is to spend less time explaining the work to AI, <break time="200ms"/> and more time getting value from the results.
 </speak>
