@@ -71,7 +71,11 @@ const OUT = Easing.out(Easing.cubic);
 const IN_OUT = Easing.inOut(Easing.cubic);
 const BACK = Easing.out(Easing.back(1.6));
 
-const shot = (n: string) => staticFile(`claude-skills/images/${n}.png`);
+// Browser previews can inject the screenshots (e.g. as data URIs) via globalThis.CLAUDE_SKILLS_SHOTS;
+// renders always use the files in public/.
+const shot = (n: string): string =>
+  (globalThis as { CLAUDE_SKILLS_SHOTS?: Record<string, string> }).CLAUDE_SKILLS_SHOTS?.[n] ??
+  staticFile(`claude-skills/images/${n}.png`);
 
 const prog = (t: number, at: number, dur = 0.7, easing = OUT) =>
   interpolate(t, [at, at + dur], [0, 1], { ...clamp, easing });
