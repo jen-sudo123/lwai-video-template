@@ -22,7 +22,6 @@ import {
   LINE,
   MUTED,
   RED,
-  Spark,
   Toggle,
   enter,
   makeScene,
@@ -90,6 +89,14 @@ const BLUE = '#1F6FEB';
 const shot = (n: string): string =>
   (globalThis as { CHATGPT_SKILLS_SHOTS?: Record<string, string> }).CHATGPT_SKILLS_SHOTS?.[n] ??
   staticFile(`chatgpt-skills/images/${n}.jpg`);
+
+// Neutral brand sparkle (the kit's Spark is Claude's starburst, so it isn't used in this video).
+const Sparkle: React.FC<{ size?: number }> = ({ size = 36 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" style={{ flex: 'none' }}>
+    <path d="M12 2.5c.6 4.6 2.9 6.9 7.5 7.5-4.6.6-6.9 2.9-7.5 7.5-.6-4.6-2.9-6.9-7.5-7.5 4.6-.6 6.9-2.9 7.5-7.5z" fill={LIME} stroke={GREEN} strokeWidth="1.2" strokeLinejoin="round" />
+    <path d="M19 15.5c.25 1.7 1 2.45 2.7 2.7-1.7.25-2.45 1-2.7 2.7-.25-1.7-1-2.45-2.7-2.7 1.7-.25 2.45-1 2.7-2.7z" fill={GREEN} />
+  </svg>
+);
 
 // ChatGPT-style prompt box for concept scenes.
 const ChatBox: React.FC<{ text: string; caret?: boolean; w?: number; style?: React.CSSProperties }> = ({ text, caret, w = 760, style }) => (
@@ -187,7 +194,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
         <div style={{ display: 'flex', alignItems: 'center', gap: 44, marginTop: 70 }}>
           <div className="kit-card kit-ui" style={{ width: 470, padding: '30px 34px', borderColor: GREEN, ...enter(t, 20.84, { y: 24, easing: BACK }) }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 14, fontSize: 30, fontWeight: 600 }}>
-              <Spark size={34} /> A reusable process
+              <Sparkle size={34} /> A reusable process
             </div>
             {['1. Read the notes', '2. Apply the format', '3. Flag what’s missing'].map((l, i) => (
               <div key={l} className="kit-mono" style={{ fontSize: 22, marginTop: 14, color: '#333', ...enter(t, 21.4 + i * 0.3, { x: -10, y: 0, dur: 0.4 }) }}>{l}</div>
@@ -235,7 +242,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           </div>
           <Arrow t={t} at={40.6} w={120} />
           <span className="kit-pill" style={{ borderColor: GREEN, background: LIME_SOFT, ...enter(t, 41.68, { y: 0, scale: 0.7, easing: BACK }) }}>
-            <Spark size={30} /> A workflow to reuse
+            <Sparkle size={30} /> A workflow to reuse
           </span>
         </div>
       </Scene>
@@ -571,7 +578,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           <Arrow t={t} at={146.32} w={160} />
           <div className="kit-card kit-ui" style={{ width: 500, padding: '30px 34px', borderColor: GREEN, ...enter(t, 147.92, { scale: 0.85, y: 0, easing: BACK }) }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-              <Spark size={34} />
+              <Sparkle size={34} />
               <div style={{ fontSize: 30, fontWeight: 600 }}>Draft Skill</div>
             </div>
             {[0, 1, 2].map((i) => (
