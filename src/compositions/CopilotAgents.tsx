@@ -18,7 +18,6 @@ import {
   LIME_SOFT,
   LINE,
   MUTED,
-  Spark,
   enter,
   makeScene,
   markStyle,
@@ -178,6 +177,15 @@ const LarryIcon: React.FC<{ size?: number }> = ({ size = 96 }) => (
   </div>
 );
 
+// Neutral agent mark (a four-point sparkle on a green tile). Not the kit's Spark, which is Claude's logo.
+const AgentGlyph: React.FC<{ size?: number }> = ({ size = 44 }) => (
+  <div style={{ width: size, height: size, borderRadius: size * 0.26, background: GREEN, display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 'none' }}>
+    <svg width={size * 0.62} height={size * 0.62} viewBox="0 0 24 24">
+      <path d="M12 1.5c.9 5.6 3 7.700 8.600 8.600-5.600.9-7.700 3-8.600 8.600-.9-5.600-3-7.700-8.600-8.600 5.600-.9 7.700-3 8.600-8.600z" fill="#fff" transform="translate(0 1.900)" />
+    </svg>
+  </div>
+);
+
 // A placeholder text line that draws itself in.
 const Bar: React.FC<{ t: number; at: number; w: number | string; h?: number; color?: string; dur?: number }> = ({ t, at, w, h = 12, color = '#D9DDD1', dur = 0.5 }) => (
   <div style={{ width: w, height: h }}>
@@ -254,7 +262,7 @@ const CopilotAgentsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           {/* the agent: three slots that fill in */}
           <div className="kit-card kit-ui" style={{ width: 760, padding: '26px 30px', borderColor: GREEN, boxShadow: '0 18px 50px rgba(20,40,10,.12)', ...enter(t, 11.9, { scale: 0.8, y: 0, easing: BACK, dur: 0.6 }) }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-              <Spark size={44} />
+              <AgentGlyph size={44} />
               <div className="kit-h3" style={{ fontSize: 36 }}>Your agent</div>
               <span className="kit-tag" style={{ marginLeft: 'auto', ...enter(t, 16.0, { y: 0, scale: 0.5, easing: BACK }) }}>Reusable</span>
             </div>
@@ -320,7 +328,7 @@ const CopilotAgentsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
                       <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', transform: `rotate(${t * 70}deg)` }}>
                         <circle cx="75" cy="75" r="66" fill="none" stroke={GREEN} strokeWidth="5" strokeLinecap="round" strokeDasharray="150 57" />
                       </svg>
-                      <Spark size={84} />
+                      <AgentGlyph size={84} />
                     </div>
                     <div className="kit-h3">Reusable assistant</div>
                     <div style={{ display: 'flex', gap: 10 }}>
@@ -1037,7 +1045,7 @@ const CopilotAgentsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
             </svg>
             <div className="kit-ui" style={{ position: 'absolute', left: 0, top: 0, fontSize: 24, fontWeight: 600, color: GREEN, ...enter(t, 317.2, { y: 10 }) }}>For more advanced work</div>
             <div className="kit-card kit-ui" style={{ position: 'absolute', left: 90, top: 200, width: 320, height: 160, borderColor: GREEN, background: LIME_SOFT, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 8, boxShadow: '0 18px 50px rgba(20,40,10,.14)', ...enter(t, 317.4, { scale: 0.6, y: 0, easing: BACK, dur: 0.6 }) }}>
-              <Spark size={44} />
+              <AgentGlyph size={44} />
               <div className="kit-h3" style={{ fontSize: 36 }}>
                 Copilot Studio
               </div>
