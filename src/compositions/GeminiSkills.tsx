@@ -28,6 +28,19 @@ import {
   prog,
   typed,
 } from '../kit';
+import {
+  WhatSkillsAre,
+  TwoWays,
+  Components,
+  WhatEachPartDoes,
+  ImportOrBuiltIn,
+  WhatWeBuild,
+  GoodDescription,
+  RepeatableProcess,
+  AutomaticVsExplicit,
+  StartWithRepeats,
+  CaptureAndCheck,
+} from './gemini-skills-scenes';
 
 loadSerif();
 loadSans();
@@ -85,14 +98,6 @@ const shot = (n: string): string =>
 
 const WIN = { imgW: 2000, imgH: 1081, width: 1440, title: 'gemini.google.com' } as const;
 
-const Lines: React.FC<{ widths: number[]; color?: string; gap?: number }> = ({ widths, color = '#D9DBD3', gap = 14 }) => (
-  <div style={{ display: 'flex', flexDirection: 'column', gap }}>
-    {widths.map((w, i) => (
-      <div key={i} style={{ height: 12, width: `${w}%`, borderRadius: 6, background: color }} />
-    ))}
-  </div>
-);
-
 const GeminiSkillsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -105,136 +110,27 @@ const GeminiSkillsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
 
       {/* 1 — What Skills are */}
       <Scene t={t} index={0}>
-        <div className="kit-label" style={enter(t, 0.1, { y: 14 })}>Gemini Skills</div>
-        <div className="kit-h1" style={enter(t, 0.3, { dur: 0.9, y: 34 })}>
-          Save instructions for tasks you <span className="kit-mark" style={markStyle(t, 4.04)}>repeat.</span>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 40, marginTop: 80 }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            {[5.36, 6.08, 7.04].map((at, i) => {
-              const merge = prog(t, 8.32, 0.9, IN_OUT);
-              return (
-                <div key={at} style={enter(t, at, { x: -40, y: 0, easing: BACK })}>
-                  <div
-                    className="kit-card kit-ui"
-                    style={{ padding: '14px 24px', fontSize: 26, background: '#F4F4EF', borderColor: '#F4F4EF', color: MUTED, opacity: 1 - merge * 0.7, transform: `translate(${merge * 90}px, ${merge * (1 - i) * 30}px) scale(${1 - merge * 0.15})` }}
-                  >
-                    “Here’s how I want this done…”
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          <Arrow t={t} at={8.32} w={180} />
-          <div
-            className="kit-card"
-            style={{ width: 520, padding: '34px 38px', display: 'flex', alignItems: 'center', gap: 26, borderColor: GREEN, background: LIME_SOFT, ...enter(t, 9.2, { dur: 0.6, scale: 0.7, y: 0, easing: BACK }) }}
-          >
-            <FolderIcon size={92} open />
-            <div>
-              <div className="kit-h3">One Skill</div>
-              <div className="kit-ui" style={{ fontSize: 24, color: GREEN, marginTop: 6 }}>How you want the work done</div>
-            </div>
-          </div>
-        </div>
-        <p className="kit-body kit-muted" style={{ marginTop: 60, ...enter(t, 10.64, { y: 14 }) }}>
-          Reuse it across conversations.
-        </p>
+        <WhatSkillsAre t={t} />
       </Scene>
 
       {/* 2 — Two ways to use a Skill */}
       <Scene t={t} index={1}>
-        <div className="kit-label" style={enter(t, 14.6, { y: 14 })}>Using a Skill</div>
-        <div className="kit-h2" style={enter(t, 14.7, { dur: 0.8, y: 30 })}>Two ways to use a Skill.</div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, marginTop: 60 }}>
-          <div className="kit-card" style={{ padding: '34px 38px', height: 400, ...enter(t, 14.96, { y: 24 }) }}>
-            <span className="kit-tag">1 · You select it</span>
-            <div style={{ position: 'relative', marginTop: 30 }}>
-              <Composer text={typed(t, 15.3, '@your-skill', 0.9)} caret w={620} />
-              <MenuList items={['your-skill', 'another-skill']} active={t >= 16.2 ? 0 : -1} icon style={{ position: 'absolute', left: 30, top: 150, width: 330, ...enter(t, 15.5, { y: -10, dur: 0.4 }) }} />
-            </div>
-          </div>
-          <div className="kit-card" style={{ padding: '34px 38px', height: 400, ...enter(t, 16.72, { y: 24 }) }}>
-            <span className="kit-tag">2 · Gemini applies it</span>
-            <div className="kit-card kit-ui" style={{ marginTop: 30, padding: '18px 22px', background: '#F4F4EF', borderColor: '#F4F4EF', fontSize: 26, marginLeft: 80, ...enter(t, 17.44, { y: 14 }) }}>
-              Draft this week’s update from my notes
-            </div>
-            <div className="kit-card kit-ui" style={{ marginTop: 22, padding: '16px 20px', display: 'flex', alignItems: 'center', gap: 14, fontSize: 25, ...enter(t, 18.64, { y: 14, easing: BACK }) }}>
-              <Check size={30} />
-              <span>
-                <span style={{ color: MUTED }}>Relevant Skill applied</span> <b style={{ ...markStyle(t, 19.12) }} className="kit-mark">automatically</b>
-              </span>
-            </div>
-          </div>
-        </div>
-        <p className="kit-body kit-muted" style={{ marginTop: 40, ...enter(t, 20.4, { y: 14 }) }}>Let’s create one and test how it works.</p>
+        <TwoWays t={t} />
       </Scene>
 
       {/* 3 — What's in a Skill */}
       <Scene t={t} index={2}>
-        <div style={{ display: 'grid', gridTemplateColumns: '600px 1fr', gap: 90, alignItems: 'center' }}>
-          <div>
-            <div className="kit-label" style={enter(t, 23.5, { y: 14 })}>Skill components</div>
-            <div className="kit-h2" style={enter(t, 23.6, { dur: 0.8, y: 30 })}>What’s in a Skill.</div>
-          </div>
-          <div className="kit-card" style={{ padding: '34px 40px', background: '#FBFBF8', ...enter(t, 24.0, { x: 30, y: 0 }) }}>
-            {[
-              ['Name', 'your-skill', 24.64],
-              ['Description', 'What it does and when to use it', 25.64],
-              ['Instructions', 'How Gemini should do the task', 26.48],
-            ].map(([k, v, at]) => (
-              <div key={k as string} style={{ display: 'flex', alignItems: 'baseline', gap: 24, padding: '16px 0', borderBottom: `2px solid ${LINE}`, ...enter(t, at as number, { x: -16, y: 0, dur: 0.5 }) }}>
-                <div className="kit-ui" style={{ width: 220, fontSize: 30, fontWeight: 600, color: GREEN }}>{k as string}</div>
-                <div className="kit-ui" style={{ fontSize: 30 }}>{v as string}</div>
-              </div>
-            ))}
-            <div style={{ marginTop: 26, ...enter(t, 28.8, { y: 12 }) }}>
-              <div className="kit-ui" style={{ fontSize: 16, letterSpacing: '.1em', color: MUTED, fontWeight: 600 }}>OPTIONAL · SUPPORTING FILES</div>
-              <div style={{ display: 'flex', gap: 18, marginTop: 16 }}>
-                <div className="kit-pill" style={{ fontSize: 26, ...enter(t, 30.4, { y: 0, scale: 0.7, easing: BACK }) }}><FileIcon size={28} /> Templates</div>
-                <div className="kit-pill" style={{ fontSize: 26, ...enter(t, 31.28, { y: 0, scale: 0.7, easing: BACK }) }}><FileIcon size={28} /> Reference materials</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Components t={t} />
       </Scene>
 
       {/* 4 — What each part does */}
       <Scene t={t} index={3}>
-        <div className="kit-label" style={enter(t, 33.4, { y: 14 })}>Skill components</div>
-        <div className="kit-h2" style={enter(t, 33.5, { dur: 0.8, y: 30 })}>What each part does.</div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 30, marginTop: 60 }}>
-          {[
-            ['Name + Description', 'When the Skill is relevant', 33.52, 36.0],
-            ['Instructions', 'How to perform the task', 38.08, 39.44],
-          ].map(([a, b, at1, at2]) => (
-            <div key={a as string} style={{ display: 'flex', alignItems: 'center', gap: 30 }}>
-              <div className="kit-card kit-ui" style={{ width: 560, padding: '28px 34px', fontSize: 36, fontWeight: 600, ...enter(t, at1 as number, { x: -30, y: 0 }) }}>{a as string}</div>
-              <Arrow t={t} at={(at2 as number) - 0.5} w={160} />
-              <div className="kit-card kit-ui" style={{ flex: 1, padding: '28px 34px', fontSize: 36, borderColor: GREEN, background: LIME_SOFT, ...enter(t, at2 as number, { x: 30, y: 0 }) }}>{b as string}</div>
-            </div>
-          ))}
-        </div>
+        <WhatEachPartDoes t={t} />
       </Scene>
 
       {/* 5 — Import vs built-in */}
       <Scene t={t} index={4}>
-        <div className="kit-label" style={enter(t, 42.5, { y: 14 })}>Two ways to build one</div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, marginTop: 20 }}>
-          <div className="kit-card" style={{ padding: '44px 44px', opacity: 1 - prog(t, 46.36, 0.6) * 0.5, ...enter(t, 43.36, { y: 24 }) }}>
-            <FileIcon size={70} />
-            <div className="kit-h3" style={{ marginTop: 22 }}>Import a file</div>
-            <div className="kit-mono" style={{ fontSize: 30, color: MUTED, marginTop: 12, ...enter(t, 44.64, { y: 8 }) }}>SKILL.md</div>
-          </div>
-          <div className="kit-card" style={{ padding: '44px 44px', borderColor: t >= 47.04 ? GREEN : LINE, background: t >= 47.04 ? LIME_SOFT : '#fff', ...enter(t, 46.36, { y: 24 }) }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-              <FolderIcon size={70} open />
-              <span className="kit-tag" style={{ background: '#fff', ...enter(t, 48.16, { y: 0, scale: 0.6, easing: BACK }) }}>This demo</span>
-            </div>
-            <div className="kit-h3" style={{ marginTop: 22 }}>Built-in interface</div>
-            <div className="kit-ui" style={{ fontSize: 30, color: MUTED, marginTop: 12 }}>Name, description, instructions</div>
-          </div>
-        </div>
+        <ImportOrBuiltIn t={t} />
       </Scene>
 
       {/* 6 — Sidebar > Customize */}
@@ -315,26 +211,7 @@ const GeminiSkillsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
 
       {/* 9 — What we're building */}
       <Scene t={t} index={8}>
-        <div className="kit-label" style={enter(t, 75.6, { y: 14 })}>Our example</div>
-        <div className="kit-h2" style={enter(t, 75.8, { dur: 0.8, y: 30 })}>
-          A <span className="kit-mark" style={markStyle(t, 76.32)}>Leadership Update</span> Skill.
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 40, marginTop: 60 }}>
-          <div className="kit-card" style={{ width: 560, padding: '30px 34px', background: '#FBFBF8', transform: 'rotate(-1.5deg)', ...enter(t, 78.4, { y: 24 }) }}>
-            <div className="kit-ui" style={{ fontSize: 18, letterSpacing: '.1em', fontWeight: 700, color: MUTED, marginBottom: 20 }}>ROUGH WEEKLY NOTES</div>
-            <Lines widths={[92, 60, 100, 74, 88, 45, 96, 68]} />
-          </div>
-          <Arrow t={t} at={79.6} w={180} />
-          <div className="kit-card" style={{ flex: 1, padding: '30px 34px', borderColor: GREEN, ...enter(t, 80.0, { x: 30, y: 0 }) }}>
-            <div className="kit-ui" style={{ fontSize: 18, letterSpacing: '.1em', fontWeight: 700, color: GREEN, marginBottom: 20 }}>CONCISE EXECUTIVE UPDATE</div>
-            {['Summary', 'Progress', 'Decisions', 'Next steps'].map((h, i) => (
-              <div key={h} style={{ display: 'flex', alignItems: 'center', gap: 20, padding: '9px 0', ...enter(t, 80.3 + i * 0.3, { x: -12, y: 0, dur: 0.4 }) }}>
-                <div className="kit-ui" style={{ width: 170, fontSize: 24, fontWeight: 600 }}>{h}</div>
-                <div style={{ flex: 1 }}><Lines widths={[85 - i * 12]} /></div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <WhatWeBuild t={t} />
       </Scene>
 
       {/* 10 — Name + Description */}
@@ -364,22 +241,7 @@ const GeminiSkillsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
 
       {/* 11 — A good description */}
       <Scene t={t} index={10}>
-        <div className="kit-label" style={enter(t, 101.4, { y: 14 })}>The description</div>
-        <div className="kit-h2" style={enter(t, 101.5, { dur: 0.8, y: 30 })}>It answers two questions.</div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 44, marginTop: 56 }}>
-          <div className="kit-card" style={{ padding: '32px 36px', ...enter(t, 102.88, { y: 24 }) }}>
-            <span className="kit-tag">What the Skill does</span>
-            <div className="kit-body" style={{ marginTop: 22, fontSize: 32 }}>Creates concise, decision-ready leadership updates from rough project notes.</div>
-          </div>
-          <div className="kit-card" style={{ padding: '32px 36px', ...enter(t, 104.64, { y: 24 }) }}>
-            <span className="kit-tag">When to use it</span>
-            <div className="kit-body" style={{ marginTop: 22, fontSize: 32 }}>Use when preparing weekly status reports or executive updates.</div>
-          </div>
-        </div>
-        <p className="kit-body" style={{ marginTop: 48, ...enter(t, 106.0, { y: 14 }) }}>
-          <span className="kit-mark" style={markStyle(t, 106.16)}>Be specific.</span>{' '}
-          <span className="kit-muted" style={enter(t, 107.36, { y: 0 })}>Gemini uses the name and description to assess relevance.</span>
-        </p>
+        <GoodDescription t={t} />
       </Scene>
 
       {/* 12 — Instructions + CODO */}
@@ -414,18 +276,7 @@ const GeminiSkillsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
 
       {/* 13 — Repeatable process */}
       <Scene t={t} index={12}>
-        <div className="kit-label" style={enter(t, 121.3, { y: 14 })}>Writing instructions</div>
-        <div className="kit-h2" style={enter(t, 121.4, { dur: 0.8, y: 30 })}>
-          Describe a <span className="kit-mark" style={markStyle(t, 122.88)}>repeatable process.</span>
-        </div>
-        <div style={{ display: 'flex', gap: 44, marginTop: 60 }}>
-          <div className="kit-card kit-ui" style={{ flex: 1, padding: '30px 34px', display: 'flex', alignItems: 'center', gap: 22, fontSize: 34, borderColor: GREEN, background: LIME_SOFT, ...enter(t, 122.9, { y: 24 }) }}>
-            <Check size={44} /> How to write every weekly update
-          </div>
-          <div className="kit-card kit-ui" style={{ flex: 1, padding: '30px 34px', display: 'flex', alignItems: 'center', gap: 22, fontSize: 34, color: MUTED, ...enter(t, 124.96, { y: 24 }) }}>
-            <Cross size={44} /> One particular update
-          </div>
-        </div>
+        <RepeatableProcess t={t} />
       </Scene>
 
       {/* 14 — Rules */}
@@ -617,22 +468,7 @@ const GeminiSkillsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
 
       {/* 23 — Automatic vs explicit */}
       <Scene t={t} index={22}>
-        <div className="kit-label" style={enter(t, 192.1, { y: 14 })}>Choosing how to run it</div>
-        <div className="kit-h2" style={enter(t, 192.2, { dur: 0.8, y: 30 })}>
-          When the format matters, <span className="kit-mark" style={markStyle(t, 198.64)}>select the Skill.</span>
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 44, marginTop: 56 }}>
-          <div className="kit-card" style={{ padding: '32px 36px', ...enter(t, 193.12, { y: 24 }) }}>
-            <div className="kit-h3">Automatic</div>
-            <div className="kit-ui" style={{ fontSize: 28, color: MUTED, marginTop: 12 }}>Gemini decides which Skill applies</div>
-            <span className="kit-tag" style={{ marginTop: 24, background: '#FBE9E7', color: RED, ...enter(t, 195.6, { y: 0, scale: 0.6, easing: BACK }) }}>Less predictable</span>
-          </div>
-          <div className="kit-card" style={{ padding: '32px 36px', borderColor: t >= 198.64 ? GREEN : LINE, background: t >= 198.64 ? LIME_SOFT : '#fff', ...enter(t, 196.92, { y: 24 }) }}>
-            <div className="kit-h3">Explicit</div>
-            <div className="kit-mono" style={{ fontSize: 28, marginTop: 12 }}>@write-leadership-updates</div>
-            <span className="kit-tag" style={{ marginTop: 24, background: '#fff', ...enter(t, 199.36, { y: 0, scale: 0.6, easing: BACK }) }}>You choose</span>
-          </div>
-        </div>
+        <AutomaticVsExplicit t={t} />
       </Scene>
 
       {/* 24 — Refine */}
@@ -663,25 +499,12 @@ const GeminiSkillsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
 
       {/* 25 — Closing */}
       <Scene t={t} index={24}>
-        <div className="kit-label" style={enter(t, 209.4, { y: 14 })}>Gemini Skills</div>
-        <div className="kit-h1" style={enter(t, 209.6, { dur: 0.9, y: 34 })}>
-          Start with work you <span className="kit-mark" style={markStyle(t, 213.36)}>repeat.</span>
-        </div>
-        <div style={{ display: 'flex', gap: 24, marginTop: 60 }}>
-          <div className="kit-pill" style={enter(t, 215.76, { y: 0, x: -30, easing: BACK })}>The same instructions</div>
-          <div className="kit-pill" style={enter(t, 217.68, { y: 0, x: -30, easing: BACK })}>The same mistakes</div>
-        </div>
+        <StartWithRepeats t={t} />
       </Scene>
 
       {/* 26 — Closing line */}
       <Scene t={t} index={25} padStyle={{ opacity: 1 - prog(t, 225.2, 0.7, Easing.in(Easing.quad)) }}>
-        <div className="kit-label" style={enter(t, 219.2, { y: 14 })}>Gemini Skills</div>
-        <div className="kit-h1" style={enter(t, 219.3, { dur: 0.9, y: 34 })}>
-          <span className="kit-mark" style={markStyle(t, 220.4)}>Capture</span> a useful process.
-        </div>
-        <p className="kit-body" style={{ fontSize: 44, marginTop: 50, ...enter(t, 222.52, { y: 18 }) }}>
-          Then <span className="kit-mark" style={markStyle(t, 222.8)}>check that Gemini follows it.</span>
-        </p>
+        <CaptureAndCheck t={t} />
       </Scene>
 
       <div style={{ position: 'absolute', inset: 0, zIndex: 60, pointerEvents: 'none' }}>
