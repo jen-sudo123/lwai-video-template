@@ -1,0 +1,47 @@
+In Gemini, Skills let you save instructions for tasks you repeat. Instead of explaining the same process every time, you capture how you want the work done, and reuse those instructions across conversations.
+
+[pause] You can select a Skill yourself, and Gemini can also apply relevant Skills automatically. Let's create one and test how it works.
+
+[pause] A Skill includes a name, a description, and instructions. It can also include supporting files, such as templates or reference materials.
+
+[pause] The name and description help Gemini decide when the Skill is relevant. The instructions explain how Gemini should perform the task.
+
+[pause] Gemini also supports importing a Skill markdown file, but we'll use the built-in interface for this demonstration.
+
+[pause] I'll open Gemini in my browser. In the sidebar, I'll select Customize, then the Skills tab. If Customize isn't visible, check under More.
+
+[pause] Here, I can see installed Skills and browse the available examples.
+
+[pause] The Create menu offers three options: Create with Gemini, Create manually, and Upload. I'll select Create manually.
+
+[pause] We'll build a Leadership Update Skill that turns rough weekly notes into a concise executive update.
+
+[pause] For the name, I'll enter: write leadership updates, in lowercase, with hyphens between the words.
+
+[pause] For the description, I'll write: Creates concise, decision-ready leadership updates from rough project notes. Use when preparing weekly status reports or executive updates.
+
+[pause] The description explains both what the Skill does and when to use it. Be specific, because Gemini uses the name and description to assess relevance.
+
+[pause] Next are the instructions. This is where I'll apply our /ˈkoʊdoʊ/ framework to define the Character, Objective, Do and Don't, and Output.
+
+[pause] The instructions should describe a repeatable process, rather than one particular update.
+
+[pause] I'll include rules to preserve the supplied facts, flag missing owners and deadlines, and ask for notes when none are provided. I'll also tell Gemini not to add status labels, urgency, or assessments that aren't supported by the notes.
+
+[pause] If needed, Add files lets me include a reporting template or style guide. Once the instructions are ready, I'll click Save skill. Our Skill now appears under Installed.
+
+[pause] Let's start a new conversation. In the prompt box, I'll type the at symbol and select write leadership updates.
+
+[pause] Then I'll paste fictional project notes and ask Gemini to prepare the update. I'll check the format, figures, decisions, and next steps.
+
+[pause] These notes include a support-training action with no assigned owner or deadline. In our test, Gemini marked both as not provided, and asked for clarification.
+
+[pause] I'll also try a fresh conversation without supplying any notes. Here, Gemini asked for the project notes and reporting period before drafting.
+
+[pause] Gemini can also apply Skills automatically, but that's less predictable. So when the format matters, select the Skill explicitly.
+
+[pause] To refine a Skill, return to Skills, open its options, and choose Edit manually. Then save and test again.
+
+[pause] That's how you create and test a Skill in Gemini. Start with work you repeat, especially when you keep giving the same instructions or correcting the same mistakes.
+
+[pause] The value comes from capturing a useful process, and checking that Gemini follows it.
