@@ -8,7 +8,7 @@ import { INK, LIME, LINE, MUTED } from './theme';
 //   cam    — camera keyframes {at, x, y, s}: centre the view on image pixel (x, y) at zoom s (1 = whole image)
 //   cursor — {at, x, y, click?}: the cursor glides to (x, y) over `dur` (0.8s) and clicks on arrival
 //   rings  — {at, until?, x, y, w, h, spot?}: lime highlight box; spot dims everything else
-//   steps  — {at, text}: "STEP n" caption under the window
+//   steps  — {at, text}: "STEP n" caption under the window (numbered={false} drops the STEP badge)
 // All coordinates are in the screenshot's own pixels (imgW x imgH); all times are seconds on the same
 // clock as `t` (composition VO seconds, or scene-local seconds when used from a data file).
 
@@ -47,7 +47,8 @@ export const AppWindow: React.FC<{
   title?: string;
   imgW?: number;
   imgH?: number;
-}> = ({ t, start, src, cam = [], cursor = [], rings = [], steps = [], left, top = 54, width = 1560, title = 'claude.ai', imgW = 1920, imgH = 1080 }) => {
+  numbered?: boolean;
+}> = ({ t, start, src, cam = [], cursor = [], rings = [], steps = [], left, top = 54, width = 1560, title = 'claude.ai', imgW = 1920, imgH = 1080, numbered = true }) => {
   const IMG_W = imgW;
   const IMG_H = imgH;
   const k = width / IMG_W;
@@ -158,10 +159,12 @@ export const AppWindow: React.FC<{
             ...enter(t, step.at, { dur: 0.45, y: 12 }),
           }}
         >
-          <div style={{ fontFamily: 'Public Sans', color: INK, display: 'flex', alignItems: 'center', gap: 16, padding: '12px 26px 12px 14px', borderRadius: 999, background: '#fff', border: `2px solid ${LINE}`, fontSize: 28, fontWeight: 500 }}>
-            <span style={{ background: LIME, color: '#fff', borderRadius: 999, padding: '4px 14px', fontSize: 18, fontWeight: 700, letterSpacing: '.1em' }}>
-              STEP {stepIdx + 1}
-            </span>
+          <div style={{ fontFamily: 'Public Sans', color: INK, display: 'flex', alignItems: 'center', gap: 16, padding: numbered ? '12px 26px 12px 14px' : '12px 28px', borderRadius: 999, background: '#fff', border: `2px solid ${LINE}`, fontSize: 28, fontWeight: 500 }}>
+            {numbered && (
+              <span style={{ background: LIME, color: '#fff', borderRadius: 999, padding: '4px 14px', fontSize: 18, fontWeight: 700, letterSpacing: '.1em' }}>
+                STEP {stepIdx + 1}
+              </span>
+            )}
             {step.text}
           </div>
         </div>

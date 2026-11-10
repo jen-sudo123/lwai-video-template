@@ -76,6 +76,7 @@ import { AdvancedModelsChatGPT, ADVANCED_MODELS_DURATION_S, ADVANCED_MODELS_TITL
 import { workContext } from './data/work-context';
 import { workspaceStudioSkills } from './data/workspace-studio-skills';
 import { ClaudeSkills, CLAUDE_SKILLS_DURATION_S, CLAUDE_SKILLS_TITLE_FRAMES } from './compositions/ClaudeSkills';
+import { CopilotAgents, COPILOT_AGENTS_DURATION_S, COPILOT_AGENTS_TITLE_FRAMES } from './compositions/CopilotAgents';
 import { whatIsGenerativeAi } from './data/what-is-generative-ai';
 import { aiLandscape } from './data/ai-landscape';
 import { chatGPTDeepResearch } from './data/chatgpt-deep-research';
@@ -513,7 +514,7 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={copilotAgentsLarry}
       />
       <Composition
-        id="CopilotAgents"
+        id="CopilotAgentsOriginal"
         component={Video}
         durationInFrames={calculateTotalFrames(copilotAgents.scenes)}
         fps={layout.fps}
@@ -804,6 +805,14 @@ export const RemotionRoot: React.FC = () => {
         id="ClaudeSkills"
         component={ClaudeSkills}
         durationInFrames={CLAUDE_SKILLS_TITLE_FRAMES + Math.ceil(CLAUDE_SKILLS_DURATION_S * layout.fps)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+      />
+      <Composition
+        id="CopilotAgents"
+        component={CopilotAgents}
+        durationInFrames={COPILOT_AGENTS_TITLE_FRAMES + Math.ceil(COPILOT_AGENTS_DURATION_S * layout.fps)}
         fps={layout.fps}
         width={layout.width}
         height={layout.height}

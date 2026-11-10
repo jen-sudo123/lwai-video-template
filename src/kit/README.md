@@ -44,6 +44,7 @@ import { makeScene, AppWindow, enter, markStyle, KIT_CSS } from '../kit';
 - Camera/cursor keyframes ease from the previous state (`dur` default 1.0s camera, 0.8s cursor). A cursor
   `click` fires when it arrives (`at + dur`). A camera key with `dur: 0.01` at the scene start begins a scene
   already zoomed (useful to continue from the previous shot).
+- `numbered={false}` shows the captions without the STEP badge (for walkthroughs where they are labels, not a count).
 - `left`, `top`, `width` place a smaller window (e.g. `left={70} top={150} width={1060}`) next to a text column.
 
 ## In a data file (no custom composition)
