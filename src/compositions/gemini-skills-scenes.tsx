@@ -140,7 +140,7 @@ export const TwoWays: S = ({ t }) => {
         <div className="kit-card" style={{ padding: '32px 36px', height: 410, ...enter(t, 14.96, { y: 24 }) }}>
           <span className="kit-tag">1 · You select it</span>
           <div style={{ position: 'relative', marginTop: 28 }}>
-            <Composer text={typed(t, 15.3, '@your-skill', 0.9)} caret w={640} />
+            <Composer sendColor="#3B5BDB" sendRound placeholder="Ask Gemini" text={typed(t, 15.3, '@your-skill', 0.9)} caret w={640} />
             <MenuList items={['your-skill', 'another-skill']} active={t >= 16.2 ? 0 : -1} icon style={{ position: 'absolute', left: 30, top: 150, width: 340, ...enter(t, 15.5, { y: -10, dur: 0.4 }) }} />
           </div>
         </div>
@@ -449,7 +449,7 @@ export const AutomaticVsExplicit: S = ({ t }) => {
           <div className="kit-h3">Explicit</div>
           <span className="kit-tag" style={{ marginTop: 12, fontSize: 15, ...enter(t, 199.36, { y: 0, scale: 0.6, easing: BACK }) }}>You choose</span>
         </div>
-        <Composer text={typed(t, 197.2, '@write-leadership-updates', 1.0)} caret w={560} />
+        <Composer sendColor="#3B5BDB" sendRound placeholder="Ask Gemini" text={typed(t, 197.2, '@write-leadership-updates', 1.0)} caret w={560} />
         <Arrow t={t} at={198.64} w={150} />
         <div style={enter(t, 199.04, { y: 0, scale: 0.6, easing: BACK })}>
           <SkillChip name="write-leadership-updates" on check size={22} />
