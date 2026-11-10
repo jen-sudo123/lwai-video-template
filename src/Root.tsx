@@ -44,7 +44,6 @@ import { chatgptLiveVideo } from './data/chatgpt-live-video';
 import { copilotAgents } from './data/copilot-agents';
 import { copilotAgentsLarry } from './data/copilot-agents-larry';
 import { customGPTs } from './data/custom-gpts';
-import { chatGPTProjects } from './data/chatgpt-projects';
 import { promptingGptOpusFable } from './data/prompting-gpt-opus-fable';
 import { gptAdvancedModels } from './data/gpt-advanced-models';
 import { chatGPTTasks } from './data/chatgpt-tasks';
@@ -76,6 +75,7 @@ import { AdvancedModelsChatGPT, ADVANCED_MODELS_DURATION_S, ADVANCED_MODELS_TITL
 import { workContext } from './data/work-context';
 import { workspaceStudioSkills } from './data/workspace-studio-skills';
 import { ClaudeSkills, CLAUDE_SKILLS_DURATION_S, CLAUDE_SKILLS_TITLE_FRAMES } from './compositions/ClaudeSkills';
+import { ChatGPTProjects, CHATGPT_PROJECTS_DURATION_S, CHATGPT_PROJECTS_TITLE_FRAMES } from './compositions/ChatGPTProjects';
 import { whatIsGenerativeAi } from './data/what-is-generative-ai';
 import { aiLandscape } from './data/ai-landscape';
 import { chatGPTDeepResearch } from './data/chatgpt-deep-research';
@@ -534,13 +534,11 @@ export const RemotionRoot: React.FC = () => {
       />
       <Composition
         id="ChatGPTProjects"
-        component={Video}
-        durationInFrames={calculateTotalFrames(chatGPTProjects.scenes)}
+        component={ChatGPTProjects}
+        durationInFrames={CHATGPT_PROJECTS_TITLE_FRAMES + Math.ceil(CHATGPT_PROJECTS_DURATION_S * layout.fps)}
         fps={layout.fps}
         width={layout.width}
         height={layout.height}
-        schema={videoDataSchema}
-        defaultProps={chatGPTProjects}
       />
       <Composition
         id="GPTAdvancedModels"
