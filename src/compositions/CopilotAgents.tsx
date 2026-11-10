@@ -11,15 +11,19 @@ import {
   Check,
   FileIcon,
   GREEN,
+  IN_OUT,
+  INK,
   KIT_CSS,
   LIME,
   LIME_SOFT,
+  LINE,
   MUTED,
   Spark,
   enter,
   makeScene,
   markStyle,
   prog,
+  typed,
 } from '../kit';
 
 loadSerif();
@@ -85,13 +89,85 @@ const shot = (n: string): string =>
   (globalThis as { COPILOT_AGENTS_SHOTS?: Record<string, string> }).COPILOT_AGENTS_SHOTS?.[n] ??
   staticFile(`copilot-agents/images/${n}.png`);
 
+// Progress rail on the left of every screenshot scene: where we are in the build (or which way back to Larry).
+type RailItem = [label: string, at: number];
+const BUILD_RAIL: RailItem[] = [
+  ['New agent', 30.2],
+  ['Name and description', 44.9],
+  ['Instructions', 51.4],
+  ['Skills', 77.5],
+  ['Knowledge', 95.3],
+  ['Suggested prompts', 169.1],
+  ['Preview and test', 191.1],
+  ['Create', 254.2],
+  ['Use Larry', 269.7],
+];
+const RETURN_RAIL: RailItem[] = [
+  ['Agents menu', 288.6],
+  ['Agent Store', 292.5],
+  ['@Larry in chat', 299.6],
+];
+const RAILS = {
+  build: { title: 'Building Larry', items: BUILD_RAIL, from: 30.4 },
+  back: { title: 'Back to Larry', items: RETURN_RAIL, from: 284.9 },
+};
+
+const Rail: React.FC<{ t: number; kind: keyof typeof RAILS }> = ({ t, kind }) => {
+  const { title, items, from } = RAILS[kind];
+  const ROW = 58;
+  const active = items.reduce((acc, [, at], i) => (t >= at ? i : acc), -1);
+  // the lime line grows to the active dot
+  const fill = items.reduce((acc, [, at], i) => acc + (i === 0 ? 0 : prog(t, at, 0.6, IN_OUT)), 0);
+  return (
+    <div className="kit-ui" style={{ position: 'absolute', left: 80, top: 150, width: 330, ...enter(t, from, { x: -24, y: 0 }) }}>
+      <div className="kit-label" style={{ fontSize: 18, margin: '0 0 30px' }}>{title}</div>
+      <div style={{ position: 'relative' }}>
+        <div style={{ position: 'absolute', left: 12, top: 14, width: 4, height: ROW * (items.length - 1), background: LINE, borderRadius: 2 }} />
+        <div style={{ position: 'absolute', left: 12, top: 14, width: 4, height: ROW * fill, background: LIME, borderRadius: 2 }} />
+        {items.map(([label, at], i) => {
+          const on = prog(t, at, 0.45, BACK);
+          const isActive = i === active;
+          const done = i < active;
+          return (
+            <div key={label} style={{ height: ROW, display: 'flex', alignItems: 'flex-start', gap: 18 }}>
+              <div
+                style={{
+                  position: 'relative', width: 28, height: 28, borderRadius: 14, flex: 'none', boxSizing: 'border-box',
+                  background: done ? LIME : '#fff', border: `4px solid ${on > 0 ? LIME : LINE}`,
+                  transform: `scale(${isActive ? 0.9 + 0.25 * Math.min(1, on) : 1})`,
+                  boxShadow: isActive ? '0 0 0 7px rgba(102,198,28,.22)' : 'none',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                }}
+              >
+                {done && (
+                  <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2.5 7.4l3 3 6-6.6" fill="none" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                )}
+              </div>
+              <div style={{ fontSize: 23, lineHeight: '28px', fontWeight: isActive ? 700 : 500, color: isActive ? INK : done ? '#4B5245' : '#A3A89C' }}>{label}</div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+// Screenshot window geometry: the rail takes the left 360px, the window the rest.
+const WIN_LEFT = 440;
+const WIN_TOP = 90;
+const WIN_W = 1400;
+
 type WinProps = Omit<React.ComponentProps<typeof AppWindow>, 'src' | 'start' | 'imgH' | 'title'> & {
   n: string;
   start?: number;
+  rail?: keyof typeof RAILS;
 };
 // `start` defaults to "long ago": a window that follows another window just crossfades in place.
-const Win: React.FC<WinProps> = ({ n, start = -10, width = 1480, ...rest }) => (
-  <AppWindow imgH={IMG_H} numbered={false} title="m365.cloud.microsoft" src={shot(n)} start={start} width={width} {...rest} />
+const Win: React.FC<WinProps> = ({ n, start = -10, rail = 'build', ...rest }) => (
+  <>
+    <Rail t={rest.t} kind={rail} />
+    <AppWindow imgH={IMG_H} numbered={false} title="m365.cloud.microsoft" src={shot(n)} start={start} left={WIN_LEFT} top={WIN_TOP} width={WIN_W} {...rest} />
+  </>
 );
 // Camera key that is already settled when the scene mounts (continues the previous shot's framing).
 const hold = (sceneStart: number, x: number, y: number, s: number) => ({ at: sceneStart - 1, x, y, s, dur: 0.01 });
@@ -101,6 +177,38 @@ const LarryIcon: React.FC<{ size?: number }> = ({ size = 96 }) => (
     <span style={{ fontFamily: 'IBM Plex Serif', fontSize: size * 0.56, color: '#fff', lineHeight: 1 }}>L</span>
   </div>
 );
+
+// A placeholder text line that draws itself in.
+const Bar: React.FC<{ t: number; at: number; w: number | string; h?: number; color?: string; dur?: number }> = ({ t, at, w, h = 12, color = '#D9DDD1', dur = 0.5 }) => (
+  <div style={{ width: w, height: h }}>
+    <div style={{ width: `${prog(t, at, dur, IN_OUT) * 100}%`, height: '100%', borderRadius: h / 2, background: color }} />
+  </div>
+);
+
+const Lock: React.FC<{ closed: number; size?: number }> = ({ closed, size = 40 }) => (
+  <svg viewBox="0 0 24 24" width={size} height={size} style={{ overflow: 'visible' }}>
+    <path d="M7 11V8a5 5 0 0 1 10 0v3" fill="none" stroke={GREEN} strokeWidth="2.2" strokeLinecap="round" style={{ transformOrigin: '17px 11px', transform: `rotate(${(1 - closed) * 38}deg)` }} />
+    <rect x="5" y="11" width="14" height="10" rx="2.5" fill={GREEN} />
+  </svg>
+);
+
+const Switch: React.FC<{ on: number }> = ({ on }) => (
+  <div style={{ width: 76, height: 42, borderRadius: 21, background: on > 0.5 ? LIME : '#D5D8CE', position: 'relative' }}>
+    <div style={{ position: 'absolute', top: 5, left: 5 + on * 34, width: 32, height: 32, borderRadius: 16, background: '#fff', boxShadow: '0 2px 5px rgba(0,0,0,.2)' }} />
+  </div>
+);
+
+// Floating explainer card on top of a screenshot.
+const Float: React.FC<{ t: number; at: number; until?: number; style: React.CSSProperties; children: React.ReactNode }> = ({ t, at, until, style, children }) => {
+  const out = until === undefined ? 1 : 1 - prog(t, until, 0.4);
+  if (t < at || out <= 0) return null;
+  const e = enter(t, at, { y: 18, dur: 0.5 });
+  return (
+    <div className="kit-card kit-ui" style={{ position: 'absolute', zIndex: 5, boxShadow: '0 18px 50px rgba(20,40,10,.18)', ...style, ...e, opacity: (e.opacity as number) * out }}>
+      {children}
+    </div>
+  );
+};
 
 // ── Body ────────────────────────────────────────────────────────────────────
 const CopilotAgentsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
@@ -113,81 +221,153 @@ const CopilotAgentsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
       <style>{KIT_CSS}</style>
       {audioSrc !== 'none' && <Audio src={audioSrc ?? staticFile('audio/copilot-agents.mp3')} />}
 
-      {/* 1 — Reusable mini-assistants */}
+      {/* 1 — Reusable mini-assistants: the same task typed into chat after chat, then built once as an agent */}
       <Scene t={t} index={0}>
         <div className="kit-label" style={enter(t, 0.1, { y: 14 })}>Microsoft 365 Copilot Agents</div>
-        <div className="kit-h1" style={enter(t, 0.3, { dur: 0.9, y: 34 })}>
+        <div className="kit-h2" style={{ fontSize: 84, ...enter(t, 0.3, { dur: 0.9, y: 34 }) }}>
           Reusable <span className="kit-mark" style={markStyle(t, 2.8)}>mini-assistants.</span>
         </div>
-        <p className="kit-body kit-muted" style={{ marginTop: 28, ...enter(t, 4.9, { y: 14 }) }}>
-          Configured for one specific workflow, so you stop explaining the same task in every new chat.
-        </p>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 40, marginTop: 80 }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
-            {[
-              ['A clear role', 13.0],
-              ['Standing instructions', 13.7],
-              ['Selected knowledge sources', 15.2],
-            ].map(([label, at]) => (
-              <div key={label as string} style={enter(t, at as number, { x: -40, y: 0, easing: BACK })}>
-                <div className="kit-pill">{label as string}</div>
+        <p className="kit-body kit-muted" style={{ marginTop: 18, ...enter(t, 4.9, { y: 14 }) }}>Configured for one specific workflow.</p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 36, marginTop: 56, height: 400 }}>
+          {/* the old way: three chats, the same explanation typed three times */}
+          {(() => {
+            const fade = prog(t, 11.5, 0.8, IN_OUT);
+            const count = [7.9, 8.8, 9.7].filter((a) => t >= a).length;
+            return (
+              <div style={{ position: 'relative', width: 700, height: 400, flex: 'none', opacity: 1 - fade * 0.62, transform: `scale(${1 - fade * 0.06})`, transformOrigin: '0 50%' }}>
+                {[0, 1, 2].map((i) => (
+                  <div key={i} className="kit-card kit-ui" style={{ position: 'absolute', left: i * 46, top: i * 96, width: 600, padding: '16px 22px', boxShadow: '0 10px 30px rgba(20,40,10,.08)', ...enter(t, 7.6 + i * 0.9, { y: 26, dur: 0.5 }) }}>
+                    <div style={{ fontSize: 17, fontWeight: 600, letterSpacing: '.1em', textTransform: 'uppercase', color: MUTED }}>New chat</div>
+                    <div style={{ fontSize: 24, marginTop: 8, minHeight: 34 }}>
+                      {typed(t, 7.9 + i * 0.9, 'Act as my update writer. Each week I need…', 0.85)}
+                      <span style={{ opacity: t < 10.8 && Math.floor(t * 2.5) % 2 === 0 ? 1 : 0, color: LIME }}>|</span>
+                    </div>
+                  </div>
+                ))}
+                <div style={{ position: 'absolute', left: 0, bottom: 0, ...enter(t, 8.0, { y: 0, scale: 0.6, easing: BACK }) }}>
+                  <span className="kit-tag" style={{ background: '#F1F1EC' }}>Same task, explained {count || 1}×</span>
+                </div>
               </div>
-            ))}
-          </div>
-          <div style={{ opacity: prog(t, 15.6, 0.15) }}><Arrow t={t} at={15.6} w={200} /></div>
-          <div
-            className="kit-card"
-            style={{ width: 520, padding: '34px 38px', display: 'flex', alignItems: 'center', gap: 26, borderColor: GREEN, background: LIME_SOFT, ...enter(t, 16.0, { dur: 0.6, scale: 0.7, y: 0, easing: BACK }) }}
-          >
-            <Spark size={72} />
-            <div>
-              <div className="kit-h3">Your agent</div>
-              <div className="kit-ui" style={{ fontSize: 24, color: GREEN, marginTop: 6 }}>Ready for the next chat</div>
+            );
+          })()}
+          <div style={{ opacity: prog(t, 11.6, 0.15) }}><Arrow t={t} at={11.6} w={130} /></div>
+          {/* the agent: three slots that fill in */}
+          <div className="kit-card kit-ui" style={{ width: 760, padding: '26px 30px', borderColor: GREEN, boxShadow: '0 18px 50px rgba(20,40,10,.12)', ...enter(t, 11.9, { scale: 0.8, y: 0, easing: BACK, dur: 0.6 }) }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+              <Spark size={44} />
+              <div className="kit-h3" style={{ fontSize: 36 }}>Your agent</div>
+              <span className="kit-tag" style={{ marginLeft: 'auto', ...enter(t, 16.0, { y: 0, scale: 0.5, easing: BACK }) }}>Reusable</span>
             </div>
+            {[
+              { label: 'A clear role', at: 13.0, body: <Bar t={t} at={13.2} w={220} color={GREEN} /> },
+              {
+                label: 'Standing instructions', at: 13.7,
+                body: (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 7 }}>
+                    {[240, 200, 150].map((w, i) => <Bar key={i} t={t} at={13.9 + i * 0.18} w={w} h={9} color={GREEN} />)}
+                  </div>
+                ),
+              },
+              {
+                label: 'Selected knowledge sources', at: 15.2,
+                body: (
+                  <div style={{ display: 'flex', gap: 10 }}>
+                    {[0, 1, 2].map((i) => (
+                      <div key={i} style={enter(t, 15.4 + i * 0.16, { y: 0, scale: 0.4, easing: BACK, dur: 0.4 })}><FileIcon size={34} accent /></div>
+                    ))}
+                  </div>
+                ),
+              },
+            ].map(({ label, at, body }) => {
+              const on = prog(t, at, 0.5, IN_OUT);
+              return (
+                <div key={label} style={{ position: 'relative', marginTop: 14, height: 76, borderRadius: 14, border: `2px ${on > 0 ? 'solid' : 'dashed'} ${on > 0 ? GREEN : '#C9CDC0'}`, overflow: 'hidden', display: 'flex', alignItems: 'center', padding: '0 22px', gap: 20 }}>
+                  <div style={{ position: 'absolute', inset: 0, width: `${on * 100}%`, background: LIME_SOFT }} />
+                  <div style={{ position: 'relative', fontSize: 26, fontWeight: 600, width: 370, color: on > 0 ? INK : '#A3A89C' }}>{label}</div>
+                  <div style={{ position: 'relative' }}>{body}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </Scene>
 
-      {/* 2 — Prompt into assistant */}
+      {/* 2 — Prompt into assistant: one card that morphs from a prompt document into an agent */}
       <Scene t={t} index={1}>
-        <div className="kit-label" style={enter(t, 17.3, { y: 14 })}>Think of it as</div>
-        <div className="kit-h2" style={enter(t, 17.4, { dur: 0.8, y: 30 })}>
-          A strong prompt, <span className="kit-mark" style={markStyle(t, 19.8)}>made reusable.</span>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 44, marginTop: 80 }}>
-          <div className="kit-card kit-ui" style={{ width: 520, padding: '30px 34px', display: 'flex', alignItems: 'center', gap: 22, ...enter(t, 18.3, { x: -30, y: 0 }) }}>
-            <FileIcon size={64} />
-            <div>
-              <div className="kit-h3">Strong prompt</div>
-              <div style={{ fontSize: 24, color: MUTED, marginTop: 6 }}>Pasted into every chat</div>
+        {(() => {
+          const m = prog(t, 19.3, 1.0, IN_OUT);
+          return (
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 760px', gap: 80, alignItems: 'center' }}>
+              <div>
+                <div className="kit-label" style={enter(t, 17.3, { y: 14 })}>Think of it as</div>
+                <div className="kit-h2" style={enter(t, 17.4, { dur: 0.8, y: 30 })}>
+                  A strong prompt, <span className="kit-mark" style={markStyle(t, 19.8)}>made reusable.</span>
+                </div>
+              </div>
+              <div style={{ position: 'relative', height: 460, ...enter(t, 17.9, { y: 30 }) }}>
+                <div className="kit-card" style={{ position: 'absolute', inset: 0, borderRadius: 22 + m * 26, borderColor: m > 0.5 ? GREEN : LINE, overflow: 'hidden', boxShadow: '0 18px 50px rgba(20,40,10,.12)', transform: `scale(${1 - 0.05 * Math.sin(m * Math.PI)})` }}>
+                  <div style={{ position: 'absolute', inset: 0, background: LIME_SOFT, opacity: m }} />
+                  {/* prompt document */}
+                  <div className="kit-ui" style={{ position: 'absolute', inset: 0, padding: '34px 40px', opacity: 1 - m, transform: `translateY(${-m * 30}px)` }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 14, fontSize: 28, fontWeight: 600 }}><FileIcon size={38} /> Strong prompt</div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 18, marginTop: 34 }}>
+                      {['92%', '78%', '86%', '60%', '82%', '44%'].map((w, i) => <Bar key={i} t={t} at={18.2 + i * 0.1} w={w} h={16} />)}
+                    </div>
+                  </div>
+                  {/* agent */}
+                  <div className="kit-ui" style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 18, opacity: m, transform: `translateY(${(1 - m) * 30}px)` }}>
+                    <div style={{ position: 'relative', width: 150, height: 150, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <svg width="150" height="150" viewBox="0 0 150 150" style={{ position: 'absolute', transform: `rotate(${t * 70}deg)` }}>
+                        <circle cx="75" cy="75" r="66" fill="none" stroke={GREEN} strokeWidth="5" strokeLinecap="round" strokeDasharray="150 57" />
+                      </svg>
+                      <Spark size={84} />
+                    </div>
+                    <div className="kit-h3">Reusable assistant</div>
+                    <div style={{ display: 'flex', gap: 10 }}>
+                      {['Week 1', 'Week 2', 'Week 3'].map((w, i) => (
+                        <span key={w} className="kit-pill" style={{ fontSize: 22, padding: '8px 18px', ...enter(t, 20.3 + i * 0.3, { y: 0, scale: 0.5, easing: BACK, dur: 0.4 }) }}>{w}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div style={{ opacity: prog(t, 19.3, 0.15) }}><Arrow t={t} at={19.3} w={200} /></div>
-          <div className="kit-card kit-ui" style={{ width: 560, padding: '30px 34px', display: 'flex', alignItems: 'center', gap: 22, borderColor: GREEN, background: LIME_SOFT, ...enter(t, 19.8, { scale: 0.75, y: 0, easing: BACK }) }}>
-            <Spark size={64} />
-            <div>
-              <div className="kit-h3">Reusable assistant</div>
-              <div style={{ fontSize: 24, color: GREEN, marginTop: 6 }}>Set up once, used every week</div>
-            </div>
-          </div>
-        </div>
+          );
+        })()}
       </Scene>
 
-      {/* 3 — Meet Larry */}
+      {/* 3 — Meet Larry: the agent card types its own description, and the update it writes takes shape */}
       <Scene t={t} index={2}>
-        <div className="kit-label" style={enter(t, 21.8, { y: 14 })}>This demo</div>
-        <div className="kit-h1" style={enter(t, 22.0, { dur: 0.9, y: 34 })}>
-          Building <span className="kit-mark" style={markStyle(t, 26.0)}>Larry.</span>
-        </div>
-        <div className="kit-card kit-ui" style={{ width: 980, marginTop: 70, padding: '36px 40px', display: 'flex', alignItems: 'center', gap: 32, ...enter(t, 25.8, { y: 30, easing: BACK }) }}>
-          <LarryIcon />
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 800px', gap: 70, alignItems: 'center' }}>
           <div>
-            <div className="kit-h3">Larry</div>
-            <div style={{ fontSize: 30, color: MUTED, marginTop: 8, ...enter(t, 27.3, { y: 10 }) }}>Helps me write weekly leadership updates.</div>
+            <div className="kit-label" style={enter(t, 21.8, { y: 14 })}>This demo</div>
+            <div className="kit-h1" style={enter(t, 22.0, { dur: 0.9, y: 34 })}>
+              Meet <span className="kit-mark" style={markStyle(t, 26.0)}>Larry.</span>
+            </div>
+            <div style={{ marginTop: 36, ...enter(t, 23.3, { y: 12 }) }}>
+              <span className="kit-tag">Built in the Microsoft 365 Copilot app</span>
+            </div>
           </div>
-        </div>
-        <div style={{ marginTop: 40, ...enter(t, 23.3, { y: 12 }) }}>
-          <span className="kit-tag">Built in the Microsoft 365 Copilot app</span>
+          <div style={{ position: 'relative', height: 560 }}>
+            <div className="kit-card kit-ui" style={{ position: 'absolute', left: 0, top: 0, width: 640, padding: '28px 32px', display: 'flex', alignItems: 'center', gap: 26, zIndex: 2, boxShadow: '0 18px 50px rgba(20,40,10,.14)', ...enter(t, 25.9, { scale: 0.7, y: 0, easing: BACK, dur: 0.6 }) }}>
+              <LarryIcon size={104} />
+              <div>
+                <div className="kit-h3" style={{ fontSize: 46 }}>Larry</div>
+                <div style={{ fontSize: 25, color: MUTED, marginTop: 6, minHeight: 34 }}>{typed(t, 27.3, 'Helps me write weekly leadership updates.', 1.9)}</div>
+              </div>
+            </div>
+            <div className="kit-card kit-ui" style={{ position: 'absolute', right: 0, top: 150, width: 560, padding: '30px 34px', background: '#FBFBF8', ...enter(t, 28.0, { x: 40, y: 20, dur: 0.6 }) }}>
+              <div style={{ fontSize: 18, fontWeight: 600, letterSpacing: '.1em', textTransform: 'uppercase', color: MUTED, paddingTop: 30 }}>Weekly leadership update</div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 22, marginTop: 26 }}>
+                {[0, 1, 2, 3, 4].map((i) => (
+                  <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+                    <div style={{ width: 30, height: 30, borderRadius: 8, background: LIME_SOFT, color: GREEN, fontSize: 18, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', ...enter(t, 28.3 + i * 0.22, { y: 0, scale: 0.4, easing: BACK, dur: 0.35 }) }}>{i + 1}</div>
+                    <Bar t={t} at={28.4 + i * 0.22} w={[380, 330, 400, 300, 250][i]} h={14} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </Scene>
 
@@ -258,40 +438,63 @@ const CopilotAgentsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
         />
       </Scene>
 
-      {/* 7 — The CODO prompt */}
+      {/* 7 — The CODO prompt: the instructions document fills in and locks; the weekly input beside it keeps changing */}
       <Scene t={t} index={6}>
         <div className="kit-label" style={enter(t, 56.3, { y: 14 })}>Instructions</div>
         <div className="kit-h2" style={enter(t, 56.4, { dur: 0.8, y: 30 })}>
           My <span className="kit-mark" style={markStyle(t, 57.0)}>CODO</span> prompt.
         </div>
-        <div style={{ display: 'flex', gap: 24, marginTop: 56 }}>
-          {[
-            ['C', 'Character', 59.4],
-            ['O', 'Objective', 60.2],
-            ['D', "Do's and Don'ts", 61.2],
-            ['O', 'Output', 62.4],
-          ].map(([letter, word, at], i) => (
-            <div key={i} className="kit-card kit-ui" style={{ width: 300, padding: '26px 30px', ...enter(t, at as number, { y: 30, easing: BACK }) }}>
-              <div style={{ fontFamily: 'IBM Plex Serif', fontSize: 84, lineHeight: 1, color: GREEN }}>{letter as string}</div>
-              <div style={{ fontSize: 30, fontWeight: 600, marginTop: 14 }}>{word as string}</div>
+        <div style={{ display: 'flex', alignItems: 'stretch', gap: 30, marginTop: 44 }}>
+          <div className="kit-card kit-ui" style={{ width: 900, padding: '26px 32px', borderColor: t >= 64.4 ? GREEN : LINE, ...enter(t, 56.9, { y: 26 }) }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 14, height: 44 }}>
+              <div style={{ fontSize: 18, fontWeight: 600, letterSpacing: '.1em', textTransform: 'uppercase', color: MUTED }}>Standing instructions</div>
+              <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 12, ...enter(t, 63.4, { y: 0, x: 16 }) }}>
+                <span className="kit-tag" style={enter(t, 64.5, { y: 0, scale: 0.5, easing: BACK })}>Stays consistent</span>
+                <Lock closed={prog(t, 64.2, 0.4, IN_OUT)} />
+              </div>
             </div>
-          ))}
-          <div style={{ display: 'flex', alignItems: 'center', marginLeft: 16, ...enter(t, 64.4, { x: -20, y: 0 }) }}>
-            <span className="kit-tag">Stays consistent</span>
+            {[
+              ['C', 'Character', 59.4, 300],
+              ['O', 'Objective', 60.2, 360],
+              ['D', 'Do’s and Don’ts', 61.2, 330],
+              ['O', 'Output', 62.4, 270],
+            ].map(([letter, word, at, w], i) => (
+              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 22, marginTop: 16 }}>
+                <div style={{ width: 66, height: 66, borderRadius: 16, background: GREEN, color: '#fff', fontFamily: 'IBM Plex Serif', fontSize: 44, lineHeight: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 'none', ...enter(t, at as number, { y: 0, scale: 0.3, easing: BACK, dur: 0.45 }) }}>{letter as string}</div>
+                <div style={{ fontSize: 30, fontWeight: 600, width: 250, flex: 'none', ...enter(t, (at as number) + 0.08, { x: -14, y: 0, dur: 0.4 }) }}>{word as string}</div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
+                  <Bar t={t} at={(at as number) + 0.25} w={w as number} />
+                  <Bar t={t} at={(at as number) + 0.4} w={(w as number) * 0.7} />
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-        <div className="kit-card kit-ui" style={{ marginTop: 44, padding: '26px 30px', borderStyle: 'dashed', borderColor: '#B9B9B0', display: 'flex', alignItems: 'center', gap: 22, ...enter(t, 65.8, { y: 24 }) }}>
-          <div style={{ fontSize: 30, fontWeight: 600, width: 400, flex: 'none' }}>What changes each week</div>
-          {[
-            ['Notes', 69.1],
-            ['Metrics', 70.0],
-            ['Priorities', 70.7],
-            ['Blockers', 71.6],
-          ].map(([label, at]) => (
-            <div key={label as string} className="kit-pill" style={{ fontSize: 26, padding: '12px 24px', ...enter(t, at as number, { y: 0, scale: 0.6, easing: BACK }) }}>
-              {label as string}
-            </div>
-          ))}
+          <div style={{ display: 'flex', alignItems: 'center', fontFamily: 'IBM Plex Serif', fontSize: 64, color: MUTED, ...enter(t, 65.8, { y: 0, scale: 0.4, easing: BACK }) }}>+</div>
+          {(() => {
+            const week = 46 + (t < 66.5 ? 0 : Math.min(3, Math.floor((t - 66.5) / 1.5) + 0));
+            const flip = t < 66.5 ? 1 : prog((t - 66.5) % 1.5, 0, 0.35);
+            return (
+              <div className="kit-card kit-ui" style={{ flex: 1, padding: '26px 30px', borderStyle: 'dashed', borderColor: '#B9B9B0', ...enter(t, 65.8, { x: 50, y: 0, dur: 0.6 }) }}>
+                <div style={{ display: 'flex', alignItems: 'center', height: 44 }}>
+                  <div style={{ fontSize: 18, fontWeight: 600, letterSpacing: '.1em', textTransform: 'uppercase', color: MUTED }}>What changes</div>
+                  <div style={{ marginLeft: 'auto', overflow: 'hidden', height: 40 }}>
+                    <div className="kit-pill" style={{ fontSize: 22, padding: '6px 16px', background: INK, color: '#fff', borderColor: INK, transform: `translateY(${(1 - flip) * 30}px)`, opacity: flip }}>Week {week}</div>
+                  </div>
+                </div>
+                <div className="kit-h3" style={{ marginTop: 18, fontSize: 36 }}>The input I provide</div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, marginTop: 26 }}>
+                  {[
+                    ['Notes', 69.1],
+                    ['Metrics', 70.0],
+                    ['Priorities', 70.7],
+                    ['Blockers', 71.6],
+                  ].map(([label, at]) => (
+                    <div key={label as string} className="kit-pill" style={{ fontSize: 28, ...enter(t, at as number, { y: -30, scale: 0.7, easing: BACK, dur: 0.5 }) }}>{label as string}</div>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
         </div>
       </Scene>
 
@@ -411,7 +614,7 @@ const CopilotAgentsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
         <Win
           t={t}
           n="06-knowledge-settings"
-          cam={[hold(140.8, 1315, 300, 1.6), { at: 141.1, x: 960, y: 430, s: 1.9 }]}
+          cam={[hold(140.8, 1315, 300, 1.6), { at: 141.1, x: 960, y: 505, s: 1.75 }]}
           cursor={[
             { at: 162.3, x: 1130, y: 580 },
             { at: 163.0, x: 1296, y: 499, click: true, dur: 0.7 },
@@ -434,6 +637,20 @@ const CopilotAgentsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
             { at: 162.5, text: 'Turn image creation off' },
           ]}
         />
+        <Float t={t} at={152.3} until={158.9} style={{ left: 670, top: 640, width: 940, padding: '20px 28px' }}>
+          {[
+            ['Selected sources', 0.35 + 0.55 * prog(t, 155.1, 1.2, IN_OUT), GREEN],
+            ['General AI knowledge', 0.75 - 0.5 * prog(t, 156.9, 1.2, IN_OUT), '#B9BDB0'],
+          ].map(([label, w, color]) => (
+            <div key={label as string} style={{ display: 'flex', alignItems: 'center', gap: 20, height: 46 }}>
+              <div style={{ width: 290, fontSize: 24, fontWeight: 600 }}>{label as string}</div>
+              <div style={{ flex: 1, height: 18, borderRadius: 9, background: '#EEF0E8' }}>
+                <div style={{ width: `${(w as number) * 100}%`, height: '100%', borderRadius: 9, background: color as string }} />
+              </div>
+            </div>
+          ))}
+          <div style={{ fontSize: 20, color: MUTED, marginTop: 4 }}>The agent leans on what you selected before its general knowledge.</div>
+        </Float>
       </Scene>
 
       {/* 14 — Image creation off */}
@@ -441,7 +658,7 @@ const CopilotAgentsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
         <Win
           t={t}
           n="06b-knowledge-settings-images-off"
-          cam={[hold(163.8, 960, 430, 1.9)]}
+          cam={[hold(163.8, 960, 505, 1.75)]}
           steps={[
             { at: 163.8, text: 'Image creation off' },
             { at: 165.2, text: 'Focused on the leadership update workflow' },
@@ -543,40 +760,69 @@ const CopilotAgentsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
             { at: 213.1, text: 'A trade-off to decide' },
           ]}
         />
+        <Float t={t} at={204.6} until={212.5} style={{ left: 470, top: 722, width: 1340, padding: '20px 26px', display: 'flex', gap: 14, alignItems: 'center' }}>
+          {[
+            ['Onboarding complete', 205.2],
+            ['18 of 20 tests passing', 206.2],
+            ['2 reporting defects open', 208.5],
+            ['1 approval pending', 210.5],
+          ].map(([label, at], i) => (
+            <div key={label as string} className="kit-pill" style={{ fontSize: 24, padding: '10px 20px', background: i === 0 ? LIME_SOFT : '#fff', ...enter(t, at as number, { y: 0, scale: 0.5, easing: BACK, dur: 0.45 }) }}>
+              {i === 0 && <Check size={26} />}
+              {label as string}
+            </div>
+          ))}
+        </Float>
+        <Float t={t} at={213.0} until={221.7} style={{ left: 470, top: 722, width: 1340, padding: '20px 24px', display: 'flex', alignItems: 'center', gap: 14 }}>
+          <div style={{ fontSize: 17, fontWeight: 600, letterSpacing: '.1em', textTransform: 'uppercase', color: MUTED, whiteSpace: 'nowrap' }}>Trade-off</div>
+          <div className="kit-pill" style={{ fontSize: 22, padding: '10px 18px', borderColor: GREEN, background: LIME_SOFT, ...enter(t, 214.2, { x: -20, y: 0 }) }}>Engineer on the reporting fixes</div>
+          <div style={{ opacity: prog(t, 216.6, 0.15) }}><Arrow t={t} at={216.6} w={44} /></div>
+          <div className="kit-pill" style={{ fontSize: 22, padding: '10px 18px', ...enter(t, 217.2, { y: 0, scale: 0.6, easing: BACK }) }}>Pilot timeline protected</div>
+          <div className="kit-pill" style={{ fontSize: 22, padding: '10px 18px', borderColor: '#E0B49A', background: '#FBEFE8', ...enter(t, 219.2, { y: 0, scale: 0.6, easing: BACK }) }}>Dashboard refresh: 2 days later</div>
+        </Float>
       </Scene>
 
-      {/* 20 — Check three things */}
+      {/* 20 — Check three things: a scorecard over Larry's response */}
       <Scene t={t} index={19} pad={false}>
         <Win
           t={t}
           n="13-preview-retest-summary-and-facts"
-          left={80}
-          top={170}
-          width={1000}
-          cam={[hold(222.1, 1320, 690, 1.75)]}
+          cam={[hold(222.1, 1450, 310, 2.0), { at: 222.2, x: 1250, y: 690, s: 1.5 }]}
           rings={[
-            { at: 226.7, until: 232.4, x: 806, y: 492, w: 220, h: 26 },
-            { at: 226.9, until: 232.4, x: 806, y: 587, w: 210, h: 26 },
-            { at: 227.1, until: 232.4, x: 806, y: 722, w: 275, h: 26 },
-            { at: 227.3, until: 232.4, x: 806, y: 857, w: 250, h: 26 },
+            { at: 226.7, until: 228.4, x: 806, y: 492, w: 220, h: 26 },
+            { at: 226.9, until: 228.4, x: 806, y: 587, w: 210, h: 26 },
+            { at: 227.1, until: 228.4, x: 806, y: 722, w: 275, h: 26 },
+            { at: 227.3, until: 228.4, x: 806, y: 857, w: 250, h: 26 },
+            { at: 235.1, x: 896, y: 645, w: 170, h: 20 },
+            { at: 236.0, x: 843, y: 759, w: 124, h: 82 },
           ]}
+          steps={[{ at: 222.6, text: 'Larry responds' }]}
         />
-        <div style={{ position: 'absolute', left: 1150, top: 190, width: 690 }}>
-          <div className="kit-label" style={enter(t, 222.3, { y: 14 })}>Once Larry responds</div>
-          <div className="kit-h2" style={{ fontSize: 60, ...enter(t, 222.5, { dur: 0.8, y: 26 }) }}>I check three things.</div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 30, marginTop: 50 }}>
+        <Float t={t} at={223.4} style={{ left: 1270, top: 190, width: 530, padding: '28px 30px' }}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ fontSize: 18, fontWeight: 600, letterSpacing: '.1em', textTransform: 'uppercase', color: MUTED }}>I check three things</div>
+            <div style={{ marginLeft: 'auto', fontSize: 22, fontWeight: 700, color: GREEN, fontVariantNumeric: 'tabular-nums' }}>
+              {[226.0, 229.4, 233.6].filter((a) => t >= a).length} / 3
+            </div>
+          </div>
+          <div style={{ height: 8, borderRadius: 4, background: '#EEF0E8', marginTop: 14 }}>
+            <div style={{ height: '100%', borderRadius: 4, background: LIME, width: `${((prog(t, 226.0, 0.5, IN_OUT) + prog(t, 229.4, 0.5, IN_OUT) + prog(t, 233.6, 0.5, IN_OUT)) / 3) * 100}%` }} />
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 22, marginTop: 26 }}>
             {[
-              ['It follows the five-section structure', 225.2],
+              ['The five-section structure', 225.2],
               ['Concise and useful for a leadership audience', 228.6],
               ['Accurate facts, owners, deadlines, and trade-offs', 232.8],
             ].map(([text, at]) => (
-              <div key={text as string} className="kit-ui" style={{ display: 'flex', alignItems: 'flex-start', gap: 18, fontSize: 32, lineHeight: 1.3, ...enter(t, at as number, { x: -24, y: 0 }) }}>
-                <div style={{ flex: 'none', marginTop: 3 }}><Check size={36} /></div>
+              <div key={text as string} style={{ display: 'flex', alignItems: 'flex-start', gap: 16, fontSize: 27, lineHeight: 1.3, ...enter(t, at as number, { x: 24, y: 0 }) }}>
+                <div style={{ flex: 'none', width: 34, height: 34, borderRadius: 17, border: `3px solid ${LINE}`, boxSizing: 'border-box', position: 'relative', marginTop: 1 }}>
+                  <div style={{ position: 'absolute', inset: -3, ...enter(t, (at as number) + 0.8, { y: 0, scale: 0.3, easing: BACK, dur: 0.4 }) }}><Check size={34} /></div>
+                </div>
                 {text as string}
               </div>
             ))}
           </div>
-        </div>
+        </Float>
       </Scene>
 
       {/* 21 — Needs work */}
@@ -681,6 +927,7 @@ const CopilotAgentsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
         <Win
           t={t}
           n="18-larry-in-agents-menu"
+          rail="back"
           cam={[
             { at: 284.9, x: 760, y: 420, s: 1.2, dur: 3.2 },
             { at: 288.3, x: 260, y: 300, s: 2.2 },
@@ -709,6 +956,7 @@ const CopilotAgentsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
         <Win
           t={t}
           n="19-more-agents-store-my-agents"
+          rail="back"
           cam={[hold(295.2, 1080, 400, 1.3), { at: 295.4, x: 1080, y: 330, s: 1.6, dur: 0.8 }]}
           rings={[
             { at: 295.7, until: 297.0, x: 595, y: 79, w: 174, h: 34 },
@@ -727,6 +975,7 @@ const CopilotAgentsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
         <Win
           t={t}
           n="20-larry-mention-picker"
+          rail="back"
           cam={[hold(299.6, 1090, 560, 1.3), { at: 300.2, x: 1090, y: 620, s: 1.7 }]}
           cursor={[
             { at: 306.2, x: 1010, y: 770 },
@@ -749,70 +998,97 @@ const CopilotAgentsBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
         <Win
           t={t}
           n="21-larry-selected-by-mention"
+          rail="back"
           cam={[hold(307.4, 1090, 620, 1.7)]}
           rings={[{ at: 307.7, x: 763, y: 531, w: 96, h: 33 }]}
           steps={[{ at: 307.4, text: 'Larry joins the conversation' }]}
         />
       </Scene>
 
-      {/* 31 — Options may vary; Copilot Studio */}
+      {/* 31 — Options may vary (four switches), then Copilot Studio as the bigger workshop next door */}
       <Scene t={t} index={30}>
-        <div className="kit-label" style={enter(t, 309.6, { y: 14 })}>Good to know</div>
-        <div className="kit-h2" style={enter(t, 309.7, { dur: 0.8, y: 30 })}>The exact options may vary.</div>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 20, marginTop: 50 }}>
-          {[
-            ['Microsoft 365 experience', 311.4],
-            ['License', 314.0],
-            ['Permissions', 314.8],
-            ['Administrator settings', 315.5],
-          ].map(([label, at]) => (
-            <div key={label as string} className="kit-pill" style={enter(t, at as number, { y: 0, scale: 0.6, easing: BACK })}>
-              {label as string}
-            </div>
-          ))}
-        </div>
-        <div className="kit-card kit-ui" style={{ marginTop: 60, padding: '32px 38px', display: 'flex', alignItems: 'center', gap: 30, borderColor: GREEN, background: LIME_SOFT, ...enter(t, 317.2, { y: 30 }) }}>
-          <div style={{ flex: 'none', width: 520 }}>
-            <div style={{ fontSize: 24, color: GREEN, fontWeight: 600 }}>Need something more advanced?</div>
-            <div className="kit-h3" style={{ marginTop: 6 }}>
-              Explore <span className="kit-mark" style={{ ...markStyle(t, 321.7), backgroundImage: `linear-gradient(${LIME}, ${LIME})` }}>Copilot Studio</span>
+        <div style={{ display: 'grid', gridTemplateColumns: '820px 1fr', gap: 60, alignItems: 'center' }}>
+          <div>
+            <div className="kit-label" style={enter(t, 309.6, { y: 14 })}>Good to know</div>
+            <div className="kit-h2" style={enter(t, 309.7, { dur: 0.8, y: 30 })}>The exact options may vary.</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginTop: 44 }}>
+              {[
+                ['Microsoft 365 experience', 311.4],
+                ['License', 314.0],
+                ['Permissions', 314.8],
+                ['Administrator settings', 315.5],
+              ].map(([label, at], i) => (
+                <div key={label as string} className="kit-card kit-ui" style={{ display: 'flex', alignItems: 'center', padding: '16px 24px', fontSize: 30, fontWeight: 600, ...enter(t, 310.3 + i * 0.12, { x: -30, y: 0, dur: 0.5 }) }}>
+                  {label as string}
+                  <div style={{ marginLeft: 'auto' }}><Switch on={prog(t, at as number, 0.35, IN_OUT)} /></div>
+                </div>
+              ))}
             </div>
           </div>
-          {[
-            ['Automation', 318.2],
-            ['Actions', 319.1],
-            ['Integrations', 320.0],
-          ].map(([label, at]) => (
-            <div key={label as string} className="kit-pill" style={{ fontSize: 26, padding: '12px 24px', ...enter(t, at as number, { y: 0, scale: 0.6, easing: BACK }) }}>
-              {label as string}
+          <div style={{ position: 'relative', height: 560, ...enter(t, 317.0, { y: 0, dur: 0.5 }) }}>
+            <svg width="760" height="560" viewBox="0 0 760 560" style={{ position: 'absolute', left: 0, top: 0 }}>
+              {[
+                [318.2, 'M330 280 L560 90'],
+                [319.1, 'M330 280 L600 280'],
+                [320.0, 'M330 280 L560 470'],
+              ].map(([at, d]) => (
+                <path key={d as string} d={d as string} stroke={GREEN} strokeWidth="4" strokeLinecap="round" fill="none" pathLength={1} strokeDasharray="1" strokeDashoffset={1 - prog(t, (at as number) - 0.25, 0.5, IN_OUT)} />
+              ))}
+            </svg>
+            <div className="kit-ui" style={{ position: 'absolute', left: 0, top: 0, fontSize: 24, fontWeight: 600, color: GREEN, ...enter(t, 317.2, { y: 10 }) }}>For more advanced work</div>
+            <div className="kit-card kit-ui" style={{ position: 'absolute', left: 90, top: 200, width: 320, height: 160, borderColor: GREEN, background: LIME_SOFT, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 8, boxShadow: '0 18px 50px rgba(20,40,10,.14)', ...enter(t, 317.4, { scale: 0.6, y: 0, easing: BACK, dur: 0.6 }) }}>
+              <Spark size={44} />
+              <div className="kit-h3" style={{ fontSize: 36 }}>
+                Copilot Studio
+              </div>
             </div>
-          ))}
+            {[
+              ['Automation', 318.2, 510, 56],
+              ['Actions', 319.1, 590, 246],
+              ['Integrations', 320.0, 510, 436],
+            ].map(([label, at, x, y]) => (
+              <div key={label as string} className="kit-pill" style={{ position: 'absolute', left: x as number, top: y as number, fontSize: 28, ...enter(t, at as number, { y: 0, scale: 0.4, easing: BACK, dur: 0.5 }) }}>{label as string}</div>
+            ))}
+          </div>
         </div>
       </Scene>
 
-      {/* 32 — Closing */}
-      <Scene t={t} index={31} padStyle={{ opacity: 1 - prog(t, 335.9, 0.7, Easing.in(Easing.quad)) }}>
+      {/* 32 — Closing: define once, test, then a new week drops in and an update comes out, again and again */}
+      <Scene t={t} index={31} padStyle={{ opacity: 1 - prog(t, 335.95, 0.7, Easing.in(Easing.quad)) }}>
         <div className="kit-label" style={enter(t, 323.6, { y: 14 })}>Agent Builder</div>
         <div className="kit-h1" style={enter(t, 323.8, { dur: 0.9, y: 34 })}>
           A practical <span className="kit-mark" style={markStyle(t, 328.0)}>starting point.</span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 28, marginTop: 80 }}>
-          <div className="kit-card kit-ui" style={{ padding: '28px 34px', ...enter(t, 330.0, { y: 24, easing: BACK }) }}>
-            <div style={{ fontSize: 22, color: MUTED, fontWeight: 600, letterSpacing: '.1em' }}>1</div>
-            <div className="kit-h3" style={{ marginTop: 4 }}>Define it once</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 26, marginTop: 70 }}>
+          <div className="kit-card kit-ui" style={{ padding: '24px 30px', display: 'flex', alignItems: 'center', gap: 16, ...enter(t, 330.0, { y: 24, easing: BACK }) }}>
+            <Lock closed={prog(t, 331.5, 0.4, IN_OUT)} size={44} />
+            <div className="kit-h3" style={{ fontSize: 36 }}>Define it once</div>
           </div>
-          <div style={{ opacity: prog(t, 332.2, 0.15) }}><Arrow t={t} at={332.2} w={110} /></div>
-          <div className="kit-card kit-ui" style={{ padding: '28px 34px', ...enter(t, 332.5, { y: 24, easing: BACK }) }}>
-            <div style={{ fontSize: 22, color: MUTED, fontWeight: 600, letterSpacing: '.1em' }}>2</div>
-            <div className="kit-h3" style={{ marginTop: 4 }}>Test it</div>
+          <div style={{ opacity: prog(t, 332.2, 0.15) }}><Arrow t={t} at={332.2} w={70} /></div>
+          <div className="kit-card kit-ui" style={{ padding: '24px 30px', display: 'flex', alignItems: 'center', gap: 16, ...enter(t, 332.5, { y: 24, easing: BACK }) }}>
+            <div style={enter(t, 332.9, { y: 0, scale: 0.3, easing: BACK, dur: 0.4 })}><Check size={44} /></div>
+            <div className="kit-h3" style={{ fontSize: 36 }}>Test it</div>
           </div>
-          <div style={{ opacity: prog(t, 333.3, 0.15) }}><Arrow t={t} at={333.3} w={110} /></div>
-          <div className="kit-card kit-ui" style={{ padding: '28px 34px', borderColor: GREEN, background: LIME_SOFT, ...enter(t, 333.6, { y: 24, easing: BACK }) }}>
-            <div style={{ fontSize: 22, color: GREEN, fontWeight: 600, letterSpacing: '.1em' }}>3</div>
-            <div className="kit-h3" style={{ marginTop: 4 }}>Reuse it each week</div>
+          <div style={{ opacity: prog(t, 333.3, 0.15) }}><Arrow t={t} at={333.3} w={70} /></div>
+          <div className="kit-card kit-ui" style={{ flex: 1, padding: '20px 26px', borderColor: GREEN, background: LIME_SOFT, ...enter(t, 333.6, { y: 24, easing: BACK }) }}>
+            <div className="kit-h3" style={{ fontSize: 36 }}>Reuse it each week</div>
+            <div style={{ display: 'flex', gap: 12, marginTop: 14 }}>
+              {[0, 1, 2, 3].map((i) => {
+                const at = 334.2 + i * 0.4;
+                return (
+                  <div key={i} style={{ flex: 1, background: '#fff', borderRadius: 14, padding: '12px 14px', border: `2px solid ${GREEN}`, ...enter(t, at, { y: -34, dur: 0.45, easing: BACK }) }}>
+                    <div style={{ fontSize: 17, fontWeight: 700, letterSpacing: '.08em', textTransform: 'uppercase', color: GREEN }}>Week {i + 1}</div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 10 }}>
+                      <Bar t={t} at={at + 0.25} w="100%" h={8} dur={0.35} />
+                      <Bar t={t} at={at + 0.33} w="70%" h={8} dur={0.35} />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
-        <p className="kit-body kit-muted" style={{ marginTop: 44, ...enter(t, 334.4, { y: 12 }) }}>With fresh inputs every time.</p>
+        <p className="kit-body kit-muted" style={{ marginTop: 40, ...enter(t, 334.4, { y: 12 }) }}>Fresh inputs in, a leadership update out.</p>
       </Scene>
 
       <div style={{ position: 'absolute', inset: 0, zIndex: 60, pointerEvents: 'none' }}>
