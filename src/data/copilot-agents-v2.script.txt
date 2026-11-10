@@ -1,0 +1,121 @@
+<speak>
+<break time="500ms"/>Microsoft three six five Copilot Agents are reusable mini-assistants you can configure for a specific workflow.
+
+<break time="500ms"/>Instead of explaining the same task every time you start a new chat, you can give an agent a clear role, standing instructions, and selected knowledge sources.
+
+<break time="500ms"/>Think of it as turning a strong prompt into a reusable assistant.
+
+<break time="500ms"/>For this demo, I'll use the Microsoft three six five Copilot app to build Larry, an assistant that helps me write weekly leadership updates.
+
+<break time="500ms"/>In the left sidebar, I open Agents, then choose New agent.
+
+<break time="500ms"/>Here, I can describe the agent I want to build, or choose Skip to go directly to the configuration.
+
+<break time="500ms"/>Since I already have my instructions prepared, I'll choose Skip.
+
+<break time="500ms"/>I name the agent Larry, and add a short description: Helps me write weekly leadership updates.
+
+<break time="500ms"/>Next is Instructions. This is where I define how Larry should work.
+
+<break time="500ms"/>I'll paste in my Koh-doh prompt, which covers four elements.
+
+<break time="500ms"/>Character: Larry is a leadership update writer communicating with the executive team.
+
+<break time="500ms"/>Objective: draft a concise, one-page weekly update that helps leaders stay informed and make strategic decisions.
+
+<break time="500ms"/>Do's and Don'ts: highlight major developments, decisions, approvals, and deadlines. Explain trade-offs, use plain language, and never invent information.
+
+<break time="500ms"/>Output: five sections. Executive Summary, Key Developments, Decisions and Action Items, Trade-Offs or Conflicts, and Closing or Next Steps.
+
+<break time="500ms"/>These instructions stay consistent. What changes each week is the input I provide, such as my notes, metrics, priorities, and blockers.
+
+<break time="500ms"/>There's also a Suggest improvements option that can help refine the instructions.
+
+<break time="500ms"/>Next is Skills. Skills give the agent additional instructions for repeatable tasks.
+
+<break time="500ms"/>The menu offers two options: Create with chat, and Upload an existing skill package.
+
+<break time="500ms"/>For Larry, my Koh-doh instructions already cover the workflow, so I'll skip this section.
+
+<break time="500ms"/>Next comes Knowledge. This is where I choose what information Larry can use.
+
+<break time="500ms"/>First is Work content.
+
+<break time="500ms"/>Here, I can configure sources such as cloud files, Outlook, Teams, and Copilot connectors, depending on my access and my organization's settings.
+
+<break time="500ms"/>The goal is to select sources that are useful for the task.
+
+<break time="500ms"/>For this demo, I want Larry to work only from the notes I provide, so I'll turn these sources off.
+
+<break time="500ms"/>Second is Web search. This allows the agent to use information from the public web.
+
+<break time="500ms"/>Larry doesn't need public information for this example, so I'll turn Web search off as well.
+
+<break time="500ms"/>Third is Attachments. This lets me upload reference files directly from my device. I won't add any for this demo.
+
+<break time="500ms"/>There's also a separate Knowledge settings area.
+
+<break time="500ms"/>Here, I can see options for People data, creating documents, charts and code, creating images, and Discourage model knowledge.
+
+<break time="500ms"/>Discourage model knowledge encourages the agent to prioritize selected sources over its general A-I knowledge.
+
+<break time="500ms"/>For Larry, I'll leave document creation available, and turn image creation off.
+
+<break time="500ms"/>The configuration is now focused on the leadership update workflow.
+
+<break time="500ms"/>Next is Suggested prompts. These are starter prompts that help people understand how to use the agent.
+
+<break time="500ms"/>Each prompt has a title and a message.
+
+<break time="500ms"/>For the title, I'll enter: Draft weekly update.
+
+<break time="500ms"/>For the message: Draft this week's leadership update from my notes.
+
+<break time="500ms"/>Now, someone opening Larry has a clear starting point.
+
+<break time="500ms"/>Before creating Larry, I open Preview and test it with a realistic example.
+
+<break time="500ms"/>I'll use fictional project notes containing progress, deadlines, a blocker, and a decision leadership needs to make.
+
+<break time="500ms"/>The notes include completed onboarding, eighteen out of twenty tests passing, two open reporting defects, and a pending approval.
+
+<break time="500ms"/>They also include a trade-off: assigning an engineer to the reporting fixes would help protect the pilot timeline, but delay a dashboard refresh by two days.
+
+<break time="500ms"/>Once Larry responds, I check three things.
+
+<break time="500ms"/>First, that it follows the five-section structure. <break time="300ms"/>Second, that it's concise and useful for a leadership audience. <break time="300ms"/>And third, that it accurately reflects the facts, owners, deadlines, and trade-offs I provided.
+
+<break time="500ms"/>If the response needs work, I can refine the instructions and test again.
+
+<break time="500ms"/>For example, I can specify that Larry should return one update, use only the five requested sections, and mark missing owners or dates as not specified.
+
+<break time="500ms"/>Now I click Create.
+
+<break time="500ms"/>Microsoft confirms that Larry was created successfully, and is currently private, available only to me.
+
+<break time="500ms"/>Sharing options depend on my organization's settings. For this demo, I'll keep Larry private.
+
+<break time="500ms"/>Then I choose Start chat.
+
+<break time="500ms"/>Here's Larry, with the suggested prompt ready to use.
+
+<break time="500ms"/>I can now provide this week's notes and get a leadership update, without pasting the standing instructions again.
+
+<break time="500ms"/>I'll also check the response in normal chat before using it.
+
+<break time="500ms"/>Once Larry is created, I can return to it in a few ways.
+
+<break time="500ms"/>First, I can open Agents in the sidebar and select Larry.
+
+<break time="500ms"/>Second, I can choose More agents, which opens the Agent Store, and find Larry under My agents.
+
+<break time="500ms"/>Third, in a supported Copilot Chat experience, I can type at Larry, select it from the Agents and Skills suggestions, and bring it into the conversation.
+
+<break time="500ms"/>The exact options may vary by Microsoft three six five experience, license, permissions, and administrator settings.
+
+<break time="500ms"/>For more advanced automation, actions, or integrations, you can explore Copilot Studio.
+
+<break time="500ms"/>For a repeatable task like a weekly leadership update, Agent Builder gives you a practical starting point.
+
+<break time="500ms"/>You define how the assistant should work once, test it, and then reuse it with fresh inputs each week.
+</speak>
