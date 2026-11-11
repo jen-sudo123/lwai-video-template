@@ -1,0 +1,85 @@
+<speak>
+<break time="500ms"/>Much of AI's value comes when it can handle repetitive work without you prompting it every time.
+
+<break time="500ms"/>Gemini lets you schedule recurring AI work directly in the app, without building a complex workflow.
+
+<break time="500ms"/>In this video, we'll focus on Scheduled Actions in Gemini chats. Think weekly research summaries, daily briefings, or regular learning prompts.
+
+<break time="500ms"/>A Scheduled Action combines an instruction with a schedule. Gemini prepares the response automatically and makes it available in the app.
+
+<break time="500ms"/>For a simple research briefing, there's no setup at all. If your action needs information from Gmail, Google Calendar, or another app, connect that app first.
+
+<break time="500ms"/>Let's create a weekly briefing.
+
+<break time="500ms"/>I open Gemini and start a regular chat.
+
+<break time="500ms"/>I type: Every Monday at 8 AM, review the past week's news about the consulting industry, and give me a five-bullet executive brief focused on implications for leaders. Keep it under 200 words.
+
+<break time="500ms"/>Notice that I'm telling Gemini both what to produce, and when to deliver it.
+
+<break time="500ms"/>I submit the prompt. Gemini can take a moment to respond.
+
+<break time="500ms"/>Gemini confirms the schedule and shows a schedule card. I click the card to inspect the details.
+
+<break time="500ms"/>I check that it repeats weekly, on Monday, at 8 AM. Then I review the saved instructions, to make sure Gemini kept the five-bullet format and the 200-word limit.
+
+<break time="500ms"/>Gemini created the schedule straight from the chat. No separate confirmation step. The briefing is now scheduled.
+
+<break time="500ms"/>One thing to keep in mind. Gemini prepares scheduled responses ahead of delivery, so they may miss last-minute developments. Timing can vary, and usage limits can prevent a run.
+
+<break time="500ms"/>So use this for regular briefings, not urgent, real-time alerts.
+
+<break time="500ms"/>To find the schedule, I open Scheduled in the Gemini sidebar. You can also go straight to gemini dot google dot com, slash scheduled.
+
+<break time="500ms"/>Here, I can see all my schedules and their status.
+
+<break time="500ms"/>When a scheduled response is ready, the conversation is marked unread in the web app. On mobile, Gemini can send you a notification, depending on your device settings.
+
+<break time="500ms"/>I open the conversation, read the briefing, and ask follow-up questions.
+
+<break time="500ms"/>The useful part? I don't need to remember to submit the same prompt every Monday.
+
+<break time="500ms"/>Now, let's change the briefing.
+
+<break time="500ms"/>I return to the original chat and type: Change this briefing to Friday at 4 PM, and add a section on emerging AI trends. Keep the entire response under 200 words.
+
+<break time="500ms"/>Gemini updates the existing schedule right from the conversation.
+
+<break time="500ms"/>Once it confirms, I open Scheduled again and select the briefing.
+
+<break time="500ms"/>I verify that the schedule now says Friday at 4 PM, that the instructions include the AI trends section, and that the word limit is still there.
+
+<break time="500ms"/>That check matters. During testing, Gemini changed the word limit when it added the new section, even though I never asked it to. So always review the saved instructions after an edit.
+
+<break time="500ms"/>And if the card in the chat still shows the old details, reopen the entry from the Scheduled page.
+
+<break time="500ms"/>On the Scheduled page, I click a schedule to see its name, its instructions, labelled Plan here, and its timing.
+
+<break time="500ms"/>The three-dot menu lets me pause, resume, or delete it.
+
+<break time="500ms"/>Let's pause this demo schedule.
+
+<break time="500ms"/>It moves into the Paused section. Gemini won't run it again until I resume it.
+
+<break time="500ms"/>To start it again, I choose Resume, and it returns to Active.
+
+<break time="500ms"/>For this demo, I'll leave it paused.
+
+<break time="500ms"/>So where are Scheduled Actions useful? Here are three good starting points.
+
+<break time="500ms"/>Weekly research: briefings on your industry, your competitors, or emerging trends.
+
+<break time="500ms"/>Daily preparation: calendar and email summaries, once those apps are connected.
+
+<break time="500ms"/>And regular learning: weekly insights, practice questions, or exercises.
+
+<break time="500ms"/>Choose work that repeats regularly and benefits from a consistent format.
+
+<break time="500ms"/>A quick note on availability. Google is gradually rolling out schedules in chats to personal Google accounts, including free accounts, and they're supported on qualifying Google Workspace plans.
+
+<break time="500ms"/>Keep Activity must be turned on, and availability can depend on your account. Google currently allows up to 10 active schedules for chats.
+
+<break time="500ms"/>Start with one simple recurring task. Describe the result you want, say when it should arrive, and check the saved schedule and instructions.
+
+<break time="500ms"/>The goal is simple: stop repeatedly asking AI to do work you've already defined.
+</speak>
