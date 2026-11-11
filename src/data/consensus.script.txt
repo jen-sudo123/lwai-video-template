@@ -1,0 +1,75 @@
+When you use AI to research a topic online, it can draw on websites, news articles, reports, and academic papers.
+
+But sometimes, you want to know specifically what the scientific research says about a question.
+
+That's where Consensus comes in.
+
+Consensus is an AI-powered academic research platform. It helps you find, compare, and understand scholarly research, with every answer connected to the papers behind it.
+
+It's useful when you want to investigate a claim, challenge an assumption, or see where the evidence agrees, and where it conflicts.
+
+General-purpose research tools can use academic papers too. The difference is that Consensus puts scholarly research at the center of the workflow.
+
+It searches the research literature, including preprints, and uses AI to synthesize the relevant findings into answers with citations.
+
+Preprints haven't completed peer review yet. If you want to leave them out, use the Exclude Preprints filter.
+
+The value isn't just finding an answer. It's being able to trace that answer back to the research behind it.
+
+Let's see how this works.
+
+I open consensus dot app, sign in, and ask: Does remote work improve employee productivity?
+
+I'll submit it using the default mode, Pro. Pro searches the literature and writes a cited synthesis.
+
+For a more extensive investigation, I can switch on Deep, next to the question field. Deep runs multiple searches and produces a more detailed review. For this example, I'll stay with Pro.
+
+The response gives me an overview of the findings, with citations, and the supporting papers in the References panel on the right.
+
+One distinctive feature is the Consensus Meter.
+
+For suitable yes-or-no questions, it groups the relevant papers into Yes, No, Possibly, or Mixed. The number beside the meter shows how many papers contributed.
+
+At a glance, I can see whether those papers point in the same direction, or report conflicting findings.
+
+I can select All details to compare the groups by recency, study methods, journal rankings, and citation counts. But treat these as signals to investigate, not a final verdict on evidence quality.
+
+And the percentages only describe the selected papers. They don't tell you the probability that the claim is true, and they don't represent all the research on the topic.
+
+The AI can also misclassify findings, so you still need to look at the evidence yourself.
+
+So let's go beyond the summary, and open one of the papers in the References panel.
+
+The Evidence tab shows the supporting passages, in the abstract or the full text where available. This lets me check whether the paper actually supports what the answer claims.
+
+Next, I select Snapshot, and if prompted, Generate Snapshot.
+
+The Study Snapshot uses AI to pull out details like the population, sample size, duration, methods, outcomes, and findings.
+
+Some fields may be missing. Here, it extracted four of the seven attributes, so I'd check the original paper for the rest.
+
+Also, a citation doesn't always mean free access. Some papers still require a personal or institutional subscription.
+
+The goal isn't to collect citations. It's to understand how much confidence to place in the findings, and whether they apply to your situation.
+
+I can keep investigating in the same thread. For example: What factors explain differences in productivity between remote and office-based employees?
+
+Consensus builds on the conversation and searches for evidence relevant to the follow-up.
+
+I can make the comparison more precise. I'll ask it to separate fully remote from hybrid work, compare measured productivity with self-reported productivity, and summarize the designs, findings, and limitations in a table.
+
+That matters, because remote work can mean very different arrangements, and productivity can be measured in very different ways.
+
+I can also narrow the evidence base. Checking the box beside a paper attaches it to my question, so I can ask about that one study. For example: What are the main limitations of this paper, and how do they affect its conclusions?
+
+The Filter menu lets me narrow results by publication year, study design, and open-access availability, so I find research that fits the question I'm actually asking.
+
+And I can save useful papers into Collections in My Library, to come back to later, or export the references for my own work.
+
+Consensus can also connect with AI platforms like ChatGPT and Claude, where available. That lets me bring cited research straight into the conversation.
+
+For example, I can combine recent business reports with academic studies when exploring how organizations are adapting to AI.
+
+Consensus is most useful when evidence quality and relevance matter. It helps you discover studies, compare findings, and inspect sources.
+
+But its coverage isn't exhaustive, and AI can misread research. So always verify the results.
