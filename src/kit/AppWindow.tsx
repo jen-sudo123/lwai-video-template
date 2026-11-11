@@ -9,6 +9,7 @@ import { INK, LIME, LINE, MUTED } from './theme';
 //   cursor — {at, x, y, click?}: the cursor glides to (x, y) over `dur` (0.8s) and clicks on arrival
 //   rings  — {at, until?, x, y, w, h, spot?}: lime highlight box; spot dims everything else
 //   steps  — {at, text}: "STEP n" caption under the window
+//   ringStyle — 'box' (default): lime outline · 'line': a lime underline that runs left to right under the target
 // All coordinates are in the screenshot's own pixels (imgW x imgH); all times are seconds on the same
 // clock as `t` (composition VO seconds, or scene-local seconds when used from a data file).
 
@@ -47,7 +48,8 @@ export const AppWindow: React.FC<{
   title?: string;
   imgW?: number;
   imgH?: number;
-}> = ({ t, start, src, cam = [], cursor = [], rings = [], steps = [], left, top = 54, width = 1560, title = 'claude.ai', imgW = 1920, imgH = 1080 }) => {
+  ringStyle?: 'box' | 'line';
+}> = ({ t, start, src, cam = [], cursor = [], rings = [], steps = [], left, top = 54, width = 1560, title = 'claude.ai', imgW = 1920, imgH = 1080, ringStyle = 'box' }) => {
   const IMG_W = imgW;
   const IMG_H = imgH;
   const k = width / IMG_W;
@@ -102,6 +104,18 @@ export const AppWindow: React.FC<{
             {rings.map((r, i) => {
               const a = prog(t, r.at, 0.45, BACK) * (r.until ? 1 - prog(t, r.until, 0.4) : 1);
               if (a <= 0) return null;
+              if (ringStyle === 'line') {
+                const out = r.until ? 1 - prog(t, r.until, 0.3) : 1;
+                const run = prog(t, r.at, 0.55, IN_OUT);
+                return (
+                  <React.Fragment key={i}>
+                    {r.spot && (
+                      <div style={{ position: 'absolute', left: r.x - 6 / S, top: r.y - 6 / S, width: r.w + 12 / S, height: r.h + 12 / S, borderRadius: 10 / S, boxShadow: `0 0 0 4000px rgba(16,24,10,${0.42 * Math.min(1, a) * out})` }} />
+                    )}
+                    <div style={{ position: 'absolute', left: r.x, top: r.y + r.h + 3 / S, width: r.w * run, height: Math.max(5 / S, 2.5), borderRadius: 4 / S, background: LIME, opacity: out, boxShadow: `0 0 ${6 / S}px rgba(102,198,28,.45)` }} />
+                  </React.Fragment>
+                );
+              }
               const pad = 8 / S;
               return (
                 <div

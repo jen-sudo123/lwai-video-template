@@ -308,6 +308,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           t={t}
           start={44.85}
           imgH={IMG_H}
+          ringStyle="line"
           title={URL}
           src={shot('02-demo-prompt')}
           cursor={[
@@ -344,6 +345,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           t={t}
           start={70.45}
           imgH={IMG_H}
+          ringStyle="line"
           title={URL}
           src={shot('03-schedule-created')}
           cam={[{ at: 70.6, x: 1050, y: 330, s: 1.7, dur: 0.9 }]}
@@ -368,6 +370,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           t={t}
           start={76.12}
           imgH={IMG_H}
+          ringStyle="line"
           title={URL}
           src={shot('04-monday-schedule-details')}
           cam={[
@@ -425,6 +428,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           t={t}
           start={111.92}
           imgH={IMG_H}
+          ringStyle="line"
           title={`${URL}/scheduled`}
           src={shot('07-active-list')}
           cursor={[
@@ -547,6 +551,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           t={t}
           start={146.61}
           imgH={IMG_H}
+          ringStyle="line"
           title={URL}
           src={shot('05-conversational-update')}
           cam={[
@@ -575,6 +580,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           t={t}
           start={162.53}
           imgH={IMG_H}
+          ringStyle="line"
           title={`${URL}/scheduled`}
           src={shot('08-friday-persisted-details')}
           cursor={[
@@ -629,6 +635,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           t={t}
           start={187.57}
           imgH={IMG_H}
+          ringStyle="line"
           title={URL}
           src={shot('06-update-readback')}
           cam={[
@@ -657,6 +664,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           t={t}
           start={193.28}
           imgH={IMG_H}
+          ringStyle="line"
           title={`${URL}/scheduled`}
           src={shot('08-friday-persisted-details')}
           cursor={[
@@ -685,6 +693,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           t={t}
           start={200.21}
           imgH={IMG_H}
+          ringStyle="line"
           title={`${URL}/scheduled`}
           src={shot('09-management-menu')}
           cam={[
@@ -714,6 +723,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           t={t}
           start={206.21}
           imgH={IMG_H}
+          ringStyle="line"
           title={`${URL}/scheduled`}
           src={shot('10-paused-status')}
           cam={[{ at: 207.0, x: 880, y: 330, s: 1.6, dur: 0.01 }]}
@@ -731,6 +741,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           t={t}
           start={211.36}
           imgH={IMG_H}
+          ringStyle="line"
           title={`${URL}/scheduled`}
           src={shot('11-resume-menu')}
           cam={[{ at: 212.16, x: 1790, y: 170, s: 2.6, dur: 0.01 }]}
@@ -749,6 +760,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           t={t}
           start={214.2}
           imgH={IMG_H}
+          ringStyle="line"
           title={`${URL}/scheduled`}
           src={shot('12-resumed-status')}
           cam={[{ at: 215.0, x: 880, y: 330, s: 1.6, dur: 0.01 }]}
@@ -764,6 +776,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           start={216.45}
           imgW={1906}
           imgH={433}
+          ringStyle="line"
           top={250}
           title={URL}
           src={shot('14-chat-card-paused')}
