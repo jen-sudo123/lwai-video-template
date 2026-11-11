@@ -1,31 +1,29 @@
-<speak>
-<break time="500ms"/>If you're used to using AI the usual way, then you already know the reactive pattern. You ask, and it answers, which is helpful, but it still depends on you remembering to ask, and actually asking the question.
+If you're used to using AI the usual way, then you already know the reactive pattern. You ask, and it answers, which is helpful, but it still depends on you remembering to ask, and actually asking the question.
 
-<break time="500ms"/>AI automation is the shift from reactive AI to proactive AI. It's work that runs in the background.
+[pause] AI automation is the shift from reactive AI to proactive AI. It's work that runs in the background.
 
-<break time="500ms"/>So, say something happens, or a time hits your calendar, and your AI kicks off a small workflow and delivers the output itself. And it's simpler than most people assume.
+[pause] So, say something happens, or a time hits your calendar, and your AI kicks off a small workflow and delivers the output itself. And it's simpler than most people assume.
 
-<break time="500ms"/>An easy way to understand it is: Trigger, Decision, Action.
+[pause] An easy way to understand it is: Trigger, Decision, Action.
 
-<break time="500ms"/>A trigger is any event that starts the workflow. This could be an email arriving, a form being submitted, a folder being updated, or, again, a certain time.
+[pause] A trigger is any event that starts the workflow. This could be an email arriving, a form being submitted, a folder being updated, or, again, a certain time.
 
-<break time="500ms"/>Then AI helps with the decision part, which can include anything you would otherwise have prompted it to do manually. This could be making sense of emails, meeting notes, long documents, or anything else.
+[pause] Then AI helps with the decision part, which can include anything you would otherwise have prompted it to do manually. This could be making sense of emails, meeting notes, long documents, or anything else.
 
-<break time="500ms"/>And then, finally, the workflow takes an action, which could be sending a message, creating a task, updating a tracker, or generating a proposal.
+[pause] And then, finally, the workflow takes an action, which could be sending a message, creating a task, updating a tracker, or generating a proposal.
 
-<break time="500ms"/>The good news is that you can do all of this without coding. Many platforms now let you build automations with plain language and very light configuration.
+[pause] The good news is that you can do all of this without coding. Many platforms now let you build automations with plain language and very light configuration.
 
-<break time="500ms"/>A couple of use cases we often see. First, daily or weekly briefings. Get a digest of competitor developments, account intelligence, or internal project updates, without chasing them down yourself.
+[pause] A couple of use cases we often see. First, daily or weekly briefings. Get a digest of competitor developments, account intelligence, or internal project updates, without chasing them down yourself.
 
-<break time="500ms"/>Second, meeting follow-through. Turn meeting notes into action items, and even briefings for different stakeholders.
+[pause] Second, meeting follow-through. Turn meeting notes into action items, and even briefings for different stakeholders.
 
-<break time="500ms"/>And third, approval workflows. Make sure discounts, budget requests, or policy exceptions all land with the right approver, along with the context they need.
+[pause] And third, approval workflows. Make sure discounts, budget requests, or policy exceptions all land with the right approver, along with the context they need.
 
-<break time="500ms"/>Now, of course, we can't just let AI run without oversight, so we do need some guardrails. That means you decide what AI can do on its own, and where it needs a human check. We call this human-in-the-loop.
+[pause] Now, of course, we can't just let AI run without oversight, so we do need some guardrails. That means you decide what AI can do on its own, and where it needs a human check. We call this human-in-the-loop.
 
-<break time="500ms"/>So, low-risk actions like summarizing, drafting, or routing can run end to end. But higher-risk actions, like sending external messages, changing customer terms, or approving spending, should trigger an approval step.
+[pause] So, low-risk actions like summarizing, drafting, or routing can run end to end. But higher-risk actions, like sending external messages, changing customer terms, or approving spending, should trigger an approval step.
 
-<break time="500ms"/>And you want some visibility, too. A simple log of what ran, what AI decided, and what it changed is really important, so you can audit and improve it over time.
+[pause] And you want some visibility, too. A simple log of what ran, what AI decided, and what it changed is really important, so you can audit and improve it over time.
 
-<break time="500ms"/>So, let's advance as AI leaders, moving from reactive AI that only answers questions to proactive AI that runs in the background, based on rules you define. This is where the real ROI on AI starts to materialize.
-</speak>
+[pause] So, let's advance as AI leaders, moving from reactive AI that only answers questions to proactive AI that runs in the background, based on rules you define. This is where the real ROI on AI starts to materialize.
