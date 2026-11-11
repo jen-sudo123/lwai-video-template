@@ -1,0 +1,55 @@
+GEMINI SCHEDULED ACTIONS — LIVE SCRIPT VERIFICATION
+Verified: 11 November 2026 (Asia/Ho_Chi_Minh)
+
+VERDICT
+The core demo works in the signed-in Gemini account tested. A normal chat created a weekly consulting briefing; the Scheduled page showed it; a conversational request changed it to Friday at 4 PM; pause and resume both worked. Revise the wording below before recording.
+
+LIVE WALKTHROUGH
+1. Opened Gemini in the in-app browser, which was signed out. Switched to the existing signed-in Chrome session. The account displayed Work / Pro. This was not a free-account test.
+2. Opened a new regular chat and submitted the exact Monday 8 AM prompt from the script.
+3. Gemini searched the web before responding. Creation took several minutes, so the video may need a cut while waiting.
+4. Gemini confirmed the weekly Monday 8 AM briefing and displayed a schedule card. No separate confirmation or Save step was required for chat creation.
+5. Opened its editor and visually confirmed Weekly / Mon / 8:00 AM / Never. The saved plan retained the five-bullet and under-200-word requirements.
+6. Submitted the exact change request: Change this briefing to Friday at 4 PM and add a section on emerging AI trends.
+7. Gemini confirmed the update. The chat's immediately reopened card initially displayed the old Monday configuration. Navigating to Scheduled and reopening the entry showed the persisted Friday 4 PM configuration and AI section. Reopen from Scheduled if the chat card looks stale.
+8. The saved updated plan unexpectedly changed the maximum from 200 to 250 words. The user did not request that relaxation. Review instructions after conversational edits, including constraints that were meant to stay the same.
+9. The Scheduled page showed exactly one newly created active entry. The More menu exposed Pause, Run now, and Delete.
+10. Paused it and verified its placement under Paused; the menu changed to Resume. Resumed it and verified placement under Active. Paused it again at the end.
+
+FINAL ACCOUNT STATE
+The newly created Weekly consulting executive brief is PAUSED. Its saved schedule is Friday at 4 PM and its saved plan includes emerging AI trends with an under-250-word limit. It will not run unless resumed. The original pre-existing schedules were left as found. The demo chat remains available at:
+https://gemini.google.com/app/5a2a7c2e49820fd5
+
+RECOMMENDED SCRIPT CHANGES
+- After checking the schedule, add: I also open the saved instructions to check that Gemini kept my requirements, including the word limit.
+- After the conversational change example, add: Then I reopen the schedule from Scheduled to verify the new timing and instructions.
+- Replace any guarantee of precise delivery with: Gemini prepares the briefing for the scheduled time. Timing can vary, and usage limits can prevent a run.
+- In the management section, say: Click the schedule to inspect its name, plan, and timing. Use the three-dot menu to pause, resume, or delete it. The tested interface labels the instructions field Plan.
+- Keep the 10-active-schedule limit explicitly scoped to schedules in chats. The observed page uses task-style labels and links to the separate Tasks help article, so do not imply that every scheduling experience has the same limits or eligibility.
+
+DOCUMENTATION CHECK — NOT A LIVE DELIVERY TEST
+Google's chat-scheduling help supports the script's statements about gradual personal-account rollout, qualifying Workspace access, Keep Activity, 10 active chat schedules, connected-app requirements, advance preparation, unread web chats, and mobile notifications. Free-account eligibility is supported through the all-personal-accounts rollout wording, not independently tested here.
+Source: https://support.google.com/gemini/answer/16316416?hl=en
+
+Google documents schedules for Tasks as a separate feature, with different eligibility and a 50-active-schedule limit. This distinction matters because the tested Scheduled page links to that article and its editor warns about approximate timing and usage limits.
+Source: https://support.google.com/gemini/answer/17094710?hl=en
+
+LIMITS OF THIS VERIFICATION
+No scheduled delivery was awaited. Unread-chat delivery, mobile notifications, news quality, connected Gmail/Calendar behavior, free-account availability, and maximum schedule counts were not tested live. Delete was visible but not executed; the demo was preserved paused. Run now was visible but not invoked. Timezone was not exposed in the editor, so confirm it separately if recording a timezone-specific promise.
+
+SCREENSHOT INDEX
+01-scheduled-page.jpg — starting Scheduled page with existing paused schedules.
+02-demo-prompt.jpg — exact creation prompt before submission.
+03-schedule-created.jpg — Gemini confirmation and schedule card.
+04-monday-schedule-details.jpg — weekly Monday 8 AM configuration.
+05-conversational-update.jpg — Friday update request and Gemini confirmation.
+06-update-readback.jpg — initial stale chat card, still showing Monday.
+07-active-list.jpg — created entry under Active.
+08-friday-persisted-details.jpg — saved Friday 4 PM plan, AI section, 250-word drift.
+09-management-menu.jpg — Pause, Run now, Delete controls.
+10-paused-status.jpg — entry moved under Paused.
+11-resume-menu.jpg — Resume control available.
+12-resumed-status.jpg — entry returned to Active.
+13-final-paused.jpg — final paused demo state.
+
+Screenshots are unaltered captures of the browser. They include surrounding account and sidebar context, which may need cropping before use in a public training video.
