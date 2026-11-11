@@ -687,7 +687,7 @@ export const AiAutomation: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => (
     </Sequence>
     {/* zIndex lifts the card above the body scenes, which stack with z-index 1–60 */}
     <Sequence durationInFrames={AI_AUTOMATION_TITLE_FRAMES} style={{ zIndex: 100 }}>
-      <TitleCardGreen label="AI AUTOMATION" title="From Reactive to Proactive AI" />
+      <TitleCardGreen title="Getting Started with AI Automation" />
     </Sequence>
   </AbsoluteFill>
 );
