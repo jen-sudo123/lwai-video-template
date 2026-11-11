@@ -1,0 +1,27 @@
+By now, you know how to spot which tasks deserve AI support. You can qualify them, break them into atomic steps, and route each step to the right kind of AI.
+
+But if you're rebuilding the same prompt and context every time you open a chat, you're still working linearly. You're repeating the design work instead of reusing it. Reusable assistants help solve that problem.
+
+If prompting is delegation, then reusable assistants are like your standard operating procedures. They turn your best prompts into repeatable workflows for specific types of work.
+
+The first step is to convert your CODO Prompt into an Assistant Prompt Template. The key difference is that a Prompt Template separates standing instructions from variable inputs.
+
+Standing instructions define the assistant's role, its purpose, how it should work, and what the output should look like. These stay consistent. Variable inputs are the specific situations, questions, or documents you bring each time.
+
+Take our Personal Board of Advisors as an example. In a regular CODO Prompt, I might describe myself as a CEO in the AI transformation space, explain a particular business challenge, and ask my virtual board of advisors to help me think it through.
+
+In the Prompt Template, I keep the standing instructions: who I am, what the board should help me with, and how I want it to challenge my thinking. The specific business decision changes every time I use it. So I don't need to rebuild the whole prompt. I just bring a new situation to the same set of instructions.
+
+Now, you can already reuse a Prompt Template by copying and pasting it into a new chat. That works. But the real shift happens when you save those instructions in an AI tool designed for repeated use.
+
+Many AI platforms let you create reusable assistants. You save your standing instructions and, depending on the tool, add supporting knowledge, reference materials, or access to other tools.
+
+The setup may differ, but the principle is the same. You define how AI should work once, then reuse those instructions across different situations. Instead of starting from scratch, you bring a new question, task, or situation to an assistant that's already set up for that type of work.
+
+Before you start building, here are three things to remember. First, keep it focused. Give each assistant a clear purpose. Our Personal Board of Advisors helps with decision-making. It doesn't also need to write emails or summarize meetings. Keep unrelated workflows separate.
+
+Second, test before you build. Don't invest time configuring an assistant until you know the underlying Prompt Template works. Try it three, four, or five times with different situations. Look for consistent, useful results, and refine the instructions where needed.
+
+And finally, stay vigilant. A reusable assistant is still AI. It can miss context, make inaccurate claims, or produce inconsistent results. And saving instructions doesn't make an assistant autonomous. In many cases, you still need to start the task, provide the relevant input, and review the output.
+
+Reusable assistants can reduce repeated setup work. But you are still responsible for the results.
