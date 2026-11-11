@@ -1,0 +1,43 @@
+scene	start_s	end_s	frames@30	first words
+1	0.00	5.84	0	Much of AI's value comes when
+2	6.88	12.83	206	Gemini lets you schedule recurring AI
+3	13.60	22.83	408	In this video, we'll focus on
+4	23.56	31.65	707	A Scheduled Action combines an instruction
+5	32.24	41.63	967	For a simple research briefing, there's
+6	42.40	44.08	1272	Let's create a weekly briefing.
+7	44.85	47.31	1345	I open Gemini and start a
+8	48.04	60.35	1441	I type: Every Monday at 8
+9	61.20	65.68	1836	Notice that I'm telling Gemini both
+10	66.13	69.52	1984	I submit the prompt. Gemini can
+11	70.45	76.19	2113	Gemini confirms the schedule and shows
+12	76.92	87.52	2308	I check that it repeats weekly,
+13	87.92	94.75	2638	Gemini created the schedule straight from
+14	95.52	106.48	2866	One thing to keep in mind.
+15	106.88	111.15	3206	So use this for regular briefings,
+16	111.92	120.43	3358	To find the schedule, I open
+17	121.12	124.08	3634	Here, I can see all my
+18	124.80	134.03	3744	When a scheduled response is ready,
+19	134.72	138.83	4042	I open the conversation, read the
+20	139.48	143.87	4184	The useful part? I don't need
+21	144.68	146.40	4340	Now, let's change the briefing.
+22	146.61	157.87	4398	I return to the original chat
+23	158.40	162.00	4752	Gemini updates the existing schedule right
+24	162.53	166.52	4876	Once it confirms, I open Scheduled
+25	166.78	175.68	5004	I verify that the schedule now
+26	176.08	187.44	5282	That check matters. During testing, Gemini
+27	187.57	193.20	5627	And if the card in the
+28	193.28	200.88	5798	On the Scheduled page, I click
+29	201.01	204.80	6030	The three-dot menu lets me pause,
+30	204.93	206.88	6148	Let's pause this demo schedule.
+31	207.01	212.08	6210	It moves into the Paused section.
+32	212.16	216.32	6365	To start it again, I choose
+33	216.45	218.64	6494	For this demo, I'll leave it
+34	218.72	223.52	6562	So where are Scheduled Actions useful?
+35	223.76	229.12	6713	Weekly research: briefings on your industry,
+36	229.36	234.24	6881	Daily preparation: calendar and email summaries,
+37	234.32	239.36	7030	And regular learning: weekly insights, practice
+38	239.68	244.08	7190	Choose work that repeats regularly and
+39	244.15	255.68	7324	A quick note on availability. Google
+40	255.76	264.64	7673	Keep Activity must be turned on,
+41	264.80	273.52	7944	Start with one simple recurring task.
+42	273.65	279.36	8210	The goal is simple: stop repeatedly
