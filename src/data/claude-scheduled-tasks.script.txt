@@ -1,0 +1,43 @@
+Scheduled Tasks let Claude take care of recurring work, without you having to prompt it every time.
+
+Instead of asking Claude every week to research industry news, summarize team updates, or prepare a report, you set the task up once, and Claude runs it automatically.
+
+And this goes beyond simple reminders. Claude can research information, work with your connected tools, and deliver finished outputs, on a schedule.
+
+In this demo, I'll create a weekly consulting industry brief for my Monday leadership prep.
+
+There are two ways to create a Scheduled Task. You can set it up manually, defining the instructions, permissions, model, and schedule yourself. Or you can create it with Claude, by describing the work and when it should happen.
+
+I'll open Scheduled in the left sidebar, click New task, and choose Create with Claude. You can also ask for a scheduled task directly in a regular conversation.
+
+Here's my request. Every Monday at 8 AM, U-T-C plus seven, search the web for the past week's major consulting industry news. Then write a five-bullet executive brief, around 150 words, with the source, date, and link for each item. Separate facts from analysis, and flag anything unconfirmed.
+
+Notice that I'm telling Claude both what to do and when to do it. I'm also specifying the time zone, and what a useful result looks like.
+
+Claude may ask a few follow-up questions before it proposes the task.
+
+Next, I'll review the name, instructions, schedule, and permissions. I'll call it Weekly Consulting Brief, and check that the schedule says every Monday at 8 AM, U-T-C plus seven.
+
+This review matters. In testing, Claude suggested a slightly earlier time to avoid busy periods. If that happens, just ask it to use exactly 8 AM before you approve.
+
+Even then, tasks set on the hour can start a few minutes late. So treat 8 AM as the start time, not a guaranteed delivery time.
+
+Once everything looks right, I'll click Schedule. Claude creates the recurring task and adds it to the Scheduled page.
+
+Now I'll open Weekly Consulting Brief. Here I can see its next scheduled run, and its run history.
+
+Edit instructions lets me change the brief. Clicking the recurrence lets me adjust the schedule. And the Enable schedule switch pauses and resumes it. The options menu also has Rename, Edit, and Delete.
+
+Before relying on it every Monday, I'll test it with Run now. Claude starts a separate run, using the saved instructions.
+
+When it finishes, I'll open the result and check three things. First, did Claude follow the format? Second, are the developments relevant and current? And third, do the sources actually support the claims?
+
+Now I have a recurring brief that gives me a head start on my Monday leadership prep.
+
+A few things to keep in mind. First, Scheduled Tasks are available on paid Claude plans. The interface can vary by rollout, and in organizations, access may depend on admin settings.
+
+Second, cloud scheduled tasks can run even when your computer is asleep, or the desktop app is closed. Tasks that need local files or apps run on your computer, so it needs to be awake, with Claude Desktop open.
+
+Third, a scheduled task uses whatever tools, connectors, and permissions it's been given. Review the permission setting carefully. In Auto mode, Claude can work and use connectors without pausing for your approval.
+
+And finally, scheduling the work doesn't remove the need to check it. Test the task, inspect the sources, and refine the instructions, before you depend on the result.
