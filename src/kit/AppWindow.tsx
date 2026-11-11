@@ -15,7 +15,8 @@ import { INK, LIME, LINE, MUTED } from './theme';
 
 export type AppWindowCam = { at: number; x: number; y: number; s: number; dur?: number };
 export type AppWindowCur = { at: number; x: number; y: number; click?: boolean; dur?: number };
-export type AppWindowRing = { at: number; until?: number; x: number; y: number; w: number; h: number; spot?: boolean };
+// lines (ringStyle 'line' only): text rows {x, y = row bottom, w}; the underline runs along them in reading order over `dur` s
+export type AppWindowRing = { at: number; until?: number; x: number; y: number; w: number; h: number; spot?: boolean; lines?: { x: number; y: number; w: number }[]; dur?: number };
 export type AppWindowStep = { at: number; text: string };
 
 export const lerpKeys = <T extends { at: number; dur?: number }>(
@@ -107,6 +108,25 @@ export const AppWindow: React.FC<{
               if (ringStyle === 'line') {
                 const out = r.until ? 1 - prog(t, r.until, 0.3) : 1;
                 const run = prog(t, r.at, 0.55, IN_OUT);
+                const bar = (k: string | number, x: number, y: number, w: number) => (
+                  <div key={k} style={{ position: 'absolute', left: x, top: y, width: w, height: Math.max(4 / S, 2.5), borderRadius: 4 / S, background: LIME, opacity: out, boxShadow: `0 0 ${6 / S}px rgba(102,198,28,.45)` }} />
+                );
+                if (r.lines?.length) {
+                  const total = r.lines.reduce((n, l) => n + l.w, 0);
+                  let left = prog(t, r.at, r.dur ?? 0.5 * r.lines.length, (n) => n) * total;
+                  return (
+                    <React.Fragment key={i}>
+                      {r.spot && (
+                        <div style={{ position: 'absolute', left: r.x - 6 / S, top: r.y - 6 / S, width: r.w + 12 / S, height: r.h + 12 / S, borderRadius: 10 / S, boxShadow: `0 0 0 4000px rgba(16,24,10,${0.42 * Math.min(1, a) * out})` }} />
+                      )}
+                      {r.lines.map((l, j) => {
+                        const w = Math.max(0, Math.min(l.w, left));
+                        left -= l.w;
+                        return w > 0 ? bar(j, l.x, l.y + 2 / S, w) : null;
+                      })}
+                    </React.Fragment>
+                  );
+                }
                 return (
                   <React.Fragment key={i}>
                     {r.spot && (
