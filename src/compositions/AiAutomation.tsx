@@ -208,6 +208,55 @@ const Switch: React.FC<{ on: number }> = ({ on }) => (
   </div>
 );
 
+// Scene 1 diagram: You → (ask) → AI → (answer) → You, then the AI idles until you ask again.
+// Cues: ask 5.52, answers 7.0, depends on you 9.2.
+const qPoint = (p: number, x0: number, y0: number, cx: number, cy: number, x1: number, y1: number) => {
+  const u = 1 - p;
+  return [u * u * x0 + 2 * u * p * cx + p * p * x1, u * u * y0 + 2 * u * p * cy + p * p * y1];
+};
+const ReactiveLoop: React.FC<{ t: number }> = ({ t }) => {
+  const nodes = enter(t, 1.0, { scale: 0.9 });
+  const pAsk = prog(t, 5.4, 0.9, IN_OUT);
+  const pAns = prog(t, 6.9, 0.9, IN_OUT);
+  const idle = prog(t, 9.0, 0.8, IN_OUT); // AI greys out, the weight moves to you
+  const [qx, qy] = qPoint(pAsk, 250, 210, 460, 40, 670, 210);
+  const [ax, ay] = qPoint(pAns, 670, 330, 460, 500, 250, 330);
+  const travel = (p: number) => (p > 0 && p < 1 ? 1 : 0);
+  const dots = '...'.slice(0, 1 + (Math.floor(t * 2.5) % 3));
+  return (
+    <div style={{ position: 'relative', width: 920, height: 560, flex: 'none' }}>
+      <svg width={920} height={560} style={{ position: 'absolute', inset: 0, overflow: 'visible' }}>
+        <path d="M250 210 Q460 40 670 210" fill="none" stroke={GREEN} strokeWidth={5} strokeLinecap="round" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - pAsk} />
+        <path d="M670 330 Q460 500 250 330" fill="none" stroke={GREEN} strokeWidth={5} strokeLinecap="round" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - pAns} />
+        {pAsk >= 1 && <path d="M646 182 L672 212 L634 218" fill="none" stroke={GREEN} strokeWidth={5} strokeLinecap="round" strokeLinejoin="round" />}
+        {pAns >= 1 && <path d="M274 358 L248 328 L286 322" fill="none" stroke={GREEN} strokeWidth={5} strokeLinecap="round" strokeLinejoin="round" />}
+      </svg>
+      {/* travelling message and answer */}
+      <div className="kit-pill" style={{ position: 'absolute', left: qx, top: qy, transform: 'translate(-50%,-50%)', fontSize: 24, padding: '10px 22px', opacity: travel(pAsk), background: '#fff', borderColor: GREEN }}>?</div>
+      <div style={{ position: 'absolute', left: ax, top: ay, transform: 'translate(-50%,-50%)', opacity: travel(pAns) }}><FileIcon size={48} accent /></div>
+      {/* arrow labels */}
+      <div className="kit-ui" style={{ position: 'absolute', left: 360, top: 62, width: 200, textAlign: 'center', fontSize: 30, fontWeight: 600, color: GREEN, ...enter(t, 5.4, { y: 10 }) }}>You ask</div>
+      <div className="kit-ui" style={{ position: 'absolute', left: 360, top: 456, width: 200, textAlign: 'center', fontSize: 30, fontWeight: 600, color: GREEN, ...enter(t, 6.9, { y: -10 }) }}>It answers</div>
+      {/* You */}
+      <div style={{ position: 'absolute', left: 60, top: 140, width: 190, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16, ...nodes }}>
+        <div style={{ width: 180, height: 180, borderRadius: '50%', background: LIME_SOFT, display: 'grid', placeItems: 'center', boxShadow: `0 0 0 ${idle * (8 + 8 * Math.sin(t * 4) ** 2)}px rgba(102,198,28,.35)` }}>
+          <Icon name="person" size={96} />
+        </div>
+        <div className="kit-ui" style={{ fontSize: 30, fontWeight: 600 }}>You</div>
+      </div>
+      {/* AI */}
+      <div style={{ position: 'absolute', left: 670, top: 140, width: 190, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16, ...nodes }}>
+        <div style={{ opacity: 1 - 0.6 * idle, filter: `grayscale(${idle})` }}>
+          <AiNode size={180} />
+        </div>
+        <div className="kit-ui" style={{ fontSize: 30, fontWeight: 600, color: idle > 0.5 ? MUTED : INK, whiteSpace: 'nowrap' }}>
+          {idle > 0.5 ? `Waiting${dots}` : 'AI'}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // ── Body ────────────────────────────────────────────────────────────────────
 const AiAutomationBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
   const frame = useCurrentFrame();
@@ -223,30 +272,33 @@ const AiAutomationBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
       <style>{KIT_CSS}</style>
       {audioSrc !== 'none' && <Audio src={audioSrc ?? staticFile('audio/AiAutomation.mp3')} />}
 
-      {/* 1 — The reactive pattern */}
+      {/* 1 — The reactive pattern: you ask, it answers, then it waits on you */}
       <Scene t={t} index={0}>
-        <div className="kit-label" style={e(0.2, { y: 14 })}>The usual way</div>
-        <div className="kit-h2" style={e(0.4, { dur: 0.9, y: 30 })}>
-          You already know the <span className="kit-mark" style={mk(4.08)}>reactive pattern.</span>
-        </div>
-        <div className="kit-row" style={{ gap: 50, marginTop: 80, alignItems: 'flex-start' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20, ...e(5.52) }}>
-            <span className="kit-tag" style={{ alignSelf: 'flex-start' }}>You ask</span>
-            <Composer w={680} text={typed(t, 5.6, 'Summarize this week’s pipeline changes', 1.3)} caret={t < 7.2} />
-          </div>
-          <div style={{ marginTop: 90 }}>
-            <Arrow t={t} at={6.5} w={120} />
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20, ...e(7.0) }}>
-            <span className="kit-tag" style={{ alignSelf: 'flex-start' }}>It answers</span>
-            <div className="kit-card" style={{ width: 620, padding: '30px 34px', boxShadow: '0 10px 30px rgba(0,0,0,.06)' }}>
-              <Lines p={prog(t, 7.1, 1.4)} widths={[92, 80, 86, 55]} />
+        <div className="kit-row" style={{ gap: 80, alignItems: 'center' }}>
+          <div style={{ width: 760, flex: 'none' }}>
+            <div className="kit-label" style={e(0.2, { y: 14 })}>The usual way</div>
+            <div className="kit-h1" style={{ fontSize: 96, ...e(0.4, { dur: 0.9, y: 30 }) }}>
+              The <span className="kit-mark" style={mk(4.08)}>reactive</span> pattern
+            </div>
+            <p className="kit-body kit-muted" style={{ fontSize: 36, marginTop: 50, ...e(9.2) }}>
+              Helpful, but it only works if you
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 18, marginTop: 24 }}>
+              {(
+                [
+                  ['Remember to ask', 10.0],
+                  ['Actually ask the question', 11.76],
+                ] as const
+              ).map(([txt, at], i) => (
+                <div key={txt} className="kit-row kit-ui" style={{ gap: 22, fontSize: 40, fontWeight: 500, ...e(at, { x: -20, y: 0 }) }}>
+                  <span style={{ width: 52, height: 52, borderRadius: '50%', background: LIME_SOFT, color: GREEN, display: 'grid', placeItems: 'center', fontSize: 26, fontWeight: 700, flex: 'none' }}>{i + 1}</span>
+                  {txt}
+                </div>
+              ))}
             </div>
           </div>
+          <ReactiveLoop t={t} />
         </div>
-        <p className="kit-body" style={{ fontSize: 44, marginTop: 70, ...e(8.52) }}>
-          Helpful, but it depends on you <span className="kit-mark" style={mk(10.0)}>remembering to ask.</span>
-        </p>
       </Scene>
 
       {/* 2 — Reactive → proactive */}
