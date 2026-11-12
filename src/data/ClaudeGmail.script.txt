@@ -1,0 +1,35 @@
+Work email is rarely one isolated message. It's threads, follow-ups, and context scattered across weeks.
+
+[pause] With Claude's Gmail integration, you can search that history, summarize conversations, draft replies, and organize your inbox, without switching apps. And Claude can link you straight to the original emails, so you can verify before you act.
+
+[pause] First, let's connect Gmail. In Claude, I open Customize, then Connectors. I find Gmail and choose Connect.
+
+[pause] I select my Google account, review the permissions, and authorize the connection. On a Team or Enterprise plan, your organization may need to enable the connector first.
+
+[pause] Then, in the prompt box, I open the plus menu, go to Connectors, and make sure Gmail is toggled on. Now Claude uses Gmail whenever my request needs email information. I don't need to mention it every time.
+
+[pause] Let's start with a common task: replying to an email that needs some thought.
+
+[pause] I ask Claude to find Jen's email about the AI Fluency Matrix, with the sender, subject, date, and a clickable source link. To summarize the request in one sentence, flag any risks, and draft a calm, direct reply under 120 words. And I tell it: don't invent details, and don't send anything.
+
+[pause] Notice I ask explicitly for both a draft and a source link. Asking only for a summary doesn't reliably give you either.
+
+[pause] Claude searches Gmail and returns a one-sentence summary, the risks and unclear points, a draft reply, and a link to the source email. Clicking that link opens the original message in Gmail.
+
+[pause] Before I use the reply, I check the original message, then review the draft's facts, commitments, placeholders, and signature. If Claude knows my writing preferences, it adapts the draft to my style.
+
+[pause] When I'm happy, I can ask Claude to send it. Whether Claude pauses for approval depends on the conversation mode, tool permissions, and your organization's settings. In Manual mode, sending, replying, and forwarding need approval. In Auto mode, Claude may act after an automated risk check. So check your mode before you ask it to send.
+
+[pause] Now let's move beyond one email. Instead of reading messages one by one, I ask Claude to process today's inbox.
+
+[pause] I ask it to check today's emails in my timezone, separate newsletters from everything else, summarize the newsletters with source links, and tell me how many messages it reviewed, without changing labels or marking anything read.
+
+[pause] Claude returns a structured summary, so I can see what's arrived without opening every email. I still check the search scope and the message count before treating it as a complete review.
+
+[pause] Claude can also apply labels and organize threads. But remember: summarizing doesn't change your inbox. Organizing does. So review the proposed actions, and confirm Claude picked the right messages first.
+
+[pause] A few practical notes. The Gmail connector works on Claude web, desktop, and supported mobile apps. Claude can search, read, draft, send, forward, and label, within your existing Gmail permissions. It can see attachment names, but it can't read what's inside them. And large inboxes may take a few extra retrieval steps.
+
+[pause] On privacy: Gmail data retrieved through the connector isn't used to train Claude's models. It's stored with the conversation, and deleting the chat removes it. Content you copy out manually may be treated differently, depending on your settings. And always follow your organization's data policies.
+
+[pause] The key takeaway: Claude's Gmail integration helps you find context, prepare responses, and manage email, right from a conversation. Clear prompts, source checks, and deliberate permissions keep you in control.
