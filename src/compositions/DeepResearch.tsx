@@ -160,33 +160,38 @@ const Pill: React.FC<{ style?: React.CSSProperties; children: React.ReactNode; o
 // ── 1 Answers in seconds ─────────────────────────────────────────────────────
 const S1: React.FC<T> = ({ t }) => {
   const q = 'What are the big trends in our industry?';
+  // Big headline on the left; prompt box and the three answer cards stacked in the right column.
+  const answers = [
+    ['Summary', 'The key points in a few lines', 6.48],
+    ['Recommendation', 'A suggested next step', 7.28],
+    ['List of ideas', 'Options to consider', 8.64],
+  ] as const;
   return (
-    <>
-      <Label t={t}>Everyday AI</Label>
-      <div className="kit-h1" style={E(t, 0.3, { dur: 0.9, y: 34 })}>
-        Answers in <span className="kit-mark" style={M(t, 5.52)}>seconds.</span>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 80 }}>
+      <div style={{ width: 760 }}>
+        <Label t={t}>Everyday AI</Label>
+        <div className="kit-h1" style={{ fontSize: 150, lineHeight: 1.02, ...E(t, 0.3, { dur: 0.9, y: 34 }) }}>
+          Answers in <span className="kit-mark" style={M(t, 5.52)}>seconds.</span>
+        </div>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 50, marginTop: 80 }}>
-        <div style={E(t, 1.2)}>
-          <Composer text={typed(t, 3.84, q, 1.0)} caret={t < 5.2} w={760} />
+      <div style={{ width: 880, display: 'flex', flexDirection: 'column', gap: 22 }}>
+        <div style={{ position: 'relative', ...E(t, 1.2, { x: 30, y: 0 }) }}>
+          <Composer text={typed(t, 3.84, q, 1.0)} caret={t < 5.2} w={880} />
+          <div style={{ position: 'absolute', right: 0, top: -64, ...E(t, 5.52, { scale: 0.8, y: 0, easing: BACK }) }}>
+            <Pill style={{ fontSize: 26, padding: '10px 22px', background: LIME_SOFT, borderColor: GREEN }}>⏱ 1.5s</Pill>
+          </div>
         </div>
-        <div style={{ ...E(t, 5.52, { scale: 0.8, y: 0, easing: BACK }) }}>
-          <Pill style={{ fontSize: 26 }}>⏱ 1.5s</Pill>
-        </div>
-        <Arrow t={t} at={6.0} w={120} />
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
-          {([
-            ['Summary', 6.48],
-            ['Recommendation', 7.28],
-            ['List of ideas', 8.64],
-          ] as const).map(([l, at]) => (
-            <div key={l} style={E(t, at, { x: -30, y: 0, easing: BACK })}>
-              <Pill>{l}</Pill>
+        {answers.map(([h, b, at]) => (
+          <div key={h} className="kit-card kit-ui" style={{ padding: '22px 30px', display: 'flex', alignItems: 'center', gap: 24, ...E(t, at, { x: 40, y: 0, easing: BACK }) }}>
+            <Check size={38} />
+            <div>
+              <div style={{ fontSize: 32, fontWeight: 700 }}>{h}</div>
+              <div style={{ fontSize: 24, color: MUTED, marginTop: 4 }}>{b}</div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 
