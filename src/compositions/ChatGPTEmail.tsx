@@ -114,15 +114,17 @@ const ChatGPTEmailBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           start={17.9}
           src={shot('01-drafting-prompt')}
           {...WIN}
-          cam={[{ at: 19.4, x: 960, y: 440, s: 1.7 }]}
+          cam={[{ at: 22.8, x: 955, y: 390, s: 1.5 }]}
           rings={[
-            { at: 24.08, until: 27.9, x: 752, y: 393, w: 290, h: 26 },
-            { at: 28.08, until: 31.6, x: 616, y: 419, w: 548, h: 26 },
+            { at: 24.08, until: 27.9, x: 610, y: 318, w: 414, h: 28 },
+            { at: 28.08, until: 29.45, x: 778, y: 396, w: 326, h: 28 },
+            { at: 29.52, until: 31.8, x: 893, y: 448, w: 292, h: 28 },
           ]}
           steps={[
             { at: 20.4, text: 'Paste the email into a new chat' },
             { at: 24.08, text: 'Agenda by Friday' },
-            { at: 28.08, text: 'Recording? How long is access?' },
+            { at: 28.08, text: 'Will it be recorded?' },
+            { at: 29.52, text: 'How long is access?' },
           ]}
         />
       </Scene>
