@@ -1,0 +1,35 @@
+<speak>
+<break time="500ms"/>Most people start using ChatGPT for email by copying a message into a chat. But ChatGPT can do more than help you write replies. You can connect it to Gmail, work directly with your inbox, and schedule a daily review. Let me show you three ways to do that.
+
+<break time="500ms"/>I'll start with the simplest option. I paste an email into a new chat. Alex wants the updated workshop agenda by Friday, and needs to know whether the session will be recorded, and for how long participants will have access.
+
+<break time="500ms"/>Then I ask ChatGPT to summarize the request in one sentence, flag any risks or unclear points, and draft a reply in my tone. Direct, calm, and specific. Under a hundred and twenty words.
+
+<break time="500ms"/>ChatGPT returns a one-sentence summary, the risks and unclear points, and a draft reply. It spots that the recording details aren't confirmed yet, and prepares a short response.
+
+<break time="500ms"/>Before I use the draft, I check the facts and the commitments, especially that Friday deadline. At this stage, ChatGPT is only working from the text I pasted. No inbox connection required. Now, let's go a step further.
+
+<break time="500ms"/>I open Plugins in the left navigation, select Gmail, and then Install plugin. Google asks me to choose an account, so I pick mine and select Continue.
+
+<break time="500ms"/>Next, Google shows what OpenAI wants access to. I open the list of services to review it. It includes reading, composing, and sending emails from my Gmail account. I review the access, select Done, and Continue. If you're connecting for the first time, your screens may look a little different.
+
+<break time="500ms"/>Back in ChatGPT, the Gmail plugin is installed. I select Try in chat and ask it to check today's emails, group them into newsletters and everything else, and summarize the newsletters in bullets.
+
+<break time="500ms"/>ChatGPT pulls the messages and organizes the results. Today, it found five emails across two conversations, and no newsletters. To look further back, I could ask for the last seven days instead.
+
+<break time="500ms"/>I can also ask it to find a specific conversation, summarize a long thread, or prepare a reply. Depending on your account and permissions, it can even send, label, or archive messages, and some of those actions will ask for your approval first.
+
+<break time="500ms"/>The key difference? ChatGPT is now working from my actual inbox, not from text I paste in.
+
+<break time="500ms"/>Now let's turn this into a routine. I open Scheduled, and select New task.
+
+<break time="500ms"/>In the instructions, I ask ChatGPT to review my recent inbox every weekday at seven a.m., identify the emails that need my reply, and skip newsletters and promotions. I want a short priority list, with the sender, the subject, and why it needs a follow-up. And if nothing needs attention, it should simply say, All clear.
+
+<break time="500ms"/>I set it to repeat on weekdays, at seven a.m. in my time zone, with no end date. Then I select Create.
+
+<break time="500ms"/>ChatGPT confirms the task is scheduled, and shows when it will run next. If I ever want to stop it for a while, I open the task and select Pause.
+
+<break time="500ms"/>A few practical notes. Plugins and scheduled tasks depend on your plan and your workspace settings. Always review the Google access request before you connect. Remember that an unread email doesn't always need your reply, someone else may already have answered. Check drafts before sending, especially facts, recipients, and commitments. And follow your organization's policies before connecting a work inbox.
+
+<break time="500ms"/>Start with recent, tightly scoped searches, and refine from there. Because the real value isn't writing emails faster. It's spending less time sorting your inbox, so you can focus on the conversations that actually need you.
+</speak>
