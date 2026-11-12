@@ -47,7 +47,9 @@ export const AppWindow: React.FC<{
   title?: string;
   imgW?: number;
   imgH?: number;
-}> = ({ t, start, src, cam = [], cursor = [], rings = [], steps = [], left, top = 54, width = 1560, title = 'claude.ai', imgW = 1920, imgH = 1080 }) => {
+  stepOffset?: number; // continue STEP numbering from a previous window (STEP n = offset + index + 1)
+  numbered?: boolean; // false = plain caption, no STEP badge
+}> = ({ t, start, src, cam = [], cursor = [], rings = [], steps = [], left, top = 54, width = 1560, title = 'claude.ai', imgW = 1920, imgH = 1080, stepOffset = 0, numbered = true }) => {
   const IMG_W = imgW;
   const IMG_H = imgH;
   const k = width / IMG_W;
@@ -159,9 +161,13 @@ export const AppWindow: React.FC<{
           }}
         >
           <div style={{ fontFamily: 'Public Sans', color: INK, display: 'flex', alignItems: 'center', gap: 16, padding: '12px 26px 12px 14px', borderRadius: 999, background: '#fff', border: `2px solid ${LINE}`, fontSize: 28, fontWeight: 500 }}>
-            <span style={{ background: LIME, color: '#fff', borderRadius: 999, padding: '4px 14px', fontSize: 18, fontWeight: 700, letterSpacing: '.1em' }}>
-              STEP {stepIdx + 1}
-            </span>
+            {numbered ? (
+              <span style={{ background: LIME, color: '#fff', borderRadius: 999, padding: '4px 14px', fontSize: 18, fontWeight: 700, letterSpacing: '.1em' }}>
+                STEP {stepOffset + stepIdx + 1}
+              </span>
+            ) : (
+              <span style={{ width: 12, height: 12, borderRadius: '50%', background: LIME, marginLeft: 8 }} />
+            )}
             {step.text}
           </div>
         </div>
