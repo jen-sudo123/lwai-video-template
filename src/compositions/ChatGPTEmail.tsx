@@ -393,22 +393,24 @@ const ChatGPTEmailBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
         </div>
       </Scene>
 
-      {/* 12 — Scheduled > New task */}
+      {/* 12 — Scheduled > New task (ChatGPT desktop app, 2000x1000 crop) */}
       <Scene t={t} index={11} pad={false}>
         <AppWindow
           t={t}
           start={158.5}
-          src={shot('12-new-task')}
-          {...WIN}
-          cam={[{ at: 160.6, x: 420, y: 200, s: 1.8 }]}
+          src={shot('12-scheduled-sidebar')}
+          imgW={2000}
+          imgH={1000}
+          title="ChatGPT"
+          cam={[{ at: 160.6, x: 420, y: 200, s: 1.9 }]}
           cursor={[
-            { at: 160.9, x: 300, y: 260 },
-            { at: 161.0, x: 110, y: 35, dur: 0.6 },
-            { at: 162.3, x: 112, y: 79, click: true },
+            { at: 160.9, x: 520, y: 330 },
+            { at: 161.0, x: 36, y: 157, click: true, dur: 0.6 },
+            { at: 162.3, x: 160, y: 97, click: true },
           ]}
           rings={[
-            { at: 161.52, until: 163.0, x: 64, y: 21, w: 96, h: 28, spot: true },
-            { at: 163.04, x: 66, y: 65, w: 96, h: 28, spot: true },
+            { at: 161.52, until: 163.0, x: 94, y: 24, w: 134, h: 34, spot: true },
+            { at: 163.04, x: 96, y: 81, w: 128, h: 32, spot: true },
           ]}
           steps={[
             { at: 159.0, text: 'Turn it into a routine' },
@@ -418,32 +420,37 @@ const ChatGPTEmailBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
         />
       </Scene>
 
-      {/* 13 — Schedule a task: instructions + repeat settings */}
+      {/* 13 — Schedule a task: instructions + repeat settings (1412x708 crop) */}
       <Scene t={t} index={12} pad={false}>
         <AppWindow
           t={t}
           start={164.1}
-          src={shot('12-new-task')}
-          {...WIN}
+          src={shot('13-schedule-task')}
+          imgW={1412}
+          imgH={708}
+          title="ChatGPT"
           cam={[
-            { at: 164.1, dur: 0.01, x: 955, y: 250, s: 1.7 },
-            { at: 185.6, dur: 1.0, x: 955, y: 470, s: 1.5 },
+            { at: 164.1, dur: 0.01, x: 620, y: 150, s: 1.6 },
+            { at: 185.6, dur: 1.0, x: 620, y: 380, s: 1.3 },
           ]}
           cursor={[
-            { at: 191.0, x: 1100, y: 600 },
-            { at: 191.8, x: 1238, y: 636, click: true },
+            { at: 191.0, x: 760, y: 470 },
+            { at: 191.8, x: 903, y: 509, click: true },
           ]}
           rings={[
-            { at: 166.88, until: 170.6, x: 653, y: 187, w: 395, h: 20 },
-            { at: 170.72, until: 173.5, x: 653, y: 207, w: 285, h: 20 },
-            { at: 173.6, until: 176.6, x: 653, y: 227, w: 290, h: 20 },
-            { at: 176.72, until: 181.4, x: 653, y: 267, w: 545, h: 20 },
-            { at: 184.4, until: 185.7, x: 653, y: 287, w: 262, h: 20, spot: true },
-            { at: 186.48, until: 187.05, x: 657, y: 375, w: 598, h: 30 },
-            { at: 187.12, until: 188.1, x: 1150, y: 421, w: 80, h: 26 },
-            { at: 188.16, until: 190.5, x: 1070, y: 469, w: 160, h: 26 },
-            { at: 190.56, until: 191.6, x: 1176, y: 517, w: 54, h: 26 },
-            { at: 192.56, x: 1200, y: 618, w: 78, h: 36, spot: true },
+            { at: 166.88, until: 170.6, x: 318, y: 112, w: 465, h: 22 },
+            { at: 170.72, until: 173.5, x: 782, y: 112, w: 125, h: 22 },
+            { at: 170.72, until: 173.5, x: 318, y: 132, w: 182, h: 22 },
+            { at: 173.6, until: 176.6, x: 498, y: 132, w: 268, h: 22 },
+            { at: 176.72, until: 181.4, x: 764, y: 132, w: 106, h: 22 },
+            { at: 176.72, until: 181.4, x: 318, y: 151, w: 418, h: 22 },
+            { at: 184.4, until: 185.7, x: 738, y: 151, w: 160, h: 22 },
+            { at: 184.4, until: 185.7, x: 318, y: 171, w: 96, h: 22 },
+            { at: 186.48, until: 187.05, x: 305, y: 244, w: 628, h: 30 },
+            { at: 187.12, until: 188.1, x: 818, y: 295, w: 72, h: 24 },
+            { at: 188.16, until: 190.5, x: 738, y: 343, w: 152, h: 24 },
+            { at: 190.56, until: 191.6, x: 845, y: 390, w: 46, h: 24 },
+            { at: 192.56, x: 865, y: 491, w: 78, h: 36, spot: true },
           ]}
           steps={[
             { at: 164.72, text: 'Write the instructions' },
