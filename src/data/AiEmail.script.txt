@@ -1,0 +1,33 @@
+Email remains one of the most time-consuming parts of modern work.
+
+According to Microsoft's Work Trend Index, the average knowledge worker now receives 117 emails a day, and is interrupted 275 times during a typical workday.
+
+And for many of us, email isn't just messaging. It's where decisions are made, work is coordinated, priorities are clarified, and often where accountability lives.
+
+This is why email is such a powerful place to introduce AI. It has three characteristics that make it an unusually strong AI use case.
+
+First, it's high volume. The sheer number of messages creates a constant cognitive load.
+
+Second, it's highly repetitive. The same patterns appear again and again: requests, updates, clarifications, follow-ups, and status checks.
+
+And third, it's primarily cognitive work. Reading, interpreting intent, deciding what matters, choosing a response, and translating it into a clear message.
+
+Those are precisely the areas where modern AI performs extremely well. AI can read and synthesize large amounts of text quickly, extract intent from messy or incomplete inputs, and help you move from information to action faster than processing it manually.
+
+So this is an important shift in how to think about AI for email. It's not about sending emails for you, replacing your judgment or relationships, or automating your communication.
+
+It's about having a thinking assistant inside your inbox that significantly reduces your cognitive load.
+
+It can help you understand long or complex threads without rereading everything. Draft a clear first response, instead of starting from a blank page. And adjust the tone to the context: direct, diplomatic, concise, or detailed.
+
+And those benefits compound when you use it for recurring email types, like status updates or approvals.
+
+Now, you'll see AI for email show up in two main ways, and it's helpful to understand the difference.
+
+First, there's AI that lives directly inside your inbox, like Gemini in Gmail or Copilot in Outlook, if you have the relevant subscription. Because these tools sit within your email, they fit into the flow of work. They can read entire threads, understand context across messages, summarize what's happening, suggest replies, and help you think through a response without switching tools.
+
+Second, there's using a core AI platform like ChatGPT or Claude, either by pasting in emails, or by connecting your inbox through a connector. The capabilities are actually quite similar. The difference is that you're stepping out of the inbox to think more deliberately.
+
+That's especially useful for higher-stakes emails: clarifying a complex situation, drafting a sensitive response, or thinking through implications before you reply. You might even pull in documents, or run a web search or deep research.
+
+Across both approaches, the value of AI in email isn't just as a writing assistant. It's about offloading repetitive cognitive work, and having a thinking partner in your inbox. And that's the capability we're learning to apply here.
