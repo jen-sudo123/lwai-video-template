@@ -1,0 +1,63 @@
+<speak>
+<break time="500ms"/>Gemini Notebook, formerly NotebookLM, is Google's AI-powered research tool, designed to help you work with evidence.
+
+<break time="500ms"/>What makes it particularly useful is source grounding. You can discover relevant information, choose which sources to use, and ask questions based on that selected material, with citations to help you check the important claims.
+
+<break time="500ms"/>Let's see how this works.
+
+<break time="500ms"/>First, I open Gemini Notebook and create a new notebook for my research topic.
+
+<break time="500ms"/>I could start by adding existing materials, like Google Docs, PDFs, Slides, Word documents, images, or Google Sheets. I can also add web pages, public YouTube videos with captions, and other supported sources.
+
+<break time="500ms"/>That gives me a focused workspace for researching one topic. But for this demonstration, I'll start with no sources, and let Gemini Notebook find them for me.
+
+<break time="500ms"/>In the Sources panel, I select Web, and switch from Fast Research to Deep Research.
+
+<break time="500ms"/>Then I enter my prompt. I'm asking for a concise executive brief on the most important developments affecting the AI training and consulting industry in Europe, over the last thirty days. I ask it to focus on implications for senior leaders, to prioritize primary and reputable sources, and to include citations for material claims.
+
+<break time="500ms"/>I start the research. Gemini Notebook investigates the topic across multiple websites, and prepares a research report with supporting sources. This can take a few minutes.
+
+<break time="500ms"/>Once it's ready, I select View sources to examine the findings.
+
+<break time="500ms"/>Here's an important step. I don't have to import everything.
+
+<break time="500ms"/>I can open the suggested sources, check their publication dates and credibility, and select the ones that are relevant. A "last thirty days" prompt can still return older background material, so I check the dates myself.
+
+<break time="500ms"/>For this demonstration, I'll keep the research report, and three useful supporting sources.
+
+<break time="500ms"/>Keep in mind, the report is an AI-generated synthesis. If I keep it, its broader findings can still shape later answers, including claims drawn from sources I haven't imported separately. So I check the report's citations too.
+
+<break time="500ms"/>Then I click Import. Now I have a selected collection of research material to work with.
+
+<break time="500ms"/>With my sources imported, I can ask questions, and get answers grounded in the selected materials.
+
+<break time="500ms"/>For example, I ask: what are the two most important developments for European AI training and consulting leaders? Cite the supporting evidence, and separate source facts from your recommendations.
+
+<break time="500ms"/>When an answer includes a citation, I can click it to inspect the supporting passage. That helps me check whether the source actually supports the claim.
+
+<break time="500ms"/>I can also select or deselect individual sources, to control which materials are used for a particular question.
+
+<break time="500ms"/>I can also turn the same research into different formats, depending on what I need.
+
+<break time="500ms"/>In the Studio panel, I can use Reports to request a briefing document for leadership, generate a Slide Deck to present the insights, or create a Mind Map to visualize the main themes, and how they connect.
+
+<break time="500ms"/>For a briefing, I can specify the audience, length, and focus. For a slide deck, I can choose the format, language, and length, and describe what I want it to cover. For a Mind Map, I can specify the topics or themes I want to explore.
+
+<break time="500ms"/>The exact controls may vary by account, and as the interface evolves.
+
+<break time="500ms"/>Once it's generated, I review the output before using it. Even a polished presentation can contain incorrect dates, unsupported claims, or recommendations stated too confidently.
+
+<break time="500ms"/>Before we finish, two important reminders.
+
+<break time="500ms"/>First, keep your sources current.
+
+<break time="300ms"/>Sources imported from Google Drive can sync automatically when the underlying files change. Files you uploaded from your computer may need to be replaced, or re-imported.
+
+<break time="500ms"/>And updating a source does not update the reports, slide decks, or Mind Maps you've already generated. Regenerate those when you need them to reflect the latest evidence.
+
+<break time="500ms"/>Second, verify the evidence.
+
+<break time="300ms"/>Source grounding makes claims easier to trace, but it doesn't guarantee accuracy.
+
+<break time="500ms"/>So check the important citations, confirm publication dates, consider what evidence might be missing, and keep a clear line between what the sources establish, and what the AI recommends.
+</speak>
