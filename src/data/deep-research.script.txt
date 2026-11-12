@@ -1,0 +1,41 @@
+<speak>
+<break time="500ms"/>Most AI tools are designed to give you answers quickly. You ask a question, and within seconds, you get a summary, a recommendation, or a list of ideas.
+
+<break time="500ms"/>That's useful for everyday work. But when you're facing a complex business question, a quick answer isn't always enough.
+
+<break time="500ms"/>You may need to explore different perspectives, compare evidence, understand trade-offs, and build a well-supported recommendation.
+
+<break time="400ms"/>That's where Deep Research comes in.
+
+<break time="700ms"/>Think of Deep Research as delegating a research assignment to AI, rather than simply asking it a question. Instead of generating an immediate response, it plans and carries out a multi-step investigation.
+
+<break time="500ms"/>It breaks your question into smaller research tasks, searches across multiple sources, analyzes the information, and brings the findings together into a structured report, with citations.
+
+<break time="500ms"/>For example, ask AI: should we expand into a new market? A regular chat might give you a quick list of opportunities and risks.
+
+<break time="500ms"/>Deep Research goes further. It investigates market conditions, competitors, regulatory considerations, and potential barriers, before presenting a more complete analysis.
+
+<break time="500ms"/>The key difference isn't how much information you get. It's how systematically the research is done.
+
+<break time="700ms"/>Deep Research is especially useful in three situations.
+
+<break time="500ms"/>First, strategic decisions. When you're comparing markets, competitors, or business models, it helps you weigh opportunities, risks, and trade-offs.
+
+<break time="500ms"/>Second, synthesizing complex evidence. Say you're exploring research on productivity, or AI adoption. It can pull together findings from multiple studies, and show where the evidence agrees, and where it doesn't.
+
+<break time="500ms"/>Third, learning unfamiliar topics. From emerging technologies to new regulations, it helps you quickly build a structured understanding of a subject, before you make decisions.
+
+<break time="700ms"/>Deep Research is powerful. But it isn't a substitute for your judgment.
+
+<break time="500ms"/>It can miss important evidence, misread sources, or reach conclusions that aren't fully supported. And some sources may be out of reach, like content behind paywalls, or internal systems that haven't been connected.
+
+<break time="500ms"/>Reports often include citations, but a citation doesn't make a claim correct. You still need to check the key sources, challenge the assumptions, and validate the conclusions, especially for high-stakes decisions.
+
+<break time="500ms"/>Deep Research also takes longer than a regular chat, and availability and usage limits vary by platform and plan. So use it deliberately, where the complexity and importance of the question justify the extra effort.
+
+<break time="700ms"/>The real shift is from asking AI for answers, to delegating a structured investigation.
+
+<break time="500ms"/>You define the question, the scope, and what good evidence looks like. AI does much of the research work. And you stay responsible for interpreting the findings, and making the decision.
+
+<break time="500ms"/>That's how Deep Research becomes more than an information tool. It becomes a practical capability for better-informed leadership decisions.
+</speak>
