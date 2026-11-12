@@ -1,0 +1,41 @@
+If we zoom out a little, the reason AI is so powerful at coding comes down to how code works.
+
+[pause] Like everyday language, code follows patterns. But it's also highly structured, with specific rules that computers can execute and test.
+
+[pause] AI models have learned from enormous amounts of code and technical information. And modern coding models can do more than generate code. They can reason through problems, run tests, identify errors, and improve their solutions.
+
+[pause] Tasks that once required significant programming experience can now be started with a simple instruction.
+
+[pause] But generating code quickly doesn't automatically mean the result is correct or reliable. That's an important distinction we'll come back to.
+
+[long pause] AI coding capabilities first gained traction among professional developers.
+
+[pause] Tools like GitHub Copilot, Cursor, and Codex help developers write, debug, and improve software. Today, they can also take on more complex tasks, such as implementing features across multiple files, running tests, and fixing errors.
+
+[pause] But the more interesting shift for most of us is that these capabilities are no longer limited to people who know how to code. We're moving from "Help me write this code" to "Build this for me." And that's where the idea of vibe coding comes in.
+
+[long pause] In early 2025, AI researcher Andrej Karpathy popularized the term vibe coding.
+
+[pause] He described a way of developing software where you focus on what you want to create, let AI generate the code, and keep guiding it through conversation, sometimes without even looking closely at the code itself.
+
+[pause] The idea caught on because it represented a major shift. Instead of needing to know how to write software, you can start by describing what you want the software to do. You explain your idea, AI generates an initial version, and you keep refining it through feedback.
+
+[long pause] This is where things get interesting for non-technical leaders. With tools like Gemini Canvas, ChatGPT Sites, or Lovable, you can describe an idea and turn it into something you can actually interact with.
+
+[pause] Maybe it's a dashboard that tracks your team's projects. Maybe it's a scenario planner for comparing business decisions. Or maybe it's a simple application that solves a recurring problem.
+
+[pause] You don't have to start by understanding programming languages or software architecture. You start with the problem you want to solve.
+
+[pause] Some tools help you create quick interactive prototypes. Others can build and publish more complete web applications, including features like databases and user authentication. But there's an important distinction here.
+
+[long pause] Getting an application to work is not the same as building a reliable product. Vibe coding can help you move quickly from an idea to a prototype, or even a working application. But just because something looks polished and works in a demonstration doesn't mean it's ready for real users.
+
+[pause] Think of it in three stages. First, a prototype. Does the idea make sense? Can people see and experience what you're proposing? Second, a working application. Does it actually perform the tasks you designed it to do? Third, a reliable product. Does it work consistently, handle unexpected situations, protect user information, and remain maintainable over time?
+
+[pause] AI can help throughout all three stages. But as you move toward a real product, testing, security, reliability, and human oversight become increasingly important. You may still need technical expertise, particularly when building applications that handle sensitive data or support critical business processes.
+
+[long pause] And this brings us to the real mindset shift. You don't necessarily need to become a developer to start creating software. Instead, you can take on the role of a director.
+
+[pause] Your leverage comes from defining what you want, explaining what good looks like, identifying problems, and guiding AI through iteration. You can start with something small, like a recipe maker, a household chores app, or a book recommender. Then apply the same approach to business challenges, like decision dashboards, internal tools, or scenario planners.
+
+[pause] The goal is to make creating and experimenting with software accessible to more people. AI lowers the barrier to building software, but it doesn't remove the responsibility of making sure that software works reliably. And for leaders, that's the opportunity: you can move from simply having an idea to actually testing it, learning from it, and deciding whether it's worth developing further.
