@@ -35,6 +35,7 @@ loadSans();
 // taken from the Scribe word timestamps in src/data/gemini-notebook-research.transcript.json.
 // A 90-frame green title card opens the video; the VO and every scene start after it.
 //
+// No animated cursor: the screenshots already show the real pointer.
 // Screenshots: gemini-notebook-research/images/02..14 are 1920x958; 01-home-crop is 1704x850
 // (01 cropped to the page content so the browser tabs and bookmarks bar are not shown).
 //
@@ -166,10 +167,6 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           imgW={1704}
           imgH={850}
           title={URL}
-          cursor={[
-            { at: 23.2, x: 900, y: 500 },
-            { at: 24.8, x: 1618, y: 116, click: true, dur: 0.6 },
-          ]}
           cam={[{ at: 24.4, x: 1400, y: 160, s: 1.8, dur: 1.0 }]}
           rings={[{ at: 25.5, x: 1553, y: 101, w: 130, h: 30, spot: true }]}
           steps={[
@@ -239,12 +236,6 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
             { at: 60.2, x: 260, y: 330, s: 2.5, dur: 1.0 },
             { at: 79.6, x: 300, y: 380, s: 2.2, dur: 0.9 },
           ]}
-          cursor={[
-            { at: 54.6, x: 200, y: 600 },
-            { at: 54.9, x: 80, y: 418, click: true, dur: 0.6 },
-            { at: 57.6, x: 222, y: 418, click: true, dur: 0.6 },
-            { at: 80.4, x: 450, y: 418, click: true, dur: 0.8 },
-          ]}
           rings={[
             { at: 53.84, until: 55.3, x: 14, y: 64, w: 470, h: 390 },
             { at: 55.52, until: 57.9, x: 30, y: 402, w: 100, h: 33 },
@@ -294,10 +285,6 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
             { at: 92.32, x: 250, y: 440, s: 2.4, dur: 0.01 },
             { at: 92.5, x: 250, y: 580, s: 2.2, dur: 0.8 },
           ]}
-          cursor={[
-            { at: 92.6, x: 300, y: 760 },
-            { at: 93.1, x: 120, y: 617, click: true, dur: 0.8 },
-          ]}
           rings={[{ at: 92.6, x: 36, y: 540, w: 426, h: 96, spot: true }]}
           steps={[
             { at: 92.48, text: 'Report + sources ready' },
@@ -327,11 +314,6 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           cam={[
             { at: 100.6, x: 370, y: 600, s: 1.9, dur: 1.0 },
             { at: 107.6, x: 370, y: 700, s: 2.3, dur: 1.0 },
-          ]}
-          cursor={[
-            { at: 100.8, x: 500, y: 400 },
-            { at: 101.0, x: 628, y: 645, dur: 0.6 },
-            { at: 104.4, x: 659, y: 657, click: true, dur: 0.6 },
           ]}
           rings={[
             { at: 101.32, until: 107.4, x: 54, y: 515, w: 315, h: 36 },
@@ -419,10 +401,6 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           src={shot('07-report-and-three-sources-selected')}
           title={URL}
           cam={[{ at: 134.56, x: 450, y: 820, s: 2.2, dur: 0.6 }]}
-          cursor={[
-            { at: 134.6, x: 450, y: 760 },
-            { at: 134.64, x: 660, y: 900, click: true, dur: 0.7 },
-          ]}
           rings={[{ at: 135.44, x: 613, y: 881, w: 94, h: 40, spot: true }]}
           steps={[{ at: 135.04, text: 'Import' }]}
         />
@@ -485,10 +463,6 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
             { at: 159.6, x: 900, y: 500, s: 1.5, dur: 0.01 },
             { at: 162.4, x: 1000, y: 380, s: 1.8, dur: 1.0 },
           ]}
-          cursor={[
-            { at: 159.8, x: 760, y: 700 },
-            { at: 161.48, x: 984, y: 546, click: true, dur: 0.8 },
-          ]}
           rings={[
             { at: 160.88, until: 162.8, x: 972, y: 535, w: 24, h: 22 },
             { at: 163.44, until: 165.6, x: 960, y: 116, w: 388, h: 398, spot: true },
@@ -511,11 +485,6 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           src={shot('08-curated-notebook-and-studio')}
           title={URL}
           cam={[{ at: 168.9, x: 260, y: 450, s: 2.3, dur: 1.0 }]}
-          cursor={[
-            { at: 169.2, x: 300, y: 600 },
-            { at: 169.6, x: 453, y: 451, click: true, dur: 0.7 },
-            { at: 171.0, x: 453, y: 487, click: true, dur: 0.6 },
-          ]}
           rings={[{ at: 171.12, x: 438, y: 400, w: 30, h: 136, spot: true }]}
           steps={[
             { at: 169.52, text: 'Select or deselect sources' },
@@ -533,12 +502,6 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           src={shot('08-curated-notebook-and-studio')}
           title={URL}
           cam={[{ at: 177.4, x: 1650, y: 320, s: 2.0, dur: 1.2 }]}
-          cursor={[
-            { at: 182.0, x: 1640, y: 560 },
-            { at: 183.6, x: 1497, y: 317, dur: 0.7 },
-            { at: 187.7, x: 1736, y: 205, dur: 0.7 },
-            { at: 190.8, x: 1735, y: 261, dur: 0.7 },
-          ]}
           rings={[
             { at: 182.64, until: 184.2, x: 1416, y: 66, w: 468, h: 394 },
             { at: 184.32, until: 188.3, x: 1422, y: 294, w: 220, h: 46, spot: true },
