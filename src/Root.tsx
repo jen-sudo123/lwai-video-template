@@ -87,6 +87,7 @@ import { copilotResearcher } from './data/copilot-researcher';
 import { chatGPTPlugins } from './data/chatgpt-plugins';
 import { videoDataSchema } from './scenes/schemas';
 import { aiEmail } from './data/ai-email';
+import { AiEmail, AI_EMAIL_DURATION_S, AI_EMAIL_TITLE_FRAMES } from './compositions/AiEmail';
 
 // Register one composition per video you want to render.
 // To create a new video, copy this block and pass in different scene data.
@@ -910,7 +911,7 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={chatGPTPlugins}
       />
       <Composition
-        id="AiEmail"
+        id="AiEmailSlides"
         component={Video}
         durationInFrames={calculateTotalFrames(aiEmail.scenes)}
         fps={layout.fps}
@@ -918,6 +919,14 @@ export const RemotionRoot: React.FC = () => {
         height={layout.height}
         schema={videoDataSchema}
         defaultProps={aiEmail}
+      />
+      <Composition
+        id="AiEmail"
+        component={AiEmail}
+        durationInFrames={AI_EMAIL_TITLE_FRAMES + Math.ceil(AI_EMAIL_DURATION_S * layout.fps)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
       />
     </>
   );
