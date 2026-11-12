@@ -1,6 +1,6 @@
 Email remains one of the most time-consuming parts of modern work.
 
-According to Microsoft's Work Trend Index, the average knowledge worker now receives 117 emails a day, and is interrupted 275 times during a typical workday.
+According to Microsoft's Work Trend Index, the average knowledge worker now receives 117 emails a day.
 
 And for many of us, email isn't just messaging. It's where decisions are made, work is coordinated, priorities are clarified, and often where accountability lives.
 
