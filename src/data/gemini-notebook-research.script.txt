@@ -1,9 +1,7 @@
 <speak>
-<break time="500ms"/>Gemini Notebook, formerly NotebookLM, is Google's AI-powered research tool, designed to help you work with evidence.
+<break time="500ms"/>Gemini Notebook is Google's AI-powered research tool, designed to help you work with evidence.
 
-<break time="500ms"/>What makes it particularly useful is source grounding. You can discover relevant information, choose which sources to use, and ask questions based on that selected material, with citations to help you check the important claims.
-
-<break time="500ms"/>Let's see how this works.
+<break time="500ms"/>What makes it particularly useful is source grounding. You can discover relevant information, choose which sources to use, and ask questions based on that selected material, with citations to help you check the important claims. Let's see how this works.
 
 <break time="500ms"/>First, I open Gemini Notebook and create a new notebook for my research topic.
 

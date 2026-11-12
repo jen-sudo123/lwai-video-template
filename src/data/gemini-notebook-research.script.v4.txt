@@ -1,0 +1,59 @@
+Gemini Notebook is Google's AI-powered research tool, designed to help you work with evidence.
+
+What makes it particularly useful is source grounding. You can discover relevant information, choose which sources to use, and ask questions based on that selected material, with citations to help you check the important claims. Let's see how this works.
+
+[pause] First, I open Gemini Notebook and create a new notebook for my research topic.
+
+I could start by adding existing materials, like Google Docs, PDFs, Slides, Word documents, images, or Google Sheets. I can also add web pages, public YouTube videos with captions, and other supported sources.
+
+That gives me a focused workspace for researching one topic. But for this demonstration, I'll start with no sources, and let Gemini Notebook find them for me.
+
+[pause] In the Sources panel, I select Web, and switch from Fast Research to Deep Research.
+
+Then I enter my prompt. I'm asking for a concise executive brief on the most important developments affecting the AI training and consulting industry in Europe, over the last thirty days. I ask it to focus on implications for senior leaders, to prioritize primary and reputable sources, and to include citations for material claims.
+
+I start the research. Gemini Notebook investigates the topic across multiple websites, and prepares a research report with supporting sources. This can take a few minutes.
+
+Once it's ready, I select View sources to examine the findings.
+
+Here's an important step. I don't have to import everything.
+
+I can open the suggested sources, check their publication dates and credibility, and select the ones that are relevant. A "last thirty days" prompt can still return older background material, so I check the dates myself.
+
+For this demonstration, I'll keep the research report, and three useful supporting sources.
+
+Keep in mind, the report is an AI-generated synthesis. If I keep it, its broader findings can still shape later answers, including claims drawn from sources I haven't imported separately. So I check the report's citations too.
+
+Then I click Import. Now I have a selected collection of research material to work with.
+
+[pause] With my sources imported, I can ask questions, and get answers grounded in the selected materials.
+
+For example, I ask: what are the two most important developments for European AI training and consulting leaders? Cite the supporting evidence, and separate source facts from your recommendations.
+
+When an answer includes a citation, I can click it to inspect the supporting passage. That helps me check whether the source actually supports the claim.
+
+I can also select or deselect individual sources, to control which materials are used for a particular question.
+
+[pause] I can also turn the same research into different formats, depending on what I need.
+
+In the Studio panel, I can use Reports to request a briefing document for leadership, generate a Slide Deck to present the insights, or create a Mind Map to visualize the main themes, and how they connect.
+
+For a briefing, I can specify the audience, length, and focus. For a slide deck, I can choose the format, language, and length, and describe what I want it to cover. For a Mind Map, I can specify the topics or themes I want to explore.
+
+The exact controls may vary by account, and as the interface evolves.
+
+Once it's generated, I review the output before using it. Even a polished presentation can contain incorrect dates, unsupported claims, or recommendations stated too confidently.
+
+[pause] Before we finish, two important reminders.
+
+First, keep your sources current.
+
+Sources imported from Google Drive can sync automatically when the underlying files change. Files you uploaded from your computer may need to be replaced, or re-imported.
+
+And updating a source does not update the reports, slide decks, or Mind Maps you've already generated. Regenerate those when you need them to reflect the latest evidence.
+
+Second, verify the evidence.
+
+Source grounding makes claims easier to trace, but it doesn't guarantee accuracy.
+
+So check the important citations, confirm publication dates, consider what evidence might be missing, and keep a clear line between what the sources establish, and what the AI recommends.
