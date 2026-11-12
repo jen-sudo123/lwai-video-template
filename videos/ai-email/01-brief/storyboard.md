@@ -5,31 +5,38 @@
 - **Audience:** Lead with AI course learners (managers and knowledge workers)
 - **Goal:** Understand why email suits AI, what AI in email is (and isn't), and the two ways to use it
 - **Platform:** Course module
-- **Length:** 3:21 (6042 frames @ 30fps)
-- **Style:** Educational, motion-graphics slides on the LWAI brand system
+- **Length:** 3:24 (3s title card + 201.4s body = 6132 frames @ 30fps)
+- **Style:** Animated concept demo (LWAI demo kit): every scene acts out its idea
 - **CTA:** Treat AI as a thinking partner in your inbox, not just a writing assistant
-- **Engine:** Remotion, data file `src/data/ai-email.ts`, composition `AiEmail`
+- **Engine:** Remotion custom composition `src/compositions/AiEmail.tsx`, ID `AiEmail`. The earlier slide version stays as `AiEmailSlides` (`src/data/ai-email.ts`).
 - **Audio:** `public/audio/AiEmail.mp3` (Daan, ElevenLabs v4). Timings: `src/data/AiEmail.transcript.json`
 
-## AIDA scene plan
+## AIDA scene plan (animated build)
 
-| # | Phase | Time | Scene goal | Layout | Reveals (scene frame → VO word) |
-|---|---|---|---|---|---|
-| 1 | Attention | 0:00–0:04 | Email eats the workday | big-statement (kinetic) | — |
-| 2 | Attention | 0:04–0:12 | Proof: 117 emails a day | stat-hero | context 89 → "average" |
-| 3 | Interest | 0:12–0:23 | Email is where work happens | checklist-slide | 110 decisions, 148 work, 194 priorities, 274 accountability |
-| 4 | Interest | 0:23–0:33 | Three reasons it's a strong AI use case | big-statement (kinetic) | — |
-| 5 | Interest | 0:33–1:02 | Volume, repetition, cognitive work | three-mode-columns | 0 First, 208 Second, 543 third |
-| 6 | Interest | 1:02–1:20 | Where modern AI excels | label-title-body, 3 cards | 176 read, 279 extract, 396 move |
-| 7 | Desire | 1:20–1:31 | The shift: what it's not | label-title-body, ✕ list | 155 sending, 210 replacing, 291 automating |
-| 8 | Desire | 1:31–1:38 | A thinking assistant in your inbox | big-statement (kinetic) | — |
-| 9 | Desire | 1:38–1:54 | Understand, draft, adjust tone | label-title-body, 3 cards | 23 understand, 155 draft, 291 adjust |
-| 10 | Desire | 1:54–2:01 | Benefits compound on recurring emails | label-title-body, 2 cards | 127 status, 163 approvals |
-| 11 | Desire | 2:01–2:07 | Two ways AI shows up | big-statement (kinetic) | — |
-| 12 | Desire | 2:07–2:50 | Inside the inbox vs core AI platform | split-contrast | left 361/433/561/714; right lit 766 "Second"; right 925/1044/1168 |
-| 13 | Desire | 2:50–3:05 | When to step out: higher-stakes emails | checklist-slide | 102 clarifying, 170 drafting, 240 thinking, 348 pull |
-| 14 | Action | 3:05–3:21 | Takeaway: offload work, gain a thinking partner | takeaway-stack | 183 offloading, 274 thinking partner |
+Times are VO seconds (add 3s for video time). Cues are the word each animation fires on.
+
+| # | Phase | VO start | Scene | Animation and cues |
+|---|---|---|---|---|
+| 0 | | title | Title card | Green card "AI for Email" (90 frames) |
+| 1 | Attention | 0.00 | Email eats the workday | Inbox floods with 12 unread emails; "time-consuming" marked 1.84 |
+| 2 | Attention | 4.56 | 117 emails a day | Source 5.12; counter 0→117 and 117-envelope grid fill from 9.60 |
+| 3 | Interest | 12.98 | Email isn't just messaging | Stamps land on an email: decisions 16.62, coordinated 17.90, priorities 19.42, accountability 22.10 |
+| 4 | Interest | 23.90 | A strong AI use case | Three numbered circles pop at "three" 28.70 |
+| 5 | Interest | 33.42 | 1 High volume | Email pile grows 35.9; cognitive-load meter climbs 37.6–39.4 |
+| 6 | Interest | 40.38 | 2 Highly repetitive | Envelope rows multiply: requests 46.10, updates 47.02, clarifications 47.58, follow-ups 48.94, status checks 49.74 |
+| 7 | Interest | 51.22 | 3 Cognitive work | Chain lights up: read 54.54, interpret 55.50, decide 56.74, choose 58.22, write 59.78 |
+| 8 | Interest | 62.38 | Messy email to action | Scan line on "read" 68.22; intent card 71.66; action card 75.58 |
+| 9 | Desire | 80.26 | What it's not | Cards struck through: sending 85.42, replacing 87.26, automating 89.98 |
+| 10 | Desire | 91.94 | A thinking assistant | Assistant panel slides into inbox 93.3; load meter drains 96.4 |
+| 11 | Desire | 98.66 | Summarize, draft, tone | Thread summary 99.42; draft types 103.82; tone switches 110.98 / 111.54 / 112.62 / 113.50 |
+| 12 | Desire | 114.70 | Benefits compound | 8-week strip: status updates 118.94, approvals 120.14, rising "time back" bars |
+| 13 | Desire | 121.46 | Two main ways | Two cards at "two main ways" 124.06 |
+| 14 | Desire | 127.82 | Way 1: inside your inbox | Gemini in Gmail 132.18, Copilot in Outlook 133.66; window glows "flow of work" 139.86; capabilities 142.26–149.54; "No switching tools" 151.62 |
+| 15 | Desire | 153.38 | Way 2: core AI platform | ChatGPT 156.26, Claude 157.38; email flies into chat 158.66; connector 160.30; "Similar capabilities" 163.6; chat comes forward 166.78 |
+| 16 | Desire | 170.22 | Higher-stakes emails | Use cases 173.62 / 175.90 / 178.22; documents 182.14, web search 183.42, deep research 184.30 |
+| 17 | Action | 185.74 | Takeaway | "Not just a writing assistant" struck 190.3; offload 191.82; thinking partner 194.86 |
 
 ## Assets
-- Voiceover: done. No screenshots, stock or AI imagery needed (all motion layouts).
-- Optional upgrade: real screenshots of Gemini in Gmail / Copilot in Outlook for scene 12 (`app-window` layout).
+- Voiceover: done. All visuals are built in code; no screenshots or stock.
+- Example people, emails and replies in the mocks are illustrative.
+- Optional upgrade: real screenshots of Gemini in Gmail / Copilot in Outlook for scenes 14–15.
