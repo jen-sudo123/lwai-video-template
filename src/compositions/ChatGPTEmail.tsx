@@ -16,7 +16,6 @@ import {
   LIME_SOFT,
   LINE,
   MUTED,
-  MenuList,
   enter,
   makeScene,
   markStyle,
@@ -43,7 +42,7 @@ loadSans();
 //  9  Inbox result                120.40  "ChatGPT pulls the messages…"
 //  10 What else it can do         134.50  "I can also ask it to find…"
 //  11 The key difference          150.90  "The key difference?"
-//  12 Turn it into a routine      158.50  "Now let's turn this into a routine."
+//  12 Scheduled > New task       158.50  "Now let's turn this into a routine."
 //  13 Task instructions + repeat  164.10  "In the instructions…"
 //  14 Scheduled                   193.90  "ChatGPT confirms the task is scheduled…"
 //  15 Practical notes             204.10  "A few practical notes."
@@ -394,53 +393,57 @@ const ChatGPTEmailBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
         </div>
       </Scene>
 
-      {/* 12 — Turn it into a routine */}
-      <Scene t={t} index={11}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 90 }}>
-          <div style={{ flex: 1 }}>
-            <div className="kit-label" style={enter(t, 158.6, { y: 14 })}>Scheduled tasks</div>
-            <div className="kit-h2" style={enter(t, 158.7, { dur: 0.8, y: 30 })}>
-              Turn it into a <span className="kit-mark" style={markStyle(t, 159.92)}>routine.</span>
-            </div>
-          </div>
-          <div style={{ position: 'relative', width: 520, ...enter(t, 160.9, { y: 24 }) }}>
-            <MenuList items={['New chat', 'Scheduled', 'Plugins']} active={t >= 161.52 ? 1 : -1} style={{ width: 360 }} />
-            <div
-              className="kit-ui"
-              style={{ position: 'absolute', left: 300, top: 150, display: 'flex', alignItems: 'center', gap: 10, padding: '14px 26px', borderRadius: 999, background: INK, color: '#fff', fontSize: 26, fontWeight: 600, boxShadow: '0 16px 40px rgba(0,0,0,.2)', ...enter(t, 163.04, { y: 0, scale: 0.7, easing: BACK }) }}
-            >
-              + New task
-            </div>
-          </div>
-        </div>
+      {/* 12 — Scheduled > New task */}
+      <Scene t={t} index={11} pad={false}>
+        <AppWindow
+          t={t}
+          start={158.5}
+          src={shot('12-new-task')}
+          {...WIN}
+          cam={[{ at: 160.6, x: 420, y: 200, s: 1.8 }]}
+          cursor={[
+            { at: 160.9, x: 300, y: 260 },
+            { at: 161.0, x: 110, y: 35, dur: 0.6 },
+            { at: 162.3, x: 112, y: 79, click: true },
+          ]}
+          rings={[
+            { at: 161.52, until: 163.0, x: 64, y: 21, w: 96, h: 28, spot: true },
+            { at: 163.04, x: 66, y: 65, w: 96, h: 28, spot: true },
+          ]}
+          steps={[
+            { at: 159.0, text: 'Turn it into a routine' },
+            { at: 161.52, text: 'Scheduled' },
+            { at: 163.04, text: 'New task' },
+          ]}
+        />
       </Scene>
 
-      {/* 13 — Task instructions + repeat settings */}
+      {/* 13 — Schedule a task: instructions + repeat settings */}
       <Scene t={t} index={12} pad={false}>
         <AppWindow
           t={t}
           start={164.1}
-          src={shot('09-weekday-schedule')}
+          src={shot('12-new-task')}
           {...WIN}
           cam={[
-            { at: 164.1, dur: 0.01, x: 955, y: 285, s: 1.75 },
+            { at: 164.1, dur: 0.01, x: 955, y: 250, s: 1.7 },
             { at: 185.6, dur: 1.0, x: 955, y: 470, s: 1.5 },
           ]}
           cursor={[
             { at: 191.0, x: 1100, y: 600 },
-            { at: 191.8, x: 1246, y: 643, click: true },
+            { at: 191.8, x: 1238, y: 636, click: true },
           ]}
           rings={[
-            { at: 166.88, until: 170.6, x: 655, y: 245, w: 590, h: 22 },
-            { at: 170.72, until: 173.5, x: 655, y: 265, w: 160, h: 22 },
-            { at: 173.6, until: 176.6, x: 815, y: 265, w: 285, h: 22 },
-            { at: 176.72, until: 181.4, x: 655, y: 265, w: 590, h: 42 },
-            { at: 184.4, until: 185.7, x: 655, y: 305, w: 95, h: 22, spot: true },
-            { at: 186.48, until: 187.05, x: 657, y: 378, w: 598, h: 30 },
-            { at: 187.12, until: 188.1, x: 1150, y: 428, w: 100, h: 24 },
-            { at: 188.16, until: 190.5, x: 1070, y: 476, w: 180, h: 24 },
-            { at: 190.56, until: 191.6, x: 1180, y: 524, w: 70, h: 24 },
-            { at: 192.56, x: 1214, y: 625, w: 66, h: 36, spot: true },
+            { at: 166.88, until: 170.6, x: 653, y: 187, w: 395, h: 20 },
+            { at: 170.72, until: 173.5, x: 653, y: 207, w: 285, h: 20 },
+            { at: 173.6, until: 176.6, x: 653, y: 227, w: 290, h: 20 },
+            { at: 176.72, until: 181.4, x: 653, y: 267, w: 545, h: 20 },
+            { at: 184.4, until: 185.7, x: 653, y: 287, w: 262, h: 20, spot: true },
+            { at: 186.48, until: 187.05, x: 657, y: 375, w: 598, h: 30 },
+            { at: 187.12, until: 188.1, x: 1150, y: 421, w: 80, h: 26 },
+            { at: 188.16, until: 190.5, x: 1070, y: 469, w: 160, h: 26 },
+            { at: 190.56, until: 191.6, x: 1176, y: 517, w: 54, h: 26 },
+            { at: 192.56, x: 1200, y: 618, w: 78, h: 36, spot: true },
           ]}
           steps={[
             { at: 164.72, text: 'Write the instructions' },
@@ -450,7 +453,7 @@ const ChatGPTEmailBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
             { at: 186.48, text: 'Repeat on weekdays' },
             { at: 188.16, text: '7:00 AM in your time zone' },
             { at: 190.56, text: 'No end date' },
-            { at: 192.56, text: 'Save the task' },
+            { at: 192.56, text: 'Create' },
           ]}
         />
       </Scene>
