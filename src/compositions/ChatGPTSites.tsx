@@ -720,7 +720,7 @@ const ChatGPTSitesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
 export const ChatGPTSites: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => (
   <AbsoluteFill style={{ backgroundColor: '#fff' }}>
     <Sequence durationInFrames={CHATGPT_SITES_TITLE_FRAMES}>
-      <TitleCardGreen label="CHATGPT" title="ChatGPT Sites" subtitle="Turn a spreadsheet into an interactive dashboard" />
+      <TitleCardGreen label="CHATGPT" title="ChatGPT Sites" />
     </Sequence>
     <Sequence from={CHATGPT_SITES_TITLE_FRAMES}>
       <ChatGPTSitesBody audioSrc={audioSrc} />
