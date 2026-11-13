@@ -1,0 +1,35 @@
+ChatGPT Sites lets you build websites and interactive web apps just by describing what you want. You can start with an idea, or with existing materials like a document or spreadsheet. Then you preview the result, ask for changes through conversation, and deploy it when you're ready.
+[pause]
+In this walkthrough, I'll turn a team project spreadsheet into an interactive dashboard for a department manager, with status filters, clickable project details, and a section highlighting projects that need leadership attention.
+[pause]
+I have a spreadsheet with six projects. It includes project names, owners, progress, manually assigned statuses, deadlines, and a combined Blocker and Next Step column. The data is a snapshot from October 28, 2026.
+[pause]
+I open a new conversation in ChatGPT, select Work, and attach the Excel file using Add files and more. Then I type the at sign, followed by Sites, and select Sites from the suggestions.
+[pause]
+Now I enter this prompt. It asks ChatGPT to turn the spreadsheet into an interactive dashboard for a department manager, with progress bars, deadlines, color-coded statuses, filters, and clickable project details. It also tells ChatGPT to use only my data, write "Not provided" where something's missing, keep the original statuses, and show the snapshot date.
+[pause]
+Notice that I've specified the audience, the information to display, and the interactive features I want. I've also asked ChatGPT to wait before deploying. Without that instruction, it may deploy privately as part of building the Site. I send the prompt, and wait for the dashboard.
+[pause]
+Once the preview is ready, I check that all six projects appear. The status counts should be three On Track, one At Risk, one Delayed, and one Complete.
+[pause]
+I select Delayed. The dashboard should show Process Improvement, owned by Daniel Kim, at 30% progress, with a November 5 deadline. I click the project and check that the detail panel shows the original note: "Approval for the new workflow is pending; escalate for decision."
+[pause]
+Next, I test At Risk. That should show Employee Onboarding. Then I return to All projects and compare the progress figures, owners, deadlines, and notes with the original spreadsheet. The statuses come from the spreadsheet. They shouldn't be recalculated from today's date or the progress percentages.
+[pause]
+One thing to remember: this dashboard uses an uploaded snapshot. If the original spreadsheet changes later, the Site won't update automatically. For live reporting, you'd need a supported data connection or an update process.
+[pause]
+Now let's make one improvement. In the same conversation, I ask ChatGPT to add a section called "Needs Leadership Attention," highlighting projects marked At Risk or Delayed, with each project's owner, deadline, and original note. I also tell it to keep all existing data unchanged, and to update the preview without deploying.
+[pause]
+ChatGPT updates the Site. The new section should contain exactly two projects: Employee Onboarding, at risk, and Process Improvement, delayed. I check that their notes match the spreadsheet, that all six projects are still in the main overview, and then I test the filters and project details again.
+[pause]
+Once I'm happy with the result, I ask ChatGPT to deploy the current version privately, with access restricted to me. I wait for it to confirm and provide the live URL. I open the link, and sign in if prompted. Depending on the session, email verification may be required.
+[pause]
+Then I open the Site's Share button to review access. Deploying doesn't make the Site public. New Sites are private by default, although workspace administrators may also have access. I check that link access says Only those invited, and that only the owner is listed.
+[pause]
+To let colleagues use the dashboard, I set the right audience in Share, subject to my account and workspace permissions. Before relying on it for team reporting, I confirm that a colleague can open it with their own account.
+[pause]
+We've now turned a spreadsheet into an interactive dashboard, tested it, refined it with a follow-up prompt, and deployed it with controlled access.
+[pause]
+A few practical notes. Start small: a clear audience and a few well-defined features make a useful first version. Build iteratively, and test before adding more. Control deployment explicitly. Verify the data against the source. Remember that an uploaded spreadsheet is a snapshot, not a live connection. Review sharing settings before inviting others. And assign an owner to maintain the dashboard and refresh its data.
+[pause]
+ChatGPT Sites is available on eligible Plus and Pro accounts, and in Business and Enterprise workspaces. Free and Go plans aren't supported. Building or editing Sites counts toward Codex usage. Hosting is currently included with Plus and Pro, and Enterprise hosting charges are currently waived. Usage and storage limits still apply.
