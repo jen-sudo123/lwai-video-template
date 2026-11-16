@@ -1,0 +1,55 @@
+<speak>
+<break time="500ms"/>Lovable is an AI application builder that turns a written brief into a web app you can test, refine, and share.
+
+<break time="500ms"/>This is where vibe coding becomes practical. Instead of explaining a framework in slides, you can turn it into something interactive.
+
+<break time="500ms"/>But generating the app is only the starting point. You still need clear requirements, and checks that it works as intended.
+
+<break time="500ms"/>In this demo, I'll turn our AI Fluency Matrix into a short self-assessment for working professionals.
+
+<break time="500ms"/>I'll do this in three steps. First, clarify the idea and create a PRD. Second, build a first version with Lovable. And third, test the experience and see what still needs work.
+
+<break time="500ms"/>Step one. I brainstorm the app with my preferred AI to create a Product Requirements Document, or PRD. It describes what to build, who it's for, and how it should work.
+
+<break time="500ms"/>You can paste the instructions from the supporting write-a-PRD document into your AI chat, or use the skill file if your AI supports it.
+
+<break time="500ms"/>I share my app idea and the AI Fluency Matrix, then work through questions about the assessment, the scoring, and the results.
+
+<break time="500ms"/>For this version, the brief calls for twelve behavior-based questions, immediate results with no email required, and three personalized next steps.
+
+<break time="500ms"/>There's an important distinction here. The Matrix defines the fluency levels. Our four dimension scores are an extra diagnostic layer, designed just for this assessment.
+
+<break time="500ms"/>Before scoring can work, we need final questions, answer rubrics, exact requirements for each level, and rules for choosing recommendations.
+
+<break time="500ms"/>Our draft still leaves some of those decisions open. That gives us something useful to test. Will Lovable flag the gaps?
+
+<break time="500ms"/>Step two. I paste the PRD into Lovable and add a short instruction: build the assessment with a welcome screen, multiple-choice questions, progress indicators, and immediate results. Follow the agreed scoring rules, and flag anything missing rather than inventing it.
+
+<break time="500ms"/>Lovable proposes a plan for review. And it does catch the missing scoring rules. It can build the assessment flow, but it holds back scores and recommendations until those rules are supplied.
+
+<break time="500ms"/>I review the plan, and start the build.
+
+<break time="500ms"/>The first version includes a welcome screen, twelve questions, progress indicators, answer review, restart, and a completion screen.
+
+<break time="500ms"/>Now the idea is tangible, and the open requirements are visible.
+
+<break time="500ms"/>Step three: test and refine. First, I check the experience. I make sure I can start without an email, go back without losing answers, change a response, spot a skipped question before submitting, and restart with a clean attempt.
+
+<break time="500ms"/>I also run through the flow in the mobile preview. That checks the narrow layout, but a real-device check still belongs in the pilot.
+
+<break time="500ms"/>The completion screen clearly explains that scoring is pending review. It doesn't invent a level, or personalized advice.
+
+<break time="500ms"/>Once the scoring rules are final, I'll test exact answer sets against expected results. Someone who doesn't use AI. Someone who collaborates with it effectively. And someone who uses it often, but skips verification.
+
+<break time="500ms"/>Frequent use alone should never make up for missing safety or judgment.
+
+<break time="500ms"/>For a refinement, I ask Lovable to add a short explanation under each dimension score, showing what it measures.
+
+<break time="500ms"/>In this run, that request hits the account's credit limit, so the refinement stays unfinished.
+
+<break time="500ms"/>A few practical notes. Check Lovable's current credits, pricing, and publishing options before you begin.
+
+<break time="500ms"/>Before publishing a scored pilot, finalize the rules, verify the expected results, and test with representative professionals.
+
+<break time="500ms"/>Vibe coding helps make an idea tangible quickly. Clear requirements and testing are what make the result dependable.
+</speak>
