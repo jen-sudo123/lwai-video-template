@@ -286,11 +286,11 @@ const LovableDemoBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           title="docs.google.com"
           src={shot('01-prd-skill-source')}
           cam={[
-            { at: 59.3, x: 950, y: 330, s: 1.6, dur: 1.0 },
+            { at: 59.3, x: 950, y: 425, s: 1.6, dur: 1.0 },
             { at: 62.9, x: 260, y: 170, s: 2.6, dur: 1.0 },
           ]}
           rings={[
-            { at: 59.6, until: 62.9, x: 665, y: 265, w: 570, h: 60 },
+            { at: 59.6, until: 62.9, x: 660, y: 318, w: 575, h: 212, spot: true },
             { at: 63.36, x: 12, y: 112, w: 175, h: 46, spot: true },
           ]}
           steps={[
