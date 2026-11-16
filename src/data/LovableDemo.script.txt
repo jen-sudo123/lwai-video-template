@@ -17,15 +17,9 @@
 
 <break time="500ms"/>For this version, the brief calls for twelve behavior-based questions, immediate results with no email required, and three personalized next steps.
 
-<break time="500ms"/>There's an important distinction here. The Matrix defines the fluency levels. Our four dimension scores are an extra diagnostic layer, designed just for this assessment.
-
-<break time="500ms"/>Before scoring can work, we need final questions, answer rubrics, exact requirements for each level, and rules for choosing recommendations.
-
-<break time="500ms"/>Our draft still leaves some of those decisions open. That gives us something useful to test. Will Lovable flag the gaps?
-
 <break time="500ms"/>Step two. I paste the PRD into Lovable and add a short instruction: build the assessment with a welcome screen, multiple-choice questions, progress indicators, and immediate results. Follow the agreed scoring rules, and flag anything missing rather than inventing it.
 
-<break time="500ms"/>Lovable proposes a plan for review. And it does catch the missing scoring rules. It can build the assessment flow, but it holds back scores and recommendations until those rules are supplied.
+<break time="500ms"/>Lovable proposes a plan for review. It also flags that some scoring rules are still missing. It can build the assessment flow, but it holds back scores and recommendations until those rules are supplied.
 
 <break time="500ms"/>I review the plan, and start the build.
 
