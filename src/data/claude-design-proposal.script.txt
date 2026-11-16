@@ -1,21 +1,17 @@
-<speak>
-<break time="500ms"/>Claude Design turns a written brief into one-page visuals, landing pages, product mockups, and interactive prototypes. For presentations, there's a dedicated Slides option. Each one comes with editing tools suited to what it makes.
+Claude Design turns a written brief into one-page visuals, landing pages, product mockups, and interactive prototypes. For presentations, there's a dedicated Slides option. Each one comes with editing tools suited to what it makes.
 
-<break time="500ms"/>A quick note if you've used Design before. It now lives inside the main Claude app. The old standalone workspace at claude.ai slash design closes on the fourteenth of December, 2026. If you have work there, follow Anthropic's migration guide to move your projects and design systems. And save any chats or comments you need separately, because those don't transfer.
+[pause] A client proposal is easier to discuss when the client can explore the timeline and see what they'll actually get. In this demo, we'll build an interactive proposal website for Oakfield Furniture, a fictional client. We're pitching a $24,000, 90-day marketing campaign for its Linden Compact Desk, using an earlier pitch deck as our visual reference.
 
-<break time="500ms"/>A client proposal is easier to discuss when the client can explore the timeline and see what they'll actually get. In this demo, we'll build an interactive proposal website for Oakfield Furniture, a fictional client. We're pitching a twenty-four thousand dollar, ninety-day marketing campaign for its Linden Compact Desk, using an earlier pitch deck as our visual reference.
+[pause] In Claude's sidebar, I open Artifacts, then select Design. The chat sits on the left, and the design canvas on the right. I attach two files. The business proposal gives Claude the campaign scope, price, deliverables, and timeline. The pitch deck gives it the colors, fonts, and visual style. So Claude has both the content, and an example of how the result should look.
 
-<break time="500ms"/>In Claude's sidebar, I open Artifacts, then select Design. The chat sits on the left, and the design canvas on the right. I attach two files. The business proposal gives Claude the campaign scope, price, deliverables, and timeline. The pitch deck gives it the colors, fonts, and visual style. So Claude has both the content, and an example of how the result should look.
+[pause] Now I paste my prompt. I ask for a single-page, interactive proposal website, built from the proposal and styled like the pitch deck. It presents one offer: the goal, what's included, and the next step. I add clickable Plan, Launch, and Review tabs, linked to an interactive campaign timeline. And I ask for it to be clean, mobile-friendly, and shareable by link.
 
-<break time="500ms"/>Now I paste my prompt. I ask for a single-page, interactive proposal website, built from the proposal and styled like the pitch deck. It presents one offer: the goal, what's included, and the next step. I add clickable Plan, Launch, and Review tabs, linked to an interactive campaign timeline. And I ask for it to be clean, mobile-friendly, and shareable by link.
+[pause] Claude builds the proposal on the canvas. I compare the look with the pitch deck, and check the content against the proposal. The timeline gives the client a way to explore what happens in each phase of the campaign.
 
-<break time="500ms"/>Claude builds the proposal on the canvas. I compare the look with the pitch deck, and check the content against the proposal. The timeline gives the client a way to explore what happens in each phase of the campaign.
+[pause] Next, I want the client to see what the campaign could look like. So I ask Claude to keep the site, the branding, and the offer exactly as they are, and add campaign previews: a social ad, and a landing page, each with its own headline. Clicking "Explore the desk" in the ad opens the landing page. Now the client can follow the journey from ad to landing page, and give feedback on the creative direction.
 
-<break time="500ms"/>Next, I want the client to see what the campaign could look like. So I ask Claude to keep the site, the branding, and the offer exactly as they are, and add campaign previews: a social ad, and a landing page, each with its own headline. Clicking "Explore the desk" in the ad opens the landing page. Now the client can follow the journey from ad to landing page, and give feedback on the creative direction.
+[pause] Before sharing, I test the live page. I open Play, and select Proposal website. Then I check three things. The phase tabs and timeline show the right deliverables. "Explore the desk" opens the landing page. And the price and scope match the proposal, with the page still readable at phone width.
 
-<break time="500ms"/>Before sharing, I check three things. The phase tabs and timeline show the right deliverables. "Explore the desk" opens the landing page. And the price and scope match the proposal, with the page still readable on a phone.
+[pause] Then I open Share. In this demo, access is set to Only you, so the private link works just for me. To share it with a client, I'd give them access through the sharing controls, and confirm they can open it.
 
-<break time="500ms"/>Then I open Share. In this demo, access is set to Only you, so the private link works just for me. To share it with a client, I'd give them access through the sharing controls, and confirm they can open it.
-
-<break time="500ms"/>One last point. The campaign previews are illustrative mockups. Check any new copy Claude adds, keep placeholders clearly labeled, and confirm the final content before the proposal goes to a client.
-</speak>
+[pause] One last point. The campaign previews are illustrative mockups. Check any new copy Claude adds, keep placeholders clearly labeled, and confirm the final content before the proposal goes to a client.
