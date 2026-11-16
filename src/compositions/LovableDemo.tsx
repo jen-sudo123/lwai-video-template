@@ -287,11 +287,11 @@ const LovableDemoBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           src={shot('01-prd-skill-source')}
           cam={[
             { at: 59.3, x: 950, y: 330, s: 1.6, dur: 1.0 },
-            { at: 63.2, x: 950, y: 420, s: 1.3, dur: 0.9 },
+            { at: 62.9, x: 260, y: 170, s: 2.6, dur: 1.0 },
           ]}
           rings={[
-            { at: 59.6, until: 63.2, x: 665, y: 265, w: 570, h: 60 },
-            { at: 63.5, x: 665, y: 320, w: 570, h: 230, spot: true },
+            { at: 59.6, until: 62.9, x: 665, y: 265, w: 570, h: 60 },
+            { at: 63.36, x: 12, y: 112, w: 175, h: 46, spot: true },
           ]}
           steps={[
             { at: 59.52, text: 'Paste the write-a-PRD instructions into your AI chat' },
