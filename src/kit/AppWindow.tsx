@@ -45,9 +45,11 @@ export const AppWindow: React.FC<{
   top?: number;
   width?: number;
   title?: string;
+  // Replaces the auto 'STEP n' badge on captions; '' hides the badge.
+  stepBadge?: string;
   imgW?: number;
   imgH?: number;
-}> = ({ t, start, src, cam = [], cursor = [], rings = [], steps = [], left, top = 54, width = 1560, title = 'claude.ai', imgW = 1920, imgH = 1080 }) => {
+}> = ({ t, start, src, cam = [], cursor = [], rings = [], steps = [], left, top = 54, width = 1560, title = 'claude.ai', stepBadge, imgW = 1920, imgH = 1080 }) => {
   const IMG_W = imgW;
   const IMG_H = imgH;
   const k = width / IMG_W;
@@ -159,9 +161,11 @@ export const AppWindow: React.FC<{
           }}
         >
           <div style={{ fontFamily: 'Public Sans', color: INK, display: 'flex', alignItems: 'center', gap: 16, padding: '12px 26px 12px 14px', borderRadius: 999, background: '#fff', border: `2px solid ${LINE}`, fontSize: 28, fontWeight: 500 }}>
-            <span style={{ background: LIME, color: '#fff', borderRadius: 999, padding: '4px 14px', fontSize: 18, fontWeight: 700, letterSpacing: '.1em' }}>
-              STEP {stepIdx + 1}
-            </span>
+            {stepBadge !== '' && (
+              <span style={{ background: LIME, color: '#fff', borderRadius: 999, padding: '4px 14px', fontSize: 18, fontWeight: 700, letterSpacing: '.1em' }}>
+                {stepBadge ?? `STEP ${stepIdx + 1}`}
+              </span>
+            )}
             {step.text}
           </div>
         </div>
