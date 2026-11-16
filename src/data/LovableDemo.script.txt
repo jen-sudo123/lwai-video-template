@@ -33,7 +33,7 @@
 
 <break time="500ms"/>Now the idea is tangible, and the open requirements are visible.
 
-<break time="500ms"/>Step three: test and refine. First, I check the experience. I make sure I can start without an email, go back without losing answers, change a response, spot a skipped question before submitting, and restart with a clean attempt.
+<break time="500ms"/>Step three: test the experience. First, I make sure I can start without an email, go back without losing answers, change a response, spot a skipped question before submitting, and restart with a clean attempt.
 
 <break time="500ms"/>I also run through the flow in the mobile preview. That checks the narrow layout, but a real-device check still belongs in the pilot.
 
