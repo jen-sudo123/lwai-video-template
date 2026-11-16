@@ -20,6 +20,7 @@ import {
   makeScene,
   markStyle,
   prog,
+  typed,
 } from '../kit';
 
 loadSerif();
@@ -76,6 +77,10 @@ const IMG_H = 958;
 const shot = (n: string): string =>
   (globalThis as { LOVABLE_DEMO_SHOTS?: Record<string, string> }).LOVABLE_DEMO_SHOTS?.[n] ??
   staticFile(`LovableDemo/images/${n}.jpg`);
+
+// The build prompt pasted into Lovable with the PRD (typed on screen in scene 11).
+const BUILD_PROMPT =
+  'Build this assessment from the PRD. Include a welcome screen, a multiple-choice question flow, progress indicators, and immediate results. Follow the agreed scoring rules. Flag missing rules rather than inventing them.';
 
 const AMBER = '#B45309';
 const AMBER_SOFT = '#FEF3C7';
@@ -405,15 +410,25 @@ const LovableDemoBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
             { at: 114.0, x: 1300, y: 700 },
             { at: 115.0, x: 870, y: 383, dur: 0.8 },
             { at: 117.4, x: 900, y: 438, click: true, dur: 0.7 },
+            { at: 118.6, x: 1180, y: 560, dur: 0.8 },
             { at: 128.6, x: 1383, y: 474, click: true, dur: 0.8 },
           ]}
           cam={[
             { at: 115.2, x: 1077, y: 420, s: 1.7, dur: 1.0 },
+            { at: 117.6, x: 1077, y: 445, s: 2.1, dur: 0.8 },
             { at: 129.8, x: 1077, y: 420, s: 1.0, dur: 0.9 },
           ]}
+          overlay={
+            t >= 117.84 && (
+              <div style={{ position: 'absolute', left: 752, top: 416, width: 650, height: 42, background: '#fff', fontFamily: 'Public Sans', fontSize: 12, lineHeight: '16px', color: '#1c1c1c' }}>
+                {typed(t, 118.0, BUILD_PROMPT, 10.0)}
+                <span style={{ display: 'inline-block', width: 1, height: 13, marginLeft: 1, verticalAlign: 'text-bottom', background: '#1c1c1c', opacity: Math.floor(t * 2) % 2 ? 0 : 1 }} />
+              </div>
+            )
+          }
           rings={[
             { at: 115.36, until: 117.6, x: 755, y: 360, w: 200, h: 50 },
-            { at: 117.9, until: 128.8, x: 745, y: 418, w: 660, h: 40 },
+            { at: 117.9, until: 128.8, x: 745, y: 412, w: 664, h: 48 },
           ]}
           steps={[
             { at: 114.6, text: 'Build the first version' },

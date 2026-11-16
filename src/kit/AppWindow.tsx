@@ -47,9 +47,11 @@ export const AppWindow: React.FC<{
   title?: string;
   // Replaces the auto 'STEP n' badge on captions; '' hides the badge.
   stepBadge?: string;
+  // Extra content drawn on the screenshot, in its pixel coordinates (moves with the camera).
+  overlay?: React.ReactNode;
   imgW?: number;
   imgH?: number;
-}> = ({ t, start, src, cam = [], cursor = [], rings = [], steps = [], left, top = 54, width = 1560, title = 'claude.ai', stepBadge, imgW = 1920, imgH = 1080 }) => {
+}> = ({ t, start, src, cam = [], cursor = [], rings = [], steps = [], left, top = 54, width = 1560, title = 'claude.ai', stepBadge, overlay, imgW = 1920, imgH = 1080 }) => {
   const IMG_W = imgW;
   const IMG_H = imgH;
   const k = width / IMG_W;
@@ -101,6 +103,7 @@ export const AppWindow: React.FC<{
         <div style={{ position: 'relative', width: vw, height: vh, overflow: 'hidden' }}>
           <div style={{ position: 'absolute', left: 0, top: 0, width: IMG_W, height: IMG_H, transformOrigin: '0 0', transform: `translate(${tx}px, ${ty}px) scale(${S})` }}>
             <Img src={src} style={{ width: IMG_W, height: IMG_H, display: 'block' }} />
+            {overlay}
             {rings.map((r, i) => {
               const a = prog(t, r.at, 0.45, BACK) * (r.until ? 1 - prog(t, r.until, 0.4) : 1);
               if (a <= 0) return null;
