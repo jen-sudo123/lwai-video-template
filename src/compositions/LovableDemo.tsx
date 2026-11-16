@@ -731,7 +731,7 @@ const LovableDemoBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
 export const LovableDemo: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => (
   <AbsoluteFill style={{ backgroundColor: '#fff' }}>
     <Sequence durationInFrames={LOVABLE_DEMO_TITLE_FRAMES}>
-      <TitleCardGreen label="LOVABLE" title="From PRD to first build" />
+      <TitleCardGreen label="LOVABLE" title="Vibe Code with Lovable" />
     </Sequence>
     <Sequence from={LOVABLE_DEMO_TITLE_FRAMES}>
       <LovableDemoBody audioSrc={audioSrc} />
