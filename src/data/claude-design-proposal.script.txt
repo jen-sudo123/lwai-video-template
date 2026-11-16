@@ -1,6 +1,6 @@
-Claude Design turns a written brief into one-page visuals, landing pages, product mockups, and interactive prototypes. For presentations, there's a dedicated Slides option. Each one comes with editing tools suited to what it makes.
+Claude Design lets you turn a written brief into one-page visuals, landing pages, product mockups, and interactive prototypes. You can start with an idea, or with existing materials like a proposal or a pitch deck. Then you review the result on the canvas, ask for changes through conversation, and share it by link when you're ready.
 
-[pause] A client proposal is easier to discuss when the client can explore the timeline and see what they'll actually get. In this demo, we'll build an interactive proposal website for Oakfield Furniture, a fictional client. We're pitching a $24,000, 90-day marketing campaign for its Linden Compact Desk, using an earlier pitch deck as our visual reference.
+[pause] In this walkthrough, I'll turn a client proposal into an interactive website for Oakfield Furniture, a fictional client, pitching a $24,000, 90-day campaign for its Linden Compact Desk. It will have a clickable campaign timeline, previews of the proposed ad and landing page, and it will follow the look of an earlier pitch deck.
 
 [pause] In Claude's sidebar, I open Artifacts, then select Design. The chat sits on the left, and the design canvas on the right. I attach two files. The business proposal gives Claude the campaign scope, price, deliverables, and timeline. The pitch deck gives it the colors, fonts, and visual style. So Claude has both the content, and an example of how the result should look.
 
