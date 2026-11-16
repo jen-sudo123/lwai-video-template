@@ -43,10 +43,6 @@
 
 <break time="500ms"/>Frequent use alone should never make up for missing safety or judgment.
 
-<break time="500ms"/>For a refinement, I ask Lovable to add a short explanation under each dimension score, showing what it measures.
-
-<break time="500ms"/>In this run, that request hits the account's credit limit, so the refinement stays unfinished.
-
 <break time="500ms"/>A few practical notes. Check Lovable's current credits, pricing, and publishing options before you begin.
 
 <break time="500ms"/>Before publishing a scored pilot, finalize the rules, verify the expected results, and test with representative professionals.
