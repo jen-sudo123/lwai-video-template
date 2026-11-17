@@ -1,0 +1,53 @@
+Claude Motion is a new way to create short animations in Claude, without working in a traditional video editor.
+
+Give it a prompt, an image, or existing content, and it builds animated text, graphics, charts, and images.
+
+You can refine the result through conversation or in the editor, then export it as an M-P-4.
+
+Unlike realistic AI video generators, Motion doesn't generate filmed scenes. It uses code to animate designed elements.
+
+That makes it ideal for branded social posts, event announcements, presentation openers, and animated explainers, where the exact wording and timing matter.
+
+In this demo, I'll turn a Lead with AI PRO event graphic into a fifteen-second promo video for LinkedIn.
+
+The event is "Beyond AI Tools: Building Organizations That Can Transform Themselves," with Paul Smart, hosted by Daan van Rossum, CEO of Lead with AI. It's a ninety-minute interactive working session on Tuesday, December first, at ten AM G-M-T, eleven AM C-E-T.
+
+To get started, click Artifacts in the sidebar, and choose Motion under "Make something new."
+
+This opens a workspace where I can describe my animation and attach the existing event artwork.
+
+I upload the event graphic, and give Claude a specific creative direction.
+
+My prompt sets the length, fifteen seconds. The style: quiet and editorial, with a white background, large serif headlines that fade in line by line, and the brand green as the only accent. And the structure: a green timeline for the two time zones, and a clean logo end card, held for at least three seconds.
+
+I also tell Claude to use the supplied photo, logos, title, date, and times exactly as written, and not to invent any details, links, or calls to action. And it has to read clearly with the sound off.
+
+Claude generates the first version, and the animation appears in the preview, right beside the conversation.
+
+Now I refine it. I want the guest speaker credited right at the start, so I ask Claude to add "with Paul Smart" to the opening title, visible within the first second.
+
+I also restate what must stay the same: the speaker photo, the event details, the fifteen-second length, and the end card.
+
+During review, I notice the green timeline lines cross the time-zone labels, so I ask Claude to move the labels above the lines.
+
+Next, I play the video from start to finish. I check the pacing, the speaker's name, the title, the date, the time zones, and that all the text is easy to read.
+
+And I confirm that Paul Smart's name appears at the opening, and the logo end card stays on screen for at least three seconds.
+
+To export, click Export in the playback controls, and choose M-P-4 video.
+
+For this demo, I select ten-eighty-p, thirty frames per second, and high quality. Then click Export.
+
+Keep the page open and in front while Claude renders the video.
+
+When the download prompt appears, click Save file.
+
+The M-P-4 is now ready for a final review before it goes out.
+
+A few practical tips. In your first prompt, specify the audience, duration, style, and the content that must appear. Then make small, targeted refinements, like adjusting timing, adding a name, or fixing text placement.
+
+Always check names, dates, logos, timing, and readability before you publish. And use a high-resolution logo, so it stays sharp on the end card.
+
+Keep in mind that longer or more complex animations use more capacity, because Motion counts against your plan's existing usage limits.
+
+Claude Motion is currently in beta on Team and Enterprise plans. It's on by default for Team. On Enterprise, an owner needs to turn it on under Organization settings, Artifacts. It's not yet available on individual plans.
