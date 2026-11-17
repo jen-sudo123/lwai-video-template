@@ -10,8 +10,6 @@ That makes it ideal for branded social posts, event announcements, presentation 
 
 In this demo, I'll turn a Lead with AI PRO event graphic into a fifteen-second promo video for LinkedIn.
 
-The event is "Beyond AI Tools: Building Organizations That Can Transform Themselves," with Paul Smart, hosted by Daan van Rossum, CEO of Lead with AI. It's a ninety-minute interactive working session on Tuesday, December first, at ten AM G-M-T, eleven AM C-E-T.
-
 To get started, click Artifacts in the sidebar, and choose Motion under "Make something new."
 
 This opens a workspace where I can describe my animation and attach the existing event artwork.
