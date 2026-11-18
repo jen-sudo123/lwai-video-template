@@ -1,0 +1,81 @@
+<speak>
+<break time="50ms"/>ChatGPT can now turn your notes and reference files into a presentation.
+
+<break time="50ms"/>It's called ChatGPT Slides. You get a dedicated editor where you can refine the deck, add comments, and present it. And everything is saved in ChatGPT Space.
+
+<break time="50ms"/>Here's what you can do with it.
+
+<break time="50ms"/>Create a deck from your files.
+
+<break time="50ms"/>Refine it by asking for changes in the same conversation.
+
+<break time="50ms"/>Comment on a specific element and send that instruction to ChatGPT.
+
+<break time="50ms"/>Share it from Space.
+
+<break time="50ms"/>And present it, or export it to PowerPoint, PDF, or Google Slides.
+
+<break time="300ms"/>Let's see it in action with a recurring weekly report.
+
+<break time="50ms"/>Our example is a website refresh for a consulting firm called Northstar. We have two previous weekly reports, and a new file of project notes.
+
+<break time="300ms"/>Step one. Attach your reference files.
+
+<break time="50ms"/>Open ChatGPT in your desktop browser and select Work. Then attach all three files.
+
+<break time="50ms"/>The first report gives historical context. The second is the one whose structure, layout, and styling we want to keep. And the project notes hold this week's updates, owners, deadlines, and decisions.
+
+<break time="50ms"/>In the prompt, give each file a clear role. That's how ChatGPT knows which file sets the design, and which one supplies the facts.
+
+<break time="50ms"/>Then be specific about the deck itself. Ask for four slides: an overview and status, progress by workstream, risks and decisions needed, and next priorities.
+
+<break time="50ms"/>Ask it to separate completed work from plans, and recommendations from approvals. Tell it to use only the information you supplied, flag anything missing, and keep the text and tables editable.
+
+<break time="300ms"/>Step two. Review the draft.
+
+<break time="50ms"/>ChatGPT builds the slides in an editor right beside the conversation. Use the full-view control to expand it.
+
+<break time="50ms"/>In our test, the draft followed the brief. Four slides, the blue, white, and black reference style, and editable text and tables. It kept completed work apart from plans, and it flagged details the notes didn't cover.
+
+<break time="50ms"/>But before you use the report, check every slide against the latest notes. Owners, deadlines, completed work, and pending approvals.
+
+<break time="300ms"/>Step three. Ask for a change in the conversation.
+
+<break time="50ms"/>Let's say we want the scope label on slide one to stand out more.
+
+<break time="50ms"/>In the same conversation, we ask ChatGPT to split it into two lines, make the label bold and dark blue, and keep the page names black. And we tell it to edit the existing presentation, not describe the change or create a new deck.
+
+<break time="50ms"/>ChatGPT updated the slide in place. It even made the text box taller to fit both lines, without moving it.
+
+<break time="300ms"/>Step four. Send an instruction from a selected element.
+
+<break time="50ms"/>There's a second way to make edits. Select an element, like the scope text box, and click Comment in the floating toolbar.
+
+<break time="50ms"/>Type your instruction, then turn on Send to ChatGPT. That adds an at-ChatGPT mention. Submit it with the arrow.
+
+<break time="50ms"/>ChatGPT replies right in the comment thread attached to that element, and confirms the change.
+
+<break time="50ms"/>This route is useful when you want to point at exactly what you mean.
+
+<break time="300ms"/>Step five. Open the saved deck and check sharing.
+
+<break time="50ms"/>The presentation lives in ChatGPT Space. Click Open on the output card to bring the editor back beside the conversation.
+
+<break time="50ms"/>To open the Space page on its own, go to Share, copy the link, and open it in a new tab.
+
+<break time="50ms"/>The Share dialog also shows who owns the deck, and lets you add people or teams.
+
+<break time="300ms"/>Step six. Present or export.
+
+<break time="50ms"/>The Present menu lets you present with or without your notes.
+
+<break time="50ms"/>And the Download menu offers PowerPoint, PDF, or Open in Google Slides. In our test, both the PowerPoint and PDF had all four slides, and the PowerPoint kept its text and tables editable.
+
+<break time="300ms"/>So, for your own recurring report.
+
+<break time="50ms"/>Start with a previous report whose format you want to keep, and a separate file with the latest facts.
+
+<break time="50ms"/>Give each source a clear role. Review what ChatGPT produces. Then refine it, either in the conversation, or with a comment sent straight to ChatGPT.
+
+<break time="50ms"/>Last week's format. This week's facts. A finished deck in minutes.
+</speak>
