@@ -47,7 +47,7 @@ export const AppWindow: React.FC<{
   title?: string;
   imgW?: number;
   imgH?: number;
-  /** Replaces the auto "STEP n" badge text (e.g. "STEP 4" when the video's step 4 spans several windows). */
+  /** Replaces the auto "STEP n" badge text (e.g. "STEP 4" when the video's step 4 spans several windows); '' hides the badge. */
   stepTag?: string;
 }> = ({ t, start, src, cam = [], cursor = [], rings = [], steps = [], left, top = 54, width = 1560, title = 'claude.ai', imgW = 1920, imgH = 1080, stepTag }) => {
   const IMG_W = imgW;
@@ -160,10 +160,12 @@ export const AppWindow: React.FC<{
             ...enter(t, step.at, { dur: 0.45, y: 12 }),
           }}
         >
-          <div style={{ fontFamily: 'Public Sans', color: INK, display: 'flex', alignItems: 'center', gap: 16, padding: '12px 26px 12px 14px', borderRadius: 999, background: '#fff', border: `2px solid ${LINE}`, fontSize: 28, fontWeight: 500 }}>
-            <span style={{ background: LIME, color: '#fff', borderRadius: 999, padding: '4px 14px', fontSize: 18, fontWeight: 700, letterSpacing: '.1em' }}>
-              {stepTag ?? `STEP ${stepIdx + 1}`}
-            </span>
+          <div style={{ fontFamily: 'Public Sans', color: INK, display: 'flex', alignItems: 'center', gap: 16, padding: stepTag === '' ? '12px 26px' : '12px 26px 12px 14px', borderRadius: 999, background: '#fff', border: `2px solid ${LINE}`, fontSize: 28, fontWeight: 500 }}>
+            {stepTag !== '' && (
+              <span style={{ background: LIME, color: '#fff', borderRadius: 999, padding: '4px 14px', fontSize: 18, fontWeight: 700, letterSpacing: '.1em' }}>
+                {stepTag ?? `STEP ${stepIdx + 1}`}
+              </span>
+            )}
             {step.text}
           </div>
         </div>
