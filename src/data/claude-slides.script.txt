@@ -1,11 +1,13 @@
 <speak>
-<break time="50ms"/>Claude can now turn your notes and reference files into an editable presentation.
+<break time="50ms"/>Every week, the same report. Same layout, new numbers.
 
-<break time="50ms"/>It's called Claude Slides. The deck opens right beside your conversation, where you can review it, make changes, add speaker notes, and present it.
+<break time="50ms"/>With Claude Slides, you hand Claude last week's deck and this week's notes, and it builds an editable presentation for you.
 
-<break time="300ms"/>Let's build a recurring weekly report.
+<break time="50ms"/>The deck sits right next to your chat. You can review it, change it, add speaker notes, and present from the same place.
 
-<break time="50ms"/>Our example is a website refresh for a consulting firm called Northstar. We have two previous weekly reports, and a new file of project notes.
+<break time="300ms"/>Here's how it works.
+
+<break time="50ms"/>We'll use a made-up project: a website refresh for Northstar Consulting. There are two earlier weekly reports, and one new file of project notes.
 
 <break time="300ms"/>Step one. Attach your materials.
 
