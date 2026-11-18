@@ -1,0 +1,81 @@
+<speak>
+<break time="50ms"/>Claude can now turn your notes and reference files into an editable presentation.
+
+<break time="50ms"/>It's called Claude Slides. The deck opens right beside your conversation, where you can review it, make changes, add speaker notes, and present it.
+
+<break time="300ms"/>Let's build a recurring weekly report.
+
+<break time="50ms"/>Our example is a website refresh for a consulting firm called Northstar. We have two previous weekly reports, and a new file of project notes.
+
+<break time="300ms"/>Step one. Attach your materials.
+
+<break time="50ms"/>Open a new conversation, choose Upload or add files, then Upload from computer, and attach all three files.
+
+<break time="50ms"/>The first report gives historical context. The second is the one whose structure and design we want to keep. And the project notes hold this week's facts, owners, deadlines, and decisions.
+
+<break time="50ms"/>In the prompt, give each file that role, so Claude knows which file sets the design, and which one supplies the facts.
+
+<break time="50ms"/>Then describe the deck. Ask for four slides: an overview and status, progress by workstream, risks and decisions needed, and next priorities.
+
+<break time="50ms"/>Ask Claude to separate completed work from plans, and recommendations from approvals. Tell it to use only the information you supplied, flag anything missing, and write speaker notes for each slide.
+
+<break time="300ms"/>Step two. Review the draft.
+
+<break time="50ms"/>Claude builds four slides beside the conversation. Use Expand for a closer look.
+
+<break time="50ms"/>In our test, the deck kept the reference colors, typography, and footer, but tried a different layout on the overview.
+
+<break time="50ms"/>Now check every owner, date, amount, and approval against your notes.
+
+<break time="50ms"/>Here, Claude kept completed work apart from future plans, and kept the proposed twelve-hundred-dollar copy review marked as awaiting approval. It also flagged the details the notes didn't cover.
+
+<break time="300ms"/>Step three. Ask for a change in the conversation.
+
+<break time="50ms"/>We want the scope label on slide one to stand out more.
+
+<break time="50ms"/>So we ask Claude to split it into two lines: "Website scope" in bold dark blue, with the page names in black below. And we tell it to keep the text box where it is, and leave everything else unchanged.
+
+<break time="50ms"/>Claude updated the existing slide with exactly that formatting.
+
+<break time="300ms"/>Step four. Edit it yourself.
+
+<break time="50ms"/>You don't have to ask Claude for every change. Double-click any text to edit it directly.
+
+<break time="50ms"/>Here, we changed the overview title, then opened Properties to check its font, weight, size, and color.
+
+<break time="50ms"/>After reloading the page, the change was still there. Your edits save automatically.
+
+<break time="300ms"/>Step five. Send a comment to Claude.
+
+<break time="50ms"/>To point at one specific element, turn on Comment, click the element, and type your instruction. Keep Send to Claude checked, and submit.
+
+<break time="50ms"/>If you're in Manual mode, Claude may pause for approval. Open the chat, review the proposed change, and choose Allow once.
+
+<break time="50ms"/>Claude replies in the comment thread. But always check the slide itself.
+
+<break time="50ms"/>In our test, we asked for bold, dark blue table text. Claude changed the color, but missed the bold, even though its reply said both were done.
+
+<break time="300ms"/>Step six. Check who has access.
+
+<break time="50ms"/>Open Share to review access. A new deck starts as Only you.
+
+<break time="50ms"/>From here, you can add people, or change general access.
+
+<break time="300ms"/>Step seven. Present and download.
+
+<break time="50ms"/>Go to View, then Speaker notes, to see the notes under each slide.
+
+<break time="50ms"/>Choose Present for a full-screen slideshow. Or Present with speaker notes, for a presenter view with your notes, a timer, and the previous, current, and next slides.
+
+<break time="50ms"/>The Download menu offers PDF, a web page, the current slide as an image, and PowerPoint, with either your current fonts or basic fonts.
+
+<break time="50ms"/>In our test, the PowerPoint kept its text editable, its tables as real tables, and the speaker notes on all four slides.
+
+<break time="50ms"/>And under Share, Export also offers Google Slides, after you give it permission to use your Google Drive.
+
+<break time="300ms"/>So, for your own recurring report.
+
+<break time="50ms"/>Give each source a clear role. Review the facts Claude generates. And check the slide after every edit, whether you made it, or Claude did.
+
+<break time="50ms"/>Last week's format. This week's facts. And you stay the final check.
+</speak>
