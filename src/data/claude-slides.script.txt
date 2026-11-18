@@ -9,7 +9,7 @@
 
 <break time="50ms"/>We'll use a made-up project: a website refresh for Northstar Consulting. There are two earlier weekly reports, and one new file of project notes.
 
-<break time="300ms"/>Step one. Attach your materials.
+<break time="300ms"/>Attach your materials.
 
 <break time="50ms"/>Open a new conversation, choose Upload or add files, then Upload from computer, and attach all three files.
 
@@ -21,7 +21,7 @@
 
 <break time="50ms"/>Ask Claude to separate completed work from plans, and recommendations from approvals. Tell it to use only the information you supplied, flag anything missing, and write speaker notes for each slide.
 
-<break time="300ms"/>Step two. Review the draft.
+<break time="300ms"/>Review the draft.
 
 <break time="50ms"/>Claude builds four slides beside the conversation. Use Expand for a closer look.
 
@@ -31,7 +31,7 @@
 
 <break time="50ms"/>Here, Claude kept completed work apart from future plans, and kept the proposed twelve-hundred-dollar copy review marked as awaiting approval. It also flagged the details the notes didn't cover.
 
-<break time="300ms"/>Step three. Ask for a change in the conversation.
+<break time="300ms"/>Ask for a change in the conversation.
 
 <break time="50ms"/>We want the scope label on slide one to stand out more.
 
@@ -39,7 +39,7 @@
 
 <break time="50ms"/>Claude updated the existing slide with exactly that formatting.
 
-<break time="300ms"/>Step four. Edit it yourself.
+<break time="300ms"/>Edit it yourself.
 
 <break time="50ms"/>You don't have to ask Claude for every change. Double-click any text to edit it directly.
 
@@ -47,7 +47,7 @@
 
 <break time="50ms"/>After reloading the page, the change was still there. Your edits save automatically.
 
-<break time="300ms"/>Step five. Send a comment to Claude.
+<break time="300ms"/>Send a comment to Claude.
 
 <break time="50ms"/>To point at one specific element, turn on Comment, click the element, and type your instruction. Keep Send to Claude checked, and submit.
 
@@ -57,13 +57,13 @@
 
 <break time="50ms"/>In our test, we asked for bold, dark blue table text. Claude changed the color, but missed the bold, even though its reply said both were done.
 
-<break time="300ms"/>Step six. Check who has access.
+<break time="300ms"/>Check who has access.
 
 <break time="50ms"/>Open Share to review access. A new deck starts as Only you.
 
 <break time="50ms"/>From here, you can add people, or change general access.
 
-<break time="300ms"/>Step seven. Present and download.
+<break time="300ms"/>Present and download.
 
 <break time="50ms"/>Go to View, then Speaker notes, to see the notes under each slide.
 
