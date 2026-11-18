@@ -4,7 +4,7 @@ import { loadFont as loadSerif } from '@remotion/google-fonts/IBMPlexSerif';
 import { loadFont as loadSans } from '@remotion/google-fonts/PublicSans';
 import { LogoFooter } from '../Logo';
 import { TitleCardGreen } from '../scenes/TitleCardGreen';
-import { AppWindow, Arrow, BACK, Check, Cross, FileIcon, GREEN, KIT_CSS, LIME, LIME_SOFT, LINE, MUTED, enter, makeScene, markStyle, prog } from '../kit';
+import { AppWindow, BACK, Check, Cross, FileIcon, GREEN, KIT_CSS, LIME, LIME_SOFT, LINE, MUTED, enter, makeScene, markStyle, prog } from '../kit';
 
 loadSerif();
 loadSans();
@@ -19,7 +19,7 @@ loadSans();
 // the sidebar Recents list and the owner email in 13 are blurred; untouched originals are in images-orig/.
 //
 //  #  scene                                start   VO cue
-//  1  Same report every week               0.00    "Every week, the same report."
+//  1  Opening: Claude builds this week   0.00    "Every week, the same report."
 //  2  Beside your chat (04)                12.42   "The deck sits right next to your chat."
 //  3  The demo                             20.80   "Here's how it works."
 //  4  Attach your materials (02)           32.54   "Attach your materials."
@@ -101,6 +101,51 @@ const FileCard: React.FC<{ t: number; at: number; name: string; role: string; ro
   </div>
 );
 
+const NAVY = '#123D73';
+// Thumbnail of the weekly report: same layout every week, new numbers. ghost = 1 shows an empty dashed
+// placeholder for this week; it fades to the filled slide when Claude builds it.
+const MiniSlide: React.FC<{
+  t: number; at: number; week: string; status: string; done: number; open: number;
+  dim?: number; ghost?: number; fresh?: number; tag?: string; tagAt?: number;
+}> = ({ t, at, week, status, done, open, dim = 0, ghost = 0, fresh = 1, tag, tagAt = 0 }) => {
+  const filled = 1 - ghost;
+  const pulse = t >= 3.58 && t < 4.8 ? 0.35 * (0.5 + 0.5 * Math.cos((t - 3.58) * 6)) : 0;
+  const built = !!tag && tag.startsWith('Built');
+  return (
+    <div style={{ position: 'relative', width: 500, ...enter(t, at, { y: 40, easing: BACK }) }}>
+      <div className="kit-ui" style={{
+        position: 'relative', width: 500, height: 282, boxSizing: 'border-box', borderRadius: 14, padding: '26px 30px', background: '#fff',
+        border: built ? `3px solid ${GREEN}` : ghost > 0.5 ? '2px dashed #C9CCC2' : `2px solid ${LINE}`,
+        boxShadow: '0 18px 40px rgba(20,40,10,.10)', opacity: 1 - dim, transform: `scale(${0.96 + 0.04 * fresh})`,
+      }}>
+        <div style={{ opacity: filled }}>
+          <div style={{ fontSize: 28, fontWeight: 700, color: NAVY }}>Weekly Report</div>
+          <div style={{ fontSize: 18, color: NAVY, marginTop: 4 }}>Northstar Consulting / {week}</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 24, fontSize: 21 }}>
+            {[
+              ['Status', status],
+              ['Completed', String(done)],
+              ['Open decisions', String(open)],
+            ].map(([k, v]) => (
+              <div key={k} style={{ display: 'flex', justifyContent: 'space-between', borderBottom: `1px solid ${LINE}`, paddingBottom: 8 }}>
+                <span style={{ color: MUTED }}>{k}</span>
+                <span style={{ fontWeight: 700, color: v === 'At risk' ? '#B45309' : NAVY, background: `rgba(102,198,28,${pulse})`, borderRadius: 6, padding: '0 6px' }}>{v}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        {ghost > 0 && (
+          <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 8, opacity: ghost * (1 - prog(t, 8.3, 0.3)), color: MUTED }}>
+            <div style={{ fontSize: 26, fontWeight: 600 }}>{week}</div>
+            <div style={{ fontSize: 20 }}>This week</div>
+          </div>
+        )}
+      </div>
+      {tag && <div className="kit-tag" style={{ position: 'absolute', left: 24, top: -18, ...enter(t, tagAt, { y: 10, easing: BACK }) }}>{tag}</div>}
+    </div>
+  );
+};
+
 const ClaudeSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -111,28 +156,31 @@ const ClaudeSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
       <style>{KIT_CSS}</style>
       {audioSrc !== 'none' && <Audio src={audioSrc ?? staticFile('audio/claude-slides.mp3')} />}
 
-      {/* 1 — Same report every week */}
+      {/* 1 — Opening: the same report every week; Claude builds this week's */}
       <Scene t={t} index={0}>
-        <div className="kit-label" style={enter(t, 0.1, { y: 14 })}>Claude Slides</div>
-        <div className="kit-h1" style={enter(t, 0.2, { dur: 0.9, y: 34 })}>
-          Every week, <span className="kit-mark" style={markStyle(t, 1.24)}>the same report.</span>
-        </div>
-        <p className="kit-body kit-muted" style={{ fontSize: 40, marginTop: 24, ...enter(t, 2.52, { y: 14 }) }}>Same layout, new numbers.</p>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 34, marginTop: 70 }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            <div className="kit-pill" style={enter(t, 7.0, { x: -30, y: 0, easing: BACK })}>
-              <FileIcon size={32} /> Last week’s deck
+        <div style={{ position: 'relative', height: 250 }}>
+          <div style={{ position: 'absolute', inset: 0, opacity: 1 - prog(t, 4.5, 0.4) }}>
+            <div className="kit-label" style={enter(t, 0.1, { y: 14 })}>Claude Slides</div>
+            <div className="kit-h1" style={enter(t, 0.2, { dur: 0.9, y: 34 })}>
+              Every week, <span className="kit-mark" style={markStyle(t, 1.24)}>the same report.</span>
             </div>
-            <div className="kit-pill" style={enter(t, 8.18, { x: -30, y: 0, easing: BACK })}>
-              <FileIcon size={32} /> This week’s notes
-            </div>
+            <p className="kit-body kit-muted" style={{ fontSize: 40, marginTop: 20, ...enter(t, 2.52, { y: 14 }) }}>Same layout, new numbers.</p>
           </div>
-          <Arrow t={t} at={9.4} w={180} />
-          <div className="kit-card kit-ui" style={{ padding: '30px 36px', borderColor: GREEN, background: LIME_SOFT, display: 'flex', alignItems: 'center', gap: 20, ...enter(t, 10.18, { scale: 0.7, y: 0, easing: BACK }) }}>
-            <FileIcon size={60} accent />
-            <div>
-              <div className="kit-h3">Editable presentation</div>
-              <div style={{ fontSize: 24, color: GREEN, marginTop: 6 }}>Built by Claude</div>
+          <div style={{ position: 'absolute', inset: 0, ...enter(t, 4.88, { y: 24 }) }}>
+            <div className="kit-label">Claude Slides</div>
+            <div className="kit-h1">
+              Claude builds <span className="kit-mark" style={markStyle(t, 9.66)}>this week’s deck.</span>
+            </div>
+            <p className="kit-body kit-muted" style={{ fontSize: 40, marginTop: 20, ...enter(t, 6.6, { y: 14 }) }}>From last week’s deck and this week’s notes.</p>
+          </div>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 36, marginTop: 80 }}>
+          <MiniSlide t={t} at={0.48} week="Nov 2-6" status="On track" done={3} open={1} dim={prog(t, 5.2, 0.6) * 0.55} />
+          <MiniSlide t={t} at={1.24} week="Nov 9-13" status="At risk" done={5} open={2} tag={t >= 7.0 ? 'Last week’s deck' : undefined} tagAt={7.0} />
+          <div style={{ position: 'relative' }}>
+            <MiniSlide t={t} at={2.0} week="Nov 14-20" status="At risk" done={7} open={3} ghost={1 - prog(t, 10.18, 0.6)} fresh={0.5 + 0.5 * prog(t, 10.18, 0.6, BACK)} tag={t >= 10.4 ? 'Built by Claude, editable' : undefined} tagAt={10.4} />
+            <div className="kit-pill" style={{ position: 'absolute', left: 90, top: 110, fontSize: 24, padding: '10px 20px', ...enter(t, 8.42, { y: -60, easing: BACK }), opacity: prog(t, 8.42, 0.5) * (1 - prog(t, 10.0, 0.4)) }}>
+              <FileIcon size={26} /> This week’s notes
             </div>
           </div>
         </div>
@@ -165,10 +213,10 @@ const ClaudeSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
       <Scene t={t} index={2}>
         <div className="kit-label" style={enter(t, 20.9, { y: 14 })}>The demo</div>
         <div className="kit-h2" style={enter(t, 21.0, { dur: 0.8, y: 30 })}>
-          A <span className="kit-mark" style={markStyle(t, 22.84)}>made-up project.</span>
+          A weekly report for <span className="kit-mark" style={markStyle(t, 25.4)}>Northstar Consulting.</span>
         </div>
         <p className="kit-body kit-muted" style={{ marginTop: 20, ...enter(t, 24.22, { y: 14 }) }}>
-          Website refresh for Northstar Consulting
+          A website refresh, reported every week
         </p>
         <div style={{ display: 'flex', gap: 34, marginTop: 60 }}>
           <FileCard t={t} at={27.5} roleAt={28.36} name="Nov 2-6 Weekly Report" role="Earlier report" />

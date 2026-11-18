@@ -15,7 +15,7 @@ const Comp: React.FC = () => <ClaudeSlides audioSrc="none" />;
 const App: React.FC = () => {
   const player = useRef<PlayerRef>(null);
   const audio = useRef<HTMLAudioElement>(null);
-  const clock = useRef({ t0: 0, introStart: -1 });
+  const clock = useRef({ t0: 0, introStart: -1, fromIntro: false });
   useEffect(() => {
     let raf = 0;
     const tick = () => {
@@ -24,7 +24,7 @@ const App: React.FC = () => {
         const c = clock.current;
         if (c.introStart >= 0) {
           const el = (performance.now() - c.introStart) / 1000;
-          if (el * FPS >= CLAUDE_SLIDES_TITLE_FRAMES) { c.introStart = -1; a.currentTime = 0; a.play(); }
+          if (el * FPS >= CLAUDE_SLIDES_TITLE_FRAMES) { c.introStart = -1; a.currentTime = 0; c.fromIntro = true; a.play(); }
           else p.seekTo(Math.floor(el * FPS));
         } else {
           p.seekTo(Math.min(TOTAL - 1, CLAUDE_SLIDES_TITLE_FRAMES + Math.round(a.currentTime * FPS)));
@@ -44,7 +44,7 @@ const App: React.FC = () => {
       </div>
       <div className="controls">
         <button type="button" id="play-start" onClick={playFromStart}>Play from start</button>
-        <audio id="vo" ref={audio} controls preload="auto" src={(globalThis as any).VO_SRC} onPlay={() => { clock.current.introStart = -1; }} />
+        <audio id="vo" ref={audio} controls preload="auto" src={(globalThis as any).VO_SRC} onPlay={(e) => { const a = e.currentTarget; if (clock.current.fromIntro) { clock.current.fromIntro = false; return; } if (a.currentTime < 0.05) { a.pause(); clock.current.introStart = performance.now(); } else { clock.current.introStart = -1; } }} />
       </div>
       <p className="hint">Use the audio bar to pause or scrub; the picture follows the voiceover. On the audio bar: Attach 0:32, Review 1:26, Ask for a change 1:58, Edit it yourself 2:22, Comment 2:42, Access 3:18, Present and download 3:30.</p>
     </div>
