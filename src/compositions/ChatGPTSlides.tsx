@@ -135,7 +135,6 @@ const ChatGPTSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           imgH={IMG_H}
           title={TITLE}
           stepTag="SLIDES"
-          cam={[{ at: 10.9, x: 1400, y: 150, s: 2.0, dur: 1.0 }, { at: 13.3, x: 1310, y: 330, s: 1.15, dur: 1.0 }]}
           rings={[
             { at: 8.2, until: 10.8, x: 900, y: 226, w: 995, h: 558 },
             { at: 11.32, until: 12.1, x: 1112, y: 12, w: 136, h: 28 },
@@ -192,7 +191,6 @@ const ChatGPTSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           title={TITLE}
           stepTag="STEP 1"
           cursor={[{ at: 52.6, x: 980, y: 600 }, { at: 54.9, x: 1040, y: 28, click: true, dur: 0.9 }]}
-          cam={[{ at: 53.4, x: 1000, y: 200, s: 1.7, dur: 1.2 }]}
           rings={[{ at: 55.78, x: 980, y: 10, w: 118, h: 32 }]}
           steps={[
             { at: 50.52, text: 'Attach your reference files' },
@@ -210,11 +208,6 @@ const ChatGPTSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           imgH={IMG_H}
           title={TITLE}
           stepTag="STEP 1"
-          cam={[
-            { at: 56.64, x: 1000, y: 200, s: 1.7, dur: 0.01 },
-            { at: 57.0, x: 805, y: 305, s: 2.2, dur: 1.0 },
-            { at: 71.6, x: 975, y: 490, s: 1.55, dur: 1.0 },
-          ]}
           rings={[
             { at: 59.24, until: 61.9, x: 615, y: 246, w: 120, h: 120 },
             { at: 62.12, until: 66.3, x: 745, y: 246, w: 120, h: 120 },
@@ -251,7 +244,6 @@ const ChatGPTSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           imgH={IMG_H}
           title={TITLE}
           stepTag="STEP 2"
-          cam={[{ at: 111.6, x: 1700, y: 150, s: 2.2, dur: 0.9 }]}
           cursor={[{ at: 111.4, x: 1500, y: 300 }, { at: 112.4, x: 1860, y: 28, click: true, dur: 0.9 }]}
           rings={[
             { at: 108.22, until: 111.5, x: 718, y: 226, w: 1177, h: 558 },
@@ -273,7 +265,6 @@ const ChatGPTSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           imgH={IMG_H}
           title={TITLE}
           stepTag="STEP 2"
-          cam={[{ at: 114.64, x: 1000, y: 440, s: 1.12, dur: 0.01 }]}
           rings={[
             { at: 117.38, until: 118.5, x: 62, y: 318, w: 160, h: 330 },
             { at: 118.56, x: 400, y: 136, w: 630, h: 116 },
@@ -295,7 +286,6 @@ const ChatGPTSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           imgH={IMG_H}
           title={TITLE}
           stepTag="STEP 2"
-          cam={[{ at: 121.32, x: 1000, y: 440, s: 1.12, dur: 0.01 }]}
           rings={[
             { at: 121.68, until: 123.5, x: 405, y: 344, w: 1293, h: 258, spot: true },
             { at: 124.02, x: 400, y: 296, w: 292, h: 36 },
@@ -316,7 +306,6 @@ const ChatGPTSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           imgH={IMG_H}
           title={TITLE}
           stepTag="STEP 2"
-          cam={[{ at: 126.38, x: 1000, y: 440, s: 1.12, dur: 0.01 }, { at: 126.5, x: 900, y: 560, s: 1.5, dur: 0.9 }]}
           rings={[{ at: 126.58, x: 400, y: 685, w: 815, h: 80, spot: true }]}
           steps={[{ at: 126.58, text: 'Missing details flagged' }]}
         />
@@ -347,10 +336,6 @@ const ChatGPTSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           imgH={IMG_H}
           title={TITLE}
           stepTag="STEP 3"
-          cam={[
-            { at: 145.4, x: 470, y: 600, s: 1.7, dur: 1.0 },
-            { at: 160.7, x: 1250, y: 455, s: 2.0, dur: 1.0 },
-          ]}
           rings={[
             { at: 147.14, until: 160.5, x: 262, y: 460, w: 416, h: 280 },
             { at: 161.86, x: 948, y: 428, w: 424, h: 50, spot: true },
@@ -376,7 +361,6 @@ const ChatGPTSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           imgH={IMG_H}
           title={TITLE}
           stepTag="STEP 4"
-          cam={[{ at: 174.3, x: 1300, y: 440, s: 1.6, dur: 1.0 }]}
           cursor={[
             { at: 173.6, x: 1250, y: 640 },
             { at: 174.54, x: 1010, y: 448, click: true, dur: 0.8 },
@@ -403,10 +387,6 @@ const ChatGPTSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           imgH={IMG_H}
           title={TITLE}
           stepTag="STEP 4"
-          cam={[
-            { at: 180.32, x: 1300, y: 440, s: 1.6, dur: 0.01 },
-            { at: 180.4, x: 1640, y: 600, s: 2.1, dur: 1.0 },
-          ]}
           cursor={[
             { at: 181.6, x: 1600, y: 680 },
             { at: 182.0, x: 1528, y: 710, click: true, dur: 0.7 },
@@ -436,7 +416,6 @@ const ChatGPTSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           imgH={IMG_H}
           title={TITLE}
           stepTag="STEP 4"
-          cam={[{ at: 189.2, x: 700, y: 560, s: 1.9, dur: 1.0 }, { at: 194.6, x: 980, y: 450, s: 1.2, dur: 1.2 }]}
           rings={[
             { at: 190.4, until: 194.6, x: 565, y: 612, w: 280, h: 100, spot: true },
             { at: 195.36, x: 495, y: 346, w: 1146, h: 64 },
@@ -458,10 +437,6 @@ const ChatGPTSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           imgH={IMG_H}
           title={TITLE}
           stepTag="STEP 5"
-          cam={[
-            { at: 204.9, x: 400, y: 210, s: 1.9, dur: 1.0 },
-            { at: 211.0, x: 1600, y: 150, s: 1.9, dur: 1.0 },
-          ]}
           cursor={[
             { at: 205.0, x: 450, y: 320 },
             { at: 205.4, x: 638, y: 205, click: true, dur: 0.8 },
@@ -490,7 +465,6 @@ const ChatGPTSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           imgH={IMG_H}
           title={TITLE}
           stepTag="STEP 5"
-          cam={[{ at: 213.5, x: 960, y: 480, s: 1.55, dur: 0.8 }]}
           cursor={[{ at: 213.4, x: 900, y: 700 }, { at: 213.6, x: 790, y: 634, click: true, dur: 0.6 }]}
           rings={[
             { at: 214.2, until: 216.0, x: 724, y: 615, w: 116, h: 36 },
@@ -514,7 +488,6 @@ const ChatGPTSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           imgH={IMG_H}
           title={TITLE}
           stepTag="STEP 6"
-          cam={[{ at: 222.0, x: 1600, y: 160, s: 2.0, dur: 1.0 }]}
           cursor={[{ at: 223.2, x: 1500, y: 200 }, { at: 224.0, x: 1648, y: 28, click: true, dur: 0.8 }]}
           rings={[{ at: 224.8, x: 1603, y: 12, w: 82, h: 28 }]}
           steps={[
@@ -538,7 +511,6 @@ const ChatGPTSlidesBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           imgH={IMG_H}
           title={TITLE}
           stepTag="STEP 6"
-          cam={[{ at: 228.7, x: 1600, y: 170, s: 2.2, dur: 1.0 }]}
           rings={[
             { at: 230.2, until: 231.0, x: 1544, y: 92, w: 200, h: 26 },
             { at: 231.08, until: 232.1, x: 1544, y: 128, w: 100, h: 26 },
