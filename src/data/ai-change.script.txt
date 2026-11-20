@@ -1,0 +1,55 @@
+<speak>
+<break time="500ms"/>Ask executives whether their people feel well informed about the company's AI strategy, and eighty percent say yes.
+
+<break time="500ms"/>But ask employees themselves, and only thirty percent agree. That's according to research from Columbia Business School and BCG.
+
+<break time="500ms"/>And if we can't even communicate change effectively, how can we expect to make it happen?
+
+<break time="500ms"/>One company that has made real progress is Zapier, where almost everyone now uses AI every day.
+
+<break time="500ms"/>When we interviewed Chief People Officer Brandon Sammut, he explained how Zapier combined four things: leadership commitment, hands-on experimentation, internal champions, and redesigned workflows.
+
+<break time="500ms"/>The results speak for themselves. Their support team cut average ticket handling time in half, while maintaining customer satisfaction.
+
+<break time="500ms"/>So what can we learn from companies like Zapier about making AI transformation stick?
+
+<break time="800ms"/>First, start by listening. Understand where your people are before deciding what they need.
+
+<break time="500ms"/>How are they using AI today? What skills do they have? Which workflows frustrate them? And what worries them?
+
+<break time="500ms"/>Our transformation partner, Phil Kirschner, uses a framework called the Four Forces.
+
+<break time="500ms"/>People move toward change when they're frustrated with today's work, and excited about a better future. But anxiety, and established habits, hold them back.
+
+<break time="500ms"/>Employee listening shows you what's moving people forward, and what's holding them back.
+
+<break time="500ms"/>Use interviews, surveys, and conversations about real work. And keep listening as the transformation progresses.
+
+<break time="800ms"/>Second, build a network of AI Champions, with a structured program behind it.
+
+<break time="500ms"/>Champions are employees with proven AI skills. They help colleagues learn, redesign workflows, and spot new opportunities.
+
+<break time="500ms"/>At Citi, more than four thousand AI Accelerators support adoption across the organization. PwC Netherlands built a similar network reaching thousands of employees, and used people analytics to find them.
+
+<break time="500ms"/>But appointing Champions isn't enough. Give them advanced training, dedicated time, and real responsibility for supporting their teams.
+
+<break time="800ms"/>Third, let employees shape the change. Involve them in building and testing the solutions that will change their work.
+
+<break time="500ms"/>At Arizona State University, faculty and staff proposed their own AI applications, and around two hundred projects went live within eight months.
+
+<break time="500ms"/>At Kaiser Permanente, clinicians helped test AI documentation tools before they were rolled out more widely.
+
+<break time="500ms"/>Managers are essential here. They need to make time for experimentation, remove obstacles, and address concerns about how roles will evolve.
+
+<break time="800ms"/>Finally, measure progress, and keep adapting. Track both employee progress and business outcomes.
+
+<break time="500ms"/>Are capabilities improving? Are concerns being addressed? Are people adopting the redesigned workflows?
+
+<break time="500ms"/>And are those workflows delivering better quality, faster service, and measurable value?
+
+<break time="500ms"/>Use regular employee listening, and feedback from your Champions, to understand what needs to change.
+
+<break time="500ms"/>Because unlike a traditional software rollout, AI transformation has no fixed finish line.
+
+<break time="500ms"/>The goal is to build an organization where people have the confidence, the capabilities, and the support to keep improving how they work with AI. Together.
+</speak>
