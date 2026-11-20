@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbsoluteFill, Audio, Easing, Sequence, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
+import { AbsoluteFill, Audio, Easing, Img, Sequence, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
 import { loadFont as loadSerif } from '@remotion/google-fonts/IBMPlexSerif';
 import { loadFont as loadSans } from '@remotion/google-fonts/PublicSans';
 import { LogoFooter } from '../Logo';
@@ -62,6 +62,10 @@ const STARTS = [
 const Scene = makeScene(STARTS, 0.5);
 
 const ORANGE = RED;
+
+// Browser previews can inject images (e.g. as data URIs) via globalThis.AI_CHANGE_IMAGES; renders use public/.
+const img = (n: string): string =>
+  (globalThis as { AI_CHANGE_IMAGES?: Record<string, string> }).AI_CHANGE_IMAGES?.[n] ?? staticFile(`ai-change/images/${n}.png`);
 const PAPER = '#FBFBF8';
 const lerp = (a: number, b: number, p: number) => a + (b - a) * p;
 
@@ -373,12 +377,13 @@ const AiChangeBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           <div className="kit-card" style={{ padding: '44px 40px', background: PAPER, ...enter(t, 28.9, { y: 30 }) }}>
             <div className="kit-ui" style={{ fontSize: 18, fontWeight: 700, letterSpacing: '.14em', color: MUTED }}>OUR INTERVIEW</div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 24, marginTop: 26 }}>
-              <div style={{ width: 120, height: 120, borderRadius: '50%', background: LIME_SOFT, border: `4px solid ${LIME}`, display: 'grid', placeItems: 'center', flex: 'none' }}>
-                <span className="kit-h2" style={{ fontSize: 50, color: GREEN }}>BS</span>
-              </div>
+              <Img
+                src={img('brandon-sammut')}
+                style={{ width: 150, height: 150, borderRadius: '50%', border: `5px solid ${LIME}`, objectFit: 'cover', flex: 'none', ...enter(t, 29.4, { scale: 0.7, y: 0, easing: BACK }) }}
+              />
               <div style={enter(t, 30.72, { x: -20, y: 0 })}>
                 <div className="kit-h3" style={{ fontSize: 44 }}>Brandon Sammut</div>
-                <div className="kit-ui" style={{ fontSize: 24, color: MUTED, marginTop: 6 }}>Chief People Officer, Zapier</div>
+                <div className="kit-ui" style={{ fontSize: 24, color: MUTED, marginTop: 6, lineHeight: 1.35 }}>Former Chief People Officer, Zapier</div>
               </div>
             </div>
             <div className="kit-ui" style={{ fontSize: 30, marginTop: 40, lineHeight: 1.4, ...enter(t, 32.08, { y: 12 }) }}>
