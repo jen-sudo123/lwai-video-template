@@ -1,0 +1,55 @@
+<speak>
+<break time="500ms"/>Imagine everyone in your organization is AI fluent.
+
+<break time="500ms"/>Marketing writes copy faster. Sales drafts proposals in minutes. HR summarizes interviews in seconds.
+
+<break time="500ms"/>And yet, campaign approvals still take a week. Customer information still gets lost between departments.
+
+<break time="500ms"/>That gap is the difference between basic AI fluency and an AI-native organization.
+
+<break time="500ms"/>AI fluency makes individuals more capable. But to transform an organization, you have to redesign how work connects across teams.
+
+<break time="900ms"/>So where do you begin?
+
+<break time="500ms"/>In our work with thousands of leaders, one lesson keeps coming back: start with the employee who runs the workflow.
+
+<break time="500ms"/>Just like you did with your own work, they know the exceptions. They know which information goes missing. They know what good looks like.
+
+<break time="500ms"/>That's tacit knowledge. The expertise we use every day, without realizing how hard it is to explain.
+
+<break time="500ms"/>So every successful AI transformation starts by helping each employee do three things. Map their work. Explain their judgment. And co-create assistants or agents they can test.
+
+<break time="500ms"/>Yes, it's slower. But it matters. Solutions built without employees often miss the reality of their jobs. When employees help build the solution, it works better, and they feel they own it.
+
+<break time="500ms"/>There's a bonus, too. Starting with individual workflows also brings out the knowledge and process details your larger systems will need later.
+
+<break time="900ms"/>Once several people have improved their workflows, the next step is finding where those workflows connect.
+
+<break time="500ms"/>Picture this. A salesperson prepares a proposal. Finance checks the pricing. Delivery plans the work.
+
+<break time="500ms"/>Today, that might be three separate tools. Instead, the team could build one shared agent that carries information between them, requests approvals, and keeps the process moving.
+
+<break time="500ms"/>The goal is to redesign the whole workflow, especially the handoffs that no one person owns.
+
+<break time="500ms"/>And the people who revealed those handoffs should help design and test the new solution.
+
+<break time="900ms"/>When you look across teams, you start to see opportunities no single employee could build alone. Some go well beyond fixing the handoffs you already have.
+
+<break time="500ms"/>Imagine a marketing agent with secure access to your most successful past campaigns, their results, and your brand guidelines. It could draft new copy, grounded in what actually worked.
+
+<break time="500ms"/>Or picture an onboarding system that connects sales commitments with delivery plans, so customers are never asked for the same information twice.
+
+<break time="500ms"/>Systems like these need more. Shared data, technical integration, governance, clear ownership, and investment. Leadership and technical teams have to provide those. But employees should still help design and test the result.
+
+<break time="500ms"/>Otherwise, you risk building impressive technology that doesn't fit how people actually work. And it gets rejected.
+
+<break time="900ms"/>So here's the progression. First, transform individual workflows. Then, connect them into team agents. Finally, use what you've learned to build organization-wide systems.
+
+<break time="500ms"/>As you scale, measure the complete process, not just the minutes one person saves. Look at quality, cycle time, customer experience, and net value.
+
+<break time="500ms"/>And keep the people doing the work involved as the system evolves.
+
+<break time="500ms"/>The next time someone proposes an AI tool for a single team, ask two questions. Where does this work hand off? And who should be in the room to redesign it?
+
+<break time="500ms"/>Because in the end, your people's knowledge should shape the systems that transform your organization.
+</speak>
