@@ -1,0 +1,55 @@
+Almost every organization is experimenting with AI. But research shows only a small minority report significant business results.
+
+Using AI, and transforming a business with AI, are two very different things.
+
+For successful AI transformation, strategy is crucial. And an AI strategy isn't just about tools and policies. Increasingly, it's about the future of the business.
+
+Companies are deciding how AI will change their competitive position, what products and services they'll offer, and how they'll create value.
+
+Walmart is a good example. As AI agents change how people discover and buy products, Walmart is rethinking the shopping experience. It's developing AI-powered assistants, and preparing for customers' own personal shopping agents.
+
+That's a strategic decision about how Walmart intends to compete in the future.
+
+For your organization, the starting questions are similar. How is AI changing your industry? What new opportunities and threats are emerging?
+
+And ultimately, what kind of organization do you want to become? And what business outcomes are you pursuing?
+
+[pause] Once you've defined your ambition, you need to decide where AI can create the greatest advantage.
+
+Will you develop new products and services? Transform customer experiences? Improve operational efficiency? Or change your business model?
+
+Infosys, for example, distinguishes between AI-first services, which create new growth, and AI-augmented services, which improve what it already offers.
+
+Lloyds Banking Group has identified five AI focus areas: customer interactions, frontline and relationship manager support, operations, employee assistants, and engineering.
+
+A good strategy makes clear where you'll concentrate your resources. And, just as importantly, what you won't prioritize.
+
+[pause] Now we get to the decisions that make your ambition achievable.
+
+How will your operating model change? Where will AI take on work, or support decisions? And where will people stay responsible?
+
+What technology and data will you need? Which capabilities should you build yourself, buy, or develop with partners?
+
+Then there are your people. Which skills must you develop? How will roles evolve? And how will employees take part in transforming their own work?
+
+You also need governance. What are your rules for security, responsible AI, and human oversight?
+
+And finally, who owns the results? And what are you prepared to invest?
+
+Publicis announced a €300 million AI investment plan over three years, covering both people and technology.
+
+Your investment may differ, but the principle is the same. A strategy needs accountable owners, and committed resources.
+
+[pause] Your strategy needs a roadmap, with priorities for the next 90 days, the next year, and beyond.
+
+Define how you'll measure business value: revenue, costs, quality, customer experience, and adoption.
+
+Review the evidence regularly, and decide what to scale, what to change, and what to stop.
+
+And because AI keeps evolving, your strategy needs to evolve with it.
+
+[pause] So, before you call your AI strategy complete, ask whether your leadership team can answer four questions.
+
+Where are we going? [short pause] Where will we focus? [short pause] What will it take? [short pause] And how will we know it's working?
+
+Those answers give you the foundation of an AI strategy, one that can guide real decisions about investment, technology, people, and the future of your business.
