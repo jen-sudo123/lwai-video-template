@@ -547,10 +547,20 @@ const AiChangeBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
       {/* 8 — The Four Forces */}
       <Scene t={t} index={7}>
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
-          <div>
-            <div className="kit-label" style={enter(t, 73.0, { y: 14 })}>A framework from Phil Kirschner</div>
-            <div className="kit-h2" style={enter(t, 76.7, { dur: 0.8, y: 30 })}>
-              The <span className="kit-mark" style={markStyle(t, 77.28)}>Four Forces</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 34 }}>
+            <Img
+              src={img('phil-kirschner')}
+              style={{ width: 140, height: 140, borderRadius: '50%', border: `5px solid ${LIME}`, objectFit: 'cover', flex: 'none', ...enter(t, 74.2, { scale: 0.6, y: 0, easing: BACK }) }}
+            />
+            <div>
+              <div className="kit-label" style={{ marginBottom: 14, ...enter(t, 73.0, { y: 14 }) }}>
+                <span>
+                  <span style={{ color: INK, ...enter(t, 74.36, { y: 0 }) }}>Phil Kirschner</span> · Our transformation partner
+                </span>
+              </div>
+              <div className="kit-h2" style={enter(t, 75.68, { dur: 0.8, y: 30 })}>
+                The <span className="kit-mark" style={markStyle(t, 77.28)}>Four Forces</span>
+              </div>
             </div>
           </div>
           <div className="kit-ui" style={{ fontSize: 26, color: MUTED, textAlign: 'right', maxWidth: 640, ...enter(t, 88.32, { y: 10 }) }}>
