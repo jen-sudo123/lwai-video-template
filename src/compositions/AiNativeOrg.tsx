@@ -109,6 +109,13 @@ const DrawLine: React.FC<{ p: number; x1: number; y1: number; x2: number; y2: nu
 const pop = (t: number, at: number, dur = 0.55) => enter(t, at, { y: 0, scale: 0.6, easing: BACK, dur });
 const lerp = (a: number, b: number, p: number) => a + (b - a) * p;
 
+// Scene labels in this video: a soft green chip in sentence case instead of the kit's grey uppercase eyebrow.
+const LABEL_CSS = `
+  .ano .kit-label { display: inline-flex; align-self: flex-start; width: fit-content; gap: 12px; padding: 10px 24px 10px 18px; border-radius: 999px;
+    background: ${LIME_SOFT}; color: ${GREEN}; font-size: 26px; font-weight: 700; letter-spacing: 0; text-transform: none; margin: 0 0 28px; }
+  .ano .kit-label::before { width: 12px; height: 12px; border-radius: 50%; background: ${GREEN}; }
+`;
+
 const STAGES = ['Individual workflows', 'Team agents', 'Company-wide systems', 'Scale what works'];
 
 // The four-stage roadmap. `current` lights up; earlier stages show a check.
@@ -199,8 +206,9 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
   const t = frame / fps;
 
   return (
-    <AbsoluteFill style={{ backgroundColor: '#fff' }}>
+    <AbsoluteFill className="ano" style={{ backgroundColor: '#fff' }}>
       <style>{KIT_CSS}</style>
+      <style>{LABEL_CSS}</style>
       {audioSrc !== 'none' && <Audio src={audioSrc ?? staticFile('audio/AiNativeOrg.mp3')} />}
 
       {/* 1 — Imagine everyone is AI fluent: the whole org lights up */}
@@ -1148,7 +1156,9 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
 
       {/* 23 — Two questions */}
       <Scene t={t} index={22}>
-        <div className="kit-label" style={enter(t, 210.2, { y: 14 })}>Next time someone proposes an AI tool for one team</div>
+        <p className="kit-body kit-muted" style={{ fontSize: 40, fontFamily: 'IBM Plex Serif', fontStyle: 'italic', margin: '0 0 18px', ...enter(t, 210.2, { y: 14 }) }}>
+          Next time someone proposes an AI tool for a single team…
+        </p>
         <div className="kit-h2" style={enter(t, 213.9, { dur: 0.8, y: 26 })}>
           Ask <span className="kit-mark" style={markStyle(t, 214.24)}>two questions.</span>
         </div>
