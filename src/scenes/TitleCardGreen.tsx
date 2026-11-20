@@ -33,6 +33,7 @@ export const TitleCardGreen: React.FC<TitleCardGreenProps> = ({
           style={{
             ...typography.hero,
             color: colors.white,
+            whiteSpace: 'pre-line',
           }}
         >
           {title}

@@ -1376,7 +1376,7 @@ const AiStrategyBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
 export const AiStrategy: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => (
   <AbsoluteFill style={{ backgroundColor: '#fff' }}>
     <Sequence durationInFrames={AI_STRATEGY_TITLE_FRAMES}>
-      <TitleCardGreen label="AI STRATEGY" title="How to Build an AI Strategy That Actually Works" />
+      <TitleCardGreen label="AI STRATEGY" title={"How to Build an AI Strategy\nThat Actually Works"} />
     </Sequence>
     <Sequence from={AI_STRATEGY_TITLE_FRAMES}>
       <AiStrategyBody audioSrc={audioSrc} />
