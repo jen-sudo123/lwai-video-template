@@ -1220,7 +1220,7 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
 export const AiNativeOrg: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => (
   <AbsoluteFill style={{ backgroundColor: '#fff' }}>
     <Sequence durationInFrames={AI_NATIVE_ORG_TITLE_FRAMES}>
-      <TitleCardGreen label="AI TRANSFORMATION" title="Beyond AI Fluency: How to Transform the Way Your Organization Works" />
+      <TitleCardGreen label="BEYOND AI FLUENCY" title="How to Transform the Way Your Organization Works" />
     </Sequence>
     <Sequence from={AI_NATIVE_ORG_TITLE_FRAMES}>
       <Body audioSrc={audioSrc} />
