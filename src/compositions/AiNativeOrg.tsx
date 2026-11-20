@@ -953,9 +953,9 @@ const Body: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
       <Scene t={t} index={18}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 900px', gap: 60, alignItems: 'center' }}>
           <div>
-            <div className="kit-label" style={enter(t, 158.55, { y: 14 })}>Systems like these</div>
-            <div className="kit-h2" style={enter(t, 158.7, { dur: 0.8, y: 26 })}>
-              Need <span className="kit-mark" style={markStyle(t, 159.92)}>more.</span>
+            <div className="kit-label" style={enter(t, 158.55, { y: 14 })}>What it takes</div>
+            <div className="kit-h2" style={enter(t, 158.6, { dur: 0.8, y: 26 })}>
+              Systems like these<br /><span className="kit-mark" style={markStyle(t, 159.6)}>need more.</span>
             </div>
             <p className="kit-body" style={{ fontSize: 36, marginTop: 40, ...enter(t, 167.04, { y: 14 }) }}>
               <b>Leadership and technical teams</b> provide the foundation.
