@@ -20,7 +20,7 @@
 
 <break time="500ms"/>Infosys, for example, distinguishes between AI-first services, which create new growth, and AI-augmented services, which improve what it already offers.
 
-<break time="500ms"/>Lloyds Banking Group has identified five AI focus areas, including customer interactions, operations, employee assistants, and engineering.
+<break time="500ms"/>Lloyds Banking Group has identified five AI focus areas: customer interactions, frontline and relationship manager support, operations, employee assistants, and engineering.
 
 <break time="500ms"/>A good strategy makes clear where you'll concentrate your resources. And, just as importantly, what you won't prioritize.
 
