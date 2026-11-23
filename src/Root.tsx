@@ -85,6 +85,7 @@ import { copilotWorkIq } from './data/copilot-work-iq';
 import { copilotSkills } from './data/copilot-skills';
 import { copilotResearcher } from './data/copilot-researcher';
 import { chatGPTPlugins } from './data/chatgpt-plugins';
+import { modelLandscape } from './data/model-landscape';
 import { videoDataSchema } from './scenes/schemas';
 
 // Register one composition per video you want to render.
@@ -461,6 +462,16 @@ export const RemotionRoot: React.FC = () => {
         height={layout.height}
         schema={videoDataSchema}
         defaultProps={chatGPTInPowerPoint}
+      />
+      <Composition
+        id="ModelLandscape"
+        component={Video}
+        durationInFrames={calculateTotalFrames(modelLandscape.scenes)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+        schema={videoDataSchema}
+        defaultProps={modelLandscape}
       />
       <Composition
         id="PromptingFrontierModels"
