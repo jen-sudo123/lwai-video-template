@@ -3,15 +3,19 @@
 
 <break time="500ms"/>In this lesson, let's look at how to save your 3Cs Personalization Profile into Microsoft 365 Copilot, so it has a better starting point whenever you begin a new conversation.
 
-<break time="500ms"/>On web and desktop, here's where to find it. Open Microsoft 365 Copilot Chat and sign in with your Microsoft 365 account. In the left corner, select Settings. Select Personalization from the menu on the left. Find Custom instructions and select Edit instructions.
+<break time="500ms"/>First, where to find it. Open Microsoft 365 Copilot Chat in your browser, and sign in with your work or school account. In the bottom-left corner, select the gear icon, then select Settings. Select Personalisation from the menu on the left. Then find Customise Copilot, and select Manage.
 
-<break time="500ms"/>This opens the space where you can tell Copilot what it should know about you and how you want it to respond.
+<break time="400ms"/>You can also open Settings from the three-dot menu in the top-right corner. And depending on your version and language settings, you may see Personalization, Custom instructions, and Edit instructions instead.
 
-<break time="500ms"/>A quick note on mobile. Microsoft 365 Copilot is available on both iOS and Android, but Microsoft currently doesn't offer a way to edit your Custom Instructions from the mobile app. For now, set them up through Copilot Chat on web or desktop — you can still use Copilot normally on mobile once they're saved.
+<break time="400ms"/>This opens the space where you can tell Copilot what it should know about you, and how you want it to respond.
 
-<break time="500ms"/>Now let's look at the demo. I've opened Custom instructions.
+<break time="500ms"/>A quick note on mobile. Microsoft 365 Copilot is available on both iOS and Android. But for this lesson, set up your Custom Instructions in Copilot Chat on the web, using a desktop browser. You can still use Copilot on your phone with the same work or school account, including picking up conversations you started on your computer.
 
-<break time="300ms"/>Copilot gives me one main instruction field, so I'm going to build my profile using the 3Cs: Context, Communication, and Collaboration.
+<break time="500ms"/>Now let's look at the demo. I've opened Customise Copilot.
+
+<break time="300ms"/>Copilot gives me one main instruction field, so I'm going to paste in the profile I've prepared, using the 3Cs: Context, Communication, and Collaboration.
+
+<break time="300ms"/>If you already have instructions saved here, review them first, and keep anything you still want Copilot to use.
 
 <break time="400ms"/>First, Context. I'll tell Copilot what it should consistently know about me: "I'm a senior leader responsible for strategy and operations. I regularly use Copilot to prepare for meetings, make decisions, and communicate with my leadership team."
 
@@ -19,27 +23,35 @@
 
 <break time="400ms"/>And finally, Collaboration. This is how I want Copilot to work with me: "Challenge my assumptions when appropriate. Ask questions when important information is missing, and flag uncertainty rather than guessing."
 
-<break time="400ms"/>Once I'm happy with my 3Cs, I'll select Save instructions.
+<break time="400ms"/>Once I'm happy with my 3Cs, I'll select Save customisation. In some versions, this button is called Save instructions.
+
+<break time="300ms"/>And I'll look for the confirmation: "Custom instructions have been saved."
 
 <break time="500ms"/>And that's it. Copilot now has a starting profile for how I want it to work with me, without me having to repeat these instructions in every conversation.
 
-<break time="500ms"/>Now let's put it into practice. I'll open a new conversation and give Copilot a task to test whether my Custom Instructions actually work.
+<break time="500ms"/>Now let's put it into practice. I'll open a new conversation, and give Copilot a task to check whether its response reflects my Custom Instructions.
 
 <break time="300ms"/>For example, here I ask: "I'm considering expanding into Singapore next year. Do you think this is a market worth exploring, and what would you want me to validate before committing resources?"
 
-<break time="400ms"/>Now I pay attention to the answer. Does it understand my role and audience? Does it use my preferred tone? Does it structure the response in a way that works for me?
+<break time="400ms"/>Now I pay attention to the answer. Does it understand my role and audience? Does it use my preferred tone? Does it structure the response in a way that works for me? And does it challenge my assumptions, and flag what I still need to validate?
 
-<break time="400ms"/>If you still find yourself making the same corrections, go back to Custom Instructions and refine your profile.
+<break time="400ms"/>In this test, Copilot gave an early recommendation, used headings and bullet points, and pushed back on committing resources straight away. But the answer was still quite long, so I might want to make my preference for concise responses more specific.
 
-<break time="400ms"/>The goal here: less time briefing Copilot, more time getting useful work done.
+<break time="400ms"/>Keep in mind, Copilot can also draw on other context, including your work sources. So one answer won't tell you exactly how much came from your Custom Instructions.
+
+<break time="400ms"/>If you still find yourself making the same corrections, go back to Customise Copilot and refine your profile.
+
+<break time="400ms"/>The goal: less time briefing Copilot, more time getting useful work done.
 
 <break time="500ms"/>Before we wrap up, a few practical notes.
 
 <break time="400ms"/>Keep your instructions persistent, not task-specific. Your role, audience, communication preferences, and working style belong here. Details that only matter for one task should stay in the prompt.
 
-<break time="400ms"/>Keep them concise and specific. Microsoft doesn't currently publish a character limit for personal Custom Instructions, so focus on useful standing preferences rather than trying to fill the space.
+<break time="400ms"/>Keep them concise and specific. We didn't find a published character limit for personal Custom Instructions, so focus on useful standing preferences, and follow any limit your version shows you.
 
-<break time="400ms"/>Custom Instructions can be turned off. Go back to Personalization and use the toggle on the Custom Instructions tile if you don't want Copilot to apply them.
+<break time="400ms"/>Custom Instructions can be turned off. Go back to Personalisation, and use the toggle beside Customise Copilot. Turning it off stops Copilot from applying your instructions, without deleting what you've saved.
 
-<break time="400ms"/>And treat your profile as something to refine. When you notice yourself repeatedly correcting Copilot in the same way, ask whether that preference belongs in your Custom Instructions.
+<break time="400ms"/>Availability can depend on your organization. If you can't see the personalization settings, or they're switched off, check with your Microsoft 365 administrator.
+
+<break time="400ms"/>And finally, treat your profile as something to refine. When you notice yourself correcting Copilot the same way again and again, ask whether that preference belongs in your Custom Instructions. They guide its responses, but they won't guarantee every answer follows every preference perfectly.
 </speak>
