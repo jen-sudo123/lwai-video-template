@@ -11,7 +11,9 @@
 
 <break time="500ms"/>An AI model is the underlying technology that processes your instructions and generates responses. <break time="200ms"/> Think of it as the engine behind an AI tool.
 
-<break time="500ms"/>And there isn't just one version of any model. <break time="200ms"/> Developers regularly release new models, <break time="150ms"/> with different capabilities, strengths, and performance levels.
+<break time="500ms"/>For example, <break time="150ms"/> GPT and Claude are different families of AI models, <break time="150ms"/> developed by different companies.
+
+<break time="500ms"/>And there isn't just one version of each model. <break time="200ms"/> Developers regularly release new models, <break time="150ms"/> with different capabilities, strengths, and performance levels.
 
 <break time="500ms"/>Some are optimized for speed and everyday tasks. <break time="200ms"/> Others are designed for more complex reasoning, coding, or working with large amounts of information. <break time="200ms"/> And some are particularly capable of working with images, audio, and video.
 
