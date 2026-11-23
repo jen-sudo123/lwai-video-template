@@ -9,8 +9,6 @@
 
 <break time="400ms"/>This opens the space where you can tell Copilot what it should know about you, and how you want it to respond.
 
-<break time="500ms"/>A quick note on mobile. Microsoft 365 Copilot is available on both iOS and Android. But for this lesson, set up your Custom Instructions in Copilot Chat on the web, using a desktop browser. You can still use Copilot on your phone with the same work or school account, including picking up conversations you started on your computer.
-
 <break time="500ms"/>Now let's look at the demo. I've opened Customise Copilot.
 
 <break time="300ms"/>Copilot gives me one main instruction field, so I'm going to paste in the profile I've prepared, using the 3Cs: Context, Communication, and Collaboration.
