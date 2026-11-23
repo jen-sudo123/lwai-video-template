@@ -1,0 +1,57 @@
+<speak>
+<break time="500ms"/>At this point, I'm assuming you already have a basic understanding of large language models. <break time="200ms"/> You roughly know how they work, what they're good at, and where they can fail.
+
+<break time="500ms"/>You've heard about hallucinations, <break time="150ms"/> about how these models predict language token by token, <break time="150ms"/> and why judgment and accountability always need to stay human.
+
+<break time="500ms"/>If not, <break time="150ms"/> start with our AI Fundamentals Training. <break time="200ms"/> It gives you the context you'll need for the rest of this lesson.
+
+<break time="500ms"/>Today is about understanding the AI model landscape. <break time="200ms"/> Where models are similar, <break time="150ms"/> where they meaningfully differ, <break time="150ms"/> and how AI-fluent leaders make intentional choices about which models to use.
+
+<break time="500ms"/>So first, <break time="150ms"/> let's zoom out.
+
+<break time="500ms"/>An AI model is the underlying technology that processes your instructions and generates responses. <break time="200ms"/> Think of it as the engine behind an AI tool.
+
+<break time="500ms"/>For example, <break time="150ms"/> GPT, Gemini, and Claude are different families of AI models, <break time="150ms"/> developed by different companies.
+
+<break time="500ms"/>And there isn't just one version of each model. <break time="200ms"/> Developers regularly release new models, <break time="150ms"/> with different capabilities, strengths, and performance levels.
+
+<break time="500ms"/>Some are optimized for speed and everyday tasks. <break time="200ms"/> Others are designed for more complex reasoning, coding, or working with large amounts of information. <break time="200ms"/> And some are particularly capable of working with images, audio, and video.
+
+<break time="500ms"/>The landscape is constantly evolving. <break time="200ms"/> A model that's particularly strong at one task today might be overtaken by another tomorrow.
+
+<break time="500ms"/>That's why AI fluency isn't about mastering one specific model. <break time="200ms"/> It's about understanding what different models can do, <break time="150ms"/> and knowing how to choose the right one for the task.
+
+<break time="500ms"/>Before we talk about differences, <break time="150ms"/> let's be clear about what these models share.
+
+<break time="500ms"/>Modern language models are trained on massive amounts of data. <break time="200ms"/> And they're very good at recognizing patterns in language, code, <break time="150ms"/> and increasingly, images, audio, and video.
+
+<break time="500ms"/>Across many leading models, you'll see similar baseline strengths. <break time="200ms"/> Conversational interfaces for thinking, drafting, and analysis. <break time="200ms"/> The ability to work with files and long documents. <break time="200ms"/> Strong summarization, synthesis, restructuring, and ideation.
+
+<break time="500ms"/>You'll also see the same known limitations. <break time="200ms"/> Missing context. <break time="200ms"/> Confident-sounding errors. <break time="200ms"/> And over-generalization.
+
+<break time="500ms"/>The important distinction is this. <break time="200ms"/> Even when models can perform the same task, <break time="150ms"/> they don't necessarily approach it in the same way, <break time="150ms"/> or produce equally useful results.
+
+<break time="500ms"/>Here's an important insight.
+
+<break time="500ms"/>AI-fluent leaders don't have to rely on a single model as the only voice in the room.
+
+<break time="500ms"/>For important tasks, <break time="150ms"/> they can deliberately bring in a second model. <break time="200ms"/> To challenge assumptions, <break time="150ms"/> reframe a problem, <break time="150ms"/> expose blind spots, <break time="150ms"/> and test whether an answer holds up under a different approach.
+
+<break time="500ms"/>This is cognitive diversification.
+
+<break time="500ms"/>Imagine you're evaluating a strategic decision. <break time="200ms"/> You ask one model to develop a recommendation. <break time="200ms"/> Then you take that recommendation to another model, <break time="150ms"/> and ask it to identify weaknesses, <break time="150ms"/> challenge the assumptions, <break time="150ms"/> or suggest an alternative perspective.
+
+<break time="500ms"/>You're not necessarily using a second AI to go faster. <break time="200ms"/> You're using it to think more critically.
+
+<break time="500ms"/>And remember, <break time="150ms"/> agreement between models doesn't guarantee accuracy. <break time="200ms"/> Important claims still need to be verified against reliable sources.
+
+<break time="500ms"/>Just like strong leaders seek out dissenting views, <break time="150ms"/> strong AI users can build that challenge directly into their workflow.
+
+<break time="500ms"/>So, <break time="150ms"/> today's goal isn't to make you use multiple models for every task.
+
+<break time="500ms"/>It's to help you become fluent in the landscape, <break time="150ms"/> so you can make intentional choices about which models to use, <break time="150ms"/> and when.
+
+<break time="500ms"/>You might have one model you rely on for everyday work, <break time="150ms"/> and turn to others when you need a different perspective, <break time="150ms"/> or a particular capability.
+
+<break time="500ms"/>The goal isn't to use more AI. <break time="300ms"/> It's to use AI more thoughtfully, <break time="150ms"/> with the awareness and judgment to get better results.
+</speak>
