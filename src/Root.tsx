@@ -86,6 +86,7 @@ import { copilotSkills } from './data/copilot-skills';
 import { copilotResearcher } from './data/copilot-researcher';
 import { chatGPTPlugins } from './data/chatgpt-plugins';
 import { modelLandscape } from './data/model-landscape';
+import { ModelLandscape, MODEL_LANDSCAPE_DURATION_S, MODEL_LANDSCAPE_TITLE_FRAMES } from './compositions/ModelLandscape';
 import { videoDataSchema } from './scenes/schemas';
 
 // Register one composition per video you want to render.
@@ -465,6 +466,14 @@ export const RemotionRoot: React.FC = () => {
       />
       <Composition
         id="ModelLandscape"
+        component={ModelLandscape}
+        durationInFrames={MODEL_LANDSCAPE_TITLE_FRAMES + Math.ceil(MODEL_LANDSCAPE_DURATION_S * layout.fps)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+      />
+      <Composition
+        id="ModelLandscapeSlides"
         component={Video}
         durationInFrames={calculateTotalFrames(modelLandscape.scenes)}
         fps={layout.fps}
