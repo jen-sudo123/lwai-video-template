@@ -1,0 +1,55 @@
+At this point, I'm assuming you already have a basic understanding of large language models. You roughly know how they work, what they're good at, and where they can fail.
+
+[pause] You've heard about hallucinations, about how these models predict language token by token, and why judgment and accountability always need to stay human.
+
+[pause] If not, start with our AI Fundamentals Training. It gives you the context you'll need for the rest of this lesson.
+
+[pause] Today is about understanding the AI model landscape. Where models are similar, where they meaningfully differ, and how AI-fluent leaders make intentional choices about which models to use.
+
+[pause] So first, let's zoom out.
+
+[pause] An AI model is the underlying technology that processes your instructions and generates responses. Think of it as the engine behind an AI tool.
+
+[pause] For example, GPT and Claude are different families of AI models, developed by different companies.
+
+[pause] And there isn't just one version of each model. Developers regularly release new models, with different capabilities, strengths, and performance levels.
+
+[pause] Some are optimized for speed and everyday tasks. Others are designed for more complex reasoning, coding, or working with large amounts of information. And some are particularly capable of working with images, audio, and video.
+
+[pause] The landscape is constantly evolving. A model that's particularly strong at one task today might be overtaken by another tomorrow.
+
+[pause] That's why AI fluency isn't about mastering one specific model. It's about understanding what different models can do, and knowing how to choose the right one for the task.
+
+[pause] Before we talk about differences, let's be clear about what these models share.
+
+[pause] Modern language models are trained on massive amounts of data. And they're very good at recognizing patterns in language, code, and increasingly, images, audio, and video.
+
+[pause] Across many leading models, you'll see similar baseline strengths. Conversational interfaces for thinking, drafting, and analysis. The ability to work with files and long documents. Strong summarization, synthesis, restructuring, and ideation.
+
+[pause] You'll also see the same known limitations. Missing context. Confident-sounding errors. And over-generalization.
+
+[pause] The important distinction is this. Even when models can perform the same task, they don't necessarily approach it in the same way, or produce equally useful results.
+
+[pause] Here's an important insight.
+
+[pause] AI-fluent leaders don't have to rely on a single model as the only voice in the room.
+
+[pause] For important tasks, they can deliberately bring in a second model. To challenge assumptions, reframe a problem, expose blind spots, and test whether an answer holds up under a different approach.
+
+[pause] This is cognitive diversification.
+
+[pause] Imagine you're evaluating a strategic decision. You ask one model to develop a recommendation. Then you take that recommendation to another model, and ask it to identify weaknesses, challenge the assumptions, or suggest an alternative perspective.
+
+[pause] You're not necessarily using a second AI to go faster. You're using it to think more critically.
+
+[pause] And remember, agreement between models doesn't guarantee accuracy. Important claims still need to be verified against reliable sources.
+
+[pause] Just like strong leaders seek out dissenting views, strong AI users can build that challenge directly into their workflow.
+
+[pause] So, today's goal isn't to make you use multiple models for every task.
+
+[pause] It's to help you become fluent in the landscape, so you can make intentional choices about which models to use, and when.
+
+[pause] You might have one model you rely on for everyday work, and turn to others when you need a different perspective, or a particular capability.
+
+[pause] The goal isn't to use more AI. It's to use AI more thoughtfully, with the awareness and judgment to get better results.
