@@ -20,13 +20,13 @@ These choices decide what AI can use and who sees it, so follow your organizatio
 
 During: What AI can do in the meeting
 
-During the meeting, I want to stay focused on the discussion. That's where AI Companion helps. I open it from the menu bar at the bottom of the meeting window.
+During the meeting, I want to stay focused on the discussion. That's where AI Companion helps. I open it from the menu bar at the bottom of the meeting window in the Zoom Workplace desktop app.
 
 Now say someone joins late, or steps out for a call. They don't need to interrupt the discussion or wait for a recap. They just ask AI Companion:
 
 What have I missed so far?
 
-In a few seconds, they get the key points: the launch isn't approved, there are two critical defects, marketing needs a date, and training isn't finished. Each point links back to where it was said. That's why I let invitees ask about the whole meeting when I scheduled it.
+In a few seconds, they get the key points: the launch isn't approved, there are two critical defects, marketing needs a date, and training isn't finished. Alex will report on the defects tomorrow, and Sam will confirm the training date. Each point links back to where it was said. That's why I let invitees ask about the whole meeting when I scheduled it.
 
 Instead of taking notes, I focus on running the discussion. For example, I can ask:
 
