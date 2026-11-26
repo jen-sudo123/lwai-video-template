@@ -870,7 +870,7 @@ const ZoomAiBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
 export const ZoomAi: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => (
   <AbsoluteFill style={{ backgroundColor: '#fff' }}>
     <Sequence durationInFrames={ZOOM_AI_TITLE_FRAMES}>
-      <TitleCardGreen label="ZOOM AI" title="Before, During, and After the Meeting" />
+      <TitleCardGreen title="Zoom AI" />
     </Sequence>
     <Sequence from={ZOOM_AI_TITLE_FRAMES}>
       <ZoomAiBody audioSrc={audioSrc} />
