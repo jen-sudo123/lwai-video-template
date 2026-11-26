@@ -12,6 +12,7 @@ import {
   Cross,
   GREEN,
   INK,
+  IN_OUT,
   KIT_CSS,
   LIME_SOFT,
   LINE,
@@ -47,7 +48,7 @@ loadSans();
 //  8  Template list (02)            70.45   "…templates for different kinds of meetings…"
 //  9  Save (23)                     82.55   "Then I save the meeting…"
 //  10 Policies                      86.15   "These choices decide what AI can use…"
-//  11 During: AI Companion (24)     92.15   "I join from the Zoom Workplace desktop app…"
+//  11 During: toolbar (47) → panel (24) 92.15   "I join from the Zoom Workplace desktop app…"
 //  12 The discussion                103.35  "We discuss the launch."
 //  13 Unanswered questions (28)     123.45  "Partway through, I ask…"
 //  14 Action items (29)             133.55  "Then I ask: What are the action items…"
@@ -391,33 +392,49 @@ const ZoomAiBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
         </div>
       </Scene>
 
-      {/* 11 — During: AI Companion (24) */}
+      {/* 11 — During: meeting toolbar (47) → AI Companion panel (24) */}
       <Scene t={t} index={10} pad={false}>
-        <LeftCol>
-          <Section t={t} at={92.3} text="During the meeting" />
-          <div className="kit-h2" style={enter(t, 92.4, { dur: 0.8, y: 30 })}>Join from the desktop app.</div>
-          <p className="kit-body" style={{ marginTop: 34, ...enter(t, 94.24, { y: 16 }) }}>
-            Zoom Workplace calls the panel <span className="kit-mark" style={markStyle(t, 97.28)}>AI Companion.</span>
-          </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 18, marginTop: 40 }}>
-            <div className="kit-ui" style={{ display: 'flex', alignItems: 'center', gap: 16, fontSize: 30, ...enter(t, 99.12, { x: -24, y: 0 }) }}>
-              <Check size={34} /> Confirm it's running
-            </div>
-            <div className="kit-ui" style={{ display: 'flex', alignItems: 'center', gap: 16, fontSize: 30, ...enter(t, 100.48, { x: -24, y: 0 }) }}>
-              <Check size={34} /> Tell participants AI is in use
-            </div>
+        {t < 99.2 && (
+          <div style={{ position: 'absolute', inset: 0, opacity: 1 - prog(t, 98.6, 0.5, IN_OUT) }}>
+            <AppWindow
+              t={t}
+              start={92.15}
+              src={shot('47-meeting-toolbar')}
+              imgW={1634}
+              imgH={911}
+              width={1440}
+              top={44}
+              title="Zoom Workplace"
+              stepTag="DURING"
+              cam={[{ at: 95.6, x: 975, y: 790, s: 2.0, dur: 1.1 }]}
+              cursor={[{ at: 94.6, x: 700, y: 500 }, { at: 96.48, x: 975, y: 872, click: true }]}
+              rings={[{ at: 97.28, x: 928, y: 852, w: 94, h: 54, spot: true }]}
+              steps={[
+                { at: 93.64, text: 'Join from the Zoom Workplace desktop app' },
+                { at: 97.28, text: 'Open AI Companion' },
+              ]}
+            />
           </div>
-        </LeftCol>
-        <Panel
-          t={t}
-          start={92.15}
-          n="24"
-          big
-          rings={[
-            { at: 97.28, until: 99.0, x: 280, y: 66, w: 180, h: 44 },
-            { at: 99.84, x: 254, y: 160, w: 246, h: 46 },
-          ]}
-        />
+        )}
+        {t >= 98.6 && (
+          <div style={{ position: 'absolute', inset: 0, opacity: prog(t, 98.6, 0.5, IN_OUT) }}>
+            <LeftCol>
+              <Section t={t} at={98.7} text="During the meeting" />
+              <div className="kit-h2" style={enter(t, 98.75, { dur: 0.7, y: 24 })}>
+                The panel is called <span className="kit-mark" style={markStyle(t, 99.1)}>AI Companion.</span>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 18, marginTop: 44 }}>
+                <div className="kit-ui" style={{ display: 'flex', alignItems: 'center', gap: 16, fontSize: 30, ...enter(t, 99.84, { x: -24, y: 0 }) }}>
+                  <Check size={34} /> Confirm it's running
+                </div>
+                <div className="kit-ui" style={{ display: 'flex', alignItems: 'center', gap: 16, fontSize: 30, ...enter(t, 100.48, { x: -24, y: 0 }) }}>
+                  <Check size={34} /> Tell participants AI is in use
+                </div>
+              </div>
+            </LeftCol>
+            <Panel t={t} start={98.6} n="24" big rings={[{ at: 99.84, x: 254, y: 160, w: 246, h: 46 }]} />
+          </div>
+        )}
       </Scene>
 
       {/* 12 — The discussion */}
