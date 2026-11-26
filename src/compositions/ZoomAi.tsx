@@ -502,12 +502,8 @@ const ZoomAiBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
       <Scene t={t} index={13} pad={false}>
         <LeftCol>
           <PromptCard t={t} at={134.72} dur={7.4} text="What are the action items, who owns each one, and what deadlines were explicitly stated? Do not invent missing deadlines." style={{ fontSize: 29 }} />
-          <div className="kit-card kit-ui" style={{ marginTop: 34, padding: '22px 28px', display: 'flex', alignItems: 'center', gap: 18, fontSize: 28, borderColor: RED, ...enter(t, 145.2, { y: 16, easing: BACK }) }}>
-            <Cross size={36} />
-            <div>
-              Sam: <b>"tomorrow"</b>
-              <div style={{ fontSize: 22, color: RED, marginTop: 4, ...enter(t, 147.6, { y: 6 }) }}>Nobody set that deadline.</div>
-            </div>
+          <div className="kit-card kit-ui" style={{ marginTop: 34, alignSelf: 'flex-start', padding: '14px 24px', display: 'inline-flex', alignItems: 'center', gap: 14, fontSize: 28, borderColor: RED, ...enter(t, 145.2, { y: 16, easing: BACK }) }}>
+            <Cross size={32} /> Sam: <b>"tomorrow"</b>
           </div>
         </LeftCol>
         <Panel
@@ -516,7 +512,7 @@ const ZoomAiBody: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
           n="29"
           rings={[
             { at: 136.0, until: 144.0, x: 14, y: 132, w: 350, h: 78 },
-            { at: 145.52, x: 42, y: 355, w: 292, h: 36, spot: true },
+            { at: 145.52, x: 42, y: 355, w: 292, h: 44, spot: true },
           ]}
         />
       </Scene>
