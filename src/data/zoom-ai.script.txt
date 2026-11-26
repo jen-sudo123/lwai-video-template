@@ -1,0 +1,61 @@
+Zoom AI: Before, During, and After the Meeting
+
+Zoom is already part of your day. Its AI can capture what was discussed, flag what's still unresolved, and turn the meeting into a decision document. Let's see how it works.
+
+Before: Set up AI when you schedule
+
+I'm scheduling a launch readiness review for a new customer portal. Before the meeting, I decide what AI can capture and who sees the results.
+
+I sign in at zoom.us and select Schedule a Meeting. I add a title, date and time, then scroll down to Zoom AI.
+
+I tick Automatically start Zoom AI, so nobody has to remember to turn it on. Then there are two settings to check.
+
+First, who can ask questions about the meeting. The default lets people ask only about the discussion from when they joined, so anyone who arrives late can't catch up on what they missed. You can change this to All participants and invitees. If the topic is sensitive, limit it to people in your organization.
+
+Second, who receives the summary. I keep it at Only meeting host. That way I can check and correct the summary before I share it.
+
+Finally, the summary template. The default is a general recap, but there are templates for different kinds of meetings, like one-on-ones, stand-ups and brainstorms. For a launch review, Project update is a good fit, because it focuses on progress and next steps. Then I save the meeting and send the invite from my calendar.
+
+These choices decide what AI can use and who sees it, so follow your organization's policies.
+
+During: What AI can do in the meeting
+
+I join from the Zoom Workplace desktop app, where the panel is called AI Companion. I confirm it's running, and I tell participants AI is in use.
+
+We discuss the launch. Engineering has two critical defects. Marketing needs a launch date. Support training isn't finished. We haven't approved the launch. Alex will report on the defects tomorrow, and Sam will confirm when training will be complete.
+
+Instead of writing everything down, I focus on running the discussion. Partway through, I ask:
+
+What important questions remain unanswered?
+
+AI flags the launch date, the defects, training and the approval criteria. Then I ask:
+
+What are the action items, who owns each one, and what deadlines were explicitly stated? Do not invent missing deadlines.
+
+Even with that instruction, AI gave Sam a "tomorrow" deadline that nobody set. I opened the citation and asked it to separate what was said from what it had inferred. It corrected itself.
+
+That's the habit worth building. Before you treat an AI-generated owner, deadline or decision as confirmed, check the evidence.
+
+After: Turn the meeting into a decision
+
+After the meeting, I open Summaries in the web portal. The summary is well structured, but it carried forward two errors: "customer portion" instead of "customer portal," and Sam's invented deadline.
+
+Because only I received it, I can fix it first. I select Open in Docs, correct the wording, mark Sam's deadline as not confirmed, and then share it with the team. That's the version people should rely on.
+
+Now I want more than a recap. In ZoomMate, at ai.zoom.us, I attach the meeting. I check the date so I don't pick a different meeting with the same title. Then I ask:
+
+Create a one-page launch readiness brief for senior leadership. Include current status, critical risks, confirmed decisions, outstanding commitments, and a recommendation. Separate agreed decisions from your recommendations, and flag missing information rather than inventing it.
+
+ZoomMate drafts the brief from my corrected summary. It keeps Sam's deadline unconfirmed and notes that it had no transcript to work from. Each point is tagged back to the summary, so I can check the evidence. The brief opens in Canvas, where I can refine it before I share it.
+
+A practical note: Use Zoom with your own AI assistant
+
+If you already use ChatGPT or Claude, you can connect Zoom to it. Once it's connected, your assistant can pull in your meeting information, so you can work with it alongside the rest of your business context.
+
+On a business or enterprise plan, whether this connector is available depends on how your organization has set it up. If you can't find it, check with your IT or admin team.
+
+The takeaway
+
+Before the meeting, decide what AI can capture and who sees it. During the meeting, use it to follow the discussion and surface open questions. Afterward, check the output, correct it, and turn the meeting into a decision.
+
+The value isn't the summary. It's making better decisions, with your own judgment checking the work.
