@@ -56,6 +56,6 @@ On a business or enterprise plan, whether this connector is available depends on
 
 The takeaway
 
-Before the meeting, decide what AI can capture and who sees it. During the meeting, use it to follow the discussion and surface open questions. Afterward, check the output, correct it, and turn the meeting into a decision.
+So, set it up before the meeting, let it keep track while you run the discussion, and fix the summary before anyone else sees it.
 
-The value isn't the summary. It's making better decisions, with your own judgment checking the work.
+A summary on its own doesn't move the launch forward. What helps is getting to a decision faster, and you still need to check what AI tells you along the way.

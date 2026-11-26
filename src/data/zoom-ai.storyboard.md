@@ -28,8 +28,8 @@
 | 18 | After | "Create a one-page launch readiness brief…" | Prompt types into ZoomMate input (overlay on 06) | 06 + typed prompt | 3:48–4:04 |
 | 19 | After | "ZoomMate drafts the brief… keeps Sam's deadline unconfirmed… no transcript… tagged back to the summary… opens in Canvas, where I can refine it." | Brief overview (spotlight "no transcript" note) → owners table (Sam "Deadline not confirmed") → risks & recommendation label | 44 → 45 → 46 | 4:04–4:26 |
 | 20 | Note | "If you already use ChatGPT or Claude, you can connect Zoom… check with your IT or admin team." | Concept: Zoom meetings feeding into a generic AI assistant alongside docs/email icons; small "Depends on your admin" tag | Motion (no screenshot) | 4:26–4:46 |
-| 21 | Takeaway | "Before… During… Afterward…" | Three columns reveal on each word | Motion | 4:46–5:00 |
-| 22 | Close | "The value isn't the summary. It's making better decisions…" | Closing statement | Motion | 5:00–5:08 |
+| 21 | Takeaway | "Set it up before… keep track… fix the summary…" | Three columns reveal on each word | Motion | 4:46–5:00 |
+| 22 | Close | "A summary on its own doesn't move the launch forward…" | Closing statement | Motion | 5:00–5:08 |
 
 ## VO changes made vs. the original script
 1. Scope: "For this meeting, I choose All participants and invitees" → "You can change this to All participants and invitees" (screenshots only show the default).
