@@ -8,12 +8,12 @@ const TOTAL = ZOOM_AI_TITLE_FRAMES + Math.ceil(ZOOM_AI_DURATION_S * FPS);
 const OFFSET = ZOOM_AI_TITLE_FRAMES / FPS; // VO in the preview audio is pre-padded by the title card length
 const CHAPTERS: [string, number][] = [
   ['Intro', 0],
-  ['Before', OFFSET + 10.85],
-  ['During', OFFSET + 92.15],
-  ['After', OFFSET + 164.25],
-  ['ZoomMate brief', OFFSET + 190.35],
-  ['Own assistant', OFFSET + 236.6],
-  ['Takeaway', OFFSET + 258.95],
+  ['Before', OFFSET + 10.69],
+  ['During', OFFSET + 90.6],
+  ['After', OFFSET + 154.49],
+  ['ZoomMate brief', OFFSET + 181.43],
+  ['Own assistant', OFFSET + 229.32],
+  ['Takeaway', OFFSET + 251.87],
 ];
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
 
