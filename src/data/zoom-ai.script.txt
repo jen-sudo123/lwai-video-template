@@ -20,9 +20,7 @@ These choices decide what AI can use and who sees it, so follow your organizatio
 
 During: What AI can do in the meeting
 
-I join from the Zoom Workplace desktop app, where the panel is called AI Companion. I confirm it's running, and I tell participants AI is in use.
-
-We discuss the launch. Engineering has two critical defects. Marketing needs a launch date. Support training isn't finished. We haven't approved the launch. Alex will report on the defects tomorrow, and Sam will confirm when training will be complete.
+During the meeting, I want to stay focused on the discussion. That's where AI Companion helps. I open it from the menu bar at the bottom of the meeting window.
 
 Now say someone joins late, or steps out for a call. They don't need to interrupt the discussion or wait for a recap. They just ask AI Companion:
 
