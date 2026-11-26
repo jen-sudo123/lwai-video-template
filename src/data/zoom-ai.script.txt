@@ -24,17 +24,21 @@ I join from the Zoom Workplace desktop app, where the panel is called AI Compani
 
 We discuss the launch. Engineering has two critical defects. Marketing needs a launch date. Support training isn't finished. We haven't approved the launch. Alex will report on the defects tomorrow, and Sam will confirm when training will be complete.
 
-Instead of writing everything down, I focus on running the discussion. Partway through, I ask:
+Now say someone joins late, or steps out for a call. They don't need to interrupt the discussion or wait for a recap. They just ask AI Companion:
+
+What have I missed so far?
+
+In a few seconds, they get the key points: the launch isn't approved, there are two critical defects, marketing needs a date, and training isn't finished. Each point links back to where it was said. That's why I let invitees ask about the whole meeting when I scheduled it.
+
+Instead of taking notes, I focus on running the discussion. For example, I can ask:
 
 What important questions remain unanswered?
 
-AI flags the launch date, the defects, training and the approval criteria. Then I ask:
+Or:
 
-What are the action items, who owns each one, and what deadlines were explicitly stated? Do not invent missing deadlines.
+What are the action items, and who owns each one?
 
-Even with that instruction, AI gave Sam a "tomorrow" deadline that nobody set. I opened the citation and asked it to separate what was said from what it had inferred. It corrected itself.
-
-That's the habit worth building. Before you treat an AI-generated owner, deadline or decision as confirmed, check the evidence.
+AI can still get things wrong. In my test, it gave Sam a deadline nobody set. So before you treat an owner, deadline or decision as confirmed, check the citation.
 
 After: Turn the meeting into a decision
 
