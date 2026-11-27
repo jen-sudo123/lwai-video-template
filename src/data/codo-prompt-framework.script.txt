@@ -1,11 +1,11 @@
 <speak>
 <break time="500ms"/>Great prompts give AI the right context and the right expectations. That's what lets it draw from the right corner of its vast knowledge, and deliver an output that actually fits your needs.
 
-<break time="500ms"/>To get the best results, we use the CODO Prompt Framework. Character. Objective. Do's and Don'ts. And Output.
+<break time="500ms"/>To get the best results, we use the Kodo Prompt Framework. Character. Objective. Do's and Don'ts. And Output.
 
 <break time="500ms"/>Let's start with Character. Here, you tell AI who it should become. You're setting the lens through which it processes everything that follows. A character activates a specific body of knowledge, a tone, a way of making decisions, and a point of view.
 
-<break time="500ms"/>So you might say: act as the world's leading ghostwriter for Fortune 500 CEOs. Or, be Oprah Winfrey, advising me on how to tell my story. Or, emulate a top-tier business coach, guiding me through a strategic pivot.
+<break time="500ms"/>So you might say: act as the world's leading ghostwriter for Fortune 500 CEOs. Or, be a world-class keynote speaker, advising me on how to tell my story. Or, emulate a top-tier business coach, guiding me through a strategic pivot.
 
 <break time="500ms"/>And this is exactly where most people aim too low. They ask AI to be a junior analyst, or a research assistant. But AI doesn't charge by the hour. Whether you ask it to think like a hundred-and-fifty-thousand-dollar advisor, or a twenty-dollar-an-hour intern, the effort on the AI side is the same. The output is worlds apart. So aim high. Always.
 
