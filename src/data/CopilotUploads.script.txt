@@ -1,0 +1,11 @@
+<speak>
+<break time="500ms"/>Here are a few important things to know about uploading files in Copilot.
+
+<break time="500ms"/>Copilot supports common image and document formats, including photos, PDFs, and Microsoft Office files.
+
+<break time="500ms"/>Image understanding works with standalone images, and with images inside documents, like screenshots or scanned pages in a PDF.
+
+<break time="500ms"/>Limits vary by account and plan. What you can upload may also depend on your organization's security settings.
+
+<break time="500ms"/>Before you share anything sensitive or confidential with Copilot, always check that you're allowed to upload it.
+</speak>
