@@ -83,6 +83,7 @@ import { chatGPTWebSearch } from './data/chatgpt-websearch';
 import { aiRisks } from './data/ai-risks';
 import { copilotWorkIq } from './data/copilot-work-iq';
 import { copilotSkills } from './data/copilot-skills';
+import { copilotUploads } from './data/copilot-uploads';
 import { copilotResearcher } from './data/copilot-researcher';
 import { chatGPTPlugins } from './data/chatgpt-plugins';
 import { videoDataSchema } from './scenes/schemas';
@@ -877,6 +878,16 @@ export const RemotionRoot: React.FC = () => {
         height={layout.height}
         schema={videoDataSchema}
         defaultProps={copilotSkills}
+      />
+      <Composition
+        id="CopilotUploads"
+        component={Video}
+        durationInFrames={calculateTotalFrames(copilotUploads.scenes)}
+        fps={layout.fps}
+        width={layout.width}
+        height={layout.height}
+        schema={videoDataSchema}
+        defaultProps={copilotUploads}
       />
       <Composition
         id="CopilotResearcher"

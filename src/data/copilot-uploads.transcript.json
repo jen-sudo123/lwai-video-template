@@ -1,0 +1,2880 @@
+{
+ "text": "When generative AI first came about, it only processed text, but with newer multimodal models like GBT5.2 that's now in co-pilot, it can work with far more than text alone. And one of those modalities is artifacts, which is a catch all term for photos, screenshots, documents, and more. Uploading artifacts into Copilot is straightforward and the process is largely the same across platforms So let's take a look at how we can upload an artifact to Copilot and how Copilot works with it. So here I have a handwritten note with indicators for a AI fluency matrix we developed, and I want CodePilot to help me generate some more indicator ideas. So I open CodePilot on my phone and I tap the image or plus icon. And here I have a few upload options. So I can upload photos and files from my phone or use the camera to take a photo directly. On a desktop, I can also upload the image file by clicking on plus and then adding images or files. On work copilot, I can click on plus, then upload images or files or even add work content, after which I can select files from, for example, OneDrive or SharePoint. And in both of these versions you can also paste an image from your clipboard or just drag and drop it into the prom box. And then depending on the app and platform you may also be able to share an image to co pilot from other apps like Photos. But for this demo I'm going to choose camera and then take a photo of the page. And if you already have a photo or another artifact saved on your computer or phone you can upload it directly. Before asking Copilot to suggest anything I first give it a brief introduction of what this photo is about and clearly state what I want Copilot to do. So I'm saying here, this is a brainstorming note on the indicators for AI fluency levels. First tell me what you can clearly see and then mark any unclear text as illegible and do not organize or improve anything yet. So this prompt is really important because it helps ensure that Copilot extracts only what's written and reduces confident mistakes, which happen especially with messy handwriting, blurry photos or images containing names, numbers and dates. But as you can see, Copilot can read my handwriting pretty well. And so once I have verified that Copilot transcribed my words correctly, I can then keep working on these ideas. So for example, now I can ask it something like, arrange this by level and then suggest three indicators for each level. If I want Copilot's answer to be even more relevant, I can also attach additional supporting files or images and then ask Copilot to consider them together in the same prompt. And that's really how you can save time and reduce the translation text. Here are a few important things to know about uploading files in Copilot. Copilot supports common image and document formats including photos, PDFs and Microsoft Office files. Image understanding works with stand alone images and with images inside documents like screenshots or scanned pages in a PDF. Limits vary by account and plan. What you can upload may also depend on your organization's security settings. Before you share anything sensitive or confidential with Copilot, always check that you're allowed to upload it.",
+ "words": [
+  {
+   "word": "When",
+   "start": 1.12,
+   "end": 1.52
+  },
+  {
+   "word": "generative",
+   "start": 1.52,
+   "end": 2.16
+  },
+  {
+   "word": "AI",
+   "start": 2.16,
+   "end": 2.64
+  },
+  {
+   "word": "first",
+   "start": 2.64,
+   "end": 2.88
+  },
+  {
+   "word": "came",
+   "start": 2.88,
+   "end": 3.28
+  },
+  {
+   "word": "about,",
+   "start": 3.28,
+   "end": 3.76
+  },
+  {
+   "word": "it",
+   "start": 3.76,
+   "end": 4.0
+  },
+  {
+   "word": "only",
+   "start": 4.0,
+   "end": 4.32
+  },
+  {
+   "word": "processed",
+   "start": 4.32,
+   "end": 5.04
+  },
+  {
+   "word": "text,",
+   "start": 5.04,
+   "end": 5.68
+  },
+  {
+   "word": "but",
+   "start": 5.68,
+   "end": 5.84
+  },
+  {
+   "word": "with",
+   "start": 5.84,
+   "end": 6.0
+  },
+  {
+   "word": "newer",
+   "start": 6.0,
+   "end": 6.32
+  },
+  {
+   "word": "multimodal",
+   "start": 6.32,
+   "end": 7.12
+  },
+  {
+   "word": "models",
+   "start": 7.12,
+   "end": 7.6
+  },
+  {
+   "word": "like",
+   "start": 7.6,
+   "end": 7.84
+  },
+  {
+   "word": "GBT5.2",
+   "start": 7.84,
+   "end": 8.64
+  },
+  {
+   "word": "that's",
+   "start": 9.28,
+   "end": 9.52
+  },
+  {
+   "word": "now",
+   "start": 9.52,
+   "end": 9.68
+  },
+  {
+   "word": "in",
+   "start": 9.68,
+   "end": 9.84
+  },
+  {
+   "word": "co-pilot,",
+   "start": 9.84,
+   "end": 10.64
+  },
+  {
+   "word": "it",
+   "start": 11.04,
+   "end": 11.2
+  },
+  {
+   "word": "can",
+   "start": 11.2,
+   "end": 11.36
+  },
+  {
+   "word": "work",
+   "start": 11.36,
+   "end": 11.6
+  },
+  {
+   "word": "with",
+   "start": 11.6,
+   "end": 11.84
+  },
+  {
+   "word": "far",
+   "start": 11.84,
+   "end": 12.24
+  },
+  {
+   "word": "more",
+   "start": 12.24,
+   "end": 12.56
+  },
+  {
+   "word": "than",
+   "start": 12.56,
+   "end": 12.88
+  },
+  {
+   "word": "text",
+   "start": 12.88,
+   "end": 13.28
+  },
+  {
+   "word": "alone.",
+   "start": 13.28,
+   "end": 14.08
+  },
+  {
+   "word": "And",
+   "start": 14.275,
+   "end": 14.515
+  },
+  {
+   "word": "one",
+   "start": 14.515,
+   "end": 14.675
+  },
+  {
+   "word": "of",
+   "start": 14.675,
+   "end": 14.755
+  },
+  {
+   "word": "those",
+   "start": 14.755,
+   "end": 14.995
+  },
+  {
+   "word": "modalities",
+   "start": 14.995,
+   "end": 15.715
+  },
+  {
+   "word": "is",
+   "start": 15.715,
+   "end": 16.035
+  },
+  {
+   "word": "artifacts,",
+   "start": 16.035,
+   "end": 16.835
+  },
+  {
+   "word": "which",
+   "start": 16.915,
+   "end": 17.075
+  },
+  {
+   "word": "is",
+   "start": 17.075,
+   "end": 17.235
+  },
+  {
+   "word": "a",
+   "start": 17.235,
+   "end": 17.315
+  },
+  {
+   "word": "catch",
+   "start": 17.315,
+   "end": 17.715
+  },
+  {
+   "word": "all",
+   "start": 17.715,
+   "end": 18.035
+  },
+  {
+   "word": "term",
+   "start": 18.035,
+   "end": 18.275
+  },
+  {
+   "word": "for",
+   "start": 18.275,
+   "end": 18.595
+  },
+  {
+   "word": "photos,",
+   "start": 18.595,
+   "end": 19.315
+  },
+  {
+   "word": "screenshots,",
+   "start": 19.315,
+   "end": 20.115
+  },
+  {
+   "word": "documents,",
+   "start": 20.115,
+   "end": 20.915
+  },
+  {
+   "word": "and",
+   "start": 20.915,
+   "end": 21.395
+  },
+  {
+   "word": "more.",
+   "start": 21.395,
+   "end": 22.195
+  },
+  {
+   "word": "Uploading",
+   "start": 22.195,
+   "end": 22.755
+  },
+  {
+   "word": "artifacts",
+   "start": 22.755,
+   "end": 23.315
+  },
+  {
+   "word": "into",
+   "start": 23.315,
+   "end": 23.555
+  },
+  {
+   "word": "Copilot",
+   "start": 23.555,
+   "end": 24.355
+  },
+  {
+   "word": "is",
+   "start": 24.355,
+   "end": 24.515
+  },
+  {
+   "word": "straightforward",
+   "start": 24.515,
+   "end": 25.315
+  },
+  {
+   "word": "and",
+   "start": 25.315,
+   "end": 25.475
+  },
+  {
+   "word": "the",
+   "start": 25.475,
+   "end": 25.635
+  },
+  {
+   "word": "process",
+   "start": 25.635,
+   "end": 26.115
+  },
+  {
+   "word": "is",
+   "start": 26.115,
+   "end": 26.355
+  },
+  {
+   "word": "largely",
+   "start": 26.355,
+   "end": 26.835
+  },
+  {
+   "word": "the",
+   "start": 26.835,
+   "end": 26.995
+  },
+  {
+   "word": "same",
+   "start": 26.995,
+   "end": 27.235
+  },
+  {
+   "word": "across",
+   "start": 27.235,
+   "end": 27.635
+  },
+  {
+   "word": "platforms",
+   "start": 27.635,
+   "end": 28.435
+  },
+  {
+   "word": "So",
+   "start": 28.635,
+   "end": 28.875
+  },
+  {
+   "word": "let's",
+   "start": 28.875,
+   "end": 29.115
+  },
+  {
+   "word": "take",
+   "start": 29.115,
+   "end": 29.275
+  },
+  {
+   "word": "a",
+   "start": 29.275,
+   "end": 29.355
+  },
+  {
+   "word": "look",
+   "start": 29.355,
+   "end": 29.515
+  },
+  {
+   "word": "at",
+   "start": 29.515,
+   "end": 29.675
+  },
+  {
+   "word": "how",
+   "start": 29.675,
+   "end": 29.835
+  },
+  {
+   "word": "we",
+   "start": 29.835,
+   "end": 29.995
+  },
+  {
+   "word": "can",
+   "start": 29.995,
+   "end": 30.155
+  },
+  {
+   "word": "upload",
+   "start": 30.155,
+   "end": 30.475
+  },
+  {
+   "word": "an",
+   "start": 30.475,
+   "end": 30.635
+  },
+  {
+   "word": "artifact",
+   "start": 30.635,
+   "end": 31.035
+  },
+  {
+   "word": "to",
+   "start": 31.035,
+   "end": 31.115
+  },
+  {
+   "word": "Copilot",
+   "start": 31.115,
+   "end": 31.835
+  },
+  {
+   "word": "and",
+   "start": 31.835,
+   "end": 31.995
+  },
+  {
+   "word": "how",
+   "start": 31.995,
+   "end": 32.155
+  },
+  {
+   "word": "Copilot",
+   "start": 32.155,
+   "end": 32.955
+  },
+  {
+   "word": "works",
+   "start": 32.955,
+   "end": 33.275
+  },
+  {
+   "word": "with",
+   "start": 33.275,
+   "end": 33.595
+  },
+  {
+   "word": "it.",
+   "start": 33.595,
+   "end": 34.235
+  },
+  {
+   "word": "So",
+   "start": 34.235,
+   "end": 34.475
+  },
+  {
+   "word": "here",
+   "start": 34.475,
+   "end": 34.715
+  },
+  {
+   "word": "I",
+   "start": 34.715,
+   "end": 34.875
+  },
+  {
+   "word": "have",
+   "start": 34.875,
+   "end": 35.035
+  },
+  {
+   "word": "a",
+   "start": 35.035,
+   "end": 35.275
+  },
+  {
+   "word": "handwritten",
+   "start": 35.275,
+   "end": 35.835
+  },
+  {
+   "word": "note",
+   "start": 35.835,
+   "end": 36.155
+  },
+  {
+   "word": "with",
+   "start": 36.155,
+   "end": 36.315
+  },
+  {
+   "word": "indicators",
+   "start": 36.315,
+   "end": 37.035
+  },
+  {
+   "word": "for",
+   "start": 37.035,
+   "end": 37.275
+  },
+  {
+   "word": "a",
+   "start": 37.275,
+   "end": 37.515
+  },
+  {
+   "word": "AI",
+   "start": 37.515,
+   "end": 37.995
+  },
+  {
+   "word": "fluency",
+   "start": 37.995,
+   "end": 38.555
+  },
+  {
+   "word": "matrix",
+   "start": 38.555,
+   "end": 39.115
+  },
+  {
+   "word": "we",
+   "start": 39.115,
+   "end": 39.275
+  },
+  {
+   "word": "developed,",
+   "start": 39.275,
+   "end": 40.075
+  },
+  {
+   "word": "and",
+   "start": 40.075,
+   "end": 40.155
+  },
+  {
+   "word": "I",
+   "start": 40.155,
+   "end": 40.235
+  },
+  {
+   "word": "want",
+   "start": 40.235,
+   "end": 40.395
+  },
+  {
+   "word": "CodePilot",
+   "start": 40.395,
+   "end": 41.115
+  },
+  {
+   "word": "to",
+   "start": 41.115,
+   "end": 41.195
+  },
+  {
+   "word": "help",
+   "start": 41.195,
+   "end": 41.355
+  },
+  {
+   "word": "me",
+   "start": 41.355,
+   "end": 41.515
+  },
+  {
+   "word": "generate",
+   "start": 41.515,
+   "end": 41.835
+  },
+  {
+   "word": "some",
+   "start": 41.835,
+   "end": 42.075
+  },
+  {
+   "word": "more",
+   "start": 42.075,
+   "end": 42.315
+  },
+  {
+   "word": "indicator",
+   "start": 42.315,
+   "end": 43.115
+  },
+  {
+   "word": "ideas.",
+   "start": 43.115,
+   "end": 43.915
+  },
+  {
+   "word": "So",
+   "start": 44.305,
+   "end": 44.465
+  },
+  {
+   "word": "I",
+   "start": 44.465,
+   "end": 44.625
+  },
+  {
+   "word": "open",
+   "start": 44.625,
+   "end": 44.945
+  },
+  {
+   "word": "CodePilot",
+   "start": 44.945,
+   "end": 45.665
+  },
+  {
+   "word": "on",
+   "start": 45.665,
+   "end": 45.825
+  },
+  {
+   "word": "my",
+   "start": 45.825,
+   "end": 45.985
+  },
+  {
+   "word": "phone",
+   "start": 45.985,
+   "end": 46.305
+  },
+  {
+   "word": "and",
+   "start": 46.305,
+   "end": 46.465
+  },
+  {
+   "word": "I",
+   "start": 46.465,
+   "end": 46.625
+  },
+  {
+   "word": "tap",
+   "start": 46.625,
+   "end": 46.865
+  },
+  {
+   "word": "the",
+   "start": 46.865,
+   "end": 47.105
+  },
+  {
+   "word": "image",
+   "start": 47.105,
+   "end": 47.585
+  },
+  {
+   "word": "or",
+   "start": 47.585,
+   "end": 47.825
+  },
+  {
+   "word": "plus",
+   "start": 47.825,
+   "end": 48.385
+  },
+  {
+   "word": "icon.",
+   "start": 48.385,
+   "end": 49.185
+  },
+  {
+   "word": "And",
+   "start": 49.265,
+   "end": 49.505
+  },
+  {
+   "word": "here",
+   "start": 49.505,
+   "end": 49.825
+  },
+  {
+   "word": "I",
+   "start": 49.825,
+   "end": 49.985
+  },
+  {
+   "word": "have",
+   "start": 49.985,
+   "end": 50.305
+  },
+  {
+   "word": "a",
+   "start": 50.305,
+   "end": 50.545
+  },
+  {
+   "word": "few",
+   "start": 50.545,
+   "end": 50.865
+  },
+  {
+   "word": "upload",
+   "start": 50.865,
+   "end": 51.425
+  },
+  {
+   "word": "options.",
+   "start": 51.425,
+   "end": 52.065
+  },
+  {
+   "word": "So",
+   "start": 52.065,
+   "end": 52.225
+  },
+  {
+   "word": "I",
+   "start": 52.225,
+   "end": 52.305
+  },
+  {
+   "word": "can",
+   "start": 52.305,
+   "end": 52.465
+  },
+  {
+   "word": "upload",
+   "start": 52.465,
+   "end": 52.785
+  },
+  {
+   "word": "photos",
+   "start": 52.785,
+   "end": 53.105
+  },
+  {
+   "word": "and",
+   "start": 53.105,
+   "end": 53.265
+  },
+  {
+   "word": "files",
+   "start": 53.265,
+   "end": 53.665
+  },
+  {
+   "word": "from",
+   "start": 53.665,
+   "end": 53.825
+  },
+  {
+   "word": "my",
+   "start": 53.825,
+   "end": 53.985
+  },
+  {
+   "word": "phone",
+   "start": 53.985,
+   "end": 54.385
+  },
+  {
+   "word": "or",
+   "start": 54.385,
+   "end": 54.545
+  },
+  {
+   "word": "use",
+   "start": 54.545,
+   "end": 54.785
+  },
+  {
+   "word": "the",
+   "start": 54.785,
+   "end": 54.945
+  },
+  {
+   "word": "camera",
+   "start": 54.945,
+   "end": 55.345
+  },
+  {
+   "word": "to",
+   "start": 55.345,
+   "end": 55.505
+  },
+  {
+   "word": "take",
+   "start": 55.505,
+   "end": 55.665
+  },
+  {
+   "word": "a",
+   "start": 55.665,
+   "end": 55.825
+  },
+  {
+   "word": "photo",
+   "start": 55.825,
+   "end": 56.145
+  },
+  {
+   "word": "directly.",
+   "start": 56.145,
+   "end": 56.945
+  },
+  {
+   "word": "On",
+   "start": 57.118,
+   "end": 57.278
+  },
+  {
+   "word": "a",
+   "start": 57.278,
+   "end": 57.438
+  },
+  {
+   "word": "desktop,",
+   "start": 57.438,
+   "end": 58.078
+  },
+  {
+   "word": "I",
+   "start": 58.078,
+   "end": 58.158
+  },
+  {
+   "word": "can",
+   "start": 58.158,
+   "end": 58.318
+  },
+  {
+   "word": "also",
+   "start": 58.318,
+   "end": 58.478
+  },
+  {
+   "word": "upload",
+   "start": 58.478,
+   "end": 58.878
+  },
+  {
+   "word": "the",
+   "start": 58.878,
+   "end": 59.038
+  },
+  {
+   "word": "image",
+   "start": 59.038,
+   "end": 59.438
+  },
+  {
+   "word": "file",
+   "start": 59.438,
+   "end": 59.758
+  },
+  {
+   "word": "by",
+   "start": 59.758,
+   "end": 59.918
+  },
+  {
+   "word": "clicking",
+   "start": 59.918,
+   "end": 60.158
+  },
+  {
+   "word": "on",
+   "start": 60.158,
+   "end": 60.398
+  },
+  {
+   "word": "plus",
+   "start": 60.398,
+   "end": 60.958
+  },
+  {
+   "word": "and",
+   "start": 60.958,
+   "end": 61.038
+  },
+  {
+   "word": "then",
+   "start": 61.038,
+   "end": 61.278
+  },
+  {
+   "word": "adding",
+   "start": 61.278,
+   "end": 61.598
+  },
+  {
+   "word": "images",
+   "start": 61.598,
+   "end": 62.078
+  },
+  {
+   "word": "or",
+   "start": 62.078,
+   "end": 62.318
+  },
+  {
+   "word": "files.",
+   "start": 62.318,
+   "end": 63.118
+  },
+  {
+   "word": "On",
+   "start": 63.518,
+   "end": 63.838
+  },
+  {
+   "word": "work",
+   "start": 63.838,
+   "end": 64.238
+  },
+  {
+   "word": "copilot,",
+   "start": 64.238,
+   "end": 65.038
+  },
+  {
+   "word": "I",
+   "start": 65.198,
+   "end": 65.278
+  },
+  {
+   "word": "can",
+   "start": 65.278,
+   "end": 65.438
+  },
+  {
+   "word": "click",
+   "start": 65.438,
+   "end": 65.678
+  },
+  {
+   "word": "on",
+   "start": 65.678,
+   "end": 65.918
+  },
+  {
+   "word": "plus,",
+   "start": 65.918,
+   "end": 66.398
+  },
+  {
+   "word": "then",
+   "start": 66.398,
+   "end": 66.558
+  },
+  {
+   "word": "upload",
+   "start": 66.558,
+   "end": 66.958
+  },
+  {
+   "word": "images",
+   "start": 66.958,
+   "end": 67.278
+  },
+  {
+   "word": "or",
+   "start": 67.278,
+   "end": 67.438
+  },
+  {
+   "word": "files",
+   "start": 67.438,
+   "end": 67.918
+  },
+  {
+   "word": "or",
+   "start": 67.918,
+   "end": 68.078
+  },
+  {
+   "word": "even",
+   "start": 68.078,
+   "end": 68.318
+  },
+  {
+   "word": "add",
+   "start": 68.318,
+   "end": 68.638
+  },
+  {
+   "word": "work",
+   "start": 68.638,
+   "end": 69.038
+  },
+  {
+   "word": "content,",
+   "start": 69.038,
+   "end": 69.838
+  },
+  {
+   "word": "after",
+   "start": 69.838,
+   "end": 69.998
+  },
+  {
+   "word": "which",
+   "start": 69.998,
+   "end": 70.238
+  },
+  {
+   "word": "I",
+   "start": 70.238,
+   "end": 70.398
+  },
+  {
+   "word": "can",
+   "start": 70.398,
+   "end": 70.558
+  },
+  {
+   "word": "select",
+   "start": 70.558,
+   "end": 71.118
+  },
+  {
+   "word": "files",
+   "start": 71.118,
+   "end": 71.678
+  },
+  {
+   "word": "from,",
+   "start": 71.678,
+   "end": 71.998
+  },
+  {
+   "word": "for",
+   "start": 71.998,
+   "end": 72.158
+  },
+  {
+   "word": "example,",
+   "start": 72.158,
+   "end": 72.558
+  },
+  {
+   "word": "OneDrive",
+   "start": 72.558,
+   "end": 73.118
+  },
+  {
+   "word": "or",
+   "start": 73.118,
+   "end": 73.278
+  },
+  {
+   "word": "SharePoint.",
+   "start": 73.278,
+   "end": 74.078
+  },
+  {
+   "word": "And",
+   "start": 74.464,
+   "end": 74.624
+  },
+  {
+   "word": "in",
+   "start": 74.624,
+   "end": 74.784
+  },
+  {
+   "word": "both",
+   "start": 74.784,
+   "end": 75.024
+  },
+  {
+   "word": "of",
+   "start": 75.024,
+   "end": 75.184
+  },
+  {
+   "word": "these",
+   "start": 75.184,
+   "end": 75.344
+  },
+  {
+   "word": "versions",
+   "start": 75.344,
+   "end": 75.904
+  },
+  {
+   "word": "you",
+   "start": 75.904,
+   "end": 76.064
+  },
+  {
+   "word": "can",
+   "start": 76.064,
+   "end": 76.224
+  },
+  {
+   "word": "also",
+   "start": 76.224,
+   "end": 76.464
+  },
+  {
+   "word": "paste",
+   "start": 76.464,
+   "end": 76.864
+  },
+  {
+   "word": "an",
+   "start": 76.864,
+   "end": 77.104
+  },
+  {
+   "word": "image",
+   "start": 77.104,
+   "end": 77.424
+  },
+  {
+   "word": "from",
+   "start": 77.424,
+   "end": 77.664
+  },
+  {
+   "word": "your",
+   "start": 77.664,
+   "end": 77.904
+  },
+  {
+   "word": "clipboard",
+   "start": 77.904,
+   "end": 78.704
+  },
+  {
+   "word": "or",
+   "start": 78.704,
+   "end": 78.944
+  },
+  {
+   "word": "just",
+   "start": 78.944,
+   "end": 79.104
+  },
+  {
+   "word": "drag",
+   "start": 79.104,
+   "end": 79.424
+  },
+  {
+   "word": "and",
+   "start": 79.424,
+   "end": 79.584
+  },
+  {
+   "word": "drop",
+   "start": 79.584,
+   "end": 79.904
+  },
+  {
+   "word": "it",
+   "start": 79.904,
+   "end": 80.144
+  },
+  {
+   "word": "into",
+   "start": 80.144,
+   "end": 80.384
+  },
+  {
+   "word": "the",
+   "start": 80.384,
+   "end": 80.544
+  },
+  {
+   "word": "prom",
+   "start": 80.544,
+   "end": 81.104
+  },
+  {
+   "word": "box.",
+   "start": 81.104,
+   "end": 81.904
+  },
+  {
+   "word": "And",
+   "start": 81.984,
+   "end": 82.144
+  },
+  {
+   "word": "then",
+   "start": 82.144,
+   "end": 82.304
+  },
+  {
+   "word": "depending",
+   "start": 82.304,
+   "end": 82.624
+  },
+  {
+   "word": "on",
+   "start": 82.624,
+   "end": 82.784
+  },
+  {
+   "word": "the",
+   "start": 82.784,
+   "end": 82.864
+  },
+  {
+   "word": "app",
+   "start": 82.864,
+   "end": 83.104
+  },
+  {
+   "word": "and",
+   "start": 83.104,
+   "end": 83.344
+  },
+  {
+   "word": "platform",
+   "start": 83.344,
+   "end": 83.824
+  },
+  {
+   "word": "you",
+   "start": 83.824,
+   "end": 83.984
+  },
+  {
+   "word": "may",
+   "start": 83.984,
+   "end": 84.224
+  },
+  {
+   "word": "also",
+   "start": 84.224,
+   "end": 84.464
+  },
+  {
+   "word": "be",
+   "start": 84.464,
+   "end": 84.624
+  },
+  {
+   "word": "able",
+   "start": 84.624,
+   "end": 84.784
+  },
+  {
+   "word": "to",
+   "start": 84.784,
+   "end": 84.944
+  },
+  {
+   "word": "share",
+   "start": 84.944,
+   "end": 85.184
+  },
+  {
+   "word": "an",
+   "start": 85.184,
+   "end": 85.344
+  },
+  {
+   "word": "image",
+   "start": 85.344,
+   "end": 85.584
+  },
+  {
+   "word": "to",
+   "start": 85.584,
+   "end": 85.824
+  },
+  {
+   "word": "co",
+   "start": 85.824,
+   "end": 86.064
+  },
+  {
+   "word": "pilot",
+   "start": 86.064,
+   "end": 86.544
+  },
+  {
+   "word": "from",
+   "start": 86.544,
+   "end": 86.704
+  },
+  {
+   "word": "other",
+   "start": 86.704,
+   "end": 86.944
+  },
+  {
+   "word": "apps",
+   "start": 86.944,
+   "end": 87.424
+  },
+  {
+   "word": "like",
+   "start": 87.424,
+   "end": 87.744
+  },
+  {
+   "word": "Photos.",
+   "start": 87.744,
+   "end": 88.544
+  },
+  {
+   "word": "But",
+   "start": 88.749,
+   "end": 89.069
+  },
+  {
+   "word": "for",
+   "start": 89.069,
+   "end": 89.309
+  },
+  {
+   "word": "this",
+   "start": 89.309,
+   "end": 89.469
+  },
+  {
+   "word": "demo",
+   "start": 89.469,
+   "end": 89.869
+  },
+  {
+   "word": "I'm",
+   "start": 89.869,
+   "end": 90.029
+  },
+  {
+   "word": "going",
+   "start": 90.029,
+   "end": 90.189
+  },
+  {
+   "word": "to",
+   "start": 90.189,
+   "end": 90.269
+  },
+  {
+   "word": "choose",
+   "start": 90.269,
+   "end": 90.669
+  },
+  {
+   "word": "camera",
+   "start": 90.669,
+   "end": 91.229
+  },
+  {
+   "word": "and",
+   "start": 91.229,
+   "end": 91.389
+  },
+  {
+   "word": "then",
+   "start": 91.389,
+   "end": 91.549
+  },
+  {
+   "word": "take",
+   "start": 91.549,
+   "end": 91.709
+  },
+  {
+   "word": "a",
+   "start": 91.709,
+   "end": 91.869
+  },
+  {
+   "word": "photo",
+   "start": 91.869,
+   "end": 92.349
+  },
+  {
+   "word": "of",
+   "start": 92.349,
+   "end": 92.589
+  },
+  {
+   "word": "the",
+   "start": 92.589,
+   "end": 92.829
+  },
+  {
+   "word": "page.",
+   "start": 92.829,
+   "end": 93.549
+  },
+  {
+   "word": "And",
+   "start": 93.549,
+   "end": 93.709
+  },
+  {
+   "word": "if",
+   "start": 93.709,
+   "end": 93.789
+  },
+  {
+   "word": "you",
+   "start": 93.789,
+   "end": 93.949
+  },
+  {
+   "word": "already",
+   "start": 93.949,
+   "end": 94.189
+  },
+  {
+   "word": "have",
+   "start": 94.189,
+   "end": 94.349
+  },
+  {
+   "word": "a",
+   "start": 94.349,
+   "end": 94.509
+  },
+  {
+   "word": "photo",
+   "start": 94.509,
+   "end": 94.829
+  },
+  {
+   "word": "or",
+   "start": 94.829,
+   "end": 95.069
+  },
+  {
+   "word": "another",
+   "start": 95.069,
+   "end": 95.389
+  },
+  {
+   "word": "artifact",
+   "start": 95.389,
+   "end": 95.869
+  },
+  {
+   "word": "saved",
+   "start": 95.869,
+   "end": 96.189
+  },
+  {
+   "word": "on",
+   "start": 96.189,
+   "end": 96.349
+  },
+  {
+   "word": "your",
+   "start": 96.349,
+   "end": 96.429
+  },
+  {
+   "word": "computer",
+   "start": 96.429,
+   "end": 96.749
+  },
+  {
+   "word": "or",
+   "start": 96.749,
+   "end": 96.909
+  },
+  {
+   "word": "phone",
+   "start": 96.909,
+   "end": 97.229
+  },
+  {
+   "word": "you",
+   "start": 97.229,
+   "end": 97.309
+  },
+  {
+   "word": "can",
+   "start": 97.309,
+   "end": 97.469
+  },
+  {
+   "word": "upload",
+   "start": 97.469,
+   "end": 97.869
+  },
+  {
+   "word": "it",
+   "start": 97.869,
+   "end": 98.109
+  },
+  {
+   "word": "directly.",
+   "start": 98.109,
+   "end": 98.909
+  },
+  {
+   "word": "Before",
+   "start": 99.709,
+   "end": 100.189
+  },
+  {
+   "word": "asking",
+   "start": 100.189,
+   "end": 100.749
+  },
+  {
+   "word": "Copilot",
+   "start": 100.749,
+   "end": 101.549
+  },
+  {
+   "word": "to",
+   "start": 101.629,
+   "end": 101.709
+  },
+  {
+   "word": "suggest",
+   "start": 101.709,
+   "end": 102.109
+  },
+  {
+   "word": "anything",
+   "start": 102.109,
+   "end": 102.669
+  },
+  {
+   "word": "I",
+   "start": 102.669,
+   "end": 102.909
+  },
+  {
+   "word": "first",
+   "start": 102.909,
+   "end": 103.229
+  },
+  {
+   "word": "give",
+   "start": 103.229,
+   "end": 103.389
+  },
+  {
+   "word": "it",
+   "start": 103.389,
+   "end": 103.549
+  },
+  {
+   "word": "a",
+   "start": 103.549,
+   "end": 103.709
+  },
+  {
+   "word": "brief",
+   "start": 103.709,
+   "end": 104.029
+  },
+  {
+   "word": "introduction",
+   "start": 104.029,
+   "end": 104.669
+  },
+  {
+   "word": "of",
+   "start": 104.669,
+   "end": 104.829
+  },
+  {
+   "word": "what",
+   "start": 104.829,
+   "end": 104.989
+  },
+  {
+   "word": "this",
+   "start": 104.989,
+   "end": 105.229
+  },
+  {
+   "word": "photo",
+   "start": 105.229,
+   "end": 105.629
+  },
+  {
+   "word": "is",
+   "start": 105.629,
+   "end": 105.789
+  },
+  {
+   "word": "about",
+   "start": 105.789,
+   "end": 106.109
+  },
+  {
+   "word": "and",
+   "start": 106.109,
+   "end": 106.349
+  },
+  {
+   "word": "clearly",
+   "start": 106.349,
+   "end": 106.909
+  },
+  {
+   "word": "state",
+   "start": 106.909,
+   "end": 107.229
+  },
+  {
+   "word": "what",
+   "start": 107.229,
+   "end": 107.389
+  },
+  {
+   "word": "I",
+   "start": 107.389,
+   "end": 107.469
+  },
+  {
+   "word": "want",
+   "start": 107.469,
+   "end": 107.709
+  },
+  {
+   "word": "Copilot",
+   "start": 107.709,
+   "end": 108.429
+  },
+  {
+   "word": "to",
+   "start": 108.429,
+   "end": 108.509
+  },
+  {
+   "word": "do.",
+   "start": 108.509,
+   "end": 109.308
+  },
+  {
+   "word": "So",
+   "start": 109.308,
+   "end": 109.548
+  },
+  {
+   "word": "I'm",
+   "start": 109.548,
+   "end": 109.868
+  },
+  {
+   "word": "saying",
+   "start": 109.868,
+   "end": 110.189
+  },
+  {
+   "word": "here,",
+   "start": 110.189,
+   "end": 110.989
+  },
+  {
+   "word": "this",
+   "start": 111.069,
+   "end": 111.228
+  },
+  {
+   "word": "is",
+   "start": 111.228,
+   "end": 111.388
+  },
+  {
+   "word": "a",
+   "start": 111.388,
+   "end": 111.628
+  },
+  {
+   "word": "brainstorming",
+   "start": 111.628,
+   "end": 112.348
+  },
+  {
+   "word": "note",
+   "start": 112.348,
+   "end": 112.748
+  },
+  {
+   "word": "on",
+   "start": 112.748,
+   "end": 112.908
+  },
+  {
+   "word": "the",
+   "start": 112.908,
+   "end": 113.069
+  },
+  {
+   "word": "indicators",
+   "start": 113.069,
+   "end": 113.628
+  },
+  {
+   "word": "for",
+   "start": 113.628,
+   "end": 113.868
+  },
+  {
+   "word": "AI",
+   "start": 113.868,
+   "end": 114.268
+  },
+  {
+   "word": "fluency",
+   "start": 114.268,
+   "end": 114.748
+  },
+  {
+   "word": "levels.",
+   "start": 114.748,
+   "end": 115.548
+  },
+  {
+   "word": "First",
+   "start": 115.788,
+   "end": 116.348
+  },
+  {
+   "word": "tell",
+   "start": 116.348,
+   "end": 116.588
+  },
+  {
+   "word": "me",
+   "start": 116.588,
+   "end": 116.748
+  },
+  {
+   "word": "what",
+   "start": 116.748,
+   "end": 116.988
+  },
+  {
+   "word": "you",
+   "start": 116.988,
+   "end": 117.148
+  },
+  {
+   "word": "can",
+   "start": 117.148,
+   "end": 117.308
+  },
+  {
+   "word": "clearly",
+   "start": 117.308,
+   "end": 117.949
+  },
+  {
+   "word": "see",
+   "start": 117.949,
+   "end": 118.508
+  },
+  {
+   "word": "and",
+   "start": 118.508,
+   "end": 118.668
+  },
+  {
+   "word": "then",
+   "start": 118.668,
+   "end": 118.829
+  },
+  {
+   "word": "mark",
+   "start": 118.829,
+   "end": 119.228
+  },
+  {
+   "word": "any",
+   "start": 119.228,
+   "end": 119.468
+  },
+  {
+   "word": "unclear",
+   "start": 119.468,
+   "end": 120.188
+  },
+  {
+   "word": "text",
+   "start": 120.188,
+   "end": 120.508
+  },
+  {
+   "word": "as",
+   "start": 120.508,
+   "end": 120.668
+  },
+  {
+   "word": "illegible",
+   "start": 120.668,
+   "end": 121.468
+  },
+  {
+   "word": "and",
+   "start": 121.468,
+   "end": 121.628
+  },
+  {
+   "word": "do",
+   "start": 121.628,
+   "end": 121.788
+  },
+  {
+   "word": "not",
+   "start": 121.788,
+   "end": 121.949
+  },
+  {
+   "word": "organize",
+   "start": 121.949,
+   "end": 122.428
+  },
+  {
+   "word": "or",
+   "start": 122.428,
+   "end": 122.588
+  },
+  {
+   "word": "improve",
+   "start": 122.588,
+   "end": 123.069
+  },
+  {
+   "word": "anything",
+   "start": 123.069,
+   "end": 123.548
+  },
+  {
+   "word": "yet.",
+   "start": 123.548,
+   "end": 124.348
+  },
+  {
+   "word": "So",
+   "start": 124.438,
+   "end": 124.838
+  },
+  {
+   "word": "this",
+   "start": 124.838,
+   "end": 125.078
+  },
+  {
+   "word": "prompt",
+   "start": 125.078,
+   "end": 125.478
+  },
+  {
+   "word": "is",
+   "start": 125.478,
+   "end": 125.718
+  },
+  {
+   "word": "really",
+   "start": 125.718,
+   "end": 125.958
+  },
+  {
+   "word": "important",
+   "start": 125.958,
+   "end": 126.278
+  },
+  {
+   "word": "because",
+   "start": 126.278,
+   "end": 126.598
+  },
+  {
+   "word": "it",
+   "start": 126.598,
+   "end": 126.758
+  },
+  {
+   "word": "helps",
+   "start": 126.758,
+   "end": 127.078
+  },
+  {
+   "word": "ensure",
+   "start": 127.078,
+   "end": 127.478
+  },
+  {
+   "word": "that",
+   "start": 127.478,
+   "end": 127.718
+  },
+  {
+   "word": "Copilot",
+   "start": 127.718,
+   "end": 128.518
+  },
+  {
+   "word": "extracts",
+   "start": 128.518,
+   "end": 129.078
+  },
+  {
+   "word": "only",
+   "start": 129.078,
+   "end": 129.318
+  },
+  {
+   "word": "what's",
+   "start": 129.318,
+   "end": 129.638
+  },
+  {
+   "word": "written",
+   "start": 129.638,
+   "end": 130.118
+  },
+  {
+   "word": "and",
+   "start": 130.118,
+   "end": 130.278
+  },
+  {
+   "word": "reduces",
+   "start": 130.278,
+   "end": 130.998
+  },
+  {
+   "word": "confident",
+   "start": 130.998,
+   "end": 131.718
+  },
+  {
+   "word": "mistakes,",
+   "start": 131.718,
+   "end": 132.438
+  },
+  {
+   "word": "which",
+   "start": 132.438,
+   "end": 132.678
+  },
+  {
+   "word": "happen",
+   "start": 132.678,
+   "end": 132.998
+  },
+  {
+   "word": "especially",
+   "start": 132.998,
+   "end": 133.478
+  },
+  {
+   "word": "with",
+   "start": 133.478,
+   "end": 133.718
+  },
+  {
+   "word": "messy",
+   "start": 133.718,
+   "end": 134.198
+  },
+  {
+   "word": "handwriting,",
+   "start": 134.198,
+   "end": 134.998
+  },
+  {
+   "word": "blurry",
+   "start": 135.238,
+   "end": 135.878
+  },
+  {
+   "word": "photos",
+   "start": 135.878,
+   "end": 136.438
+  },
+  {
+   "word": "or",
+   "start": 136.438,
+   "end": 136.678
+  },
+  {
+   "word": "images",
+   "start": 136.678,
+   "end": 137.238
+  },
+  {
+   "word": "containing",
+   "start": 137.238,
+   "end": 137.718
+  },
+  {
+   "word": "names,",
+   "start": 137.718,
+   "end": 138.358
+  },
+  {
+   "word": "numbers",
+   "start": 138.358,
+   "end": 138.998
+  },
+  {
+   "word": "and",
+   "start": 138.998,
+   "end": 139.318
+  },
+  {
+   "word": "dates.",
+   "start": 139.318,
+   "end": 140.118
+  },
+  {
+   "word": "But",
+   "start": 140.369,
+   "end": 140.609
+  },
+  {
+   "word": "as",
+   "start": 140.609,
+   "end": 140.77
+  },
+  {
+   "word": "you",
+   "start": 140.77,
+   "end": 140.849
+  },
+  {
+   "word": "can",
+   "start": 140.849,
+   "end": 140.929
+  },
+  {
+   "word": "see,",
+   "start": 140.929,
+   "end": 141.089
+  },
+  {
+   "word": "Copilot",
+   "start": 141.089,
+   "end": 141.809
+  },
+  {
+   "word": "can",
+   "start": 141.809,
+   "end": 141.969
+  },
+  {
+   "word": "read",
+   "start": 141.969,
+   "end": 142.129
+  },
+  {
+   "word": "my",
+   "start": 142.129,
+   "end": 142.209
+  },
+  {
+   "word": "handwriting",
+   "start": 142.209,
+   "end": 142.849
+  },
+  {
+   "word": "pretty",
+   "start": 142.849,
+   "end": 143.409
+  },
+  {
+   "word": "well.",
+   "start": 143.409,
+   "end": 143.969
+  },
+  {
+   "word": "And",
+   "start": 143.969,
+   "end": 144.129
+  },
+  {
+   "word": "so",
+   "start": 144.129,
+   "end": 144.289
+  },
+  {
+   "word": "once",
+   "start": 144.289,
+   "end": 144.529
+  },
+  {
+   "word": "I",
+   "start": 144.529,
+   "end": 144.69
+  },
+  {
+   "word": "have",
+   "start": 144.69,
+   "end": 144.769
+  },
+  {
+   "word": "verified",
+   "start": 144.769,
+   "end": 145.249
+  },
+  {
+   "word": "that",
+   "start": 145.249,
+   "end": 145.409
+  },
+  {
+   "word": "Copilot",
+   "start": 145.409,
+   "end": 146.13
+  },
+  {
+   "word": "transcribed",
+   "start": 146.13,
+   "end": 146.609
+  },
+  {
+   "word": "my",
+   "start": 146.609,
+   "end": 146.769
+  },
+  {
+   "word": "words",
+   "start": 146.769,
+   "end": 147.17
+  },
+  {
+   "word": "correctly,",
+   "start": 147.17,
+   "end": 147.969
+  },
+  {
+   "word": "I",
+   "start": 147.969,
+   "end": 148.129
+  },
+  {
+   "word": "can",
+   "start": 148.129,
+   "end": 148.289
+  },
+  {
+   "word": "then",
+   "start": 148.289,
+   "end": 148.449
+  },
+  {
+   "word": "keep",
+   "start": 148.449,
+   "end": 148.689
+  },
+  {
+   "word": "working",
+   "start": 148.689,
+   "end": 149.01
+  },
+  {
+   "word": "on",
+   "start": 149.01,
+   "end": 149.249
+  },
+  {
+   "word": "these",
+   "start": 149.249,
+   "end": 149.489
+  },
+  {
+   "word": "ideas.",
+   "start": 149.489,
+   "end": 149.97
+  },
+  {
+   "word": "So",
+   "start": 149.97,
+   "end": 150.13
+  },
+  {
+   "word": "for",
+   "start": 150.13,
+   "end": 150.289
+  },
+  {
+   "word": "example,",
+   "start": 150.289,
+   "end": 150.609
+  },
+  {
+   "word": "now",
+   "start": 150.609,
+   "end": 150.849
+  },
+  {
+   "word": "I",
+   "start": 150.849,
+   "end": 151.01
+  },
+  {
+   "word": "can",
+   "start": 151.01,
+   "end": 151.17
+  },
+  {
+   "word": "ask",
+   "start": 151.17,
+   "end": 151.329
+  },
+  {
+   "word": "it",
+   "start": 151.329,
+   "end": 151.569
+  },
+  {
+   "word": "something",
+   "start": 151.569,
+   "end": 151.889
+  },
+  {
+   "word": "like,",
+   "start": 151.889,
+   "end": 152.689
+  },
+  {
+   "word": "arrange",
+   "start": 152.73,
+   "end": 153.051
+  },
+  {
+   "word": "this",
+   "start": 153.051,
+   "end": 153.29
+  },
+  {
+   "word": "by",
+   "start": 153.29,
+   "end": 153.45
+  },
+  {
+   "word": "level",
+   "start": 153.45,
+   "end": 154.01
+  },
+  {
+   "word": "and",
+   "start": 154.01,
+   "end": 154.17
+  },
+  {
+   "word": "then",
+   "start": 154.17,
+   "end": 154.33
+  },
+  {
+   "word": "suggest",
+   "start": 154.33,
+   "end": 154.81
+  },
+  {
+   "word": "three",
+   "start": 154.81,
+   "end": 155.05
+  },
+  {
+   "word": "indicators",
+   "start": 155.05,
+   "end": 155.77
+  },
+  {
+   "word": "for",
+   "start": 155.77,
+   "end": 156.01
+  },
+  {
+   "word": "each",
+   "start": 156.01,
+   "end": 156.49
+  },
+  {
+   "word": "level.",
+   "start": 156.49,
+   "end": 157.29
+  },
+  {
+   "word": "If",
+   "start": 157.451,
+   "end": 157.61
+  },
+  {
+   "word": "I",
+   "start": 157.61,
+   "end": 157.69
+  },
+  {
+   "word": "want",
+   "start": 157.69,
+   "end": 157.931
+  },
+  {
+   "word": "Copilot's",
+   "start": 157.931,
+   "end": 158.65
+  },
+  {
+   "word": "answer",
+   "start": 158.65,
+   "end": 158.971
+  },
+  {
+   "word": "to",
+   "start": 158.971,
+   "end": 159.05
+  },
+  {
+   "word": "be",
+   "start": 159.05,
+   "end": 159.21
+  },
+  {
+   "word": "even",
+   "start": 159.21,
+   "end": 159.451
+  },
+  {
+   "word": "more",
+   "start": 159.451,
+   "end": 159.69
+  },
+  {
+   "word": "relevant,",
+   "start": 159.69,
+   "end": 160.33
+  },
+  {
+   "word": "I",
+   "start": 160.33,
+   "end": 160.41
+  },
+  {
+   "word": "can",
+   "start": 160.41,
+   "end": 160.57
+  },
+  {
+   "word": "also",
+   "start": 160.57,
+   "end": 160.81
+  },
+  {
+   "word": "attach",
+   "start": 160.81,
+   "end": 161.211
+  },
+  {
+   "word": "additional",
+   "start": 161.211,
+   "end": 161.93
+  },
+  {
+   "word": "supporting",
+   "start": 161.93,
+   "end": 162.411
+  },
+  {
+   "word": "files",
+   "start": 162.411,
+   "end": 162.89
+  },
+  {
+   "word": "or",
+   "start": 162.89,
+   "end": 163.05
+  },
+  {
+   "word": "images",
+   "start": 163.05,
+   "end": 163.77
+  },
+  {
+   "word": "and",
+   "start": 163.77,
+   "end": 163.93
+  },
+  {
+   "word": "then",
+   "start": 163.93,
+   "end": 164.17
+  },
+  {
+   "word": "ask",
+   "start": 164.17,
+   "end": 164.411
+  },
+  {
+   "word": "Copilot",
+   "start": 164.411,
+   "end": 165.21
+  },
+  {
+   "word": "to",
+   "start": 165.21,
+   "end": 165.371
+  },
+  {
+   "word": "consider",
+   "start": 165.371,
+   "end": 165.77
+  },
+  {
+   "word": "them",
+   "start": 165.77,
+   "end": 166.01
+  },
+  {
+   "word": "together",
+   "start": 166.01,
+   "end": 166.49
+  },
+  {
+   "word": "in",
+   "start": 166.49,
+   "end": 166.65
+  },
+  {
+   "word": "the",
+   "start": 166.65,
+   "end": 166.81
+  },
+  {
+   "word": "same",
+   "start": 166.81,
+   "end": 167.05
+  },
+  {
+   "word": "prompt.",
+   "start": 167.05,
+   "end": 167.85
+  },
+  {
+   "word": "And",
+   "start": 168.063,
+   "end": 168.303
+  },
+  {
+   "word": "that's",
+   "start": 168.303,
+   "end": 168.543
+  },
+  {
+   "word": "really",
+   "start": 168.543,
+   "end": 168.783
+  },
+  {
+   "word": "how",
+   "start": 168.783,
+   "end": 168.943
+  },
+  {
+   "word": "you",
+   "start": 168.943,
+   "end": 169.103
+  },
+  {
+   "word": "can",
+   "start": 169.103,
+   "end": 169.264
+  },
+  {
+   "word": "save",
+   "start": 169.264,
+   "end": 169.583
+  },
+  {
+   "word": "time",
+   "start": 169.583,
+   "end": 169.904
+  },
+  {
+   "word": "and",
+   "start": 169.904,
+   "end": 170.144
+  },
+  {
+   "word": "reduce",
+   "start": 170.144,
+   "end": 170.624
+  },
+  {
+   "word": "the",
+   "start": 170.624,
+   "end": 170.864
+  },
+  {
+   "word": "translation",
+   "start": 170.864,
+   "end": 171.663
+  },
+  {
+   "word": "text.",
+   "start": 171.663,
+   "end": 172.463
+  },
+  {
+   "word": "Here",
+   "start": 172.864,
+   "end": 173.103
+  },
+  {
+   "word": "are",
+   "start": 173.103,
+   "end": 173.263
+  },
+  {
+   "word": "a",
+   "start": 173.263,
+   "end": 173.344
+  },
+  {
+   "word": "few",
+   "start": 173.344,
+   "end": 173.663
+  },
+  {
+   "word": "important",
+   "start": 173.663,
+   "end": 173.983
+  },
+  {
+   "word": "things",
+   "start": 173.983,
+   "end": 174.223
+  },
+  {
+   "word": "to",
+   "start": 174.223,
+   "end": 174.384
+  },
+  {
+   "word": "know",
+   "start": 174.384,
+   "end": 174.543
+  },
+  {
+   "word": "about",
+   "start": 174.543,
+   "end": 174.783
+  },
+  {
+   "word": "uploading",
+   "start": 174.783,
+   "end": 175.344
+  },
+  {
+   "word": "files",
+   "start": 175.344,
+   "end": 175.743
+  },
+  {
+   "word": "in",
+   "start": 175.743,
+   "end": 175.904
+  },
+  {
+   "word": "Copilot.",
+   "start": 175.904,
+   "end": 176.704
+  },
+  {
+   "word": "Copilot",
+   "start": 177.103,
+   "end": 177.903
+  },
+  {
+   "word": "supports",
+   "start": 177.904,
+   "end": 178.223
+  },
+  {
+   "word": "common",
+   "start": 178.223,
+   "end": 178.623
+  },
+  {
+   "word": "image",
+   "start": 178.623,
+   "end": 178.943
+  },
+  {
+   "word": "and",
+   "start": 178.943,
+   "end": 179.183
+  },
+  {
+   "word": "document",
+   "start": 179.183,
+   "end": 179.744
+  },
+  {
+   "word": "formats",
+   "start": 179.744,
+   "end": 180.303
+  },
+  {
+   "word": "including",
+   "start": 180.303,
+   "end": 180.703
+  },
+  {
+   "word": "photos,",
+   "start": 180.703,
+   "end": 181.263
+  },
+  {
+   "word": "PDFs",
+   "start": 181.263,
+   "end": 181.904
+  },
+  {
+   "word": "and",
+   "start": 181.904,
+   "end": 181.983
+  },
+  {
+   "word": "Microsoft",
+   "start": 181.983,
+   "end": 182.623
+  },
+  {
+   "word": "Office",
+   "start": 182.623,
+   "end": 183.023
+  },
+  {
+   "word": "files.",
+   "start": 183.023,
+   "end": 183.823
+  },
+  {
+   "word": "Image",
+   "start": 183.986,
+   "end": 184.466
+  },
+  {
+   "word": "understanding",
+   "start": 184.466,
+   "end": 185.026
+  },
+  {
+   "word": "works",
+   "start": 185.026,
+   "end": 185.266
+  },
+  {
+   "word": "with",
+   "start": 185.266,
+   "end": 185.426
+  },
+  {
+   "word": "stand",
+   "start": 185.426,
+   "end": 185.746
+  },
+  {
+   "word": "alone",
+   "start": 185.746,
+   "end": 186.066
+  },
+  {
+   "word": "images",
+   "start": 186.066,
+   "end": 186.386
+  },
+  {
+   "word": "and",
+   "start": 186.386,
+   "end": 186.546
+  },
+  {
+   "word": "with",
+   "start": 186.546,
+   "end": 186.706
+  },
+  {
+   "word": "images",
+   "start": 186.706,
+   "end": 187.186
+  },
+  {
+   "word": "inside",
+   "start": 187.186,
+   "end": 187.586
+  },
+  {
+   "word": "documents",
+   "start": 187.586,
+   "end": 188.146
+  },
+  {
+   "word": "like",
+   "start": 188.146,
+   "end": 188.386
+  },
+  {
+   "word": "screenshots",
+   "start": 188.386,
+   "end": 189.186
+  },
+  {
+   "word": "or",
+   "start": 189.186,
+   "end": 189.426
+  },
+  {
+   "word": "scanned",
+   "start": 189.426,
+   "end": 189.906
+  },
+  {
+   "word": "pages",
+   "start": 189.906,
+   "end": 190.306
+  },
+  {
+   "word": "in",
+   "start": 190.306,
+   "end": 190.546
+  },
+  {
+   "word": "a",
+   "start": 190.546,
+   "end": 190.786
+  },
+  {
+   "word": "PDF.",
+   "start": 190.786,
+   "end": 191.586
+  },
+  {
+   "word": "Limits",
+   "start": 192.786,
+   "end": 193.346
+  },
+  {
+   "word": "vary",
+   "start": 193.346,
+   "end": 193.586
+  },
+  {
+   "word": "by",
+   "start": 193.586,
+   "end": 193.826
+  },
+  {
+   "word": "account",
+   "start": 193.826,
+   "end": 194.146
+  },
+  {
+   "word": "and",
+   "start": 194.146,
+   "end": 194.306
+  },
+  {
+   "word": "plan.",
+   "start": 194.306,
+   "end": 194.946
+  },
+  {
+   "word": "What",
+   "start": 194.946,
+   "end": 195.186
+  },
+  {
+   "word": "you",
+   "start": 195.186,
+   "end": 195.346
+  },
+  {
+   "word": "can",
+   "start": 195.346,
+   "end": 195.506
+  },
+  {
+   "word": "upload",
+   "start": 195.506,
+   "end": 195.986
+  },
+  {
+   "word": "may",
+   "start": 195.986,
+   "end": 196.146
+  },
+  {
+   "word": "also",
+   "start": 196.146,
+   "end": 196.386
+  },
+  {
+   "word": "depend",
+   "start": 196.386,
+   "end": 196.786
+  },
+  {
+   "word": "on",
+   "start": 196.786,
+   "end": 196.946
+  },
+  {
+   "word": "your",
+   "start": 196.946,
+   "end": 197.106
+  },
+  {
+   "word": "organization's",
+   "start": 197.106,
+   "end": 197.826
+  },
+  {
+   "word": "security",
+   "start": 197.826,
+   "end": 198.386
+  },
+  {
+   "word": "settings.",
+   "start": 198.386,
+   "end": 199.111
+  },
+  {
+   "word": "Before",
+   "start": 199.111,
+   "end": 199.59
+  },
+  {
+   "word": "you",
+   "start": 199.59,
+   "end": 199.75
+  },
+  {
+   "word": "share",
+   "start": 199.75,
+   "end": 200.07
+  },
+  {
+   "word": "anything",
+   "start": 200.07,
+   "end": 200.39
+  },
+  {
+   "word": "sensitive",
+   "start": 200.39,
+   "end": 200.87
+  },
+  {
+   "word": "or",
+   "start": 200.87,
+   "end": 201.03
+  },
+  {
+   "word": "confidential",
+   "start": 201.03,
+   "end": 201.67
+  },
+  {
+   "word": "with",
+   "start": 201.67,
+   "end": 201.91
+  },
+  {
+   "word": "Copilot,",
+   "start": 201.91,
+   "end": 202.71
+  },
+  {
+   "word": "always",
+   "start": 202.79,
+   "end": 203.03
+  },
+  {
+   "word": "check",
+   "start": 203.03,
+   "end": 203.27
+  },
+  {
+   "word": "that",
+   "start": 203.27,
+   "end": 203.43
+  },
+  {
+   "word": "you're",
+   "start": 203.43,
+   "end": 203.75
+  },
+  {
+   "word": "allowed",
+   "start": 203.75,
+   "end": 203.991
+  },
+  {
+   "word": "to",
+   "start": 203.991,
+   "end": 204.071
+  },
+  {
+   "word": "upload",
+   "start": 204.071,
+   "end": 204.551
+  },
+  {
+   "word": "it.",
+   "start": 204.551,
+   "end": 204.963
+  }
+ ]
+}
